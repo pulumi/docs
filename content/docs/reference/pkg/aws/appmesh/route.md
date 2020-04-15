@@ -112,7 +112,7 @@ const serviceb = new aws.appmesh.Route("serviceb", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/appmesh/#Route">Route</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/appmesh/#RouteArgs">RouteArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/appmesh/#Route">Route</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/appmesh/#RouteArgs">RouteArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -120,11 +120,11 @@ const serviceb = new aws.appmesh.Route("serviceb", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewRoute<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/appmesh?tab=doc#RouteArgs">RouteArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/appmesh?tab=doc#Route">Route</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewRoute<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/appmesh?tab=doc#RouteArgs">RouteArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/appmesh?tab=doc#Route">Route</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Appmesh.Route.html">Route</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.RouteArgs.html">RouteArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Route.html">Route</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.RouteArgs.html">RouteArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -225,15 +225,6 @@ const serviceb = new aws.appmesh.Route("serviceb", {
     <dd>{{% md %}}The name of the service mesh in which to create the route.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The name to use for the route.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Spec</span>
@@ -243,15 +234,6 @@ const serviceb = new aws.appmesh.Route("serviceb", {
     <dd>{{% md %}}The route specification to apply.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Virtual<wbr>Router<wbr>Name</span>
@@ -259,6 +241,24 @@ const serviceb = new aws.appmesh.Route("serviceb", {
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the virtual router in which to create the route.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name to use for the route.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+    </dt>
+    <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
 
 </dl>
@@ -277,15 +277,6 @@ const serviceb = new aws.appmesh.Route("serviceb", {
     <dd>{{% md %}}The name of the service mesh in which to create the route.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The name to use for the route.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Spec</span>
@@ -295,15 +286,6 @@ const serviceb = new aws.appmesh.Route("serviceb", {
     <dd>{{% md %}}The route specification to apply.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Virtual<wbr>Router<wbr>Name</span>
@@ -311,6 +293,24 @@ const serviceb = new aws.appmesh.Route("serviceb", {
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the virtual router in which to create the route.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name to use for the route.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
 
 </dl>
@@ -329,15 +329,6 @@ const serviceb = new aws.appmesh.Route("serviceb", {
     <dd>{{% md %}}The name of the service mesh in which to create the route.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The name to use for the route.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>spec</span>
@@ -347,15 +338,6 @@ const serviceb = new aws.appmesh.Route("serviceb", {
     <dd>{{% md %}}The route specification to apply.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>virtual<wbr>Router<wbr>Name</span>
@@ -363,6 +345,24 @@ const serviceb = new aws.appmesh.Route("serviceb", {
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the virtual router in which to create the route.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name to use for the route.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}</span>
+    </dt>
+    <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
 
 </dl>
@@ -381,15 +381,6 @@ const serviceb = new aws.appmesh.Route("serviceb", {
     <dd>{{% md %}}The name of the service mesh in which to create the route.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name to use for the route.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>spec</span>
@@ -399,15 +390,6 @@ const serviceb = new aws.appmesh.Route("serviceb", {
     <dd>{{% md %}}The route specification to apply.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>virtual_<wbr>router_<wbr>name</span>
@@ -415,6 +397,24 @@ const serviceb = new aws.appmesh.Route("serviceb", {
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the virtual router in which to create the route.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name to use for the route.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
 
 </dl>
@@ -463,51 +463,6 @@ The following output properties are available:
     <dd>{{% md %}}The last update date of the route.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span>Mesh<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the service mesh in which to create the route.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name to use for the route.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Spec</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespec">Route<wbr>Spec</a></span>
-    </dt>
-    <dd>{{% md %}}The route specification to apply.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Virtual<wbr>Router<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the virtual router in which to create the route.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -540,51 +495,6 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The last update date of the route.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Mesh<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the service mesh in which to create the route.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name to use for the route.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Spec</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespec">Route<wbr>Spec</a></span>
-    </dt>
-    <dd>{{% md %}}The route specification to apply.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Virtual<wbr>Router<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the virtual router in which to create the route.
 {{% /md %}}</dd>
 
 </dl>
@@ -621,51 +531,6 @@ The following output properties are available:
     <dd>{{% md %}}The last update date of the route.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span>mesh<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the service mesh in which to create the route.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name to use for the route.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>spec</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespec">Route<wbr>Spec</a></span>
-    </dt>
-    <dd>{{% md %}}The route specification to apply.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>virtual<wbr>Router<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the virtual router in which to create the route.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -700,51 +565,6 @@ The following output properties are available:
     <dd>{{% md %}}The last update date of the route.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span>mesh_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the service mesh in which to create the route.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name to use for the route.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>spec</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespec">Dict[Route<wbr>Spec]</a></span>
-    </dt>
-    <dd>{{% md %}}The route specification to apply.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>virtual_<wbr>router_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the virtual router in which to create the route.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -774,7 +594,7 @@ Get an existing Route resource's state with the given name, ID, and optional ext
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Appmesh.Route.html">Route</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Appmesh.RouteState.html">RouteState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Route.html">Route</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.RouteState.html">RouteState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -884,7 +704,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the route.
 {{% /md %}}</dd>
@@ -893,7 +713,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Created<wbr>Date</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The creation date of the route.
 {{% /md %}}</dd>
@@ -902,7 +722,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Last<wbr>Updated<wbr>Date</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The last update date of the route.
 {{% /md %}}</dd>
@@ -911,7 +731,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Mesh<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the service mesh in which to create the route.
 {{% /md %}}</dd>
@@ -920,7 +740,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name to use for the route.
 {{% /md %}}</dd>
@@ -929,7 +749,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Spec</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespec">Route<wbr>Spec<wbr>Args?</a></span>
+        <span class="property-type"><a href="#routespec">Route<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The route specification to apply.
 {{% /md %}}</dd>
@@ -938,7 +758,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -947,7 +767,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Virtual<wbr>Router<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the virtual router in which to create the route.
 {{% /md %}}</dd>
@@ -963,7 +783,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the route.
 {{% /md %}}</dd>
@@ -972,7 +792,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Created<wbr>Date</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The creation date of the route.
 {{% /md %}}</dd>
@@ -981,7 +801,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Last<wbr>Updated<wbr>Date</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The last update date of the route.
 {{% /md %}}</dd>
@@ -990,7 +810,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Mesh<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the service mesh in which to create the route.
 {{% /md %}}</dd>
@@ -999,7 +819,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name to use for the route.
 {{% /md %}}</dd>
@@ -1008,7 +828,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Spec</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespec">*Route<wbr>Spec</a></span>
+        <span class="property-type"><a href="#routespec">Route<wbr>Spec</a></span>
     </dt>
     <dd>{{% md %}}The route specification to apply.
 {{% /md %}}</dd>
@@ -1026,7 +846,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Virtual<wbr>Router<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the virtual router in which to create the route.
 {{% /md %}}</dd>
@@ -1042,7 +862,7 @@ The following state arguments are supported:
             title="Optional">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the route.
 {{% /md %}}</dd>
@@ -1051,7 +871,7 @@ The following state arguments are supported:
             title="Optional">
         <span>created<wbr>Date</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The creation date of the route.
 {{% /md %}}</dd>
@@ -1060,7 +880,7 @@ The following state arguments are supported:
             title="Optional">
         <span>last<wbr>Updated<wbr>Date</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The last update date of the route.
 {{% /md %}}</dd>
@@ -1069,7 +889,7 @@ The following state arguments are supported:
             title="Optional">
         <span>mesh<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the service mesh in which to create the route.
 {{% /md %}}</dd>
@@ -1078,7 +898,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name to use for the route.
 {{% /md %}}</dd>
@@ -1087,7 +907,7 @@ The following state arguments are supported:
             title="Optional">
         <span>spec</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespec">Route<wbr>Spec?</a></span>
+        <span class="property-type"><a href="#routespec">Route<wbr>Spec</a></span>
     </dt>
     <dd>{{% md %}}The route specification to apply.
 {{% /md %}}</dd>
@@ -1096,7 +916,7 @@ The following state arguments are supported:
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1105,7 +925,7 @@ The following state arguments are supported:
             title="Optional">
         <span>virtual<wbr>Router<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the virtual router in which to create the route.
 {{% /md %}}</dd>
@@ -1222,7 +1042,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Http<wbr>Route</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespechttproute">Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Args?</a></span>
+        <span class="property-type"><a href="#routespechttproute">Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The HTTP routing information for the route.
 {{% /md %}}</dd>
@@ -1231,7 +1051,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Priority</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The priority for the route, between `0` and `1000`.
 Routes are matched based on the specified value, where `0` is the highest priority.
@@ -1241,7 +1061,7 @@ Routes are matched based on the specified value, where `0` is the highest priori
             title="Optional">
         <span>Tcp<wbr>Route</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespectcproute">Route<wbr>Spec<wbr>Tcp<wbr>Route<wbr>Args?</a></span>
+        <span class="property-type"><a href="#routespectcproute">Route<wbr>Spec<wbr>Tcp<wbr>Route<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The TCP routing information for the route.
 {{% /md %}}</dd>
@@ -1257,7 +1077,7 @@ Routes are matched based on the specified value, where `0` is the highest priori
             title="Optional">
         <span>Http<wbr>Route</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespechttproute">*Route<wbr>Spec<wbr>Http<wbr>Route</a></span>
+        <span class="property-type"><a href="#routespechttproute">Route<wbr>Spec<wbr>Http<wbr>Route</a></span>
     </dt>
     <dd>{{% md %}}The HTTP routing information for the route.
 {{% /md %}}</dd>
@@ -1266,7 +1086,7 @@ Routes are matched based on the specified value, where `0` is the highest priori
             title="Optional">
         <span>Priority</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The priority for the route, between `0` and `1000`.
 Routes are matched based on the specified value, where `0` is the highest priority.
@@ -1276,7 +1096,7 @@ Routes are matched based on the specified value, where `0` is the highest priori
             title="Optional">
         <span>Tcp<wbr>Route</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespectcproute">*Route<wbr>Spec<wbr>Tcp<wbr>Route</a></span>
+        <span class="property-type"><a href="#routespectcproute">Route<wbr>Spec<wbr>Tcp<wbr>Route</a></span>
     </dt>
     <dd>{{% md %}}The TCP routing information for the route.
 {{% /md %}}</dd>
@@ -1292,7 +1112,7 @@ Routes are matched based on the specified value, where `0` is the highest priori
             title="Optional">
         <span>http<wbr>Route</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespechttproute">Route<wbr>Spec<wbr>Http<wbr>Route?</a></span>
+        <span class="property-type"><a href="#routespechttproute">Route<wbr>Spec<wbr>Http<wbr>Route</a></span>
     </dt>
     <dd>{{% md %}}The HTTP routing information for the route.
 {{% /md %}}</dd>
@@ -1301,7 +1121,7 @@ Routes are matched based on the specified value, where `0` is the highest priori
             title="Optional">
         <span>priority</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The priority for the route, between `0` and `1000`.
 Routes are matched based on the specified value, where `0` is the highest priority.
@@ -1311,7 +1131,7 @@ Routes are matched based on the specified value, where `0` is the highest priori
             title="Optional">
         <span>tcp<wbr>Route</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespectcproute">Route<wbr>Spec<wbr>Tcp<wbr>Route?</a></span>
+        <span class="property-type"><a href="#routespectcproute">Route<wbr>Spec<wbr>Tcp<wbr>Route</a></span>
     </dt>
     <dd>{{% md %}}The TCP routing information for the route.
 {{% /md %}}</dd>
@@ -1686,24 +1506,6 @@ You can specify one or more targets and their relative weights with which to dis
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Headers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespechttproutematchheader">List&lt;Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Match<wbr>Header<wbr>Args&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}The client request headers to match on.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Method</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The client request header method to match on. Valid values: `GET`, `HEAD`, `POST`, `PUT`, `DELETE`, `CONNECT`, `OPTIONS`, `TRACE`, `PATCH`.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Prefix</span>
@@ -1717,9 +1519,27 @@ This parameter must always start with /, which by itself matches all requests to
 
     <dt class="property-optional"
             title="Optional">
+        <span>Headers</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespechttproutematchheader">List&lt;Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Match<wbr>Header<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The client request headers to match on.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Method</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The client request header method to match on. Valid values: `GET`, `HEAD`, `POST`, `PUT`, `DELETE`, `CONNECT`, `OPTIONS`, `TRACE`, `PATCH`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Scheme</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The client request header scheme to match on. Valid values: `http`, `https`.
 {{% /md %}}</dd>
@@ -1730,6 +1550,17 @@ This parameter must always start with /, which by itself matches all requests to
 
 {{% choosable language go %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Prefix</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the path with which to match requests.
+This parameter must always start with /, which by itself matches all requests to the virtual router service name.
+* `range`- (Optional) The object that specifies the range of numbers that the header value sent by the client must be included in.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1744,27 +1575,16 @@ This parameter must always start with /, which by itself matches all requests to
             title="Optional">
         <span>Method</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The client request header method to match on. Valid values: `GET`, `HEAD`, `POST`, `PUT`, `DELETE`, `CONNECT`, `OPTIONS`, `TRACE`, `PATCH`.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Prefix</span>
-        <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Specifies the path with which to match requests.
-This parameter must always start with /, which by itself matches all requests to the virtual router service name.
-* `range`- (Optional) The object that specifies the range of numbers that the header value sent by the client must be included in.
+    <dd>{{% md %}}The client request header method to match on. Valid values: `GET`, `HEAD`, `POST`, `PUT`, `DELETE`, `CONNECT`, `OPTIONS`, `TRACE`, `PATCH`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Scheme</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The client request header scheme to match on. Valid values: `http`, `https`.
 {{% /md %}}</dd>
@@ -1775,24 +1595,6 @@ This parameter must always start with /, which by itself matches all requests to
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>headers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespechttproutematchheader">Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Match<wbr>Header[]?</a></span>
-    </dt>
-    <dd>{{% md %}}The client request headers to match on.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>method</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The client request header method to match on. Valid values: `GET`, `HEAD`, `POST`, `PUT`, `DELETE`, `CONNECT`, `OPTIONS`, `TRACE`, `PATCH`.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1807,9 +1609,27 @@ This parameter must always start with /, which by itself matches all requests to
 
     <dt class="property-optional"
             title="Optional">
+        <span>headers</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespechttproutematchheader">Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Match<wbr>Header[]</a></span>
+    </dt>
+    <dd>{{% md %}}The client request headers to match on.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>method</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The client request header method to match on. Valid values: `GET`, `HEAD`, `POST`, `PUT`, `DELETE`, `CONNECT`, `OPTIONS`, `TRACE`, `PATCH`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>scheme</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The client request header scheme to match on. Valid values: `http`, `https`.
 {{% /md %}}</dd>
@@ -1820,6 +1640,17 @@ This parameter must always start with /, which by itself matches all requests to
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>prefix</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies the path with which to match requests.
+This parameter must always start with /, which by itself matches all requests to the virtual router service name.
+* `range`- (Optional) The object that specifies the range of numbers that the header value sent by the client must be included in.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1837,17 +1668,6 @@ This parameter must always start with /, which by itself matches all requests to
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The client request header method to match on. Valid values: `GET`, `HEAD`, `POST`, `PUT`, `DELETE`, `CONNECT`, `OPTIONS`, `TRACE`, `PATCH`.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>prefix</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Specifies the path with which to match requests.
-This parameter must always start with /, which by itself matches all requests to the virtual router service name.
-* `range`- (Optional) The object that specifies the range of numbers that the header value sent by the client must be included in.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1881,11 +1701,20 @@ This parameter must always start with /, which by itself matches all requests to
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A name for the HTTP header in the client request that will be matched on.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Invert</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If `true`, the match is on the opposite of the `match` method and value. Default is `false`.
 {{% /md %}}</dd>
@@ -1894,18 +1723,9 @@ This parameter must always start with /, which by itself matches all requests to
             title="Optional">
         <span>Match</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespechttproutematchheadermatch">Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Match<wbr>Header<wbr>Match<wbr>Args?</a></span>
+        <span class="property-type"><a href="#routespechttproutematchheadermatch">Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Match<wbr>Header<wbr>Match<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The method and value to match the header value sent with a request. Specify one match method.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A name for the HTTP header in the client request that will be matched on.
 {{% /md %}}</dd>
 
 </dl>
@@ -1915,24 +1735,6 @@ This parameter must always start with /, which by itself matches all requests to
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Invert</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}If `true`, the match is on the opposite of the `match` method and value. Default is `false`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Match</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespechttproutematchheadermatch">*Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Match<wbr>Header<wbr>Match</a></span>
-    </dt>
-    <dd>{{% md %}}The method and value to match the header value sent with a request. Specify one match method.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Name</span>
@@ -1942,30 +1744,30 @@ This parameter must always start with /, which by itself matches all requests to
     <dd>{{% md %}}A name for the HTTP header in the client request that will be matched on.
 {{% /md %}}</dd>
 
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
-        <span>invert</span>
+        <span>Invert</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If `true`, the match is on the opposite of the `match` method and value. Default is `false`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>match</span>
+        <span>Match</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespechttproutematchheadermatch">Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Match<wbr>Header<wbr>Match?</a></span>
+        <span class="property-type"><a href="#routespechttproutematchheadermatch">Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Match<wbr>Header<wbr>Match</a></span>
     </dt>
     <dd>{{% md %}}The method and value to match the header value sent with a request. Specify one match method.
 {{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
@@ -1976,12 +1778,39 @@ This parameter must always start with /, which by itself matches all requests to
     <dd>{{% md %}}A name for the HTTP header in the client request that will be matched on.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>invert</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}If `true`, the match is on the opposite of the `match` method and value. Default is `false`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>match</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#routespechttproutematchheadermatch">Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Match<wbr>Header<wbr>Match</a></span>
+    </dt>
+    <dd>{{% md %}}The method and value to match the header value sent with a request. Specify one match method.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A name for the HTTP header in the client request that will be matched on.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1999,15 +1828,6 @@ This parameter must always start with /, which by itself matches all requests to
         <span class="property-type"><a href="#routespechttproutematchheadermatch">Dict[Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Match<wbr>Header<wbr>Match]</a></span>
     </dt>
     <dd>{{% md %}}The method and value to match the header value sent with a request. Specify one match method.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}A name for the HTTP header in the client request that will be matched on.
 {{% /md %}}</dd>
 
 </dl>
@@ -2036,7 +1856,7 @@ This parameter must always start with /, which by itself matches all requests to
             title="Optional">
         <span>Exact</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The header value sent by the client must match the specified value exactly.
 {{% /md %}}</dd>
@@ -2045,7 +1865,7 @@ This parameter must always start with /, which by itself matches all requests to
             title="Optional">
         <span>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the path with which to match requests.
 This parameter must always start with /, which by itself matches all requests to the virtual router service name.
@@ -2056,7 +1876,7 @@ This parameter must always start with /, which by itself matches all requests to
             title="Optional">
         <span>Range</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespechttproutematchheadermatchrange">Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Match<wbr>Header<wbr>Match<wbr>Range<wbr>Args?</a></span>
+        <span class="property-type"><a href="#routespechttproutematchheadermatchrange">Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Match<wbr>Header<wbr>Match<wbr>Range<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2064,7 +1884,7 @@ This parameter must always start with /, which by itself matches all requests to
             title="Optional">
         <span>Regex</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The header value sent by the client must include the specified characters.
 {{% /md %}}</dd>
@@ -2073,7 +1893,7 @@ This parameter must always start with /, which by itself matches all requests to
             title="Optional">
         <span>Suffix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The header value sent by the client must end with the specified characters.
 {{% /md %}}</dd>
@@ -2089,7 +1909,7 @@ This parameter must always start with /, which by itself matches all requests to
             title="Optional">
         <span>Exact</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The header value sent by the client must match the specified value exactly.
 {{% /md %}}</dd>
@@ -2098,7 +1918,7 @@ This parameter must always start with /, which by itself matches all requests to
             title="Optional">
         <span>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the path with which to match requests.
 This parameter must always start with /, which by itself matches all requests to the virtual router service name.
@@ -2109,7 +1929,7 @@ This parameter must always start with /, which by itself matches all requests to
             title="Optional">
         <span>Range</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespechttproutematchheadermatchrange">*Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Match<wbr>Header<wbr>Match<wbr>Range</a></span>
+        <span class="property-type"><a href="#routespechttproutematchheadermatchrange">Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Match<wbr>Header<wbr>Match<wbr>Range</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2117,7 +1937,7 @@ This parameter must always start with /, which by itself matches all requests to
             title="Optional">
         <span>Regex</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The header value sent by the client must include the specified characters.
 {{% /md %}}</dd>
@@ -2126,7 +1946,7 @@ This parameter must always start with /, which by itself matches all requests to
             title="Optional">
         <span>Suffix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The header value sent by the client must end with the specified characters.
 {{% /md %}}</dd>
@@ -2142,7 +1962,7 @@ This parameter must always start with /, which by itself matches all requests to
             title="Optional">
         <span>exact</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The header value sent by the client must match the specified value exactly.
 {{% /md %}}</dd>
@@ -2151,7 +1971,7 @@ This parameter must always start with /, which by itself matches all requests to
             title="Optional">
         <span>prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the path with which to match requests.
 This parameter must always start with /, which by itself matches all requests to the virtual router service name.
@@ -2162,7 +1982,7 @@ This parameter must always start with /, which by itself matches all requests to
             title="Optional">
         <span>range</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#routespechttproutematchheadermatchrange">Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Match<wbr>Header<wbr>Match<wbr>Range?</a></span>
+        <span class="property-type"><a href="#routespechttproutematchheadermatchrange">Route<wbr>Spec<wbr>Http<wbr>Route<wbr>Match<wbr>Header<wbr>Match<wbr>Range</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2170,7 +1990,7 @@ This parameter must always start with /, which by itself matches all requests to
             title="Optional">
         <span>regex</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The header value sent by the client must include the specified characters.
 {{% /md %}}</dd>
@@ -2179,7 +1999,7 @@ This parameter must always start with /, which by itself matches all requests to
             title="Optional">
         <span>suffix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The header value sent by the client must end with the specified characters.
 {{% /md %}}</dd>

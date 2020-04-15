@@ -39,7 +39,7 @@ const ak = new alicloud.ram.AccessKey("ak", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/ram/#AccessKey">AccessKey</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/ram/#AccessKeyArgs">AccessKeyArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/ram/#AccessKey">AccessKey</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/ram/#AccessKeyArgs">AccessKeyArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -47,11 +47,11 @@ const ak = new alicloud.ram.AccessKey("ak", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewAccessKey<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/ram?tab=doc#AccessKeyArgs">AccessKeyArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/ram?tab=doc#AccessKey">AccessKey</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewAccessKey<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/ram?tab=doc#AccessKeyArgs">AccessKeyArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/ram?tab=doc#AccessKey">AccessKey</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.Ram.AccessKey.html">AccessKey</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.Ram.AccessKeyArgs.html">AccessKeyArgs</a></span>? <span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.Ram.AccessKey.html">AccessKey</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.AliCloud.Ram.AccessKeyArgs.html">AccessKeyArgs</a></span>? <span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -147,7 +147,7 @@ const ak = new alicloud.ram.AccessKey("ak", {
             title="Optional">
         <span>Pgp<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Either a base-64 encoded PGP public key, or a keybase username in the form `keybase:some_person_that_exists`
 {{% /md %}}</dd>
@@ -156,7 +156,7 @@ const ak = new alicloud.ram.AccessKey("ak", {
             title="Optional">
         <span>Secret<wbr>File</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of file that can save access key id and access key secret. Strongly suggest you to specified it when you creating access key, otherwise, you wouldn't get its secret ever.
 {{% /md %}}</dd>
@@ -165,7 +165,7 @@ const ak = new alicloud.ram.AccessKey("ak", {
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Status of access key. It must be `Active` or `Inactive`. Default value is `Active`.
 {{% /md %}}</dd>
@@ -174,7 +174,7 @@ const ak = new alicloud.ram.AccessKey("ak", {
             title="Optional">
         <span>User<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the RAM user. This name can have a string of 1 to 64 characters, must contain only alphanumeric characters or hyphens, such as "-",".","_", and must not begin with a hyphen.
 {{% /md %}}</dd>
@@ -190,7 +190,7 @@ const ak = new alicloud.ram.AccessKey("ak", {
             title="Optional">
         <span>Pgp<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Either a base-64 encoded PGP public key, or a keybase username in the form `keybase:some_person_that_exists`
 {{% /md %}}</dd>
@@ -199,7 +199,7 @@ const ak = new alicloud.ram.AccessKey("ak", {
             title="Optional">
         <span>Secret<wbr>File</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of file that can save access key id and access key secret. Strongly suggest you to specified it when you creating access key, otherwise, you wouldn't get its secret ever.
 {{% /md %}}</dd>
@@ -208,7 +208,7 @@ const ak = new alicloud.ram.AccessKey("ak", {
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Status of access key. It must be `Active` or `Inactive`. Default value is `Active`.
 {{% /md %}}</dd>
@@ -217,7 +217,7 @@ const ak = new alicloud.ram.AccessKey("ak", {
             title="Optional">
         <span>User<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the RAM user. This name can have a string of 1 to 64 characters, must contain only alphanumeric characters or hyphens, such as "-",".","_", and must not begin with a hyphen.
 {{% /md %}}</dd>
@@ -233,7 +233,7 @@ const ak = new alicloud.ram.AccessKey("ak", {
             title="Optional">
         <span>pgp<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Either a base-64 encoded PGP public key, or a keybase username in the form `keybase:some_person_that_exists`
 {{% /md %}}</dd>
@@ -242,7 +242,7 @@ const ak = new alicloud.ram.AccessKey("ak", {
             title="Optional">
         <span>secret<wbr>File</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of file that can save access key id and access key secret. Strongly suggest you to specified it when you creating access key, otherwise, you wouldn't get its secret ever.
 {{% /md %}}</dd>
@@ -251,7 +251,7 @@ const ak = new alicloud.ram.AccessKey("ak", {
             title="Optional">
         <span>status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Status of access key. It must be `Active` or `Inactive`. Default value is `Active`.
 {{% /md %}}</dd>
@@ -260,7 +260,7 @@ const ak = new alicloud.ram.AccessKey("ak", {
             title="Optional">
         <span>user<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the RAM user. This name can have a string of 1 to 64 characters, must contain only alphanumeric characters or hyphens, such as "-",".","_", and must not begin with a hyphen.
 {{% /md %}}</dd>
@@ -344,42 +344,6 @@ The following output properties are available:
     <dd>{{% md %}}The fingerprint of the PGP key used to encrypt the secret
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span>Pgp<wbr>Key</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Either a base-64 encoded PGP public key, or a keybase username in the form `keybase:some_person_that_exists`
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Secret<wbr>File</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The name of file that can save access key id and access key secret. Strongly suggest you to specified it when you creating access key, otherwise, you wouldn't get its secret ever.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Status</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Status of access key. It must be `Active` or `Inactive`. Default value is `Active`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>User<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Name of the RAM user. This name can have a string of 1 to 64 characters, must contain only alphanumeric characters or hyphens, such as "-",".","_", and must not begin with a hyphen.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -402,42 +366,6 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fingerprint of the PGP key used to encrypt the secret
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Pgp<wbr>Key</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Either a base-64 encoded PGP public key, or a keybase username in the form `keybase:some_person_that_exists`
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Secret<wbr>File</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The name of file that can save access key id and access key secret. Strongly suggest you to specified it when you creating access key, otherwise, you wouldn't get its secret ever.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Status</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Status of access key. It must be `Active` or `Inactive`. Default value is `Active`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>User<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Name of the RAM user. This name can have a string of 1 to 64 characters, must contain only alphanumeric characters or hyphens, such as "-",".","_", and must not begin with a hyphen.
 {{% /md %}}</dd>
 
 </dl>
@@ -464,42 +392,6 @@ The following output properties are available:
     <dd>{{% md %}}The fingerprint of the PGP key used to encrypt the secret
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span>pgp<wbr>Key</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Either a base-64 encoded PGP public key, or a keybase username in the form `keybase:some_person_that_exists`
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>secret<wbr>File</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The name of file that can save access key id and access key secret. Strongly suggest you to specified it when you creating access key, otherwise, you wouldn't get its secret ever.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>status</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Status of access key. It must be `Active` or `Inactive`. Default value is `Active`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>user<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Name of the RAM user. This name can have a string of 1 to 64 characters, must contain only alphanumeric characters or hyphens, such as "-",".","_", and must not begin with a hyphen.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -522,42 +414,6 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The fingerprint of the PGP key used to encrypt the secret
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>pgp_<wbr>key</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Either a base-64 encoded PGP public key, or a keybase username in the form `keybase:some_person_that_exists`
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>secret_<wbr>file</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of file that can save access key id and access key secret. Strongly suggest you to specified it when you creating access key, otherwise, you wouldn't get its secret ever.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>status</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Status of access key. It must be `Active` or `Inactive`. Default value is `Active`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>user_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Name of the RAM user. This name can have a string of 1 to 64 characters, must contain only alphanumeric characters or hyphens, such as "-",".","_", and must not begin with a hyphen.
 {{% /md %}}</dd>
 
 </dl>
@@ -699,7 +555,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Encrypted<wbr>Secret</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -707,7 +563,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Key<wbr>Fingerprint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fingerprint of the PGP key used to encrypt the secret
 {{% /md %}}</dd>
@@ -716,7 +572,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Pgp<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Either a base-64 encoded PGP public key, or a keybase username in the form `keybase:some_person_that_exists`
 {{% /md %}}</dd>
@@ -725,7 +581,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Secret<wbr>File</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of file that can save access key id and access key secret. Strongly suggest you to specified it when you creating access key, otherwise, you wouldn't get its secret ever.
 {{% /md %}}</dd>
@@ -734,7 +590,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Status of access key. It must be `Active` or `Inactive`. Default value is `Active`.
 {{% /md %}}</dd>
@@ -743,7 +599,7 @@ The following state arguments are supported:
             title="Optional">
         <span>User<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the RAM user. This name can have a string of 1 to 64 characters, must contain only alphanumeric characters or hyphens, such as "-",".","_", and must not begin with a hyphen.
 {{% /md %}}</dd>
@@ -759,7 +615,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Encrypted<wbr>Secret</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -767,7 +623,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Key<wbr>Fingerprint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fingerprint of the PGP key used to encrypt the secret
 {{% /md %}}</dd>
@@ -776,7 +632,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Pgp<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Either a base-64 encoded PGP public key, or a keybase username in the form `keybase:some_person_that_exists`
 {{% /md %}}</dd>
@@ -785,7 +641,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Secret<wbr>File</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of file that can save access key id and access key secret. Strongly suggest you to specified it when you creating access key, otherwise, you wouldn't get its secret ever.
 {{% /md %}}</dd>
@@ -794,7 +650,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Status of access key. It must be `Active` or `Inactive`. Default value is `Active`.
 {{% /md %}}</dd>
@@ -803,7 +659,7 @@ The following state arguments are supported:
             title="Optional">
         <span>User<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the RAM user. This name can have a string of 1 to 64 characters, must contain only alphanumeric characters or hyphens, such as "-",".","_", and must not begin with a hyphen.
 {{% /md %}}</dd>
@@ -819,7 +675,7 @@ The following state arguments are supported:
             title="Optional">
         <span>encrypted<wbr>Secret</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -827,7 +683,7 @@ The following state arguments are supported:
             title="Optional">
         <span>key<wbr>Fingerprint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fingerprint of the PGP key used to encrypt the secret
 {{% /md %}}</dd>
@@ -836,7 +692,7 @@ The following state arguments are supported:
             title="Optional">
         <span>pgp<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Either a base-64 encoded PGP public key, or a keybase username in the form `keybase:some_person_that_exists`
 {{% /md %}}</dd>
@@ -845,7 +701,7 @@ The following state arguments are supported:
             title="Optional">
         <span>secret<wbr>File</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of file that can save access key id and access key secret. Strongly suggest you to specified it when you creating access key, otherwise, you wouldn't get its secret ever.
 {{% /md %}}</dd>
@@ -854,7 +710,7 @@ The following state arguments are supported:
             title="Optional">
         <span>status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Status of access key. It must be `Active` or `Inactive`. Default value is `Active`.
 {{% /md %}}</dd>
@@ -863,7 +719,7 @@ The following state arguments are supported:
             title="Optional">
         <span>user<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the RAM user. This name can have a string of 1 to 64 characters, must contain only alphanumeric characters or hyphens, such as "-",".","_", and must not begin with a hyphen.
 {{% /md %}}</dd>

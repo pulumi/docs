@@ -79,7 +79,7 @@ documentation.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/openstack/networking/#Port">Port</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/openstack/networking/#PortArgs">PortArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/openstack/networking/#Port">Port</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/openstack/networking/#PortArgs">PortArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -87,11 +87,11 @@ documentation.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewPort<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/networking?tab=doc#PortArgs">PortArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/networking?tab=doc#Port">Port</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewPort<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/networking?tab=doc#PortArgs">PortArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/networking?tab=doc#Port">Port</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.Openstack.Networking.Port.html">Port</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.Openstack.Networking.PortArgs.html">PortArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.Openstack.Networking.Port.html">Port</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.OpenStack.Networking.PortArgs.html">PortArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -183,117 +183,6 @@ documentation.
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Admin<wbr>State<wbr>Up</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Administrative up/down status for the port
-(must be "true" or "false" if provided). Changing this updates the
-`admin_state_up` of an existing port.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Allowed<wbr>Address<wbr>Pairs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#portallowedaddresspair">List&lt;Port<wbr>Allowed<wbr>Address<wbr>Pair<wbr>Args&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}An IP/MAC Address pair of additional IP
-addresses that can be active on this port. The structure is described
-below.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Binding</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#portbinding">Port<wbr>Binding<wbr>Args?</a></span>
-    </dt>
-    <dd>{{% md %}}The port binding allows to specify binding information
-for the port. The structure is described below.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Human-readable description of the floating IP. Changing
-this updates the `description` of an existing port.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Device<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The ID of the device attached to the port. Changing this
-creates a new port.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Device<wbr>Owner</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The device owner of the Port. Changing this creates
-a new port.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Dns<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The port DNS name. Available, when Neutron DNS extension
-is enabled.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Extra<wbr>Dhcp<wbr>Options</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#portextradhcpoption">List&lt;Port<wbr>Extra<wbr>Dhcp<wbr>Option<wbr>Args&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}An extra DHCP option that needs to be configured
-on the port. The structure is described below. Can be specified multiple
-times.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Fixed<wbr>Ips</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#portfixedip">List&lt;Port<wbr>Fixed<wbr>Ip<wbr>Args&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}An array of desired IPs for
-this port. The structure is described below.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Mac<wbr>Address</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The additional MAC address.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Name of the DHCP option.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Network<wbr>Id</span>
@@ -306,9 +195,120 @@ this creates a new port.
 
     <dt class="property-optional"
             title="Optional">
+        <span>Admin<wbr>State<wbr>Up</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Administrative up/down status for the port
+(must be "true" or "false" if provided). Changing this updates the
+`admin_state_up` of an existing port.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Allowed<wbr>Address<wbr>Pairs</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#portallowedaddresspair">List&lt;Pulumi.<wbr>Open<wbr>Stack.<wbr>Networking.<wbr>Inputs.<wbr>Port<wbr>Allowed<wbr>Address<wbr>Pair<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}An IP/MAC Address pair of additional IP
+addresses that can be active on this port. The structure is described
+below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Binding</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#portbinding">Pulumi.<wbr>Open<wbr>Stack.<wbr>Networking.<wbr>Inputs.<wbr>Port<wbr>Binding<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The port binding allows to specify binding information
+for the port. The structure is described below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Human-readable description of the floating IP. Changing
+this updates the `description` of an existing port.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Device<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the device attached to the port. Changing this
+creates a new port.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Device<wbr>Owner</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The device owner of the Port. Changing this creates
+a new port.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Dns<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The port DNS name. Available, when Neutron DNS extension
+is enabled.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Extra<wbr>Dhcp<wbr>Options</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#portextradhcpoption">List&lt;Pulumi.<wbr>Open<wbr>Stack.<wbr>Networking.<wbr>Inputs.<wbr>Port<wbr>Extra<wbr>Dhcp<wbr>Option<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}An extra DHCP option that needs to be configured
+on the port. The structure is described below. Can be specified multiple
+times.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Fixed<wbr>Ips</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#portfixedip">List&lt;Pulumi.<wbr>Open<wbr>Stack.<wbr>Networking.<wbr>Inputs.<wbr>Port<wbr>Fixed<wbr>Ip<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}An array of desired IPs for
+this port. The structure is described below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Mac<wbr>Address</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The additional MAC address.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the DHCP option.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>No<wbr>Fixed<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Create a port with no fixed
 IP address. This will also remove any fixed IPs previously set on a port. `true`
@@ -319,7 +319,7 @@ is the only valid value for this argument.
             title="Optional">
         <span>No<wbr>Security<wbr>Groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to
 `true`, then no security groups are applied to the port. If set to `false` and
@@ -332,7 +332,7 @@ security group.
             title="Optional">
         <span>Port<wbr>Security<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to explicitly enable or disable
 port security on the port. Port Security is usually enabled by default, so
@@ -346,7 +346,7 @@ and `false`.
             title="Optional">
         <span>Qos<wbr>Policy<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Reference to the associated QoS policy.
 {{% /md %}}</dd>
@@ -355,7 +355,7 @@ and `false`.
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 networking client.
 A networking client is needed to create a port. If omitted, the
@@ -367,7 +367,7 @@ port.
             title="Optional">
         <span>Security<wbr>Group<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list
 of security group IDs to apply to the port. The security groups must be
@@ -379,7 +379,7 @@ the Compute Instance).
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A set of string tags for the port.
 {{% /md %}}</dd>
@@ -388,7 +388,7 @@ the Compute Instance).
             title="Optional">
         <span>Tenant<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The owner of the Port. Required if admin wants
 to create a port for another tenant. Changing this creates a new port.
@@ -398,7 +398,7 @@ to create a port for another tenant. Changing this creates a new port.
             title="Optional">
         <span>Value<wbr>Specs</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Map of additional options.
 {{% /md %}}</dd>
@@ -410,11 +410,21 @@ to create a port for another tenant. Changing this creates a new port.
 {{% choosable language go %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Network<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the network to attach the port to. Changing
+this creates a new port.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Admin<wbr>State<wbr>Up</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Administrative up/down status for the port
 (must be "true" or "false" if provided). Changing this updates the
@@ -436,7 +446,7 @@ below.
             title="Optional">
         <span>Binding</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#portbinding">*Port<wbr>Binding</a></span>
+        <span class="property-type"><a href="#portbinding">Port<wbr>Binding</a></span>
     </dt>
     <dd>{{% md %}}The port binding allows to specify binding information
 for the port. The structure is described below.
@@ -446,7 +456,7 @@ for the port. The structure is described below.
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Human-readable description of the floating IP. Changing
 this updates the `description` of an existing port.
@@ -456,7 +466,7 @@ this updates the `description` of an existing port.
             title="Optional">
         <span>Device<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the device attached to the port. Changing this
 creates a new port.
@@ -466,7 +476,7 @@ creates a new port.
             title="Optional">
         <span>Device<wbr>Owner</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The device owner of the Port. Changing this creates
 a new port.
@@ -476,7 +486,7 @@ a new port.
             title="Optional">
         <span>Dns<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The port DNS name. Available, when Neutron DNS extension
 is enabled.
@@ -507,7 +517,7 @@ this port. The structure is described below.
             title="Optional">
         <span>Mac<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The additional MAC address.
 {{% /md %}}</dd>
@@ -516,26 +526,16 @@ this port. The structure is described below.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Name of the DHCP option.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Network<wbr>Id</span>
-        <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the network to attach the port to. Changing
-this creates a new port.
+    <dd>{{% md %}}Name of the DHCP option.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>No<wbr>Fixed<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Create a port with no fixed
 IP address. This will also remove any fixed IPs previously set on a port. `true`
@@ -546,7 +546,7 @@ is the only valid value for this argument.
             title="Optional">
         <span>No<wbr>Security<wbr>Groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to
 `true`, then no security groups are applied to the port. If set to `false` and
@@ -559,7 +559,7 @@ security group.
             title="Optional">
         <span>Port<wbr>Security<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to explicitly enable or disable
 port security on the port. Port Security is usually enabled by default, so
@@ -573,7 +573,7 @@ and `false`.
             title="Optional">
         <span>Qos<wbr>Policy<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Reference to the associated QoS policy.
 {{% /md %}}</dd>
@@ -582,7 +582,7 @@ and `false`.
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 networking client.
 A networking client is needed to create a port. If omitted, the
@@ -615,7 +615,7 @@ the Compute Instance).
             title="Optional">
         <span>Tenant<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The owner of the Port. Required if admin wants
 to create a port for another tenant. Changing this creates a new port.
@@ -637,117 +637,6 @@ to create a port for another tenant. Changing this creates a new port.
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>admin<wbr>State<wbr>Up</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Administrative up/down status for the port
-(must be "true" or "false" if provided). Changing this updates the
-`admin_state_up` of an existing port.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>allowed<wbr>Address<wbr>Pairs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#portallowedaddresspair">Port<wbr>Allowed<wbr>Address<wbr>Pair[]?</a></span>
-    </dt>
-    <dd>{{% md %}}An IP/MAC Address pair of additional IP
-addresses that can be active on this port. The structure is described
-below.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>binding</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#portbinding">Port<wbr>Binding?</a></span>
-    </dt>
-    <dd>{{% md %}}The port binding allows to specify binding information
-for the port. The structure is described below.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Human-readable description of the floating IP. Changing
-this updates the `description` of an existing port.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>device<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The ID of the device attached to the port. Changing this
-creates a new port.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>device<wbr>Owner</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The device owner of the Port. Changing this creates
-a new port.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>dns<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The port DNS name. Available, when Neutron DNS extension
-is enabled.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>extra<wbr>Dhcp<wbr>Options</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#portextradhcpoption">Port<wbr>Extra<wbr>Dhcp<wbr>Option[]?</a></span>
-    </dt>
-    <dd>{{% md %}}An extra DHCP option that needs to be configured
-on the port. The structure is described below. Can be specified multiple
-times.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>fixed<wbr>Ips</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#portfixedip">Port<wbr>Fixed<wbr>Ip[]?</a></span>
-    </dt>
-    <dd>{{% md %}}An array of desired IPs for
-this port. The structure is described below.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>mac<wbr>Address</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The additional MAC address.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Name of the DHCP option.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>network<wbr>Id</span>
@@ -760,9 +649,120 @@ this creates a new port.
 
     <dt class="property-optional"
             title="Optional">
+        <span>admin<wbr>State<wbr>Up</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Administrative up/down status for the port
+(must be "true" or "false" if provided). Changing this updates the
+`admin_state_up` of an existing port.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>allowed<wbr>Address<wbr>Pairs</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#portallowedaddresspair">Port<wbr>Allowed<wbr>Address<wbr>Pair[]</a></span>
+    </dt>
+    <dd>{{% md %}}An IP/MAC Address pair of additional IP
+addresses that can be active on this port. The structure is described
+below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>binding</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#portbinding">Port<wbr>Binding</a></span>
+    </dt>
+    <dd>{{% md %}}The port binding allows to specify binding information
+for the port. The structure is described below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Human-readable description of the floating IP. Changing
+this updates the `description` of an existing port.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>device<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the device attached to the port. Changing this
+creates a new port.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>device<wbr>Owner</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The device owner of the Port. Changing this creates
+a new port.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>dns<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The port DNS name. Available, when Neutron DNS extension
+is enabled.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>extra<wbr>Dhcp<wbr>Options</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#portextradhcpoption">Port<wbr>Extra<wbr>Dhcp<wbr>Option[]</a></span>
+    </dt>
+    <dd>{{% md %}}An extra DHCP option that needs to be configured
+on the port. The structure is described below. Can be specified multiple
+times.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>fixed<wbr>Ips</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#portfixedip">Port<wbr>Fixed<wbr>Ip[]</a></span>
+    </dt>
+    <dd>{{% md %}}An array of desired IPs for
+this port. The structure is described below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>mac<wbr>Address</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The additional MAC address.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the DHCP option.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>no<wbr>Fixed<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Create a port with no fixed
 IP address. This will also remove any fixed IPs previously set on a port. `true`
@@ -773,7 +773,7 @@ is the only valid value for this argument.
             title="Optional">
         <span>no<wbr>Security<wbr>Groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If set to
 `true`, then no security groups are applied to the port. If set to `false` and
@@ -786,7 +786,7 @@ security group.
             title="Optional">
         <span>port<wbr>Security<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to explicitly enable or disable
 port security on the port. Port Security is usually enabled by default, so
@@ -800,7 +800,7 @@ and `false`.
             title="Optional">
         <span>qos<wbr>Policy<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Reference to the associated QoS policy.
 {{% /md %}}</dd>
@@ -809,7 +809,7 @@ and `false`.
             title="Optional">
         <span>region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 networking client.
 A networking client is needed to create a port. If omitted, the
@@ -821,7 +821,7 @@ port.
             title="Optional">
         <span>security<wbr>Group<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list
 of security group IDs to apply to the port. The security groups must be
@@ -833,7 +833,7 @@ the Compute Instance).
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A set of string tags for the port.
 {{% /md %}}</dd>
@@ -842,7 +842,7 @@ the Compute Instance).
             title="Optional">
         <span>tenant<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The owner of the Port. Required if admin wants
 to create a port for another tenant. Changing this creates a new port.
@@ -852,7 +852,7 @@ to create a port for another tenant. Changing this creates a new port.
             title="Optional">
         <span>value<wbr>Specs</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Map of additional options.
 {{% /md %}}</dd>
@@ -863,6 +863,16 @@ to create a port for another tenant. Changing this creates a new port.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>network_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ID of the network to attach the port to. Changing
+this creates a new port.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -973,16 +983,6 @@ this port. The structure is described below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the DHCP option.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>network_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The ID of the network to attach the port to. Changing
-this creates a new port.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1105,20 +1105,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Admin<wbr>State<wbr>Up</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Administrative up/down status for the port
-(must be "true" or "false" if provided). Changing this updates the
-`admin_state_up` of an existing port.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>All<wbr>Fixed<wbr>Ips</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The collection of Fixed IP addresses on the port in the
 order returned by the Network v2 API.
@@ -1128,7 +1117,7 @@ order returned by the Network v2 API.
             title="">
         <span>All<wbr>Security<wbr>Group<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The collection of Security Group IDs on the port
 which have been explicitly and implicitly added.
@@ -1138,7 +1127,7 @@ which have been explicitly and implicitly added.
             title="">
         <span>All<wbr>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The collection of tags assigned on the port, which have been
 explicitly and implicitly added.
@@ -1146,220 +1135,11 @@ explicitly and implicitly added.
 
     <dt class="property-"
             title="">
-        <span>Allowed<wbr>Address<wbr>Pairs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#portallowedaddresspair">List&lt;Port<wbr>Allowed<wbr>Address<wbr>Pair&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}An IP/MAC Address pair of additional IP
-addresses that can be active on this port. The structure is described
-below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Binding</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#portbinding">Port<wbr>Binding</a></span>
-    </dt>
-    <dd>{{% md %}}The port binding allows to specify binding information
-for the port. The structure is described below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Human-readable description of the floating IP. Changing
-this updates the `description` of an existing port.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Device<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the device attached to the port. Changing this
-creates a new port.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Device<wbr>Owner</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The device owner of the Port. Changing this creates
-a new port.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Dns<wbr>Assignments</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<ImmutableDictionary<string, object>></span>
+        <span class="property-type">List&lt;Immutable<wbr>Dictionary&lt;string, object&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}The list of maps representing port DNS assignments.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Dns<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The port DNS name. Available, when Neutron DNS extension
-is enabled.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Extra<wbr>Dhcp<wbr>Options</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#portextradhcpoption">List&lt;Port<wbr>Extra<wbr>Dhcp<wbr>Option&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}An extra DHCP option that needs to be configured
-on the port. The structure is described below. Can be specified multiple
-times.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Fixed<wbr>Ips</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#portfixedip">List&lt;Port<wbr>Fixed<wbr>Ip&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}An array of desired IPs for
-this port. The structure is described below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Mac<wbr>Address</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The additional MAC address.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the DHCP option.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Network<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the network to attach the port to. Changing
-this creates a new port.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>No<wbr>Fixed<wbr>Ip</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Create a port with no fixed
-IP address. This will also remove any fixed IPs previously set on a port. `true`
-is the only valid value for this argument.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>No<wbr>Security<wbr>Groups</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}If set to
-`true`, then no security groups are applied to the port. If set to `false` and
-no `security_group_ids` are specified, then the Port will yield to the default
-behavior of the Networking service, which is to usually apply the "default"
-security group.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Port<wbr>Security<wbr>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Whether to explicitly enable or disable
-port security on the port. Port Security is usually enabled by default, so
-omitting argument will usually result in a value of "true". Setting this
-explicitly to `false` will disable port security. In order to disable port
-security, the port must not have any security groups. Valid values are `true`
-and `false`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Qos<wbr>Policy<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Reference to the associated QoS policy.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The region in which to obtain the V2 networking client.
-A networking client is needed to create a port. If omitted, the
-`region` argument of the provider is used. Changing this creates a new
-port.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Security<wbr>Group<wbr>Ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}A list
-of security group IDs to apply to the port. The security groups must be
-specified by ID and not name (as opposed to how they are configured with
-the Compute Instance).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}A set of string tags for the port.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tenant<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The owner of the Port. Required if admin wants
-to create a port for another tenant. Changing this creates a new port.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Value<wbr>Specs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
-    </dt>
-    <dd>{{% md %}}Map of additional options.
 {{% /md %}}</dd>
 
 </dl>
@@ -1371,17 +1151,6 @@ to create a port for another tenant. Changing this creates a new port.
 
     <dt class="property-"
             title="">
-        <span>Admin<wbr>State<wbr>Up</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Administrative up/down status for the port
-(must be "true" or "false" if provided). Changing this updates the
-`admin_state_up` of an existing port.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>All<wbr>Fixed<wbr>Ips</span>
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
@@ -1412,220 +1181,11 @@ explicitly and implicitly added.
 
     <dt class="property-"
             title="">
-        <span>Allowed<wbr>Address<wbr>Pairs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#portallowedaddresspair">[]Port<wbr>Allowed<wbr>Address<wbr>Pair</a></span>
-    </dt>
-    <dd>{{% md %}}An IP/MAC Address pair of additional IP
-addresses that can be active on this port. The structure is described
-below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Binding</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#portbinding">Port<wbr>Binding</a></span>
-    </dt>
-    <dd>{{% md %}}The port binding allows to specify binding information
-for the port. The structure is described below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Human-readable description of the floating IP. Changing
-this updates the `description` of an existing port.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Device<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the device attached to the port. Changing this
-creates a new port.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Device<wbr>Owner</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The device owner of the Port. Changing this creates
-a new port.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Dns<wbr>Assignments</span>
         <span class="property-indicator"></span>
         <span class="property-type">[]map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}The list of maps representing port DNS assignments.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Dns<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The port DNS name. Available, when Neutron DNS extension
-is enabled.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Extra<wbr>Dhcp<wbr>Options</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#portextradhcpoption">[]Port<wbr>Extra<wbr>Dhcp<wbr>Option</a></span>
-    </dt>
-    <dd>{{% md %}}An extra DHCP option that needs to be configured
-on the port. The structure is described below. Can be specified multiple
-times.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Fixed<wbr>Ips</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#portfixedip">[]Port<wbr>Fixed<wbr>Ip</a></span>
-    </dt>
-    <dd>{{% md %}}An array of desired IPs for
-this port. The structure is described below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Mac<wbr>Address</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The additional MAC address.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the DHCP option.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Network<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the network to attach the port to. Changing
-this creates a new port.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>No<wbr>Fixed<wbr>Ip</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Create a port with no fixed
-IP address. This will also remove any fixed IPs previously set on a port. `true`
-is the only valid value for this argument.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>No<wbr>Security<wbr>Groups</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}If set to
-`true`, then no security groups are applied to the port. If set to `false` and
-no `security_group_ids` are specified, then the Port will yield to the default
-behavior of the Networking service, which is to usually apply the "default"
-security group.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Port<wbr>Security<wbr>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Whether to explicitly enable or disable
-port security on the port. Port Security is usually enabled by default, so
-omitting argument will usually result in a value of "true". Setting this
-explicitly to `false` will disable port security. In order to disable port
-security, the port must not have any security groups. Valid values are `true`
-and `false`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Qos<wbr>Policy<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Reference to the associated QoS policy.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The region in which to obtain the V2 networking client.
-A networking client is needed to create a port. If omitted, the
-`region` argument of the provider is used. Changing this creates a new
-port.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Security<wbr>Group<wbr>Ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}A list
-of security group IDs to apply to the port. The security groups must be
-specified by ID and not name (as opposed to how they are configured with
-the Compute Instance).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}A set of string tags for the port.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tenant<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The owner of the Port. Required if admin wants
-to create a port for another tenant. Changing this creates a new port.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Value<wbr>Specs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
-    </dt>
-    <dd>{{% md %}}Map of additional options.
 {{% /md %}}</dd>
 
 </dl>
@@ -1634,17 +1194,6 @@ to create a port for another tenant. Changing this creates a new port.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>admin<wbr>State<wbr>Up</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
-    </dt>
-    <dd>{{% md %}}Administrative up/down status for the port
-(must be "true" or "false" if provided). Changing this updates the
-`admin_state_up` of an existing port.
-{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1678,220 +1227,11 @@ explicitly and implicitly added.
 
     <dt class="property-"
             title="">
-        <span>allowed<wbr>Address<wbr>Pairs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#portallowedaddresspair">Port<wbr>Allowed<wbr>Address<wbr>Pair[]?</a></span>
-    </dt>
-    <dd>{{% md %}}An IP/MAC Address pair of additional IP
-addresses that can be active on this port. The structure is described
-below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>binding</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#portbinding">Port<wbr>Binding</a></span>
-    </dt>
-    <dd>{{% md %}}The port binding allows to specify binding information
-for the port. The structure is described below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Human-readable description of the floating IP. Changing
-this updates the `description` of an existing port.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>device<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the device attached to the port. Changing this
-creates a new port.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>device<wbr>Owner</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The device owner of the Port. Changing this creates
-a new port.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>dns<wbr>Assignments</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}[]</span>
     </dt>
     <dd>{{% md %}}The list of maps representing port DNS assignments.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>dns<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The port DNS name. Available, when Neutron DNS extension
-is enabled.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>extra<wbr>Dhcp<wbr>Options</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#portextradhcpoption">Port<wbr>Extra<wbr>Dhcp<wbr>Option[]?</a></span>
-    </dt>
-    <dd>{{% md %}}An extra DHCP option that needs to be configured
-on the port. The structure is described below. Can be specified multiple
-times.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>fixed<wbr>Ips</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#portfixedip">Port<wbr>Fixed<wbr>Ip[]?</a></span>
-    </dt>
-    <dd>{{% md %}}An array of desired IPs for
-this port. The structure is described below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>mac<wbr>Address</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The additional MAC address.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the DHCP option.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>network<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the network to attach the port to. Changing
-this creates a new port.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>no<wbr>Fixed<wbr>Ip</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Create a port with no fixed
-IP address. This will also remove any fixed IPs previously set on a port. `true`
-is the only valid value for this argument.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>no<wbr>Security<wbr>Groups</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}If set to
-`true`, then no security groups are applied to the port. If set to `false` and
-no `security_group_ids` are specified, then the Port will yield to the default
-behavior of the Networking service, which is to usually apply the "default"
-security group.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>port<wbr>Security<wbr>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
-    </dt>
-    <dd>{{% md %}}Whether to explicitly enable or disable
-port security on the port. Port Security is usually enabled by default, so
-omitting argument will usually result in a value of "true". Setting this
-explicitly to `false` will disable port security. In order to disable port
-security, the port must not have any security groups. Valid values are `true`
-and `false`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>qos<wbr>Policy<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Reference to the associated QoS policy.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The region in which to obtain the V2 networking client.
-A networking client is needed to create a port. If omitted, the
-`region` argument of the provider is used. Changing this creates a new
-port.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>security<wbr>Group<wbr>Ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}A list
-of security group IDs to apply to the port. The security groups must be
-specified by ID and not name (as opposed to how they are configured with
-the Compute Instance).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}A set of string tags for the port.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tenant<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The owner of the Port. Required if admin wants
-to create a port for another tenant. Changing this creates a new port.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>value<wbr>Specs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
-    </dt>
-    <dd>{{% md %}}Map of additional options.
 {{% /md %}}</dd>
 
 </dl>
@@ -1900,17 +1240,6 @@ to create a port for another tenant. Changing this creates a new port.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>admin_<wbr>state_<wbr>up</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Administrative up/down status for the port
-(must be "true" or "false" if provided). Changing this updates the
-`admin_state_up` of an existing port.
-{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1944,220 +1273,11 @@ explicitly and implicitly added.
 
     <dt class="property-"
             title="">
-        <span>allowed_<wbr>address_<wbr>pairs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#portallowedaddresspair">List[Port<wbr>Allowed<wbr>Address<wbr>Pair]</a></span>
-    </dt>
-    <dd>{{% md %}}An IP/MAC Address pair of additional IP
-addresses that can be active on this port. The structure is described
-below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>binding</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#portbinding">Dict[Port<wbr>Binding]</a></span>
-    </dt>
-    <dd>{{% md %}}The port binding allows to specify binding information
-for the port. The structure is described below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Human-readable description of the floating IP. Changing
-this updates the `description` of an existing port.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>device_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The ID of the device attached to the port. Changing this
-creates a new port.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>device_<wbr>owner</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The device owner of the Port. Changing this creates
-a new port.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>dns_<wbr>assignments</span>
         <span class="property-indicator"></span>
         <span class="property-type">List[Any>]</span>
     </dt>
     <dd>{{% md %}}The list of maps representing port DNS assignments.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>dns_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The port DNS name. Available, when Neutron DNS extension
-is enabled.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>extra_<wbr>dhcp_<wbr>options</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#portextradhcpoption">List[Port<wbr>Extra<wbr>Dhcp<wbr>Option]</a></span>
-    </dt>
-    <dd>{{% md %}}An extra DHCP option that needs to be configured
-on the port. The structure is described below. Can be specified multiple
-times.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>fixed_<wbr>ips</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#portfixedip">List[Port<wbr>Fixed<wbr>Ip]</a></span>
-    </dt>
-    <dd>{{% md %}}An array of desired IPs for
-this port. The structure is described below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>mac_<wbr>address</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The additional MAC address.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Name of the DHCP option.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>network_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The ID of the network to attach the port to. Changing
-this creates a new port.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>no_<wbr>fixed_<wbr>ip</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Create a port with no fixed
-IP address. This will also remove any fixed IPs previously set on a port. `true`
-is the only valid value for this argument.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>no_<wbr>security_<wbr>groups</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}If set to
-`true`, then no security groups are applied to the port. If set to `false` and
-no `security_group_ids` are specified, then the Port will yield to the default
-behavior of the Networking service, which is to usually apply the "default"
-security group.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>port_<wbr>security_<wbr>enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Whether to explicitly enable or disable
-port security on the port. Port Security is usually enabled by default, so
-omitting argument will usually result in a value of "true". Setting this
-explicitly to `false` will disable port security. In order to disable port
-security, the port must not have any security groups. Valid values are `true`
-and `false`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>qos_<wbr>policy_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Reference to the associated QoS policy.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The region in which to obtain the V2 networking client.
-A networking client is needed to create a port. If omitted, the
-`region` argument of the provider is used. Changing this creates a new
-port.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>security_<wbr>group_<wbr>ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}A list
-of security group IDs to apply to the port. The security groups must be
-specified by ID and not name (as opposed to how they are configured with
-the Compute Instance).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}A set of string tags for the port.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tenant_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The owner of the Port. Required if admin wants
-to create a port for another tenant. Changing this creates a new port.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>value_<wbr>specs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
-    </dt>
-    <dd>{{% md %}}Map of additional options.
 {{% /md %}}</dd>
 
 </dl>
@@ -2299,7 +1419,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Admin<wbr>State<wbr>Up</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Administrative up/down status for the port
 (must be "true" or "false" if provided). Changing this updates the
@@ -2310,7 +1430,7 @@ The following state arguments are supported:
             title="Optional">
         <span>All<wbr>Fixed<wbr>Ips</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The collection of Fixed IP addresses on the port in the
 order returned by the Network v2 API.
@@ -2320,7 +1440,7 @@ order returned by the Network v2 API.
             title="Optional">
         <span>All<wbr>Security<wbr>Group<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The collection of Security Group IDs on the port
 which have been explicitly and implicitly added.
@@ -2330,7 +1450,7 @@ which have been explicitly and implicitly added.
             title="Optional">
         <span>All<wbr>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The collection of tags assigned on the port, which have been
 explicitly and implicitly added.
@@ -2340,7 +1460,7 @@ explicitly and implicitly added.
             title="Optional">
         <span>Allowed<wbr>Address<wbr>Pairs</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#portallowedaddresspair">List&lt;Port<wbr>Allowed<wbr>Address<wbr>Pair<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#portallowedaddresspair">List&lt;Pulumi.<wbr>Open<wbr>Stack.<wbr>Networking.<wbr>Inputs.<wbr>Port<wbr>Allowed<wbr>Address<wbr>Pair<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}An IP/MAC Address pair of additional IP
 addresses that can be active on this port. The structure is described
@@ -2351,7 +1471,7 @@ below.
             title="Optional">
         <span>Binding</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#portbinding">Port<wbr>Binding<wbr>Args?</a></span>
+        <span class="property-type"><a href="#portbinding">Pulumi.<wbr>Open<wbr>Stack.<wbr>Networking.<wbr>Inputs.<wbr>Port<wbr>Binding<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The port binding allows to specify binding information
 for the port. The structure is described below.
@@ -2361,7 +1481,7 @@ for the port. The structure is described below.
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Human-readable description of the floating IP. Changing
 this updates the `description` of an existing port.
@@ -2371,7 +1491,7 @@ this updates the `description` of an existing port.
             title="Optional">
         <span>Device<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the device attached to the port. Changing this
 creates a new port.
@@ -2381,7 +1501,7 @@ creates a new port.
             title="Optional">
         <span>Device<wbr>Owner</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The device owner of the Port. Changing this creates
 a new port.
@@ -2391,7 +1511,7 @@ a new port.
             title="Optional">
         <span>Dns<wbr>Assignments</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<ImmutableDictionary<string, object>>?</span>
+        <span class="property-type">List&lt;Immutable<wbr>Dictionary&lt;string, object&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}The list of maps representing port DNS assignments.
 {{% /md %}}</dd>
@@ -2400,7 +1520,7 @@ a new port.
             title="Optional">
         <span>Dns<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The port DNS name. Available, when Neutron DNS extension
 is enabled.
@@ -2410,7 +1530,7 @@ is enabled.
             title="Optional">
         <span>Extra<wbr>Dhcp<wbr>Options</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#portextradhcpoption">List&lt;Port<wbr>Extra<wbr>Dhcp<wbr>Option<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#portextradhcpoption">List&lt;Pulumi.<wbr>Open<wbr>Stack.<wbr>Networking.<wbr>Inputs.<wbr>Port<wbr>Extra<wbr>Dhcp<wbr>Option<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}An extra DHCP option that needs to be configured
 on the port. The structure is described below. Can be specified multiple
@@ -2421,7 +1541,7 @@ times.
             title="Optional">
         <span>Fixed<wbr>Ips</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#portfixedip">List&lt;Port<wbr>Fixed<wbr>Ip<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#portfixedip">List&lt;Pulumi.<wbr>Open<wbr>Stack.<wbr>Networking.<wbr>Inputs.<wbr>Port<wbr>Fixed<wbr>Ip<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}An array of desired IPs for
 this port. The structure is described below.
@@ -2431,7 +1551,7 @@ this port. The structure is described below.
             title="Optional">
         <span>Mac<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The additional MAC address.
 {{% /md %}}</dd>
@@ -2440,7 +1560,7 @@ this port. The structure is described below.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the DHCP option.
 {{% /md %}}</dd>
@@ -2449,7 +1569,7 @@ this port. The structure is described below.
             title="Optional">
         <span>Network<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the network to attach the port to. Changing
 this creates a new port.
@@ -2459,7 +1579,7 @@ this creates a new port.
             title="Optional">
         <span>No<wbr>Fixed<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Create a port with no fixed
 IP address. This will also remove any fixed IPs previously set on a port. `true`
@@ -2470,7 +1590,7 @@ is the only valid value for this argument.
             title="Optional">
         <span>No<wbr>Security<wbr>Groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to
 `true`, then no security groups are applied to the port. If set to `false` and
@@ -2483,7 +1603,7 @@ security group.
             title="Optional">
         <span>Port<wbr>Security<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to explicitly enable or disable
 port security on the port. Port Security is usually enabled by default, so
@@ -2497,7 +1617,7 @@ and `false`.
             title="Optional">
         <span>Qos<wbr>Policy<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Reference to the associated QoS policy.
 {{% /md %}}</dd>
@@ -2506,7 +1626,7 @@ and `false`.
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 networking client.
 A networking client is needed to create a port. If omitted, the
@@ -2518,7 +1638,7 @@ port.
             title="Optional">
         <span>Security<wbr>Group<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list
 of security group IDs to apply to the port. The security groups must be
@@ -2530,7 +1650,7 @@ the Compute Instance).
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A set of string tags for the port.
 {{% /md %}}</dd>
@@ -2539,7 +1659,7 @@ the Compute Instance).
             title="Optional">
         <span>Tenant<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The owner of the Port. Required if admin wants
 to create a port for another tenant. Changing this creates a new port.
@@ -2549,7 +1669,7 @@ to create a port for another tenant. Changing this creates a new port.
             title="Optional">
         <span>Value<wbr>Specs</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Map of additional options.
 {{% /md %}}</dd>
@@ -2565,7 +1685,7 @@ to create a port for another tenant. Changing this creates a new port.
             title="Optional">
         <span>Admin<wbr>State<wbr>Up</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Administrative up/down status for the port
 (must be "true" or "false" if provided). Changing this updates the
@@ -2617,7 +1737,7 @@ below.
             title="Optional">
         <span>Binding</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#portbinding">*Port<wbr>Binding</a></span>
+        <span class="property-type"><a href="#portbinding">Port<wbr>Binding</a></span>
     </dt>
     <dd>{{% md %}}The port binding allows to specify binding information
 for the port. The structure is described below.
@@ -2627,7 +1747,7 @@ for the port. The structure is described below.
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Human-readable description of the floating IP. Changing
 this updates the `description` of an existing port.
@@ -2637,7 +1757,7 @@ this updates the `description` of an existing port.
             title="Optional">
         <span>Device<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the device attached to the port. Changing this
 creates a new port.
@@ -2647,7 +1767,7 @@ creates a new port.
             title="Optional">
         <span>Device<wbr>Owner</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The device owner of the Port. Changing this creates
 a new port.
@@ -2666,7 +1786,7 @@ a new port.
             title="Optional">
         <span>Dns<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The port DNS name. Available, when Neutron DNS extension
 is enabled.
@@ -2697,7 +1817,7 @@ this port. The structure is described below.
             title="Optional">
         <span>Mac<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The additional MAC address.
 {{% /md %}}</dd>
@@ -2706,7 +1826,7 @@ this port. The structure is described below.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the DHCP option.
 {{% /md %}}</dd>
@@ -2715,7 +1835,7 @@ this port. The structure is described below.
             title="Optional">
         <span>Network<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the network to attach the port to. Changing
 this creates a new port.
@@ -2725,7 +1845,7 @@ this creates a new port.
             title="Optional">
         <span>No<wbr>Fixed<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Create a port with no fixed
 IP address. This will also remove any fixed IPs previously set on a port. `true`
@@ -2736,7 +1856,7 @@ is the only valid value for this argument.
             title="Optional">
         <span>No<wbr>Security<wbr>Groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to
 `true`, then no security groups are applied to the port. If set to `false` and
@@ -2749,7 +1869,7 @@ security group.
             title="Optional">
         <span>Port<wbr>Security<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to explicitly enable or disable
 port security on the port. Port Security is usually enabled by default, so
@@ -2763,7 +1883,7 @@ and `false`.
             title="Optional">
         <span>Qos<wbr>Policy<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Reference to the associated QoS policy.
 {{% /md %}}</dd>
@@ -2772,7 +1892,7 @@ and `false`.
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 networking client.
 A networking client is needed to create a port. If omitted, the
@@ -2805,7 +1925,7 @@ the Compute Instance).
             title="Optional">
         <span>Tenant<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The owner of the Port. Required if admin wants
 to create a port for another tenant. Changing this creates a new port.
@@ -2831,7 +1951,7 @@ to create a port for another tenant. Changing this creates a new port.
             title="Optional">
         <span>admin<wbr>State<wbr>Up</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Administrative up/down status for the port
 (must be "true" or "false" if provided). Changing this updates the
@@ -2842,7 +1962,7 @@ to create a port for another tenant. Changing this creates a new port.
             title="Optional">
         <span>all<wbr>Fixed<wbr>Ips</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The collection of Fixed IP addresses on the port in the
 order returned by the Network v2 API.
@@ -2852,7 +1972,7 @@ order returned by the Network v2 API.
             title="Optional">
         <span>all<wbr>Security<wbr>Group<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The collection of Security Group IDs on the port
 which have been explicitly and implicitly added.
@@ -2862,7 +1982,7 @@ which have been explicitly and implicitly added.
             title="Optional">
         <span>all<wbr>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The collection of tags assigned on the port, which have been
 explicitly and implicitly added.
@@ -2872,7 +1992,7 @@ explicitly and implicitly added.
             title="Optional">
         <span>allowed<wbr>Address<wbr>Pairs</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#portallowedaddresspair">Port<wbr>Allowed<wbr>Address<wbr>Pair[]?</a></span>
+        <span class="property-type"><a href="#portallowedaddresspair">Port<wbr>Allowed<wbr>Address<wbr>Pair[]</a></span>
     </dt>
     <dd>{{% md %}}An IP/MAC Address pair of additional IP
 addresses that can be active on this port. The structure is described
@@ -2883,7 +2003,7 @@ below.
             title="Optional">
         <span>binding</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#portbinding">Port<wbr>Binding?</a></span>
+        <span class="property-type"><a href="#portbinding">Port<wbr>Binding</a></span>
     </dt>
     <dd>{{% md %}}The port binding allows to specify binding information
 for the port. The structure is described below.
@@ -2893,7 +2013,7 @@ for the port. The structure is described below.
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Human-readable description of the floating IP. Changing
 this updates the `description` of an existing port.
@@ -2903,7 +2023,7 @@ this updates the `description` of an existing port.
             title="Optional">
         <span>device<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the device attached to the port. Changing this
 creates a new port.
@@ -2913,7 +2033,7 @@ creates a new port.
             title="Optional">
         <span>device<wbr>Owner</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The device owner of the Port. Changing this creates
 a new port.
@@ -2923,7 +2043,7 @@ a new port.
             title="Optional">
         <span>dns<wbr>Assignments</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}[]?</span>
+        <span class="property-type">{[key: string]: any}[]</span>
     </dt>
     <dd>{{% md %}}The list of maps representing port DNS assignments.
 {{% /md %}}</dd>
@@ -2932,7 +2052,7 @@ a new port.
             title="Optional">
         <span>dns<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The port DNS name. Available, when Neutron DNS extension
 is enabled.
@@ -2942,7 +2062,7 @@ is enabled.
             title="Optional">
         <span>extra<wbr>Dhcp<wbr>Options</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#portextradhcpoption">Port<wbr>Extra<wbr>Dhcp<wbr>Option[]?</a></span>
+        <span class="property-type"><a href="#portextradhcpoption">Port<wbr>Extra<wbr>Dhcp<wbr>Option[]</a></span>
     </dt>
     <dd>{{% md %}}An extra DHCP option that needs to be configured
 on the port. The structure is described below. Can be specified multiple
@@ -2953,7 +2073,7 @@ times.
             title="Optional">
         <span>fixed<wbr>Ips</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#portfixedip">Port<wbr>Fixed<wbr>Ip[]?</a></span>
+        <span class="property-type"><a href="#portfixedip">Port<wbr>Fixed<wbr>Ip[]</a></span>
     </dt>
     <dd>{{% md %}}An array of desired IPs for
 this port. The structure is described below.
@@ -2963,7 +2083,7 @@ this port. The structure is described below.
             title="Optional">
         <span>mac<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The additional MAC address.
 {{% /md %}}</dd>
@@ -2972,7 +2092,7 @@ this port. The structure is described below.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the DHCP option.
 {{% /md %}}</dd>
@@ -2981,7 +2101,7 @@ this port. The structure is described below.
             title="Optional">
         <span>network<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the network to attach the port to. Changing
 this creates a new port.
@@ -2991,7 +2111,7 @@ this creates a new port.
             title="Optional">
         <span>no<wbr>Fixed<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Create a port with no fixed
 IP address. This will also remove any fixed IPs previously set on a port. `true`
@@ -3002,7 +2122,7 @@ is the only valid value for this argument.
             title="Optional">
         <span>no<wbr>Security<wbr>Groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If set to
 `true`, then no security groups are applied to the port. If set to `false` and
@@ -3015,7 +2135,7 @@ security group.
             title="Optional">
         <span>port<wbr>Security<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to explicitly enable or disable
 port security on the port. Port Security is usually enabled by default, so
@@ -3029,7 +2149,7 @@ and `false`.
             title="Optional">
         <span>qos<wbr>Policy<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Reference to the associated QoS policy.
 {{% /md %}}</dd>
@@ -3038,7 +2158,7 @@ and `false`.
             title="Optional">
         <span>region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 networking client.
 A networking client is needed to create a port. If omitted, the
@@ -3050,7 +2170,7 @@ port.
             title="Optional">
         <span>security<wbr>Group<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list
 of security group IDs to apply to the port. The security groups must be
@@ -3062,7 +2182,7 @@ the Compute Instance).
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A set of string tags for the port.
 {{% /md %}}</dd>
@@ -3071,7 +2191,7 @@ the Compute Instance).
             title="Optional">
         <span>tenant<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The owner of the Port. Required if admin wants
 to create a port for another tenant. Changing this creates a new port.
@@ -3081,7 +2201,7 @@ to create a port for another tenant. Changing this creates a new port.
             title="Optional">
         <span>value<wbr>Specs</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Map of additional options.
 {{% /md %}}</dd>
@@ -3394,7 +2514,7 @@ to create a port for another tenant. Changing this creates a new port.
             title="Optional">
         <span>Mac<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The additional MAC address.
 {{% /md %}}</dd>
@@ -3419,7 +2539,7 @@ to create a port for another tenant. Changing this creates a new port.
             title="Optional">
         <span>Mac<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The additional MAC address.
 {{% /md %}}</dd>
@@ -3444,7 +2564,7 @@ to create a port for another tenant. Changing this creates a new port.
             title="Optional">
         <span>mac<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The additional MAC address.
 {{% /md %}}</dd>
@@ -3500,7 +2620,7 @@ to create a port for another tenant. Changing this creates a new port.
             title="Optional">
         <span>Host<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the host to allocate port on.
 {{% /md %}}</dd>
@@ -3509,7 +2629,7 @@ to create a port for another tenant. Changing this creates a new port.
             title="Optional">
         <span>Profile</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Custom data to be passed as `binding:profile`. Data
 must be passed as JSON.
@@ -3519,7 +2639,7 @@ must be passed as JSON.
             title="Optional">
         <span>Vif<wbr>Details</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A map of JSON strings containing additional
 details for this specific binding.
@@ -3529,7 +2649,7 @@ details for this specific binding.
             title="Optional">
         <span>Vif<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The VNIC type of the port binding.
 {{% /md %}}</dd>
@@ -3538,7 +2658,7 @@ details for this specific binding.
             title="Optional">
         <span>Vnic<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}VNIC type for the port. Can either be `direct`,
 `direct-physical`, `macvtap`, `normal`, `baremetal` or `virtio-forwarder`.
@@ -3556,7 +2676,7 @@ Default value is `normal`.
             title="Optional">
         <span>Host<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the host to allocate port on.
 {{% /md %}}</dd>
@@ -3565,7 +2685,7 @@ Default value is `normal`.
             title="Optional">
         <span>Profile</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Custom data to be passed as `binding:profile`. Data
 must be passed as JSON.
@@ -3585,7 +2705,7 @@ details for this specific binding.
             title="Optional">
         <span>Vif<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The VNIC type of the port binding.
 {{% /md %}}</dd>
@@ -3594,7 +2714,7 @@ details for this specific binding.
             title="Optional">
         <span>Vnic<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}VNIC type for the port. Can either be `direct`,
 `direct-physical`, `macvtap`, `normal`, `baremetal` or `virtio-forwarder`.
@@ -3612,7 +2732,7 @@ Default value is `normal`.
             title="Optional">
         <span>host<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the host to allocate port on.
 {{% /md %}}</dd>
@@ -3621,7 +2741,7 @@ Default value is `normal`.
             title="Optional">
         <span>profile</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Custom data to be passed as `binding:profile`. Data
 must be passed as JSON.
@@ -3631,7 +2751,7 @@ must be passed as JSON.
             title="Optional">
         <span>vif<wbr>Details</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A map of JSON strings containing additional
 details for this specific binding.
@@ -3641,7 +2761,7 @@ details for this specific binding.
             title="Optional">
         <span>vif<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The VNIC type of the port binding.
 {{% /md %}}</dd>
@@ -3650,7 +2770,7 @@ details for this specific binding.
             title="Optional">
         <span>vnic<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}VNIC type for the port. Can either be `direct`,
 `direct-physical`, `macvtap`, `normal`, `baremetal` or `virtio-forwarder`.
@@ -3735,15 +2855,6 @@ Default value is `normal`.
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Ip<wbr>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}IP protocol version. Defaults to 4.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Name</span>
@@ -3760,6 +2871,15 @@ Default value is `normal`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Value of the DHCP option.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Ip<wbr>Version</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}IP protocol version. Defaults to 4.
 {{% /md %}}</dd>
 
 </dl>
@@ -3769,15 +2889,6 @@ Default value is `normal`.
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Ip<wbr>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}IP protocol version. Defaults to 4.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Name</span>
@@ -3796,21 +2907,21 @@ Default value is `normal`.
     <dd>{{% md %}}Value of the DHCP option.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>Ip<wbr>Version</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}IP protocol version. Defaults to 4.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>ip<wbr>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}IP protocol version. Defaults to 4.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -3828,6 +2939,15 @@ Default value is `normal`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Value of the DHCP option.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>ip<wbr>Version</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}IP protocol version. Defaults to 4.
 {{% /md %}}</dd>
 
 </dl>
@@ -3837,15 +2957,6 @@ Default value is `normal`.
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>ip_<wbr>version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}IP protocol version. Defaults to 4.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>name</span>
@@ -3862,6 +2973,15 @@ Default value is `normal`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Value of the DHCP option.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>ip_<wbr>version</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}IP protocol version. Defaults to 4.
 {{% /md %}}</dd>
 
 </dl>
@@ -3886,15 +3006,6 @@ Default value is `normal`.
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Ip<wbr>Address</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The additional IP address.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Subnet<wbr>Id</span>
@@ -3903,6 +3014,15 @@ Default value is `normal`.
     </dt>
     <dd>{{% md %}}Subnet in which to allocate IP address for
 this port.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Ip<wbr>Address</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The additional IP address.
 {{% /md %}}</dd>
 
 </dl>
@@ -3912,15 +3032,6 @@ this port.
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Ip<wbr>Address</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The additional IP address.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Subnet<wbr>Id</span>
@@ -3931,21 +3042,21 @@ this port.
 this port.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>Ip<wbr>Address</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The additional IP address.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>ip<wbr>Address</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The additional IP address.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -3957,21 +3068,21 @@ this port.
 this port.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>ip<wbr>Address</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The additional IP address.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>ip_<wbr>address</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The additional IP address.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -3981,6 +3092,15 @@ this port.
     </dt>
     <dd>{{% md %}}Subnet in which to allocate IP address for
 this port.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>ip_<wbr>address</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The additional IP address.
 {{% /md %}}</dd>
 
 </dl>

@@ -37,7 +37,7 @@ const webhookMyteam = new signalfx.WebhookResource("webhook_myteam", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/signalfx/#WebhookIntegration">WebhookIntegration</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/signalfx/#WebhookIntegrationArgs">WebhookIntegrationArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/signalfx/#WebhookIntegration">WebhookIntegration</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/signalfx/#WebhookIntegrationArgs">WebhookIntegrationArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -45,11 +45,11 @@ const webhookMyteam = new signalfx.WebhookResource("webhook_myteam", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewWebhookIntegration<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/go/signalfx/?tab=doc#WebhookIntegrationArgs">WebhookIntegrationArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/go/signalfx/?tab=doc#WebhookIntegration">WebhookIntegration</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewWebhookIntegration<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/go/signalfx/?tab=doc#WebhookIntegrationArgs">WebhookIntegrationArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/go/signalfx/?tab=doc#WebhookIntegration">WebhookIntegration</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Signalfx/Pulumi.Signalfx..WebhookIntegration.html">WebhookIntegration</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Signalfx/Pulumi.Signalfx.WebhookIntegrationArgs.html">WebhookIntegrationArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Signalfx/Pulumi.Signalfx.WebhookIntegration.html">WebhookIntegration</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Signalfx/Pulumi.SignalFx.WebhookIntegrationArgs.html">WebhookIntegrationArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -154,7 +154,7 @@ const webhookMyteam = new signalfx.WebhookResource("webhook_myteam", {
             title="Optional">
         <span>Headers</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webhookintegrationheader">List&lt;Webhook<wbr>Integration<wbr>Header<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#webhookintegrationheader">List&lt;Pulumi.<wbr>Signal<wbr>Fx.<wbr>Inputs.<wbr>Webhook<wbr>Integration<wbr>Header<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A header to send with the request
 {{% /md %}}</dd>
@@ -163,7 +163,7 @@ const webhookMyteam = new signalfx.WebhookResource("webhook_myteam", {
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the integration.
 {{% /md %}}</dd>
@@ -172,7 +172,7 @@ const webhookMyteam = new signalfx.WebhookResource("webhook_myteam", {
             title="Optional">
         <span>Shared<wbr>Secret</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -180,7 +180,7 @@ const webhookMyteam = new signalfx.WebhookResource("webhook_myteam", {
             title="Optional">
         <span>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL to request
 {{% /md %}}</dd>
@@ -214,7 +214,7 @@ const webhookMyteam = new signalfx.WebhookResource("webhook_myteam", {
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the integration.
 {{% /md %}}</dd>
@@ -223,7 +223,7 @@ const webhookMyteam = new signalfx.WebhookResource("webhook_myteam", {
             title="Optional">
         <span>Shared<wbr>Secret</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -231,7 +231,7 @@ const webhookMyteam = new signalfx.WebhookResource("webhook_myteam", {
             title="Optional">
         <span>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL to request
 {{% /md %}}</dd>
@@ -256,7 +256,7 @@ const webhookMyteam = new signalfx.WebhookResource("webhook_myteam", {
             title="Optional">
         <span>headers</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webhookintegrationheader">Webhook<wbr>Integration<wbr>Header[]?</a></span>
+        <span class="property-type"><a href="#webhookintegrationheader">Webhook<wbr>Integration<wbr>Header[]</a></span>
     </dt>
     <dd>{{% md %}}A header to send with the request
 {{% /md %}}</dd>
@@ -265,7 +265,7 @@ const webhookMyteam = new signalfx.WebhookResource("webhook_myteam", {
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the integration.
 {{% /md %}}</dd>
@@ -274,7 +274,7 @@ const webhookMyteam = new signalfx.WebhookResource("webhook_myteam", {
             title="Optional">
         <span>shared<wbr>Secret</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -282,7 +282,7 @@ const webhookMyteam = new signalfx.WebhookResource("webhook_myteam", {
             title="Optional">
         <span>url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL to request
 {{% /md %}}</dd>
@@ -342,220 +342,6 @@ const webhookMyteam = new signalfx.WebhookResource("webhook_myteam", {
 {{% /choosable %}}
 
 
-
-
-
-
-
-## WebhookIntegration Output Properties
-
-The following output properties are available:
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Whether the integration is enabled.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Headers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webhookintegrationheader">List&lt;Webhook<wbr>Integration<wbr>Header&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}A header to send with the request
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the integration.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Shared<wbr>Secret</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Url</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The URL to request
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Whether the integration is enabled.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Headers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webhookintegrationheader">[]Webhook<wbr>Integration<wbr>Header</a></span>
-    </dt>
-    <dd>{{% md %}}A header to send with the request
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the integration.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Shared<wbr>Secret</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Url</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The URL to request
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
-    </dt>
-    <dd>{{% md %}}Whether the integration is enabled.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>headers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webhookintegrationheader">Webhook<wbr>Integration<wbr>Header[]?</a></span>
-    </dt>
-    <dd>{{% md %}}A header to send with the request
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the integration.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>shared<wbr>Secret</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>url</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The URL to request
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Whether the integration is enabled.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>headers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webhookintegrationheader">List[Webhook<wbr>Integration<wbr>Header]</a></span>
-    </dt>
-    <dd>{{% md %}}A header to send with the request
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Name of the integration.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>shared_<wbr>secret</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>url</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The URL to request
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
 
 
 
@@ -583,7 +369,7 @@ Get an existing WebhookIntegration resource's state with the given name, ID, and
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Signalfx/Pulumi.Signalfx..WebhookIntegration.html">WebhookIntegration</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Signalfx/Pulumi.Signalfx..WebhookIntegrationState.html">WebhookIntegrationState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Signalfx/Pulumi.Signalfx.WebhookIntegration.html">WebhookIntegration</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Signalfx/Pulumi.Signalfx..WebhookIntegrationState.html">WebhookIntegrationState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -693,7 +479,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the integration is enabled.
 {{% /md %}}</dd>
@@ -702,7 +488,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Headers</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webhookintegrationheader">List&lt;Webhook<wbr>Integration<wbr>Header<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#webhookintegrationheader">List&lt;Pulumi.<wbr>Signal<wbr>Fx.<wbr>Inputs.<wbr>Webhook<wbr>Integration<wbr>Header<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A header to send with the request
 {{% /md %}}</dd>
@@ -711,7 +497,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the integration.
 {{% /md %}}</dd>
@@ -720,7 +506,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Shared<wbr>Secret</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -728,7 +514,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL to request
 {{% /md %}}</dd>
@@ -744,7 +530,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the integration is enabled.
 {{% /md %}}</dd>
@@ -762,7 +548,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the integration.
 {{% /md %}}</dd>
@@ -771,7 +557,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Shared<wbr>Secret</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -779,7 +565,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL to request
 {{% /md %}}</dd>
@@ -795,7 +581,7 @@ The following state arguments are supported:
             title="Optional">
         <span>enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the integration is enabled.
 {{% /md %}}</dd>
@@ -804,7 +590,7 @@ The following state arguments are supported:
             title="Optional">
         <span>headers</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webhookintegrationheader">Webhook<wbr>Integration<wbr>Header[]?</a></span>
+        <span class="property-type"><a href="#webhookintegrationheader">Webhook<wbr>Integration<wbr>Header[]</a></span>
     </dt>
     <dd>{{% md %}}A header to send with the request
 {{% /md %}}</dd>
@@ -813,7 +599,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the integration.
 {{% /md %}}</dd>
@@ -822,7 +608,7 @@ The following state arguments are supported:
             title="Optional">
         <span>shared<wbr>Secret</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -830,7 +616,7 @@ The following state arguments are supported:
             title="Optional">
         <span>url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL to request
 {{% /md %}}</dd>

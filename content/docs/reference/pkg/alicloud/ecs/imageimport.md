@@ -44,7 +44,7 @@ const thisImageImport = new alicloud.ecs.ImageImport("this", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/ecs/#ImageImport">ImageImport</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/ecs/#ImageImportArgs">ImageImportArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/ecs/#ImageImport">ImageImport</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/ecs/#ImageImportArgs">ImageImportArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -52,11 +52,11 @@ const thisImageImport = new alicloud.ecs.ImageImport("this", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewImageImport<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/ecs?tab=doc#ImageImportArgs">ImageImportArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/ecs?tab=doc#ImageImport">ImageImport</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewImageImport<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/ecs?tab=doc#ImageImportArgs">ImageImportArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/ecs?tab=doc#ImageImport">ImageImport</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.Ecs.ImageImport.html">ImageImport</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.Ecs.ImageImportArgs.html">ImageImportArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.Ecs.ImageImport.html">ImageImport</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.AliCloud.Ecs.ImageImportArgs.html">ImageImportArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -148,11 +148,20 @@ const thisImageImport = new alicloud.ecs.ImageImport("this", {
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Disk<wbr>Device<wbr>Mappings</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#imageimportdiskdevicemapping">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Ecs.<wbr>Inputs.<wbr>Image<wbr>Import<wbr>Disk<wbr>Device<wbr>Mapping<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Description of the system with disks and snapshots under the image.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Architecture</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the architecture of the system disk after you specify a data disk snapshot as the data source of the system disk for creating an image. Valid values: `i386` , Default is `x86_64`.
 {{% /md %}}</dd>
@@ -161,25 +170,16 @@ const thisImageImport = new alicloud.ecs.ImageImport("this", {
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the image. The length is 2 to 256 English or Chinese characters, and cannot begin with http: // and https: //.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Disk<wbr>Device<wbr>Mappings</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imageimportdiskdevicemapping">List&lt;Image<wbr>Import<wbr>Disk<wbr>Device<wbr>Mapping<wbr>Args&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}Description of the system with disks and snapshots under the image.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Image<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The image name. The length is 2 ~ 128 English or Chinese characters. Must start with a capital letter or Chinese, and cannot start with http: // and https: //. Can contain numbers, colons (:), underscores (_), or hyphens (-).
 {{% /md %}}</dd>
@@ -188,7 +188,7 @@ const thisImageImport = new alicloud.ecs.ImageImport("this", {
             title="Optional">
         <span>License<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -196,7 +196,7 @@ const thisImageImport = new alicloud.ecs.ImageImport("this", {
             title="Optional">
         <span>Os<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Operating system platform type. Valid values: `windows`, Default is `linux`.
 {{% /md %}}</dd>
@@ -205,7 +205,7 @@ const thisImageImport = new alicloud.ecs.ImageImport("this", {
             title="Optional">
         <span>Platform</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the operating system platform of the system disk after you specify a data disk snapshot as the data source of the system disk for creating an image. Valid values: `CentOS`, `Ubuntu`, `SUSE`, `OpenSUSE`, `Debian`, `CoreOS`, `Windows Server 2003`, `Windows Server 2008`, `Windows Server 2012`, `Windows 7`, Default is `Others Linux`, `Customized Linux`.
 {{% /md %}}</dd>
@@ -216,24 +216,6 @@ const thisImageImport = new alicloud.ecs.ImageImport("this", {
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Architecture</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the architecture of the system disk after you specify a data disk snapshot as the data source of the system disk for creating an image. Valid values: `i386` , Default is `x86_64`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Description of the image. The length is 2 to 256 English or Chinese characters, and cannot begin with http: // and https: //.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -246,9 +228,27 @@ const thisImageImport = new alicloud.ecs.ImageImport("this", {
 
     <dt class="property-optional"
             title="Optional">
+        <span>Architecture</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the architecture of the system disk after you specify a data disk snapshot as the data source of the system disk for creating an image. Valid values: `i386` , Default is `x86_64`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Description of the image. The length is 2 to 256 English or Chinese characters, and cannot begin with http: // and https: //.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Image<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The image name. The length is 2 ~ 128 English or Chinese characters. Must start with a capital letter or Chinese, and cannot start with http: // and https: //. Can contain numbers, colons (:), underscores (_), or hyphens (-).
 {{% /md %}}</dd>
@@ -257,7 +257,7 @@ const thisImageImport = new alicloud.ecs.ImageImport("this", {
             title="Optional">
         <span>License<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -265,7 +265,7 @@ const thisImageImport = new alicloud.ecs.ImageImport("this", {
             title="Optional">
         <span>Os<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Operating system platform type. Valid values: `windows`, Default is `linux`.
 {{% /md %}}</dd>
@@ -274,7 +274,7 @@ const thisImageImport = new alicloud.ecs.ImageImport("this", {
             title="Optional">
         <span>Platform</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the operating system platform of the system disk after you specify a data disk snapshot as the data source of the system disk for creating an image. Valid values: `CentOS`, `Ubuntu`, `SUSE`, `OpenSUSE`, `Debian`, `CoreOS`, `Windows Server 2003`, `Windows Server 2008`, `Windows Server 2012`, `Windows 7`, Default is `Others Linux`, `Customized Linux`.
 {{% /md %}}</dd>
@@ -285,24 +285,6 @@ const thisImageImport = new alicloud.ecs.ImageImport("this", {
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>architecture</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Specifies the architecture of the system disk after you specify a data disk snapshot as the data source of the system disk for creating an image. Valid values: `i386` , Default is `x86_64`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Description of the image. The length is 2 to 256 English or Chinese characters, and cannot begin with http: // and https: //.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -315,9 +297,27 @@ const thisImageImport = new alicloud.ecs.ImageImport("this", {
 
     <dt class="property-optional"
             title="Optional">
+        <span>architecture</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the architecture of the system disk after you specify a data disk snapshot as the data source of the system disk for creating an image. Valid values: `i386` , Default is `x86_64`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Description of the image. The length is 2 to 256 English or Chinese characters, and cannot begin with http: // and https: //.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>image<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The image name. The length is 2 ~ 128 English or Chinese characters. Must start with a capital letter or Chinese, and cannot start with http: // and https: //. Can contain numbers, colons (:), underscores (_), or hyphens (-).
 {{% /md %}}</dd>
@@ -326,7 +326,7 @@ const thisImageImport = new alicloud.ecs.ImageImport("this", {
             title="Optional">
         <span>license<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -334,7 +334,7 @@ const thisImageImport = new alicloud.ecs.ImageImport("this", {
             title="Optional">
         <span>os<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Operating system platform type. Valid values: `windows`, Default is `linux`.
 {{% /md %}}</dd>
@@ -343,7 +343,7 @@ const thisImageImport = new alicloud.ecs.ImageImport("this", {
             title="Optional">
         <span>platform</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the operating system platform of the system disk after you specify a data disk snapshot as the data source of the system disk for creating an image. Valid values: `CentOS`, `Ubuntu`, `SUSE`, `OpenSUSE`, `Debian`, `CoreOS`, `Windows Server 2003`, `Windows Server 2008`, `Windows Server 2012`, `Windows 7`, Default is `Others Linux`, `Customized Linux`.
 {{% /md %}}</dd>
@@ -354,6 +354,15 @@ const thisImageImport = new alicloud.ecs.ImageImport("this", {
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>disk_<wbr>device_<wbr>mappings</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#imageimportdiskdevicemapping">List[Image<wbr>Import<wbr>Disk<wbr>Device<wbr>Mapping]</a></span>
+    </dt>
+    <dd>{{% md %}}Description of the system with disks and snapshots under the image.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -371,15 +380,6 @@ const thisImageImport = new alicloud.ecs.ImageImport("this", {
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Description of the image. The length is 2 to 256 English or Chinese characters, and cannot begin with http: // and https: //.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>disk_<wbr>device_<wbr>mappings</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imageimportdiskdevicemapping">List[Image<wbr>Import<wbr>Disk<wbr>Device<wbr>Mapping]</a></span>
-    </dt>
-    <dd>{{% md %}}Description of the system with disks and snapshots under the image.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -421,292 +421,6 @@ const thisImageImport = new alicloud.ecs.ImageImport("this", {
 {{% /choosable %}}
 
 
-
-
-
-
-
-## ImageImport Output Properties
-
-The following output properties are available:
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Architecture</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Specifies the architecture of the system disk after you specify a data disk snapshot as the data source of the system disk for creating an image. Valid values: `i386` , Default is `x86_64`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Description of the image. The length is 2 to 256 English or Chinese characters, and cannot begin with http: // and https: //.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Disk<wbr>Device<wbr>Mappings</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imageimportdiskdevicemapping">List&lt;Image<wbr>Import<wbr>Disk<wbr>Device<wbr>Mapping&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}Description of the system with disks and snapshots under the image.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Image<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The image name. The length is 2 ~ 128 English or Chinese characters. Must start with a capital letter or Chinese, and cannot start with http: // and https: //. Can contain numbers, colons (:), underscores (_), or hyphens (-).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>License<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Os<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Operating system platform type. Valid values: `windows`, Default is `linux`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Platform</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Specifies the operating system platform of the system disk after you specify a data disk snapshot as the data source of the system disk for creating an image. Valid values: `CentOS`, `Ubuntu`, `SUSE`, `OpenSUSE`, `Debian`, `CoreOS`, `Windows Server 2003`, `Windows Server 2008`, `Windows Server 2012`, `Windows 7`, Default is `Others Linux`, `Customized Linux`.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Architecture</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the architecture of the system disk after you specify a data disk snapshot as the data source of the system disk for creating an image. Valid values: `i386` , Default is `x86_64`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Description of the image. The length is 2 to 256 English or Chinese characters, and cannot begin with http: // and https: //.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Disk<wbr>Device<wbr>Mappings</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imageimportdiskdevicemapping">[]Image<wbr>Import<wbr>Disk<wbr>Device<wbr>Mapping</a></span>
-    </dt>
-    <dd>{{% md %}}Description of the system with disks and snapshots under the image.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Image<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The image name. The length is 2 ~ 128 English or Chinese characters. Must start with a capital letter or Chinese, and cannot start with http: // and https: //. Can contain numbers, colons (:), underscores (_), or hyphens (-).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>License<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Os<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Operating system platform type. Valid values: `windows`, Default is `linux`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Platform</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the operating system platform of the system disk after you specify a data disk snapshot as the data source of the system disk for creating an image. Valid values: `CentOS`, `Ubuntu`, `SUSE`, `OpenSUSE`, `Debian`, `CoreOS`, `Windows Server 2003`, `Windows Server 2008`, `Windows Server 2012`, `Windows 7`, Default is `Others Linux`, `Customized Linux`.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>architecture</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Specifies the architecture of the system disk after you specify a data disk snapshot as the data source of the system disk for creating an image. Valid values: `i386` , Default is `x86_64`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Description of the image. The length is 2 to 256 English or Chinese characters, and cannot begin with http: // and https: //.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>disk<wbr>Device<wbr>Mappings</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imageimportdiskdevicemapping">Image<wbr>Import<wbr>Disk<wbr>Device<wbr>Mapping[]</a></span>
-    </dt>
-    <dd>{{% md %}}Description of the system with disks and snapshots under the image.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>image<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The image name. The length is 2 ~ 128 English or Chinese characters. Must start with a capital letter or Chinese, and cannot start with http: // and https: //. Can contain numbers, colons (:), underscores (_), or hyphens (-).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>license<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>os<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Operating system platform type. Valid values: `windows`, Default is `linux`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>platform</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Specifies the operating system platform of the system disk after you specify a data disk snapshot as the data source of the system disk for creating an image. Valid values: `CentOS`, `Ubuntu`, `SUSE`, `OpenSUSE`, `Debian`, `CoreOS`, `Windows Server 2003`, `Windows Server 2008`, `Windows Server 2012`, `Windows 7`, Default is `Others Linux`, `Customized Linux`.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>architecture</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Specifies the architecture of the system disk after you specify a data disk snapshot as the data source of the system disk for creating an image. Valid values: `i386` , Default is `x86_64`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Description of the image. The length is 2 to 256 English or Chinese characters, and cannot begin with http: // and https: //.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>disk_<wbr>device_<wbr>mappings</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imageimportdiskdevicemapping">List[Image<wbr>Import<wbr>Disk<wbr>Device<wbr>Mapping]</a></span>
-    </dt>
-    <dd>{{% md %}}Description of the system with disks and snapshots under the image.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>image_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The image name. The length is 2 ~ 128 English or Chinese characters. Must start with a capital letter or Chinese, and cannot start with http: // and https: //. Can contain numbers, colons (:), underscores (_), or hyphens (-).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>license_<wbr>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>os_<wbr>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Operating system platform type. Valid values: `windows`, Default is `linux`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>platform</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Specifies the operating system platform of the system disk after you specify a data disk snapshot as the data source of the system disk for creating an image. Valid values: `CentOS`, `Ubuntu`, `SUSE`, `OpenSUSE`, `Debian`, `CoreOS`, `Windows Server 2003`, `Windows Server 2008`, `Windows Server 2012`, `Windows 7`, Default is `Others Linux`, `Customized Linux`.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
 
 
 
@@ -844,7 +558,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Architecture</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the architecture of the system disk after you specify a data disk snapshot as the data source of the system disk for creating an image. Valid values: `i386` , Default is `x86_64`.
 {{% /md %}}</dd>
@@ -853,7 +567,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the image. The length is 2 to 256 English or Chinese characters, and cannot begin with http: // and https: //.
 {{% /md %}}</dd>
@@ -862,7 +576,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Disk<wbr>Device<wbr>Mappings</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imageimportdiskdevicemapping">List&lt;Image<wbr>Import<wbr>Disk<wbr>Device<wbr>Mapping<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#imageimportdiskdevicemapping">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Ecs.<wbr>Inputs.<wbr>Image<wbr>Import<wbr>Disk<wbr>Device<wbr>Mapping<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Description of the system with disks and snapshots under the image.
 {{% /md %}}</dd>
@@ -871,7 +585,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Image<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The image name. The length is 2 ~ 128 English or Chinese characters. Must start with a capital letter or Chinese, and cannot start with http: // and https: //. Can contain numbers, colons (:), underscores (_), or hyphens (-).
 {{% /md %}}</dd>
@@ -880,7 +594,7 @@ The following state arguments are supported:
             title="Optional">
         <span>License<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -888,7 +602,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Os<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Operating system platform type. Valid values: `windows`, Default is `linux`.
 {{% /md %}}</dd>
@@ -897,7 +611,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Platform</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the operating system platform of the system disk after you specify a data disk snapshot as the data source of the system disk for creating an image. Valid values: `CentOS`, `Ubuntu`, `SUSE`, `OpenSUSE`, `Debian`, `CoreOS`, `Windows Server 2003`, `Windows Server 2008`, `Windows Server 2012`, `Windows 7`, Default is `Others Linux`, `Customized Linux`.
 {{% /md %}}</dd>
@@ -913,7 +627,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Architecture</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the architecture of the system disk after you specify a data disk snapshot as the data source of the system disk for creating an image. Valid values: `i386` , Default is `x86_64`.
 {{% /md %}}</dd>
@@ -922,7 +636,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the image. The length is 2 to 256 English or Chinese characters, and cannot begin with http: // and https: //.
 {{% /md %}}</dd>
@@ -940,7 +654,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Image<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The image name. The length is 2 ~ 128 English or Chinese characters. Must start with a capital letter or Chinese, and cannot start with http: // and https: //. Can contain numbers, colons (:), underscores (_), or hyphens (-).
 {{% /md %}}</dd>
@@ -949,7 +663,7 @@ The following state arguments are supported:
             title="Optional">
         <span>License<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -957,7 +671,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Os<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Operating system platform type. Valid values: `windows`, Default is `linux`.
 {{% /md %}}</dd>
@@ -966,7 +680,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Platform</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the operating system platform of the system disk after you specify a data disk snapshot as the data source of the system disk for creating an image. Valid values: `CentOS`, `Ubuntu`, `SUSE`, `OpenSUSE`, `Debian`, `CoreOS`, `Windows Server 2003`, `Windows Server 2008`, `Windows Server 2012`, `Windows 7`, Default is `Others Linux`, `Customized Linux`.
 {{% /md %}}</dd>
@@ -982,7 +696,7 @@ The following state arguments are supported:
             title="Optional">
         <span>architecture</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the architecture of the system disk after you specify a data disk snapshot as the data source of the system disk for creating an image. Valid values: `i386` , Default is `x86_64`.
 {{% /md %}}</dd>
@@ -991,7 +705,7 @@ The following state arguments are supported:
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the image. The length is 2 to 256 English or Chinese characters, and cannot begin with http: // and https: //.
 {{% /md %}}</dd>
@@ -1000,7 +714,7 @@ The following state arguments are supported:
             title="Optional">
         <span>disk<wbr>Device<wbr>Mappings</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#imageimportdiskdevicemapping">Image<wbr>Import<wbr>Disk<wbr>Device<wbr>Mapping[]?</a></span>
+        <span class="property-type"><a href="#imageimportdiskdevicemapping">Image<wbr>Import<wbr>Disk<wbr>Device<wbr>Mapping[]</a></span>
     </dt>
     <dd>{{% md %}}Description of the system with disks and snapshots under the image.
 {{% /md %}}</dd>
@@ -1009,7 +723,7 @@ The following state arguments are supported:
             title="Optional">
         <span>image<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The image name. The length is 2 ~ 128 English or Chinese characters. Must start with a capital letter or Chinese, and cannot start with http: // and https: //. Can contain numbers, colons (:), underscores (_), or hyphens (-).
 {{% /md %}}</dd>
@@ -1018,7 +732,7 @@ The following state arguments are supported:
             title="Optional">
         <span>license<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1026,7 +740,7 @@ The following state arguments are supported:
             title="Optional">
         <span>os<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Operating system platform type. Valid values: `windows`, Default is `linux`.
 {{% /md %}}</dd>
@@ -1035,7 +749,7 @@ The following state arguments are supported:
             title="Optional">
         <span>platform</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the operating system platform of the system disk after you specify a data disk snapshot as the data source of the system disk for creating an image. Valid values: `CentOS`, `Ubuntu`, `SUSE`, `OpenSUSE`, `Debian`, `CoreOS`, `Windows Server 2003`, `Windows Server 2008`, `Windows Server 2012`, `Windows 7`, Default is `Others Linux`, `Customized Linux`.
 {{% /md %}}</dd>
@@ -1142,7 +856,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Device</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the type of a disk in the combined custom image. If you specify this parameter, you can use a data disk snapshot as the data source of a system disk for creating an image. If it is not specified, the disk type is determined by the corresponding snapshot. Valid values: `system`, `data`,
 {{% /md %}}</dd>
@@ -1151,7 +865,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Disk<wbr>Image<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Resolution size. You must ensure that the system disk space ≥ file system space. Ranges: When n = 1, the system disk: 5 ~ 500GiB, When n = 2 ~ 17, that is, data disk: 5 ~ 1000GiB, When temporary is introduced, the system automatically detects the size, which is subject to the detection result.
 {{% /md %}}</dd>
@@ -1160,7 +874,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Format</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Image format. Value range: When the `RAW`, `VHD`, `qcow2` is imported into the image, the system automatically detects the image format, whichever comes first.
 {{% /md %}}</dd>
@@ -1169,7 +883,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Oss<wbr>Bucket</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Save the exported OSS bucket.
 {{% /md %}}</dd>
@@ -1178,7 +892,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Oss<wbr>Object</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1193,7 +907,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Device</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the type of a disk in the combined custom image. If you specify this parameter, you can use a data disk snapshot as the data source of a system disk for creating an image. If it is not specified, the disk type is determined by the corresponding snapshot. Valid values: `system`, `data`,
 {{% /md %}}</dd>
@@ -1202,7 +916,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Disk<wbr>Image<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Resolution size. You must ensure that the system disk space ≥ file system space. Ranges: When n = 1, the system disk: 5 ~ 500GiB, When n = 2 ~ 17, that is, data disk: 5 ~ 1000GiB, When temporary is introduced, the system automatically detects the size, which is subject to the detection result.
 {{% /md %}}</dd>
@@ -1211,7 +925,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Format</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Image format. Value range: When the `RAW`, `VHD`, `qcow2` is imported into the image, the system automatically detects the image format, whichever comes first.
 {{% /md %}}</dd>
@@ -1220,7 +934,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Oss<wbr>Bucket</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Save the exported OSS bucket.
 {{% /md %}}</dd>
@@ -1229,7 +943,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Oss<wbr>Object</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1244,7 +958,7 @@ The following state arguments are supported:
             title="Optional">
         <span>device</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the type of a disk in the combined custom image. If you specify this parameter, you can use a data disk snapshot as the data source of a system disk for creating an image. If it is not specified, the disk type is determined by the corresponding snapshot. Valid values: `system`, `data`,
 {{% /md %}}</dd>
@@ -1253,7 +967,7 @@ The following state arguments are supported:
             title="Optional">
         <span>disk<wbr>Image<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Resolution size. You must ensure that the system disk space ≥ file system space. Ranges: When n = 1, the system disk: 5 ~ 500GiB, When n = 2 ~ 17, that is, data disk: 5 ~ 1000GiB, When temporary is introduced, the system automatically detects the size, which is subject to the detection result.
 {{% /md %}}</dd>
@@ -1262,7 +976,7 @@ The following state arguments are supported:
             title="Optional">
         <span>format</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Image format. Value range: When the `RAW`, `VHD`, `qcow2` is imported into the image, the system automatically detects the image format, whichever comes first.
 {{% /md %}}</dd>
@@ -1271,7 +985,7 @@ The following state arguments are supported:
             title="Optional">
         <span>oss<wbr>Bucket</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Save the exported OSS bucket.
 {{% /md %}}</dd>
@@ -1280,7 +994,7 @@ The following state arguments are supported:
             title="Optional">
         <span>oss<wbr>Object</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

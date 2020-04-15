@@ -35,7 +35,7 @@ const example = new okta.auth.ServerPolicyClaim("example", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/okta/auth/#ServerPolicyClaim">ServerPolicyClaim</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/okta/auth/#ServerPolicyClaimArgs">ServerPolicyClaimArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/okta/auth/#ServerPolicyClaim">ServerPolicyClaim</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/okta/auth/#ServerPolicyClaimArgs">ServerPolicyClaimArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -43,7 +43,7 @@ const example = new okta.auth.ServerPolicyClaim("example", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewServerPolicyClaim<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/go/okta/auth?tab=doc#ServerPolicyClaimArgs">ServerPolicyClaimArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/go/okta/auth?tab=doc#ServerPolicyClaim">ServerPolicyClaim</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewServerPolicyClaim<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/go/okta/auth?tab=doc#ServerPolicyClaimArgs">ServerPolicyClaimArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/go/okta/auth?tab=doc#ServerPolicyClaim">ServerPolicyClaim</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -139,15 +139,6 @@ const example = new okta.auth.ServerPolicyClaim("example", {
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Access<wbr>Token<wbr>Lifetime<wbr>Minutes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}Lifetime of access token. Can be set to a value between 5 and 1440.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Auth<wbr>Server<wbr>Id</span>
@@ -161,43 +152,9 @@ const example = new okta.auth.ServerPolicyClaim("example", {
             title="Required">
         <span>Grant<wbr>Type<wbr>Whitelists</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Accepted grant type values, `"authorization_code"`, `"implicit"`, `"password"`
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Group<wbr>Blacklists</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Group<wbr>Whitelists</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Inline<wbr>Hook<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The ID of the inline token to trigger.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Auth Server Policy Rule name.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -220,9 +177,52 @@ const example = new okta.auth.ServerPolicyClaim("example", {
 
     <dt class="property-optional"
             title="Optional">
+        <span>Access<wbr>Token<wbr>Lifetime<wbr>Minutes</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Lifetime of access token. Can be set to a value between 5 and 1440.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Group<wbr>Blacklists</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Group<wbr>Whitelists</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Inline<wbr>Hook<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the inline token to trigger.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Auth Server Policy Rule name.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Refresh<wbr>Token<wbr>Lifetime<wbr>Minutes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Lifetime of refresh token.
 {{% /md %}}</dd>
@@ -231,7 +231,7 @@ const example = new okta.auth.ServerPolicyClaim("example", {
             title="Optional">
         <span>Refresh<wbr>Token<wbr>Window<wbr>Minutes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -239,7 +239,7 @@ const example = new okta.auth.ServerPolicyClaim("example", {
             title="Optional">
         <span>Scope<wbr>Whitelists</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Scopes allowed for this policy rule. They can be whitelisted by name or all can be whitelisted with `"*"`.
 {{% /md %}}</dd>
@@ -248,7 +248,7 @@ const example = new okta.auth.ServerPolicyClaim("example", {
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the Auth Server Policy Rule.
 {{% /md %}}</dd>
@@ -257,7 +257,7 @@ const example = new okta.auth.ServerPolicyClaim("example", {
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the Auth Server Policy Rule.
 {{% /md %}}</dd>
@@ -266,7 +266,7 @@ const example = new okta.auth.ServerPolicyClaim("example", {
             title="Optional">
         <span>User<wbr>Blacklists</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -274,7 +274,7 @@ const example = new okta.auth.ServerPolicyClaim("example", {
             title="Optional">
         <span>User<wbr>Whitelists</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -285,15 +285,6 @@ const example = new okta.auth.ServerPolicyClaim("example", {
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Access<wbr>Token<wbr>Lifetime<wbr>Minutes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}Lifetime of access token. Can be set to a value between 5 and 1440.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Auth<wbr>Server<wbr>Id</span>
@@ -310,40 +301,6 @@ const example = new okta.auth.ServerPolicyClaim("example", {
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Accepted grant type values, `"authorization_code"`, `"implicit"`, `"password"`
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Group<wbr>Blacklists</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Group<wbr>Whitelists</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Inline<wbr>Hook<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the inline token to trigger.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Auth Server Policy Rule name.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -366,9 +323,52 @@ const example = new okta.auth.ServerPolicyClaim("example", {
 
     <dt class="property-optional"
             title="Optional">
+        <span>Access<wbr>Token<wbr>Lifetime<wbr>Minutes</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Lifetime of access token. Can be set to a value between 5 and 1440.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Group<wbr>Blacklists</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Group<wbr>Whitelists</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Inline<wbr>Hook<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the inline token to trigger.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Auth Server Policy Rule name.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Refresh<wbr>Token<wbr>Lifetime<wbr>Minutes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Lifetime of refresh token.
 {{% /md %}}</dd>
@@ -377,7 +377,7 @@ const example = new okta.auth.ServerPolicyClaim("example", {
             title="Optional">
         <span>Refresh<wbr>Token<wbr>Window<wbr>Minutes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -394,7 +394,7 @@ const example = new okta.auth.ServerPolicyClaim("example", {
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the Auth Server Policy Rule.
 {{% /md %}}</dd>
@@ -403,7 +403,7 @@ const example = new okta.auth.ServerPolicyClaim("example", {
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the Auth Server Policy Rule.
 {{% /md %}}</dd>
@@ -431,15 +431,6 @@ const example = new okta.auth.ServerPolicyClaim("example", {
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>access<wbr>Token<wbr>Lifetime<wbr>Minutes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}Lifetime of access token. Can be set to a value between 5 and 1440.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>auth<wbr>Server<wbr>Id</span>
@@ -456,40 +447,6 @@ const example = new okta.auth.ServerPolicyClaim("example", {
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Accepted grant type values, `"authorization_code"`, `"implicit"`, `"password"`
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>group<wbr>Blacklists</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>group<wbr>Whitelists</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>inline<wbr>Hook<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The ID of the inline token to trigger.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Auth Server Policy Rule name.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -512,9 +469,52 @@ const example = new okta.auth.ServerPolicyClaim("example", {
 
     <dt class="property-optional"
             title="Optional">
+        <span>access<wbr>Token<wbr>Lifetime<wbr>Minutes</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Lifetime of access token. Can be set to a value between 5 and 1440.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>group<wbr>Blacklists</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>group<wbr>Whitelists</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>inline<wbr>Hook<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the inline token to trigger.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Auth Server Policy Rule name.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>refresh<wbr>Token<wbr>Lifetime<wbr>Minutes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Lifetime of refresh token.
 {{% /md %}}</dd>
@@ -523,7 +523,7 @@ const example = new okta.auth.ServerPolicyClaim("example", {
             title="Optional">
         <span>refresh<wbr>Token<wbr>Window<wbr>Minutes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -531,7 +531,7 @@ const example = new okta.auth.ServerPolicyClaim("example", {
             title="Optional">
         <span>scope<wbr>Whitelists</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Scopes allowed for this policy rule. They can be whitelisted by name or all can be whitelisted with `"*"`.
 {{% /md %}}</dd>
@@ -540,7 +540,7 @@ const example = new okta.auth.ServerPolicyClaim("example", {
             title="Optional">
         <span>status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the Auth Server Policy Rule.
 {{% /md %}}</dd>
@@ -549,7 +549,7 @@ const example = new okta.auth.ServerPolicyClaim("example", {
             title="Optional">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the Auth Server Policy Rule.
 {{% /md %}}</dd>
@@ -558,7 +558,7 @@ const example = new okta.auth.ServerPolicyClaim("example", {
             title="Optional">
         <span>user<wbr>Blacklists</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -566,7 +566,7 @@ const example = new okta.auth.ServerPolicyClaim("example", {
             title="Optional">
         <span>user<wbr>Whitelists</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -576,15 +576,6 @@ const example = new okta.auth.ServerPolicyClaim("example", {
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>access_<wbr>token_<wbr>lifetime_<wbr>minutes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}Lifetime of access token. Can be set to a value between 5 and 1440.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -602,6 +593,33 @@ const example = new okta.auth.ServerPolicyClaim("example", {
         <span class="property-type">List[str]</span>
     </dt>
     <dd>{{% md %}}Accepted grant type values, `"authorization_code"`, `"implicit"`, `"password"`
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>policy_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Auth Server Policy ID.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>priority</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}Priority of the auth server policy rule.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>access_<wbr>token_<wbr>lifetime_<wbr>minutes</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}Lifetime of access token. Can be set to a value between 5 and 1440.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -636,24 +654,6 @@ const example = new okta.auth.ServerPolicyClaim("example", {
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Auth Server Policy Rule name.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>policy_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Auth Server Policy ID.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>priority</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}Priority of the auth server policy rule.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -720,600 +720,6 @@ const example = new okta.auth.ServerPolicyClaim("example", {
 {{% /choosable %}}
 
 
-
-
-
-
-
-## ServerPolicyClaim Output Properties
-
-The following output properties are available:
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Access<wbr>Token<wbr>Lifetime<wbr>Minutes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}Lifetime of access token. Can be set to a value between 5 and 1440.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Auth<wbr>Server<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Auth Server ID.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Grant<wbr>Type<wbr>Whitelists</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
-    </dt>
-    <dd>{{% md %}}Accepted grant type values, `"authorization_code"`, `"implicit"`, `"password"`
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Group<wbr>Blacklists</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Group<wbr>Whitelists</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Inline<wbr>Hook<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The ID of the inline token to trigger.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Auth Server Policy Rule name.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Policy<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Auth Server Policy ID.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Priority</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Priority of the auth server policy rule.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Refresh<wbr>Token<wbr>Lifetime<wbr>Minutes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}Lifetime of refresh token.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Refresh<wbr>Token<wbr>Window<wbr>Minutes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Scope<wbr>Whitelists</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}Scopes allowed for this policy rule. They can be whitelisted by name or all can be whitelisted with `"*"`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Status</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The status of the Auth Server Policy Rule.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The type of the Auth Server Policy Rule.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>User<wbr>Blacklists</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>User<wbr>Whitelists</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Access<wbr>Token<wbr>Lifetime<wbr>Minutes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}Lifetime of access token. Can be set to a value between 5 and 1440.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Auth<wbr>Server<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Auth Server ID.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Grant<wbr>Type<wbr>Whitelists</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}Accepted grant type values, `"authorization_code"`, `"implicit"`, `"password"`
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Group<wbr>Blacklists</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Group<wbr>Whitelists</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Inline<wbr>Hook<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the inline token to trigger.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Auth Server Policy Rule name.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Policy<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Auth Server Policy ID.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Priority</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Priority of the auth server policy rule.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Refresh<wbr>Token<wbr>Lifetime<wbr>Minutes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}Lifetime of refresh token.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Refresh<wbr>Token<wbr>Window<wbr>Minutes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Scope<wbr>Whitelists</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}Scopes allowed for this policy rule. They can be whitelisted by name or all can be whitelisted with `"*"`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Status</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The status of the Auth Server Policy Rule.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The type of the Auth Server Policy Rule.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>User<wbr>Blacklists</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>User<wbr>Whitelists</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>access<wbr>Token<wbr>Lifetime<wbr>Minutes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}Lifetime of access token. Can be set to a value between 5 and 1440.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>auth<wbr>Server<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Auth Server ID.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>grant<wbr>Type<wbr>Whitelists</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
-    </dt>
-    <dd>{{% md %}}Accepted grant type values, `"authorization_code"`, `"implicit"`, `"password"`
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>group<wbr>Blacklists</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>group<wbr>Whitelists</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>inline<wbr>Hook<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The ID of the inline token to trigger.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Auth Server Policy Rule name.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>policy<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Auth Server Policy ID.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>priority</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}Priority of the auth server policy rule.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>refresh<wbr>Token<wbr>Lifetime<wbr>Minutes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}Lifetime of refresh token.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>refresh<wbr>Token<wbr>Window<wbr>Minutes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>scope<wbr>Whitelists</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}Scopes allowed for this policy rule. They can be whitelisted by name or all can be whitelisted with `"*"`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>status</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The status of the Auth Server Policy Rule.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The type of the Auth Server Policy Rule.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>user<wbr>Blacklists</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>user<wbr>Whitelists</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>access_<wbr>token_<wbr>lifetime_<wbr>minutes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}Lifetime of access token. Can be set to a value between 5 and 1440.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>auth_<wbr>server_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Auth Server ID.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>grant_<wbr>type_<wbr>whitelists</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}Accepted grant type values, `"authorization_code"`, `"implicit"`, `"password"`
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>group_<wbr>blacklists</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>group_<wbr>whitelists</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>inline_<wbr>hook_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The ID of the inline token to trigger.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Auth Server Policy Rule name.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>policy_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Auth Server Policy ID.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>priority</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}Priority of the auth server policy rule.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>refresh_<wbr>token_<wbr>lifetime_<wbr>minutes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}Lifetime of refresh token.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>refresh_<wbr>token_<wbr>window_<wbr>minutes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>scope_<wbr>whitelists</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}Scopes allowed for this policy rule. They can be whitelisted by name or all can be whitelisted with `"*"`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>status</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The status of the Auth Server Policy Rule.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The type of the Auth Server Policy Rule.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>user_<wbr>blacklists</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>user_<wbr>whitelists</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
 
 
 
@@ -1451,7 +857,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Access<wbr>Token<wbr>Lifetime<wbr>Minutes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Lifetime of access token. Can be set to a value between 5 and 1440.
 {{% /md %}}</dd>
@@ -1460,7 +866,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Auth<wbr>Server<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Auth Server ID.
 {{% /md %}}</dd>
@@ -1469,7 +875,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Grant<wbr>Type<wbr>Whitelists</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Accepted grant type values, `"authorization_code"`, `"implicit"`, `"password"`
 {{% /md %}}</dd>
@@ -1478,7 +884,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Group<wbr>Blacklists</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1486,7 +892,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Group<wbr>Whitelists</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1494,7 +900,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Inline<wbr>Hook<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the inline token to trigger.
 {{% /md %}}</dd>
@@ -1503,7 +909,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Auth Server Policy Rule name.
 {{% /md %}}</dd>
@@ -1512,7 +918,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Policy<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Auth Server Policy ID.
 {{% /md %}}</dd>
@@ -1521,7 +927,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Priority</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Priority of the auth server policy rule.
 {{% /md %}}</dd>
@@ -1530,7 +936,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Refresh<wbr>Token<wbr>Lifetime<wbr>Minutes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Lifetime of refresh token.
 {{% /md %}}</dd>
@@ -1539,7 +945,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Refresh<wbr>Token<wbr>Window<wbr>Minutes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1547,7 +953,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Scope<wbr>Whitelists</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Scopes allowed for this policy rule. They can be whitelisted by name or all can be whitelisted with `"*"`.
 {{% /md %}}</dd>
@@ -1556,7 +962,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the Auth Server Policy Rule.
 {{% /md %}}</dd>
@@ -1565,7 +971,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the Auth Server Policy Rule.
 {{% /md %}}</dd>
@@ -1574,7 +980,7 @@ The following state arguments are supported:
             title="Optional">
         <span>User<wbr>Blacklists</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1582,7 +988,7 @@ The following state arguments are supported:
             title="Optional">
         <span>User<wbr>Whitelists</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1597,7 +1003,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Access<wbr>Token<wbr>Lifetime<wbr>Minutes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Lifetime of access token. Can be set to a value between 5 and 1440.
 {{% /md %}}</dd>
@@ -1606,7 +1012,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Auth<wbr>Server<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Auth Server ID.
 {{% /md %}}</dd>
@@ -1640,7 +1046,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Inline<wbr>Hook<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the inline token to trigger.
 {{% /md %}}</dd>
@@ -1649,7 +1055,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Auth Server Policy Rule name.
 {{% /md %}}</dd>
@@ -1658,7 +1064,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Policy<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Auth Server Policy ID.
 {{% /md %}}</dd>
@@ -1667,7 +1073,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Priority</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Priority of the auth server policy rule.
 {{% /md %}}</dd>
@@ -1676,7 +1082,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Refresh<wbr>Token<wbr>Lifetime<wbr>Minutes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Lifetime of refresh token.
 {{% /md %}}</dd>
@@ -1685,7 +1091,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Refresh<wbr>Token<wbr>Window<wbr>Minutes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1702,7 +1108,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the Auth Server Policy Rule.
 {{% /md %}}</dd>
@@ -1711,7 +1117,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the Auth Server Policy Rule.
 {{% /md %}}</dd>
@@ -1743,7 +1149,7 @@ The following state arguments are supported:
             title="Optional">
         <span>access<wbr>Token<wbr>Lifetime<wbr>Minutes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Lifetime of access token. Can be set to a value between 5 and 1440.
 {{% /md %}}</dd>
@@ -1752,7 +1158,7 @@ The following state arguments are supported:
             title="Optional">
         <span>auth<wbr>Server<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Auth Server ID.
 {{% /md %}}</dd>
@@ -1761,7 +1167,7 @@ The following state arguments are supported:
             title="Optional">
         <span>grant<wbr>Type<wbr>Whitelists</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Accepted grant type values, `"authorization_code"`, `"implicit"`, `"password"`
 {{% /md %}}</dd>
@@ -1770,7 +1176,7 @@ The following state arguments are supported:
             title="Optional">
         <span>group<wbr>Blacklists</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1778,7 +1184,7 @@ The following state arguments are supported:
             title="Optional">
         <span>group<wbr>Whitelists</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1786,7 +1192,7 @@ The following state arguments are supported:
             title="Optional">
         <span>inline<wbr>Hook<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the inline token to trigger.
 {{% /md %}}</dd>
@@ -1795,7 +1201,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Auth Server Policy Rule name.
 {{% /md %}}</dd>
@@ -1804,7 +1210,7 @@ The following state arguments are supported:
             title="Optional">
         <span>policy<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Auth Server Policy ID.
 {{% /md %}}</dd>
@@ -1813,7 +1219,7 @@ The following state arguments are supported:
             title="Optional">
         <span>priority</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Priority of the auth server policy rule.
 {{% /md %}}</dd>
@@ -1822,7 +1228,7 @@ The following state arguments are supported:
             title="Optional">
         <span>refresh<wbr>Token<wbr>Lifetime<wbr>Minutes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Lifetime of refresh token.
 {{% /md %}}</dd>
@@ -1831,7 +1237,7 @@ The following state arguments are supported:
             title="Optional">
         <span>refresh<wbr>Token<wbr>Window<wbr>Minutes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1839,7 +1245,7 @@ The following state arguments are supported:
             title="Optional">
         <span>scope<wbr>Whitelists</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Scopes allowed for this policy rule. They can be whitelisted by name or all can be whitelisted with `"*"`.
 {{% /md %}}</dd>
@@ -1848,7 +1254,7 @@ The following state arguments are supported:
             title="Optional">
         <span>status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the Auth Server Policy Rule.
 {{% /md %}}</dd>
@@ -1857,7 +1263,7 @@ The following state arguments are supported:
             title="Optional">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the Auth Server Policy Rule.
 {{% /md %}}</dd>
@@ -1866,7 +1272,7 @@ The following state arguments are supported:
             title="Optional">
         <span>user<wbr>Blacklists</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1874,7 +1280,7 @@ The following state arguments are supported:
             title="Optional">
         <span>user<wbr>Whitelists</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

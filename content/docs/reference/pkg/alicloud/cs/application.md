@@ -44,7 +44,7 @@ const app = new alicloud.cs.Application("app", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/cs/#Application">Application</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/cs/#ApplicationArgs">ApplicationArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/cs/#Application">Application</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/cs/#ApplicationArgs">ApplicationArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -52,11 +52,11 @@ const app = new alicloud.cs.Application("app", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewApplication<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/cs?tab=doc#ApplicationArgs">ApplicationArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/cs?tab=doc#Application">Application</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewApplication<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/cs?tab=doc#ApplicationArgs">ApplicationArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/cs?tab=doc#Application">Application</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.Cs.Application.html">Application</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.CS.ApplicationArgs.html">ApplicationArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.CS.Application.html">Application</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.AliCloud.CS.ApplicationArgs.html">ApplicationArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -148,24 +148,6 @@ const app = new alicloud.cs.Application("app", {
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Blue<wbr>Green</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Wherther to use "Blue Green" method when release a new version. Default to false.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Blue<wbr>Green<wbr>Confirm</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Whether to confirm a "Blue Green" application. Default to false. It will be ignored when `blue_green` is false.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Cluster<wbr>Name</span>
@@ -173,42 +155,6 @@ const app = new alicloud.cs.Application("app", {
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The swarm cluster's name.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The description of application.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Environment</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
-    </dt>
-    <dd>{{% md %}}A key/value map used to replace the variable parameter in the Compose template.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Latest<wbr>Image</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Whether to use latest docker image while each updating application. Default to false.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The application name. It should be 1-64 characters long, and can contain numbers, English letters and hyphens, but cannot start with hyphens.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -222,9 +168,63 @@ const app = new alicloud.cs.Application("app", {
 
     <dt class="property-optional"
             title="Optional">
+        <span>Blue<wbr>Green</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Wherther to use "Blue Green" method when release a new version. Default to false.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Blue<wbr>Green<wbr>Confirm</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to confirm a "Blue Green" application. Default to false. It will be ignored when `blue_green` is false.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The description of application.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Environment</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+    </dt>
+    <dd>{{% md %}}A key/value map used to replace the variable parameter in the Compose template.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Latest<wbr>Image</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to use latest docker image while each updating application. Default to false.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The application name. It should be 1-64 characters long, and can contain numbers, English letters and hyphens, but cannot start with hyphens.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The application deploying version. Each updating, it must be different with current. Default to "1.0"
 {{% /md %}}</dd>
@@ -236,24 +236,6 @@ const app = new alicloud.cs.Application("app", {
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Blue<wbr>Green</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Wherther to use "Blue Green" method when release a new version. Default to false.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Blue<wbr>Green<wbr>Confirm</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Whether to confirm a "Blue Green" application. Default to false. It will be ignored when `blue_green` is false.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Cluster<wbr>Name</span>
@@ -263,11 +245,38 @@ const app = new alicloud.cs.Application("app", {
     <dd>{{% md %}}The swarm cluster's name.
 {{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>Template</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The application deployment template and it must be [Docker Compose format](https://docs.docker.com/compose/).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Blue<wbr>Green</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Wherther to use "Blue Green" method when release a new version. Default to false.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Blue<wbr>Green<wbr>Confirm</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to confirm a "Blue Green" application. Default to false. It will be ignored when `blue_green` is false.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of application.
 {{% /md %}}</dd>
@@ -285,7 +294,7 @@ const app = new alicloud.cs.Application("app", {
             title="Optional">
         <span>Latest<wbr>Image</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to use latest docker image while each updating application. Default to false.
 {{% /md %}}</dd>
@@ -294,25 +303,16 @@ const app = new alicloud.cs.Application("app", {
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The application name. It should be 1-64 characters long, and can contain numbers, English letters and hyphens, but cannot start with hyphens.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Template</span>
-        <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The application deployment template and it must be [Docker Compose format](https://docs.docker.com/compose/).
+    <dd>{{% md %}}The application name. It should be 1-64 characters long, and can contain numbers, English letters and hyphens, but cannot start with hyphens.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The application deploying version. Each updating, it must be different with current. Default to "1.0"
 {{% /md %}}</dd>
@@ -324,24 +324,6 @@ const app = new alicloud.cs.Application("app", {
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>blue<wbr>Green</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Wherther to use "Blue Green" method when release a new version. Default to false.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>blue<wbr>Green<wbr>Confirm</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Whether to confirm a "Blue Green" application. Default to false. It will be ignored when `blue_green` is false.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>cluster<wbr>Name</span>
@@ -349,42 +331,6 @@ const app = new alicloud.cs.Application("app", {
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The swarm cluster's name.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The description of application.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>environment</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
-    </dt>
-    <dd>{{% md %}}A key/value map used to replace the variable parameter in the Compose template.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>latest<wbr>Image</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Whether to use latest docker image while each updating application. Default to false.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The application name. It should be 1-64 characters long, and can contain numbers, English letters and hyphens, but cannot start with hyphens.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -398,9 +344,63 @@ const app = new alicloud.cs.Application("app", {
 
     <dt class="property-optional"
             title="Optional">
+        <span>blue<wbr>Green</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Wherther to use "Blue Green" method when release a new version. Default to false.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>blue<wbr>Green<wbr>Confirm</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether to confirm a "Blue Green" application. Default to false. It will be ignored when `blue_green` is false.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The description of application.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>environment</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}</span>
+    </dt>
+    <dd>{{% md %}}A key/value map used to replace the variable parameter in the Compose template.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>latest<wbr>Image</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether to use latest docker image while each updating application. Default to false.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The application name. It should be 1-64 characters long, and can contain numbers, English letters and hyphens, but cannot start with hyphens.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The application deploying version. Each updating, it must be different with current. Default to "1.0"
 {{% /md %}}</dd>
@@ -411,6 +411,24 @@ const app = new alicloud.cs.Application("app", {
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>cluster_<wbr>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The swarm cluster's name.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>template</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The application deployment template and it must be [Docker Compose format](https://docs.docker.com/compose/).
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -428,15 +446,6 @@ const app = new alicloud.cs.Application("app", {
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to confirm a "Blue Green" application. Default to false. It will be ignored when `blue_green` is false.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>cluster_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The swarm cluster's name.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -473,15 +482,6 @@ const app = new alicloud.cs.Application("app", {
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The application name. It should be 1-64 characters long, and can contain numbers, English letters and hyphens, but cannot start with hyphens.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>template</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The application deployment template and it must be [Docker Compose format](https://docs.docker.com/compose/).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -514,33 +514,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Blue<wbr>Green</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Wherther to use "Blue Green" method when release a new version. Default to false.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Blue<wbr>Green<wbr>Confirm</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Whether to confirm a "Blue Green" application. Default to false. It will be ignored when `blue_green` is false.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Cluster<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The swarm cluster's name.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Default<wbr>Domain</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -550,65 +523,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The description of application.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Environment</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
-    </dt>
-    <dd>{{% md %}}A key/value map used to replace the variable parameter in the Compose template.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Latest<wbr>Image</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Whether to use latest docker image while each updating application. Default to false.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The application name. It should be 1-64 characters long, and can contain numbers, English letters and hyphens, but cannot start with hyphens.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Services</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationservice">List&lt;Application<wbr>Service&gt;</a></span>
+        <span class="property-type"><a href="#applicationservice">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>CS.<wbr>Outputs.<wbr>Application<wbr>Service&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of services in the application. It contains several attributes to `Block Nodes`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Template</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The application deployment template and it must be [Docker Compose format](https://docs.docker.com/compose/).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The application deploying version. Each updating, it must be different with current. Default to "1.0"
 {{% /md %}}</dd>
 
 </dl>
@@ -620,74 +539,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Blue<wbr>Green</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Wherther to use "Blue Green" method when release a new version. Default to false.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Blue<wbr>Green<wbr>Confirm</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Whether to confirm a "Blue Green" application. Default to false. It will be ignored when `blue_green` is false.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Cluster<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The swarm cluster's name.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Default<wbr>Domain</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The application default domain and it can be used to configure routing service.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The description of application.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Environment</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
-    </dt>
-    <dd>{{% md %}}A key/value map used to replace the variable parameter in the Compose template.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Latest<wbr>Image</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Whether to use latest docker image while each updating application. Default to false.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The application name. It should be 1-64 characters long, and can contain numbers, English letters and hyphens, but cannot start with hyphens.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -699,57 +555,12 @@ The following output properties are available:
     <dd>{{% md %}}List of services in the application. It contains several attributes to `Block Nodes`.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span>Template</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The application deployment template and it must be [Docker Compose format](https://docs.docker.com/compose/).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The application deploying version. Each updating, it must be different with current. Default to "1.0"
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>blue<wbr>Green</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Wherther to use "Blue Green" method when release a new version. Default to false.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>blue<wbr>Green<wbr>Confirm</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Whether to confirm a "Blue Green" application. Default to false. It will be ignored when `blue_green` is false.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>cluster<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The swarm cluster's name.
-{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -762,65 +573,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The description of application.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>environment</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
-    </dt>
-    <dd>{{% md %}}A key/value map used to replace the variable parameter in the Compose template.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>latest<wbr>Image</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Whether to use latest docker image while each updating application. Default to false.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The application name. It should be 1-64 characters long, and can contain numbers, English letters and hyphens, but cannot start with hyphens.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>services</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#applicationservice">Application<wbr>Service[]</a></span>
     </dt>
     <dd>{{% md %}}List of services in the application. It contains several attributes to `Block Nodes`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>template</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The application deployment template and it must be [Docker Compose format](https://docs.docker.com/compose/).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The application deploying version. Each updating, it must be different with current. Default to "1.0"
 {{% /md %}}</dd>
 
 </dl>
@@ -829,33 +586,6 @@ The following output properties are available:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>blue_<wbr>green</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Wherther to use "Blue Green" method when release a new version. Default to false.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>blue_<wbr>green_<wbr>confirm</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Whether to confirm a "Blue Green" application. Default to false. It will be ignored when `blue_green` is false.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>cluster_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The swarm cluster's name.
-{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -868,65 +598,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The description of application.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>environment</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
-    </dt>
-    <dd>{{% md %}}A key/value map used to replace the variable parameter in the Compose template.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>latest_<wbr>image</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Whether to use latest docker image while each updating application. Default to false.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The application name. It should be 1-64 characters long, and can contain numbers, English letters and hyphens, but cannot start with hyphens.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>services</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#applicationservice">List[Application<wbr>Service]</a></span>
     </dt>
     <dd>{{% md %}}List of services in the application. It contains several attributes to `Block Nodes`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>template</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The application deployment template and it must be [Docker Compose format](https://docs.docker.com/compose/).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The application deploying version. Each updating, it must be different with current. Default to "1.0"
 {{% /md %}}</dd>
 
 </dl>
@@ -958,7 +634,7 @@ Get an existing Application resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.Cs.Application.html">Application</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.Cs.ApplicationState.html">ApplicationState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.CS.Application.html">Application</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.CS.ApplicationState.html">ApplicationState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1068,7 +744,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Blue<wbr>Green</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Wherther to use "Blue Green" method when release a new version. Default to false.
 {{% /md %}}</dd>
@@ -1077,7 +753,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Blue<wbr>Green<wbr>Confirm</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to confirm a "Blue Green" application. Default to false. It will be ignored when `blue_green` is false.
 {{% /md %}}</dd>
@@ -1086,7 +762,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Cluster<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The swarm cluster's name.
 {{% /md %}}</dd>
@@ -1095,7 +771,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Default<wbr>Domain</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The application default domain and it can be used to configure routing service.
 {{% /md %}}</dd>
@@ -1104,7 +780,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of application.
 {{% /md %}}</dd>
@@ -1113,7 +789,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Environment</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A key/value map used to replace the variable parameter in the Compose template.
 {{% /md %}}</dd>
@@ -1122,7 +798,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Latest<wbr>Image</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to use latest docker image while each updating application. Default to false.
 {{% /md %}}</dd>
@@ -1131,7 +807,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The application name. It should be 1-64 characters long, and can contain numbers, English letters and hyphens, but cannot start with hyphens.
 {{% /md %}}</dd>
@@ -1140,7 +816,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Services</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationservice">List&lt;Application<wbr>Service<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#applicationservice">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>CS.<wbr>Inputs.<wbr>Application<wbr>Service<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of services in the application. It contains several attributes to `Block Nodes`.
 {{% /md %}}</dd>
@@ -1149,7 +825,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Template</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The application deployment template and it must be [Docker Compose format](https://docs.docker.com/compose/).
 {{% /md %}}</dd>
@@ -1158,7 +834,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The application deploying version. Each updating, it must be different with current. Default to "1.0"
 {{% /md %}}</dd>
@@ -1174,7 +850,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Blue<wbr>Green</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Wherther to use "Blue Green" method when release a new version. Default to false.
 {{% /md %}}</dd>
@@ -1183,7 +859,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Blue<wbr>Green<wbr>Confirm</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to confirm a "Blue Green" application. Default to false. It will be ignored when `blue_green` is false.
 {{% /md %}}</dd>
@@ -1192,7 +868,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Cluster<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The swarm cluster's name.
 {{% /md %}}</dd>
@@ -1201,7 +877,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Default<wbr>Domain</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The application default domain and it can be used to configure routing service.
 {{% /md %}}</dd>
@@ -1210,7 +886,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of application.
 {{% /md %}}</dd>
@@ -1228,7 +904,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Latest<wbr>Image</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to use latest docker image while each updating application. Default to false.
 {{% /md %}}</dd>
@@ -1237,7 +913,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The application name. It should be 1-64 characters long, and can contain numbers, English letters and hyphens, but cannot start with hyphens.
 {{% /md %}}</dd>
@@ -1255,7 +931,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Template</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The application deployment template and it must be [Docker Compose format](https://docs.docker.com/compose/).
 {{% /md %}}</dd>
@@ -1264,7 +940,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The application deploying version. Each updating, it must be different with current. Default to "1.0"
 {{% /md %}}</dd>
@@ -1280,7 +956,7 @@ The following state arguments are supported:
             title="Optional">
         <span>blue<wbr>Green</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Wherther to use "Blue Green" method when release a new version. Default to false.
 {{% /md %}}</dd>
@@ -1289,7 +965,7 @@ The following state arguments are supported:
             title="Optional">
         <span>blue<wbr>Green<wbr>Confirm</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to confirm a "Blue Green" application. Default to false. It will be ignored when `blue_green` is false.
 {{% /md %}}</dd>
@@ -1298,7 +974,7 @@ The following state arguments are supported:
             title="Optional">
         <span>cluster<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The swarm cluster's name.
 {{% /md %}}</dd>
@@ -1307,7 +983,7 @@ The following state arguments are supported:
             title="Optional">
         <span>default<wbr>Domain</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The application default domain and it can be used to configure routing service.
 {{% /md %}}</dd>
@@ -1316,7 +992,7 @@ The following state arguments are supported:
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of application.
 {{% /md %}}</dd>
@@ -1325,7 +1001,7 @@ The following state arguments are supported:
             title="Optional">
         <span>environment</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A key/value map used to replace the variable parameter in the Compose template.
 {{% /md %}}</dd>
@@ -1334,7 +1010,7 @@ The following state arguments are supported:
             title="Optional">
         <span>latest<wbr>Image</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to use latest docker image while each updating application. Default to false.
 {{% /md %}}</dd>
@@ -1343,7 +1019,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The application name. It should be 1-64 characters long, and can contain numbers, English letters and hyphens, but cannot start with hyphens.
 {{% /md %}}</dd>
@@ -1352,7 +1028,7 @@ The following state arguments are supported:
             title="Optional">
         <span>services</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationservice">Application<wbr>Service[]?</a></span>
+        <span class="property-type"><a href="#applicationservice">Application<wbr>Service[]</a></span>
     </dt>
     <dd>{{% md %}}List of services in the application. It contains several attributes to `Block Nodes`.
 {{% /md %}}</dd>
@@ -1361,7 +1037,7 @@ The following state arguments are supported:
             title="Optional">
         <span>template</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The application deployment template and it must be [Docker Compose format](https://docs.docker.com/compose/).
 {{% /md %}}</dd>
@@ -1370,7 +1046,7 @@ The following state arguments are supported:
             title="Optional">
         <span>version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The application deploying version. Each updating, it must be different with current. Default to "1.0"
 {{% /md %}}</dd>
@@ -1514,7 +1190,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the service.
 {{% /md %}}</dd>
@@ -1523,7 +1199,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The application name. It should be 1-64 characters long, and can contain numbers, English letters and hyphens, but cannot start with hyphens.
 {{% /md %}}</dd>
@@ -1532,7 +1208,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current status of service.
 {{% /md %}}</dd>
@@ -1541,7 +1217,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The application deploying version. Each updating, it must be different with current. Default to "1.0"
 {{% /md %}}</dd>
@@ -1557,7 +1233,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the service.
 {{% /md %}}</dd>
@@ -1566,7 +1242,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The application name. It should be 1-64 characters long, and can contain numbers, English letters and hyphens, but cannot start with hyphens.
 {{% /md %}}</dd>
@@ -1575,7 +1251,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current status of service.
 {{% /md %}}</dd>
@@ -1584,7 +1260,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The application deploying version. Each updating, it must be different with current. Default to "1.0"
 {{% /md %}}</dd>
@@ -1600,7 +1276,7 @@ The following state arguments are supported:
             title="Optional">
         <span>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the service.
 {{% /md %}}</dd>
@@ -1609,7 +1285,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The application name. It should be 1-64 characters long, and can contain numbers, English letters and hyphens, but cannot start with hyphens.
 {{% /md %}}</dd>
@@ -1618,7 +1294,7 @@ The following state arguments are supported:
             title="Optional">
         <span>status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current status of service.
 {{% /md %}}</dd>
@@ -1627,7 +1303,7 @@ The following state arguments are supported:
             title="Optional">
         <span>version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The application deploying version. Each updating, it must be different with current. Default to "1.0"
 {{% /md %}}</dd>

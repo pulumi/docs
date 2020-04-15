@@ -48,7 +48,7 @@ const simple = new aws.appmesh.Mesh("simple", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/appmesh/#Mesh">Mesh</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/appmesh/#MeshArgs">MeshArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/appmesh/#Mesh">Mesh</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/appmesh/#MeshArgs">MeshArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -56,11 +56,11 @@ const simple = new aws.appmesh.Mesh("simple", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewMesh<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/appmesh?tab=doc#MeshArgs">MeshArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/appmesh?tab=doc#Mesh">Mesh</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewMesh<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/appmesh?tab=doc#MeshArgs">MeshArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/appmesh?tab=doc#Mesh">Mesh</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Appmesh.Mesh.html">Mesh</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.MeshArgs.html">MeshArgs</a></span>? <span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Mesh.html">Mesh</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.MeshArgs.html">MeshArgs</a></span>? <span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -156,7 +156,7 @@ const simple = new aws.appmesh.Mesh("simple", {
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name to use for the service mesh.
 {{% /md %}}</dd>
@@ -165,7 +165,7 @@ const simple = new aws.appmesh.Mesh("simple", {
             title="Optional">
         <span>Spec</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#meshspec">Mesh<wbr>Spec<wbr>Args?</a></span>
+        <span class="property-type"><a href="#meshspec">Mesh<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The service mesh specification to apply.
 {{% /md %}}</dd>
@@ -174,7 +174,7 @@ const simple = new aws.appmesh.Mesh("simple", {
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -190,7 +190,7 @@ const simple = new aws.appmesh.Mesh("simple", {
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name to use for the service mesh.
 {{% /md %}}</dd>
@@ -199,7 +199,7 @@ const simple = new aws.appmesh.Mesh("simple", {
             title="Optional">
         <span>Spec</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#meshspec">*Mesh<wbr>Spec</a></span>
+        <span class="property-type"><a href="#meshspec">Mesh<wbr>Spec</a></span>
     </dt>
     <dd>{{% md %}}The service mesh specification to apply.
 {{% /md %}}</dd>
@@ -224,7 +224,7 @@ const simple = new aws.appmesh.Mesh("simple", {
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name to use for the service mesh.
 {{% /md %}}</dd>
@@ -233,7 +233,7 @@ const simple = new aws.appmesh.Mesh("simple", {
             title="Optional">
         <span>spec</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#meshspec">Mesh<wbr>Spec?</a></span>
+        <span class="property-type"><a href="#meshspec">Mesh<wbr>Spec</a></span>
     </dt>
     <dd>{{% md %}}The service mesh specification to apply.
 {{% /md %}}</dd>
@@ -242,7 +242,7 @@ const simple = new aws.appmesh.Mesh("simple", {
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -327,33 +327,6 @@ The following output properties are available:
     <dd>{{% md %}}The last update date of the service mesh.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name to use for the service mesh.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Spec</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#meshspec">Mesh<wbr>Spec?</a></span>
-    </dt>
-    <dd>{{% md %}}The service mesh specification to apply.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -386,33 +359,6 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The last update date of the service mesh.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name to use for the service mesh.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Spec</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#meshspec">*Mesh<wbr>Spec</a></span>
-    </dt>
-    <dd>{{% md %}}The service mesh specification to apply.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
 
 </dl>
@@ -449,33 +395,6 @@ The following output properties are available:
     <dd>{{% md %}}The last update date of the service mesh.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name to use for the service mesh.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>spec</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#meshspec">Mesh<wbr>Spec?</a></span>
-    </dt>
-    <dd>{{% md %}}The service mesh specification to apply.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -510,33 +429,6 @@ The following output properties are available:
     <dd>{{% md %}}The last update date of the service mesh.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name to use for the service mesh.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>spec</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#meshspec">Dict[Mesh<wbr>Spec]</a></span>
-    </dt>
-    <dd>{{% md %}}The service mesh specification to apply.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -566,7 +458,7 @@ Get an existing Mesh resource's state with the given name, ID, and optional extr
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Appmesh.Mesh.html">Mesh</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Appmesh.MeshState.html">MeshState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.Mesh.html">Mesh</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.AppMesh.MeshState.html">MeshState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -676,7 +568,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the service mesh.
 {{% /md %}}</dd>
@@ -685,7 +577,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Created<wbr>Date</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The creation date of the service mesh.
 {{% /md %}}</dd>
@@ -694,7 +586,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Last<wbr>Updated<wbr>Date</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The last update date of the service mesh.
 {{% /md %}}</dd>
@@ -703,7 +595,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name to use for the service mesh.
 {{% /md %}}</dd>
@@ -712,7 +604,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Spec</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#meshspec">Mesh<wbr>Spec<wbr>Args?</a></span>
+        <span class="property-type"><a href="#meshspec">Mesh<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The service mesh specification to apply.
 {{% /md %}}</dd>
@@ -721,7 +613,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -737,7 +629,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the service mesh.
 {{% /md %}}</dd>
@@ -746,7 +638,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Created<wbr>Date</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The creation date of the service mesh.
 {{% /md %}}</dd>
@@ -755,7 +647,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Last<wbr>Updated<wbr>Date</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The last update date of the service mesh.
 {{% /md %}}</dd>
@@ -764,7 +656,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name to use for the service mesh.
 {{% /md %}}</dd>
@@ -773,7 +665,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Spec</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#meshspec">*Mesh<wbr>Spec</a></span>
+        <span class="property-type"><a href="#meshspec">Mesh<wbr>Spec</a></span>
     </dt>
     <dd>{{% md %}}The service mesh specification to apply.
 {{% /md %}}</dd>
@@ -798,7 +690,7 @@ The following state arguments are supported:
             title="Optional">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the service mesh.
 {{% /md %}}</dd>
@@ -807,7 +699,7 @@ The following state arguments are supported:
             title="Optional">
         <span>created<wbr>Date</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The creation date of the service mesh.
 {{% /md %}}</dd>
@@ -816,7 +708,7 @@ The following state arguments are supported:
             title="Optional">
         <span>last<wbr>Updated<wbr>Date</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The last update date of the service mesh.
 {{% /md %}}</dd>
@@ -825,7 +717,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name to use for the service mesh.
 {{% /md %}}</dd>
@@ -834,7 +726,7 @@ The following state arguments are supported:
             title="Optional">
         <span>spec</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#meshspec">Mesh<wbr>Spec?</a></span>
+        <span class="property-type"><a href="#meshspec">Mesh<wbr>Spec</a></span>
     </dt>
     <dd>{{% md %}}The service mesh specification to apply.
 {{% /md %}}</dd>
@@ -843,7 +735,7 @@ The following state arguments are supported:
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -942,7 +834,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Egress<wbr>Filter</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#meshspecegressfilter">Mesh<wbr>Spec<wbr>Egress<wbr>Filter<wbr>Args?</a></span>
+        <span class="property-type"><a href="#meshspecegressfilter">Mesh<wbr>Spec<wbr>Egress<wbr>Filter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -957,7 +849,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Egress<wbr>Filter</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#meshspecegressfilter">*Mesh<wbr>Spec<wbr>Egress<wbr>Filter</a></span>
+        <span class="property-type"><a href="#meshspecegressfilter">Mesh<wbr>Spec<wbr>Egress<wbr>Filter</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -972,7 +864,7 @@ The following state arguments are supported:
             title="Optional">
         <span>egress<wbr>Filter</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#meshspecegressfilter">Mesh<wbr>Spec<wbr>Egress<wbr>Filter?</a></span>
+        <span class="property-type"><a href="#meshspecegressfilter">Mesh<wbr>Spec<wbr>Egress<wbr>Filter</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1017,7 +909,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The egress filter type. By default, the type is `DROP_ALL`.
 Valid values are `ALLOW_ALL` and `DROP_ALL`.
@@ -1034,7 +926,7 @@ Valid values are `ALLOW_ALL` and `DROP_ALL`.
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The egress filter type. By default, the type is `DROP_ALL`.
 Valid values are `ALLOW_ALL` and `DROP_ALL`.
@@ -1051,7 +943,7 @@ Valid values are `ALLOW_ALL` and `DROP_ALL`.
             title="Optional">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The egress filter type. By default, the type is `DROP_ALL`.
 Valid values are `ALLOW_ALL` and `DROP_ALL`.

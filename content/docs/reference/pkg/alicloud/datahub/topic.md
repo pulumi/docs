@@ -14,7 +14,7 @@ block_external_search_index: true
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/datahub/#Topic">Topic</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/datahub/#TopicArgs">TopicArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/datahub/#Topic">Topic</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/datahub/#TopicArgs">TopicArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -22,11 +22,11 @@ block_external_search_index: true
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewTopic<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/datahub?tab=doc#TopicArgs">TopicArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/datahub?tab=doc#Topic">Topic</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewTopic<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/datahub?tab=doc#TopicArgs">TopicArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/datahub?tab=doc#Topic">Topic</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.Datahub.Topic.html">Topic</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.Datahub.TopicArgs.html">TopicArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.Datahub.Topic.html">Topic</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.AliCloud.Datahub.TopicArgs.html">TopicArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -118,33 +118,6 @@ block_external_search_index: true
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Comment</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Comment of the datahub topic. It cannot be longer than 255 characters.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Life<wbr>Cycle</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}How many days this topic lives. The permitted range of values is [1, 7]. The default value is 3.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The name of the datahub topic. Its length is limited to 1-128 and only characters such as letters, digits and '_' are allowed. It is case-insensitive.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Project<wbr>Name</span>
@@ -156,9 +129,36 @@ block_external_search_index: true
 
     <dt class="property-optional"
             title="Optional">
+        <span>Comment</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Comment of the datahub topic. It cannot be longer than 255 characters.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Life<wbr>Cycle</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}How many days this topic lives. The permitted range of values is [1, 7]. The default value is 3.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the datahub topic. Its length is limited to 1-128 and only characters such as letters, digits and '_' are allowed. It is case-insensitive.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Record<wbr>Schema</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Schema of this topic, required only for TUPLE topic. Supported data types (case-insensitive) are:
 - BIGINT
@@ -172,7 +172,7 @@ block_external_search_index: true
             title="Optional">
         <span>Record<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of this topic. Its value must be one of {BLOB, TUPLE}. For BLOB topic, data will be organized as binary and encoded by BASE64. For TUPLE topic, data has fixed schema. The default value is "TUPLE" with a schema {STRING}.
 {{% /md %}}</dd>
@@ -181,7 +181,7 @@ block_external_search_index: true
             title="Optional">
         <span>Shard<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of shards this topic contains. The permitted range of values is [1, 10]. The default value is 1.
 {{% /md %}}</dd>
@@ -193,11 +193,20 @@ block_external_search_index: true
 {{% choosable language go %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Project<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the datahub project that this topic belongs to. It is case-insensitive.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Comment</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Comment of the datahub topic. It cannot be longer than 255 characters.
 {{% /md %}}</dd>
@@ -206,7 +215,7 @@ block_external_search_index: true
             title="Optional">
         <span>Life<wbr>Cycle</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How many days this topic lives. The permitted range of values is [1, 7]. The default value is 3.
 {{% /md %}}</dd>
@@ -215,18 +224,9 @@ block_external_search_index: true
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The name of the datahub topic. Its length is limited to 1-128 and only characters such as letters, digits and '_' are allowed. It is case-insensitive.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Project<wbr>Name</span>
-        <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the datahub project that this topic belongs to. It is case-insensitive.
+    <dd>{{% md %}}The name of the datahub topic. Its length is limited to 1-128 and only characters such as letters, digits and '_' are allowed. It is case-insensitive.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -247,7 +247,7 @@ block_external_search_index: true
             title="Optional">
         <span>Record<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of this topic. Its value must be one of {BLOB, TUPLE}. For BLOB topic, data will be organized as binary and encoded by BASE64. For TUPLE topic, data has fixed schema. The default value is "TUPLE" with a schema {STRING}.
 {{% /md %}}</dd>
@@ -256,7 +256,7 @@ block_external_search_index: true
             title="Optional">
         <span>Shard<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of shards this topic contains. The permitted range of values is [1, 10]. The default value is 1.
 {{% /md %}}</dd>
@@ -267,33 +267,6 @@ block_external_search_index: true
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>comment</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Comment of the datahub topic. It cannot be longer than 255 characters.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>life<wbr>Cycle</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}How many days this topic lives. The permitted range of values is [1, 7]. The default value is 3.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The name of the datahub topic. Its length is limited to 1-128 and only characters such as letters, digits and '_' are allowed. It is case-insensitive.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -306,9 +279,36 @@ block_external_search_index: true
 
     <dt class="property-optional"
             title="Optional">
+        <span>comment</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Comment of the datahub topic. It cannot be longer than 255 characters.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>life<wbr>Cycle</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}How many days this topic lives. The permitted range of values is [1, 7]. The default value is 3.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the datahub topic. Its length is limited to 1-128 and only characters such as letters, digits and '_' are allowed. It is case-insensitive.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>record<wbr>Schema</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Schema of this topic, required only for TUPLE topic. Supported data types (case-insensitive) are:
 - BIGINT
@@ -322,7 +322,7 @@ block_external_search_index: true
             title="Optional">
         <span>record<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of this topic. Its value must be one of {BLOB, TUPLE}. For BLOB topic, data will be organized as binary and encoded by BASE64. For TUPLE topic, data has fixed schema. The default value is "TUPLE" with a schema {STRING}.
 {{% /md %}}</dd>
@@ -331,7 +331,7 @@ block_external_search_index: true
             title="Optional">
         <span>shard<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of shards this topic contains. The permitted range of values is [1, 10]. The default value is 1.
 {{% /md %}}</dd>
@@ -342,6 +342,15 @@ block_external_search_index: true
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>project_<wbr>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the datahub project that this topic belongs to. It is case-insensitive.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -368,15 +377,6 @@ block_external_search_index: true
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the datahub topic. Its length is limited to 1-128 and only characters such as letters, digits and '_' are allowed. It is case-insensitive.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>project_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the datahub project that this topic belongs to. It is case-insensitive.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -432,15 +432,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Comment</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Comment of the datahub topic. It cannot be longer than 255 characters.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Create<wbr>Time</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -455,65 +446,6 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Last modify time of the datahub topic. It is the same as *create_time* at the beginning. It is also a human-readable string rather than 64-bits UTC.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Life<wbr>Cycle</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}How many days this topic lives. The permitted range of values is [1, 7]. The default value is 3.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the datahub topic. Its length is limited to 1-128 and only characters such as letters, digits and '_' are allowed. It is case-insensitive.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Project<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the datahub project that this topic belongs to. It is case-insensitive.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Record<wbr>Schema</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
-    </dt>
-    <dd>{{% md %}}Schema of this topic, required only for TUPLE topic. Supported data types (case-insensitive) are:
-- BIGINT
-- STRING
-- BOOLEAN
-- DOUBLE
-- TIMESTAMP
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Record<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The type of this topic. Its value must be one of {BLOB, TUPLE}. For BLOB topic, data will be organized as binary and encoded by BASE64. For TUPLE topic, data has fixed schema. The default value is "TUPLE" with a schema {STRING}.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Shard<wbr>Count</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}The number of shards this topic contains. The permitted range of values is [1, 10]. The default value is 1.
 {{% /md %}}</dd>
 
 </dl>
@@ -525,15 +457,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Comment</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Comment of the datahub topic. It cannot be longer than 255 characters.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Create<wbr>Time</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -550,80 +473,12 @@ The following output properties are available:
     <dd>{{% md %}}Last modify time of the datahub topic. It is the same as *create_time* at the beginning. It is also a human-readable string rather than 64-bits UTC.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span>Life<wbr>Cycle</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}How many days this topic lives. The permitted range of values is [1, 7]. The default value is 3.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the datahub topic. Its length is limited to 1-128 and only characters such as letters, digits and '_' are allowed. It is case-insensitive.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Project<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the datahub project that this topic belongs to. It is case-insensitive.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Record<wbr>Schema</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
-    </dt>
-    <dd>{{% md %}}Schema of this topic, required only for TUPLE topic. Supported data types (case-insensitive) are:
-- BIGINT
-- STRING
-- BOOLEAN
-- DOUBLE
-- TIMESTAMP
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Record<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The type of this topic. Its value must be one of {BLOB, TUPLE}. For BLOB topic, data will be organized as binary and encoded by BASE64. For TUPLE topic, data has fixed schema. The default value is "TUPLE" with a schema {STRING}.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Shard<wbr>Count</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}The number of shards this topic contains. The permitted range of values is [1, 10]. The default value is 1.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>comment</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Comment of the datahub topic. It cannot be longer than 255 characters.
-{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -643,80 +498,12 @@ The following output properties are available:
     <dd>{{% md %}}Last modify time of the datahub topic. It is the same as *create_time* at the beginning. It is also a human-readable string rather than 64-bits UTC.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span>life<wbr>Cycle</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}How many days this topic lives. The permitted range of values is [1, 7]. The default value is 3.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the datahub topic. Its length is limited to 1-128 and only characters such as letters, digits and '_' are allowed. It is case-insensitive.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>project<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the datahub project that this topic belongs to. It is case-insensitive.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>record<wbr>Schema</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
-    </dt>
-    <dd>{{% md %}}Schema of this topic, required only for TUPLE topic. Supported data types (case-insensitive) are:
-- BIGINT
-- STRING
-- BOOLEAN
-- DOUBLE
-- TIMESTAMP
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>record<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The type of this topic. Its value must be one of {BLOB, TUPLE}. For BLOB topic, data will be organized as binary and encoded by BASE64. For TUPLE topic, data has fixed schema. The default value is "TUPLE" with a schema {STRING}.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>shard<wbr>Count</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}The number of shards this topic contains. The permitted range of values is [1, 10]. The default value is 1.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>comment</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Comment of the datahub topic. It cannot be longer than 255 characters.
-{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -734,65 +521,6 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Last modify time of the datahub topic. It is the same as *create_time* at the beginning. It is also a human-readable string rather than 64-bits UTC.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>life_<wbr>cycle</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}How many days this topic lives. The permitted range of values is [1, 7]. The default value is 3.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the datahub topic. Its length is limited to 1-128 and only characters such as letters, digits and '_' are allowed. It is case-insensitive.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>project_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the datahub project that this topic belongs to. It is case-insensitive.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>record_<wbr>schema</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
-    </dt>
-    <dd>{{% md %}}Schema of this topic, required only for TUPLE topic. Supported data types (case-insensitive) are:
-- BIGINT
-- STRING
-- BOOLEAN
-- DOUBLE
-- TIMESTAMP
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>record_<wbr>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The type of this topic. Its value must be one of {BLOB, TUPLE}. For BLOB topic, data will be organized as binary and encoded by BASE64. For TUPLE topic, data has fixed schema. The default value is "TUPLE" with a schema {STRING}.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>shard_<wbr>count</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The number of shards this topic contains. The permitted range of values is [1, 10]. The default value is 1.
 {{% /md %}}</dd>
 
 </dl>
@@ -934,7 +662,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Comment</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Comment of the datahub topic. It cannot be longer than 255 characters.
 {{% /md %}}</dd>
@@ -943,7 +671,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Create<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Create time of the datahub topic. It is a human-readable string rather than 64-bits UTC.
 {{% /md %}}</dd>
@@ -952,7 +680,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Last<wbr>Modify<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Last modify time of the datahub topic. It is the same as *create_time* at the beginning. It is also a human-readable string rather than 64-bits UTC.
 {{% /md %}}</dd>
@@ -961,7 +689,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Life<wbr>Cycle</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How many days this topic lives. The permitted range of values is [1, 7]. The default value is 3.
 {{% /md %}}</dd>
@@ -970,7 +698,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the datahub topic. Its length is limited to 1-128 and only characters such as letters, digits and '_' are allowed. It is case-insensitive.
 {{% /md %}}</dd>
@@ -979,7 +707,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Project<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the datahub project that this topic belongs to. It is case-insensitive.
 {{% /md %}}</dd>
@@ -988,7 +716,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Record<wbr>Schema</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Schema of this topic, required only for TUPLE topic. Supported data types (case-insensitive) are:
 - BIGINT
@@ -1002,7 +730,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Record<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of this topic. Its value must be one of {BLOB, TUPLE}. For BLOB topic, data will be organized as binary and encoded by BASE64. For TUPLE topic, data has fixed schema. The default value is "TUPLE" with a schema {STRING}.
 {{% /md %}}</dd>
@@ -1011,7 +739,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Shard<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of shards this topic contains. The permitted range of values is [1, 10]. The default value is 1.
 {{% /md %}}</dd>
@@ -1027,7 +755,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Comment</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Comment of the datahub topic. It cannot be longer than 255 characters.
 {{% /md %}}</dd>
@@ -1036,7 +764,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Create<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Create time of the datahub topic. It is a human-readable string rather than 64-bits UTC.
 {{% /md %}}</dd>
@@ -1045,7 +773,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Last<wbr>Modify<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Last modify time of the datahub topic. It is the same as *create_time* at the beginning. It is also a human-readable string rather than 64-bits UTC.
 {{% /md %}}</dd>
@@ -1054,7 +782,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Life<wbr>Cycle</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How many days this topic lives. The permitted range of values is [1, 7]. The default value is 3.
 {{% /md %}}</dd>
@@ -1063,7 +791,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the datahub topic. Its length is limited to 1-128 and only characters such as letters, digits and '_' are allowed. It is case-insensitive.
 {{% /md %}}</dd>
@@ -1072,7 +800,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Project<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the datahub project that this topic belongs to. It is case-insensitive.
 {{% /md %}}</dd>
@@ -1095,7 +823,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Record<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of this topic. Its value must be one of {BLOB, TUPLE}. For BLOB topic, data will be organized as binary and encoded by BASE64. For TUPLE topic, data has fixed schema. The default value is "TUPLE" with a schema {STRING}.
 {{% /md %}}</dd>
@@ -1104,7 +832,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Shard<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of shards this topic contains. The permitted range of values is [1, 10]. The default value is 1.
 {{% /md %}}</dd>
@@ -1120,7 +848,7 @@ The following state arguments are supported:
             title="Optional">
         <span>comment</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Comment of the datahub topic. It cannot be longer than 255 characters.
 {{% /md %}}</dd>
@@ -1129,7 +857,7 @@ The following state arguments are supported:
             title="Optional">
         <span>create<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Create time of the datahub topic. It is a human-readable string rather than 64-bits UTC.
 {{% /md %}}</dd>
@@ -1138,7 +866,7 @@ The following state arguments are supported:
             title="Optional">
         <span>last<wbr>Modify<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Last modify time of the datahub topic. It is the same as *create_time* at the beginning. It is also a human-readable string rather than 64-bits UTC.
 {{% /md %}}</dd>
@@ -1147,7 +875,7 @@ The following state arguments are supported:
             title="Optional">
         <span>life<wbr>Cycle</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}How many days this topic lives. The permitted range of values is [1, 7]. The default value is 3.
 {{% /md %}}</dd>
@@ -1156,7 +884,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the datahub topic. Its length is limited to 1-128 and only characters such as letters, digits and '_' are allowed. It is case-insensitive.
 {{% /md %}}</dd>
@@ -1165,7 +893,7 @@ The following state arguments are supported:
             title="Optional">
         <span>project<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the datahub project that this topic belongs to. It is case-insensitive.
 {{% /md %}}</dd>
@@ -1174,7 +902,7 @@ The following state arguments are supported:
             title="Optional">
         <span>record<wbr>Schema</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Schema of this topic, required only for TUPLE topic. Supported data types (case-insensitive) are:
 - BIGINT
@@ -1188,7 +916,7 @@ The following state arguments are supported:
             title="Optional">
         <span>record<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of this topic. Its value must be one of {BLOB, TUPLE}. For BLOB topic, data will be organized as binary and encoded by BASE64. For TUPLE topic, data has fixed schema. The default value is "TUPLE" with a schema {STRING}.
 {{% /md %}}</dd>
@@ -1197,7 +925,7 @@ The following state arguments are supported:
             title="Optional">
         <span>shard<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of shards this topic contains. The permitted range of values is [1, 10]. The default value is 1.
 {{% /md %}}</dd>

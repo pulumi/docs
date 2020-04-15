@@ -17,7 +17,7 @@ Provides a Cloudflare record resource.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/cloudflare/#Record">Record</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/cloudflare/#RecordArgs">RecordArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/cloudflare/#Record">Record</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/cloudflare/#RecordArgs">RecordArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -25,11 +25,11 @@ Provides a Cloudflare record resource.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewRecord<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-cloudflare/sdk/go/cloudflare/?tab=doc#RecordArgs">RecordArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-cloudflare/sdk/go/cloudflare/?tab=doc#Record">Record</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewRecord<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-cloudflare/sdk/go/cloudflare/?tab=doc#RecordArgs">RecordArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-cloudflare/sdk/go/cloudflare/?tab=doc#Record">Record</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Cloudflare/Pulumi.Cloudflare..Record.html">Record</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Cloudflare/Pulumi.Cloudflare.RecordArgs.html">RecordArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Cloudflare/Pulumi.Cloudflare.Record.html">Record</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Cloudflare/Pulumi.Cloudflare.RecordArgs.html">RecordArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -121,15 +121,6 @@ Provides a Cloudflare record resource.
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Data</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recorddata">Record<wbr>Data<wbr>Args?</a></span>
-    </dt>
-    <dd>{{% md %}}Map of attributes that constitute the record value. Primarily used for LOC and SRV record types. Either this or `value` must be specified
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Name</span>
@@ -137,33 +128,6 @@ Provides a Cloudflare record resource.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the record
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Priority</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}The priority of the record
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Proxied</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Whether the record gets Cloudflare's origin protection; defaults to `false`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Ttl</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}The TTL of the record ([automatic: '1'](https://api.cloudflare.com/#dns-records-for-a-zone-create-dns-record))
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -175,15 +139,6 @@ Provides a Cloudflare record resource.
     <dd>{{% md %}}The type of the record
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Value</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The (string) value of the record. Either this or `data` must be specified
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Zone<wbr>Id</span>
@@ -191,6 +146,51 @@ Provides a Cloudflare record resource.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS zone ID to add the record to
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Data</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#recorddata">Record<wbr>Data<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Map of attributes that constitute the record value. Primarily used for LOC and SRV record types. Either this or `value` must be specified
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Priority</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The priority of the record
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Proxied</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether the record gets Cloudflare's origin protection; defaults to `false`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Ttl</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The TTL of the record ([automatic: '1'](https://api.cloudflare.com/#dns-records-for-a-zone-create-dns-record))
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Value</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The (string) value of the record. Either this or `data` must be specified
 {{% /md %}}</dd>
 
 </dl>
@@ -200,15 +200,6 @@ Provides a Cloudflare record resource.
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Data</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recorddata">*Record<wbr>Data</a></span>
-    </dt>
-    <dd>{{% md %}}Map of attributes that constitute the record value. Primarily used for LOC and SRV record types. Either this or `value` must be specified
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Name</span>
@@ -216,33 +207,6 @@ Provides a Cloudflare record resource.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the record
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Priority</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}The priority of the record
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Proxied</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Whether the record gets Cloudflare's origin protection; defaults to `false`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Ttl</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}The TTL of the record ([automatic: '1'](https://api.cloudflare.com/#dns-records-for-a-zone-create-dns-record))
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -254,15 +218,6 @@ Provides a Cloudflare record resource.
     <dd>{{% md %}}The type of the record
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Value</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The (string) value of the record. Either this or `data` must be specified
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Zone<wbr>Id</span>
@@ -272,21 +227,57 @@ Provides a Cloudflare record resource.
     <dd>{{% md %}}The DNS zone ID to add the record to
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>Data</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#recorddata">Record<wbr>Data</a></span>
+    </dt>
+    <dd>{{% md %}}Map of attributes that constitute the record value. Primarily used for LOC and SRV record types. Either this or `value` must be specified
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Priority</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The priority of the record
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Proxied</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether the record gets Cloudflare's origin protection; defaults to `false`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Ttl</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The TTL of the record ([automatic: '1'](https://api.cloudflare.com/#dns-records-for-a-zone-create-dns-record))
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Value</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The (string) value of the record. Either this or `data` must be specified
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>data</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recorddata">Record<wbr>Data?</a></span>
-    </dt>
-    <dd>{{% md %}}Map of attributes that constitute the record value. Primarily used for LOC and SRV record types. Either this or `value` must be specified
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -295,33 +286,6 @@ Provides a Cloudflare record resource.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the record
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>priority</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}The priority of the record
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>proxied</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Whether the record gets Cloudflare's origin protection; defaults to `false`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>ttl</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}The TTL of the record ([automatic: '1'](https://api.cloudflare.com/#dns-records-for-a-zone-create-dns-record))
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -333,15 +297,6 @@ Provides a Cloudflare record resource.
     <dd>{{% md %}}The type of the record
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>value</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The (string) value of the record. Either this or `data` must be specified
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>zone<wbr>Id</span>
@@ -351,21 +306,57 @@ Provides a Cloudflare record resource.
     <dd>{{% md %}}The DNS zone ID to add the record to
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>data</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#recorddata">Record<wbr>Data</a></span>
+    </dt>
+    <dd>{{% md %}}Map of attributes that constitute the record value. Primarily used for LOC and SRV record types. Either this or `value` must be specified
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>priority</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The priority of the record
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>proxied</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether the record gets Cloudflare's origin protection; defaults to `false`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>ttl</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The TTL of the record ([automatic: '1'](https://api.cloudflare.com/#dns-records-for-a-zone-create-dns-record))
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>value</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The (string) value of the record. Either this or `data` must be specified
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>data</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recorddata">Dict[Record<wbr>Data]</a></span>
-    </dt>
-    <dd>{{% md %}}Map of attributes that constitute the record value. Primarily used for LOC and SRV record types. Either this or `value` must be specified
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -374,6 +365,33 @@ Provides a Cloudflare record resource.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the record
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The type of the record
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>zone_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The DNS zone ID to add the record to
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>data</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#recorddata">Dict[Record<wbr>Data]</a></span>
+    </dt>
+    <dd>{{% md %}}Map of attributes that constitute the record value. Primarily used for LOC and SRV record types. Either this or `value` must be specified
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -403,15 +421,6 @@ Provides a Cloudflare record resource.
     <dd>{{% md %}}The TTL of the record ([automatic: '1'](https://api.cloudflare.com/#dns-records-for-a-zone-create-dns-record))
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The type of the record
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>value</span>
@@ -419,15 +428,6 @@ Provides a Cloudflare record resource.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The (string) value of the record. Either this or `data` must be specified
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>zone_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The DNS zone ID to add the record to
 {{% /md %}}</dd>
 
 </dl>
@@ -460,15 +460,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Data</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recorddata">Record<wbr>Data?</a></span>
-    </dt>
-    <dd>{{% md %}}Map of attributes that constitute the record value. Primarily used for LOC and SRV record types. Either this or `value` must be specified
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Hostname</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -480,7 +471,7 @@ The following output properties are available:
             title="">
         <span>Metadata</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A key-value map of string metadata Cloudflare associates with the record
 {{% /md %}}</dd>
@@ -496,74 +487,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the record
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Priority</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}The priority of the record
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Proxiable</span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Shows whether this record can be proxied, must be true if setting `proxied=true`
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Proxied</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Whether the record gets Cloudflare's origin protection; defaults to `false`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Ttl</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The TTL of the record ([automatic: '1'](https://api.cloudflare.com/#dns-records-for-a-zone-create-dns-record))
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The type of the record
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Value</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The (string) value of the record. Either this or `data` must be specified
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Zone<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The DNS zone ID to add the record to
 {{% /md %}}</dd>
 
 </dl>
@@ -580,15 +508,6 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The RFC3339 timestamp of when the record was created
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Data</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recorddata">*Record<wbr>Data</a></span>
-    </dt>
-    <dd>{{% md %}}Map of attributes that constitute the record value. Primarily used for LOC and SRV record types. Either this or `value` must be specified
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -620,74 +539,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the record
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Priority</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}The priority of the record
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Proxiable</span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Shows whether this record can be proxied, must be true if setting `proxied=true`
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Proxied</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Whether the record gets Cloudflare's origin protection; defaults to `false`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Ttl</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The TTL of the record ([automatic: '1'](https://api.cloudflare.com/#dns-records-for-a-zone-create-dns-record))
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The type of the record
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Value</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The (string) value of the record. Either this or `data` must be specified
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Zone<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The DNS zone ID to add the record to
 {{% /md %}}</dd>
 
 </dl>
@@ -704,15 +560,6 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The RFC3339 timestamp of when the record was created
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>data</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recorddata">Record<wbr>Data?</a></span>
-    </dt>
-    <dd>{{% md %}}Map of attributes that constitute the record value. Primarily used for LOC and SRV record types. Either this or `value` must be specified
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -744,74 +591,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the record
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>priority</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}The priority of the record
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>proxiable</span>
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Shows whether this record can be proxied, must be true if setting `proxied=true`
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>proxied</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Whether the record gets Cloudflare's origin protection; defaults to `false`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>ttl</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}The TTL of the record ([automatic: '1'](https://api.cloudflare.com/#dns-records-for-a-zone-create-dns-record))
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The type of the record
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>value</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The (string) value of the record. Either this or `data` must be specified
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>zone<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The DNS zone ID to add the record to
 {{% /md %}}</dd>
 
 </dl>
@@ -828,15 +612,6 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The RFC3339 timestamp of when the record was created
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>data</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recorddata">Dict[Record<wbr>Data]</a></span>
-    </dt>
-    <dd>{{% md %}}Map of attributes that constitute the record value. Primarily used for LOC and SRV record types. Either this or `value` must be specified
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -868,74 +643,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the record
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>priority</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The priority of the record
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>proxiable</span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Shows whether this record can be proxied, must be true if setting `proxied=true`
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>proxied</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Whether the record gets Cloudflare's origin protection; defaults to `false`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>ttl</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The TTL of the record ([automatic: '1'](https://api.cloudflare.com/#dns-records-for-a-zone-create-dns-record))
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The type of the record
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>value</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The (string) value of the record. Either this or `data` must be specified
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>zone_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The DNS zone ID to add the record to
 {{% /md %}}</dd>
 
 </dl>
@@ -967,7 +679,7 @@ Get an existing Record resource's state with the given name, ID, and optional ex
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Cloudflare/Pulumi.Cloudflare..Record.html">Record</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Cloudflare/Pulumi.Cloudflare..RecordState.html">RecordState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Cloudflare/Pulumi.Cloudflare.Record.html">Record</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Cloudflare/Pulumi.Cloudflare..RecordState.html">RecordState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1077,7 +789,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Created<wbr>On</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The RFC3339 timestamp of when the record was created
 {{% /md %}}</dd>
@@ -1086,7 +798,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Data</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recorddata">Record<wbr>Data<wbr>Args?</a></span>
+        <span class="property-type"><a href="#recorddata">Record<wbr>Data<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Map of attributes that constitute the record value. Primarily used for LOC and SRV record types. Either this or `value` must be specified
 {{% /md %}}</dd>
@@ -1095,7 +807,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Hostname</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The FQDN of the record
 {{% /md %}}</dd>
@@ -1104,7 +816,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Metadata</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A key-value map of string metadata Cloudflare associates with the record
 {{% /md %}}</dd>
@@ -1113,7 +825,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Modified<wbr>On</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The RFC3339 timestamp of when the record was last modified
 {{% /md %}}</dd>
@@ -1122,7 +834,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the record
 {{% /md %}}</dd>
@@ -1131,7 +843,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Priority</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The priority of the record
 {{% /md %}}</dd>
@@ -1140,7 +852,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Proxiable</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Shows whether this record can be proxied, must be true if setting `proxied=true`
 {{% /md %}}</dd>
@@ -1149,7 +861,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Proxied</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the record gets Cloudflare's origin protection; defaults to `false`.
 {{% /md %}}</dd>
@@ -1158,7 +870,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Ttl</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The TTL of the record ([automatic: '1'](https://api.cloudflare.com/#dns-records-for-a-zone-create-dns-record))
 {{% /md %}}</dd>
@@ -1167,7 +879,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the record
 {{% /md %}}</dd>
@@ -1176,7 +888,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The (string) value of the record. Either this or `data` must be specified
 {{% /md %}}</dd>
@@ -1185,7 +897,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Zone<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS zone ID to add the record to
 {{% /md %}}</dd>
@@ -1201,7 +913,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Created<wbr>On</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The RFC3339 timestamp of when the record was created
 {{% /md %}}</dd>
@@ -1210,7 +922,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Data</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recorddata">*Record<wbr>Data</a></span>
+        <span class="property-type"><a href="#recorddata">Record<wbr>Data</a></span>
     </dt>
     <dd>{{% md %}}Map of attributes that constitute the record value. Primarily used for LOC and SRV record types. Either this or `value` must be specified
 {{% /md %}}</dd>
@@ -1219,7 +931,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Hostname</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The FQDN of the record
 {{% /md %}}</dd>
@@ -1237,7 +949,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Modified<wbr>On</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The RFC3339 timestamp of when the record was last modified
 {{% /md %}}</dd>
@@ -1246,7 +958,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the record
 {{% /md %}}</dd>
@@ -1255,7 +967,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Priority</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The priority of the record
 {{% /md %}}</dd>
@@ -1264,7 +976,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Proxiable</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Shows whether this record can be proxied, must be true if setting `proxied=true`
 {{% /md %}}</dd>
@@ -1273,7 +985,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Proxied</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the record gets Cloudflare's origin protection; defaults to `false`.
 {{% /md %}}</dd>
@@ -1282,7 +994,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Ttl</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The TTL of the record ([automatic: '1'](https://api.cloudflare.com/#dns-records-for-a-zone-create-dns-record))
 {{% /md %}}</dd>
@@ -1291,7 +1003,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the record
 {{% /md %}}</dd>
@@ -1300,7 +1012,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The (string) value of the record. Either this or `data` must be specified
 {{% /md %}}</dd>
@@ -1309,7 +1021,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Zone<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS zone ID to add the record to
 {{% /md %}}</dd>
@@ -1325,7 +1037,7 @@ The following state arguments are supported:
             title="Optional">
         <span>created<wbr>On</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The RFC3339 timestamp of when the record was created
 {{% /md %}}</dd>
@@ -1334,7 +1046,7 @@ The following state arguments are supported:
             title="Optional">
         <span>data</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#recorddata">Record<wbr>Data?</a></span>
+        <span class="property-type"><a href="#recorddata">Record<wbr>Data</a></span>
     </dt>
     <dd>{{% md %}}Map of attributes that constitute the record value. Primarily used for LOC and SRV record types. Either this or `value` must be specified
 {{% /md %}}</dd>
@@ -1343,7 +1055,7 @@ The following state arguments are supported:
             title="Optional">
         <span>hostname</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The FQDN of the record
 {{% /md %}}</dd>
@@ -1352,7 +1064,7 @@ The following state arguments are supported:
             title="Optional">
         <span>metadata</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A key-value map of string metadata Cloudflare associates with the record
 {{% /md %}}</dd>
@@ -1361,7 +1073,7 @@ The following state arguments are supported:
             title="Optional">
         <span>modified<wbr>On</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The RFC3339 timestamp of when the record was last modified
 {{% /md %}}</dd>
@@ -1370,7 +1082,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the record
 {{% /md %}}</dd>
@@ -1379,7 +1091,7 @@ The following state arguments are supported:
             title="Optional">
         <span>priority</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The priority of the record
 {{% /md %}}</dd>
@@ -1388,7 +1100,7 @@ The following state arguments are supported:
             title="Optional">
         <span>proxiable</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Shows whether this record can be proxied, must be true if setting `proxied=true`
 {{% /md %}}</dd>
@@ -1397,7 +1109,7 @@ The following state arguments are supported:
             title="Optional">
         <span>proxied</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the record gets Cloudflare's origin protection; defaults to `false`.
 {{% /md %}}</dd>
@@ -1406,7 +1118,7 @@ The following state arguments are supported:
             title="Optional">
         <span>ttl</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The TTL of the record ([automatic: '1'](https://api.cloudflare.com/#dns-records-for-a-zone-create-dns-record))
 {{% /md %}}</dd>
@@ -1415,7 +1127,7 @@ The following state arguments are supported:
             title="Optional">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the record
 {{% /md %}}</dd>
@@ -1424,7 +1136,7 @@ The following state arguments are supported:
             title="Optional">
         <span>value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The (string) value of the record. Either this or `data` must be specified
 {{% /md %}}</dd>
@@ -1433,7 +1145,7 @@ The following state arguments are supported:
             title="Optional">
         <span>zone<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS zone ID to add the record to
 {{% /md %}}</dd>
@@ -1595,7 +1307,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Algorithm</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1603,7 +1315,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Altitude</span>
         <span class="property-indicator"></span>
-        <span class="property-type">double?</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1611,7 +1323,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1619,7 +1331,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Content</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1627,7 +1339,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Digest</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1635,7 +1347,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Digest<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1643,7 +1355,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Fingerprint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1651,7 +1363,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Flags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1659,7 +1371,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Key<wbr>Tag</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1667,7 +1379,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Lat<wbr>Degrees</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1675,7 +1387,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Lat<wbr>Direction</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1683,7 +1395,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Lat<wbr>Minutes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1691,7 +1403,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Lat<wbr>Seconds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">double?</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1699,7 +1411,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Long<wbr>Degrees</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1707,7 +1419,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Long<wbr>Direction</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1715,7 +1427,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Long<wbr>Minutes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1723,7 +1435,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Long<wbr>Seconds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">double?</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1731,7 +1443,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Matching<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1739,7 +1451,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the record
 {{% /md %}}</dd>
@@ -1748,7 +1460,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Order</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1756,7 +1468,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1764,7 +1476,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Precision<wbr>Horz</span>
         <span class="property-indicator"></span>
-        <span class="property-type">double?</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1772,7 +1484,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Precision<wbr>Vert</span>
         <span class="property-indicator"></span>
-        <span class="property-type">double?</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1780,7 +1492,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Preference</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1788,7 +1500,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Priority</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The priority of the record
 {{% /md %}}</dd>
@@ -1797,7 +1509,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Proto</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1805,7 +1517,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Protocol</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1813,7 +1525,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Public<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1821,7 +1533,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Regex</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1829,7 +1541,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Replacement</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1837,7 +1549,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Selector</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1845,7 +1557,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Service</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1853,7 +1565,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">double?</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1861,7 +1573,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Target</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1869,7 +1581,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The type of the record
 {{% /md %}}</dd>
@@ -1878,7 +1590,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Usage</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1886,7 +1598,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Weight</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1901,7 +1613,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Algorithm</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1909,7 +1621,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Altitude</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*float64</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1917,7 +1629,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1925,7 +1637,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Content</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1933,7 +1645,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Digest</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1941,7 +1653,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Digest<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1949,7 +1661,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Fingerprint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1957,7 +1669,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Flags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1965,7 +1677,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Key<wbr>Tag</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1973,7 +1685,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Lat<wbr>Degrees</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1981,7 +1693,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Lat<wbr>Direction</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1989,7 +1701,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Lat<wbr>Minutes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1997,7 +1709,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Lat<wbr>Seconds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*float64</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2005,7 +1717,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Long<wbr>Degrees</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2013,7 +1725,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Long<wbr>Direction</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2021,7 +1733,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Long<wbr>Minutes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2029,7 +1741,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Long<wbr>Seconds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*float64</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2037,7 +1749,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Matching<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2045,7 +1757,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the record
 {{% /md %}}</dd>
@@ -2054,7 +1766,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Order</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2062,7 +1774,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2070,7 +1782,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Precision<wbr>Horz</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*float64</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2078,7 +1790,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Precision<wbr>Vert</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*float64</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2086,7 +1798,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Preference</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2094,7 +1806,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Priority</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The priority of the record
 {{% /md %}}</dd>
@@ -2103,7 +1815,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Proto</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2111,7 +1823,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Protocol</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2119,7 +1831,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Public<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2127,7 +1839,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Regex</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2135,7 +1847,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Replacement</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2143,7 +1855,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Selector</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2151,7 +1863,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Service</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2159,7 +1871,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*float64</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2167,7 +1879,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Target</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2175,7 +1887,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The type of the record
 {{% /md %}}</dd>
@@ -2184,7 +1896,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Usage</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2192,7 +1904,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Weight</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2207,7 +1919,7 @@ The following state arguments are supported:
             title="Optional">
         <span>algorithm</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2215,7 +1927,7 @@ The following state arguments are supported:
             title="Optional">
         <span>altitude</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2223,7 +1935,7 @@ The following state arguments are supported:
             title="Optional">
         <span>certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2231,7 +1943,7 @@ The following state arguments are supported:
             title="Optional">
         <span>content</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2239,7 +1951,7 @@ The following state arguments are supported:
             title="Optional">
         <span>digest</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2247,7 +1959,7 @@ The following state arguments are supported:
             title="Optional">
         <span>digest<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2255,7 +1967,7 @@ The following state arguments are supported:
             title="Optional">
         <span>fingerprint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2263,7 +1975,7 @@ The following state arguments are supported:
             title="Optional">
         <span>flags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2271,7 +1983,7 @@ The following state arguments are supported:
             title="Optional">
         <span>key<wbr>Tag</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2279,7 +1991,7 @@ The following state arguments are supported:
             title="Optional">
         <span>lat<wbr>Degrees</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2287,7 +1999,7 @@ The following state arguments are supported:
             title="Optional">
         <span>lat<wbr>Direction</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2295,7 +2007,7 @@ The following state arguments are supported:
             title="Optional">
         <span>lat<wbr>Minutes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2303,7 +2015,7 @@ The following state arguments are supported:
             title="Optional">
         <span>lat<wbr>Seconds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2311,7 +2023,7 @@ The following state arguments are supported:
             title="Optional">
         <span>long<wbr>Degrees</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2319,7 +2031,7 @@ The following state arguments are supported:
             title="Optional">
         <span>long<wbr>Direction</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2327,7 +2039,7 @@ The following state arguments are supported:
             title="Optional">
         <span>long<wbr>Minutes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2335,7 +2047,7 @@ The following state arguments are supported:
             title="Optional">
         <span>long<wbr>Seconds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2343,7 +2055,7 @@ The following state arguments are supported:
             title="Optional">
         <span>matching<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2351,7 +2063,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the record
 {{% /md %}}</dd>
@@ -2360,7 +2072,7 @@ The following state arguments are supported:
             title="Optional">
         <span>order</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2368,7 +2080,7 @@ The following state arguments are supported:
             title="Optional">
         <span>port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2376,7 +2088,7 @@ The following state arguments are supported:
             title="Optional">
         <span>precision<wbr>Horz</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2384,7 +2096,7 @@ The following state arguments are supported:
             title="Optional">
         <span>precision<wbr>Vert</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2392,7 +2104,7 @@ The following state arguments are supported:
             title="Optional">
         <span>preference</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2400,7 +2112,7 @@ The following state arguments are supported:
             title="Optional">
         <span>priority</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The priority of the record
 {{% /md %}}</dd>
@@ -2409,7 +2121,7 @@ The following state arguments are supported:
             title="Optional">
         <span>proto</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2417,7 +2129,7 @@ The following state arguments are supported:
             title="Optional">
         <span>protocol</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2425,7 +2137,7 @@ The following state arguments are supported:
             title="Optional">
         <span>public<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2433,7 +2145,7 @@ The following state arguments are supported:
             title="Optional">
         <span>regex</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2441,7 +2153,7 @@ The following state arguments are supported:
             title="Optional">
         <span>replacement</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2449,7 +2161,7 @@ The following state arguments are supported:
             title="Optional">
         <span>selector</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2457,7 +2169,7 @@ The following state arguments are supported:
             title="Optional">
         <span>service</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2465,7 +2177,7 @@ The following state arguments are supported:
             title="Optional">
         <span>size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2473,7 +2185,7 @@ The following state arguments are supported:
             title="Optional">
         <span>target</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2481,7 +2193,7 @@ The following state arguments are supported:
             title="Optional">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The type of the record
 {{% /md %}}</dd>
@@ -2490,7 +2202,7 @@ The following state arguments are supported:
             title="Optional">
         <span>usage</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2498,7 +2210,7 @@ The following state arguments are supported:
             title="Optional">
         <span>weight</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

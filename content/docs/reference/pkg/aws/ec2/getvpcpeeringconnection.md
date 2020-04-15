@@ -57,7 +57,7 @@ const route = new aws.ec2.Route("r", {
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupVpcPeeringConnection<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2?tab=doc#LookupVpcPeeringConnectionArgs">LookupVpcPeeringConnectionArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2?tab=doc#LookupVpcPeeringConnectionResult">LookupVpcPeeringConnectionResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupVpcPeeringConnection<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2?tab=doc#LookupVpcPeeringConnectionArgs">LookupVpcPeeringConnectionArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2?tab=doc#LookupVpcPeeringConnectionResult">LookupVpcPeeringConnectionResult</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -80,7 +80,7 @@ The following arguments are supported:
             title="Optional">
         <span>Cidr<wbr>Block</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CIDR block of the requester VPC of the specific VPC Peering Connection to retrieve.
 {{% /md %}}</dd>
@@ -89,7 +89,7 @@ The following arguments are supported:
             title="Optional">
         <span>Filters</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getvpcpeeringconnectionfilter">List&lt;Get<wbr>Vpc<wbr>Peering<wbr>Connection<wbr>Filter<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#getvpcpeeringconnectionfilter">List&lt;Get<wbr>Vpc<wbr>Peering<wbr>Connection<wbr>Filter<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Custom filter block as described below.
 {{% /md %}}</dd>
@@ -98,7 +98,7 @@ The following arguments are supported:
             title="Optional">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the specific VPC Peering Connection to retrieve.
 {{% /md %}}</dd>
@@ -107,7 +107,7 @@ The following arguments are supported:
             title="Optional">
         <span>Owner<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS account ID of the owner of the requester VPC of the specific VPC Peering Connection to retrieve.
 {{% /md %}}</dd>
@@ -116,7 +116,7 @@ The following arguments are supported:
             title="Optional">
         <span>Peer<wbr>Cidr<wbr>Block</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CIDR block of the accepter VPC of the specific VPC Peering Connection to retrieve.
 {{% /md %}}</dd>
@@ -125,7 +125,7 @@ The following arguments are supported:
             title="Optional">
         <span>Peer<wbr>Owner<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS account ID of the owner of the accepter VPC of the specific VPC Peering Connection to retrieve.
 {{% /md %}}</dd>
@@ -134,7 +134,7 @@ The following arguments are supported:
             title="Optional">
         <span>Peer<wbr>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region of the accepter VPC of the specific VPC Peering Connection to retrieve.
 {{% /md %}}</dd>
@@ -143,7 +143,7 @@ The following arguments are supported:
             title="Optional">
         <span>Peer<wbr>Vpc<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the accepter VPC of the specific VPC Peering Connection to retrieve.
 {{% /md %}}</dd>
@@ -152,7 +152,7 @@ The following arguments are supported:
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region of the requester VPC of the specific VPC Peering Connection to retrieve.
 {{% /md %}}</dd>
@@ -161,7 +161,7 @@ The following arguments are supported:
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the specific VPC Peering Connection to retrieve.
 {{% /md %}}</dd>
@@ -170,7 +170,7 @@ The following arguments are supported:
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags, each pair of which must exactly match
 a pair on the desired VPC Peering Connection.
@@ -180,7 +180,7 @@ a pair on the desired VPC Peering Connection.
             title="Optional">
         <span>Vpc<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the requester VPC of the specific VPC Peering Connection to retrieve.
 {{% /md %}}</dd>
@@ -196,7 +196,7 @@ a pair on the desired VPC Peering Connection.
             title="Optional">
         <span>Cidr<wbr>Block</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CIDR block of the requester VPC of the specific VPC Peering Connection to retrieve.
 {{% /md %}}</dd>
@@ -214,7 +214,7 @@ a pair on the desired VPC Peering Connection.
             title="Optional">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the specific VPC Peering Connection to retrieve.
 {{% /md %}}</dd>
@@ -223,7 +223,7 @@ a pair on the desired VPC Peering Connection.
             title="Optional">
         <span>Owner<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS account ID of the owner of the requester VPC of the specific VPC Peering Connection to retrieve.
 {{% /md %}}</dd>
@@ -232,7 +232,7 @@ a pair on the desired VPC Peering Connection.
             title="Optional">
         <span>Peer<wbr>Cidr<wbr>Block</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CIDR block of the accepter VPC of the specific VPC Peering Connection to retrieve.
 {{% /md %}}</dd>
@@ -241,7 +241,7 @@ a pair on the desired VPC Peering Connection.
             title="Optional">
         <span>Peer<wbr>Owner<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS account ID of the owner of the accepter VPC of the specific VPC Peering Connection to retrieve.
 {{% /md %}}</dd>
@@ -250,7 +250,7 @@ a pair on the desired VPC Peering Connection.
             title="Optional">
         <span>Peer<wbr>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region of the accepter VPC of the specific VPC Peering Connection to retrieve.
 {{% /md %}}</dd>
@@ -259,7 +259,7 @@ a pair on the desired VPC Peering Connection.
             title="Optional">
         <span>Peer<wbr>Vpc<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the accepter VPC of the specific VPC Peering Connection to retrieve.
 {{% /md %}}</dd>
@@ -268,7 +268,7 @@ a pair on the desired VPC Peering Connection.
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region of the requester VPC of the specific VPC Peering Connection to retrieve.
 {{% /md %}}</dd>
@@ -277,7 +277,7 @@ a pair on the desired VPC Peering Connection.
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the specific VPC Peering Connection to retrieve.
 {{% /md %}}</dd>
@@ -296,7 +296,7 @@ a pair on the desired VPC Peering Connection.
             title="Optional">
         <span>Vpc<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the requester VPC of the specific VPC Peering Connection to retrieve.
 {{% /md %}}</dd>
@@ -312,7 +312,7 @@ a pair on the desired VPC Peering Connection.
             title="Optional">
         <span>cidr<wbr>Block</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CIDR block of the requester VPC of the specific VPC Peering Connection to retrieve.
 {{% /md %}}</dd>
@@ -321,7 +321,7 @@ a pair on the desired VPC Peering Connection.
             title="Optional">
         <span>filters</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getvpcpeeringconnectionfilter">Get<wbr>Vpc<wbr>Peering<wbr>Connection<wbr>Filter[]?</a></span>
+        <span class="property-type"><a href="#getvpcpeeringconnectionfilter">Get<wbr>Vpc<wbr>Peering<wbr>Connection<wbr>Filter[]</a></span>
     </dt>
     <dd>{{% md %}}Custom filter block as described below.
 {{% /md %}}</dd>
@@ -330,7 +330,7 @@ a pair on the desired VPC Peering Connection.
             title="Optional">
         <span>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the specific VPC Peering Connection to retrieve.
 {{% /md %}}</dd>
@@ -339,7 +339,7 @@ a pair on the desired VPC Peering Connection.
             title="Optional">
         <span>owner<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS account ID of the owner of the requester VPC of the specific VPC Peering Connection to retrieve.
 {{% /md %}}</dd>
@@ -348,7 +348,7 @@ a pair on the desired VPC Peering Connection.
             title="Optional">
         <span>peer<wbr>Cidr<wbr>Block</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CIDR block of the accepter VPC of the specific VPC Peering Connection to retrieve.
 {{% /md %}}</dd>
@@ -357,7 +357,7 @@ a pair on the desired VPC Peering Connection.
             title="Optional">
         <span>peer<wbr>Owner<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS account ID of the owner of the accepter VPC of the specific VPC Peering Connection to retrieve.
 {{% /md %}}</dd>
@@ -366,7 +366,7 @@ a pair on the desired VPC Peering Connection.
             title="Optional">
         <span>peer<wbr>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region of the accepter VPC of the specific VPC Peering Connection to retrieve.
 {{% /md %}}</dd>
@@ -375,7 +375,7 @@ a pair on the desired VPC Peering Connection.
             title="Optional">
         <span>peer<wbr>Vpc<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the accepter VPC of the specific VPC Peering Connection to retrieve.
 {{% /md %}}</dd>
@@ -384,7 +384,7 @@ a pair on the desired VPC Peering Connection.
             title="Optional">
         <span>region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region of the requester VPC of the specific VPC Peering Connection to retrieve.
 {{% /md %}}</dd>
@@ -393,7 +393,7 @@ a pair on the desired VPC Peering Connection.
             title="Optional">
         <span>status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the specific VPC Peering Connection to retrieve.
 {{% /md %}}</dd>
@@ -402,7 +402,7 @@ a pair on the desired VPC Peering Connection.
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags, each pair of which must exactly match
 a pair on the desired VPC Peering Connection.
@@ -412,7 +412,7 @@ a pair on the desired VPC Peering Connection.
             title="Optional">
         <span>vpc<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the requester VPC of the specific VPC Peering Connection to retrieve.
 {{% /md %}}</dd>
@@ -557,7 +557,7 @@ The following output properties are available:
             title="">
         <span>Accepter</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, bool></span>
+        <span class="property-type">Dictionary&lt;string, bool&gt;</span>
     </dt>
     <dd>{{% md %}}A configuration block that describes [VPC Peering Connection]
 (http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide) options set for the accepter VPC.
@@ -568,14 +568,6 @@ The following output properties are available:
         <span>Cidr<wbr>Block</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Filters</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getvpcpeeringconnectionfilter">List&lt;Get<wbr>Vpc<wbr>Peering<wbr>Connection<wbr>Filter&gt;?</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -639,7 +631,7 @@ The following output properties are available:
             title="">
         <span>Requester</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, bool></span>
+        <span class="property-type">Dictionary&lt;string, bool&gt;</span>
     </dt>
     <dd>{{% md %}}A configuration block that describes [VPC Peering Connection]
 (http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide) options set for the requester VPC.
@@ -657,7 +649,7 @@ The following output properties are available:
             title="">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -666,6 +658,14 @@ The following output properties are available:
         <span>Vpc<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Filters</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getvpcpeeringconnectionfilter">List&lt;Get<wbr>Vpc<wbr>Peering<wbr>Connection<wbr>Filter&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -691,14 +691,6 @@ The following output properties are available:
         <span>Cidr<wbr>Block</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Filters</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getvpcpeeringconnectionfilter">[]Get<wbr>Vpc<wbr>Peering<wbr>Connection<wbr>Filter</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -792,6 +784,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span>Filters</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getvpcpeeringconnectionfilter">[]Get<wbr>Vpc<wbr>Peering<wbr>Connection<wbr>Filter</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -814,14 +814,6 @@ The following output properties are available:
         <span>cidr<wbr>Block</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>filters</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getvpcpeeringconnectionfilter">Get<wbr>Vpc<wbr>Peering<wbr>Connection<wbr>Filter[]?</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -915,6 +907,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span>filters</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getvpcpeeringconnectionfilter">Get<wbr>Vpc<wbr>Peering<wbr>Connection<wbr>Filter[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -937,14 +937,6 @@ The following output properties are available:
         <span>cidr_<wbr>block</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>filters</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getvpcpeeringconnectionfilter">List[Get<wbr>Vpc<wbr>Peering<wbr>Connection<wbr>Filter]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1038,6 +1030,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span>filters</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getvpcpeeringconnectionfilter">List[Get<wbr>Vpc<wbr>Peering<wbr>Connection<wbr>Filter]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -1079,7 +1079,7 @@ The following output properties are available:
             title="Required">
         <span>Values</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Set of values that are accepted for the given field.
 A VPC Peering Connection will be selected if any one of the given values matches.

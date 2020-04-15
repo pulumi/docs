@@ -41,13 +41,13 @@ const example = pulumi.output(gitlab.getProject({
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupProject<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gitlab/sdk/go/gitlab/?tab=doc#GetProjectArgs">GetProjectArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gitlab/sdk/go/gitlab/?tab=doc#LookupProjectResult">LookupProjectResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupProject<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gitlab/sdk/go/gitlab/?tab=doc#GetProjectArgs">GetProjectArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gitlab/sdk/go/gitlab/?tab=doc#LookupProjectResult">LookupProjectResult</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetProject </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gitlab/Pulumi.Gitlab.GetProjectResult.html">GetProjectResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gitlab/Pulumi.Gitlab.GetProjectArgs.html">GetProjectArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gitlab/Pulumi.Gitlab.GetProjectResult.html">GetProjectResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gitlab/Pulumi.GitLab.GetProjectArgs.html">GetProjectArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -60,43 +60,6 @@ The following arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Archived</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Whether the project is in read-only mode (archived).
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Default<wbr>Branch</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The default branch for the project.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}A description of the project.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Http<wbr>Url<wbr>To<wbr>Repo</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}URL that can be provided to `git clone` to clone the
-repository via HTTP.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Id</span>
@@ -108,9 +71,46 @@ repository via HTTP.
 
     <dt class="property-optional"
             title="Optional">
+        <span>Archived</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether the project is in read-only mode (archived).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Default<wbr>Branch</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The default branch for the project.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A description of the project.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Http<wbr>Url<wbr>To<wbr>Repo</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}URL that can be provided to `git clone` to clone the
+repository via HTTP.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Issues<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable issue tracking for the project.
 {{% /md %}}</dd>
@@ -119,7 +119,7 @@ repository via HTTP.
             title="Optional">
         <span>Lfs<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable LFS for the project.
 {{% /md %}}</dd>
@@ -128,7 +128,7 @@ repository via HTTP.
             title="Optional">
         <span>Merge<wbr>Requests<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable merge requests for the project.
 {{% /md %}}</dd>
@@ -137,7 +137,7 @@ repository via HTTP.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -145,7 +145,7 @@ repository via HTTP.
             title="Optional">
         <span>Namespace<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The namespace (group or user) of the project. Defaults to your user.
 See `gitlab..Group` for an example.
@@ -155,7 +155,7 @@ See `gitlab..Group` for an example.
             title="Optional">
         <span>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path of the repository.
 {{% /md %}}</dd>
@@ -164,7 +164,7 @@ See `gitlab..Group` for an example.
             title="Optional">
         <span>Pipelines<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable pipelines for the project.
 {{% /md %}}</dd>
@@ -173,7 +173,7 @@ See `gitlab..Group` for an example.
             title="Optional">
         <span>Request<wbr>Access<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow users to request member access.
 {{% /md %}}</dd>
@@ -182,7 +182,7 @@ See `gitlab..Group` for an example.
             title="Optional">
         <span>Runners<wbr>Token</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Registration token to use during runner setup.
 {{% /md %}}</dd>
@@ -191,7 +191,7 @@ See `gitlab..Group` for an example.
             title="Optional">
         <span>Snippets<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable snippets for the project.
 {{% /md %}}</dd>
@@ -200,7 +200,7 @@ See `gitlab..Group` for an example.
             title="Optional">
         <span>Ssh<wbr>Url<wbr>To<wbr>Repo</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL that can be provided to `git clone` to clone the
 repository via SSH.
@@ -210,7 +210,7 @@ repository via SSH.
             title="Optional">
         <span>Visibility<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Repositories are created as private by default.
 {{% /md %}}</dd>
@@ -219,7 +219,7 @@ repository via SSH.
             title="Optional">
         <span>Web<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL that can be used to find the project in a browser.
 {{% /md %}}</dd>
@@ -228,7 +228,7 @@ repository via SSH.
             title="Optional">
         <span>Wiki<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable wiki for the project.
 {{% /md %}}</dd>
@@ -240,43 +240,6 @@ repository via SSH.
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Archived</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Whether the project is in read-only mode (archived).
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Default<wbr>Branch</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The default branch for the project.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}A description of the project.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Http<wbr>Url<wbr>To<wbr>Repo</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}URL that can be provided to `git clone` to clone the
-repository via HTTP.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Id</span>
@@ -288,9 +251,46 @@ repository via HTTP.
 
     <dt class="property-optional"
             title="Optional">
+        <span>Archived</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether the project is in read-only mode (archived).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Default<wbr>Branch</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The default branch for the project.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A description of the project.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Http<wbr>Url<wbr>To<wbr>Repo</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}URL that can be provided to `git clone` to clone the
+repository via HTTP.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Issues<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable issue tracking for the project.
 {{% /md %}}</dd>
@@ -299,7 +299,7 @@ repository via HTTP.
             title="Optional">
         <span>Lfs<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable LFS for the project.
 {{% /md %}}</dd>
@@ -308,7 +308,7 @@ repository via HTTP.
             title="Optional">
         <span>Merge<wbr>Requests<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable merge requests for the project.
 {{% /md %}}</dd>
@@ -317,7 +317,7 @@ repository via HTTP.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -325,7 +325,7 @@ repository via HTTP.
             title="Optional">
         <span>Namespace<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The namespace (group or user) of the project. Defaults to your user.
 See `gitlab..Group` for an example.
@@ -335,7 +335,7 @@ See `gitlab..Group` for an example.
             title="Optional">
         <span>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path of the repository.
 {{% /md %}}</dd>
@@ -344,7 +344,7 @@ See `gitlab..Group` for an example.
             title="Optional">
         <span>Pipelines<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable pipelines for the project.
 {{% /md %}}</dd>
@@ -353,7 +353,7 @@ See `gitlab..Group` for an example.
             title="Optional">
         <span>Request<wbr>Access<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow users to request member access.
 {{% /md %}}</dd>
@@ -362,7 +362,7 @@ See `gitlab..Group` for an example.
             title="Optional">
         <span>Runners<wbr>Token</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Registration token to use during runner setup.
 {{% /md %}}</dd>
@@ -371,7 +371,7 @@ See `gitlab..Group` for an example.
             title="Optional">
         <span>Snippets<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable snippets for the project.
 {{% /md %}}</dd>
@@ -380,7 +380,7 @@ See `gitlab..Group` for an example.
             title="Optional">
         <span>Ssh<wbr>Url<wbr>To<wbr>Repo</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL that can be provided to `git clone` to clone the
 repository via SSH.
@@ -390,7 +390,7 @@ repository via SSH.
             title="Optional">
         <span>Visibility<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Repositories are created as private by default.
 {{% /md %}}</dd>
@@ -399,7 +399,7 @@ repository via SSH.
             title="Optional">
         <span>Web<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL that can be used to find the project in a browser.
 {{% /md %}}</dd>
@@ -408,7 +408,7 @@ repository via SSH.
             title="Optional">
         <span>Wiki<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable wiki for the project.
 {{% /md %}}</dd>
@@ -419,43 +419,6 @@ repository via SSH.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>archived</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Whether the project is in read-only mode (archived).
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>default<wbr>Branch</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The default branch for the project.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}A description of the project.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>http<wbr>Url<wbr>To<wbr>Repo</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}URL that can be provided to `git clone` to clone the
-repository via HTTP.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -468,9 +431,46 @@ repository via HTTP.
 
     <dt class="property-optional"
             title="Optional">
+        <span>archived</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether the project is in read-only mode (archived).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>default<wbr>Branch</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The default branch for the project.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A description of the project.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>http<wbr>Url<wbr>To<wbr>Repo</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}URL that can be provided to `git clone` to clone the
+repository via HTTP.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>issues<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable issue tracking for the project.
 {{% /md %}}</dd>
@@ -479,7 +479,7 @@ repository via HTTP.
             title="Optional">
         <span>lfs<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable LFS for the project.
 {{% /md %}}</dd>
@@ -488,7 +488,7 @@ repository via HTTP.
             title="Optional">
         <span>merge<wbr>Requests<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable merge requests for the project.
 {{% /md %}}</dd>
@@ -497,7 +497,7 @@ repository via HTTP.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -505,7 +505,7 @@ repository via HTTP.
             title="Optional">
         <span>namespace<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The namespace (group or user) of the project. Defaults to your user.
 See `gitlab..Group` for an example.
@@ -515,7 +515,7 @@ See `gitlab..Group` for an example.
             title="Optional">
         <span>path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The path of the repository.
 {{% /md %}}</dd>
@@ -524,7 +524,7 @@ See `gitlab..Group` for an example.
             title="Optional">
         <span>pipelines<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable pipelines for the project.
 {{% /md %}}</dd>
@@ -533,7 +533,7 @@ See `gitlab..Group` for an example.
             title="Optional">
         <span>request<wbr>Access<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Allow users to request member access.
 {{% /md %}}</dd>
@@ -542,7 +542,7 @@ See `gitlab..Group` for an example.
             title="Optional">
         <span>runners<wbr>Token</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Registration token to use during runner setup.
 {{% /md %}}</dd>
@@ -551,7 +551,7 @@ See `gitlab..Group` for an example.
             title="Optional">
         <span>snippets<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable snippets for the project.
 {{% /md %}}</dd>
@@ -560,7 +560,7 @@ See `gitlab..Group` for an example.
             title="Optional">
         <span>ssh<wbr>Url<wbr>To<wbr>Repo</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL that can be provided to `git clone` to clone the
 repository via SSH.
@@ -570,7 +570,7 @@ repository via SSH.
             title="Optional">
         <span>visibility<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Repositories are created as private by default.
 {{% /md %}}</dd>
@@ -579,7 +579,7 @@ repository via SSH.
             title="Optional">
         <span>web<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URL that can be used to find the project in a browser.
 {{% /md %}}</dd>
@@ -588,7 +588,7 @@ repository via SSH.
             title="Optional">
         <span>wiki<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable wiki for the project.
 {{% /md %}}</dd>
@@ -599,6 +599,15 @@ repository via SSH.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}The integer that uniquely identifies the project within the gitlab install.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -635,15 +644,6 @@ repository via SSH.
     </dt>
     <dd>{{% md %}}URL that can be provided to `git clone` to clone the
 repository via HTTP.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The integer that uniquely identifies the project within the gitlab install.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

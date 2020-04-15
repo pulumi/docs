@@ -58,7 +58,7 @@ const example = new aws.mq.Broker("example", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/mq/#Broker">Broker</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/mq/#BrokerArgs">BrokerArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/mq/#Broker">Broker</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/mq/#BrokerArgs">BrokerArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -66,7 +66,7 @@ const example = new aws.mq.Broker("example", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewBroker<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/mq?tab=doc#BrokerArgs">BrokerArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/mq?tab=doc#Broker">Broker</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewBroker<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/mq?tab=doc#BrokerArgs">BrokerArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/mq?tab=doc#Broker">Broker</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -162,25 +162,6 @@ const example = new aws.mq.Broker("example", {
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Apply<wbr>Immediately</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Specifies whether any broker modifications
-are applied immediately, or during the next maintenance window. Default is `false`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Auto<wbr>Minor<wbr>Version<wbr>Upgrade</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Enables automatic upgrades to new minor versions for brokers, as Apache releases the versions.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Broker<wbr>Name</span>
@@ -188,33 +169,6 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the broker.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Configuration</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#brokerconfiguration">Broker<wbr>Configuration<wbr>Args?</a></span>
-    </dt>
-    <dd>{{% md %}}Configuration of the broker. See below.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Deployment<wbr>Mode</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The deployment mode of the broker. Supported: `SINGLE_INSTANCE` and `ACTIVE_STANDBY_MULTI_AZ`. Defaults to `SINGLE_INSTANCE`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Encryption<wbr>Options</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#brokerencryptionoptions">Broker<wbr>Encryption<wbr>Options<wbr>Args?</a></span>
-    </dt>
-    <dd>{{% md %}}Configuration block containing encryption options. See below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -244,58 +198,13 @@ are applied immediately, or during the next maintenance window. Default is `fals
     <dd>{{% md %}}The broker's instance type. e.g. `mq.t2.micro` or `mq.m4.large`
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Logs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#brokerlogs">Broker<wbr>Logs<wbr>Args?</a></span>
-    </dt>
-    <dd>{{% md %}}Logging configuration of the broker. See below.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Maintenance<wbr>Window<wbr>Start<wbr>Time</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#brokermaintenancewindowstarttime">Broker<wbr>Maintenance<wbr>Window<wbr>Start<wbr>Time<wbr>Args?</a></span>
-    </dt>
-    <dd>{{% md %}}Maintenance window start time. See below.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Publicly<wbr>Accessible</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Whether to enable connections from applications outside of the VPC that hosts the broker's subnets.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Security<wbr>Groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The list of security group IDs assigned to the broker.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Subnet<wbr>Ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}The list of subnet IDs in which to launch the broker. A `SINGLE_INSTANCE` deployment requires one subnet. An `ACTIVE_STANDBY_MULTI_AZ` deployment requires two subnets.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -307,18 +216,11 @@ are applied immediately, or during the next maintenance window. Default is `fals
     <dd>{{% md %}}The list of all ActiveMQ usernames for the specified broker. See below.
 {{% /md %}}</dd>
 
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span>Apply<wbr>Immediately</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether any broker modifications
 are applied immediately, or during the next maintenance window. Default is `false`.
@@ -328,25 +230,16 @@ are applied immediately, or during the next maintenance window. Default is `fals
             title="Optional">
         <span>Auto<wbr>Minor<wbr>Version<wbr>Upgrade</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables automatic upgrades to new minor versions for brokers, as Apache releases the versions.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Broker<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the broker.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#brokerconfiguration">*Broker<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#brokerconfiguration">Broker<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration of the broker. See below.
 {{% /md %}}</dd>
@@ -355,7 +248,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
             title="Optional">
         <span>Deployment<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The deployment mode of the broker. Supported: `SINGLE_INSTANCE` and `ACTIVE_STANDBY_MULTI_AZ`. Defaults to `SINGLE_INSTANCE`.
 {{% /md %}}</dd>
@@ -364,9 +257,70 @@ are applied immediately, or during the next maintenance window. Default is `fals
             title="Optional">
         <span>Encryption<wbr>Options</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#brokerencryptionoptions">*Broker<wbr>Encryption<wbr>Options</a></span>
+        <span class="property-type"><a href="#brokerencryptionoptions">Broker<wbr>Encryption<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block containing encryption options. See below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Logs</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#brokerlogs">Broker<wbr>Logs<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Logging configuration of the broker. See below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Maintenance<wbr>Window<wbr>Start<wbr>Time</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#brokermaintenancewindowstarttime">Broker<wbr>Maintenance<wbr>Window<wbr>Start<wbr>Time<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Maintenance window start time. See below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Publicly<wbr>Accessible</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to enable connections from applications outside of the VPC that hosts the broker's subnets.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Subnet<wbr>Ids</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The list of subnet IDs in which to launch the broker. A `SINGLE_INSTANCE` deployment requires one subnet. An `ACTIVE_STANDBY_MULTI_AZ` deployment requires two subnets.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+    </dt>
+    <dd>{{% md %}}A mapping of tags to assign to the resource.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Broker<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the broker.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -396,11 +350,75 @@ are applied immediately, or during the next maintenance window. Default is `fals
     <dd>{{% md %}}The broker's instance type. e.g. `mq.t2.micro` or `mq.m4.large`
 {{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>Security<wbr>Groups</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}The list of security group IDs assigned to the broker.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Users</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#brokeruser">[]Broker<wbr>User</a></span>
+    </dt>
+    <dd>{{% md %}}The list of all ActiveMQ usernames for the specified broker. See below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Apply<wbr>Immediately</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether any broker modifications
+are applied immediately, or during the next maintenance window. Default is `false`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Auto<wbr>Minor<wbr>Version<wbr>Upgrade</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enables automatic upgrades to new minor versions for brokers, as Apache releases the versions.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Configuration</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#brokerconfiguration">Broker<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration of the broker. See below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Deployment<wbr>Mode</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The deployment mode of the broker. Supported: `SINGLE_INSTANCE` and `ACTIVE_STANDBY_MULTI_AZ`. Defaults to `SINGLE_INSTANCE`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Encryption<wbr>Options</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#brokerencryptionoptions">Broker<wbr>Encryption<wbr>Options</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block containing encryption options. See below.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Logs</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#brokerlogs">*Broker<wbr>Logs</a></span>
+        <span class="property-type"><a href="#brokerlogs">Broker<wbr>Logs</a></span>
     </dt>
     <dd>{{% md %}}Logging configuration of the broker. See below.
 {{% /md %}}</dd>
@@ -409,7 +427,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
             title="Optional">
         <span>Maintenance<wbr>Window<wbr>Start<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#brokermaintenancewindowstarttime">*Broker<wbr>Maintenance<wbr>Window<wbr>Start<wbr>Time</a></span>
+        <span class="property-type"><a href="#brokermaintenancewindowstarttime">Broker<wbr>Maintenance<wbr>Window<wbr>Start<wbr>Time</a></span>
     </dt>
     <dd>{{% md %}}Maintenance window start time. See below.
 {{% /md %}}</dd>
@@ -418,18 +436,9 @@ are applied immediately, or during the next maintenance window. Default is `fals
             title="Optional">
         <span>Publicly<wbr>Accessible</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to enable connections from applications outside of the VPC that hosts the broker's subnets.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Security<wbr>Groups</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}The list of security group IDs assigned to the broker.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -450,40 +459,12 @@ are applied immediately, or during the next maintenance window. Default is `fals
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>Users</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#brokeruser">[]Broker<wbr>User</a></span>
-    </dt>
-    <dd>{{% md %}}The list of all ActiveMQ usernames for the specified broker. See below.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>apply<wbr>Immediately</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Specifies whether any broker modifications
-are applied immediately, or during the next maintenance window. Default is `false`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>auto<wbr>Minor<wbr>Version<wbr>Upgrade</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Enables automatic upgrades to new minor versions for brokers, as Apache releases the versions.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -492,33 +473,6 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the broker.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>configuration</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#brokerconfiguration">Broker<wbr>Configuration?</a></span>
-    </dt>
-    <dd>{{% md %}}Configuration of the broker. See below.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>deployment<wbr>Mode</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The deployment mode of the broker. Supported: `SINGLE_INSTANCE` and `ACTIVE_STANDBY_MULTI_AZ`. Defaults to `SINGLE_INSTANCE`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>encryption<wbr>Options</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#brokerencryptionoptions">Broker<wbr>Encryption<wbr>Options?</a></span>
-    </dt>
-    <dd>{{% md %}}Configuration block containing encryption options. See below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -548,33 +502,6 @@ are applied immediately, or during the next maintenance window. Default is `fals
     <dd>{{% md %}}The broker's instance type. e.g. `mq.t2.micro` or `mq.m4.large`
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>logs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#brokerlogs">Broker<wbr>Logs?</a></span>
-    </dt>
-    <dd>{{% md %}}Logging configuration of the broker. See below.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>maintenance<wbr>Window<wbr>Start<wbr>Time</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#brokermaintenancewindowstarttime">Broker<wbr>Maintenance<wbr>Window<wbr>Start<wbr>Time?</a></span>
-    </dt>
-    <dd>{{% md %}}Maintenance window start time. See below.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>publicly<wbr>Accessible</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Whether to enable connections from applications outside of the VPC that hosts the broker's subnets.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>security<wbr>Groups</span>
@@ -582,24 +509,6 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The list of security group IDs assigned to the broker.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>subnet<wbr>Ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}The list of subnet IDs in which to launch the broker. A `SINGLE_INSTANCE` deployment requires one subnet. An `ACTIVE_STANDBY_MULTI_AZ` deployment requires two subnets.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -611,18 +520,11 @@ are applied immediately, or during the next maintenance window. Default is `fals
     <dd>{{% md %}}The list of all ActiveMQ usernames for the specified broker. See below.
 {{% /md %}}</dd>
 
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
-        <span>apply_<wbr>immediately</span>
+        <span>apply<wbr>Immediately</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies whether any broker modifications
 are applied immediately, or during the next maintenance window. Default is `false`.
@@ -630,12 +532,91 @@ are applied immediately, or during the next maintenance window. Default is `fals
 
     <dt class="property-optional"
             title="Optional">
-        <span>auto_<wbr>minor_<wbr>version_<wbr>upgrade</span>
+        <span>auto<wbr>Minor<wbr>Version<wbr>Upgrade</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enables automatic upgrades to new minor versions for brokers, as Apache releases the versions.
 {{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>configuration</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#brokerconfiguration">Broker<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration of the broker. See below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>deployment<wbr>Mode</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The deployment mode of the broker. Supported: `SINGLE_INSTANCE` and `ACTIVE_STANDBY_MULTI_AZ`. Defaults to `SINGLE_INSTANCE`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>encryption<wbr>Options</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#brokerencryptionoptions">Broker<wbr>Encryption<wbr>Options</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block containing encryption options. See below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>logs</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#brokerlogs">Broker<wbr>Logs</a></span>
+    </dt>
+    <dd>{{% md %}}Logging configuration of the broker. See below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>maintenance<wbr>Window<wbr>Start<wbr>Time</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#brokermaintenancewindowstarttime">Broker<wbr>Maintenance<wbr>Window<wbr>Start<wbr>Time</a></span>
+    </dt>
+    <dd>{{% md %}}Maintenance window start time. See below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>publicly<wbr>Accessible</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether to enable connections from applications outside of the VPC that hosts the broker's subnets.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>subnet<wbr>Ids</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}The list of subnet IDs in which to launch the broker. A `SINGLE_INSTANCE` deployment requires one subnet. An `ACTIVE_STANDBY_MULTI_AZ` deployment requires two subnets.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}</span>
+    </dt>
+    <dd>{{% md %}}A mapping of tags to assign to the resource.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
@@ -644,33 +625,6 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the broker.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>configuration</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#brokerconfiguration">Dict[Broker<wbr>Configuration]</a></span>
-    </dt>
-    <dd>{{% md %}}Configuration of the broker. See below.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>deployment_<wbr>mode</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The deployment mode of the broker. Supported: `SINGLE_INSTANCE` and `ACTIVE_STANDBY_MULTI_AZ`. Defaults to `SINGLE_INSTANCE`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>encryption_<wbr>options</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#brokerencryptionoptions">Dict[Broker<wbr>Encryption<wbr>Options]</a></span>
-    </dt>
-    <dd>{{% md %}}Configuration block containing encryption options. See below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -700,6 +654,70 @@ are applied immediately, or during the next maintenance window. Default is `fals
     <dd>{{% md %}}The broker's instance type. e.g. `mq.t2.micro` or `mq.m4.large`
 {{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>security_<wbr>groups</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List[str]</span>
+    </dt>
+    <dd>{{% md %}}The list of security group IDs assigned to the broker.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>users</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#brokeruser">List[Broker<wbr>User]</a></span>
+    </dt>
+    <dd>{{% md %}}The list of all ActiveMQ usernames for the specified broker. See below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>apply_<wbr>immediately</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether any broker modifications
+are applied immediately, or during the next maintenance window. Default is `false`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>auto_<wbr>minor_<wbr>version_<wbr>upgrade</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enables automatic upgrades to new minor versions for brokers, as Apache releases the versions.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>configuration</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#brokerconfiguration">Dict[Broker<wbr>Configuration]</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration of the broker. See below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>deployment_<wbr>mode</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The deployment mode of the broker. Supported: `SINGLE_INSTANCE` and `ACTIVE_STANDBY_MULTI_AZ`. Defaults to `SINGLE_INSTANCE`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>encryption_<wbr>options</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#brokerencryptionoptions">Dict[Broker<wbr>Encryption<wbr>Options]</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block containing encryption options. See below.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>logs</span>
@@ -727,15 +745,6 @@ are applied immediately, or during the next maintenance window. Default is `fals
     <dd>{{% md %}}Whether to enable connections from applications outside of the VPC that hosts the broker's subnets.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>security_<wbr>groups</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}The list of security group IDs assigned to the broker.
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>subnet_<wbr>ids</span>
@@ -752,15 +761,6 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type">Dict[str, Any]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>users</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#brokeruser">List[Broker<wbr>User]</a></span>
-    </dt>
-    <dd>{{% md %}}The list of all ActiveMQ usernames for the specified broker. See below.
 {{% /md %}}</dd>
 
 </dl>
@@ -784,93 +784,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Apply<wbr>Immediately</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Specifies whether any broker modifications
-are applied immediately, or during the next maintenance window. Default is `false`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Arn</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the broker.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Auto<wbr>Minor<wbr>Version<wbr>Upgrade</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Enables automatic upgrades to new minor versions for brokers, as Apache releases the versions.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Broker<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the broker.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Configuration</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#brokerconfiguration">Broker<wbr>Configuration</a></span>
-    </dt>
-    <dd>{{% md %}}Configuration of the broker. See below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Deployment<wbr>Mode</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The deployment mode of the broker. Supported: `SINGLE_INSTANCE` and `ACTIVE_STANDBY_MULTI_AZ`. Defaults to `SINGLE_INSTANCE`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Encryption<wbr>Options</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#brokerencryptionoptions">Broker<wbr>Encryption<wbr>Options?</a></span>
-    </dt>
-    <dd>{{% md %}}Configuration block containing encryption options. See below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Engine<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The type of broker engine. Currently, Amazon MQ supports only `ActiveMQ`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Engine<wbr>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The version of the broker engine. See the [AmazonMQ Broker Engine docs](https://docs.aws.amazon.com/amazon-mq/latest/developer-guide/broker-engine.html) for supported versions.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Host<wbr>Instance<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The broker's instance type. e.g. `mq.t2.micro` or `mq.m4.large`
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -890,69 +808,6 @@ are applied immediately, or during the next maintenance window. Default is `fals
 * `wss://broker-id.mq.us-west-2.amazonaws.com:61619`
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span>Logs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#brokerlogs">Broker<wbr>Logs?</a></span>
-    </dt>
-    <dd>{{% md %}}Logging configuration of the broker. See below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Maintenance<wbr>Window<wbr>Start<wbr>Time</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#brokermaintenancewindowstarttime">Broker<wbr>Maintenance<wbr>Window<wbr>Start<wbr>Time</a></span>
-    </dt>
-    <dd>{{% md %}}Maintenance window start time. See below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Publicly<wbr>Accessible</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Whether to enable connections from applications outside of the VPC that hosts the broker's subnets.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Security<wbr>Groups</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
-    </dt>
-    <dd>{{% md %}}The list of security group IDs assigned to the broker.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Subnet<wbr>Ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
-    </dt>
-    <dd>{{% md %}}The list of subnet IDs in which to launch the broker. A `SINGLE_INSTANCE` deployment requires one subnet. An `ACTIVE_STANDBY_MULTI_AZ` deployment requires two subnets.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Users</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#brokeruser">List&lt;Broker<wbr>User&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}The list of all ActiveMQ usernames for the specified broker. See below.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -962,93 +817,11 @@ are applied immediately, or during the next maintenance window. Default is `fals
 
     <dt class="property-"
             title="">
-        <span>Apply<wbr>Immediately</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Specifies whether any broker modifications
-are applied immediately, or during the next maintenance window. Default is `false`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Arn</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the broker.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Auto<wbr>Minor<wbr>Version<wbr>Upgrade</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Enables automatic upgrades to new minor versions for brokers, as Apache releases the versions.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Broker<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the broker.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Configuration</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#brokerconfiguration">Broker<wbr>Configuration</a></span>
-    </dt>
-    <dd>{{% md %}}Configuration of the broker. See below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Deployment<wbr>Mode</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The deployment mode of the broker. Supported: `SINGLE_INSTANCE` and `ACTIVE_STANDBY_MULTI_AZ`. Defaults to `SINGLE_INSTANCE`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Encryption<wbr>Options</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#brokerencryptionoptions">*Broker<wbr>Encryption<wbr>Options</a></span>
-    </dt>
-    <dd>{{% md %}}Configuration block containing encryption options. See below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Engine<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The type of broker engine. Currently, Amazon MQ supports only `ActiveMQ`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Engine<wbr>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The version of the broker engine. See the [AmazonMQ Broker Engine docs](https://docs.aws.amazon.com/amazon-mq/latest/developer-guide/broker-engine.html) for supported versions.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Host<wbr>Instance<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The broker's instance type. e.g. `mq.t2.micro` or `mq.m4.large`
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1068,69 +841,6 @@ are applied immediately, or during the next maintenance window. Default is `fals
 * `wss://broker-id.mq.us-west-2.amazonaws.com:61619`
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span>Logs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#brokerlogs">*Broker<wbr>Logs</a></span>
-    </dt>
-    <dd>{{% md %}}Logging configuration of the broker. See below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Maintenance<wbr>Window<wbr>Start<wbr>Time</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#brokermaintenancewindowstarttime">Broker<wbr>Maintenance<wbr>Window<wbr>Start<wbr>Time</a></span>
-    </dt>
-    <dd>{{% md %}}Maintenance window start time. See below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Publicly<wbr>Accessible</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Whether to enable connections from applications outside of the VPC that hosts the broker's subnets.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Security<wbr>Groups</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}The list of security group IDs assigned to the broker.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Subnet<wbr>Ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}The list of subnet IDs in which to launch the broker. A `SINGLE_INSTANCE` deployment requires one subnet. An `ACTIVE_STANDBY_MULTI_AZ` deployment requires two subnets.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Users</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#brokeruser">[]Broker<wbr>User</a></span>
-    </dt>
-    <dd>{{% md %}}The list of all ActiveMQ usernames for the specified broker. See below.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -1140,93 +850,11 @@ are applied immediately, or during the next maintenance window. Default is `fals
 
     <dt class="property-"
             title="">
-        <span>apply<wbr>Immediately</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Specifies whether any broker modifications
-are applied immediately, or during the next maintenance window. Default is `false`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>arn</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the broker.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>auto<wbr>Minor<wbr>Version<wbr>Upgrade</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Enables automatic upgrades to new minor versions for brokers, as Apache releases the versions.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>broker<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the broker.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>configuration</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#brokerconfiguration">Broker<wbr>Configuration</a></span>
-    </dt>
-    <dd>{{% md %}}Configuration of the broker. See below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>deployment<wbr>Mode</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The deployment mode of the broker. Supported: `SINGLE_INSTANCE` and `ACTIVE_STANDBY_MULTI_AZ`. Defaults to `SINGLE_INSTANCE`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>encryption<wbr>Options</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#brokerencryptionoptions">Broker<wbr>Encryption<wbr>Options?</a></span>
-    </dt>
-    <dd>{{% md %}}Configuration block containing encryption options. See below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>engine<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The type of broker engine. Currently, Amazon MQ supports only `ActiveMQ`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>engine<wbr>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The version of the broker engine. See the [AmazonMQ Broker Engine docs](https://docs.aws.amazon.com/amazon-mq/latest/developer-guide/broker-engine.html) for supported versions.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>host<wbr>Instance<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The broker's instance type. e.g. `mq.t2.micro` or `mq.m4.large`
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1246,69 +874,6 @@ are applied immediately, or during the next maintenance window. Default is `fals
 * `wss://broker-id.mq.us-west-2.amazonaws.com:61619`
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span>logs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#brokerlogs">Broker<wbr>Logs?</a></span>
-    </dt>
-    <dd>{{% md %}}Logging configuration of the broker. See below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>maintenance<wbr>Window<wbr>Start<wbr>Time</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#brokermaintenancewindowstarttime">Broker<wbr>Maintenance<wbr>Window<wbr>Start<wbr>Time</a></span>
-    </dt>
-    <dd>{{% md %}}Maintenance window start time. See below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>publicly<wbr>Accessible</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Whether to enable connections from applications outside of the VPC that hosts the broker's subnets.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>security<wbr>Groups</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
-    </dt>
-    <dd>{{% md %}}The list of security group IDs assigned to the broker.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>subnet<wbr>Ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
-    </dt>
-    <dd>{{% md %}}The list of subnet IDs in which to launch the broker. A `SINGLE_INSTANCE` deployment requires one subnet. An `ACTIVE_STANDBY_MULTI_AZ` deployment requires two subnets.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>users</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#brokeruser">Broker<wbr>User[]</a></span>
-    </dt>
-    <dd>{{% md %}}The list of all ActiveMQ usernames for the specified broker. See below.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -1318,93 +883,11 @@ are applied immediately, or during the next maintenance window. Default is `fals
 
     <dt class="property-"
             title="">
-        <span>apply_<wbr>immediately</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Specifies whether any broker modifications
-are applied immediately, or during the next maintenance window. Default is `false`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>arn</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the broker.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>auto_<wbr>minor_<wbr>version_<wbr>upgrade</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Enables automatic upgrades to new minor versions for brokers, as Apache releases the versions.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>broker_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the broker.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>configuration</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#brokerconfiguration">Dict[Broker<wbr>Configuration]</a></span>
-    </dt>
-    <dd>{{% md %}}Configuration of the broker. See below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>deployment_<wbr>mode</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The deployment mode of the broker. Supported: `SINGLE_INSTANCE` and `ACTIVE_STANDBY_MULTI_AZ`. Defaults to `SINGLE_INSTANCE`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>encryption_<wbr>options</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#brokerencryptionoptions">Dict[Broker<wbr>Encryption<wbr>Options]</a></span>
-    </dt>
-    <dd>{{% md %}}Configuration block containing encryption options. See below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>engine_<wbr>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The type of broker engine. Currently, Amazon MQ supports only `ActiveMQ`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>engine_<wbr>version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The version of the broker engine. See the [AmazonMQ Broker Engine docs](https://docs.aws.amazon.com/amazon-mq/latest/developer-guide/broker-engine.html) for supported versions.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>host_<wbr>instance_<wbr>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The broker's instance type. e.g. `mq.t2.micro` or `mq.m4.large`
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1422,69 +905,6 @@ are applied immediately, or during the next maintenance window. Default is `fals
 * `stomp+ssl://broker-id.mq.us-west-2.amazonaws.com:61614`
 * `mqtt+ssl://broker-id.mq.us-west-2.amazonaws.com:8883`
 * `wss://broker-id.mq.us-west-2.amazonaws.com:61619`
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>logs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#brokerlogs">Dict[Broker<wbr>Logs]</a></span>
-    </dt>
-    <dd>{{% md %}}Logging configuration of the broker. See below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>maintenance_<wbr>window_<wbr>start_<wbr>time</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#brokermaintenancewindowstarttime">Dict[Broker<wbr>Maintenance<wbr>Window<wbr>Start<wbr>Time]</a></span>
-    </dt>
-    <dd>{{% md %}}Maintenance window start time. See below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>publicly_<wbr>accessible</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Whether to enable connections from applications outside of the VPC that hosts the broker's subnets.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>security_<wbr>groups</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}The list of security group IDs assigned to the broker.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>subnet_<wbr>ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}The list of subnet IDs in which to launch the broker. A `SINGLE_INSTANCE` deployment requires one subnet. An `ACTIVE_STANDBY_MULTI_AZ` deployment requires two subnets.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>users</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#brokeruser">List[Broker<wbr>User]</a></span>
-    </dt>
-    <dd>{{% md %}}The list of all ActiveMQ usernames for the specified broker. See below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1626,7 +1046,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Apply<wbr>Immediately</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether any broker modifications
 are applied immediately, or during the next maintenance window. Default is `false`.
@@ -1636,7 +1056,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the broker.
 {{% /md %}}</dd>
@@ -1645,7 +1065,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
             title="Optional">
         <span>Auto<wbr>Minor<wbr>Version<wbr>Upgrade</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables automatic upgrades to new minor versions for brokers, as Apache releases the versions.
 {{% /md %}}</dd>
@@ -1654,7 +1074,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
             title="Optional">
         <span>Broker<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the broker.
 {{% /md %}}</dd>
@@ -1663,7 +1083,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
             title="Optional">
         <span>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#brokerconfiguration">Broker<wbr>Configuration<wbr>Args?</a></span>
+        <span class="property-type"><a href="#brokerconfiguration">Broker<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration of the broker. See below.
 {{% /md %}}</dd>
@@ -1672,7 +1092,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
             title="Optional">
         <span>Deployment<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The deployment mode of the broker. Supported: `SINGLE_INSTANCE` and `ACTIVE_STANDBY_MULTI_AZ`. Defaults to `SINGLE_INSTANCE`.
 {{% /md %}}</dd>
@@ -1681,7 +1101,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
             title="Optional">
         <span>Encryption<wbr>Options</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#brokerencryptionoptions">Broker<wbr>Encryption<wbr>Options<wbr>Args?</a></span>
+        <span class="property-type"><a href="#brokerencryptionoptions">Broker<wbr>Encryption<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block containing encryption options. See below.
 {{% /md %}}</dd>
@@ -1690,7 +1110,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
             title="Optional">
         <span>Engine<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of broker engine. Currently, Amazon MQ supports only `ActiveMQ`.
 {{% /md %}}</dd>
@@ -1699,7 +1119,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
             title="Optional">
         <span>Engine<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of the broker engine. See the [AmazonMQ Broker Engine docs](https://docs.aws.amazon.com/amazon-mq/latest/developer-guide/broker-engine.html) for supported versions.
 {{% /md %}}</dd>
@@ -1708,7 +1128,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
             title="Optional">
         <span>Host<wbr>Instance<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The broker's instance type. e.g. `mq.t2.micro` or `mq.m4.large`
 {{% /md %}}</dd>
@@ -1717,7 +1137,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
             title="Optional">
         <span>Instances</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#brokerinstance">List&lt;Broker<wbr>Instance<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#brokerinstance">List&lt;Broker<wbr>Instance<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of information about allocated brokers (both active & standby).
 * `instances.0.console_url` - The URL of the broker's [ActiveMQ Web Console](http://activemq.apache.org/web-console.html).
@@ -1734,7 +1154,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
             title="Optional">
         <span>Logs</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#brokerlogs">Broker<wbr>Logs<wbr>Args?</a></span>
+        <span class="property-type"><a href="#brokerlogs">Broker<wbr>Logs<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Logging configuration of the broker. See below.
 {{% /md %}}</dd>
@@ -1743,7 +1163,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
             title="Optional">
         <span>Maintenance<wbr>Window<wbr>Start<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#brokermaintenancewindowstarttime">Broker<wbr>Maintenance<wbr>Window<wbr>Start<wbr>Time<wbr>Args?</a></span>
+        <span class="property-type"><a href="#brokermaintenancewindowstarttime">Broker<wbr>Maintenance<wbr>Window<wbr>Start<wbr>Time<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Maintenance window start time. See below.
 {{% /md %}}</dd>
@@ -1752,7 +1172,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
             title="Optional">
         <span>Publicly<wbr>Accessible</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to enable connections from applications outside of the VPC that hosts the broker's subnets.
 {{% /md %}}</dd>
@@ -1761,7 +1181,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
             title="Optional">
         <span>Security<wbr>Groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The list of security group IDs assigned to the broker.
 {{% /md %}}</dd>
@@ -1770,7 +1190,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
             title="Optional">
         <span>Subnet<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The list of subnet IDs in which to launch the broker. A `SINGLE_INSTANCE` deployment requires one subnet. An `ACTIVE_STANDBY_MULTI_AZ` deployment requires two subnets.
 {{% /md %}}</dd>
@@ -1779,7 +1199,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1788,7 +1208,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
             title="Optional">
         <span>Users</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#brokeruser">List&lt;Broker<wbr>User<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#brokeruser">List&lt;Broker<wbr>User<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of all ActiveMQ usernames for the specified broker. See below.
 {{% /md %}}</dd>
@@ -1804,7 +1224,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
             title="Optional">
         <span>Apply<wbr>Immediately</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether any broker modifications
 are applied immediately, or during the next maintenance window. Default is `false`.
@@ -1814,7 +1234,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the broker.
 {{% /md %}}</dd>
@@ -1823,7 +1243,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
             title="Optional">
         <span>Auto<wbr>Minor<wbr>Version<wbr>Upgrade</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables automatic upgrades to new minor versions for brokers, as Apache releases the versions.
 {{% /md %}}</dd>
@@ -1832,7 +1252,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
             title="Optional">
         <span>Broker<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the broker.
 {{% /md %}}</dd>
@@ -1841,7 +1261,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
             title="Optional">
         <span>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#brokerconfiguration">*Broker<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#brokerconfiguration">Broker<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Configuration of the broker. See below.
 {{% /md %}}</dd>
@@ -1850,7 +1270,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
             title="Optional">
         <span>Deployment<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The deployment mode of the broker. Supported: `SINGLE_INSTANCE` and `ACTIVE_STANDBY_MULTI_AZ`. Defaults to `SINGLE_INSTANCE`.
 {{% /md %}}</dd>
@@ -1859,7 +1279,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
             title="Optional">
         <span>Encryption<wbr>Options</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#brokerencryptionoptions">*Broker<wbr>Encryption<wbr>Options</a></span>
+        <span class="property-type"><a href="#brokerencryptionoptions">Broker<wbr>Encryption<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}Configuration block containing encryption options. See below.
 {{% /md %}}</dd>
@@ -1868,7 +1288,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
             title="Optional">
         <span>Engine<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of broker engine. Currently, Amazon MQ supports only `ActiveMQ`.
 {{% /md %}}</dd>
@@ -1877,7 +1297,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
             title="Optional">
         <span>Engine<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of the broker engine. See the [AmazonMQ Broker Engine docs](https://docs.aws.amazon.com/amazon-mq/latest/developer-guide/broker-engine.html) for supported versions.
 {{% /md %}}</dd>
@@ -1886,7 +1306,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
             title="Optional">
         <span>Host<wbr>Instance<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The broker's instance type. e.g. `mq.t2.micro` or `mq.m4.large`
 {{% /md %}}</dd>
@@ -1912,7 +1332,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
             title="Optional">
         <span>Logs</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#brokerlogs">*Broker<wbr>Logs</a></span>
+        <span class="property-type"><a href="#brokerlogs">Broker<wbr>Logs</a></span>
     </dt>
     <dd>{{% md %}}Logging configuration of the broker. See below.
 {{% /md %}}</dd>
@@ -1921,7 +1341,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
             title="Optional">
         <span>Maintenance<wbr>Window<wbr>Start<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#brokermaintenancewindowstarttime">*Broker<wbr>Maintenance<wbr>Window<wbr>Start<wbr>Time</a></span>
+        <span class="property-type"><a href="#brokermaintenancewindowstarttime">Broker<wbr>Maintenance<wbr>Window<wbr>Start<wbr>Time</a></span>
     </dt>
     <dd>{{% md %}}Maintenance window start time. See below.
 {{% /md %}}</dd>
@@ -1930,7 +1350,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
             title="Optional">
         <span>Publicly<wbr>Accessible</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to enable connections from applications outside of the VPC that hosts the broker's subnets.
 {{% /md %}}</dd>
@@ -1982,7 +1402,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
             title="Optional">
         <span>apply<wbr>Immediately</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies whether any broker modifications
 are applied immediately, or during the next maintenance window. Default is `false`.
@@ -1992,7 +1412,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
             title="Optional">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the broker.
 {{% /md %}}</dd>
@@ -2001,7 +1421,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
             title="Optional">
         <span>auto<wbr>Minor<wbr>Version<wbr>Upgrade</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enables automatic upgrades to new minor versions for brokers, as Apache releases the versions.
 {{% /md %}}</dd>
@@ -2010,7 +1430,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
             title="Optional">
         <span>broker<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the broker.
 {{% /md %}}</dd>
@@ -2019,7 +1439,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
             title="Optional">
         <span>configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#brokerconfiguration">Broker<wbr>Configuration?</a></span>
+        <span class="property-type"><a href="#brokerconfiguration">Broker<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Configuration of the broker. See below.
 {{% /md %}}</dd>
@@ -2028,7 +1448,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
             title="Optional">
         <span>deployment<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The deployment mode of the broker. Supported: `SINGLE_INSTANCE` and `ACTIVE_STANDBY_MULTI_AZ`. Defaults to `SINGLE_INSTANCE`.
 {{% /md %}}</dd>
@@ -2037,7 +1457,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
             title="Optional">
         <span>encryption<wbr>Options</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#brokerencryptionoptions">Broker<wbr>Encryption<wbr>Options?</a></span>
+        <span class="property-type"><a href="#brokerencryptionoptions">Broker<wbr>Encryption<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}Configuration block containing encryption options. See below.
 {{% /md %}}</dd>
@@ -2046,7 +1466,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
             title="Optional">
         <span>engine<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of broker engine. Currently, Amazon MQ supports only `ActiveMQ`.
 {{% /md %}}</dd>
@@ -2055,7 +1475,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
             title="Optional">
         <span>engine<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of the broker engine. See the [AmazonMQ Broker Engine docs](https://docs.aws.amazon.com/amazon-mq/latest/developer-guide/broker-engine.html) for supported versions.
 {{% /md %}}</dd>
@@ -2064,7 +1484,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
             title="Optional">
         <span>host<wbr>Instance<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The broker's instance type. e.g. `mq.t2.micro` or `mq.m4.large`
 {{% /md %}}</dd>
@@ -2073,7 +1493,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
             title="Optional">
         <span>instances</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#brokerinstance">Broker<wbr>Instance[]?</a></span>
+        <span class="property-type"><a href="#brokerinstance">Broker<wbr>Instance[]</a></span>
     </dt>
     <dd>{{% md %}}A list of information about allocated brokers (both active & standby).
 * `instances.0.console_url` - The URL of the broker's [ActiveMQ Web Console](http://activemq.apache.org/web-console.html).
@@ -2090,7 +1510,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
             title="Optional">
         <span>logs</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#brokerlogs">Broker<wbr>Logs?</a></span>
+        <span class="property-type"><a href="#brokerlogs">Broker<wbr>Logs</a></span>
     </dt>
     <dd>{{% md %}}Logging configuration of the broker. See below.
 {{% /md %}}</dd>
@@ -2099,7 +1519,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
             title="Optional">
         <span>maintenance<wbr>Window<wbr>Start<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#brokermaintenancewindowstarttime">Broker<wbr>Maintenance<wbr>Window<wbr>Start<wbr>Time?</a></span>
+        <span class="property-type"><a href="#brokermaintenancewindowstarttime">Broker<wbr>Maintenance<wbr>Window<wbr>Start<wbr>Time</a></span>
     </dt>
     <dd>{{% md %}}Maintenance window start time. See below.
 {{% /md %}}</dd>
@@ -2108,7 +1528,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
             title="Optional">
         <span>publicly<wbr>Accessible</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to enable connections from applications outside of the VPC that hosts the broker's subnets.
 {{% /md %}}</dd>
@@ -2117,7 +1537,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
             title="Optional">
         <span>security<wbr>Groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The list of security group IDs assigned to the broker.
 {{% /md %}}</dd>
@@ -2126,7 +1546,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
             title="Optional">
         <span>subnet<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The list of subnet IDs in which to launch the broker. A `SINGLE_INSTANCE` deployment requires one subnet. An `ACTIVE_STANDBY_MULTI_AZ` deployment requires two subnets.
 {{% /md %}}</dd>
@@ -2135,7 +1555,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -2144,7 +1564,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
             title="Optional">
         <span>users</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#brokeruser">Broker<wbr>User[]?</a></span>
+        <span class="property-type"><a href="#brokeruser">Broker<wbr>User[]</a></span>
     </dt>
     <dd>{{% md %}}The list of all ActiveMQ usernames for the specified broker. See below.
 {{% /md %}}</dd>
@@ -2360,7 +1780,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
             title="Optional">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Configuration ID.
 {{% /md %}}</dd>
@@ -2369,7 +1789,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
             title="Optional">
         <span>Revision</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Revision of the Configuration.
 {{% /md %}}</dd>
@@ -2385,7 +1805,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
             title="Optional">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Configuration ID.
 {{% /md %}}</dd>
@@ -2394,7 +1814,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
             title="Optional">
         <span>Revision</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Revision of the Configuration.
 {{% /md %}}</dd>
@@ -2410,7 +1830,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
             title="Optional">
         <span>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Configuration ID.
 {{% /md %}}</dd>
@@ -2419,7 +1839,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
             title="Optional">
         <span>revision</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Revision of the Configuration.
 {{% /md %}}</dd>
@@ -2475,7 +1895,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
             title="Optional">
         <span>Kms<wbr>Key<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of Key Management Service (KMS) Customer Master Key (CMK) to use for encryption at rest. Requires setting `use_aws_owned_key` to `false`. To perform drift detection when AWS managed CMKs or customer managed CMKs are in use, this value must be configured.
 {{% /md %}}</dd>
@@ -2484,7 +1904,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
             title="Optional">
         <span>Use<wbr>Aws<wbr>Owned<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean to enable an AWS owned Key Management Service (KMS) Customer Master Key (CMK) that is not in your account. Defaults to `true`. Setting to `false` without configuring `kms_key_id` will create an AWS managed Customer Master Key (CMK) aliased to `aws/mq` in your account.
 {{% /md %}}</dd>
@@ -2500,7 +1920,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
             title="Optional">
         <span>Kms<wbr>Key<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of Key Management Service (KMS) Customer Master Key (CMK) to use for encryption at rest. Requires setting `use_aws_owned_key` to `false`. To perform drift detection when AWS managed CMKs or customer managed CMKs are in use, this value must be configured.
 {{% /md %}}</dd>
@@ -2509,7 +1929,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
             title="Optional">
         <span>Use<wbr>Aws<wbr>Owned<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean to enable an AWS owned Key Management Service (KMS) Customer Master Key (CMK) that is not in your account. Defaults to `true`. Setting to `false` without configuring `kms_key_id` will create an AWS managed Customer Master Key (CMK) aliased to `aws/mq` in your account.
 {{% /md %}}</dd>
@@ -2525,7 +1945,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
             title="Optional">
         <span>kms<wbr>Key<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of Key Management Service (KMS) Customer Master Key (CMK) to use for encryption at rest. Requires setting `use_aws_owned_key` to `false`. To perform drift detection when AWS managed CMKs or customer managed CMKs are in use, this value must be configured.
 {{% /md %}}</dd>
@@ -2534,7 +1954,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
             title="Optional">
         <span>use<wbr>Aws<wbr>Owned<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Boolean to enable an AWS owned Key Management Service (KMS) Customer Master Key (CMK) that is not in your account. Defaults to `true`. Setting to `false` without configuring `kms_key_id` will create an AWS managed Customer Master Key (CMK) aliased to `aws/mq` in your account.
 {{% /md %}}</dd>
@@ -2590,7 +2010,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
             title="Optional">
         <span>Console<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2598,7 +2018,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
             title="Optional">
         <span>Endpoints</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2606,7 +2026,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
             title="Optional">
         <span>Ip<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2621,7 +2041,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
             title="Optional">
         <span>Console<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2637,7 +2057,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
             title="Optional">
         <span>Ip<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2652,7 +2072,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
             title="Optional">
         <span>console<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2660,7 +2080,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
             title="Optional">
         <span>endpoints</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2668,7 +2088,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
             title="Optional">
         <span>ip<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2729,7 +2149,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
             title="Optional">
         <span>Audit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables audit logging. User management action made using JMX or the ActiveMQ Web Console is logged. Defaults to `false`.
 {{% /md %}}</dd>
@@ -2738,7 +2158,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
             title="Optional">
         <span>General</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables general logging via CloudWatch. Defaults to `false`.
 {{% /md %}}</dd>
@@ -2754,7 +2174,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
             title="Optional">
         <span>Audit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables audit logging. User management action made using JMX or the ActiveMQ Web Console is logged. Defaults to `false`.
 {{% /md %}}</dd>
@@ -2763,7 +2183,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
             title="Optional">
         <span>General</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables general logging via CloudWatch. Defaults to `false`.
 {{% /md %}}</dd>
@@ -2779,7 +2199,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
             title="Optional">
         <span>audit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enables audit logging. User management action made using JMX or the ActiveMQ Web Console is logged. Defaults to `false`.
 {{% /md %}}</dd>
@@ -2788,7 +2208,7 @@ are applied immediately, or during the next maintenance window. Default is `fals
             title="Optional">
         <span>general</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enables general logging via CloudWatch. Defaults to `false`.
 {{% /md %}}</dd>
@@ -2991,11 +2411,29 @@ are applied immediately, or during the next maintenance window. Default is `fals
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Password</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The password of the user. It must be 12 to 250 characters long, at least 4 unique characters, and must not contain commas.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Username</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The username of the user.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Console<wbr>Access</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to enable access to the [ActiveMQ Web Console](http://activemq.apache.org/web-console.html) for the user.
 {{% /md %}}</dd>
@@ -3004,10 +2442,17 @@ are applied immediately, or during the next maintenance window. Default is `fals
             title="Optional">
         <span>Groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The list of groups (20 maximum) to which the ActiveMQ user belongs.
 {{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
@@ -3027,18 +2472,11 @@ are applied immediately, or during the next maintenance window. Default is `fals
     <dd>{{% md %}}The username of the user.
 {{% /md %}}</dd>
 
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span>Console<wbr>Access</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to enable access to the [ActiveMQ Web Console](http://activemq.apache.org/web-console.html) for the user.
 {{% /md %}}</dd>
@@ -3052,48 +2490,12 @@ are applied immediately, or during the next maintenance window. Default is `fals
     <dd>{{% md %}}The list of groups (20 maximum) to which the ActiveMQ user belongs.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>Password</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The password of the user. It must be 12 to 250 characters long, at least 4 unique characters, and must not contain commas.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Username</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The username of the user.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>console<wbr>Access</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Whether to enable access to the [ActiveMQ Web Console](http://activemq.apache.org/web-console.html) for the user.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>groups</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}The list of groups (20 maximum) to which the ActiveMQ user belongs.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -3113,12 +2515,48 @@ are applied immediately, or during the next maintenance window. Default is `fals
     <dd>{{% md %}}The username of the user.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>console<wbr>Access</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether to enable access to the [ActiveMQ Web Console](http://activemq.apache.org/web-console.html) for the user.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>groups</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}The list of groups (20 maximum) to which the ActiveMQ user belongs.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>password</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The password of the user. It must be 12 to 250 characters long, at least 4 unique characters, and must not contain commas.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>username</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The username of the user.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3136,24 +2574,6 @@ are applied immediately, or during the next maintenance window. Default is `fals
         <span class="property-type">List[str]</span>
     </dt>
     <dd>{{% md %}}The list of groups (20 maximum) to which the ActiveMQ user belongs.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>password</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The password of the user. It must be 12 to 250 characters long, at least 4 unique characters, and must not contain commas.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>username</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The username of the user.
 {{% /md %}}</dd>
 
 </dl>

@@ -14,7 +14,7 @@ block_external_search_index: true
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/rancher2/#ClusterAlterGroup">ClusterAlterGroup</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/rancher2/#ClusterAlterGroupArgs">ClusterAlterGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/rancher2/#ClusterAlterGroup">ClusterAlterGroup</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/rancher2/#ClusterAlterGroupArgs">ClusterAlterGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -22,11 +22,11 @@ block_external_search_index: true
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewClusterAlterGroup<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/go/rancher2/?tab=doc#ClusterAlterGroupArgs">ClusterAlterGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/go/rancher2/?tab=doc#ClusterAlterGroup">ClusterAlterGroup</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewClusterAlterGroup<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/go/rancher2/?tab=doc#ClusterAlterGroupArgs">ClusterAlterGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/go/rancher2/?tab=doc#ClusterAlterGroup">ClusterAlterGroup</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2..ClusterAlterGroup.html">ClusterAlterGroup</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.ClusterAlterGroupArgs.html">ClusterAlterGroupArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.ClusterAlterGroup.html">ClusterAlterGroup</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.ClusterAlterGroupArgs.html">ClusterAlterGroupArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -118,15 +118,6 @@ block_external_search_index: true
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Annotations</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
-    </dt>
-    <dd>{{% md %}}The cluster alert group annotations (map)
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Cluster<wbr>Id</span>
@@ -138,9 +129,18 @@ block_external_search_index: true
 
     <dt class="property-optional"
             title="Optional">
+        <span>Annotations</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+    </dt>
+    <dd>{{% md %}}The cluster alert group annotations (map)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The cluster alert group description (string)
 {{% /md %}}</dd>
@@ -149,7 +149,7 @@ block_external_search_index: true
             title="Optional">
         <span>Group<wbr>Interval<wbr>Seconds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The cluster alert group interval seconds. Default: `180` (int)
 {{% /md %}}</dd>
@@ -158,7 +158,7 @@ block_external_search_index: true
             title="Optional">
         <span>Group<wbr>Wait<wbr>Seconds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The cluster alert group wait seconds. Default: `180` (int)
 {{% /md %}}</dd>
@@ -167,7 +167,7 @@ block_external_search_index: true
             title="Optional">
         <span>Labels</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}The cluster alert group labels (map)
 {{% /md %}}</dd>
@@ -176,7 +176,7 @@ block_external_search_index: true
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The cluster alert group name (string)
 {{% /md %}}</dd>
@@ -185,7 +185,7 @@ block_external_search_index: true
             title="Optional">
         <span>Recipients</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteraltergrouprecipient">List&lt;Cluster<wbr>Alter<wbr>Group<wbr>Recipient<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#clusteraltergrouprecipient">List&lt;Cluster<wbr>Alter<wbr>Group<wbr>Recipient<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The cluster alert group recipients (list)
 {{% /md %}}</dd>
@@ -194,7 +194,7 @@ block_external_search_index: true
             title="Optional">
         <span>Repeat<wbr>Interval<wbr>Seconds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The cluster alert group wait seconds. Default: `3600` (int)
 {{% /md %}}</dd>
@@ -206,15 +206,6 @@ block_external_search_index: true
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Annotations</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
-    </dt>
-    <dd>{{% md %}}The cluster alert group annotations (map)
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Cluster<wbr>Id</span>
@@ -226,9 +217,18 @@ block_external_search_index: true
 
     <dt class="property-optional"
             title="Optional">
+        <span>Annotations</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}The cluster alert group annotations (map)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The cluster alert group description (string)
 {{% /md %}}</dd>
@@ -237,7 +237,7 @@ block_external_search_index: true
             title="Optional">
         <span>Group<wbr>Interval<wbr>Seconds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The cluster alert group interval seconds. Default: `180` (int)
 {{% /md %}}</dd>
@@ -246,7 +246,7 @@ block_external_search_index: true
             title="Optional">
         <span>Group<wbr>Wait<wbr>Seconds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The cluster alert group wait seconds. Default: `180` (int)
 {{% /md %}}</dd>
@@ -264,7 +264,7 @@ block_external_search_index: true
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The cluster alert group name (string)
 {{% /md %}}</dd>
@@ -282,7 +282,7 @@ block_external_search_index: true
             title="Optional">
         <span>Repeat<wbr>Interval<wbr>Seconds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The cluster alert group wait seconds. Default: `3600` (int)
 {{% /md %}}</dd>
@@ -293,15 +293,6 @@ block_external_search_index: true
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>annotations</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
-    </dt>
-    <dd>{{% md %}}The cluster alert group annotations (map)
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -314,9 +305,18 @@ block_external_search_index: true
 
     <dt class="property-optional"
             title="Optional">
+        <span>annotations</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}</span>
+    </dt>
+    <dd>{{% md %}}The cluster alert group annotations (map)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The cluster alert group description (string)
 {{% /md %}}</dd>
@@ -325,7 +325,7 @@ block_external_search_index: true
             title="Optional">
         <span>group<wbr>Interval<wbr>Seconds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The cluster alert group interval seconds. Default: `180` (int)
 {{% /md %}}</dd>
@@ -334,7 +334,7 @@ block_external_search_index: true
             title="Optional">
         <span>group<wbr>Wait<wbr>Seconds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The cluster alert group wait seconds. Default: `180` (int)
 {{% /md %}}</dd>
@@ -343,7 +343,7 @@ block_external_search_index: true
             title="Optional">
         <span>labels</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}The cluster alert group labels (map)
 {{% /md %}}</dd>
@@ -352,7 +352,7 @@ block_external_search_index: true
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The cluster alert group name (string)
 {{% /md %}}</dd>
@@ -361,7 +361,7 @@ block_external_search_index: true
             title="Optional">
         <span>recipients</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteraltergrouprecipient">Cluster<wbr>Alter<wbr>Group<wbr>Recipient[]?</a></span>
+        <span class="property-type"><a href="#clusteraltergrouprecipient">Cluster<wbr>Alter<wbr>Group<wbr>Recipient[]</a></span>
     </dt>
     <dd>{{% md %}}The cluster alert group recipients (list)
 {{% /md %}}</dd>
@@ -370,7 +370,7 @@ block_external_search_index: true
             title="Optional">
         <span>repeat<wbr>Interval<wbr>Seconds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The cluster alert group wait seconds. Default: `3600` (int)
 {{% /md %}}</dd>
@@ -382,15 +382,6 @@ block_external_search_index: true
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>annotations</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
-    </dt>
-    <dd>{{% md %}}The cluster alert group annotations (map)
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>cluster_<wbr>id</span>
@@ -398,6 +389,15 @@ block_external_search_index: true
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The cluster id where create cluster alert group (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>annotations</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}The cluster alert group annotations (map)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -467,368 +467,6 @@ block_external_search_index: true
 {{% /choosable %}}
 
 
-
-
-
-
-
-## ClusterAlterGroup Output Properties
-
-The following output properties are available:
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Annotations</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object></span>
-    </dt>
-    <dd>{{% md %}}The cluster alert group annotations (map)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Cluster<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The cluster id where create cluster alert group (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The cluster alert group description (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Group<wbr>Interval<wbr>Seconds</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}The cluster alert group interval seconds. Default: `180` (int)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Group<wbr>Wait<wbr>Seconds</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}The cluster alert group wait seconds. Default: `180` (int)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Labels</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object></span>
-    </dt>
-    <dd>{{% md %}}The cluster alert group labels (map)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The cluster alert group name (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Recipients</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteraltergrouprecipient">List&lt;Cluster<wbr>Alter<wbr>Group<wbr>Recipient&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}The cluster alert group recipients (list)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Repeat<wbr>Interval<wbr>Seconds</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}The cluster alert group wait seconds. Default: `3600` (int)
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Annotations</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
-    </dt>
-    <dd>{{% md %}}The cluster alert group annotations (map)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Cluster<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The cluster id where create cluster alert group (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The cluster alert group description (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Group<wbr>Interval<wbr>Seconds</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}The cluster alert group interval seconds. Default: `180` (int)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Group<wbr>Wait<wbr>Seconds</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}The cluster alert group wait seconds. Default: `180` (int)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Labels</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
-    </dt>
-    <dd>{{% md %}}The cluster alert group labels (map)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The cluster alert group name (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Recipients</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteraltergrouprecipient">[]Cluster<wbr>Alter<wbr>Group<wbr>Recipient</a></span>
-    </dt>
-    <dd>{{% md %}}The cluster alert group recipients (list)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Repeat<wbr>Interval<wbr>Seconds</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}The cluster alert group wait seconds. Default: `3600` (int)
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>annotations</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
-    </dt>
-    <dd>{{% md %}}The cluster alert group annotations (map)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>cluster<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The cluster id where create cluster alert group (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The cluster alert group description (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>group<wbr>Interval<wbr>Seconds</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}The cluster alert group interval seconds. Default: `180` (int)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>group<wbr>Wait<wbr>Seconds</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}The cluster alert group wait seconds. Default: `180` (int)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>labels</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
-    </dt>
-    <dd>{{% md %}}The cluster alert group labels (map)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The cluster alert group name (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>recipients</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteraltergrouprecipient">Cluster<wbr>Alter<wbr>Group<wbr>Recipient[]?</a></span>
-    </dt>
-    <dd>{{% md %}}The cluster alert group recipients (list)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>repeat<wbr>Interval<wbr>Seconds</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}The cluster alert group wait seconds. Default: `3600` (int)
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>annotations</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
-    </dt>
-    <dd>{{% md %}}The cluster alert group annotations (map)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>cluster_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The cluster id where create cluster alert group (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The cluster alert group description (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>group_<wbr>interval_<wbr>seconds</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The cluster alert group interval seconds. Default: `180` (int)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>group_<wbr>wait_<wbr>seconds</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The cluster alert group wait seconds. Default: `180` (int)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>labels</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
-    </dt>
-    <dd>{{% md %}}The cluster alert group labels (map)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The cluster alert group name (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>recipients</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteraltergrouprecipient">List[Cluster<wbr>Alter<wbr>Group<wbr>Recipient]</a></span>
-    </dt>
-    <dd>{{% md %}}The cluster alert group recipients (list)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>repeat_<wbr>interval_<wbr>seconds</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The cluster alert group wait seconds. Default: `3600` (int)
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
 
 
 
@@ -856,7 +494,7 @@ Get an existing ClusterAlterGroup resource's state with the given name, ID, and 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2..ClusterAlterGroup.html">ClusterAlterGroup</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2..ClusterAlterGroupState.html">ClusterAlterGroupState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.ClusterAlterGroup.html">ClusterAlterGroup</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2..ClusterAlterGroupState.html">ClusterAlterGroupState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -966,7 +604,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Annotations</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}The cluster alert group annotations (map)
 {{% /md %}}</dd>
@@ -975,7 +613,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Cluster<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The cluster id where create cluster alert group (string)
 {{% /md %}}</dd>
@@ -984,7 +622,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The cluster alert group description (string)
 {{% /md %}}</dd>
@@ -993,7 +631,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Group<wbr>Interval<wbr>Seconds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The cluster alert group interval seconds. Default: `180` (int)
 {{% /md %}}</dd>
@@ -1002,7 +640,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Group<wbr>Wait<wbr>Seconds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The cluster alert group wait seconds. Default: `180` (int)
 {{% /md %}}</dd>
@@ -1011,7 +649,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Labels</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}The cluster alert group labels (map)
 {{% /md %}}</dd>
@@ -1020,7 +658,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The cluster alert group name (string)
 {{% /md %}}</dd>
@@ -1029,7 +667,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Recipients</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteraltergrouprecipient">List&lt;Cluster<wbr>Alter<wbr>Group<wbr>Recipient<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#clusteraltergrouprecipient">List&lt;Cluster<wbr>Alter<wbr>Group<wbr>Recipient<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The cluster alert group recipients (list)
 {{% /md %}}</dd>
@@ -1038,7 +676,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Repeat<wbr>Interval<wbr>Seconds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The cluster alert group wait seconds. Default: `3600` (int)
 {{% /md %}}</dd>
@@ -1063,7 +701,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Cluster<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The cluster id where create cluster alert group (string)
 {{% /md %}}</dd>
@@ -1072,7 +710,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The cluster alert group description (string)
 {{% /md %}}</dd>
@@ -1081,7 +719,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Group<wbr>Interval<wbr>Seconds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The cluster alert group interval seconds. Default: `180` (int)
 {{% /md %}}</dd>
@@ -1090,7 +728,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Group<wbr>Wait<wbr>Seconds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The cluster alert group wait seconds. Default: `180` (int)
 {{% /md %}}</dd>
@@ -1108,7 +746,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The cluster alert group name (string)
 {{% /md %}}</dd>
@@ -1126,7 +764,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Repeat<wbr>Interval<wbr>Seconds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The cluster alert group wait seconds. Default: `3600` (int)
 {{% /md %}}</dd>
@@ -1142,7 +780,7 @@ The following state arguments are supported:
             title="Optional">
         <span>annotations</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}The cluster alert group annotations (map)
 {{% /md %}}</dd>
@@ -1151,7 +789,7 @@ The following state arguments are supported:
             title="Optional">
         <span>cluster<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The cluster id where create cluster alert group (string)
 {{% /md %}}</dd>
@@ -1160,7 +798,7 @@ The following state arguments are supported:
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The cluster alert group description (string)
 {{% /md %}}</dd>
@@ -1169,7 +807,7 @@ The following state arguments are supported:
             title="Optional">
         <span>group<wbr>Interval<wbr>Seconds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The cluster alert group interval seconds. Default: `180` (int)
 {{% /md %}}</dd>
@@ -1178,7 +816,7 @@ The following state arguments are supported:
             title="Optional">
         <span>group<wbr>Wait<wbr>Seconds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The cluster alert group wait seconds. Default: `180` (int)
 {{% /md %}}</dd>
@@ -1187,7 +825,7 @@ The following state arguments are supported:
             title="Optional">
         <span>labels</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}The cluster alert group labels (map)
 {{% /md %}}</dd>
@@ -1196,7 +834,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The cluster alert group name (string)
 {{% /md %}}</dd>
@@ -1205,7 +843,7 @@ The following state arguments are supported:
             title="Optional">
         <span>recipients</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusteraltergrouprecipient">Cluster<wbr>Alter<wbr>Group<wbr>Recipient[]?</a></span>
+        <span class="property-type"><a href="#clusteraltergrouprecipient">Cluster<wbr>Alter<wbr>Group<wbr>Recipient[]</a></span>
     </dt>
     <dd>{{% md %}}The cluster alert group recipients (list)
 {{% /md %}}</dd>
@@ -1214,7 +852,7 @@ The following state arguments are supported:
             title="Optional">
         <span>repeat<wbr>Interval<wbr>Seconds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The cluster alert group wait seconds. Default: `3600` (int)
 {{% /md %}}</dd>
@@ -1336,15 +974,6 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Default<wbr>Recipient</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Use notifier default recipient, overriding `recipient` argument if set.  Default: `false` (bool)
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Notifier<wbr>Id</span>
@@ -1356,9 +985,18 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>Default<wbr>Recipient</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Use notifier default recipient, overriding `recipient` argument if set.  Default: `false` (bool)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Notifier<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Recipient notifier ID. Supported values : `"pagerduty" | "slack" | "email" | "webhook" | "wechat"` (string)
 {{% /md %}}</dd>
@@ -1367,7 +1005,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Recipient</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Recipient (string)
 {{% /md %}}</dd>
@@ -1379,15 +1017,6 @@ The following state arguments are supported:
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Default<wbr>Recipient</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Use notifier default recipient, overriding `recipient` argument if set.  Default: `false` (bool)
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Notifier<wbr>Id</span>
@@ -1399,9 +1028,18 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>Default<wbr>Recipient</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Use notifier default recipient, overriding `recipient` argument if set.  Default: `false` (bool)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Notifier<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Recipient notifier ID. Supported values : `"pagerduty" | "slack" | "email" | "webhook" | "wechat"` (string)
 {{% /md %}}</dd>
@@ -1410,7 +1048,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Recipient</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Recipient (string)
 {{% /md %}}</dd>
@@ -1421,15 +1059,6 @@ The following state arguments are supported:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>default<wbr>Recipient</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Use notifier default recipient, overriding `recipient` argument if set.  Default: `false` (bool)
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1442,9 +1071,18 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>default<wbr>Recipient</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Use notifier default recipient, overriding `recipient` argument if set.  Default: `false` (bool)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>notifier<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Recipient notifier ID. Supported values : `"pagerduty" | "slack" | "email" | "webhook" | "wechat"` (string)
 {{% /md %}}</dd>
@@ -1453,7 +1091,7 @@ The following state arguments are supported:
             title="Optional">
         <span>recipient</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Recipient (string)
 {{% /md %}}</dd>
@@ -1465,15 +1103,6 @@ The following state arguments are supported:
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>default<wbr>Recipient</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Use notifier default recipient, overriding `recipient` argument if set.  Default: `false` (bool)
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>notifier<wbr>Id</span>
@@ -1481,6 +1110,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Recipient notifier ID (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>default<wbr>Recipient</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Use notifier default recipient, overriding `recipient` argument if set.  Default: `false` (bool)
 {{% /md %}}</dd>
 
     <dt class="property-optional"

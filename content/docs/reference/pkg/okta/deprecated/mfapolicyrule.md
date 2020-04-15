@@ -14,7 +14,7 @@ block_external_search_index: true
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/okta/deprecated/#MfaPolicyRule">MfaPolicyRule</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/okta/deprecated/#MfaPolicyRuleArgs">MfaPolicyRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/okta/deprecated/#MfaPolicyRule">MfaPolicyRule</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/okta/deprecated/#MfaPolicyRuleArgs">MfaPolicyRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -22,7 +22,7 @@ block_external_search_index: true
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewMfaPolicyRule<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/go/okta/deprecated?tab=doc#MfaPolicyRuleArgs">MfaPolicyRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/go/okta/deprecated?tab=doc#MfaPolicyRule">MfaPolicyRule</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewMfaPolicyRule<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/go/okta/deprecated?tab=doc#MfaPolicyRuleArgs">MfaPolicyRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/go/okta/deprecated?tab=doc#MfaPolicyRule">MfaPolicyRule</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -118,51 +118,6 @@ block_external_search_index: true
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Enroll</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Should the user be enrolled the first time they LOGIN, the next time they are CHALLENGEd, or NEVER?
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Policy Rule Name
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Network<wbr>Connection</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Network selection mode: ANYWHERE, ZONE, ON_NETWORK, or OFF_NETWORK.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Network<wbr>Excludes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}The zones to exclude
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Network<wbr>Includes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}The zones to include
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Policyid</span>
@@ -174,9 +129,54 @@ block_external_search_index: true
 
     <dt class="property-optional"
             title="Optional">
+        <span>Enroll</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Should the user be enrolled the first time they LOGIN, the next time they are CHALLENGEd, or NEVER?
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Policy Rule Name
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Network<wbr>Connection</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Network selection mode: ANYWHERE, ZONE, ON_NETWORK, or OFF_NETWORK.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Network<wbr>Excludes</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The zones to exclude
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Network<wbr>Includes</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The zones to include
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Priority</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Policy Rule Priority, this attribute can be set to a valid priority. To avoid endless diff situation we error if an
 invalid priority is provided. API defaults it to the last/lowest if not there.
@@ -186,7 +186,7 @@ invalid priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy Rule Status: ACTIVE or INACTIVE.
 {{% /md %}}</dd>
@@ -195,7 +195,7 @@ invalid priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>Users<wbr>Excludeds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Set of User IDs to Exclude
 {{% /md %}}</dd>
@@ -207,11 +207,20 @@ invalid priority is provided. API defaults it to the last/lowest if not there.
 {{% choosable language go %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Policyid</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Policy ID of the Rule
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Enroll</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Should the user be enrolled the first time they LOGIN, the next time they are CHALLENGEd, or NEVER?
 {{% /md %}}</dd>
@@ -220,7 +229,7 @@ invalid priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy Rule Name
 {{% /md %}}</dd>
@@ -229,7 +238,7 @@ invalid priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>Network<wbr>Connection</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Network selection mode: ANYWHERE, ZONE, ON_NETWORK, or OFF_NETWORK.
 {{% /md %}}</dd>
@@ -252,20 +261,11 @@ invalid priority is provided. API defaults it to the last/lowest if not there.
     <dd>{{% md %}}The zones to include
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>Policyid</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Policy ID of the Rule
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>Priority</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Policy Rule Priority, this attribute can be set to a valid priority. To avoid endless diff situation we error if an
 invalid priority is provided. API defaults it to the last/lowest if not there.
@@ -275,7 +275,7 @@ invalid priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy Rule Status: ACTIVE or INACTIVE.
 {{% /md %}}</dd>
@@ -296,51 +296,6 @@ invalid priority is provided. API defaults it to the last/lowest if not there.
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>enroll</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Should the user be enrolled the first time they LOGIN, the next time they are CHALLENGEd, or NEVER?
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Policy Rule Name
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>network<wbr>Connection</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Network selection mode: ANYWHERE, ZONE, ON_NETWORK, or OFF_NETWORK.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>network<wbr>Excludes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}The zones to exclude
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>network<wbr>Includes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}The zones to include
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>policyid</span>
@@ -352,9 +307,54 @@ invalid priority is provided. API defaults it to the last/lowest if not there.
 
     <dt class="property-optional"
             title="Optional">
+        <span>enroll</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Should the user be enrolled the first time they LOGIN, the next time they are CHALLENGEd, or NEVER?
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Policy Rule Name
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>network<wbr>Connection</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Network selection mode: ANYWHERE, ZONE, ON_NETWORK, or OFF_NETWORK.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>network<wbr>Excludes</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}The zones to exclude
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>network<wbr>Includes</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}The zones to include
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>priority</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Policy Rule Priority, this attribute can be set to a valid priority. To avoid endless diff situation we error if an
 invalid priority is provided. API defaults it to the last/lowest if not there.
@@ -364,7 +364,7 @@ invalid priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy Rule Status: ACTIVE or INACTIVE.
 {{% /md %}}</dd>
@@ -373,7 +373,7 @@ invalid priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>users<wbr>Excludeds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Set of User IDs to Exclude
 {{% /md %}}</dd>
@@ -384,6 +384,15 @@ invalid priority is provided. API defaults it to the last/lowest if not there.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>policyid</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Policy ID of the Rule
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -430,15 +439,6 @@ invalid priority is provided. API defaults it to the last/lowest if not there.
     <dd>{{% md %}}The zones to include
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>policyid</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Policy ID of the Rule
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>priority</span>
@@ -471,372 +471,6 @@ invalid priority is provided. API defaults it to the last/lowest if not there.
 {{% /choosable %}}
 
 
-
-
-
-
-
-## MfaPolicyRule Output Properties
-
-The following output properties are available:
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Enroll</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Should the user be enrolled the first time they LOGIN, the next time they are CHALLENGEd, or NEVER?
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Policy Rule Name
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Network<wbr>Connection</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Network selection mode: ANYWHERE, ZONE, ON_NETWORK, or OFF_NETWORK.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Network<wbr>Excludes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}The zones to exclude
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Network<wbr>Includes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}The zones to include
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Policyid</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Policy ID of the Rule
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Priority</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}Policy Rule Priority, this attribute can be set to a valid priority. To avoid endless diff situation we error if an
-invalid priority is provided. API defaults it to the last/lowest if not there.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Status</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Policy Rule Status: ACTIVE or INACTIVE.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Users<wbr>Excludeds</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}Set of User IDs to Exclude
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Enroll</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Should the user be enrolled the first time they LOGIN, the next time they are CHALLENGEd, or NEVER?
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Policy Rule Name
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Network<wbr>Connection</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Network selection mode: ANYWHERE, ZONE, ON_NETWORK, or OFF_NETWORK.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Network<wbr>Excludes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}The zones to exclude
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Network<wbr>Includes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}The zones to include
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Policyid</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Policy ID of the Rule
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Priority</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}Policy Rule Priority, this attribute can be set to a valid priority. To avoid endless diff situation we error if an
-invalid priority is provided. API defaults it to the last/lowest if not there.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Status</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Policy Rule Status: ACTIVE or INACTIVE.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Users<wbr>Excludeds</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}Set of User IDs to Exclude
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>enroll</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Should the user be enrolled the first time they LOGIN, the next time they are CHALLENGEd, or NEVER?
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Policy Rule Name
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>network<wbr>Connection</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Network selection mode: ANYWHERE, ZONE, ON_NETWORK, or OFF_NETWORK.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>network<wbr>Excludes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}The zones to exclude
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>network<wbr>Includes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}The zones to include
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>policyid</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Policy ID of the Rule
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>priority</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}Policy Rule Priority, this attribute can be set to a valid priority. To avoid endless diff situation we error if an
-invalid priority is provided. API defaults it to the last/lowest if not there.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>status</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Policy Rule Status: ACTIVE or INACTIVE.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>users<wbr>Excludeds</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}Set of User IDs to Exclude
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>enroll</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Should the user be enrolled the first time they LOGIN, the next time they are CHALLENGEd, or NEVER?
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Policy Rule Name
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>network_<wbr>connection</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Network selection mode: ANYWHERE, ZONE, ON_NETWORK, or OFF_NETWORK.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>network_<wbr>excludes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}The zones to exclude
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>network_<wbr>includes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}The zones to include
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>policyid</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Policy ID of the Rule
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>priority</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}Policy Rule Priority, this attribute can be set to a valid priority. To avoid endless diff situation we error if an
-invalid priority is provided. API defaults it to the last/lowest if not there.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>status</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Policy Rule Status: ACTIVE or INACTIVE.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>users_<wbr>excludeds</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}Set of User IDs to Exclude
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
 
 
 
@@ -974,7 +608,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Enroll</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Should the user be enrolled the first time they LOGIN, the next time they are CHALLENGEd, or NEVER?
 {{% /md %}}</dd>
@@ -983,7 +617,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy Rule Name
 {{% /md %}}</dd>
@@ -992,7 +626,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Network<wbr>Connection</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Network selection mode: ANYWHERE, ZONE, ON_NETWORK, or OFF_NETWORK.
 {{% /md %}}</dd>
@@ -1001,7 +635,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Network<wbr>Excludes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The zones to exclude
 {{% /md %}}</dd>
@@ -1010,7 +644,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Network<wbr>Includes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The zones to include
 {{% /md %}}</dd>
@@ -1019,7 +653,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Policyid</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy ID of the Rule
 {{% /md %}}</dd>
@@ -1028,7 +662,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Priority</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Policy Rule Priority, this attribute can be set to a valid priority. To avoid endless diff situation we error if an
 invalid priority is provided. API defaults it to the last/lowest if not there.
@@ -1038,7 +672,7 @@ invalid priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy Rule Status: ACTIVE or INACTIVE.
 {{% /md %}}</dd>
@@ -1047,7 +681,7 @@ invalid priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>Users<wbr>Excludeds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Set of User IDs to Exclude
 {{% /md %}}</dd>
@@ -1063,7 +697,7 @@ invalid priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>Enroll</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Should the user be enrolled the first time they LOGIN, the next time they are CHALLENGEd, or NEVER?
 {{% /md %}}</dd>
@@ -1072,7 +706,7 @@ invalid priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy Rule Name
 {{% /md %}}</dd>
@@ -1081,7 +715,7 @@ invalid priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>Network<wbr>Connection</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Network selection mode: ANYWHERE, ZONE, ON_NETWORK, or OFF_NETWORK.
 {{% /md %}}</dd>
@@ -1108,7 +742,7 @@ invalid priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>Policyid</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy ID of the Rule
 {{% /md %}}</dd>
@@ -1117,7 +751,7 @@ invalid priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>Priority</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Policy Rule Priority, this attribute can be set to a valid priority. To avoid endless diff situation we error if an
 invalid priority is provided. API defaults it to the last/lowest if not there.
@@ -1127,7 +761,7 @@ invalid priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy Rule Status: ACTIVE or INACTIVE.
 {{% /md %}}</dd>
@@ -1152,7 +786,7 @@ invalid priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>enroll</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Should the user be enrolled the first time they LOGIN, the next time they are CHALLENGEd, or NEVER?
 {{% /md %}}</dd>
@@ -1161,7 +795,7 @@ invalid priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy Rule Name
 {{% /md %}}</dd>
@@ -1170,7 +804,7 @@ invalid priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>network<wbr>Connection</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Network selection mode: ANYWHERE, ZONE, ON_NETWORK, or OFF_NETWORK.
 {{% /md %}}</dd>
@@ -1179,7 +813,7 @@ invalid priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>network<wbr>Excludes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The zones to exclude
 {{% /md %}}</dd>
@@ -1188,7 +822,7 @@ invalid priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>network<wbr>Includes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The zones to include
 {{% /md %}}</dd>
@@ -1197,7 +831,7 @@ invalid priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>policyid</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy ID of the Rule
 {{% /md %}}</dd>
@@ -1206,7 +840,7 @@ invalid priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>priority</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Policy Rule Priority, this attribute can be set to a valid priority. To avoid endless diff situation we error if an
 invalid priority is provided. API defaults it to the last/lowest if not there.
@@ -1216,7 +850,7 @@ invalid priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy Rule Status: ACTIVE or INACTIVE.
 {{% /md %}}</dd>
@@ -1225,7 +859,7 @@ invalid priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>users<wbr>Excludeds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Set of User IDs to Exclude
 {{% /md %}}</dd>

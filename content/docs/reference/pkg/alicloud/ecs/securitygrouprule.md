@@ -14,7 +14,7 @@ block_external_search_index: true
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/ecs/#SecurityGroupRule">SecurityGroupRule</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/ecs/#SecurityGroupRuleArgs">SecurityGroupRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/ecs/#SecurityGroupRule">SecurityGroupRule</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/ecs/#SecurityGroupRuleArgs">SecurityGroupRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -22,11 +22,11 @@ block_external_search_index: true
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewSecurityGroupRule<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/ecs?tab=doc#SecurityGroupRuleArgs">SecurityGroupRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/ecs?tab=doc#SecurityGroupRule">SecurityGroupRule</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewSecurityGroupRule<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/ecs?tab=doc#SecurityGroupRuleArgs">SecurityGroupRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/ecs?tab=doc#SecurityGroupRule">SecurityGroupRule</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.Ecs.SecurityGroupRule.html">SecurityGroupRule</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.Ecs.SecurityGroupRuleArgs.html">SecurityGroupRuleArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.Ecs.SecurityGroupRule.html">SecurityGroupRule</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.AliCloud.Ecs.SecurityGroupRuleArgs.html">SecurityGroupRuleArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -118,24 +118,6 @@ block_external_search_index: true
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Cidr<wbr>Ip</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The target IP address range. The default value is 0.0.0.0/0 (which means no restriction will be applied). Other supported formats include 10.159.6.18/12. Only IPv4 is supported.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The description of the security group rule. The description can be up to 1 to 512 characters in length. Defaults to null.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Ip<wbr>Protocol</span>
@@ -143,43 +125,6 @@ block_external_search_index: true
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The protocol. Can be `tcp`, `udp`, `icmp`, `gre` or `all`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Nic<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Network type, can be either `internet` or `intranet`, the default value is `internet`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Policy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Authorization policy, can be either `accept` or `drop`, the default value is `accept`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Port<wbr>Range</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The range of port numbers relevant to the IP protocol. Default to "-1/-1". When the protocol is tcp or udp, each side port number range from 1 to 65535 and '-1/-1' will be invalid.
-For example, `1/200` means that the range of the port numbers is 1-200. Other protocols' 'port_range' can only be "-1/-1", and other values will be invalid.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Priority</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}Authorization policy priority, with parameter values: `1-100`, default value: 1.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -191,11 +136,75 @@ For example, `1/200` means that the range of the port numbers is 1-200. Other pr
     <dd>{{% md %}}The security group to apply this rule to.
 {{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of rule being created. Valid options are `ingress` (inbound) or `egress` (outbound).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Cidr<wbr>Ip</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The target IP address range. The default value is 0.0.0.0/0 (which means no restriction will be applied). Other supported formats include 10.159.6.18/12. Only IPv4 is supported.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The description of the security group rule. The description can be up to 1 to 512 characters in length. Defaults to null.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Nic<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Network type, can be either `internet` or `intranet`, the default value is `internet`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Policy</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Authorization policy, can be either `accept` or `drop`, the default value is `accept`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Port<wbr>Range</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The range of port numbers relevant to the IP protocol. Default to "-1/-1". When the protocol is tcp or udp, each side port number range from 1 to 65535 and '-1/-1' will be invalid.
+For example, `1/200` means that the range of the port numbers is 1-200. Other protocols' 'port_range' can only be "-1/-1", and other values will be invalid.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Priority</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Authorization policy priority, with parameter values: `1-100`, default value: 1.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Source<wbr>Group<wbr>Owner<wbr>Account</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Alibaba Cloud user account Id of the target security group when security groups are authorized across accounts.  This parameter is invalid if `cidr_ip` has already been set.
 {{% /md %}}</dd>
@@ -204,18 +213,9 @@ For example, `1/200` means that the range of the port numbers is 1-200. Other pr
             title="Optional">
         <span>Source<wbr>Security<wbr>Group<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The target security group ID within the same region. If this field is specified, the `nic_type` can only select `intranet`.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Type</span>
-        <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of rule being created. Valid options are `ingress` (inbound) or `egress` (outbound).
+    <dd>{{% md %}}The target security group ID within the same region. If this field is specified, the `nic_type` can only select `intranet`.
 {{% /md %}}</dd>
 
 </dl>
@@ -225,24 +225,6 @@ For example, `1/200` means that the range of the port numbers is 1-200. Other pr
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Cidr<wbr>Ip</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The target IP address range. The default value is 0.0.0.0/0 (which means no restriction will be applied). Other supported formats include 10.159.6.18/12. Only IPv4 is supported.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The description of the security group rule. The description can be up to 1 to 512 characters in length. Defaults to null.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Ip<wbr>Protocol</span>
@@ -250,43 +232,6 @@ For example, `1/200` means that the range of the port numbers is 1-200. Other pr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The protocol. Can be `tcp`, `udp`, `icmp`, `gre` or `all`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Nic<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Network type, can be either `internet` or `intranet`, the default value is `internet`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Policy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Authorization policy, can be either `accept` or `drop`, the default value is `accept`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Port<wbr>Range</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The range of port numbers relevant to the IP protocol. Default to "-1/-1". When the protocol is tcp or udp, each side port number range from 1 to 65535 and '-1/-1' will be invalid.
-For example, `1/200` means that the range of the port numbers is 1-200. Other protocols' 'port_range' can only be "-1/-1", and other values will be invalid.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Priority</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}Authorization policy priority, with parameter values: `1-100`, default value: 1.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -298,24 +243,6 @@ For example, `1/200` means that the range of the port numbers is 1-200. Other pr
     <dd>{{% md %}}The security group to apply this rule to.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Source<wbr>Group<wbr>Owner<wbr>Account</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The Alibaba Cloud user account Id of the target security group when security groups are authorized across accounts.  This parameter is invalid if `cidr_ip` has already been set.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Source<wbr>Security<wbr>Group<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The target security group ID within the same region. If this field is specified, the `nic_type` can only select `intranet`.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Type</span>
@@ -325,30 +252,85 @@ For example, `1/200` means that the range of the port numbers is 1-200. Other pr
     <dd>{{% md %}}The type of rule being created. Valid options are `ingress` (inbound) or `egress` (outbound).
 {{% /md %}}</dd>
 
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
-        <span>cidr<wbr>Ip</span>
+        <span>Cidr<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The target IP address range. The default value is 0.0.0.0/0 (which means no restriction will be applied). Other supported formats include 10.159.6.18/12. Only IPv4 is supported.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the security group rule. The description can be up to 1 to 512 characters in length. Defaults to null.
 {{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Nic<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Network type, can be either `internet` or `intranet`, the default value is `internet`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Policy</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Authorization policy, can be either `accept` or `drop`, the default value is `accept`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Port<wbr>Range</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The range of port numbers relevant to the IP protocol. Default to "-1/-1". When the protocol is tcp or udp, each side port number range from 1 to 65535 and '-1/-1' will be invalid.
+For example, `1/200` means that the range of the port numbers is 1-200. Other protocols' 'port_range' can only be "-1/-1", and other values will be invalid.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Priority</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Authorization policy priority, with parameter values: `1-100`, default value: 1.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Source<wbr>Group<wbr>Owner<wbr>Account</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Alibaba Cloud user account Id of the target security group when security groups are authorized across accounts.  This parameter is invalid if `cidr_ip` has already been set.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Source<wbr>Security<wbr>Group<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The target security group ID within the same region. If this field is specified, the `nic_type` can only select `intranet`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
@@ -357,43 +339,6 @@ For example, `1/200` means that the range of the port numbers is 1-200. Other pr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The protocol. Can be `tcp`, `udp`, `icmp`, `gre` or `all`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>nic<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Network type, can be either `internet` or `intranet`, the default value is `internet`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>policy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Authorization policy, can be either `accept` or `drop`, the default value is `accept`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>port<wbr>Range</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The range of port numbers relevant to the IP protocol. Default to "-1/-1". When the protocol is tcp or udp, each side port number range from 1 to 65535 and '-1/-1' will be invalid.
-For example, `1/200` means that the range of the port numbers is 1-200. Other protocols' 'port_range' can only be "-1/-1", and other values will be invalid.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>priority</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}Authorization policy priority, with parameter values: `1-100`, default value: 1.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -405,24 +350,6 @@ For example, `1/200` means that the range of the port numbers is 1-200. Other pr
     <dd>{{% md %}}The security group to apply this rule to.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>source<wbr>Group<wbr>Owner<wbr>Account</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The Alibaba Cloud user account Id of the target security group when security groups are authorized across accounts.  This parameter is invalid if `cidr_ip` has already been set.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>source<wbr>Security<wbr>Group<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The target security group ID within the same region. If this field is specified, the `nic_type` can only select `intranet`.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>type</span>
@@ -432,12 +359,112 @@ For example, `1/200` means that the range of the port numbers is 1-200. Other pr
     <dd>{{% md %}}The type of rule being created. Valid options are `ingress` (inbound) or `egress` (outbound).
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>cidr<wbr>Ip</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The target IP address range. The default value is 0.0.0.0/0 (which means no restriction will be applied). Other supported formats include 10.159.6.18/12. Only IPv4 is supported.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The description of the security group rule. The description can be up to 1 to 512 characters in length. Defaults to null.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>nic<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Network type, can be either `internet` or `intranet`, the default value is `internet`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>policy</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Authorization policy, can be either `accept` or `drop`, the default value is `accept`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>port<wbr>Range</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The range of port numbers relevant to the IP protocol. Default to "-1/-1". When the protocol is tcp or udp, each side port number range from 1 to 65535 and '-1/-1' will be invalid.
+For example, `1/200` means that the range of the port numbers is 1-200. Other protocols' 'port_range' can only be "-1/-1", and other values will be invalid.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>priority</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Authorization policy priority, with parameter values: `1-100`, default value: 1.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>source<wbr>Group<wbr>Owner<wbr>Account</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Alibaba Cloud user account Id of the target security group when security groups are authorized across accounts.  This parameter is invalid if `cidr_ip` has already been set.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>source<wbr>Security<wbr>Group<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The target security group ID within the same region. If this field is specified, the `nic_type` can only select `intranet`.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>ip_<wbr>protocol</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The protocol. Can be `tcp`, `udp`, `icmp`, `gre` or `all`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>security_<wbr>group_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The security group to apply this rule to.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The type of rule being created. Valid options are `ingress` (inbound) or `egress` (outbound).
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -455,15 +482,6 @@ For example, `1/200` means that the range of the port numbers is 1-200. Other pr
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The description of the security group rule. The description can be up to 1 to 512 characters in length. Defaults to null.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>ip_<wbr>protocol</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The protocol. Can be `tcp`, `udp`, `icmp`, `gre` or `all`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -503,15 +521,6 @@ For example, `1/200` means that the range of the port numbers is 1-200. Other pr
     <dd>{{% md %}}Authorization policy priority, with parameter values: `1-100`, default value: 1.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>security_<wbr>group_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The security group to apply this rule to.
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>source_<wbr>group_<wbr>owner_<wbr>account</span>
@@ -530,457 +539,10 @@ For example, `1/200` means that the range of the port numbers is 1-200. Other pr
     <dd>{{% md %}}The target security group ID within the same region. If this field is specified, the `nic_type` can only select `intranet`.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The type of rule being created. Valid options are `ingress` (inbound) or `egress` (outbound).
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
-
-
-
-
-
-## SecurityGroupRule Output Properties
-
-The following output properties are available:
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Cidr<wbr>Ip</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The target IP address range. The default value is 0.0.0.0/0 (which means no restriction will be applied). Other supported formats include 10.159.6.18/12. Only IPv4 is supported.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The description of the security group rule. The description can be up to 1 to 512 characters in length. Defaults to null.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Ip<wbr>Protocol</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The protocol. Can be `tcp`, `udp`, `icmp`, `gre` or `all`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Nic<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Network type, can be either `internet` or `intranet`, the default value is `internet`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Policy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Authorization policy, can be either `accept` or `drop`, the default value is `accept`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Port<wbr>Range</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The range of port numbers relevant to the IP protocol. Default to "-1/-1". When the protocol is tcp or udp, each side port number range from 1 to 65535 and '-1/-1' will be invalid.
-For example, `1/200` means that the range of the port numbers is 1-200. Other protocols' 'port_range' can only be "-1/-1", and other values will be invalid.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Priority</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}Authorization policy priority, with parameter values: `1-100`, default value: 1.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Security<wbr>Group<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The security group to apply this rule to.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Source<wbr>Group<wbr>Owner<wbr>Account</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The Alibaba Cloud user account Id of the target security group when security groups are authorized across accounts.  This parameter is invalid if `cidr_ip` has already been set.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Source<wbr>Security<wbr>Group<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The target security group ID within the same region. If this field is specified, the `nic_type` can only select `intranet`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The type of rule being created. Valid options are `ingress` (inbound) or `egress` (outbound).
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Cidr<wbr>Ip</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The target IP address range. The default value is 0.0.0.0/0 (which means no restriction will be applied). Other supported formats include 10.159.6.18/12. Only IPv4 is supported.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The description of the security group rule. The description can be up to 1 to 512 characters in length. Defaults to null.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Ip<wbr>Protocol</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The protocol. Can be `tcp`, `udp`, `icmp`, `gre` or `all`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Nic<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Network type, can be either `internet` or `intranet`, the default value is `internet`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Policy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Authorization policy, can be either `accept` or `drop`, the default value is `accept`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Port<wbr>Range</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The range of port numbers relevant to the IP protocol. Default to "-1/-1". When the protocol is tcp or udp, each side port number range from 1 to 65535 and '-1/-1' will be invalid.
-For example, `1/200` means that the range of the port numbers is 1-200. Other protocols' 'port_range' can only be "-1/-1", and other values will be invalid.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Priority</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}Authorization policy priority, with parameter values: `1-100`, default value: 1.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Security<wbr>Group<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The security group to apply this rule to.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Source<wbr>Group<wbr>Owner<wbr>Account</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The Alibaba Cloud user account Id of the target security group when security groups are authorized across accounts.  This parameter is invalid if `cidr_ip` has already been set.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Source<wbr>Security<wbr>Group<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The target security group ID within the same region. If this field is specified, the `nic_type` can only select `intranet`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The type of rule being created. Valid options are `ingress` (inbound) or `egress` (outbound).
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>cidr<wbr>Ip</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The target IP address range. The default value is 0.0.0.0/0 (which means no restriction will be applied). Other supported formats include 10.159.6.18/12. Only IPv4 is supported.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The description of the security group rule. The description can be up to 1 to 512 characters in length. Defaults to null.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>ip<wbr>Protocol</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The protocol. Can be `tcp`, `udp`, `icmp`, `gre` or `all`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>nic<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Network type, can be either `internet` or `intranet`, the default value is `internet`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>policy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Authorization policy, can be either `accept` or `drop`, the default value is `accept`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>port<wbr>Range</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The range of port numbers relevant to the IP protocol. Default to "-1/-1". When the protocol is tcp or udp, each side port number range from 1 to 65535 and '-1/-1' will be invalid.
-For example, `1/200` means that the range of the port numbers is 1-200. Other protocols' 'port_range' can only be "-1/-1", and other values will be invalid.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>priority</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}Authorization policy priority, with parameter values: `1-100`, default value: 1.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>security<wbr>Group<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The security group to apply this rule to.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>source<wbr>Group<wbr>Owner<wbr>Account</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The Alibaba Cloud user account Id of the target security group when security groups are authorized across accounts.  This parameter is invalid if `cidr_ip` has already been set.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>source<wbr>Security<wbr>Group<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The target security group ID within the same region. If this field is specified, the `nic_type` can only select `intranet`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The type of rule being created. Valid options are `ingress` (inbound) or `egress` (outbound).
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>cidr_<wbr>ip</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The target IP address range. The default value is 0.0.0.0/0 (which means no restriction will be applied). Other supported formats include 10.159.6.18/12. Only IPv4 is supported.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The description of the security group rule. The description can be up to 1 to 512 characters in length. Defaults to null.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>ip_<wbr>protocol</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The protocol. Can be `tcp`, `udp`, `icmp`, `gre` or `all`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>nic_<wbr>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Network type, can be either `internet` or `intranet`, the default value is `internet`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>policy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Authorization policy, can be either `accept` or `drop`, the default value is `accept`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>port_<wbr>range</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The range of port numbers relevant to the IP protocol. Default to "-1/-1". When the protocol is tcp or udp, each side port number range from 1 to 65535 and '-1/-1' will be invalid.
-For example, `1/200` means that the range of the port numbers is 1-200. Other protocols' 'port_range' can only be "-1/-1", and other values will be invalid.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>priority</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}Authorization policy priority, with parameter values: `1-100`, default value: 1.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>security_<wbr>group_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The security group to apply this rule to.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>source_<wbr>group_<wbr>owner_<wbr>account</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The Alibaba Cloud user account Id of the target security group when security groups are authorized across accounts.  This parameter is invalid if `cidr_ip` has already been set.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>source_<wbr>security_<wbr>group_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The target security group ID within the same region. If this field is specified, the `nic_type` can only select `intranet`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The type of rule being created. Valid options are `ingress` (inbound) or `egress` (outbound).
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
 
 
 
@@ -1118,7 +680,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Cidr<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The target IP address range. The default value is 0.0.0.0/0 (which means no restriction will be applied). Other supported formats include 10.159.6.18/12. Only IPv4 is supported.
 {{% /md %}}</dd>
@@ -1127,7 +689,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the security group rule. The description can be up to 1 to 512 characters in length. Defaults to null.
 {{% /md %}}</dd>
@@ -1136,7 +698,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Ip<wbr>Protocol</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The protocol. Can be `tcp`, `udp`, `icmp`, `gre` or `all`.
 {{% /md %}}</dd>
@@ -1145,7 +707,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Nic<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Network type, can be either `internet` or `intranet`, the default value is `internet`.
 {{% /md %}}</dd>
@@ -1154,7 +716,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Authorization policy, can be either `accept` or `drop`, the default value is `accept`.
 {{% /md %}}</dd>
@@ -1163,7 +725,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Port<wbr>Range</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The range of port numbers relevant to the IP protocol. Default to "-1/-1". When the protocol is tcp or udp, each side port number range from 1 to 65535 and '-1/-1' will be invalid.
 For example, `1/200` means that the range of the port numbers is 1-200. Other protocols' 'port_range' can only be "-1/-1", and other values will be invalid.
@@ -1173,7 +735,7 @@ For example, `1/200` means that the range of the port numbers is 1-200. Other pr
             title="Optional">
         <span>Priority</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Authorization policy priority, with parameter values: `1-100`, default value: 1.
 {{% /md %}}</dd>
@@ -1182,7 +744,7 @@ For example, `1/200` means that the range of the port numbers is 1-200. Other pr
             title="Optional">
         <span>Security<wbr>Group<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The security group to apply this rule to.
 {{% /md %}}</dd>
@@ -1191,7 +753,7 @@ For example, `1/200` means that the range of the port numbers is 1-200. Other pr
             title="Optional">
         <span>Source<wbr>Group<wbr>Owner<wbr>Account</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Alibaba Cloud user account Id of the target security group when security groups are authorized across accounts.  This parameter is invalid if `cidr_ip` has already been set.
 {{% /md %}}</dd>
@@ -1200,7 +762,7 @@ For example, `1/200` means that the range of the port numbers is 1-200. Other pr
             title="Optional">
         <span>Source<wbr>Security<wbr>Group<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The target security group ID within the same region. If this field is specified, the `nic_type` can only select `intranet`.
 {{% /md %}}</dd>
@@ -1209,7 +771,7 @@ For example, `1/200` means that the range of the port numbers is 1-200. Other pr
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of rule being created. Valid options are `ingress` (inbound) or `egress` (outbound).
 {{% /md %}}</dd>
@@ -1225,7 +787,7 @@ For example, `1/200` means that the range of the port numbers is 1-200. Other pr
             title="Optional">
         <span>Cidr<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The target IP address range. The default value is 0.0.0.0/0 (which means no restriction will be applied). Other supported formats include 10.159.6.18/12. Only IPv4 is supported.
 {{% /md %}}</dd>
@@ -1234,7 +796,7 @@ For example, `1/200` means that the range of the port numbers is 1-200. Other pr
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the security group rule. The description can be up to 1 to 512 characters in length. Defaults to null.
 {{% /md %}}</dd>
@@ -1243,7 +805,7 @@ For example, `1/200` means that the range of the port numbers is 1-200. Other pr
             title="Optional">
         <span>Ip<wbr>Protocol</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The protocol. Can be `tcp`, `udp`, `icmp`, `gre` or `all`.
 {{% /md %}}</dd>
@@ -1252,7 +814,7 @@ For example, `1/200` means that the range of the port numbers is 1-200. Other pr
             title="Optional">
         <span>Nic<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Network type, can be either `internet` or `intranet`, the default value is `internet`.
 {{% /md %}}</dd>
@@ -1261,7 +823,7 @@ For example, `1/200` means that the range of the port numbers is 1-200. Other pr
             title="Optional">
         <span>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Authorization policy, can be either `accept` or `drop`, the default value is `accept`.
 {{% /md %}}</dd>
@@ -1270,7 +832,7 @@ For example, `1/200` means that the range of the port numbers is 1-200. Other pr
             title="Optional">
         <span>Port<wbr>Range</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The range of port numbers relevant to the IP protocol. Default to "-1/-1". When the protocol is tcp or udp, each side port number range from 1 to 65535 and '-1/-1' will be invalid.
 For example, `1/200` means that the range of the port numbers is 1-200. Other protocols' 'port_range' can only be "-1/-1", and other values will be invalid.
@@ -1280,7 +842,7 @@ For example, `1/200` means that the range of the port numbers is 1-200. Other pr
             title="Optional">
         <span>Priority</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Authorization policy priority, with parameter values: `1-100`, default value: 1.
 {{% /md %}}</dd>
@@ -1289,7 +851,7 @@ For example, `1/200` means that the range of the port numbers is 1-200. Other pr
             title="Optional">
         <span>Security<wbr>Group<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The security group to apply this rule to.
 {{% /md %}}</dd>
@@ -1298,7 +860,7 @@ For example, `1/200` means that the range of the port numbers is 1-200. Other pr
             title="Optional">
         <span>Source<wbr>Group<wbr>Owner<wbr>Account</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Alibaba Cloud user account Id of the target security group when security groups are authorized across accounts.  This parameter is invalid if `cidr_ip` has already been set.
 {{% /md %}}</dd>
@@ -1307,7 +869,7 @@ For example, `1/200` means that the range of the port numbers is 1-200. Other pr
             title="Optional">
         <span>Source<wbr>Security<wbr>Group<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The target security group ID within the same region. If this field is specified, the `nic_type` can only select `intranet`.
 {{% /md %}}</dd>
@@ -1316,7 +878,7 @@ For example, `1/200` means that the range of the port numbers is 1-200. Other pr
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of rule being created. Valid options are `ingress` (inbound) or `egress` (outbound).
 {{% /md %}}</dd>
@@ -1332,7 +894,7 @@ For example, `1/200` means that the range of the port numbers is 1-200. Other pr
             title="Optional">
         <span>cidr<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The target IP address range. The default value is 0.0.0.0/0 (which means no restriction will be applied). Other supported formats include 10.159.6.18/12. Only IPv4 is supported.
 {{% /md %}}</dd>
@@ -1341,7 +903,7 @@ For example, `1/200` means that the range of the port numbers is 1-200. Other pr
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the security group rule. The description can be up to 1 to 512 characters in length. Defaults to null.
 {{% /md %}}</dd>
@@ -1350,7 +912,7 @@ For example, `1/200` means that the range of the port numbers is 1-200. Other pr
             title="Optional">
         <span>ip<wbr>Protocol</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The protocol. Can be `tcp`, `udp`, `icmp`, `gre` or `all`.
 {{% /md %}}</dd>
@@ -1359,7 +921,7 @@ For example, `1/200` means that the range of the port numbers is 1-200. Other pr
             title="Optional">
         <span>nic<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Network type, can be either `internet` or `intranet`, the default value is `internet`.
 {{% /md %}}</dd>
@@ -1368,7 +930,7 @@ For example, `1/200` means that the range of the port numbers is 1-200. Other pr
             title="Optional">
         <span>policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Authorization policy, can be either `accept` or `drop`, the default value is `accept`.
 {{% /md %}}</dd>
@@ -1377,7 +939,7 @@ For example, `1/200` means that the range of the port numbers is 1-200. Other pr
             title="Optional">
         <span>port<wbr>Range</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The range of port numbers relevant to the IP protocol. Default to "-1/-1". When the protocol is tcp or udp, each side port number range from 1 to 65535 and '-1/-1' will be invalid.
 For example, `1/200` means that the range of the port numbers is 1-200. Other protocols' 'port_range' can only be "-1/-1", and other values will be invalid.
@@ -1387,7 +949,7 @@ For example, `1/200` means that the range of the port numbers is 1-200. Other pr
             title="Optional">
         <span>priority</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Authorization policy priority, with parameter values: `1-100`, default value: 1.
 {{% /md %}}</dd>
@@ -1396,7 +958,7 @@ For example, `1/200` means that the range of the port numbers is 1-200. Other pr
             title="Optional">
         <span>security<wbr>Group<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The security group to apply this rule to.
 {{% /md %}}</dd>
@@ -1405,7 +967,7 @@ For example, `1/200` means that the range of the port numbers is 1-200. Other pr
             title="Optional">
         <span>source<wbr>Group<wbr>Owner<wbr>Account</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Alibaba Cloud user account Id of the target security group when security groups are authorized across accounts.  This parameter is invalid if `cidr_ip` has already been set.
 {{% /md %}}</dd>
@@ -1414,7 +976,7 @@ For example, `1/200` means that the range of the port numbers is 1-200. Other pr
             title="Optional">
         <span>source<wbr>Security<wbr>Group<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The target security group ID within the same region. If this field is specified, the `nic_type` can only select `intranet`.
 {{% /md %}}</dd>
@@ -1423,7 +985,7 @@ For example, `1/200` means that the range of the port numbers is 1-200. Other pr
             title="Optional">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of rule being created. Valid options are `ingress` (inbound) or `egress` (outbound).
 {{% /md %}}</dd>

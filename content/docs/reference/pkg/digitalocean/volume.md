@@ -17,7 +17,7 @@ Provides a DigitalOcean Block Storage volume which can be attached to a Droplet 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/#Volume">Volume</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/#VolumeArgs">VolumeArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/#Volume">Volume</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/#VolumeArgs">VolumeArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -25,11 +25,11 @@ Provides a DigitalOcean Block Storage volume which can be attached to a Droplet 
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewVolume<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/go/digitalocean/?tab=doc#VolumeArgs">VolumeArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/go/digitalocean/?tab=doc#Volume">Volume</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewVolume<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/go/digitalocean/?tab=doc#VolumeArgs">VolumeArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/go/digitalocean/?tab=doc#Volume">Volume</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.Digitalocean..Volume.html">Volume</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.Digitalocean.VolumeArgs.html">VolumeArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.Digitalocean.Volume.html">Volume</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.DigitalOcean.VolumeArgs.html">VolumeArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -121,51 +121,6 @@ Provides a DigitalOcean Block Storage volume which can be attached to a Droplet 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}A free-form text field up to a limit of 1024 bytes to describe a block storage volume.
-{{% /md %}}</dd>
-
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span>Filesystem<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Filesystem type (`xfs` or `ext4`) for the block storage volume.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This fields functionality has been replaced by `initial_filesystem_type`. The property will still remain as a computed attribute representing the current volumes filesystem type.{{% /md %}}</p></dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Initial<wbr>Filesystem<wbr>Label</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Initial filesystem label for the block storage volume.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Initial<wbr>Filesystem<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Initial filesystem type (`xfs` or `ext4`) for the block storage volume.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}A name for the block storage volume. Must be lowercase and be composed only of numbers, letters and "-", up to a limit of 64 characters.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Region</span>
@@ -186,9 +141,54 @@ Provides a DigitalOcean Block Storage volume which can be attached to a Droplet 
 
     <dt class="property-optional"
             title="Optional">
+        <span>Description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A free-form text field up to a limit of 1024 bytes to describe a block storage volume.
+{{% /md %}}</dd>
+
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span>Filesystem<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Filesystem type (`xfs` or `ext4`) for the block storage volume.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This fields functionality has been replaced by `initial_filesystem_type`. The property will still remain as a computed attribute representing the current volumes filesystem type.{{% /md %}}</p></dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Initial<wbr>Filesystem<wbr>Label</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Initial filesystem label for the block storage volume.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Initial<wbr>Filesystem<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Initial filesystem type (`xfs` or `ext4`) for the block storage volume.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A name for the block storage volume. Must be lowercase and be composed only of numbers, letters and "-", up to a limit of 64 characters.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Snapshot<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of an existing volume snapshot from which the new volume will be created. If supplied, the region and size will be limitied on creation to that of the referenced snapshot
 {{% /md %}}</dd>
@@ -197,7 +197,7 @@ Provides a DigitalOcean Block Storage volume which can be attached to a Droplet 
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of the tags to be applied to this Volume.
 {{% /md %}}</dd>
@@ -209,51 +209,6 @@ Provides a DigitalOcean Block Storage volume which can be attached to a Droplet 
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}A free-form text field up to a limit of 1024 bytes to describe a block storage volume.
-{{% /md %}}</dd>
-
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span>Filesystem<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Filesystem type (`xfs` or `ext4`) for the block storage volume.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This fields functionality has been replaced by `initial_filesystem_type`. The property will still remain as a computed attribute representing the current volumes filesystem type.{{% /md %}}</p></dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Initial<wbr>Filesystem<wbr>Label</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Initial filesystem label for the block storage volume.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Initial<wbr>Filesystem<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Initial filesystem type (`xfs` or `ext4`) for the block storage volume.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}A name for the block storage volume. Must be lowercase and be composed only of numbers, letters and "-", up to a limit of 64 characters.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Region</span>
@@ -274,9 +229,54 @@ Provides a DigitalOcean Block Storage volume which can be attached to a Droplet 
 
     <dt class="property-optional"
             title="Optional">
+        <span>Description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A free-form text field up to a limit of 1024 bytes to describe a block storage volume.
+{{% /md %}}</dd>
+
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span>Filesystem<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Filesystem type (`xfs` or `ext4`) for the block storage volume.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This fields functionality has been replaced by `initial_filesystem_type`. The property will still remain as a computed attribute representing the current volumes filesystem type.{{% /md %}}</p></dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Initial<wbr>Filesystem<wbr>Label</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Initial filesystem label for the block storage volume.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Initial<wbr>Filesystem<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Initial filesystem type (`xfs` or `ext4`) for the block storage volume.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A name for the block storage volume. Must be lowercase and be composed only of numbers, letters and "-", up to a limit of 64 characters.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Snapshot<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of an existing volume snapshot from which the new volume will be created. If supplied, the region and size will be limitied on creation to that of the referenced snapshot
 {{% /md %}}</dd>
@@ -296,51 +296,6 @@ Provides a DigitalOcean Block Storage volume which can be attached to a Droplet 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}A free-form text field up to a limit of 1024 bytes to describe a block storage volume.
-{{% /md %}}</dd>
-
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span>filesystem<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Filesystem type (`xfs` or `ext4`) for the block storage volume.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This fields functionality has been replaced by `initial_filesystem_type`. The property will still remain as a computed attribute representing the current volumes filesystem type.{{% /md %}}</p></dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>initial<wbr>Filesystem<wbr>Label</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Initial filesystem label for the block storage volume.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>initial<wbr>Filesystem<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">FilesystemType?</span>
-    </dt>
-    <dd>{{% md %}}Initial filesystem type (`xfs` or `ext4`) for the block storage volume.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}A name for the block storage volume. Must be lowercase and be composed only of numbers, letters and "-", up to a limit of 64 characters.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -362,9 +317,54 @@ Provides a DigitalOcean Block Storage volume which can be attached to a Droplet 
 
     <dt class="property-optional"
             title="Optional">
+        <span>description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A free-form text field up to a limit of 1024 bytes to describe a block storage volume.
+{{% /md %}}</dd>
+
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span>filesystem<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Filesystem type (`xfs` or `ext4`) for the block storage volume.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This fields functionality has been replaced by `initial_filesystem_type`. The property will still remain as a computed attribute representing the current volumes filesystem type.{{% /md %}}</p></dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>initial<wbr>Filesystem<wbr>Label</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Initial filesystem label for the block storage volume.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>initial<wbr>Filesystem<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Filesystem<wbr>Type</span>
+    </dt>
+    <dd>{{% md %}}Initial filesystem type (`xfs` or `ext4`) for the block storage volume.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A name for the block storage volume. Must be lowercase and be composed only of numbers, letters and "-", up to a limit of 64 characters.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>snapshot<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of an existing volume snapshot from which the new volume will be created. If supplied, the region and size will be limitied on creation to that of the referenced snapshot
 {{% /md %}}</dd>
@@ -373,7 +373,7 @@ Provides a DigitalOcean Block Storage volume which can be attached to a Droplet 
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of the tags to be applied to this Volume.
 {{% /md %}}</dd>
@@ -384,6 +384,24 @@ Provides a DigitalOcean Block Storage volume which can be attached to a Droplet 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>region</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The region that the block storage volume will be created in.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>size</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}The size of the block storage volume in GiB. If updated, can only be expanded.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -428,24 +446,6 @@ Provides a DigitalOcean Block Storage volume which can be attached to a Droplet 
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A name for the block storage volume. Must be lowercase and be composed only of numbers, letters and "-", up to a limit of 64 characters.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The region that the block storage volume will be created in.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The size of the block storage volume in GiB. If updated, can only be expanded.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -487,18 +487,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}A free-form text field up to a limit of 1024 bytes to describe a block storage volume.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Droplet<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<int></span>
+        <span class="property-type">List&lt;int&gt;</span>
     </dt>
     <dd>{{% md %}}A list of associated droplet ids.
 {{% /md %}}</dd>
@@ -510,78 +501,6 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Filesystem label for the block storage volume.
-{{% /md %}}</dd>
-
-    <dt class="property- property-deprecated"
-            title=", Deprecated">
-        <span>Filesystem<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Filesystem type (`xfs` or `ext4`) for the block storage volume.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This fields functionality has been replaced by `initial_filesystem_type`. The property will still remain as a computed attribute representing the current volumes filesystem type.{{% /md %}}</p></dd>
-
-    <dt class="property-"
-            title="">
-        <span>Initial<wbr>Filesystem<wbr>Label</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Initial filesystem label for the block storage volume.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Initial<wbr>Filesystem<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Initial filesystem type (`xfs` or `ext4`) for the block storage volume.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A name for the block storage volume. Must be lowercase and be composed only of numbers, letters and "-", up to a limit of 64 characters.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The region that the block storage volume will be created in.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The size of the block storage volume in GiB. If updated, can only be expanded.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Snapshot<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The ID of an existing volume snapshot from which the new volume will be created. If supplied, the region and size will be limitied on creation to that of the referenced snapshot
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}A list of the tags to be applied to this Volume.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -602,15 +521,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}A free-form text field up to a limit of 1024 bytes to describe a block storage volume.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Droplet<wbr>Ids</span>
         <span class="property-indicator"></span>
         <span class="property-type">[]int</span>
@@ -625,78 +535,6 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Filesystem label for the block storage volume.
-{{% /md %}}</dd>
-
-    <dt class="property- property-deprecated"
-            title=", Deprecated">
-        <span>Filesystem<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Filesystem type (`xfs` or `ext4`) for the block storage volume.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This fields functionality has been replaced by `initial_filesystem_type`. The property will still remain as a computed attribute representing the current volumes filesystem type.{{% /md %}}</p></dd>
-
-    <dt class="property-"
-            title="">
-        <span>Initial<wbr>Filesystem<wbr>Label</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Initial filesystem label for the block storage volume.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Initial<wbr>Filesystem<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Initial filesystem type (`xfs` or `ext4`) for the block storage volume.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A name for the block storage volume. Must be lowercase and be composed only of numbers, letters and "-", up to a limit of 64 characters.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The region that the block storage volume will be created in.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The size of the block storage volume in GiB. If updated, can only be expanded.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Snapshot<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The ID of an existing volume snapshot from which the new volume will be created. If supplied, the region and size will be limitied on creation to that of the referenced snapshot
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}A list of the tags to be applied to this Volume.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -717,15 +555,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}A free-form text field up to a limit of 1024 bytes to describe a block storage volume.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>droplet<wbr>Ids</span>
         <span class="property-indicator"></span>
         <span class="property-type">number[]</span>
@@ -740,78 +569,6 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Filesystem label for the block storage volume.
-{{% /md %}}</dd>
-
-    <dt class="property- property-deprecated"
-            title=", Deprecated">
-        <span>filesystem<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Filesystem type (`xfs` or `ext4`) for the block storage volume.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This fields functionality has been replaced by `initial_filesystem_type`. The property will still remain as a computed attribute representing the current volumes filesystem type.{{% /md %}}</p></dd>
-
-    <dt class="property-"
-            title="">
-        <span>initial<wbr>Filesystem<wbr>Label</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Initial filesystem label for the block storage volume.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>initial<wbr>Filesystem<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">FilesystemType?</span>
-    </dt>
-    <dd>{{% md %}}Initial filesystem type (`xfs` or `ext4`) for the block storage volume.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A name for the block storage volume. Must be lowercase and be composed only of numbers, letters and "-", up to a limit of 64 characters.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Region</span>
-    </dt>
-    <dd>{{% md %}}The region that the block storage volume will be created in.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}The size of the block storage volume in GiB. If updated, can only be expanded.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>snapshot<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The ID of an existing volume snapshot from which the new volume will be created. If supplied, the region and size will be limitied on creation to that of the referenced snapshot
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}A list of the tags to be applied to this Volume.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -832,15 +589,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}A free-form text field up to a limit of 1024 bytes to describe a block storage volume.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>droplet_<wbr>ids</span>
         <span class="property-indicator"></span>
         <span class="property-type">List[Integer]</span>
@@ -855,78 +603,6 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Filesystem label for the block storage volume.
-{{% /md %}}</dd>
-
-    <dt class="property- property-deprecated"
-            title=", Deprecated">
-        <span>filesystem_<wbr>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Filesystem type (`xfs` or `ext4`) for the block storage volume.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This fields functionality has been replaced by `initial_filesystem_type`. The property will still remain as a computed attribute representing the current volumes filesystem type.{{% /md %}}</p></dd>
-
-    <dt class="property-"
-            title="">
-        <span>initial_<wbr>filesystem_<wbr>label</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Initial filesystem label for the block storage volume.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>initial_<wbr>filesystem_<wbr>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Initial filesystem type (`xfs` or `ext4`) for the block storage volume.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}A name for the block storage volume. Must be lowercase and be composed only of numbers, letters and "-", up to a limit of 64 characters.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The region that the block storage volume will be created in.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The size of the block storage volume in GiB. If updated, can only be expanded.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>snapshot_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The ID of an existing volume snapshot from which the new volume will be created. If supplied, the region and size will be limitied on creation to that of the referenced snapshot
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}A list of the tags to be applied to this Volume.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -967,7 +643,7 @@ Get an existing Volume resource's state with the given name, ID, and optional ex
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.Digitalocean..Volume.html">Volume</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.Digitalocean..VolumeState.html">VolumeState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.Digitalocean.Volume.html">Volume</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.Digitalocean..VolumeState.html">VolumeState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1077,7 +753,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A free-form text field up to a limit of 1024 bytes to describe a block storage volume.
 {{% /md %}}</dd>
@@ -1086,7 +762,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Droplet<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<int>?</span>
+        <span class="property-type">List&lt;int&gt;</span>
     </dt>
     <dd>{{% md %}}A list of associated droplet ids.
 {{% /md %}}</dd>
@@ -1095,7 +771,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Filesystem<wbr>Label</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Filesystem label for the block storage volume.
 {{% /md %}}</dd>
@@ -1104,7 +780,7 @@ The following state arguments are supported:
             title="Optional, Deprecated">
         <span>Filesystem<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Filesystem type (`xfs` or `ext4`) for the block storage volume.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}This fields functionality has been replaced by `initial_filesystem_type`. The property will still remain as a computed attribute representing the current volumes filesystem type.{{% /md %}}</p></dd>
@@ -1113,7 +789,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Initial<wbr>Filesystem<wbr>Label</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Initial filesystem label for the block storage volume.
 {{% /md %}}</dd>
@@ -1122,7 +798,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Initial<wbr>Filesystem<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Initial filesystem type (`xfs` or `ext4`) for the block storage volume.
 {{% /md %}}</dd>
@@ -1131,7 +807,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A name for the block storage volume. Must be lowercase and be composed only of numbers, letters and "-", up to a limit of 64 characters.
 {{% /md %}}</dd>
@@ -1140,7 +816,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region that the block storage volume will be created in.
 {{% /md %}}</dd>
@@ -1149,7 +825,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of the block storage volume in GiB. If updated, can only be expanded.
 {{% /md %}}</dd>
@@ -1158,7 +834,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Snapshot<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of an existing volume snapshot from which the new volume will be created. If supplied, the region and size will be limitied on creation to that of the referenced snapshot
 {{% /md %}}</dd>
@@ -1167,7 +843,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of the tags to be applied to this Volume.
 {{% /md %}}</dd>
@@ -1176,7 +852,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Urn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The uniform resource name for the volume.
 {{% /md %}}</dd>
@@ -1192,7 +868,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A free-form text field up to a limit of 1024 bytes to describe a block storage volume.
 {{% /md %}}</dd>
@@ -1210,7 +886,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Filesystem<wbr>Label</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Filesystem label for the block storage volume.
 {{% /md %}}</dd>
@@ -1219,7 +895,7 @@ The following state arguments are supported:
             title="Optional, Deprecated">
         <span>Filesystem<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Filesystem type (`xfs` or `ext4`) for the block storage volume.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}This fields functionality has been replaced by `initial_filesystem_type`. The property will still remain as a computed attribute representing the current volumes filesystem type.{{% /md %}}</p></dd>
@@ -1228,7 +904,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Initial<wbr>Filesystem<wbr>Label</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Initial filesystem label for the block storage volume.
 {{% /md %}}</dd>
@@ -1237,7 +913,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Initial<wbr>Filesystem<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Initial filesystem type (`xfs` or `ext4`) for the block storage volume.
 {{% /md %}}</dd>
@@ -1246,7 +922,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A name for the block storage volume. Must be lowercase and be composed only of numbers, letters and "-", up to a limit of 64 characters.
 {{% /md %}}</dd>
@@ -1255,7 +931,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region that the block storage volume will be created in.
 {{% /md %}}</dd>
@@ -1264,7 +940,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of the block storage volume in GiB. If updated, can only be expanded.
 {{% /md %}}</dd>
@@ -1273,7 +949,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Snapshot<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of an existing volume snapshot from which the new volume will be created. If supplied, the region and size will be limitied on creation to that of the referenced snapshot
 {{% /md %}}</dd>
@@ -1291,7 +967,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Urn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The uniform resource name for the volume.
 {{% /md %}}</dd>
@@ -1307,7 +983,7 @@ The following state arguments are supported:
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A free-form text field up to a limit of 1024 bytes to describe a block storage volume.
 {{% /md %}}</dd>
@@ -1316,7 +992,7 @@ The following state arguments are supported:
             title="Optional">
         <span>droplet<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number[]?</span>
+        <span class="property-type">number[]</span>
     </dt>
     <dd>{{% md %}}A list of associated droplet ids.
 {{% /md %}}</dd>
@@ -1325,7 +1001,7 @@ The following state arguments are supported:
             title="Optional">
         <span>filesystem<wbr>Label</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Filesystem label for the block storage volume.
 {{% /md %}}</dd>
@@ -1334,7 +1010,7 @@ The following state arguments are supported:
             title="Optional, Deprecated">
         <span>filesystem<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Filesystem type (`xfs` or `ext4`) for the block storage volume.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}This fields functionality has been replaced by `initial_filesystem_type`. The property will still remain as a computed attribute representing the current volumes filesystem type.{{% /md %}}</p></dd>
@@ -1343,7 +1019,7 @@ The following state arguments are supported:
             title="Optional">
         <span>initial<wbr>Filesystem<wbr>Label</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Initial filesystem label for the block storage volume.
 {{% /md %}}</dd>
@@ -1352,7 +1028,7 @@ The following state arguments are supported:
             title="Optional">
         <span>initial<wbr>Filesystem<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">FilesystemType?</span>
+        <span class="property-type">Filesystem<wbr>Type</span>
     </dt>
     <dd>{{% md %}}Initial filesystem type (`xfs` or `ext4`) for the block storage volume.
 {{% /md %}}</dd>
@@ -1361,7 +1037,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A name for the block storage volume. Must be lowercase and be composed only of numbers, letters and "-", up to a limit of 64 characters.
 {{% /md %}}</dd>
@@ -1370,7 +1046,7 @@ The following state arguments are supported:
             title="Optional">
         <span>region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Region?</span>
+        <span class="property-type">Region</span>
     </dt>
     <dd>{{% md %}}The region that the block storage volume will be created in.
 {{% /md %}}</dd>
@@ -1379,7 +1055,7 @@ The following state arguments are supported:
             title="Optional">
         <span>size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The size of the block storage volume in GiB. If updated, can only be expanded.
 {{% /md %}}</dd>
@@ -1388,7 +1064,7 @@ The following state arguments are supported:
             title="Optional">
         <span>snapshot<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of an existing volume snapshot from which the new volume will be created. If supplied, the region and size will be limitied on creation to that of the referenced snapshot
 {{% /md %}}</dd>
@@ -1397,7 +1073,7 @@ The following state arguments are supported:
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of the tags to be applied to this Volume.
 {{% /md %}}</dd>
@@ -1406,7 +1082,7 @@ The following state arguments are supported:
             title="Optional">
         <span>urn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The uniform resource name for the volume.
 {{% /md %}}</dd>

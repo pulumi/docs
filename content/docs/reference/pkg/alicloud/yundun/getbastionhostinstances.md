@@ -45,13 +45,13 @@ export const instance = alicloud_yundun_bastionhost_instances_instance.map(v => 
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupBastionHostInstances<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/yundun?tab=doc#LookupBastionHostInstancesArgs">LookupBastionHostInstancesArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/yundun?tab=doc#LookupBastionHostInstancesResult">LookupBastionHostInstancesResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupBastionHostInstances<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/yundun?tab=doc#LookupBastionHostInstancesArgs">LookupBastionHostInstancesArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/yundun?tab=doc#LookupBastionHostInstancesResult">LookupBastionHostInstancesResult</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetBastionHostInstances </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.Yundun.GetBastionHostInstancesResult.html">GetBastionHostInstancesResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.Yundun.GetBastionHostInstancesArgs.html">GetBastionHostInstancesArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.Yundun.GetBastionHostInstancesResult.html">GetBastionHostInstancesResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.AliCloud.Yundun.GetBastionHostInstancesArgs.html">GetBastionHostInstancesArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -68,7 +68,7 @@ The following arguments are supported:
             title="Optional">
         <span>Description<wbr>Regex</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A regex string to filter results by the instance description.
 {{% /md %}}</dd>
@@ -77,7 +77,7 @@ The following arguments are supported:
             title="Optional">
         <span>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Matched instance IDs to filter data source result.
 {{% /md %}}</dd>
@@ -86,7 +86,7 @@ The following arguments are supported:
             title="Optional">
         <span>Output<wbr>File</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}File name to persist data source output.
 {{% /md %}}</dd>
@@ -95,7 +95,7 @@ The following arguments are supported:
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags assigned to the bastionhost instance. It must be in the format:
 ```
@@ -118,7 +118,7 @@ tagKey1 = "tagValue1"
             title="Optional">
         <span>Description<wbr>Regex</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A regex string to filter results by the instance description.
 {{% /md %}}</dd>
@@ -136,7 +136,7 @@ tagKey1 = "tagValue1"
             title="Optional">
         <span>Output<wbr>File</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}File name to persist data source output.
 {{% /md %}}</dd>
@@ -168,7 +168,7 @@ tagKey1 = "tagValue1"
             title="Optional">
         <span>description<wbr>Regex</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A regex string to filter results by the instance description.
 {{% /md %}}</dd>
@@ -177,7 +177,7 @@ tagKey1 = "tagValue1"
             title="Optional">
         <span>ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Matched instance IDs to filter data source result.
 {{% /md %}}</dd>
@@ -186,7 +186,7 @@ tagKey1 = "tagValue1"
             title="Optional">
         <span>output<wbr>File</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}File name to persist data source output.
 {{% /md %}}</dd>
@@ -195,7 +195,7 @@ tagKey1 = "tagValue1"
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A map of tags assigned to the bastionhost instance. It must be in the format:
 ```
@@ -279,17 +279,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Description<wbr>Regex</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Descriptions</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -306,7 +298,7 @@ The following output properties are available:
             title="">
         <span>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -314,16 +306,24 @@ The following output properties are available:
             title="">
         <span>Instances</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getbastionhostinstancesinstance">List&lt;Get<wbr>Bastion<wbr>Host<wbr>Instances<wbr>Instance&gt;</a></span>
+        <span class="property-type"><a href="#getbastionhostinstancesinstance">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Yundun.<wbr>Outputs.<wbr>Get<wbr>Bastion<wbr>Host<wbr>Instances<wbr>Instance&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of apis. Each element contains the following attributes:
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
+        <span>Description<wbr>Regex</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Output<wbr>File</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -331,7 +331,7 @@ The following output properties are available:
             title="">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags assigned to the bastionhost instance.
 {{% /md %}}</dd>
@@ -342,14 +342,6 @@ The following output properties are available:
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Description<wbr>Regex</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -387,9 +379,17 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>Description<wbr>Regex</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Output<wbr>File</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -408,14 +408,6 @@ The following output properties are available:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>description<wbr>Regex</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -453,9 +445,17 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>description<wbr>Regex</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>output<wbr>File</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -463,7 +463,7 @@ The following output properties are available:
             title="">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A map of tags assigned to the bastionhost instance.
 {{% /md %}}</dd>
@@ -474,14 +474,6 @@ The following output properties are available:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>description_<wbr>regex</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -516,6 +508,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}A list of apis. Each element contains the following attributes:
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>description_<wbr>regex</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -627,25 +627,9 @@ The following output properties are available:
             title="Required">
         <span>Security<wbr>Group<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The instance's security group configuration.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
-    </dt>
-    <dd>{{% md %}}A map of tags assigned to the bastionhost instance. It must be in the format:
-```
-data "alicloud.yundun.getBastionHostInstances" "instance" {
-tags = {
-tagKey1 = "tagValue1"
-}
-}
-```
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -655,6 +639,22 @@ tagKey1 = "tagValue1"
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The instance's vSwitch ID.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+    </dt>
+    <dd>{{% md %}}A map of tags assigned to the bastionhost instance. It must be in the format:
+```
+data "alicloud.yundun.getBastionHostInstances" "instance" {
+tags = {
+tagKey1 = "tagValue1"
+}
+}
+```
 {{% /md %}}</dd>
 
 </dl>
@@ -735,6 +735,15 @@ tagKey1 = "tagValue1"
     <dd>{{% md %}}The instance's security group configuration.
 {{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>User<wbr>Vswitch<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The instance's vSwitch ID.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Tags</span>
@@ -749,15 +758,6 @@ tagKey1 = "tagValue1"
 }
 }
 ```
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>User<wbr>Vswitch<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The instance's vSwitch ID.
 {{% /md %}}</dd>
 
 </dl>
@@ -838,11 +838,20 @@ tagKey1 = "tagValue1"
     <dd>{{% md %}}The instance's security group configuration.
 {{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>user<wbr>Vswitch<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The instance's vSwitch ID.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A map of tags assigned to the bastionhost instance. It must be in the format:
 ```
@@ -852,15 +861,6 @@ tagKey1 = "tagValue1"
 }
 }
 ```
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>user<wbr>Vswitch<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The instance's vSwitch ID.
 {{% /md %}}</dd>
 
 </dl>
@@ -941,6 +941,15 @@ tagKey1 = "tagValue1"
     <dd>{{% md %}}The instance's security group configuration.
 {{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>user<wbr>Vswitch<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The instance's vSwitch ID.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>tags</span>
@@ -955,15 +964,6 @@ tagKey1 = "tagValue1"
 }
 }
 ```
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>user<wbr>Vswitch<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The instance's vSwitch ID.
 {{% /md %}}</dd>
 
 </dl>

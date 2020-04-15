@@ -17,7 +17,7 @@ Provides a DigitalOcean CDN Endpoint resource for use with Spaces.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/#Cdn">Cdn</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/#CdnArgs">CdnArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/#Cdn">Cdn</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/#CdnArgs">CdnArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -25,11 +25,11 @@ Provides a DigitalOcean CDN Endpoint resource for use with Spaces.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewCdn<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/go/digitalocean/?tab=doc#CdnArgs">CdnArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/go/digitalocean/?tab=doc#Cdn">Cdn</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewCdn<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/go/digitalocean/?tab=doc#CdnArgs">CdnArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/go/digitalocean/?tab=doc#Cdn">Cdn</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.Digitalocean..Cdn.html">Cdn</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.Digitalocean.CdnArgs.html">CdnArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.Digitalocean.Cdn.html">Cdn</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.DigitalOcean.CdnArgs.html">CdnArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -121,24 +121,6 @@ Provides a DigitalOcean CDN Endpoint resource for use with Spaces.
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Certificate<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}ID of a DigitalOcean managed TLS certificate for use with custom domains
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Custom<wbr>Domain</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The fully qualified domain name (FQDN) of the custom subdomain used with the CDN Endpoint.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Origin</span>
@@ -150,9 +132,27 @@ Provides a DigitalOcean CDN Endpoint resource for use with Spaces.
 
     <dt class="property-optional"
             title="Optional">
+        <span>Certificate<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ID of a DigitalOcean managed TLS certificate for use with custom domains
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Custom<wbr>Domain</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The fully qualified domain name (FQDN) of the custom subdomain used with the CDN Endpoint.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Ttl</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time to live for the CDN Endpoint, in seconds. Default is 3600 seconds.
 * `certificate_id`- (Optional) The ID of a DigitalOcean managed TLS certificate used for SSL when a custom subdomain is provided.
@@ -165,24 +165,6 @@ Provides a DigitalOcean CDN Endpoint resource for use with Spaces.
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Certificate<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}ID of a DigitalOcean managed TLS certificate for use with custom domains
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Custom<wbr>Domain</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The fully qualified domain name (FQDN) of the custom subdomain used with the CDN Endpoint.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Origin</span>
@@ -194,9 +176,27 @@ Provides a DigitalOcean CDN Endpoint resource for use with Spaces.
 
     <dt class="property-optional"
             title="Optional">
+        <span>Certificate<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ID of a DigitalOcean managed TLS certificate for use with custom domains
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Custom<wbr>Domain</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The fully qualified domain name (FQDN) of the custom subdomain used with the CDN Endpoint.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Ttl</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time to live for the CDN Endpoint, in seconds. Default is 3600 seconds.
 * `certificate_id`- (Optional) The ID of a DigitalOcean managed TLS certificate used for SSL when a custom subdomain is provided.
@@ -209,24 +209,6 @@ Provides a DigitalOcean CDN Endpoint resource for use with Spaces.
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>certificate<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}ID of a DigitalOcean managed TLS certificate for use with custom domains
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>custom<wbr>Domain</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The fully qualified domain name (FQDN) of the custom subdomain used with the CDN Endpoint.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>origin</span>
@@ -238,9 +220,27 @@ Provides a DigitalOcean CDN Endpoint resource for use with Spaces.
 
     <dt class="property-optional"
             title="Optional">
+        <span>certificate<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ID of a DigitalOcean managed TLS certificate for use with custom domains
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>custom<wbr>Domain</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The fully qualified domain name (FQDN) of the custom subdomain used with the CDN Endpoint.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>ttl</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The time to live for the CDN Endpoint, in seconds. Default is 3600 seconds.
 * `certificate_id`- (Optional) The ID of a DigitalOcean managed TLS certificate used for SSL when a custom subdomain is provided.
@@ -252,6 +252,15 @@ Provides a DigitalOcean CDN Endpoint resource for use with Spaces.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>origin</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The fully qualified domain name, (FQDN) for a Space.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -269,15 +278,6 @@ Provides a DigitalOcean CDN Endpoint resource for use with Spaces.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The fully qualified domain name (FQDN) of the custom subdomain used with the CDN Endpoint.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>origin</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The fully qualified domain name, (FQDN) for a Space.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -311,15 +311,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Certificate<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}ID of a DigitalOcean managed TLS certificate for use with custom domains
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Created<wbr>At</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -329,39 +320,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Custom<wbr>Domain</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The fully qualified domain name (FQDN) of the custom subdomain used with the CDN Endpoint.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Endpoint</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fully qualified domain name (FQDN) from which the CDN-backed content is served.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Origin</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The fully qualified domain name, (FQDN) for a Space.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Ttl</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The time to live for the CDN Endpoint, in seconds. Default is 3600 seconds.
-* `certificate_id`- (Optional) The ID of a DigitalOcean managed TLS certificate used for SSL when a custom subdomain is provided.
 {{% /md %}}</dd>
 
 </dl>
@@ -373,29 +336,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Certificate<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}ID of a DigitalOcean managed TLS certificate for use with custom domains
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Created<wbr>At</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date and time when the CDN Endpoint was created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Custom<wbr>Domain</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The fully qualified domain name (FQDN) of the custom subdomain used with the CDN Endpoint.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -407,40 +352,12 @@ The following output properties are available:
     <dd>{{% md %}}The fully qualified domain name (FQDN) from which the CDN-backed content is served.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span>Origin</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The fully qualified domain name, (FQDN) for a Space.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Ttl</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The time to live for the CDN Endpoint, in seconds. Default is 3600 seconds.
-* `certificate_id`- (Optional) The ID of a DigitalOcean managed TLS certificate used for SSL when a custom subdomain is provided.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>certificate<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}ID of a DigitalOcean managed TLS certificate for use with custom domains
-{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -453,39 +370,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>custom<wbr>Domain</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The fully qualified domain name (FQDN) of the custom subdomain used with the CDN Endpoint.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>endpoint</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fully qualified domain name (FQDN) from which the CDN-backed content is served.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>origin</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The fully qualified domain name, (FQDN) for a Space.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>ttl</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}The time to live for the CDN Endpoint, in seconds. Default is 3600 seconds.
-* `certificate_id`- (Optional) The ID of a DigitalOcean managed TLS certificate used for SSL when a custom subdomain is provided.
 {{% /md %}}</dd>
 
 </dl>
@@ -494,15 +383,6 @@ The following output properties are available:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>certificate_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}ID of a DigitalOcean managed TLS certificate for use with custom domains
-{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -515,39 +395,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>custom_<wbr>domain</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The fully qualified domain name (FQDN) of the custom subdomain used with the CDN Endpoint.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>endpoint</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The fully qualified domain name (FQDN) from which the CDN-backed content is served.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>origin</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The fully qualified domain name, (FQDN) for a Space.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>ttl</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The time to live for the CDN Endpoint, in seconds. Default is 3600 seconds.
-* `certificate_id`- (Optional) The ID of a DigitalOcean managed TLS certificate used for SSL when a custom subdomain is provided.
 {{% /md %}}</dd>
 
 </dl>
@@ -579,7 +431,7 @@ Get an existing Cdn resource's state with the given name, ID, and optional extra
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.Digitalocean..Cdn.html">Cdn</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.Digitalocean..CdnState.html">CdnState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.Digitalocean.Cdn.html">Cdn</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.Digitalocean..CdnState.html">CdnState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -689,7 +541,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Certificate<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of a DigitalOcean managed TLS certificate for use with custom domains
 {{% /md %}}</dd>
@@ -698,7 +550,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Created<wbr>At</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date and time when the CDN Endpoint was created.
 {{% /md %}}</dd>
@@ -707,7 +559,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Custom<wbr>Domain</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fully qualified domain name (FQDN) of the custom subdomain used with the CDN Endpoint.
 {{% /md %}}</dd>
@@ -716,7 +568,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Endpoint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fully qualified domain name (FQDN) from which the CDN-backed content is served.
 {{% /md %}}</dd>
@@ -725,7 +577,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Origin</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fully qualified domain name, (FQDN) for a Space.
 {{% /md %}}</dd>
@@ -734,7 +586,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Ttl</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time to live for the CDN Endpoint, in seconds. Default is 3600 seconds.
 * `certificate_id`- (Optional) The ID of a DigitalOcean managed TLS certificate used for SSL when a custom subdomain is provided.
@@ -751,7 +603,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Certificate<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of a DigitalOcean managed TLS certificate for use with custom domains
 {{% /md %}}</dd>
@@ -760,7 +612,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Created<wbr>At</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date and time when the CDN Endpoint was created.
 {{% /md %}}</dd>
@@ -769,7 +621,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Custom<wbr>Domain</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fully qualified domain name (FQDN) of the custom subdomain used with the CDN Endpoint.
 {{% /md %}}</dd>
@@ -778,7 +630,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Endpoint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fully qualified domain name (FQDN) from which the CDN-backed content is served.
 {{% /md %}}</dd>
@@ -787,7 +639,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Origin</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fully qualified domain name, (FQDN) for a Space.
 {{% /md %}}</dd>
@@ -796,7 +648,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Ttl</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time to live for the CDN Endpoint, in seconds. Default is 3600 seconds.
 * `certificate_id`- (Optional) The ID of a DigitalOcean managed TLS certificate used for SSL when a custom subdomain is provided.
@@ -813,7 +665,7 @@ The following state arguments are supported:
             title="Optional">
         <span>certificate<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of a DigitalOcean managed TLS certificate for use with custom domains
 {{% /md %}}</dd>
@@ -822,7 +674,7 @@ The following state arguments are supported:
             title="Optional">
         <span>created<wbr>At</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date and time when the CDN Endpoint was created.
 {{% /md %}}</dd>
@@ -831,7 +683,7 @@ The following state arguments are supported:
             title="Optional">
         <span>custom<wbr>Domain</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fully qualified domain name (FQDN) of the custom subdomain used with the CDN Endpoint.
 {{% /md %}}</dd>
@@ -840,7 +692,7 @@ The following state arguments are supported:
             title="Optional">
         <span>endpoint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fully qualified domain name (FQDN) from which the CDN-backed content is served.
 {{% /md %}}</dd>
@@ -849,7 +701,7 @@ The following state arguments are supported:
             title="Optional">
         <span>origin</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fully qualified domain name, (FQDN) for a Space.
 {{% /md %}}</dd>
@@ -858,7 +710,7 @@ The following state arguments are supported:
             title="Optional">
         <span>ttl</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The time to live for the CDN Endpoint, in seconds. Default is 3600 seconds.
 * `certificate_id`- (Optional) The ID of a DigitalOcean managed TLS certificate used for SSL when a custom subdomain is provided.

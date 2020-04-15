@@ -14,7 +14,7 @@ block_external_search_index: true
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/okta/deprecated/#SignonPolicyRule">SignonPolicyRule</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/okta/deprecated/#SignonPolicyRuleArgs">SignonPolicyRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/okta/deprecated/#SignonPolicyRule">SignonPolicyRule</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/okta/deprecated/#SignonPolicyRuleArgs">SignonPolicyRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -22,7 +22,7 @@ block_external_search_index: true
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewSignonPolicyRule<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/go/okta/deprecated?tab=doc#SignonPolicyRuleArgs">SignonPolicyRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/go/okta/deprecated?tab=doc#SignonPolicyRule">SignonPolicyRule</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewSignonPolicyRule<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/go/okta/deprecated?tab=doc#SignonPolicyRuleArgs">SignonPolicyRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/go/okta/deprecated?tab=doc#SignonPolicyRule">SignonPolicyRule</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -118,96 +118,6 @@ block_external_search_index: true
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Access</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Allow or deny access based on the rule conditions: ALLOW or DENY.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Authtype</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Authentication entrypoint: ANY or RADIUS.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Mfa<wbr>Lifetime</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}Elapsed time before the next MFA challenge
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Mfa<wbr>Prompt</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Prompt for MFA based on the device used, a factor session lifetime, or every sign on attempt: DEVICE, SESSION or ALWAYS
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Mfa<wbr>Remember<wbr>Device</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Remember MFA device.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Mfa<wbr>Required</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Require MFA.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Policy Rule Name
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Network<wbr>Connection</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Network selection mode: ANYWHERE, ZONE, ON_NETWORK, or OFF_NETWORK.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Network<wbr>Excludes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}The zones to exclude
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Network<wbr>Includes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}The zones to include
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Policyid</span>
@@ -219,9 +129,99 @@ block_external_search_index: true
 
     <dt class="property-optional"
             title="Optional">
+        <span>Access</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Allow or deny access based on the rule conditions: ALLOW or DENY.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Authtype</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Authentication entrypoint: ANY or RADIUS.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Mfa<wbr>Lifetime</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Elapsed time before the next MFA challenge
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Mfa<wbr>Prompt</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Prompt for MFA based on the device used, a factor session lifetime, or every sign on attempt: DEVICE, SESSION or ALWAYS
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Mfa<wbr>Remember<wbr>Device</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Remember MFA device.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Mfa<wbr>Required</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Require MFA.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Policy Rule Name
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Network<wbr>Connection</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Network selection mode: ANYWHERE, ZONE, ON_NETWORK, or OFF_NETWORK.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Network<wbr>Excludes</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The zones to exclude
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Network<wbr>Includes</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The zones to include
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Priority</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Policy Rule Priority, this attribute can be set to a valid priority. To avoid endless diff situation we error if an
 invalid priority is provided. API defaults it to the last/lowest if not there.
@@ -231,7 +231,7 @@ invalid priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>Session<wbr>Idle</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Max minutes a session can be idle.
 {{% /md %}}</dd>
@@ -240,7 +240,7 @@ invalid priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>Session<wbr>Lifetime</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Max minutes a session is active: Disable = 0.
 {{% /md %}}</dd>
@@ -249,7 +249,7 @@ invalid priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>Session<wbr>Persistent</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether session cookies will last across browser sessions. Okta Administrators can never have persistent session
 cookies.
@@ -259,7 +259,7 @@ cookies.
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy Rule Status: ACTIVE or INACTIVE.
 {{% /md %}}</dd>
@@ -268,7 +268,7 @@ cookies.
             title="Optional">
         <span>Users<wbr>Excludeds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Set of User IDs to Exclude
 {{% /md %}}</dd>
@@ -280,11 +280,20 @@ cookies.
 {{% choosable language go %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Policyid</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Policy ID of the Rule
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Access</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Allow or deny access based on the rule conditions: ALLOW or DENY.
 {{% /md %}}</dd>
@@ -293,7 +302,7 @@ cookies.
             title="Optional">
         <span>Authtype</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Authentication entrypoint: ANY or RADIUS.
 {{% /md %}}</dd>
@@ -302,7 +311,7 @@ cookies.
             title="Optional">
         <span>Mfa<wbr>Lifetime</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Elapsed time before the next MFA challenge
 {{% /md %}}</dd>
@@ -311,7 +320,7 @@ cookies.
             title="Optional">
         <span>Mfa<wbr>Prompt</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Prompt for MFA based on the device used, a factor session lifetime, or every sign on attempt: DEVICE, SESSION or ALWAYS
 {{% /md %}}</dd>
@@ -320,7 +329,7 @@ cookies.
             title="Optional">
         <span>Mfa<wbr>Remember<wbr>Device</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Remember MFA device.
 {{% /md %}}</dd>
@@ -329,7 +338,7 @@ cookies.
             title="Optional">
         <span>Mfa<wbr>Required</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Require MFA.
 {{% /md %}}</dd>
@@ -338,7 +347,7 @@ cookies.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy Rule Name
 {{% /md %}}</dd>
@@ -347,7 +356,7 @@ cookies.
             title="Optional">
         <span>Network<wbr>Connection</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Network selection mode: ANYWHERE, ZONE, ON_NETWORK, or OFF_NETWORK.
 {{% /md %}}</dd>
@@ -370,20 +379,11 @@ cookies.
     <dd>{{% md %}}The zones to include
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>Policyid</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Policy ID of the Rule
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>Priority</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Policy Rule Priority, this attribute can be set to a valid priority. To avoid endless diff situation we error if an
 invalid priority is provided. API defaults it to the last/lowest if not there.
@@ -393,7 +393,7 @@ invalid priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>Session<wbr>Idle</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Max minutes a session can be idle.
 {{% /md %}}</dd>
@@ -402,7 +402,7 @@ invalid priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>Session<wbr>Lifetime</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Max minutes a session is active: Disable = 0.
 {{% /md %}}</dd>
@@ -411,7 +411,7 @@ invalid priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>Session<wbr>Persistent</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether session cookies will last across browser sessions. Okta Administrators can never have persistent session
 cookies.
@@ -421,7 +421,7 @@ cookies.
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy Rule Status: ACTIVE or INACTIVE.
 {{% /md %}}</dd>
@@ -442,96 +442,6 @@ cookies.
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>access</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Allow or deny access based on the rule conditions: ALLOW or DENY.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>authtype</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Authentication entrypoint: ANY or RADIUS.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>mfa<wbr>Lifetime</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}Elapsed time before the next MFA challenge
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>mfa<wbr>Prompt</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Prompt for MFA based on the device used, a factor session lifetime, or every sign on attempt: DEVICE, SESSION or ALWAYS
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>mfa<wbr>Remember<wbr>Device</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Remember MFA device.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>mfa<wbr>Required</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Require MFA.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Policy Rule Name
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>network<wbr>Connection</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Network selection mode: ANYWHERE, ZONE, ON_NETWORK, or OFF_NETWORK.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>network<wbr>Excludes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}The zones to exclude
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>network<wbr>Includes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}The zones to include
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>policyid</span>
@@ -543,9 +453,99 @@ cookies.
 
     <dt class="property-optional"
             title="Optional">
+        <span>access</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Allow or deny access based on the rule conditions: ALLOW or DENY.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>authtype</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Authentication entrypoint: ANY or RADIUS.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>mfa<wbr>Lifetime</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Elapsed time before the next MFA challenge
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>mfa<wbr>Prompt</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Prompt for MFA based on the device used, a factor session lifetime, or every sign on attempt: DEVICE, SESSION or ALWAYS
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>mfa<wbr>Remember<wbr>Device</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Remember MFA device.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>mfa<wbr>Required</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Require MFA.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Policy Rule Name
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>network<wbr>Connection</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Network selection mode: ANYWHERE, ZONE, ON_NETWORK, or OFF_NETWORK.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>network<wbr>Excludes</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}The zones to exclude
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>network<wbr>Includes</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}The zones to include
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>priority</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Policy Rule Priority, this attribute can be set to a valid priority. To avoid endless diff situation we error if an
 invalid priority is provided. API defaults it to the last/lowest if not there.
@@ -555,7 +555,7 @@ invalid priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>session<wbr>Idle</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Max minutes a session can be idle.
 {{% /md %}}</dd>
@@ -564,7 +564,7 @@ invalid priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>session<wbr>Lifetime</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Max minutes a session is active: Disable = 0.
 {{% /md %}}</dd>
@@ -573,7 +573,7 @@ invalid priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>session<wbr>Persistent</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether session cookies will last across browser sessions. Okta Administrators can never have persistent session
 cookies.
@@ -583,7 +583,7 @@ cookies.
             title="Optional">
         <span>status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy Rule Status: ACTIVE or INACTIVE.
 {{% /md %}}</dd>
@@ -592,7 +592,7 @@ cookies.
             title="Optional">
         <span>users<wbr>Excludeds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Set of User IDs to Exclude
 {{% /md %}}</dd>
@@ -603,6 +603,15 @@ cookies.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>policyid</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Policy ID of the Rule
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -694,15 +703,6 @@ cookies.
     <dd>{{% md %}}The zones to include
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>policyid</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Policy ID of the Rule
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>priority</span>
@@ -763,664 +763,6 @@ cookies.
 {{% /choosable %}}
 
 
-
-
-
-
-
-## SignonPolicyRule Output Properties
-
-The following output properties are available:
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Access</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Allow or deny access based on the rule conditions: ALLOW or DENY.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Authtype</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Authentication entrypoint: ANY or RADIUS.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Mfa<wbr>Lifetime</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}Elapsed time before the next MFA challenge
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Mfa<wbr>Prompt</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Prompt for MFA based on the device used, a factor session lifetime, or every sign on attempt: DEVICE, SESSION or ALWAYS
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Mfa<wbr>Remember<wbr>Device</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Remember MFA device.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Mfa<wbr>Required</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Require MFA.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Policy Rule Name
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Network<wbr>Connection</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Network selection mode: ANYWHERE, ZONE, ON_NETWORK, or OFF_NETWORK.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Network<wbr>Excludes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}The zones to exclude
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Network<wbr>Includes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}The zones to include
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Policyid</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Policy ID of the Rule
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Priority</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}Policy Rule Priority, this attribute can be set to a valid priority. To avoid endless diff situation we error if an
-invalid priority is provided. API defaults it to the last/lowest if not there.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Session<wbr>Idle</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}Max minutes a session can be idle.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Session<wbr>Lifetime</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}Max minutes a session is active: Disable = 0.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Session<wbr>Persistent</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Whether session cookies will last across browser sessions. Okta Administrators can never have persistent session
-cookies.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Status</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Policy Rule Status: ACTIVE or INACTIVE.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Users<wbr>Excludeds</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}Set of User IDs to Exclude
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Access</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Allow or deny access based on the rule conditions: ALLOW or DENY.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Authtype</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Authentication entrypoint: ANY or RADIUS.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Mfa<wbr>Lifetime</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}Elapsed time before the next MFA challenge
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Mfa<wbr>Prompt</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Prompt for MFA based on the device used, a factor session lifetime, or every sign on attempt: DEVICE, SESSION or ALWAYS
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Mfa<wbr>Remember<wbr>Device</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Remember MFA device.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Mfa<wbr>Required</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Require MFA.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Policy Rule Name
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Network<wbr>Connection</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Network selection mode: ANYWHERE, ZONE, ON_NETWORK, or OFF_NETWORK.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Network<wbr>Excludes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}The zones to exclude
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Network<wbr>Includes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}The zones to include
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Policyid</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Policy ID of the Rule
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Priority</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}Policy Rule Priority, this attribute can be set to a valid priority. To avoid endless diff situation we error if an
-invalid priority is provided. API defaults it to the last/lowest if not there.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Session<wbr>Idle</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}Max minutes a session can be idle.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Session<wbr>Lifetime</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}Max minutes a session is active: Disable = 0.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Session<wbr>Persistent</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Whether session cookies will last across browser sessions. Okta Administrators can never have persistent session
-cookies.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Status</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Policy Rule Status: ACTIVE or INACTIVE.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Users<wbr>Excludeds</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}Set of User IDs to Exclude
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>access</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Allow or deny access based on the rule conditions: ALLOW or DENY.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>authtype</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Authentication entrypoint: ANY or RADIUS.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>mfa<wbr>Lifetime</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}Elapsed time before the next MFA challenge
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>mfa<wbr>Prompt</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Prompt for MFA based on the device used, a factor session lifetime, or every sign on attempt: DEVICE, SESSION or ALWAYS
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>mfa<wbr>Remember<wbr>Device</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Remember MFA device.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>mfa<wbr>Required</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Require MFA.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Policy Rule Name
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>network<wbr>Connection</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Network selection mode: ANYWHERE, ZONE, ON_NETWORK, or OFF_NETWORK.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>network<wbr>Excludes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}The zones to exclude
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>network<wbr>Includes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}The zones to include
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>policyid</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Policy ID of the Rule
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>priority</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}Policy Rule Priority, this attribute can be set to a valid priority. To avoid endless diff situation we error if an
-invalid priority is provided. API defaults it to the last/lowest if not there.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>session<wbr>Idle</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}Max minutes a session can be idle.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>session<wbr>Lifetime</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}Max minutes a session is active: Disable = 0.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>session<wbr>Persistent</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Whether session cookies will last across browser sessions. Okta Administrators can never have persistent session
-cookies.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>status</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Policy Rule Status: ACTIVE or INACTIVE.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>users<wbr>Excludeds</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}Set of User IDs to Exclude
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>access</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Allow or deny access based on the rule conditions: ALLOW or DENY.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>authtype</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Authentication entrypoint: ANY or RADIUS.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>mfa_<wbr>lifetime</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}Elapsed time before the next MFA challenge
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>mfa_<wbr>prompt</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Prompt for MFA based on the device used, a factor session lifetime, or every sign on attempt: DEVICE, SESSION or ALWAYS
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>mfa_<wbr>remember_<wbr>device</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Remember MFA device.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>mfa_<wbr>required</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Require MFA.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Policy Rule Name
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>network_<wbr>connection</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Network selection mode: ANYWHERE, ZONE, ON_NETWORK, or OFF_NETWORK.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>network_<wbr>excludes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}The zones to exclude
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>network_<wbr>includes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}The zones to include
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>policyid</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Policy ID of the Rule
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>priority</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}Policy Rule Priority, this attribute can be set to a valid priority. To avoid endless diff situation we error if an
-invalid priority is provided. API defaults it to the last/lowest if not there.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>session_<wbr>idle</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}Max minutes a session can be idle.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>session_<wbr>lifetime</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}Max minutes a session is active: Disable = 0.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>session_<wbr>persistent</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Whether session cookies will last across browser sessions. Okta Administrators can never have persistent session
-cookies.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>status</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Policy Rule Status: ACTIVE or INACTIVE.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>users_<wbr>excludeds</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}Set of User IDs to Exclude
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
 
 
 
@@ -1558,7 +900,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Access</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Allow or deny access based on the rule conditions: ALLOW or DENY.
 {{% /md %}}</dd>
@@ -1567,7 +909,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Authtype</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Authentication entrypoint: ANY or RADIUS.
 {{% /md %}}</dd>
@@ -1576,7 +918,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Mfa<wbr>Lifetime</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Elapsed time before the next MFA challenge
 {{% /md %}}</dd>
@@ -1585,7 +927,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Mfa<wbr>Prompt</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Prompt for MFA based on the device used, a factor session lifetime, or every sign on attempt: DEVICE, SESSION or ALWAYS
 {{% /md %}}</dd>
@@ -1594,7 +936,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Mfa<wbr>Remember<wbr>Device</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Remember MFA device.
 {{% /md %}}</dd>
@@ -1603,7 +945,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Mfa<wbr>Required</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Require MFA.
 {{% /md %}}</dd>
@@ -1612,7 +954,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy Rule Name
 {{% /md %}}</dd>
@@ -1621,7 +963,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Network<wbr>Connection</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Network selection mode: ANYWHERE, ZONE, ON_NETWORK, or OFF_NETWORK.
 {{% /md %}}</dd>
@@ -1630,7 +972,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Network<wbr>Excludes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The zones to exclude
 {{% /md %}}</dd>
@@ -1639,7 +981,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Network<wbr>Includes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The zones to include
 {{% /md %}}</dd>
@@ -1648,7 +990,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Policyid</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy ID of the Rule
 {{% /md %}}</dd>
@@ -1657,7 +999,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Priority</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Policy Rule Priority, this attribute can be set to a valid priority. To avoid endless diff situation we error if an
 invalid priority is provided. API defaults it to the last/lowest if not there.
@@ -1667,7 +1009,7 @@ invalid priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>Session<wbr>Idle</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Max minutes a session can be idle.
 {{% /md %}}</dd>
@@ -1676,7 +1018,7 @@ invalid priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>Session<wbr>Lifetime</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Max minutes a session is active: Disable = 0.
 {{% /md %}}</dd>
@@ -1685,7 +1027,7 @@ invalid priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>Session<wbr>Persistent</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether session cookies will last across browser sessions. Okta Administrators can never have persistent session
 cookies.
@@ -1695,7 +1037,7 @@ cookies.
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy Rule Status: ACTIVE or INACTIVE.
 {{% /md %}}</dd>
@@ -1704,7 +1046,7 @@ cookies.
             title="Optional">
         <span>Users<wbr>Excludeds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Set of User IDs to Exclude
 {{% /md %}}</dd>
@@ -1720,7 +1062,7 @@ cookies.
             title="Optional">
         <span>Access</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Allow or deny access based on the rule conditions: ALLOW or DENY.
 {{% /md %}}</dd>
@@ -1729,7 +1071,7 @@ cookies.
             title="Optional">
         <span>Authtype</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Authentication entrypoint: ANY or RADIUS.
 {{% /md %}}</dd>
@@ -1738,7 +1080,7 @@ cookies.
             title="Optional">
         <span>Mfa<wbr>Lifetime</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Elapsed time before the next MFA challenge
 {{% /md %}}</dd>
@@ -1747,7 +1089,7 @@ cookies.
             title="Optional">
         <span>Mfa<wbr>Prompt</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Prompt for MFA based on the device used, a factor session lifetime, or every sign on attempt: DEVICE, SESSION or ALWAYS
 {{% /md %}}</dd>
@@ -1756,7 +1098,7 @@ cookies.
             title="Optional">
         <span>Mfa<wbr>Remember<wbr>Device</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Remember MFA device.
 {{% /md %}}</dd>
@@ -1765,7 +1107,7 @@ cookies.
             title="Optional">
         <span>Mfa<wbr>Required</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Require MFA.
 {{% /md %}}</dd>
@@ -1774,7 +1116,7 @@ cookies.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy Rule Name
 {{% /md %}}</dd>
@@ -1783,7 +1125,7 @@ cookies.
             title="Optional">
         <span>Network<wbr>Connection</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Network selection mode: ANYWHERE, ZONE, ON_NETWORK, or OFF_NETWORK.
 {{% /md %}}</dd>
@@ -1810,7 +1152,7 @@ cookies.
             title="Optional">
         <span>Policyid</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy ID of the Rule
 {{% /md %}}</dd>
@@ -1819,7 +1161,7 @@ cookies.
             title="Optional">
         <span>Priority</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Policy Rule Priority, this attribute can be set to a valid priority. To avoid endless diff situation we error if an
 invalid priority is provided. API defaults it to the last/lowest if not there.
@@ -1829,7 +1171,7 @@ invalid priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>Session<wbr>Idle</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Max minutes a session can be idle.
 {{% /md %}}</dd>
@@ -1838,7 +1180,7 @@ invalid priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>Session<wbr>Lifetime</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Max minutes a session is active: Disable = 0.
 {{% /md %}}</dd>
@@ -1847,7 +1189,7 @@ invalid priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>Session<wbr>Persistent</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether session cookies will last across browser sessions. Okta Administrators can never have persistent session
 cookies.
@@ -1857,7 +1199,7 @@ cookies.
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy Rule Status: ACTIVE or INACTIVE.
 {{% /md %}}</dd>
@@ -1882,7 +1224,7 @@ cookies.
             title="Optional">
         <span>access</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Allow or deny access based on the rule conditions: ALLOW or DENY.
 {{% /md %}}</dd>
@@ -1891,7 +1233,7 @@ cookies.
             title="Optional">
         <span>authtype</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Authentication entrypoint: ANY or RADIUS.
 {{% /md %}}</dd>
@@ -1900,7 +1242,7 @@ cookies.
             title="Optional">
         <span>mfa<wbr>Lifetime</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Elapsed time before the next MFA challenge
 {{% /md %}}</dd>
@@ -1909,7 +1251,7 @@ cookies.
             title="Optional">
         <span>mfa<wbr>Prompt</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Prompt for MFA based on the device used, a factor session lifetime, or every sign on attempt: DEVICE, SESSION or ALWAYS
 {{% /md %}}</dd>
@@ -1918,7 +1260,7 @@ cookies.
             title="Optional">
         <span>mfa<wbr>Remember<wbr>Device</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Remember MFA device.
 {{% /md %}}</dd>
@@ -1927,7 +1269,7 @@ cookies.
             title="Optional">
         <span>mfa<wbr>Required</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Require MFA.
 {{% /md %}}</dd>
@@ -1936,7 +1278,7 @@ cookies.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy Rule Name
 {{% /md %}}</dd>
@@ -1945,7 +1287,7 @@ cookies.
             title="Optional">
         <span>network<wbr>Connection</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Network selection mode: ANYWHERE, ZONE, ON_NETWORK, or OFF_NETWORK.
 {{% /md %}}</dd>
@@ -1954,7 +1296,7 @@ cookies.
             title="Optional">
         <span>network<wbr>Excludes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The zones to exclude
 {{% /md %}}</dd>
@@ -1963,7 +1305,7 @@ cookies.
             title="Optional">
         <span>network<wbr>Includes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The zones to include
 {{% /md %}}</dd>
@@ -1972,7 +1314,7 @@ cookies.
             title="Optional">
         <span>policyid</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy ID of the Rule
 {{% /md %}}</dd>
@@ -1981,7 +1323,7 @@ cookies.
             title="Optional">
         <span>priority</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Policy Rule Priority, this attribute can be set to a valid priority. To avoid endless diff situation we error if an
 invalid priority is provided. API defaults it to the last/lowest if not there.
@@ -1991,7 +1333,7 @@ invalid priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>session<wbr>Idle</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Max minutes a session can be idle.
 {{% /md %}}</dd>
@@ -2000,7 +1342,7 @@ invalid priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>session<wbr>Lifetime</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Max minutes a session is active: Disable = 0.
 {{% /md %}}</dd>
@@ -2009,7 +1351,7 @@ invalid priority is provided. API defaults it to the last/lowest if not there.
             title="Optional">
         <span>session<wbr>Persistent</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether session cookies will last across browser sessions. Okta Administrators can never have persistent session
 cookies.
@@ -2019,7 +1361,7 @@ cookies.
             title="Optional">
         <span>status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy Rule Status: ACTIVE or INACTIVE.
 {{% /md %}}</dd>
@@ -2028,7 +1370,7 @@ cookies.
             title="Optional">
         <span>users<wbr>Excludeds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Set of User IDs to Exclude
 {{% /md %}}</dd>

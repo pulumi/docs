@@ -40,7 +40,7 @@ const testTopicPermissions = new rabbitmq.TopicPermissions("test", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/rabbitmq/#TopicPermissions">TopicPermissions</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/rabbitmq/#TopicPermissionsArgs">TopicPermissionsArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/rabbitmq/#TopicPermissions">TopicPermissions</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/rabbitmq/#TopicPermissionsArgs">TopicPermissionsArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -48,11 +48,11 @@ const testTopicPermissions = new rabbitmq.TopicPermissions("test", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewTopicPermissions<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rabbitmq/sdk/go/rabbitmq/?tab=doc#TopicPermissionsArgs">TopicPermissionsArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rabbitmq/sdk/go/rabbitmq/?tab=doc#TopicPermissions">TopicPermissions</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewTopicPermissions<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rabbitmq/sdk/go/rabbitmq/?tab=doc#TopicPermissionsArgs">TopicPermissionsArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rabbitmq/sdk/go/rabbitmq/?tab=doc#TopicPermissions">TopicPermissions</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rabbitmq/Pulumi.Rabbitmq..TopicPermissions.html">TopicPermissions</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rabbitmq/Pulumi.Rabbitmq.TopicPermissionsArgs.html">TopicPermissionsArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rabbitmq/Pulumi.Rabbitmq.TopicPermissions.html">TopicPermissions</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rabbitmq/Pulumi.RabbitMQ.TopicPermissionsArgs.html">TopicPermissionsArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -148,7 +148,7 @@ const testTopicPermissions = new rabbitmq.TopicPermissions("test", {
             title="Required">
         <span>Permissions</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicpermissionspermission">List&lt;Topic<wbr>Permissions<wbr>Permission<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#topicpermissionspermission">List&lt;Pulumi.<wbr>Rabbit<wbr>MQ.<wbr>Inputs.<wbr>Topic<wbr>Permissions<wbr>Permission<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The settings of the permissions. The structure is
 described below.
@@ -167,7 +167,7 @@ described below.
             title="Optional">
         <span>Vhost</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The vhost to create the resource in.
 {{% /md %}}</dd>
@@ -202,7 +202,7 @@ described below.
             title="Optional">
         <span>Vhost</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The vhost to create the resource in.
 {{% /md %}}</dd>
@@ -237,7 +237,7 @@ described below.
             title="Optional">
         <span>vhost</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The vhost to create the resource in.
 {{% /md %}}</dd>
@@ -281,156 +281,6 @@ described below.
 {{% /choosable %}}
 
 
-
-
-
-
-
-## TopicPermissions Output Properties
-
-The following output properties are available:
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Permissions</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicpermissionspermission">List&lt;Topic<wbr>Permissions<wbr>Permission&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}The settings of the permissions. The structure is
-described below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>User</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The user to apply the permissions to.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Vhost</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The vhost to create the resource in.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Permissions</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicpermissionspermission">[]Topic<wbr>Permissions<wbr>Permission</a></span>
-    </dt>
-    <dd>{{% md %}}The settings of the permissions. The structure is
-described below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>User</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The user to apply the permissions to.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Vhost</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The vhost to create the resource in.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>permissions</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicpermissionspermission">Topic<wbr>Permissions<wbr>Permission[]</a></span>
-    </dt>
-    <dd>{{% md %}}The settings of the permissions. The structure is
-described below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>user</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The user to apply the permissions to.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>vhost</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The vhost to create the resource in.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>permissions</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicpermissionspermission">List[Topic<wbr>Permissions<wbr>Permission]</a></span>
-    </dt>
-    <dd>{{% md %}}The settings of the permissions. The structure is
-described below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>user</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The user to apply the permissions to.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>vhost</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The vhost to create the resource in.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
 
 
 
@@ -458,7 +308,7 @@ Get an existing TopicPermissions resource's state with the given name, ID, and o
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rabbitmq/Pulumi.Rabbitmq..TopicPermissions.html">TopicPermissions</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rabbitmq/Pulumi.Rabbitmq..TopicPermissionsState.html">TopicPermissionsState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rabbitmq/Pulumi.Rabbitmq.TopicPermissions.html">TopicPermissions</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rabbitmq/Pulumi.Rabbitmq..TopicPermissionsState.html">TopicPermissionsState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -568,7 +418,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Permissions</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicpermissionspermission">List&lt;Topic<wbr>Permissions<wbr>Permission<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#topicpermissionspermission">List&lt;Pulumi.<wbr>Rabbit<wbr>MQ.<wbr>Inputs.<wbr>Topic<wbr>Permissions<wbr>Permission<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The settings of the permissions. The structure is
 described below.
@@ -578,7 +428,7 @@ described below.
             title="Optional">
         <span>User</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user to apply the permissions to.
 {{% /md %}}</dd>
@@ -587,7 +437,7 @@ described below.
             title="Optional">
         <span>Vhost</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The vhost to create the resource in.
 {{% /md %}}</dd>
@@ -613,7 +463,7 @@ described below.
             title="Optional">
         <span>User</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user to apply the permissions to.
 {{% /md %}}</dd>
@@ -622,7 +472,7 @@ described below.
             title="Optional">
         <span>Vhost</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The vhost to create the resource in.
 {{% /md %}}</dd>
@@ -638,7 +488,7 @@ described below.
             title="Optional">
         <span>permissions</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#topicpermissionspermission">Topic<wbr>Permissions<wbr>Permission[]?</a></span>
+        <span class="property-type"><a href="#topicpermissionspermission">Topic<wbr>Permissions<wbr>Permission[]</a></span>
     </dt>
     <dd>{{% md %}}The settings of the permissions. The structure is
 described below.
@@ -648,7 +498,7 @@ described below.
             title="Optional">
         <span>user</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user to apply the permissions to.
 {{% /md %}}</dd>
@@ -657,7 +507,7 @@ described below.
             title="Optional">
         <span>vhost</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The vhost to create the resource in.
 {{% /md %}}</dd>

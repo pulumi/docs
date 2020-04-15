@@ -45,13 +45,13 @@ export const firstRouterInterfaceId = routerInterfacesDs.interfaces[0].id;
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupRouterInterfaces<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/vpc?tab=doc#LookupRouterInterfacesArgs">LookupRouterInterfacesArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/vpc?tab=doc#LookupRouterInterfacesResult">LookupRouterInterfacesResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupRouterInterfaces<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/vpc?tab=doc#LookupRouterInterfacesArgs">LookupRouterInterfacesArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/vpc?tab=doc#LookupRouterInterfacesResult">LookupRouterInterfacesResult</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetRouterInterfaces </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.Vpc.GetRouterInterfacesResult.html">GetRouterInterfacesResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.Vpc.GetRouterInterfacesArgs.html">GetRouterInterfacesArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.Vpc.GetRouterInterfacesResult.html">GetRouterInterfacesResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.AliCloud.Vpc.GetRouterInterfacesArgs.html">GetRouterInterfacesArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -68,7 +68,7 @@ The following arguments are supported:
             title="Optional">
         <span>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of router interface IDs.
 {{% /md %}}</dd>
@@ -77,7 +77,7 @@ The following arguments are supported:
             title="Optional">
         <span>Name<wbr>Regex</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A regex string used to filter by router interface name.
 {{% /md %}}</dd>
@@ -86,7 +86,7 @@ The following arguments are supported:
             title="Optional">
         <span>Opposite<wbr>Interface<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the peer router interface.
 {{% /md %}}</dd>
@@ -95,7 +95,7 @@ The following arguments are supported:
             title="Optional">
         <span>Opposite<wbr>Interface<wbr>Owner<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Account ID of the owner of the peer router interface.
 {{% /md %}}</dd>
@@ -104,7 +104,7 @@ The following arguments are supported:
             title="Optional">
         <span>Output<wbr>File</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -112,7 +112,7 @@ The following arguments are supported:
             title="Optional">
         <span>Role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Role of the router interface. Valid values are `InitiatingSide` (connection initiator) and 
 `AcceptingSide` (connection receiver). The value of this parameter must be `InitiatingSide` if the `router_type` is set to `VBR`.
@@ -122,7 +122,7 @@ The following arguments are supported:
             title="Optional">
         <span>Router<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the VRouter located in the local region.
 {{% /md %}}</dd>
@@ -131,7 +131,7 @@ The following arguments are supported:
             title="Optional">
         <span>Router<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Router type in the local region. Valid values are `VRouter` and `VBR` (physical connection).
 {{% /md %}}</dd>
@@ -140,7 +140,7 @@ The following arguments are supported:
             title="Optional">
         <span>Specification</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specification of the link, such as `Small.1` (10Mb), `Middle.1` (100Mb), `Large.2` (2Gb), ...etc.
 {{% /md %}}</dd>
@@ -149,7 +149,7 @@ The following arguments are supported:
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Expected status. Valid values are `Active`, `Inactive` and `Idle`.
 {{% /md %}}</dd>
@@ -174,7 +174,7 @@ The following arguments are supported:
             title="Optional">
         <span>Name<wbr>Regex</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A regex string used to filter by router interface name.
 {{% /md %}}</dd>
@@ -183,7 +183,7 @@ The following arguments are supported:
             title="Optional">
         <span>Opposite<wbr>Interface<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the peer router interface.
 {{% /md %}}</dd>
@@ -192,7 +192,7 @@ The following arguments are supported:
             title="Optional">
         <span>Opposite<wbr>Interface<wbr>Owner<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Account ID of the owner of the peer router interface.
 {{% /md %}}</dd>
@@ -201,7 +201,7 @@ The following arguments are supported:
             title="Optional">
         <span>Output<wbr>File</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -209,7 +209,7 @@ The following arguments are supported:
             title="Optional">
         <span>Role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Role of the router interface. Valid values are `InitiatingSide` (connection initiator) and 
 `AcceptingSide` (connection receiver). The value of this parameter must be `InitiatingSide` if the `router_type` is set to `VBR`.
@@ -219,7 +219,7 @@ The following arguments are supported:
             title="Optional">
         <span>Router<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the VRouter located in the local region.
 {{% /md %}}</dd>
@@ -228,7 +228,7 @@ The following arguments are supported:
             title="Optional">
         <span>Router<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Router type in the local region. Valid values are `VRouter` and `VBR` (physical connection).
 {{% /md %}}</dd>
@@ -237,7 +237,7 @@ The following arguments are supported:
             title="Optional">
         <span>Specification</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specification of the link, such as `Small.1` (10Mb), `Middle.1` (100Mb), `Large.2` (2Gb), ...etc.
 {{% /md %}}</dd>
@@ -246,7 +246,7 @@ The following arguments are supported:
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Expected status. Valid values are `Active`, `Inactive` and `Idle`.
 {{% /md %}}</dd>
@@ -262,7 +262,7 @@ The following arguments are supported:
             title="Optional">
         <span>ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of router interface IDs.
 {{% /md %}}</dd>
@@ -271,7 +271,7 @@ The following arguments are supported:
             title="Optional">
         <span>name<wbr>Regex</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A regex string used to filter by router interface name.
 {{% /md %}}</dd>
@@ -280,7 +280,7 @@ The following arguments are supported:
             title="Optional">
         <span>opposite<wbr>Interface<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the peer router interface.
 {{% /md %}}</dd>
@@ -289,7 +289,7 @@ The following arguments are supported:
             title="Optional">
         <span>opposite<wbr>Interface<wbr>Owner<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Account ID of the owner of the peer router interface.
 {{% /md %}}</dd>
@@ -298,7 +298,7 @@ The following arguments are supported:
             title="Optional">
         <span>output<wbr>File</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -306,7 +306,7 @@ The following arguments are supported:
             title="Optional">
         <span>role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Role of the router interface. Valid values are `InitiatingSide` (connection initiator) and 
 `AcceptingSide` (connection receiver). The value of this parameter must be `InitiatingSide` if the `router_type` is set to `VBR`.
@@ -316,7 +316,7 @@ The following arguments are supported:
             title="Optional">
         <span>router<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the VRouter located in the local region.
 {{% /md %}}</dd>
@@ -325,7 +325,7 @@ The following arguments are supported:
             title="Optional">
         <span>router<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Router type in the local region. Valid values are `VRouter` and `VBR` (physical connection).
 {{% /md %}}</dd>
@@ -334,7 +334,7 @@ The following arguments are supported:
             title="Optional">
         <span>specification</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specification of the link, such as `Small.1` (10Mb), `Middle.1` (100Mb), `Large.2` (2Gb), ...etc.
 {{% /md %}}</dd>
@@ -343,7 +343,7 @@ The following arguments are supported:
             title="Optional">
         <span>status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Expected status. Valid values are `Active`, `Inactive` and `Idle`.
 {{% /md %}}</dd>
@@ -478,7 +478,7 @@ The following output properties are available:
             title="">
         <span>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of router interface IDs.
 {{% /md %}}</dd>
@@ -487,33 +487,33 @@ The following output properties are available:
             title="">
         <span>Interfaces</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getrouterinterfacesinterface">List&lt;Get<wbr>Router<wbr>Interfaces<wbr>Interface&gt;</a></span>
+        <span class="property-type"><a href="#getrouterinterfacesinterface">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Vpc.<wbr>Outputs.<wbr>Get<wbr>Router<wbr>Interfaces<wbr>Interface&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of router interfaces. Each element contains the following attributes:
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>Name<wbr>Regex</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Names</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of router interface names.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
+        <span>Name<wbr>Regex</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Opposite<wbr>Interface<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Peer router interface ID.
 {{% /md %}}</dd>
@@ -522,7 +522,7 @@ The following output properties are available:
             title="">
         <span>Opposite<wbr>Interface<wbr>Owner<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Account ID of the owner of the peer router interface.
 {{% /md %}}</dd>
@@ -531,7 +531,7 @@ The following output properties are available:
             title="">
         <span>Output<wbr>File</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -539,7 +539,7 @@ The following output properties are available:
             title="">
         <span>Role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Router interface role. Possible values: `InitiatingSide` and `AcceptingSide`.
 {{% /md %}}</dd>
@@ -548,7 +548,7 @@ The following output properties are available:
             title="">
         <span>Router<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the VRouter located in the local region.
 {{% /md %}}</dd>
@@ -557,7 +557,7 @@ The following output properties are available:
             title="">
         <span>Router<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Router type in the local region. Possible values: `VRouter` and `VBR`.
 {{% /md %}}</dd>
@@ -566,7 +566,7 @@ The following output properties are available:
             title="">
         <span>Specification</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Router interface specification. Possible values: `Small.1`, `Middle.1`, `Large.2`, ...etc.
 {{% /md %}}</dd>
@@ -575,7 +575,7 @@ The following output properties are available:
             title="">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Router interface status. Possible values: `Active`, `Inactive` and `Idle`.
 {{% /md %}}</dd>
@@ -616,14 +616,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Name<wbr>Regex</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Names</span>
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
@@ -633,9 +625,17 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>Name<wbr>Regex</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Opposite<wbr>Interface<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Peer router interface ID.
 {{% /md %}}</dd>
@@ -644,7 +644,7 @@ The following output properties are available:
             title="">
         <span>Opposite<wbr>Interface<wbr>Owner<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Account ID of the owner of the peer router interface.
 {{% /md %}}</dd>
@@ -653,7 +653,7 @@ The following output properties are available:
             title="">
         <span>Output<wbr>File</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -661,7 +661,7 @@ The following output properties are available:
             title="">
         <span>Role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Router interface role. Possible values: `InitiatingSide` and `AcceptingSide`.
 {{% /md %}}</dd>
@@ -670,7 +670,7 @@ The following output properties are available:
             title="">
         <span>Router<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the VRouter located in the local region.
 {{% /md %}}</dd>
@@ -679,7 +679,7 @@ The following output properties are available:
             title="">
         <span>Router<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Router type in the local region. Possible values: `VRouter` and `VBR`.
 {{% /md %}}</dd>
@@ -688,7 +688,7 @@ The following output properties are available:
             title="">
         <span>Specification</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Router interface specification. Possible values: `Small.1`, `Middle.1`, `Large.2`, ...etc.
 {{% /md %}}</dd>
@@ -697,7 +697,7 @@ The following output properties are available:
             title="">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Router interface status. Possible values: `Active`, `Inactive` and `Idle`.
 {{% /md %}}</dd>
@@ -738,14 +738,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>name<wbr>Regex</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>names</span>
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
@@ -755,9 +747,17 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>name<wbr>Regex</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>opposite<wbr>Interface<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Peer router interface ID.
 {{% /md %}}</dd>
@@ -766,7 +766,7 @@ The following output properties are available:
             title="">
         <span>opposite<wbr>Interface<wbr>Owner<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Account ID of the owner of the peer router interface.
 {{% /md %}}</dd>
@@ -775,7 +775,7 @@ The following output properties are available:
             title="">
         <span>output<wbr>File</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -783,7 +783,7 @@ The following output properties are available:
             title="">
         <span>role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Router interface role. Possible values: `InitiatingSide` and `AcceptingSide`.
 {{% /md %}}</dd>
@@ -792,7 +792,7 @@ The following output properties are available:
             title="">
         <span>router<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the VRouter located in the local region.
 {{% /md %}}</dd>
@@ -801,7 +801,7 @@ The following output properties are available:
             title="">
         <span>router<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Router type in the local region. Possible values: `VRouter` and `VBR`.
 {{% /md %}}</dd>
@@ -810,7 +810,7 @@ The following output properties are available:
             title="">
         <span>specification</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Router interface specification. Possible values: `Small.1`, `Middle.1`, `Large.2`, ...etc.
 {{% /md %}}</dd>
@@ -819,7 +819,7 @@ The following output properties are available:
             title="">
         <span>status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Router interface status. Possible values: `Active`, `Inactive` and `Idle`.
 {{% /md %}}</dd>
@@ -860,20 +860,20 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>name_<wbr>regex</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>names</span>
         <span class="property-indicator"></span>
         <span class="property-type">List[str]</span>
     </dt>
     <dd>{{% md %}}A list of router interface names.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>name_<wbr>regex</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">

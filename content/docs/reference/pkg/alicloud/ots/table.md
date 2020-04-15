@@ -14,7 +14,7 @@ block_external_search_index: true
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/ots/#Table">Table</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/ots/#TableArgs">TableArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/ots/#Table">Table</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/ots/#TableArgs">TableArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -22,11 +22,11 @@ block_external_search_index: true
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewTable<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/ots?tab=doc#TableArgs">TableArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/ots?tab=doc#Table">Table</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewTable<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/ots?tab=doc#TableArgs">TableArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/ots?tab=doc#Table">Table</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.Ots.Table.html">Table</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.Ots.TableArgs.html">TableArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.Ots.Table.html">Table</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.AliCloud.Ots.TableArgs.html">TableArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -118,15 +118,6 @@ block_external_search_index: true
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Deviation<wbr>Cell<wbr>Version<wbr>In<wbr>Sec</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The max version offset of the table. The valid value is 1-9223372036854775807. Defaults to 86400.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Instance<wbr>Name</span>
@@ -149,7 +140,7 @@ block_external_search_index: true
             title="Required">
         <span>Primary<wbr>Keys</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tableprimarykey">List&lt;Table<wbr>Primary<wbr>Key<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#tableprimarykey">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Ots.<wbr>Inputs.<wbr>Table<wbr>Primary<wbr>Key<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The property of `TableMeta` which indicates the structure information of a table. It describes the attribute value of primary key. The number of `primary_key` should not be less than one and not be more than four.
 {{% /md %}}</dd>
@@ -172,21 +163,21 @@ block_external_search_index: true
     <dd>{{% md %}}The retention time of data stored in this table (unit: second). The value maximum is 2147483647 and -1 means never expired.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>Deviation<wbr>Cell<wbr>Version<wbr>In<wbr>Sec</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The max version offset of the table. The valid value is 1-9223372036854775807. Defaults to 86400.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Deviation<wbr>Cell<wbr>Version<wbr>In<wbr>Sec</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The max version offset of the table. The valid value is 1-9223372036854775807. Defaults to 86400.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -233,21 +224,21 @@ block_external_search_index: true
     <dd>{{% md %}}The retention time of data stored in this table (unit: second). The value maximum is 2147483647 and -1 means never expired.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>Deviation<wbr>Cell<wbr>Version<wbr>In<wbr>Sec</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The max version offset of the table. The valid value is 1-9223372036854775807. Defaults to 86400.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>deviation<wbr>Cell<wbr>Version<wbr>In<wbr>Sec</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The max version offset of the table. The valid value is 1-9223372036854775807. Defaults to 86400.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -294,12 +285,66 @@ block_external_search_index: true
     <dd>{{% md %}}The retention time of data stored in this table (unit: second). The value maximum is 2147483647 and -1 means never expired.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>deviation<wbr>Cell<wbr>Version<wbr>In<wbr>Sec</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The max version offset of the table. The valid value is 1-9223372036854775807. Defaults to 86400.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>instance_<wbr>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the OTS instance in which table will located.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>max_<wbr>version</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}The maximum number of versions stored in this table. The valid value is 1-2147483647.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>primary_<wbr>keys</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#tableprimarykey">List[Table<wbr>Primary<wbr>Key]</a></span>
+    </dt>
+    <dd>{{% md %}}The property of `TableMeta` which indicates the structure information of a table. It describes the attribute value of primary key. The number of `primary_key` should not be less than one and not be more than four.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>table_<wbr>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The table name of the OTS instance. If changed, a new table would be created.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>time_<wbr>to_<wbr>live</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}The retention time of data stored in this table (unit: second). The value maximum is 2147483647 and -1 means never expired.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -310,309 +355,10 @@ block_external_search_index: true
     <dd>{{% md %}}The max version offset of the table. The valid value is 1-9223372036854775807. Defaults to 86400.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>instance_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the OTS instance in which table will located.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>max_<wbr>version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The maximum number of versions stored in this table. The valid value is 1-2147483647.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>primary_<wbr>keys</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tableprimarykey">List[Table<wbr>Primary<wbr>Key]</a></span>
-    </dt>
-    <dd>{{% md %}}The property of `TableMeta` which indicates the structure information of a table. It describes the attribute value of primary key. The number of `primary_key` should not be less than one and not be more than four.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>table_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The table name of the OTS instance. If changed, a new table would be created.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>time_<wbr>to_<wbr>live</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The retention time of data stored in this table (unit: second). The value maximum is 2147483647 and -1 means never expired.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
-
-
-
-
-
-## Table Output Properties
-
-The following output properties are available:
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Deviation<wbr>Cell<wbr>Version<wbr>In<wbr>Sec</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The max version offset of the table. The valid value is 1-9223372036854775807. Defaults to 86400.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Instance<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the OTS instance in which table will located.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Max<wbr>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The maximum number of versions stored in this table. The valid value is 1-2147483647.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Primary<wbr>Keys</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tableprimarykey">List&lt;Table<wbr>Primary<wbr>Key&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}The property of `TableMeta` which indicates the structure information of a table. It describes the attribute value of primary key. The number of `primary_key` should not be less than one and not be more than four.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Table<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The table name of the OTS instance. If changed, a new table would be created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Time<wbr>To<wbr>Live</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The retention time of data stored in this table (unit: second). The value maximum is 2147483647 and -1 means never expired.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Deviation<wbr>Cell<wbr>Version<wbr>In<wbr>Sec</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The max version offset of the table. The valid value is 1-9223372036854775807. Defaults to 86400.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Instance<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the OTS instance in which table will located.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Max<wbr>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The maximum number of versions stored in this table. The valid value is 1-2147483647.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Primary<wbr>Keys</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tableprimarykey">[]Table<wbr>Primary<wbr>Key</a></span>
-    </dt>
-    <dd>{{% md %}}The property of `TableMeta` which indicates the structure information of a table. It describes the attribute value of primary key. The number of `primary_key` should not be less than one and not be more than four.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Table<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The table name of the OTS instance. If changed, a new table would be created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Time<wbr>To<wbr>Live</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The retention time of data stored in this table (unit: second). The value maximum is 2147483647 and -1 means never expired.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>deviation<wbr>Cell<wbr>Version<wbr>In<wbr>Sec</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The max version offset of the table. The valid value is 1-9223372036854775807. Defaults to 86400.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>instance<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the OTS instance in which table will located.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>max<wbr>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}The maximum number of versions stored in this table. The valid value is 1-2147483647.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>primary<wbr>Keys</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tableprimarykey">Table<wbr>Primary<wbr>Key[]</a></span>
-    </dt>
-    <dd>{{% md %}}The property of `TableMeta` which indicates the structure information of a table. It describes the attribute value of primary key. The number of `primary_key` should not be less than one and not be more than four.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>table<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The table name of the OTS instance. If changed, a new table would be created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>time<wbr>To<wbr>Live</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}The retention time of data stored in this table (unit: second). The value maximum is 2147483647 and -1 means never expired.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>deviation_<wbr>cell_<wbr>version_<wbr>in_<wbr>sec</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The max version offset of the table. The valid value is 1-9223372036854775807. Defaults to 86400.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>instance_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the OTS instance in which table will located.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>max_<wbr>version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The maximum number of versions stored in this table. The valid value is 1-2147483647.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>primary_<wbr>keys</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tableprimarykey">List[Table<wbr>Primary<wbr>Key]</a></span>
-    </dt>
-    <dd>{{% md %}}The property of `TableMeta` which indicates the structure information of a table. It describes the attribute value of primary key. The number of `primary_key` should not be less than one and not be more than four.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>table_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The table name of the OTS instance. If changed, a new table would be created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>time_<wbr>to_<wbr>live</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The retention time of data stored in this table (unit: second). The value maximum is 2147483647 and -1 means never expired.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
 
 
 
@@ -750,7 +496,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Deviation<wbr>Cell<wbr>Version<wbr>In<wbr>Sec</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The max version offset of the table. The valid value is 1-9223372036854775807. Defaults to 86400.
 {{% /md %}}</dd>
@@ -759,7 +505,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Instance<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the OTS instance in which table will located.
 {{% /md %}}</dd>
@@ -768,7 +514,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Max<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of versions stored in this table. The valid value is 1-2147483647.
 {{% /md %}}</dd>
@@ -777,7 +523,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Primary<wbr>Keys</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tableprimarykey">List&lt;Table<wbr>Primary<wbr>Key<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#tableprimarykey">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Ots.<wbr>Inputs.<wbr>Table<wbr>Primary<wbr>Key<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The property of `TableMeta` which indicates the structure information of a table. It describes the attribute value of primary key. The number of `primary_key` should not be less than one and not be more than four.
 {{% /md %}}</dd>
@@ -786,7 +532,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Table<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The table name of the OTS instance. If changed, a new table would be created.
 {{% /md %}}</dd>
@@ -795,7 +541,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Time<wbr>To<wbr>Live</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The retention time of data stored in this table (unit: second). The value maximum is 2147483647 and -1 means never expired.
 {{% /md %}}</dd>
@@ -811,7 +557,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Deviation<wbr>Cell<wbr>Version<wbr>In<wbr>Sec</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The max version offset of the table. The valid value is 1-9223372036854775807. Defaults to 86400.
 {{% /md %}}</dd>
@@ -820,7 +566,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Instance<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the OTS instance in which table will located.
 {{% /md %}}</dd>
@@ -829,7 +575,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Max<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of versions stored in this table. The valid value is 1-2147483647.
 {{% /md %}}</dd>
@@ -847,7 +593,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Table<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The table name of the OTS instance. If changed, a new table would be created.
 {{% /md %}}</dd>
@@ -856,7 +602,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Time<wbr>To<wbr>Live</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The retention time of data stored in this table (unit: second). The value maximum is 2147483647 and -1 means never expired.
 {{% /md %}}</dd>
@@ -872,7 +618,7 @@ The following state arguments are supported:
             title="Optional">
         <span>deviation<wbr>Cell<wbr>Version<wbr>In<wbr>Sec</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The max version offset of the table. The valid value is 1-9223372036854775807. Defaults to 86400.
 {{% /md %}}</dd>
@@ -881,7 +627,7 @@ The following state arguments are supported:
             title="Optional">
         <span>instance<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the OTS instance in which table will located.
 {{% /md %}}</dd>
@@ -890,7 +636,7 @@ The following state arguments are supported:
             title="Optional">
         <span>max<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum number of versions stored in this table. The valid value is 1-2147483647.
 {{% /md %}}</dd>
@@ -899,7 +645,7 @@ The following state arguments are supported:
             title="Optional">
         <span>primary<wbr>Keys</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#tableprimarykey">Table<wbr>Primary<wbr>Key[]?</a></span>
+        <span class="property-type"><a href="#tableprimarykey">Table<wbr>Primary<wbr>Key[]</a></span>
     </dt>
     <dd>{{% md %}}The property of `TableMeta` which indicates the structure information of a table. It describes the attribute value of primary key. The number of `primary_key` should not be less than one and not be more than four.
 {{% /md %}}</dd>
@@ -908,7 +654,7 @@ The following state arguments are supported:
             title="Optional">
         <span>table<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The table name of the OTS instance. If changed, a new table would be created.
 {{% /md %}}</dd>
@@ -917,7 +663,7 @@ The following state arguments are supported:
             title="Optional">
         <span>time<wbr>To<wbr>Live</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The retention time of data stored in this table (unit: second). The value maximum is 2147483647 and -1 means never expired.
 {{% /md %}}</dd>

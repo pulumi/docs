@@ -90,7 +90,7 @@ The following arguments are supported:
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/keycloak/ldap/#UserFederation">UserFederation</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/keycloak/ldap/#UserFederationArgs">UserFederationArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/keycloak/ldap/#UserFederation">UserFederation</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/keycloak/ldap/#UserFederationArgs">UserFederationArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -98,7 +98,7 @@ The following arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewUserFederation<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-keycloak/sdk/go/keycloak/ldap?tab=doc#UserFederationArgs">UserFederationArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-keycloak/sdk/go/keycloak/ldap?tab=doc#UserFederation">UserFederation</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewUserFederation<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-keycloak/sdk/go/keycloak/ldap?tab=doc#UserFederationArgs">UserFederationArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-keycloak/sdk/go/keycloak/ldap?tab=doc#UserFederation">UserFederation</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -194,60 +194,6 @@ The following arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Batch<wbr>Size<wbr>For<wbr>Sync</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}The number of users to sync within a single transaction.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Bind<wbr>Credential</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Password of LDAP admin.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Bind<wbr>Dn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}DN of LDAP admin, which will be used by Keycloak to access LDAP server.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Cache<wbr>Policy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Changed<wbr>Sync<wbr>Period</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}How frequently Keycloak should sync changed LDAP users, in seconds. Omit this property to disable periodic changed users
-sync.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Connection<wbr>Timeout</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}LDAP connection timeout (duration string)
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Connection<wbr>Url</span>
@@ -255,78 +201,6 @@ sync.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Connection URL to the LDAP server.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Custom<wbr>User<wbr>Search<wbr>Filter</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Additional LDAP filter for filtering searched users. Must begin with '(' and end with ')'.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Edit<wbr>Mode</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}READ_ONLY and WRITABLE are self-explanatory. UNSYNCED allows user data to be imported but not synced back to LDAP.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}When false, this provider will not be used when performing queries for users.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Full<wbr>Sync<wbr>Period</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}How frequently Keycloak should sync all LDAP users, in seconds. Omit this property to disable periodic full sync.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Import<wbr>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}When true, LDAP users will be imported into the Keycloak database.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Display name of the provider when displayed in the console.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Pagination</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}When true, Keycloak assumes the LDAP server supports pagination.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Priority</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}Priority of this provider when looking up users. Lower values are first.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -338,15 +212,6 @@ sync.
     <dd>{{% md %}}Name of the LDAP attribute to use as the relative distinguished name.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Read<wbr>Timeout</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}LDAP read timeout (duration string)
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Realm<wbr>Id</span>
@@ -356,37 +221,11 @@ sync.
     <dd>{{% md %}}The realm this provider will provide user federation for.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Search<wbr>Scope</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}ONE_LEVEL: only search for users in the DN specified by user_dn. SUBTREE: search entire LDAP subtree.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Sync<wbr>Registrations</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}When true, newly created users will be synced back to LDAP.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Use<wbr>Truststore<wbr>Spi</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>User<wbr>Object<wbr>Classes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}All values of LDAP objectClass attribute for users in LDAP.
 {{% /md %}}</dd>
@@ -420,9 +259,170 @@ sync.
 
     <dt class="property-optional"
             title="Optional">
+        <span>Batch<wbr>Size<wbr>For<wbr>Sync</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of users to sync within a single transaction.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Bind<wbr>Credential</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Password of LDAP admin.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Bind<wbr>Dn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}DN of LDAP admin, which will be used by Keycloak to access LDAP server.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Cache<wbr>Policy</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Changed<wbr>Sync<wbr>Period</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}How frequently Keycloak should sync changed LDAP users, in seconds. Omit this property to disable periodic changed users
+sync.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Connection<wbr>Timeout</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}LDAP connection timeout (duration string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Custom<wbr>User<wbr>Search<wbr>Filter</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Additional LDAP filter for filtering searched users. Must begin with '(' and end with ')'.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Edit<wbr>Mode</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}READ_ONLY and WRITABLE are self-explanatory. UNSYNCED allows user data to be imported but not synced back to LDAP.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Enabled</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}When false, this provider will not be used when performing queries for users.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Full<wbr>Sync<wbr>Period</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}How frequently Keycloak should sync all LDAP users, in seconds. Omit this property to disable periodic full sync.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Import<wbr>Enabled</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}When true, LDAP users will be imported into the Keycloak database.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Display name of the provider when displayed in the console.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Pagination</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}When true, Keycloak assumes the LDAP server supports pagination.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Priority</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Priority of this provider when looking up users. Lower values are first.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Read<wbr>Timeout</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}LDAP read timeout (duration string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Search<wbr>Scope</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ONE_LEVEL: only search for users in the DN specified by user_dn. SUBTREE: search entire LDAP subtree.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Sync<wbr>Registrations</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}When true, newly created users will be synced back to LDAP.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Use<wbr>Truststore<wbr>Spi</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Validate<wbr>Password<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When true, Keycloak will validate passwords using the realm policy before updating it.
 {{% /md %}}</dd>
@@ -431,7 +431,7 @@ sync.
             title="Optional">
         <span>Vendor</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}LDAP vendor. I am almost certain this field does nothing, but the UI indicates that it is required.
 {{% /md %}}</dd>
@@ -443,60 +443,6 @@ sync.
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Batch<wbr>Size<wbr>For<wbr>Sync</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}The number of users to sync within a single transaction.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Bind<wbr>Credential</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Password of LDAP admin.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Bind<wbr>Dn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}DN of LDAP admin, which will be used by Keycloak to access LDAP server.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Cache<wbr>Policy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Changed<wbr>Sync<wbr>Period</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}How frequently Keycloak should sync changed LDAP users, in seconds. Omit this property to disable periodic changed users
-sync.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Connection<wbr>Timeout</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}LDAP connection timeout (duration string)
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Connection<wbr>Url</span>
@@ -504,78 +450,6 @@ sync.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Connection URL to the LDAP server.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Custom<wbr>User<wbr>Search<wbr>Filter</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Additional LDAP filter for filtering searched users. Must begin with '(' and end with ')'.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Edit<wbr>Mode</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}READ_ONLY and WRITABLE are self-explanatory. UNSYNCED allows user data to be imported but not synced back to LDAP.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}When false, this provider will not be used when performing queries for users.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Full<wbr>Sync<wbr>Period</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}How frequently Keycloak should sync all LDAP users, in seconds. Omit this property to disable periodic full sync.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Import<wbr>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}When true, LDAP users will be imported into the Keycloak database.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Display name of the provider when displayed in the console.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Pagination</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}When true, Keycloak assumes the LDAP server supports pagination.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Priority</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}Priority of this provider when looking up users. Lower values are first.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -587,15 +461,6 @@ sync.
     <dd>{{% md %}}Name of the LDAP attribute to use as the relative distinguished name.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Read<wbr>Timeout</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}LDAP read timeout (duration string)
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Realm<wbr>Id</span>
@@ -604,32 +469,6 @@ sync.
     </dt>
     <dd>{{% md %}}The realm this provider will provide user federation for.
 {{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Search<wbr>Scope</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}ONE_LEVEL: only search for users in the DN specified by user_dn. SUBTREE: search entire LDAP subtree.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Sync<wbr>Registrations</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}When true, newly created users will be synced back to LDAP.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Use<wbr>Truststore<wbr>Spi</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -669,9 +508,170 @@ sync.
 
     <dt class="property-optional"
             title="Optional">
+        <span>Batch<wbr>Size<wbr>For<wbr>Sync</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of users to sync within a single transaction.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Bind<wbr>Credential</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Password of LDAP admin.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Bind<wbr>Dn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}DN of LDAP admin, which will be used by Keycloak to access LDAP server.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Cache<wbr>Policy</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Changed<wbr>Sync<wbr>Period</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}How frequently Keycloak should sync changed LDAP users, in seconds. Omit this property to disable periodic changed users
+sync.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Connection<wbr>Timeout</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}LDAP connection timeout (duration string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Custom<wbr>User<wbr>Search<wbr>Filter</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Additional LDAP filter for filtering searched users. Must begin with '(' and end with ')'.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Edit<wbr>Mode</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}READ_ONLY and WRITABLE are self-explanatory. UNSYNCED allows user data to be imported but not synced back to LDAP.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Enabled</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}When false, this provider will not be used when performing queries for users.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Full<wbr>Sync<wbr>Period</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}How frequently Keycloak should sync all LDAP users, in seconds. Omit this property to disable periodic full sync.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Import<wbr>Enabled</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}When true, LDAP users will be imported into the Keycloak database.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Display name of the provider when displayed in the console.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Pagination</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}When true, Keycloak assumes the LDAP server supports pagination.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Priority</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Priority of this provider when looking up users. Lower values are first.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Read<wbr>Timeout</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}LDAP read timeout (duration string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Search<wbr>Scope</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ONE_LEVEL: only search for users in the DN specified by user_dn. SUBTREE: search entire LDAP subtree.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Sync<wbr>Registrations</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}When true, newly created users will be synced back to LDAP.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Use<wbr>Truststore<wbr>Spi</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Validate<wbr>Password<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When true, Keycloak will validate passwords using the realm policy before updating it.
 {{% /md %}}</dd>
@@ -680,7 +680,7 @@ sync.
             title="Optional">
         <span>Vendor</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}LDAP vendor. I am almost certain this field does nothing, but the UI indicates that it is required.
 {{% /md %}}</dd>
@@ -692,60 +692,6 @@ sync.
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>batch<wbr>Size<wbr>For<wbr>Sync</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}The number of users to sync within a single transaction.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>bind<wbr>Credential</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Password of LDAP admin.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>bind<wbr>Dn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}DN of LDAP admin, which will be used by Keycloak to access LDAP server.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>cache<wbr>Policy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>changed<wbr>Sync<wbr>Period</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}How frequently Keycloak should sync changed LDAP users, in seconds. Omit this property to disable periodic changed users
-sync.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>connection<wbr>Timeout</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}LDAP connection timeout (duration string)
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>connection<wbr>Url</span>
@@ -753,78 +699,6 @@ sync.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Connection URL to the LDAP server.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>custom<wbr>User<wbr>Search<wbr>Filter</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Additional LDAP filter for filtering searched users. Must begin with '(' and end with ')'.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>edit<wbr>Mode</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}READ_ONLY and WRITABLE are self-explanatory. UNSYNCED allows user data to be imported but not synced back to LDAP.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}When false, this provider will not be used when performing queries for users.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>full<wbr>Sync<wbr>Period</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}How frequently Keycloak should sync all LDAP users, in seconds. Omit this property to disable periodic full sync.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>import<wbr>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}When true, LDAP users will be imported into the Keycloak database.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Display name of the provider when displayed in the console.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>pagination</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}When true, Keycloak assumes the LDAP server supports pagination.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>priority</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}Priority of this provider when looking up users. Lower values are first.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -836,15 +710,6 @@ sync.
     <dd>{{% md %}}Name of the LDAP attribute to use as the relative distinguished name.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>read<wbr>Timeout</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}LDAP read timeout (duration string)
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>realm<wbr>Id</span>
@@ -853,32 +718,6 @@ sync.
     </dt>
     <dd>{{% md %}}The realm this provider will provide user federation for.
 {{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>search<wbr>Scope</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}ONE_LEVEL: only search for users in the DN specified by user_dn. SUBTREE: search entire LDAP subtree.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>sync<wbr>Registrations</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}When true, newly created users will be synced back to LDAP.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>use<wbr>Truststore<wbr>Spi</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -918,9 +757,170 @@ sync.
 
     <dt class="property-optional"
             title="Optional">
+        <span>batch<wbr>Size<wbr>For<wbr>Sync</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The number of users to sync within a single transaction.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>bind<wbr>Credential</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Password of LDAP admin.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>bind<wbr>Dn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}DN of LDAP admin, which will be used by Keycloak to access LDAP server.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>cache<wbr>Policy</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>changed<wbr>Sync<wbr>Period</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}How frequently Keycloak should sync changed LDAP users, in seconds. Omit this property to disable periodic changed users
+sync.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>connection<wbr>Timeout</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}LDAP connection timeout (duration string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>custom<wbr>User<wbr>Search<wbr>Filter</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Additional LDAP filter for filtering searched users. Must begin with '(' and end with ')'.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>edit<wbr>Mode</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}READ_ONLY and WRITABLE are self-explanatory. UNSYNCED allows user data to be imported but not synced back to LDAP.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>enabled</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}When false, this provider will not be used when performing queries for users.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>full<wbr>Sync<wbr>Period</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}How frequently Keycloak should sync all LDAP users, in seconds. Omit this property to disable periodic full sync.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>import<wbr>Enabled</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}When true, LDAP users will be imported into the Keycloak database.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Display name of the provider when displayed in the console.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>pagination</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}When true, Keycloak assumes the LDAP server supports pagination.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>priority</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Priority of this provider when looking up users. Lower values are first.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>read<wbr>Timeout</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}LDAP read timeout (duration string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>search<wbr>Scope</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ONE_LEVEL: only search for users in the DN specified by user_dn. SUBTREE: search entire LDAP subtree.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>sync<wbr>Registrations</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}When true, newly created users will be synced back to LDAP.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>use<wbr>Truststore<wbr>Spi</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>validate<wbr>Password<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When true, Keycloak will validate passwords using the realm policy before updating it.
 {{% /md %}}</dd>
@@ -929,7 +929,7 @@ sync.
             title="Optional">
         <span>vendor</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}LDAP vendor. I am almost certain this field does nothing, but the UI indicates that it is required.
 {{% /md %}}</dd>
@@ -940,6 +940,69 @@ sync.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>connection_<wbr>url</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Connection URL to the LDAP server.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>rdn_<wbr>ldap_<wbr>attribute</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Name of the LDAP attribute to use as the relative distinguished name.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>realm_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The realm this provider will provide user federation for.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>user_<wbr>object_<wbr>classes</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List[str]</span>
+    </dt>
+    <dd>{{% md %}}All values of LDAP objectClass attribute for users in LDAP.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>username_<wbr>ldap_<wbr>attribute</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Name of the LDAP attribute to use as the Keycloak username.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>users_<wbr>dn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Full DN of LDAP tree where your users are.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>uuid_<wbr>ldap_<wbr>attribute</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Name of the LDAP attribute to use as a unique object identifier for objects in LDAP.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -993,15 +1056,6 @@ sync.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}LDAP connection timeout (duration string)
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>connection_<wbr>url</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Connection URL to the LDAP server.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1076,15 +1130,6 @@ sync.
     <dd>{{% md %}}Priority of this provider when looking up users. Lower values are first.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>rdn_<wbr>ldap_<wbr>attribute</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Name of the LDAP attribute to use as the relative distinguished name.
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>read_<wbr>timeout</span>
@@ -1092,15 +1137,6 @@ sync.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}LDAP read timeout (duration string)
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>realm_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The realm this provider will provide user federation for.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1129,42 +1165,6 @@ sync.
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>user_<wbr>object_<wbr>classes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}All values of LDAP objectClass attribute for users in LDAP.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>username_<wbr>ldap_<wbr>attribute</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Name of the LDAP attribute to use as the Keycloak username.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>users_<wbr>dn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Full DN of LDAP tree where your users are.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>uuid_<wbr>ldap_<wbr>attribute</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Name of the LDAP attribute to use as a unique object identifier for objects in LDAP.
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>validate_<wbr>password_<wbr>policy</span>
@@ -1187,1012 +1187,6 @@ sync.
 {{% /choosable %}}
 
 
-
-
-
-
-
-## UserFederation Output Properties
-
-The following output properties are available:
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Batch<wbr>Size<wbr>For<wbr>Sync</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}The number of users to sync within a single transaction.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Bind<wbr>Credential</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Password of LDAP admin.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Bind<wbr>Dn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}DN of LDAP admin, which will be used by Keycloak to access LDAP server.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Cache<wbr>Policy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Changed<wbr>Sync<wbr>Period</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}How frequently Keycloak should sync changed LDAP users, in seconds. Omit this property to disable periodic changed users
-sync.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Connection<wbr>Timeout</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}LDAP connection timeout (duration string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Connection<wbr>Url</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Connection URL to the LDAP server.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Custom<wbr>User<wbr>Search<wbr>Filter</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Additional LDAP filter for filtering searched users. Must begin with '(' and end with ')'.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Edit<wbr>Mode</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}READ_ONLY and WRITABLE are self-explanatory. UNSYNCED allows user data to be imported but not synced back to LDAP.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}When false, this provider will not be used when performing queries for users.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Full<wbr>Sync<wbr>Period</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}How frequently Keycloak should sync all LDAP users, in seconds. Omit this property to disable periodic full sync.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Import<wbr>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}When true, LDAP users will be imported into the Keycloak database.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Display name of the provider when displayed in the console.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Pagination</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}When true, Keycloak assumes the LDAP server supports pagination.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Priority</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}Priority of this provider when looking up users. Lower values are first.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Rdn<wbr>Ldap<wbr>Attribute</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the LDAP attribute to use as the relative distinguished name.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Read<wbr>Timeout</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}LDAP read timeout (duration string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Realm<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The realm this provider will provide user federation for.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Search<wbr>Scope</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}ONE_LEVEL: only search for users in the DN specified by user_dn. SUBTREE: search entire LDAP subtree.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Sync<wbr>Registrations</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}When true, newly created users will be synced back to LDAP.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Use<wbr>Truststore<wbr>Spi</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>User<wbr>Object<wbr>Classes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
-    </dt>
-    <dd>{{% md %}}All values of LDAP objectClass attribute for users in LDAP.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Username<wbr>Ldap<wbr>Attribute</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the LDAP attribute to use as the Keycloak username.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Users<wbr>Dn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Full DN of LDAP tree where your users are.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Uuid<wbr>Ldap<wbr>Attribute</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the LDAP attribute to use as a unique object identifier for objects in LDAP.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Validate<wbr>Password<wbr>Policy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}When true, Keycloak will validate passwords using the realm policy before updating it.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Vendor</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}LDAP vendor. I am almost certain this field does nothing, but the UI indicates that it is required.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Batch<wbr>Size<wbr>For<wbr>Sync</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}The number of users to sync within a single transaction.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Bind<wbr>Credential</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Password of LDAP admin.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Bind<wbr>Dn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}DN of LDAP admin, which will be used by Keycloak to access LDAP server.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Cache<wbr>Policy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Changed<wbr>Sync<wbr>Period</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}How frequently Keycloak should sync changed LDAP users, in seconds. Omit this property to disable periodic changed users
-sync.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Connection<wbr>Timeout</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}LDAP connection timeout (duration string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Connection<wbr>Url</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Connection URL to the LDAP server.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Custom<wbr>User<wbr>Search<wbr>Filter</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Additional LDAP filter for filtering searched users. Must begin with '(' and end with ')'.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Edit<wbr>Mode</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}READ_ONLY and WRITABLE are self-explanatory. UNSYNCED allows user data to be imported but not synced back to LDAP.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}When false, this provider will not be used when performing queries for users.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Full<wbr>Sync<wbr>Period</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}How frequently Keycloak should sync all LDAP users, in seconds. Omit this property to disable periodic full sync.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Import<wbr>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}When true, LDAP users will be imported into the Keycloak database.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Display name of the provider when displayed in the console.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Pagination</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}When true, Keycloak assumes the LDAP server supports pagination.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Priority</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}Priority of this provider when looking up users. Lower values are first.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Rdn<wbr>Ldap<wbr>Attribute</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the LDAP attribute to use as the relative distinguished name.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Read<wbr>Timeout</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}LDAP read timeout (duration string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Realm<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The realm this provider will provide user federation for.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Search<wbr>Scope</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}ONE_LEVEL: only search for users in the DN specified by user_dn. SUBTREE: search entire LDAP subtree.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Sync<wbr>Registrations</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}When true, newly created users will be synced back to LDAP.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Use<wbr>Truststore<wbr>Spi</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>User<wbr>Object<wbr>Classes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}All values of LDAP objectClass attribute for users in LDAP.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Username<wbr>Ldap<wbr>Attribute</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the LDAP attribute to use as the Keycloak username.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Users<wbr>Dn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Full DN of LDAP tree where your users are.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Uuid<wbr>Ldap<wbr>Attribute</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the LDAP attribute to use as a unique object identifier for objects in LDAP.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Validate<wbr>Password<wbr>Policy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}When true, Keycloak will validate passwords using the realm policy before updating it.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Vendor</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}LDAP vendor. I am almost certain this field does nothing, but the UI indicates that it is required.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>batch<wbr>Size<wbr>For<wbr>Sync</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}The number of users to sync within a single transaction.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>bind<wbr>Credential</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Password of LDAP admin.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>bind<wbr>Dn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}DN of LDAP admin, which will be used by Keycloak to access LDAP server.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>cache<wbr>Policy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>changed<wbr>Sync<wbr>Period</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}How frequently Keycloak should sync changed LDAP users, in seconds. Omit this property to disable periodic changed users
-sync.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>connection<wbr>Timeout</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}LDAP connection timeout (duration string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>connection<wbr>Url</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Connection URL to the LDAP server.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>custom<wbr>User<wbr>Search<wbr>Filter</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Additional LDAP filter for filtering searched users. Must begin with '(' and end with ')'.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>edit<wbr>Mode</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}READ_ONLY and WRITABLE are self-explanatory. UNSYNCED allows user data to be imported but not synced back to LDAP.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}When false, this provider will not be used when performing queries for users.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>full<wbr>Sync<wbr>Period</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}How frequently Keycloak should sync all LDAP users, in seconds. Omit this property to disable periodic full sync.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>import<wbr>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}When true, LDAP users will be imported into the Keycloak database.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Display name of the provider when displayed in the console.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>pagination</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}When true, Keycloak assumes the LDAP server supports pagination.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>priority</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}Priority of this provider when looking up users. Lower values are first.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>rdn<wbr>Ldap<wbr>Attribute</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the LDAP attribute to use as the relative distinguished name.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>read<wbr>Timeout</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}LDAP read timeout (duration string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>realm<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The realm this provider will provide user federation for.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>search<wbr>Scope</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}ONE_LEVEL: only search for users in the DN specified by user_dn. SUBTREE: search entire LDAP subtree.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>sync<wbr>Registrations</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}When true, newly created users will be synced back to LDAP.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>use<wbr>Truststore<wbr>Spi</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>user<wbr>Object<wbr>Classes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
-    </dt>
-    <dd>{{% md %}}All values of LDAP objectClass attribute for users in LDAP.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>username<wbr>Ldap<wbr>Attribute</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the LDAP attribute to use as the Keycloak username.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>users<wbr>Dn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Full DN of LDAP tree where your users are.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>uuid<wbr>Ldap<wbr>Attribute</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the LDAP attribute to use as a unique object identifier for objects in LDAP.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>validate<wbr>Password<wbr>Policy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}When true, Keycloak will validate passwords using the realm policy before updating it.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>vendor</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}LDAP vendor. I am almost certain this field does nothing, but the UI indicates that it is required.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>batch_<wbr>size_<wbr>for_<wbr>sync</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The number of users to sync within a single transaction.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>bind_<wbr>credential</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Password of LDAP admin.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>bind_<wbr>dn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}DN of LDAP admin, which will be used by Keycloak to access LDAP server.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>cache_<wbr>policy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>changed_<wbr>sync_<wbr>period</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}How frequently Keycloak should sync changed LDAP users, in seconds. Omit this property to disable periodic changed users
-sync.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>connection_<wbr>timeout</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}LDAP connection timeout (duration string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>connection_<wbr>url</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Connection URL to the LDAP server.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>custom_<wbr>user_<wbr>search_<wbr>filter</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Additional LDAP filter for filtering searched users. Must begin with '(' and end with ')'.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>edit_<wbr>mode</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}READ_ONLY and WRITABLE are self-explanatory. UNSYNCED allows user data to be imported but not synced back to LDAP.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}When false, this provider will not be used when performing queries for users.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>full_<wbr>sync_<wbr>period</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}How frequently Keycloak should sync all LDAP users, in seconds. Omit this property to disable periodic full sync.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>import_<wbr>enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}When true, LDAP users will be imported into the Keycloak database.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Display name of the provider when displayed in the console.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>pagination</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}When true, Keycloak assumes the LDAP server supports pagination.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>priority</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}Priority of this provider when looking up users. Lower values are first.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>rdn_<wbr>ldap_<wbr>attribute</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Name of the LDAP attribute to use as the relative distinguished name.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>read_<wbr>timeout</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}LDAP read timeout (duration string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>realm_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The realm this provider will provide user federation for.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>search_<wbr>scope</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}ONE_LEVEL: only search for users in the DN specified by user_dn. SUBTREE: search entire LDAP subtree.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>sync_<wbr>registrations</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}When true, newly created users will be synced back to LDAP.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>use_<wbr>truststore_<wbr>spi</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>user_<wbr>object_<wbr>classes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}All values of LDAP objectClass attribute for users in LDAP.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>username_<wbr>ldap_<wbr>attribute</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Name of the LDAP attribute to use as the Keycloak username.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>users_<wbr>dn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Full DN of LDAP tree where your users are.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>uuid_<wbr>ldap_<wbr>attribute</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Name of the LDAP attribute to use as a unique object identifier for objects in LDAP.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>validate_<wbr>password_<wbr>policy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}When true, Keycloak will validate passwords using the realm policy before updating it.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>vendor</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}LDAP vendor. I am almost certain this field does nothing, but the UI indicates that it is required.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
 
 
 
@@ -2330,7 +1324,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Batch<wbr>Size<wbr>For<wbr>Sync</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of users to sync within a single transaction.
 {{% /md %}}</dd>
@@ -2339,7 +1333,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Bind<wbr>Credential</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password of LDAP admin.
 {{% /md %}}</dd>
@@ -2348,7 +1342,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Bind<wbr>Dn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}DN of LDAP admin, which will be used by Keycloak to access LDAP server.
 {{% /md %}}</dd>
@@ -2357,7 +1351,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Cache<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2365,7 +1359,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Changed<wbr>Sync<wbr>Period</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How frequently Keycloak should sync changed LDAP users, in seconds. Omit this property to disable periodic changed users
 sync.
@@ -2375,7 +1369,7 @@ sync.
             title="Optional">
         <span>Connection<wbr>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}LDAP connection timeout (duration string)
 {{% /md %}}</dd>
@@ -2384,7 +1378,7 @@ sync.
             title="Optional">
         <span>Connection<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Connection URL to the LDAP server.
 {{% /md %}}</dd>
@@ -2393,7 +1387,7 @@ sync.
             title="Optional">
         <span>Custom<wbr>User<wbr>Search<wbr>Filter</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Additional LDAP filter for filtering searched users. Must begin with '(' and end with ')'.
 {{% /md %}}</dd>
@@ -2402,7 +1396,7 @@ sync.
             title="Optional">
         <span>Edit<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}READ_ONLY and WRITABLE are self-explanatory. UNSYNCED allows user data to be imported but not synced back to LDAP.
 {{% /md %}}</dd>
@@ -2411,7 +1405,7 @@ sync.
             title="Optional">
         <span>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When false, this provider will not be used when performing queries for users.
 {{% /md %}}</dd>
@@ -2420,7 +1414,7 @@ sync.
             title="Optional">
         <span>Full<wbr>Sync<wbr>Period</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How frequently Keycloak should sync all LDAP users, in seconds. Omit this property to disable periodic full sync.
 {{% /md %}}</dd>
@@ -2429,7 +1423,7 @@ sync.
             title="Optional">
         <span>Import<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When true, LDAP users will be imported into the Keycloak database.
 {{% /md %}}</dd>
@@ -2438,7 +1432,7 @@ sync.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Display name of the provider when displayed in the console.
 {{% /md %}}</dd>
@@ -2447,7 +1441,7 @@ sync.
             title="Optional">
         <span>Pagination</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When true, Keycloak assumes the LDAP server supports pagination.
 {{% /md %}}</dd>
@@ -2456,7 +1450,7 @@ sync.
             title="Optional">
         <span>Priority</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Priority of this provider when looking up users. Lower values are first.
 {{% /md %}}</dd>
@@ -2465,7 +1459,7 @@ sync.
             title="Optional">
         <span>Rdn<wbr>Ldap<wbr>Attribute</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the LDAP attribute to use as the relative distinguished name.
 {{% /md %}}</dd>
@@ -2474,7 +1468,7 @@ sync.
             title="Optional">
         <span>Read<wbr>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}LDAP read timeout (duration string)
 {{% /md %}}</dd>
@@ -2483,7 +1477,7 @@ sync.
             title="Optional">
         <span>Realm<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The realm this provider will provide user federation for.
 {{% /md %}}</dd>
@@ -2492,7 +1486,7 @@ sync.
             title="Optional">
         <span>Search<wbr>Scope</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ONE_LEVEL: only search for users in the DN specified by user_dn. SUBTREE: search entire LDAP subtree.
 {{% /md %}}</dd>
@@ -2501,7 +1495,7 @@ sync.
             title="Optional">
         <span>Sync<wbr>Registrations</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When true, newly created users will be synced back to LDAP.
 {{% /md %}}</dd>
@@ -2510,7 +1504,7 @@ sync.
             title="Optional">
         <span>Use<wbr>Truststore<wbr>Spi</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2518,7 +1512,7 @@ sync.
             title="Optional">
         <span>User<wbr>Object<wbr>Classes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}All values of LDAP objectClass attribute for users in LDAP.
 {{% /md %}}</dd>
@@ -2527,7 +1521,7 @@ sync.
             title="Optional">
         <span>Username<wbr>Ldap<wbr>Attribute</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the LDAP attribute to use as the Keycloak username.
 {{% /md %}}</dd>
@@ -2536,7 +1530,7 @@ sync.
             title="Optional">
         <span>Users<wbr>Dn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Full DN of LDAP tree where your users are.
 {{% /md %}}</dd>
@@ -2545,7 +1539,7 @@ sync.
             title="Optional">
         <span>Uuid<wbr>Ldap<wbr>Attribute</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the LDAP attribute to use as a unique object identifier for objects in LDAP.
 {{% /md %}}</dd>
@@ -2554,7 +1548,7 @@ sync.
             title="Optional">
         <span>Validate<wbr>Password<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When true, Keycloak will validate passwords using the realm policy before updating it.
 {{% /md %}}</dd>
@@ -2563,7 +1557,7 @@ sync.
             title="Optional">
         <span>Vendor</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}LDAP vendor. I am almost certain this field does nothing, but the UI indicates that it is required.
 {{% /md %}}</dd>
@@ -2579,7 +1573,7 @@ sync.
             title="Optional">
         <span>Batch<wbr>Size<wbr>For<wbr>Sync</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of users to sync within a single transaction.
 {{% /md %}}</dd>
@@ -2588,7 +1582,7 @@ sync.
             title="Optional">
         <span>Bind<wbr>Credential</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password of LDAP admin.
 {{% /md %}}</dd>
@@ -2597,7 +1591,7 @@ sync.
             title="Optional">
         <span>Bind<wbr>Dn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}DN of LDAP admin, which will be used by Keycloak to access LDAP server.
 {{% /md %}}</dd>
@@ -2606,7 +1600,7 @@ sync.
             title="Optional">
         <span>Cache<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2614,7 +1608,7 @@ sync.
             title="Optional">
         <span>Changed<wbr>Sync<wbr>Period</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How frequently Keycloak should sync changed LDAP users, in seconds. Omit this property to disable periodic changed users
 sync.
@@ -2624,7 +1618,7 @@ sync.
             title="Optional">
         <span>Connection<wbr>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}LDAP connection timeout (duration string)
 {{% /md %}}</dd>
@@ -2633,7 +1627,7 @@ sync.
             title="Optional">
         <span>Connection<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Connection URL to the LDAP server.
 {{% /md %}}</dd>
@@ -2642,7 +1636,7 @@ sync.
             title="Optional">
         <span>Custom<wbr>User<wbr>Search<wbr>Filter</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Additional LDAP filter for filtering searched users. Must begin with '(' and end with ')'.
 {{% /md %}}</dd>
@@ -2651,7 +1645,7 @@ sync.
             title="Optional">
         <span>Edit<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}READ_ONLY and WRITABLE are self-explanatory. UNSYNCED allows user data to be imported but not synced back to LDAP.
 {{% /md %}}</dd>
@@ -2660,7 +1654,7 @@ sync.
             title="Optional">
         <span>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When false, this provider will not be used when performing queries for users.
 {{% /md %}}</dd>
@@ -2669,7 +1663,7 @@ sync.
             title="Optional">
         <span>Full<wbr>Sync<wbr>Period</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}How frequently Keycloak should sync all LDAP users, in seconds. Omit this property to disable periodic full sync.
 {{% /md %}}</dd>
@@ -2678,7 +1672,7 @@ sync.
             title="Optional">
         <span>Import<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When true, LDAP users will be imported into the Keycloak database.
 {{% /md %}}</dd>
@@ -2687,7 +1681,7 @@ sync.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Display name of the provider when displayed in the console.
 {{% /md %}}</dd>
@@ -2696,7 +1690,7 @@ sync.
             title="Optional">
         <span>Pagination</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When true, Keycloak assumes the LDAP server supports pagination.
 {{% /md %}}</dd>
@@ -2705,7 +1699,7 @@ sync.
             title="Optional">
         <span>Priority</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Priority of this provider when looking up users. Lower values are first.
 {{% /md %}}</dd>
@@ -2714,7 +1708,7 @@ sync.
             title="Optional">
         <span>Rdn<wbr>Ldap<wbr>Attribute</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the LDAP attribute to use as the relative distinguished name.
 {{% /md %}}</dd>
@@ -2723,7 +1717,7 @@ sync.
             title="Optional">
         <span>Read<wbr>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}LDAP read timeout (duration string)
 {{% /md %}}</dd>
@@ -2732,7 +1726,7 @@ sync.
             title="Optional">
         <span>Realm<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The realm this provider will provide user federation for.
 {{% /md %}}</dd>
@@ -2741,7 +1735,7 @@ sync.
             title="Optional">
         <span>Search<wbr>Scope</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ONE_LEVEL: only search for users in the DN specified by user_dn. SUBTREE: search entire LDAP subtree.
 {{% /md %}}</dd>
@@ -2750,7 +1744,7 @@ sync.
             title="Optional">
         <span>Sync<wbr>Registrations</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When true, newly created users will be synced back to LDAP.
 {{% /md %}}</dd>
@@ -2759,7 +1753,7 @@ sync.
             title="Optional">
         <span>Use<wbr>Truststore<wbr>Spi</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2776,7 +1770,7 @@ sync.
             title="Optional">
         <span>Username<wbr>Ldap<wbr>Attribute</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the LDAP attribute to use as the Keycloak username.
 {{% /md %}}</dd>
@@ -2785,7 +1779,7 @@ sync.
             title="Optional">
         <span>Users<wbr>Dn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Full DN of LDAP tree where your users are.
 {{% /md %}}</dd>
@@ -2794,7 +1788,7 @@ sync.
             title="Optional">
         <span>Uuid<wbr>Ldap<wbr>Attribute</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the LDAP attribute to use as a unique object identifier for objects in LDAP.
 {{% /md %}}</dd>
@@ -2803,7 +1797,7 @@ sync.
             title="Optional">
         <span>Validate<wbr>Password<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When true, Keycloak will validate passwords using the realm policy before updating it.
 {{% /md %}}</dd>
@@ -2812,7 +1806,7 @@ sync.
             title="Optional">
         <span>Vendor</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}LDAP vendor. I am almost certain this field does nothing, but the UI indicates that it is required.
 {{% /md %}}</dd>
@@ -2828,7 +1822,7 @@ sync.
             title="Optional">
         <span>batch<wbr>Size<wbr>For<wbr>Sync</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of users to sync within a single transaction.
 {{% /md %}}</dd>
@@ -2837,7 +1831,7 @@ sync.
             title="Optional">
         <span>bind<wbr>Credential</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password of LDAP admin.
 {{% /md %}}</dd>
@@ -2846,7 +1840,7 @@ sync.
             title="Optional">
         <span>bind<wbr>Dn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}DN of LDAP admin, which will be used by Keycloak to access LDAP server.
 {{% /md %}}</dd>
@@ -2855,7 +1849,7 @@ sync.
             title="Optional">
         <span>cache<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2863,7 +1857,7 @@ sync.
             title="Optional">
         <span>changed<wbr>Sync<wbr>Period</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}How frequently Keycloak should sync changed LDAP users, in seconds. Omit this property to disable periodic changed users
 sync.
@@ -2873,7 +1867,7 @@ sync.
             title="Optional">
         <span>connection<wbr>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}LDAP connection timeout (duration string)
 {{% /md %}}</dd>
@@ -2882,7 +1876,7 @@ sync.
             title="Optional">
         <span>connection<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Connection URL to the LDAP server.
 {{% /md %}}</dd>
@@ -2891,7 +1885,7 @@ sync.
             title="Optional">
         <span>custom<wbr>User<wbr>Search<wbr>Filter</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Additional LDAP filter for filtering searched users. Must begin with '(' and end with ')'.
 {{% /md %}}</dd>
@@ -2900,7 +1894,7 @@ sync.
             title="Optional">
         <span>edit<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}READ_ONLY and WRITABLE are self-explanatory. UNSYNCED allows user data to be imported but not synced back to LDAP.
 {{% /md %}}</dd>
@@ -2909,7 +1903,7 @@ sync.
             title="Optional">
         <span>enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When false, this provider will not be used when performing queries for users.
 {{% /md %}}</dd>
@@ -2918,7 +1912,7 @@ sync.
             title="Optional">
         <span>full<wbr>Sync<wbr>Period</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}How frequently Keycloak should sync all LDAP users, in seconds. Omit this property to disable periodic full sync.
 {{% /md %}}</dd>
@@ -2927,7 +1921,7 @@ sync.
             title="Optional">
         <span>import<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When true, LDAP users will be imported into the Keycloak database.
 {{% /md %}}</dd>
@@ -2936,7 +1930,7 @@ sync.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Display name of the provider when displayed in the console.
 {{% /md %}}</dd>
@@ -2945,7 +1939,7 @@ sync.
             title="Optional">
         <span>pagination</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When true, Keycloak assumes the LDAP server supports pagination.
 {{% /md %}}</dd>
@@ -2954,7 +1948,7 @@ sync.
             title="Optional">
         <span>priority</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Priority of this provider when looking up users. Lower values are first.
 {{% /md %}}</dd>
@@ -2963,7 +1957,7 @@ sync.
             title="Optional">
         <span>rdn<wbr>Ldap<wbr>Attribute</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the LDAP attribute to use as the relative distinguished name.
 {{% /md %}}</dd>
@@ -2972,7 +1966,7 @@ sync.
             title="Optional">
         <span>read<wbr>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}LDAP read timeout (duration string)
 {{% /md %}}</dd>
@@ -2981,7 +1975,7 @@ sync.
             title="Optional">
         <span>realm<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The realm this provider will provide user federation for.
 {{% /md %}}</dd>
@@ -2990,7 +1984,7 @@ sync.
             title="Optional">
         <span>search<wbr>Scope</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ONE_LEVEL: only search for users in the DN specified by user_dn. SUBTREE: search entire LDAP subtree.
 {{% /md %}}</dd>
@@ -2999,7 +1993,7 @@ sync.
             title="Optional">
         <span>sync<wbr>Registrations</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When true, newly created users will be synced back to LDAP.
 {{% /md %}}</dd>
@@ -3008,7 +2002,7 @@ sync.
             title="Optional">
         <span>use<wbr>Truststore<wbr>Spi</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3016,7 +2010,7 @@ sync.
             title="Optional">
         <span>user<wbr>Object<wbr>Classes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}All values of LDAP objectClass attribute for users in LDAP.
 {{% /md %}}</dd>
@@ -3025,7 +2019,7 @@ sync.
             title="Optional">
         <span>username<wbr>Ldap<wbr>Attribute</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the LDAP attribute to use as the Keycloak username.
 {{% /md %}}</dd>
@@ -3034,7 +2028,7 @@ sync.
             title="Optional">
         <span>users<wbr>Dn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Full DN of LDAP tree where your users are.
 {{% /md %}}</dd>
@@ -3043,7 +2037,7 @@ sync.
             title="Optional">
         <span>uuid<wbr>Ldap<wbr>Attribute</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the LDAP attribute to use as a unique object identifier for objects in LDAP.
 {{% /md %}}</dd>
@@ -3052,7 +2046,7 @@ sync.
             title="Optional">
         <span>validate<wbr>Password<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When true, Keycloak will validate passwords using the realm policy before updating it.
 {{% /md %}}</dd>
@@ -3061,7 +2055,7 @@ sync.
             title="Optional">
         <span>vendor</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}LDAP vendor. I am almost certain this field does nothing, but the UI indicates that it is required.
 {{% /md %}}</dd>

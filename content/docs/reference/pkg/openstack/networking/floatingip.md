@@ -31,7 +31,7 @@ const floatip1 = new openstack.networking.FloatingIp("floatip_1", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/openstack/networking/#FloatingIp">FloatingIp</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/openstack/networking/#FloatingIpArgs">FloatingIpArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/openstack/networking/#FloatingIp">FloatingIp</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/openstack/networking/#FloatingIpArgs">FloatingIpArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -39,11 +39,11 @@ const floatip1 = new openstack.networking.FloatingIp("floatip_1", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewFloatingIp<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/networking?tab=doc#FloatingIpArgs">FloatingIpArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/networking?tab=doc#FloatingIp">FloatingIp</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewFloatingIp<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/networking?tab=doc#FloatingIpArgs">FloatingIpArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/networking?tab=doc#FloatingIp">FloatingIp</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.Openstack.Networking.FloatingIp.html">FloatingIp</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.Openstack.Networking.FloatingIpArgs.html">FloatingIpArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.Openstack.Networking.FloatingIp.html">FloatingIp</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.OpenStack.Networking.FloatingIpArgs.html">FloatingIpArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -135,61 +135,6 @@ const floatip1 = new openstack.networking.FloatingIp("floatip_1", {
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Address</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The actual/specific floating IP to obtain. By default,
-non-admin users are not able to specify a floating IP, so you must either be
-an admin user or have had a custom policy or role applied to your OpenStack
-user or project.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Human-readable description for the floating IP.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Dns<wbr>Domain</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The floating IP DNS domain. Available, when Neutron
-DNS extension is enabled. The data in this attribute will be published in an
-external DNS service when Neutron is configured to integrate with such a
-service. Changing this creates a new floating IP.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Dns<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The floating IP DNS name. Available, when Neutron DNS
-extension is enabled. The data in this attribute will be published in an
-external DNS service when Neutron is configured to integrate with such a
-service. Changing this creates a new floating IP.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Fixed<wbr>Ip</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Fixed IP of the port to associate with this floating IP. Required if
-the port has multiple fixed IPs.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Pool</span>
@@ -202,9 +147,64 @@ IP. Changing this creates a new floating IP.
 
     <dt class="property-optional"
             title="Optional">
+        <span>Address</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The actual/specific floating IP to obtain. By default,
+non-admin users are not able to specify a floating IP, so you must either be
+an admin user or have had a custom policy or role applied to your OpenStack
+user or project.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Human-readable description for the floating IP.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Dns<wbr>Domain</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The floating IP DNS domain. Available, when Neutron
+DNS extension is enabled. The data in this attribute will be published in an
+external DNS service when Neutron is configured to integrate with such a
+service. Changing this creates a new floating IP.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Dns<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The floating IP DNS name. Available, when Neutron DNS
+extension is enabled. The data in this attribute will be published in an
+external DNS service when Neutron is configured to integrate with such a
+service. Changing this creates a new floating IP.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Fixed<wbr>Ip</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Fixed IP of the port to associate with this floating IP. Required if
+the port has multiple fixed IPs.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Port<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of an existing port with at least one IP address to
 associate with this floating IP.
@@ -214,7 +214,7 @@ associate with this floating IP.
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 Networking client.
 A Networking client is needed to create a floating IP that can be used with
@@ -227,7 +227,7 @@ floating IP (which may or may not have a different address).
             title="Optional">
         <span>Subnet<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The subnet ID of the floating IP pool. Specify this if
 the floating IP network has multiple subnets.
@@ -237,7 +237,7 @@ the floating IP network has multiple subnets.
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A set of string tags for the floating IP.
 {{% /md %}}</dd>
@@ -246,7 +246,7 @@ the floating IP network has multiple subnets.
             title="Optional">
         <span>Tenant<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The target tenant ID in which to allocate the floating
 IP, if you specify this together with a port_id, make sure the target port
@@ -258,7 +258,7 @@ may or may not have a different address)
             title="Optional">
         <span>Value<wbr>Specs</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Map of additional options.
 {{% /md %}}</dd>
@@ -269,61 +269,6 @@ may or may not have a different address)
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Address</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The actual/specific floating IP to obtain. By default,
-non-admin users are not able to specify a floating IP, so you must either be
-an admin user or have had a custom policy or role applied to your OpenStack
-user or project.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Human-readable description for the floating IP.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Dns<wbr>Domain</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The floating IP DNS domain. Available, when Neutron
-DNS extension is enabled. The data in this attribute will be published in an
-external DNS service when Neutron is configured to integrate with such a
-service. Changing this creates a new floating IP.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Dns<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The floating IP DNS name. Available, when Neutron DNS
-extension is enabled. The data in this attribute will be published in an
-external DNS service when Neutron is configured to integrate with such a
-service. Changing this creates a new floating IP.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Fixed<wbr>Ip</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Fixed IP of the port to associate with this floating IP. Required if
-the port has multiple fixed IPs.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -337,9 +282,64 @@ IP. Changing this creates a new floating IP.
 
     <dt class="property-optional"
             title="Optional">
+        <span>Address</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The actual/specific floating IP to obtain. By default,
+non-admin users are not able to specify a floating IP, so you must either be
+an admin user or have had a custom policy or role applied to your OpenStack
+user or project.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Human-readable description for the floating IP.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Dns<wbr>Domain</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The floating IP DNS domain. Available, when Neutron
+DNS extension is enabled. The data in this attribute will be published in an
+external DNS service when Neutron is configured to integrate with such a
+service. Changing this creates a new floating IP.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Dns<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The floating IP DNS name. Available, when Neutron DNS
+extension is enabled. The data in this attribute will be published in an
+external DNS service when Neutron is configured to integrate with such a
+service. Changing this creates a new floating IP.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Fixed<wbr>Ip</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Fixed IP of the port to associate with this floating IP. Required if
+the port has multiple fixed IPs.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Port<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of an existing port with at least one IP address to
 associate with this floating IP.
@@ -349,7 +349,7 @@ associate with this floating IP.
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 Networking client.
 A Networking client is needed to create a floating IP that can be used with
@@ -362,7 +362,7 @@ floating IP (which may or may not have a different address).
             title="Optional">
         <span>Subnet<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The subnet ID of the floating IP pool. Specify this if
 the floating IP network has multiple subnets.
@@ -381,7 +381,7 @@ the floating IP network has multiple subnets.
             title="Optional">
         <span>Tenant<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The target tenant ID in which to allocate the floating
 IP, if you specify this together with a port_id, make sure the target port
@@ -405,61 +405,6 @@ may or may not have a different address)
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>address</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The actual/specific floating IP to obtain. By default,
-non-admin users are not able to specify a floating IP, so you must either be
-an admin user or have had a custom policy or role applied to your OpenStack
-user or project.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Human-readable description for the floating IP.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>dns<wbr>Domain</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The floating IP DNS domain. Available, when Neutron
-DNS extension is enabled. The data in this attribute will be published in an
-external DNS service when Neutron is configured to integrate with such a
-service. Changing this creates a new floating IP.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>dns<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The floating IP DNS name. Available, when Neutron DNS
-extension is enabled. The data in this attribute will be published in an
-external DNS service when Neutron is configured to integrate with such a
-service. Changing this creates a new floating IP.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>fixed<wbr>Ip</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Fixed IP of the port to associate with this floating IP. Required if
-the port has multiple fixed IPs.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>pool</span>
@@ -472,9 +417,64 @@ IP. Changing this creates a new floating IP.
 
     <dt class="property-optional"
             title="Optional">
+        <span>address</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The actual/specific floating IP to obtain. By default,
+non-admin users are not able to specify a floating IP, so you must either be
+an admin user or have had a custom policy or role applied to your OpenStack
+user or project.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Human-readable description for the floating IP.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>dns<wbr>Domain</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The floating IP DNS domain. Available, when Neutron
+DNS extension is enabled. The data in this attribute will be published in an
+external DNS service when Neutron is configured to integrate with such a
+service. Changing this creates a new floating IP.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>dns<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The floating IP DNS name. Available, when Neutron DNS
+extension is enabled. The data in this attribute will be published in an
+external DNS service when Neutron is configured to integrate with such a
+service. Changing this creates a new floating IP.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>fixed<wbr>Ip</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Fixed IP of the port to associate with this floating IP. Required if
+the port has multiple fixed IPs.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>port<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of an existing port with at least one IP address to
 associate with this floating IP.
@@ -484,7 +484,7 @@ associate with this floating IP.
             title="Optional">
         <span>region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 Networking client.
 A Networking client is needed to create a floating IP that can be used with
@@ -497,7 +497,7 @@ floating IP (which may or may not have a different address).
             title="Optional">
         <span>subnet<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The subnet ID of the floating IP pool. Specify this if
 the floating IP network has multiple subnets.
@@ -507,7 +507,7 @@ the floating IP network has multiple subnets.
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A set of string tags for the floating IP.
 {{% /md %}}</dd>
@@ -516,7 +516,7 @@ the floating IP network has multiple subnets.
             title="Optional">
         <span>tenant<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The target tenant ID in which to allocate the floating
 IP, if you specify this together with a port_id, make sure the target port
@@ -528,7 +528,7 @@ may or may not have a different address)
             title="Optional">
         <span>value<wbr>Specs</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Map of additional options.
 {{% /md %}}</dd>
@@ -539,6 +539,16 @@ may or may not have a different address)
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>pool</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the pool from which to obtain the floating
+IP. Changing this creates a new floating IP.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -593,16 +603,6 @@ service. Changing this creates a new floating IP.
     </dt>
     <dd>{{% md %}}Fixed IP of the port to associate with this floating IP. Required if
 the port has multiple fixed IPs.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>pool</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the pool from which to obtain the floating
-IP. Changing this creates a new floating IP.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -689,140 +689,12 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Address</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The actual/specific floating IP to obtain. By default,
-non-admin users are not able to specify a floating IP, so you must either be
-an admin user or have had a custom policy or role applied to your OpenStack
-user or project.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>All<wbr>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The collection of tags assigned on the floating IP, which have
 been explicitly and implicitly added.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Human-readable description for the floating IP.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Dns<wbr>Domain</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The floating IP DNS domain. Available, when Neutron
-DNS extension is enabled. The data in this attribute will be published in an
-external DNS service when Neutron is configured to integrate with such a
-service. Changing this creates a new floating IP.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Dns<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The floating IP DNS name. Available, when Neutron DNS
-extension is enabled. The data in this attribute will be published in an
-external DNS service when Neutron is configured to integrate with such a
-service. Changing this creates a new floating IP.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Fixed<wbr>Ip</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Fixed IP of the port to associate with this floating IP. Required if
-the port has multiple fixed IPs.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Pool</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the pool from which to obtain the floating
-IP. Changing this creates a new floating IP.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Port<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}ID of an existing port with at least one IP address to
-associate with this floating IP.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The region in which to obtain the V2 Networking client.
-A Networking client is needed to create a floating IP that can be used with
-another networking resource, such as a load balancer. If omitted, the
-`region` argument of the provider is used. Changing this creates a new
-floating IP (which may or may not have a different address).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Subnet<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The subnet ID of the floating IP pool. Specify this if
-the floating IP network has multiple subnets.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}A set of string tags for the floating IP.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tenant<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The target tenant ID in which to allocate the floating
-IP, if you specify this together with a port_id, make sure the target port
-belongs to the same tenant. Changing this creates a new floating IP (which
-may or may not have a different address)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Value<wbr>Specs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
-    </dt>
-    <dd>{{% md %}}Map of additional options.
 {{% /md %}}</dd>
 
 </dl>
@@ -834,140 +706,12 @@ may or may not have a different address)
 
     <dt class="property-"
             title="">
-        <span>Address</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The actual/specific floating IP to obtain. By default,
-non-admin users are not able to specify a floating IP, so you must either be
-an admin user or have had a custom policy or role applied to your OpenStack
-user or project.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>All<wbr>Tags</span>
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The collection of tags assigned on the floating IP, which have
 been explicitly and implicitly added.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Human-readable description for the floating IP.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Dns<wbr>Domain</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The floating IP DNS domain. Available, when Neutron
-DNS extension is enabled. The data in this attribute will be published in an
-external DNS service when Neutron is configured to integrate with such a
-service. Changing this creates a new floating IP.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Dns<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The floating IP DNS name. Available, when Neutron DNS
-extension is enabled. The data in this attribute will be published in an
-external DNS service when Neutron is configured to integrate with such a
-service. Changing this creates a new floating IP.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Fixed<wbr>Ip</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Fixed IP of the port to associate with this floating IP. Required if
-the port has multiple fixed IPs.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Pool</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the pool from which to obtain the floating
-IP. Changing this creates a new floating IP.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Port<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}ID of an existing port with at least one IP address to
-associate with this floating IP.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The region in which to obtain the V2 Networking client.
-A Networking client is needed to create a floating IP that can be used with
-another networking resource, such as a load balancer. If omitted, the
-`region` argument of the provider is used. Changing this creates a new
-floating IP (which may or may not have a different address).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Subnet<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The subnet ID of the floating IP pool. Specify this if
-the floating IP network has multiple subnets.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}A set of string tags for the floating IP.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tenant<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The target tenant ID in which to allocate the floating
-IP, if you specify this together with a port_id, make sure the target port
-belongs to the same tenant. Changing this creates a new floating IP (which
-may or may not have a different address)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Value<wbr>Specs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
-    </dt>
-    <dd>{{% md %}}Map of additional options.
 {{% /md %}}</dd>
 
 </dl>
@@ -979,140 +723,12 @@ may or may not have a different address)
 
     <dt class="property-"
             title="">
-        <span>address</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The actual/specific floating IP to obtain. By default,
-non-admin users are not able to specify a floating IP, so you must either be
-an admin user or have had a custom policy or role applied to your OpenStack
-user or project.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>all<wbr>Tags</span>
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The collection of tags assigned on the floating IP, which have
 been explicitly and implicitly added.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Human-readable description for the floating IP.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>dns<wbr>Domain</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The floating IP DNS domain. Available, when Neutron
-DNS extension is enabled. The data in this attribute will be published in an
-external DNS service when Neutron is configured to integrate with such a
-service. Changing this creates a new floating IP.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>dns<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The floating IP DNS name. Available, when Neutron DNS
-extension is enabled. The data in this attribute will be published in an
-external DNS service when Neutron is configured to integrate with such a
-service. Changing this creates a new floating IP.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>fixed<wbr>Ip</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Fixed IP of the port to associate with this floating IP. Required if
-the port has multiple fixed IPs.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>pool</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the pool from which to obtain the floating
-IP. Changing this creates a new floating IP.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>port<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}ID of an existing port with at least one IP address to
-associate with this floating IP.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The region in which to obtain the V2 Networking client.
-A Networking client is needed to create a floating IP that can be used with
-another networking resource, such as a load balancer. If omitted, the
-`region` argument of the provider is used. Changing this creates a new
-floating IP (which may or may not have a different address).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>subnet<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The subnet ID of the floating IP pool. Specify this if
-the floating IP network has multiple subnets.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}A set of string tags for the floating IP.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tenant<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The target tenant ID in which to allocate the floating
-IP, if you specify this together with a port_id, make sure the target port
-belongs to the same tenant. Changing this creates a new floating IP (which
-may or may not have a different address)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>value<wbr>Specs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
-    </dt>
-    <dd>{{% md %}}Map of additional options.
 {{% /md %}}</dd>
 
 </dl>
@@ -1124,140 +740,12 @@ may or may not have a different address)
 
     <dt class="property-"
             title="">
-        <span>address</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The actual/specific floating IP to obtain. By default,
-non-admin users are not able to specify a floating IP, so you must either be
-an admin user or have had a custom policy or role applied to your OpenStack
-user or project.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>all_<wbr>tags</span>
         <span class="property-indicator"></span>
         <span class="property-type">List[str]</span>
     </dt>
     <dd>{{% md %}}The collection of tags assigned on the floating IP, which have
 been explicitly and implicitly added.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Human-readable description for the floating IP.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>dns_<wbr>domain</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The floating IP DNS domain. Available, when Neutron
-DNS extension is enabled. The data in this attribute will be published in an
-external DNS service when Neutron is configured to integrate with such a
-service. Changing this creates a new floating IP.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>dns_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The floating IP DNS name. Available, when Neutron DNS
-extension is enabled. The data in this attribute will be published in an
-external DNS service when Neutron is configured to integrate with such a
-service. Changing this creates a new floating IP.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>fixed_<wbr>ip</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Fixed IP of the port to associate with this floating IP. Required if
-the port has multiple fixed IPs.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>pool</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the pool from which to obtain the floating
-IP. Changing this creates a new floating IP.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>port_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}ID of an existing port with at least one IP address to
-associate with this floating IP.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The region in which to obtain the V2 Networking client.
-A Networking client is needed to create a floating IP that can be used with
-another networking resource, such as a load balancer. If omitted, the
-`region` argument of the provider is used. Changing this creates a new
-floating IP (which may or may not have a different address).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>subnet_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The subnet ID of the floating IP pool. Specify this if
-the floating IP network has multiple subnets.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}A set of string tags for the floating IP.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tenant_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The target tenant ID in which to allocate the floating
-IP, if you specify this together with a port_id, make sure the target port
-belongs to the same tenant. Changing this creates a new floating IP (which
-may or may not have a different address)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>value_<wbr>specs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
-    </dt>
-    <dd>{{% md %}}Map of additional options.
 {{% /md %}}</dd>
 
 </dl>
@@ -1399,7 +887,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The actual/specific floating IP to obtain. By default,
 non-admin users are not able to specify a floating IP, so you must either be
@@ -1411,7 +899,7 @@ user or project.
             title="Optional">
         <span>All<wbr>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The collection of tags assigned on the floating IP, which have
 been explicitly and implicitly added.
@@ -1421,7 +909,7 @@ been explicitly and implicitly added.
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Human-readable description for the floating IP.
 {{% /md %}}</dd>
@@ -1430,7 +918,7 @@ been explicitly and implicitly added.
             title="Optional">
         <span>Dns<wbr>Domain</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The floating IP DNS domain. Available, when Neutron
 DNS extension is enabled. The data in this attribute will be published in an
@@ -1442,7 +930,7 @@ service. Changing this creates a new floating IP.
             title="Optional">
         <span>Dns<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The floating IP DNS name. Available, when Neutron DNS
 extension is enabled. The data in this attribute will be published in an
@@ -1454,7 +942,7 @@ service. Changing this creates a new floating IP.
             title="Optional">
         <span>Fixed<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Fixed IP of the port to associate with this floating IP. Required if
 the port has multiple fixed IPs.
@@ -1464,7 +952,7 @@ the port has multiple fixed IPs.
             title="Optional">
         <span>Pool</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the pool from which to obtain the floating
 IP. Changing this creates a new floating IP.
@@ -1474,7 +962,7 @@ IP. Changing this creates a new floating IP.
             title="Optional">
         <span>Port<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of an existing port with at least one IP address to
 associate with this floating IP.
@@ -1484,7 +972,7 @@ associate with this floating IP.
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 Networking client.
 A Networking client is needed to create a floating IP that can be used with
@@ -1497,7 +985,7 @@ floating IP (which may or may not have a different address).
             title="Optional">
         <span>Subnet<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The subnet ID of the floating IP pool. Specify this if
 the floating IP network has multiple subnets.
@@ -1507,7 +995,7 @@ the floating IP network has multiple subnets.
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A set of string tags for the floating IP.
 {{% /md %}}</dd>
@@ -1516,7 +1004,7 @@ the floating IP network has multiple subnets.
             title="Optional">
         <span>Tenant<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The target tenant ID in which to allocate the floating
 IP, if you specify this together with a port_id, make sure the target port
@@ -1528,7 +1016,7 @@ may or may not have a different address)
             title="Optional">
         <span>Value<wbr>Specs</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Map of additional options.
 {{% /md %}}</dd>
@@ -1544,7 +1032,7 @@ may or may not have a different address)
             title="Optional">
         <span>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The actual/specific floating IP to obtain. By default,
 non-admin users are not able to specify a floating IP, so you must either be
@@ -1566,7 +1054,7 @@ been explicitly and implicitly added.
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Human-readable description for the floating IP.
 {{% /md %}}</dd>
@@ -1575,7 +1063,7 @@ been explicitly and implicitly added.
             title="Optional">
         <span>Dns<wbr>Domain</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The floating IP DNS domain. Available, when Neutron
 DNS extension is enabled. The data in this attribute will be published in an
@@ -1587,7 +1075,7 @@ service. Changing this creates a new floating IP.
             title="Optional">
         <span>Dns<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The floating IP DNS name. Available, when Neutron DNS
 extension is enabled. The data in this attribute will be published in an
@@ -1599,7 +1087,7 @@ service. Changing this creates a new floating IP.
             title="Optional">
         <span>Fixed<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Fixed IP of the port to associate with this floating IP. Required if
 the port has multiple fixed IPs.
@@ -1609,7 +1097,7 @@ the port has multiple fixed IPs.
             title="Optional">
         <span>Pool</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the pool from which to obtain the floating
 IP. Changing this creates a new floating IP.
@@ -1619,7 +1107,7 @@ IP. Changing this creates a new floating IP.
             title="Optional">
         <span>Port<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of an existing port with at least one IP address to
 associate with this floating IP.
@@ -1629,7 +1117,7 @@ associate with this floating IP.
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 Networking client.
 A Networking client is needed to create a floating IP that can be used with
@@ -1642,7 +1130,7 @@ floating IP (which may or may not have a different address).
             title="Optional">
         <span>Subnet<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The subnet ID of the floating IP pool. Specify this if
 the floating IP network has multiple subnets.
@@ -1661,7 +1149,7 @@ the floating IP network has multiple subnets.
             title="Optional">
         <span>Tenant<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The target tenant ID in which to allocate the floating
 IP, if you specify this together with a port_id, make sure the target port
@@ -1689,7 +1177,7 @@ may or may not have a different address)
             title="Optional">
         <span>address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The actual/specific floating IP to obtain. By default,
 non-admin users are not able to specify a floating IP, so you must either be
@@ -1701,7 +1189,7 @@ user or project.
             title="Optional">
         <span>all<wbr>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The collection of tags assigned on the floating IP, which have
 been explicitly and implicitly added.
@@ -1711,7 +1199,7 @@ been explicitly and implicitly added.
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Human-readable description for the floating IP.
 {{% /md %}}</dd>
@@ -1720,7 +1208,7 @@ been explicitly and implicitly added.
             title="Optional">
         <span>dns<wbr>Domain</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The floating IP DNS domain. Available, when Neutron
 DNS extension is enabled. The data in this attribute will be published in an
@@ -1732,7 +1220,7 @@ service. Changing this creates a new floating IP.
             title="Optional">
         <span>dns<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The floating IP DNS name. Available, when Neutron DNS
 extension is enabled. The data in this attribute will be published in an
@@ -1744,7 +1232,7 @@ service. Changing this creates a new floating IP.
             title="Optional">
         <span>fixed<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Fixed IP of the port to associate with this floating IP. Required if
 the port has multiple fixed IPs.
@@ -1754,7 +1242,7 @@ the port has multiple fixed IPs.
             title="Optional">
         <span>pool</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the pool from which to obtain the floating
 IP. Changing this creates a new floating IP.
@@ -1764,7 +1252,7 @@ IP. Changing this creates a new floating IP.
             title="Optional">
         <span>port<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of an existing port with at least one IP address to
 associate with this floating IP.
@@ -1774,7 +1262,7 @@ associate with this floating IP.
             title="Optional">
         <span>region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 Networking client.
 A Networking client is needed to create a floating IP that can be used with
@@ -1787,7 +1275,7 @@ floating IP (which may or may not have a different address).
             title="Optional">
         <span>subnet<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The subnet ID of the floating IP pool. Specify this if
 the floating IP network has multiple subnets.
@@ -1797,7 +1285,7 @@ the floating IP network has multiple subnets.
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A set of string tags for the floating IP.
 {{% /md %}}</dd>
@@ -1806,7 +1294,7 @@ the floating IP network has multiple subnets.
             title="Optional">
         <span>tenant<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The target tenant ID in which to allocate the floating
 IP, if you specify this together with a port_id, make sure the target port
@@ -1818,7 +1306,7 @@ may or may not have a different address)
             title="Optional">
         <span>value<wbr>Specs</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Map of additional options.
 {{% /md %}}</dd>

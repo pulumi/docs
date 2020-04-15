@@ -51,7 +51,7 @@ const privateS3 = new aws.ec2.VpcEndpointRouteTableAssociation("private_s3", {
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupVpcEndpoint<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2?tab=doc#LookupVpcEndpointArgs">LookupVpcEndpointArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2?tab=doc#LookupVpcEndpointResult">LookupVpcEndpointResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupVpcEndpoint<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2?tab=doc#LookupVpcEndpointArgs">LookupVpcEndpointArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2?tab=doc#LookupVpcEndpointResult">LookupVpcEndpointResult</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -74,7 +74,7 @@ The following arguments are supported:
             title="Optional">
         <span>Filters</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getvpcendpointfilter">List&lt;Get<wbr>Vpc<wbr>Endpoint<wbr>Filter<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#getvpcendpointfilter">List&lt;Get<wbr>Vpc<wbr>Endpoint<wbr>Filter<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Custom filter block as described below.
 {{% /md %}}</dd>
@@ -83,7 +83,7 @@ The following arguments are supported:
             title="Optional">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the specific VPC Endpoint to retrieve.
 {{% /md %}}</dd>
@@ -92,7 +92,7 @@ The following arguments are supported:
             title="Optional">
         <span>Service<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service name of the specific VPC Endpoint to retrieve. For AWS services the service name is usually in the form `com.amazonaws.<region>.<service>` (the SageMaker Notebook service is an exception to this rule, the service name is in the form `aws.sagemaker.<region>.notebook`).
 {{% /md %}}</dd>
@@ -101,7 +101,7 @@ The following arguments are supported:
             title="Optional">
         <span>State</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The state of the specific VPC Endpoint to retrieve.
 {{% /md %}}</dd>
@@ -110,7 +110,7 @@ The following arguments are supported:
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags, each pair of which must exactly match
 a pair on the specific VPC Endpoint to retrieve.
@@ -120,7 +120,7 @@ a pair on the specific VPC Endpoint to retrieve.
             title="Optional">
         <span>Vpc<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the VPC in which the specific VPC Endpoint is used.
 {{% /md %}}</dd>
@@ -145,7 +145,7 @@ a pair on the specific VPC Endpoint to retrieve.
             title="Optional">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the specific VPC Endpoint to retrieve.
 {{% /md %}}</dd>
@@ -154,7 +154,7 @@ a pair on the specific VPC Endpoint to retrieve.
             title="Optional">
         <span>Service<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service name of the specific VPC Endpoint to retrieve. For AWS services the service name is usually in the form `com.amazonaws.<region>.<service>` (the SageMaker Notebook service is an exception to this rule, the service name is in the form `aws.sagemaker.<region>.notebook`).
 {{% /md %}}</dd>
@@ -163,7 +163,7 @@ a pair on the specific VPC Endpoint to retrieve.
             title="Optional">
         <span>State</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The state of the specific VPC Endpoint to retrieve.
 {{% /md %}}</dd>
@@ -182,7 +182,7 @@ a pair on the specific VPC Endpoint to retrieve.
             title="Optional">
         <span>Vpc<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the VPC in which the specific VPC Endpoint is used.
 {{% /md %}}</dd>
@@ -198,7 +198,7 @@ a pair on the specific VPC Endpoint to retrieve.
             title="Optional">
         <span>filters</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getvpcendpointfilter">Get<wbr>Vpc<wbr>Endpoint<wbr>Filter[]?</a></span>
+        <span class="property-type"><a href="#getvpcendpointfilter">Get<wbr>Vpc<wbr>Endpoint<wbr>Filter[]</a></span>
     </dt>
     <dd>{{% md %}}Custom filter block as described below.
 {{% /md %}}</dd>
@@ -207,7 +207,7 @@ a pair on the specific VPC Endpoint to retrieve.
             title="Optional">
         <span>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the specific VPC Endpoint to retrieve.
 {{% /md %}}</dd>
@@ -216,7 +216,7 @@ a pair on the specific VPC Endpoint to retrieve.
             title="Optional">
         <span>service<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service name of the specific VPC Endpoint to retrieve. For AWS services the service name is usually in the form `com.amazonaws.<region>.<service>` (the SageMaker Notebook service is an exception to this rule, the service name is in the form `aws.sagemaker.<region>.notebook`).
 {{% /md %}}</dd>
@@ -225,7 +225,7 @@ a pair on the specific VPC Endpoint to retrieve.
             title="Optional">
         <span>state</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The state of the specific VPC Endpoint to retrieve.
 {{% /md %}}</dd>
@@ -234,7 +234,7 @@ a pair on the specific VPC Endpoint to retrieve.
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags, each pair of which must exactly match
 a pair on the specific VPC Endpoint to retrieve.
@@ -244,7 +244,7 @@ a pair on the specific VPC Endpoint to retrieve.
             title="Optional">
         <span>vpc<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the VPC in which the specific VPC Endpoint is used.
 {{% /md %}}</dd>
@@ -335,7 +335,7 @@ The following output properties are available:
             title="">
         <span>Cidr<wbr>Blocks</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The list of CIDR blocks for the exposed AWS service. Applicable for endpoints of type `Gateway`.
 {{% /md %}}</dd>
@@ -351,14 +351,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Filters</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getvpcendpointfilter">List&lt;Get<wbr>Vpc<wbr>Endpoint<wbr>Filter&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -369,7 +361,7 @@ The following output properties are available:
             title="">
         <span>Network<wbr>Interface<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}One or more network interfaces for the VPC Endpoint. Applicable for endpoints of type `Interface`.
 {{% /md %}}</dd>
@@ -423,7 +415,7 @@ The following output properties are available:
             title="">
         <span>Route<wbr>Table<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}One or more route tables associated with the VPC Endpoint. Applicable for endpoints of type `Gateway`.
 {{% /md %}}</dd>
@@ -432,7 +424,7 @@ The following output properties are available:
             title="">
         <span>Security<wbr>Group<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}One or more security groups associated with the network interfaces. Applicable for endpoints of type `Interface`.
 {{% /md %}}</dd>
@@ -457,7 +449,7 @@ The following output properties are available:
             title="">
         <span>Subnet<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}One or more subnets in which the VPC Endpoint is located. Applicable for endpoints of type `Interface`.
 {{% /md %}}</dd>
@@ -466,7 +458,7 @@ The following output properties are available:
             title="">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -484,6 +476,14 @@ The following output properties are available:
         <span>Vpc<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Filters</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getvpcendpointfilter">List&lt;Get<wbr>Vpc<wbr>Endpoint<wbr>Filter&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -511,14 +511,6 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The DNS entries for the VPC Endpoint. Applicable for endpoints of type `Interface`. DNS blocks are documented below.
 {{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Filters</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getvpcendpointfilter">[]Get<wbr>Vpc<wbr>Endpoint<wbr>Filter</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -650,6 +642,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span>Filters</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getvpcendpointfilter">[]Get<wbr>Vpc<wbr>Endpoint<wbr>Filter</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -674,14 +674,6 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The DNS entries for the VPC Endpoint. Applicable for endpoints of type `Interface`. DNS blocks are documented below.
 {{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>filters</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getvpcendpointfilter">Get<wbr>Vpc<wbr>Endpoint<wbr>Filter[]?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -813,6 +805,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span>filters</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getvpcendpointfilter">Get<wbr>Vpc<wbr>Endpoint<wbr>Filter[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -837,14 +837,6 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The DNS entries for the VPC Endpoint. Applicable for endpoints of type `Interface`. DNS blocks are documented below.
 {{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>filters</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getvpcendpointfilter">List[Get<wbr>Vpc<wbr>Endpoint<wbr>Filter]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -973,6 +965,14 @@ The following output properties are available:
         <span>vpc_<wbr>id</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>filters</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getvpcendpointfilter">List[Get<wbr>Vpc<wbr>Endpoint<wbr>Filter]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1132,7 +1132,7 @@ The following output properties are available:
             title="Required">
         <span>Values</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Set of values that are accepted for the given field.
 A VPC Endpoint will be selected if any one of the given values matches.

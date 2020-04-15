@@ -106,7 +106,7 @@ const accepterPeeringConnectionOptions = new aws.ec2.PeeringConnectionOptions("a
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#PeeringConnectionOptions">PeeringConnectionOptions</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#PeeringConnectionOptionsArgs">PeeringConnectionOptionsArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#PeeringConnectionOptions">PeeringConnectionOptions</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#PeeringConnectionOptionsArgs">PeeringConnectionOptionsArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -114,7 +114,7 @@ const accepterPeeringConnectionOptions = new aws.ec2.PeeringConnectionOptions("a
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewPeeringConnectionOptions<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2?tab=doc#PeeringConnectionOptionsArgs">PeeringConnectionOptionsArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2?tab=doc#PeeringConnectionOptions">PeeringConnectionOptions</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewPeeringConnectionOptions<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2?tab=doc#PeeringConnectionOptionsArgs">PeeringConnectionOptionsArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2?tab=doc#PeeringConnectionOptions">PeeringConnectionOptions</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -210,11 +210,20 @@ const accepterPeeringConnectionOptions = new aws.ec2.PeeringConnectionOptions("a
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Vpc<wbr>Peering<wbr>Connection<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the requester VPC peering connection.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Accepter</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#peeringconnectionoptionsaccepter">Peering<wbr>Connection<wbr>Options<wbr>Accepter<wbr>Args?</a></span>
+        <span class="property-type"><a href="#peeringconnectionoptionsaccepter">Peering<wbr>Connection<wbr>Options<wbr>Accepter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An optional configuration block that allows for [VPC Peering Connection]
 (http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide) options to be set for the VPC that accepts
@@ -225,20 +234,11 @@ the peering connection (a maximum of one).
             title="Optional">
         <span>Requester</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#peeringconnectionoptionsrequester">Peering<wbr>Connection<wbr>Options<wbr>Requester<wbr>Args?</a></span>
+        <span class="property-type"><a href="#peeringconnectionoptionsrequester">Peering<wbr>Connection<wbr>Options<wbr>Requester<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A optional configuration block that allows for [VPC Peering Connection]
 (http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide) options to be set for the VPC that requests
 the peering connection (a maximum of one).
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Vpc<wbr>Peering<wbr>Connection<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the requester VPC peering connection.
 {{% /md %}}</dd>
 
 </dl>
@@ -248,11 +248,20 @@ the peering connection (a maximum of one).
 {{% choosable language go %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Vpc<wbr>Peering<wbr>Connection<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the requester VPC peering connection.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Accepter</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#peeringconnectionoptionsaccepter">*Peering<wbr>Connection<wbr>Options<wbr>Accepter</a></span>
+        <span class="property-type"><a href="#peeringconnectionoptionsaccepter">Peering<wbr>Connection<wbr>Options<wbr>Accepter</a></span>
     </dt>
     <dd>{{% md %}}An optional configuration block that allows for [VPC Peering Connection]
 (http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide) options to be set for the VPC that accepts
@@ -263,20 +272,11 @@ the peering connection (a maximum of one).
             title="Optional">
         <span>Requester</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#peeringconnectionoptionsrequester">*Peering<wbr>Connection<wbr>Options<wbr>Requester</a></span>
+        <span class="property-type"><a href="#peeringconnectionoptionsrequester">Peering<wbr>Connection<wbr>Options<wbr>Requester</a></span>
     </dt>
     <dd>{{% md %}}A optional configuration block that allows for [VPC Peering Connection]
 (http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide) options to be set for the VPC that requests
 the peering connection (a maximum of one).
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Vpc<wbr>Peering<wbr>Connection<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the requester VPC peering connection.
 {{% /md %}}</dd>
 
 </dl>
@@ -285,28 +285,6 @@ the peering connection (a maximum of one).
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>accepter</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#peeringconnectionoptionsaccepter">Peering<wbr>Connection<wbr>Options<wbr>Accepter?</a></span>
-    </dt>
-    <dd>{{% md %}}An optional configuration block that allows for [VPC Peering Connection]
-(http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide) options to be set for the VPC that accepts
-the peering connection (a maximum of one).
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>requester</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#peeringconnectionoptionsrequester">Peering<wbr>Connection<wbr>Options<wbr>Requester?</a></span>
-    </dt>
-    <dd>{{% md %}}A optional configuration block that allows for [VPC Peering Connection]
-(http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide) options to be set for the VPC that requests
-the peering connection (a maximum of one).
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -317,12 +295,43 @@ the peering connection (a maximum of one).
     <dd>{{% md %}}The ID of the requester VPC peering connection.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>accepter</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#peeringconnectionoptionsaccepter">Peering<wbr>Connection<wbr>Options<wbr>Accepter</a></span>
+    </dt>
+    <dd>{{% md %}}An optional configuration block that allows for [VPC Peering Connection]
+(http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide) options to be set for the VPC that accepts
+the peering connection (a maximum of one).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>requester</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#peeringconnectionoptionsrequester">Peering<wbr>Connection<wbr>Options<wbr>Requester</a></span>
+    </dt>
+    <dd>{{% md %}}A optional configuration block that allows for [VPC Peering Connection]
+(http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide) options to be set for the VPC that requests
+the peering connection (a maximum of one).
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>vpc_<wbr>peering_<wbr>connection_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ID of the requester VPC peering connection.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -346,181 +355,10 @@ the peering connection (a maximum of one).
 the peering connection (a maximum of one).
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>vpc_<wbr>peering_<wbr>connection_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The ID of the requester VPC peering connection.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
-
-
-
-
-
-## PeeringConnectionOptions Output Properties
-
-The following output properties are available:
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Accepter</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#peeringconnectionoptionsaccepter">Peering<wbr>Connection<wbr>Options<wbr>Accepter</a></span>
-    </dt>
-    <dd>{{% md %}}An optional configuration block that allows for [VPC Peering Connection]
-(http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide) options to be set for the VPC that accepts
-the peering connection (a maximum of one).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Requester</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#peeringconnectionoptionsrequester">Peering<wbr>Connection<wbr>Options<wbr>Requester</a></span>
-    </dt>
-    <dd>{{% md %}}A optional configuration block that allows for [VPC Peering Connection]
-(http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide) options to be set for the VPC that requests
-the peering connection (a maximum of one).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Vpc<wbr>Peering<wbr>Connection<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the requester VPC peering connection.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Accepter</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#peeringconnectionoptionsaccepter">Peering<wbr>Connection<wbr>Options<wbr>Accepter</a></span>
-    </dt>
-    <dd>{{% md %}}An optional configuration block that allows for [VPC Peering Connection]
-(http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide) options to be set for the VPC that accepts
-the peering connection (a maximum of one).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Requester</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#peeringconnectionoptionsrequester">Peering<wbr>Connection<wbr>Options<wbr>Requester</a></span>
-    </dt>
-    <dd>{{% md %}}A optional configuration block that allows for [VPC Peering Connection]
-(http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide) options to be set for the VPC that requests
-the peering connection (a maximum of one).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Vpc<wbr>Peering<wbr>Connection<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the requester VPC peering connection.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>accepter</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#peeringconnectionoptionsaccepter">Peering<wbr>Connection<wbr>Options<wbr>Accepter</a></span>
-    </dt>
-    <dd>{{% md %}}An optional configuration block that allows for [VPC Peering Connection]
-(http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide) options to be set for the VPC that accepts
-the peering connection (a maximum of one).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>requester</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#peeringconnectionoptionsrequester">Peering<wbr>Connection<wbr>Options<wbr>Requester</a></span>
-    </dt>
-    <dd>{{% md %}}A optional configuration block that allows for [VPC Peering Connection]
-(http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide) options to be set for the VPC that requests
-the peering connection (a maximum of one).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>vpc<wbr>Peering<wbr>Connection<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the requester VPC peering connection.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>accepter</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#peeringconnectionoptionsaccepter">Dict[Peering<wbr>Connection<wbr>Options<wbr>Accepter]</a></span>
-    </dt>
-    <dd>{{% md %}}An optional configuration block that allows for [VPC Peering Connection]
-(http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide) options to be set for the VPC that accepts
-the peering connection (a maximum of one).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>requester</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#peeringconnectionoptionsrequester">Dict[Peering<wbr>Connection<wbr>Options<wbr>Requester]</a></span>
-    </dt>
-    <dd>{{% md %}}A optional configuration block that allows for [VPC Peering Connection]
-(http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide) options to be set for the VPC that requests
-the peering connection (a maximum of one).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>vpc_<wbr>peering_<wbr>connection_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The ID of the requester VPC peering connection.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
 
 
 
@@ -658,7 +496,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Accepter</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#peeringconnectionoptionsaccepter">Peering<wbr>Connection<wbr>Options<wbr>Accepter<wbr>Args?</a></span>
+        <span class="property-type"><a href="#peeringconnectionoptionsaccepter">Peering<wbr>Connection<wbr>Options<wbr>Accepter<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An optional configuration block that allows for [VPC Peering Connection]
 (http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide) options to be set for the VPC that accepts
@@ -669,7 +507,7 @@ the peering connection (a maximum of one).
             title="Optional">
         <span>Requester</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#peeringconnectionoptionsrequester">Peering<wbr>Connection<wbr>Options<wbr>Requester<wbr>Args?</a></span>
+        <span class="property-type"><a href="#peeringconnectionoptionsrequester">Peering<wbr>Connection<wbr>Options<wbr>Requester<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A optional configuration block that allows for [VPC Peering Connection]
 (http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide) options to be set for the VPC that requests
@@ -680,7 +518,7 @@ the peering connection (a maximum of one).
             title="Optional">
         <span>Vpc<wbr>Peering<wbr>Connection<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the requester VPC peering connection.
 {{% /md %}}</dd>
@@ -696,7 +534,7 @@ the peering connection (a maximum of one).
             title="Optional">
         <span>Accepter</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#peeringconnectionoptionsaccepter">*Peering<wbr>Connection<wbr>Options<wbr>Accepter</a></span>
+        <span class="property-type"><a href="#peeringconnectionoptionsaccepter">Peering<wbr>Connection<wbr>Options<wbr>Accepter</a></span>
     </dt>
     <dd>{{% md %}}An optional configuration block that allows for [VPC Peering Connection]
 (http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide) options to be set for the VPC that accepts
@@ -707,7 +545,7 @@ the peering connection (a maximum of one).
             title="Optional">
         <span>Requester</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#peeringconnectionoptionsrequester">*Peering<wbr>Connection<wbr>Options<wbr>Requester</a></span>
+        <span class="property-type"><a href="#peeringconnectionoptionsrequester">Peering<wbr>Connection<wbr>Options<wbr>Requester</a></span>
     </dt>
     <dd>{{% md %}}A optional configuration block that allows for [VPC Peering Connection]
 (http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide) options to be set for the VPC that requests
@@ -718,7 +556,7 @@ the peering connection (a maximum of one).
             title="Optional">
         <span>Vpc<wbr>Peering<wbr>Connection<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the requester VPC peering connection.
 {{% /md %}}</dd>
@@ -734,7 +572,7 @@ the peering connection (a maximum of one).
             title="Optional">
         <span>accepter</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#peeringconnectionoptionsaccepter">Peering<wbr>Connection<wbr>Options<wbr>Accepter?</a></span>
+        <span class="property-type"><a href="#peeringconnectionoptionsaccepter">Peering<wbr>Connection<wbr>Options<wbr>Accepter</a></span>
     </dt>
     <dd>{{% md %}}An optional configuration block that allows for [VPC Peering Connection]
 (http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide) options to be set for the VPC that accepts
@@ -745,7 +583,7 @@ the peering connection (a maximum of one).
             title="Optional">
         <span>requester</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#peeringconnectionoptionsrequester">Peering<wbr>Connection<wbr>Options<wbr>Requester?</a></span>
+        <span class="property-type"><a href="#peeringconnectionoptionsrequester">Peering<wbr>Connection<wbr>Options<wbr>Requester</a></span>
     </dt>
     <dd>{{% md %}}A optional configuration block that allows for [VPC Peering Connection]
 (http://docs.aws.amazon.com/AmazonVPC/latest/PeeringGuide) options to be set for the VPC that requests
@@ -756,7 +594,7 @@ the peering connection (a maximum of one).
             title="Optional">
         <span>vpc<wbr>Peering<wbr>Connection<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the requester VPC peering connection.
 {{% /md %}}</dd>
@@ -832,7 +670,7 @@ the peering connection (a maximum of one).
             title="Optional">
         <span>Allow<wbr>Classic<wbr>Link<wbr>To<wbr>Remote<wbr>Vpc</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow a local linked EC2-Classic instance to communicate
 with instances in a peer VPC. This enables an outbound communication from the local ClassicLink connection
@@ -843,7 +681,7 @@ to the remote VPC. This option is not supported for inter-region VPC peering.
             title="Optional">
         <span>Allow<wbr>Remote<wbr>Vpc<wbr>Dns<wbr>Resolution</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow a local VPC to resolve public DNS hostnames to
 private IP addresses when queried from instances in the peer VPC.
@@ -853,7 +691,7 @@ private IP addresses when queried from instances in the peer VPC.
             title="Optional">
         <span>Allow<wbr>Vpc<wbr>To<wbr>Remote<wbr>Classic<wbr>Link</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow a local VPC to communicate with a linked EC2-Classic
 instance in a peer VPC. This enables an outbound communication from the local VPC to the remote ClassicLink
@@ -871,7 +709,7 @@ connection. This option is not supported for inter-region VPC peering.
             title="Optional">
         <span>Allow<wbr>Classic<wbr>Link<wbr>To<wbr>Remote<wbr>Vpc</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow a local linked EC2-Classic instance to communicate
 with instances in a peer VPC. This enables an outbound communication from the local ClassicLink connection
@@ -882,7 +720,7 @@ to the remote VPC. This option is not supported for inter-region VPC peering.
             title="Optional">
         <span>Allow<wbr>Remote<wbr>Vpc<wbr>Dns<wbr>Resolution</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow a local VPC to resolve public DNS hostnames to
 private IP addresses when queried from instances in the peer VPC.
@@ -892,7 +730,7 @@ private IP addresses when queried from instances in the peer VPC.
             title="Optional">
         <span>Allow<wbr>Vpc<wbr>To<wbr>Remote<wbr>Classic<wbr>Link</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow a local VPC to communicate with a linked EC2-Classic
 instance in a peer VPC. This enables an outbound communication from the local VPC to the remote ClassicLink
@@ -910,7 +748,7 @@ connection. This option is not supported for inter-region VPC peering.
             title="Optional">
         <span>allow<wbr>Classic<wbr>Link<wbr>To<wbr>Remote<wbr>Vpc</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Allow a local linked EC2-Classic instance to communicate
 with instances in a peer VPC. This enables an outbound communication from the local ClassicLink connection
@@ -921,7 +759,7 @@ to the remote VPC. This option is not supported for inter-region VPC peering.
             title="Optional">
         <span>allow<wbr>Remote<wbr>Vpc<wbr>Dns<wbr>Resolution</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Allow a local VPC to resolve public DNS hostnames to
 private IP addresses when queried from instances in the peer VPC.
@@ -931,7 +769,7 @@ private IP addresses when queried from instances in the peer VPC.
             title="Optional">
         <span>allow<wbr>Vpc<wbr>To<wbr>Remote<wbr>Classic<wbr>Link</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Allow a local VPC to communicate with a linked EC2-Classic
 instance in a peer VPC. This enables an outbound communication from the local VPC to the remote ClassicLink
@@ -1003,7 +841,7 @@ connection. This option is not supported for inter-region VPC peering.
             title="Optional">
         <span>Allow<wbr>Classic<wbr>Link<wbr>To<wbr>Remote<wbr>Vpc</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow a local linked EC2-Classic instance to communicate
 with instances in a peer VPC. This enables an outbound communication from the local ClassicLink connection
@@ -1014,7 +852,7 @@ to the remote VPC. This option is not supported for inter-region VPC peering.
             title="Optional">
         <span>Allow<wbr>Remote<wbr>Vpc<wbr>Dns<wbr>Resolution</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow a local VPC to resolve public DNS hostnames to
 private IP addresses when queried from instances in the peer VPC.
@@ -1024,7 +862,7 @@ private IP addresses when queried from instances in the peer VPC.
             title="Optional">
         <span>Allow<wbr>Vpc<wbr>To<wbr>Remote<wbr>Classic<wbr>Link</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow a local VPC to communicate with a linked EC2-Classic
 instance in a peer VPC. This enables an outbound communication from the local VPC to the remote ClassicLink
@@ -1042,7 +880,7 @@ connection. This option is not supported for inter-region VPC peering.
             title="Optional">
         <span>Allow<wbr>Classic<wbr>Link<wbr>To<wbr>Remote<wbr>Vpc</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow a local linked EC2-Classic instance to communicate
 with instances in a peer VPC. This enables an outbound communication from the local ClassicLink connection
@@ -1053,7 +891,7 @@ to the remote VPC. This option is not supported for inter-region VPC peering.
             title="Optional">
         <span>Allow<wbr>Remote<wbr>Vpc<wbr>Dns<wbr>Resolution</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow a local VPC to resolve public DNS hostnames to
 private IP addresses when queried from instances in the peer VPC.
@@ -1063,7 +901,7 @@ private IP addresses when queried from instances in the peer VPC.
             title="Optional">
         <span>Allow<wbr>Vpc<wbr>To<wbr>Remote<wbr>Classic<wbr>Link</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Allow a local VPC to communicate with a linked EC2-Classic
 instance in a peer VPC. This enables an outbound communication from the local VPC to the remote ClassicLink
@@ -1081,7 +919,7 @@ connection. This option is not supported for inter-region VPC peering.
             title="Optional">
         <span>allow<wbr>Classic<wbr>Link<wbr>To<wbr>Remote<wbr>Vpc</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Allow a local linked EC2-Classic instance to communicate
 with instances in a peer VPC. This enables an outbound communication from the local ClassicLink connection
@@ -1092,7 +930,7 @@ to the remote VPC. This option is not supported for inter-region VPC peering.
             title="Optional">
         <span>allow<wbr>Remote<wbr>Vpc<wbr>Dns<wbr>Resolution</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Allow a local VPC to resolve public DNS hostnames to
 private IP addresses when queried from instances in the peer VPC.
@@ -1102,7 +940,7 @@ private IP addresses when queried from instances in the peer VPC.
             title="Optional">
         <span>allow<wbr>Vpc<wbr>To<wbr>Remote<wbr>Classic<wbr>Link</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Allow a local VPC to communicate with a linked EC2-Classic
 instance in a peer VPC. This enables an outbound communication from the local VPC to the remote ClassicLink

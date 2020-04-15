@@ -49,7 +49,7 @@ const test = new aws.dms.Endpoint("test", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/dms/#Endpoint">Endpoint</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/dms/#EndpointArgs">EndpointArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/dms/#Endpoint">Endpoint</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/dms/#EndpointArgs">EndpointArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -57,7 +57,7 @@ const test = new aws.dms.Endpoint("test", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewEndpoint<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/dms?tab=doc#EndpointArgs">EndpointArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/dms?tab=doc#Endpoint">Endpoint</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewEndpoint<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/dms?tab=doc#EndpointArgs">EndpointArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/dms?tab=doc#Endpoint">Endpoint</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -153,24 +153,6 @@ const test = new aws.dms.Endpoint("test", {
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Certificate<wbr>Arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) for the certificate.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Database<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The name of the endpoint database.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Endpoint<wbr>Id</span>
@@ -200,9 +182,27 @@ const test = new aws.dms.Endpoint("test", {
 
     <dt class="property-optional"
             title="Optional">
+        <span>Certificate<wbr>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name (ARN) for the certificate.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Database<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the endpoint database.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Extra<wbr>Connection<wbr>Attributes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Additional attributes associated with the connection. For available attributes see [Using Extra Connection Attributes with AWS Database Migration Service](http://docs.aws.amazon.com/dms/latest/userguide/CHAP_Introduction.ConnectionAttributes.html).
 {{% /md %}}</dd>
@@ -211,7 +211,7 @@ const test = new aws.dms.Endpoint("test", {
             title="Optional">
         <span>Kms<wbr>Key<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) for the KMS key that will be used to encrypt the connection parameters. If you do not specify a value for `kms_key_arn`, then AWS DMS will use your default encryption key. AWS KMS creates the default encryption key for your AWS account. Your AWS account has a different default encryption key for each AWS region.
 {{% /md %}}</dd>
@@ -220,7 +220,7 @@ const test = new aws.dms.Endpoint("test", {
             title="Optional">
         <span>Mongodb<wbr>Settings</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointmongodbsettings">Endpoint<wbr>Mongodb<wbr>Settings<wbr>Args?</a></span>
+        <span class="property-type"><a href="#endpointmongodbsettings">Endpoint<wbr>Mongodb<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings for the source MongoDB endpoint. Available settings are `auth_type` (default: `password`), `auth_mechanism` (default: `default`), `nesting_level` (default: `none`), `extract_doc_id` (default: `false`), `docs_to_investigate` (default: `1000`) and `auth_source` (default: `admin`). For more details, see [Using MongoDB as a Source for AWS DMS](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Source.MongoDB.html).
 {{% /md %}}</dd>
@@ -229,7 +229,7 @@ const test = new aws.dms.Endpoint("test", {
             title="Optional">
         <span>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password to be used to login to the endpoint database.
 {{% /md %}}</dd>
@@ -238,7 +238,7 @@ const test = new aws.dms.Endpoint("test", {
             title="Optional">
         <span>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port used by the endpoint database.
 {{% /md %}}</dd>
@@ -247,7 +247,7 @@ const test = new aws.dms.Endpoint("test", {
             title="Optional">
         <span>S3Settings</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpoints3settings">Endpoint<wbr>S3Settings<wbr>Args?</a></span>
+        <span class="property-type"><a href="#endpoints3settings">Endpoint<wbr>S3Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings for the target S3 endpoint. Available settings are `service_access_role_arn`, `external_table_definition`, `csv_row_delimiter` (default: `\\n`), `csv_delimiter` (default: `,`), `bucket_folder`, `bucket_name` and `compression_type` (default: `NONE`). For more details, see [Using Amazon S3 as a Target for AWS Database Migration Service](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Target.S3.html).
 {{% /md %}}</dd>
@@ -256,7 +256,7 @@ const test = new aws.dms.Endpoint("test", {
             title="Optional">
         <span>Server<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The host name of the server.
 {{% /md %}}</dd>
@@ -265,7 +265,7 @@ const test = new aws.dms.Endpoint("test", {
             title="Optional">
         <span>Service<wbr>Access<wbr>Role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) used by the service access IAM role for dynamodb endpoints.
 {{% /md %}}</dd>
@@ -274,7 +274,7 @@ const test = new aws.dms.Endpoint("test", {
             title="Optional">
         <span>Ssl<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SSL mode to use for the connection. Can be one of `none | require | verify-ca | verify-full`
 {{% /md %}}</dd>
@@ -283,7 +283,7 @@ const test = new aws.dms.Endpoint("test", {
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -292,7 +292,7 @@ const test = new aws.dms.Endpoint("test", {
             title="Optional">
         <span>Username</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user name to be used to login to the endpoint database.
 {{% /md %}}</dd>
@@ -304,24 +304,6 @@ const test = new aws.dms.Endpoint("test", {
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Certificate<wbr>Arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) for the certificate.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Database<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The name of the endpoint database.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Endpoint<wbr>Id</span>
@@ -351,9 +333,27 @@ const test = new aws.dms.Endpoint("test", {
 
     <dt class="property-optional"
             title="Optional">
+        <span>Certificate<wbr>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name (ARN) for the certificate.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Database<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the endpoint database.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Extra<wbr>Connection<wbr>Attributes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Additional attributes associated with the connection. For available attributes see [Using Extra Connection Attributes with AWS Database Migration Service](http://docs.aws.amazon.com/dms/latest/userguide/CHAP_Introduction.ConnectionAttributes.html).
 {{% /md %}}</dd>
@@ -362,7 +362,7 @@ const test = new aws.dms.Endpoint("test", {
             title="Optional">
         <span>Kms<wbr>Key<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) for the KMS key that will be used to encrypt the connection parameters. If you do not specify a value for `kms_key_arn`, then AWS DMS will use your default encryption key. AWS KMS creates the default encryption key for your AWS account. Your AWS account has a different default encryption key for each AWS region.
 {{% /md %}}</dd>
@@ -371,7 +371,7 @@ const test = new aws.dms.Endpoint("test", {
             title="Optional">
         <span>Mongodb<wbr>Settings</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointmongodbsettings">*Endpoint<wbr>Mongodb<wbr>Settings</a></span>
+        <span class="property-type"><a href="#endpointmongodbsettings">Endpoint<wbr>Mongodb<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Settings for the source MongoDB endpoint. Available settings are `auth_type` (default: `password`), `auth_mechanism` (default: `default`), `nesting_level` (default: `none`), `extract_doc_id` (default: `false`), `docs_to_investigate` (default: `1000`) and `auth_source` (default: `admin`). For more details, see [Using MongoDB as a Source for AWS DMS](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Source.MongoDB.html).
 {{% /md %}}</dd>
@@ -380,7 +380,7 @@ const test = new aws.dms.Endpoint("test", {
             title="Optional">
         <span>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password to be used to login to the endpoint database.
 {{% /md %}}</dd>
@@ -389,7 +389,7 @@ const test = new aws.dms.Endpoint("test", {
             title="Optional">
         <span>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port used by the endpoint database.
 {{% /md %}}</dd>
@@ -398,7 +398,7 @@ const test = new aws.dms.Endpoint("test", {
             title="Optional">
         <span>S3Settings</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpoints3settings">*Endpoint<wbr>S3Settings</a></span>
+        <span class="property-type"><a href="#endpoints3settings">Endpoint<wbr>S3Settings</a></span>
     </dt>
     <dd>{{% md %}}Settings for the target S3 endpoint. Available settings are `service_access_role_arn`, `external_table_definition`, `csv_row_delimiter` (default: `\\n`), `csv_delimiter` (default: `,`), `bucket_folder`, `bucket_name` and `compression_type` (default: `NONE`). For more details, see [Using Amazon S3 as a Target for AWS Database Migration Service](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Target.S3.html).
 {{% /md %}}</dd>
@@ -407,7 +407,7 @@ const test = new aws.dms.Endpoint("test", {
             title="Optional">
         <span>Server<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The host name of the server.
 {{% /md %}}</dd>
@@ -416,7 +416,7 @@ const test = new aws.dms.Endpoint("test", {
             title="Optional">
         <span>Service<wbr>Access<wbr>Role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) used by the service access IAM role for dynamodb endpoints.
 {{% /md %}}</dd>
@@ -425,7 +425,7 @@ const test = new aws.dms.Endpoint("test", {
             title="Optional">
         <span>Ssl<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SSL mode to use for the connection. Can be one of `none | require | verify-ca | verify-full`
 {{% /md %}}</dd>
@@ -443,7 +443,7 @@ const test = new aws.dms.Endpoint("test", {
             title="Optional">
         <span>Username</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user name to be used to login to the endpoint database.
 {{% /md %}}</dd>
@@ -454,24 +454,6 @@ const test = new aws.dms.Endpoint("test", {
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>certificate<wbr>Arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) for the certificate.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>database<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The name of the endpoint database.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -502,9 +484,27 @@ const test = new aws.dms.Endpoint("test", {
 
     <dt class="property-optional"
             title="Optional">
+        <span>certificate<wbr>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name (ARN) for the certificate.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>database<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the endpoint database.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>extra<wbr>Connection<wbr>Attributes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Additional attributes associated with the connection. For available attributes see [Using Extra Connection Attributes with AWS Database Migration Service](http://docs.aws.amazon.com/dms/latest/userguide/CHAP_Introduction.ConnectionAttributes.html).
 {{% /md %}}</dd>
@@ -513,7 +513,7 @@ const test = new aws.dms.Endpoint("test", {
             title="Optional">
         <span>kms<wbr>Key<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) for the KMS key that will be used to encrypt the connection parameters. If you do not specify a value for `kms_key_arn`, then AWS DMS will use your default encryption key. AWS KMS creates the default encryption key for your AWS account. Your AWS account has a different default encryption key for each AWS region.
 {{% /md %}}</dd>
@@ -522,7 +522,7 @@ const test = new aws.dms.Endpoint("test", {
             title="Optional">
         <span>mongodb<wbr>Settings</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointmongodbsettings">Endpoint<wbr>Mongodb<wbr>Settings?</a></span>
+        <span class="property-type"><a href="#endpointmongodbsettings">Endpoint<wbr>Mongodb<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Settings for the source MongoDB endpoint. Available settings are `auth_type` (default: `password`), `auth_mechanism` (default: `default`), `nesting_level` (default: `none`), `extract_doc_id` (default: `false`), `docs_to_investigate` (default: `1000`) and `auth_source` (default: `admin`). For more details, see [Using MongoDB as a Source for AWS DMS](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Source.MongoDB.html).
 {{% /md %}}</dd>
@@ -531,7 +531,7 @@ const test = new aws.dms.Endpoint("test", {
             title="Optional">
         <span>password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password to be used to login to the endpoint database.
 {{% /md %}}</dd>
@@ -540,7 +540,7 @@ const test = new aws.dms.Endpoint("test", {
             title="Optional">
         <span>port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The port used by the endpoint database.
 {{% /md %}}</dd>
@@ -549,7 +549,7 @@ const test = new aws.dms.Endpoint("test", {
             title="Optional">
         <span>s3Settings</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpoints3settings">Endpoint<wbr>S3Settings?</a></span>
+        <span class="property-type"><a href="#endpoints3settings">Endpoint<wbr>S3Settings</a></span>
     </dt>
     <dd>{{% md %}}Settings for the target S3 endpoint. Available settings are `service_access_role_arn`, `external_table_definition`, `csv_row_delimiter` (default: `\\n`), `csv_delimiter` (default: `,`), `bucket_folder`, `bucket_name` and `compression_type` (default: `NONE`). For more details, see [Using Amazon S3 as a Target for AWS Database Migration Service](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Target.S3.html).
 {{% /md %}}</dd>
@@ -558,7 +558,7 @@ const test = new aws.dms.Endpoint("test", {
             title="Optional">
         <span>server<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The host name of the server.
 {{% /md %}}</dd>
@@ -567,7 +567,7 @@ const test = new aws.dms.Endpoint("test", {
             title="Optional">
         <span>service<wbr>Access<wbr>Role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) used by the service access IAM role for dynamodb endpoints.
 {{% /md %}}</dd>
@@ -576,7 +576,7 @@ const test = new aws.dms.Endpoint("test", {
             title="Optional">
         <span>ssl<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SSL mode to use for the connection. Can be one of `none | require | verify-ca | verify-full`
 {{% /md %}}</dd>
@@ -585,7 +585,7 @@ const test = new aws.dms.Endpoint("test", {
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -594,7 +594,7 @@ const test = new aws.dms.Endpoint("test", {
             title="Optional">
         <span>username</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user name to be used to login to the endpoint database.
 {{% /md %}}</dd>
@@ -605,24 +605,6 @@ const test = new aws.dms.Endpoint("test", {
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>certificate_<wbr>arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) for the certificate.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>database_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the endpoint database.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -649,6 +631,24 @@ const test = new aws.dms.Endpoint("test", {
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of engine for the endpoint. Can be one of `aurora | azuredb | db2 | docdb | dynamodb | mariadb | mongodb | mysql | oracle | postgres | redshift | s3 | sqlserver | sybase`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>certificate_<wbr>arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name (ARN) for the certificate.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>database_<wbr>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the endpoint database.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -771,155 +771,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Certificate<wbr>Arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) for the certificate.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Database<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The name of the endpoint database.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Endpoint<wbr>Arn</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) for the endpoint.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Endpoint<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The database endpoint identifier.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Endpoint<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The type of endpoint. Can be one of `source | target`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Engine<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The type of engine for the endpoint. Can be one of `aurora | azuredb | db2 | docdb | dynamodb | mariadb | mongodb | mysql | oracle | postgres | redshift | s3 | sqlserver | sybase`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Extra<wbr>Connection<wbr>Attributes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Additional attributes associated with the connection. For available attributes see [Using Extra Connection Attributes with AWS Database Migration Service](http://docs.aws.amazon.com/dms/latest/userguide/CHAP_Introduction.ConnectionAttributes.html).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Kms<wbr>Key<wbr>Arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) for the KMS key that will be used to encrypt the connection parameters. If you do not specify a value for `kms_key_arn`, then AWS DMS will use your default encryption key. AWS KMS creates the default encryption key for your AWS account. Your AWS account has a different default encryption key for each AWS region.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Mongodb<wbr>Settings</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointmongodbsettings">Endpoint<wbr>Mongodb<wbr>Settings?</a></span>
-    </dt>
-    <dd>{{% md %}}Settings for the source MongoDB endpoint. Available settings are `auth_type` (default: `password`), `auth_mechanism` (default: `default`), `nesting_level` (default: `none`), `extract_doc_id` (default: `false`), `docs_to_investigate` (default: `1000`) and `auth_source` (default: `admin`). For more details, see [Using MongoDB as a Source for AWS DMS](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Source.MongoDB.html).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Password</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The password to be used to login to the endpoint database.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Port</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}The port used by the endpoint database.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>S3Settings</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpoints3settings">Endpoint<wbr>S3Settings?</a></span>
-    </dt>
-    <dd>{{% md %}}Settings for the target S3 endpoint. Available settings are `service_access_role_arn`, `external_table_definition`, `csv_row_delimiter` (default: `\\n`), `csv_delimiter` (default: `,`), `bucket_folder`, `bucket_name` and `compression_type` (default: `NONE`). For more details, see [Using Amazon S3 as a Target for AWS Database Migration Service](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Target.S3.html).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Server<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The host name of the server.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Service<wbr>Access<wbr>Role</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) used by the service access IAM role for dynamodb endpoints.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Ssl<wbr>Mode</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The SSL mode to use for the connection. Can be one of `none | require | verify-ca | verify-full`
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Username</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The user name to be used to login to the endpoint database.
 {{% /md %}}</dd>
 
 </dl>
@@ -931,155 +787,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Certificate<wbr>Arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) for the certificate.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Database<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The name of the endpoint database.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Endpoint<wbr>Arn</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) for the endpoint.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Endpoint<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The database endpoint identifier.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Endpoint<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The type of endpoint. Can be one of `source | target`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Engine<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The type of engine for the endpoint. Can be one of `aurora | azuredb | db2 | docdb | dynamodb | mariadb | mongodb | mysql | oracle | postgres | redshift | s3 | sqlserver | sybase`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Extra<wbr>Connection<wbr>Attributes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Additional attributes associated with the connection. For available attributes see [Using Extra Connection Attributes with AWS Database Migration Service](http://docs.aws.amazon.com/dms/latest/userguide/CHAP_Introduction.ConnectionAttributes.html).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Kms<wbr>Key<wbr>Arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) for the KMS key that will be used to encrypt the connection parameters. If you do not specify a value for `kms_key_arn`, then AWS DMS will use your default encryption key. AWS KMS creates the default encryption key for your AWS account. Your AWS account has a different default encryption key for each AWS region.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Mongodb<wbr>Settings</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointmongodbsettings">*Endpoint<wbr>Mongodb<wbr>Settings</a></span>
-    </dt>
-    <dd>{{% md %}}Settings for the source MongoDB endpoint. Available settings are `auth_type` (default: `password`), `auth_mechanism` (default: `default`), `nesting_level` (default: `none`), `extract_doc_id` (default: `false`), `docs_to_investigate` (default: `1000`) and `auth_source` (default: `admin`). For more details, see [Using MongoDB as a Source for AWS DMS](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Source.MongoDB.html).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Password</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The password to be used to login to the endpoint database.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Port</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}The port used by the endpoint database.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>S3Settings</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpoints3settings">*Endpoint<wbr>S3Settings</a></span>
-    </dt>
-    <dd>{{% md %}}Settings for the target S3 endpoint. Available settings are `service_access_role_arn`, `external_table_definition`, `csv_row_delimiter` (default: `\\n`), `csv_delimiter` (default: `,`), `bucket_folder`, `bucket_name` and `compression_type` (default: `NONE`). For more details, see [Using Amazon S3 as a Target for AWS Database Migration Service](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Target.S3.html).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Server<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The host name of the server.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Service<wbr>Access<wbr>Role</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) used by the service access IAM role for dynamodb endpoints.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Ssl<wbr>Mode</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The SSL mode to use for the connection. Can be one of `none | require | verify-ca | verify-full`
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Username</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The user name to be used to login to the endpoint database.
 {{% /md %}}</dd>
 
 </dl>
@@ -1091,155 +803,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>certificate<wbr>Arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) for the certificate.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>database<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The name of the endpoint database.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>endpoint<wbr>Arn</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) for the endpoint.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>endpoint<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The database endpoint identifier.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>endpoint<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The type of endpoint. Can be one of `source | target`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>engine<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The type of engine for the endpoint. Can be one of `aurora | azuredb | db2 | docdb | dynamodb | mariadb | mongodb | mysql | oracle | postgres | redshift | s3 | sqlserver | sybase`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>extra<wbr>Connection<wbr>Attributes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Additional attributes associated with the connection. For available attributes see [Using Extra Connection Attributes with AWS Database Migration Service](http://docs.aws.amazon.com/dms/latest/userguide/CHAP_Introduction.ConnectionAttributes.html).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>kms<wbr>Key<wbr>Arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) for the KMS key that will be used to encrypt the connection parameters. If you do not specify a value for `kms_key_arn`, then AWS DMS will use your default encryption key. AWS KMS creates the default encryption key for your AWS account. Your AWS account has a different default encryption key for each AWS region.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>mongodb<wbr>Settings</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointmongodbsettings">Endpoint<wbr>Mongodb<wbr>Settings?</a></span>
-    </dt>
-    <dd>{{% md %}}Settings for the source MongoDB endpoint. Available settings are `auth_type` (default: `password`), `auth_mechanism` (default: `default`), `nesting_level` (default: `none`), `extract_doc_id` (default: `false`), `docs_to_investigate` (default: `1000`) and `auth_source` (default: `admin`). For more details, see [Using MongoDB as a Source for AWS DMS](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Source.MongoDB.html).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>password</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The password to be used to login to the endpoint database.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>port</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}The port used by the endpoint database.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>s3Settings</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpoints3settings">Endpoint<wbr>S3Settings?</a></span>
-    </dt>
-    <dd>{{% md %}}Settings for the target S3 endpoint. Available settings are `service_access_role_arn`, `external_table_definition`, `csv_row_delimiter` (default: `\\n`), `csv_delimiter` (default: `,`), `bucket_folder`, `bucket_name` and `compression_type` (default: `NONE`). For more details, see [Using Amazon S3 as a Target for AWS Database Migration Service](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Target.S3.html).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>server<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The host name of the server.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>service<wbr>Access<wbr>Role</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) used by the service access IAM role for dynamodb endpoints.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>ssl<wbr>Mode</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The SSL mode to use for the connection. Can be one of `none | require | verify-ca | verify-full`
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>username</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The user name to be used to login to the endpoint database.
 {{% /md %}}</dd>
 
 </dl>
@@ -1251,155 +819,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>certificate_<wbr>arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) for the certificate.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>database_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the endpoint database.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>endpoint_<wbr>arn</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) for the endpoint.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>endpoint_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The database endpoint identifier.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>endpoint_<wbr>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The type of endpoint. Can be one of `source | target`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>engine_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The type of engine for the endpoint. Can be one of `aurora | azuredb | db2 | docdb | dynamodb | mariadb | mongodb | mysql | oracle | postgres | redshift | s3 | sqlserver | sybase`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>extra_<wbr>connection_<wbr>attributes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Additional attributes associated with the connection. For available attributes see [Using Extra Connection Attributes with AWS Database Migration Service](http://docs.aws.amazon.com/dms/latest/userguide/CHAP_Introduction.ConnectionAttributes.html).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>kms_<wbr>key_<wbr>arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) for the KMS key that will be used to encrypt the connection parameters. If you do not specify a value for `kms_key_arn`, then AWS DMS will use your default encryption key. AWS KMS creates the default encryption key for your AWS account. Your AWS account has a different default encryption key for each AWS region.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>mongodb_<wbr>settings</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointmongodbsettings">Dict[Endpoint<wbr>Mongodb<wbr>Settings]</a></span>
-    </dt>
-    <dd>{{% md %}}Settings for the source MongoDB endpoint. Available settings are `auth_type` (default: `password`), `auth_mechanism` (default: `default`), `nesting_level` (default: `none`), `extract_doc_id` (default: `false`), `docs_to_investigate` (default: `1000`) and `auth_source` (default: `admin`). For more details, see [Using MongoDB as a Source for AWS DMS](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Source.MongoDB.html).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>password</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The password to be used to login to the endpoint database.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>port</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The port used by the endpoint database.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>s3_<wbr>settings</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpoints3settings">Dict[Endpoint<wbr>S3Settings]</a></span>
-    </dt>
-    <dd>{{% md %}}Settings for the target S3 endpoint. Available settings are `service_access_role_arn`, `external_table_definition`, `csv_row_delimiter` (default: `\\n`), `csv_delimiter` (default: `,`), `bucket_folder`, `bucket_name` and `compression_type` (default: `NONE`). For more details, see [Using Amazon S3 as a Target for AWS Database Migration Service](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Target.S3.html).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>server_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The host name of the server.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>service_<wbr>access_<wbr>role</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) used by the service access IAM role for dynamodb endpoints.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>ssl_<wbr>mode</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The SSL mode to use for the connection. Can be one of `none | require | verify-ca | verify-full`
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>username</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The user name to be used to login to the endpoint database.
 {{% /md %}}</dd>
 
 </dl>
@@ -1541,7 +965,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Certificate<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) for the certificate.
 {{% /md %}}</dd>
@@ -1550,7 +974,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Database<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the endpoint database.
 {{% /md %}}</dd>
@@ -1559,7 +983,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Endpoint<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) for the endpoint.
 {{% /md %}}</dd>
@@ -1568,7 +992,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Endpoint<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The database endpoint identifier.
 {{% /md %}}</dd>
@@ -1577,7 +1001,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Endpoint<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of endpoint. Can be one of `source | target`.
 {{% /md %}}</dd>
@@ -1586,7 +1010,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Engine<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of engine for the endpoint. Can be one of `aurora | azuredb | db2 | docdb | dynamodb | mariadb | mongodb | mysql | oracle | postgres | redshift | s3 | sqlserver | sybase`.
 {{% /md %}}</dd>
@@ -1595,7 +1019,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Extra<wbr>Connection<wbr>Attributes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Additional attributes associated with the connection. For available attributes see [Using Extra Connection Attributes with AWS Database Migration Service](http://docs.aws.amazon.com/dms/latest/userguide/CHAP_Introduction.ConnectionAttributes.html).
 {{% /md %}}</dd>
@@ -1604,7 +1028,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Kms<wbr>Key<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) for the KMS key that will be used to encrypt the connection parameters. If you do not specify a value for `kms_key_arn`, then AWS DMS will use your default encryption key. AWS KMS creates the default encryption key for your AWS account. Your AWS account has a different default encryption key for each AWS region.
 {{% /md %}}</dd>
@@ -1613,7 +1037,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Mongodb<wbr>Settings</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointmongodbsettings">Endpoint<wbr>Mongodb<wbr>Settings<wbr>Args?</a></span>
+        <span class="property-type"><a href="#endpointmongodbsettings">Endpoint<wbr>Mongodb<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings for the source MongoDB endpoint. Available settings are `auth_type` (default: `password`), `auth_mechanism` (default: `default`), `nesting_level` (default: `none`), `extract_doc_id` (default: `false`), `docs_to_investigate` (default: `1000`) and `auth_source` (default: `admin`). For more details, see [Using MongoDB as a Source for AWS DMS](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Source.MongoDB.html).
 {{% /md %}}</dd>
@@ -1622,7 +1046,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password to be used to login to the endpoint database.
 {{% /md %}}</dd>
@@ -1631,7 +1055,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port used by the endpoint database.
 {{% /md %}}</dd>
@@ -1640,7 +1064,7 @@ The following state arguments are supported:
             title="Optional">
         <span>S3Settings</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpoints3settings">Endpoint<wbr>S3Settings<wbr>Args?</a></span>
+        <span class="property-type"><a href="#endpoints3settings">Endpoint<wbr>S3Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Settings for the target S3 endpoint. Available settings are `service_access_role_arn`, `external_table_definition`, `csv_row_delimiter` (default: `\\n`), `csv_delimiter` (default: `,`), `bucket_folder`, `bucket_name` and `compression_type` (default: `NONE`). For more details, see [Using Amazon S3 as a Target for AWS Database Migration Service](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Target.S3.html).
 {{% /md %}}</dd>
@@ -1649,7 +1073,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Server<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The host name of the server.
 {{% /md %}}</dd>
@@ -1658,7 +1082,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Service<wbr>Access<wbr>Role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) used by the service access IAM role for dynamodb endpoints.
 {{% /md %}}</dd>
@@ -1667,7 +1091,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Ssl<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SSL mode to use for the connection. Can be one of `none | require | verify-ca | verify-full`
 {{% /md %}}</dd>
@@ -1676,7 +1100,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1685,7 +1109,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Username</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user name to be used to login to the endpoint database.
 {{% /md %}}</dd>
@@ -1701,7 +1125,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Certificate<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) for the certificate.
 {{% /md %}}</dd>
@@ -1710,7 +1134,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Database<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the endpoint database.
 {{% /md %}}</dd>
@@ -1719,7 +1143,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Endpoint<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) for the endpoint.
 {{% /md %}}</dd>
@@ -1728,7 +1152,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Endpoint<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The database endpoint identifier.
 {{% /md %}}</dd>
@@ -1737,7 +1161,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Endpoint<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of endpoint. Can be one of `source | target`.
 {{% /md %}}</dd>
@@ -1746,7 +1170,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Engine<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of engine for the endpoint. Can be one of `aurora | azuredb | db2 | docdb | dynamodb | mariadb | mongodb | mysql | oracle | postgres | redshift | s3 | sqlserver | sybase`.
 {{% /md %}}</dd>
@@ -1755,7 +1179,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Extra<wbr>Connection<wbr>Attributes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Additional attributes associated with the connection. For available attributes see [Using Extra Connection Attributes with AWS Database Migration Service](http://docs.aws.amazon.com/dms/latest/userguide/CHAP_Introduction.ConnectionAttributes.html).
 {{% /md %}}</dd>
@@ -1764,7 +1188,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Kms<wbr>Key<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) for the KMS key that will be used to encrypt the connection parameters. If you do not specify a value for `kms_key_arn`, then AWS DMS will use your default encryption key. AWS KMS creates the default encryption key for your AWS account. Your AWS account has a different default encryption key for each AWS region.
 {{% /md %}}</dd>
@@ -1773,7 +1197,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Mongodb<wbr>Settings</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointmongodbsettings">*Endpoint<wbr>Mongodb<wbr>Settings</a></span>
+        <span class="property-type"><a href="#endpointmongodbsettings">Endpoint<wbr>Mongodb<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Settings for the source MongoDB endpoint. Available settings are `auth_type` (default: `password`), `auth_mechanism` (default: `default`), `nesting_level` (default: `none`), `extract_doc_id` (default: `false`), `docs_to_investigate` (default: `1000`) and `auth_source` (default: `admin`). For more details, see [Using MongoDB as a Source for AWS DMS](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Source.MongoDB.html).
 {{% /md %}}</dd>
@@ -1782,7 +1206,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password to be used to login to the endpoint database.
 {{% /md %}}</dd>
@@ -1791,7 +1215,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port used by the endpoint database.
 {{% /md %}}</dd>
@@ -1800,7 +1224,7 @@ The following state arguments are supported:
             title="Optional">
         <span>S3Settings</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpoints3settings">*Endpoint<wbr>S3Settings</a></span>
+        <span class="property-type"><a href="#endpoints3settings">Endpoint<wbr>S3Settings</a></span>
     </dt>
     <dd>{{% md %}}Settings for the target S3 endpoint. Available settings are `service_access_role_arn`, `external_table_definition`, `csv_row_delimiter` (default: `\\n`), `csv_delimiter` (default: `,`), `bucket_folder`, `bucket_name` and `compression_type` (default: `NONE`). For more details, see [Using Amazon S3 as a Target for AWS Database Migration Service](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Target.S3.html).
 {{% /md %}}</dd>
@@ -1809,7 +1233,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Server<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The host name of the server.
 {{% /md %}}</dd>
@@ -1818,7 +1242,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Service<wbr>Access<wbr>Role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) used by the service access IAM role for dynamodb endpoints.
 {{% /md %}}</dd>
@@ -1827,7 +1251,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Ssl<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SSL mode to use for the connection. Can be one of `none | require | verify-ca | verify-full`
 {{% /md %}}</dd>
@@ -1845,7 +1269,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Username</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user name to be used to login to the endpoint database.
 {{% /md %}}</dd>
@@ -1861,7 +1285,7 @@ The following state arguments are supported:
             title="Optional">
         <span>certificate<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) for the certificate.
 {{% /md %}}</dd>
@@ -1870,7 +1294,7 @@ The following state arguments are supported:
             title="Optional">
         <span>database<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the endpoint database.
 {{% /md %}}</dd>
@@ -1879,7 +1303,7 @@ The following state arguments are supported:
             title="Optional">
         <span>endpoint<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) for the endpoint.
 {{% /md %}}</dd>
@@ -1888,7 +1312,7 @@ The following state arguments are supported:
             title="Optional">
         <span>endpoint<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The database endpoint identifier.
 {{% /md %}}</dd>
@@ -1897,7 +1321,7 @@ The following state arguments are supported:
             title="Optional">
         <span>endpoint<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of endpoint. Can be one of `source | target`.
 {{% /md %}}</dd>
@@ -1906,7 +1330,7 @@ The following state arguments are supported:
             title="Optional">
         <span>engine<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of engine for the endpoint. Can be one of `aurora | azuredb | db2 | docdb | dynamodb | mariadb | mongodb | mysql | oracle | postgres | redshift | s3 | sqlserver | sybase`.
 {{% /md %}}</dd>
@@ -1915,7 +1339,7 @@ The following state arguments are supported:
             title="Optional">
         <span>extra<wbr>Connection<wbr>Attributes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Additional attributes associated with the connection. For available attributes see [Using Extra Connection Attributes with AWS Database Migration Service](http://docs.aws.amazon.com/dms/latest/userguide/CHAP_Introduction.ConnectionAttributes.html).
 {{% /md %}}</dd>
@@ -1924,7 +1348,7 @@ The following state arguments are supported:
             title="Optional">
         <span>kms<wbr>Key<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) for the KMS key that will be used to encrypt the connection parameters. If you do not specify a value for `kms_key_arn`, then AWS DMS will use your default encryption key. AWS KMS creates the default encryption key for your AWS account. Your AWS account has a different default encryption key for each AWS region.
 {{% /md %}}</dd>
@@ -1933,7 +1357,7 @@ The following state arguments are supported:
             title="Optional">
         <span>mongodb<wbr>Settings</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointmongodbsettings">Endpoint<wbr>Mongodb<wbr>Settings?</a></span>
+        <span class="property-type"><a href="#endpointmongodbsettings">Endpoint<wbr>Mongodb<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Settings for the source MongoDB endpoint. Available settings are `auth_type` (default: `password`), `auth_mechanism` (default: `default`), `nesting_level` (default: `none`), `extract_doc_id` (default: `false`), `docs_to_investigate` (default: `1000`) and `auth_source` (default: `admin`). For more details, see [Using MongoDB as a Source for AWS DMS](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Source.MongoDB.html).
 {{% /md %}}</dd>
@@ -1942,7 +1366,7 @@ The following state arguments are supported:
             title="Optional">
         <span>password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password to be used to login to the endpoint database.
 {{% /md %}}</dd>
@@ -1951,7 +1375,7 @@ The following state arguments are supported:
             title="Optional">
         <span>port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The port used by the endpoint database.
 {{% /md %}}</dd>
@@ -1960,7 +1384,7 @@ The following state arguments are supported:
             title="Optional">
         <span>s3Settings</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpoints3settings">Endpoint<wbr>S3Settings?</a></span>
+        <span class="property-type"><a href="#endpoints3settings">Endpoint<wbr>S3Settings</a></span>
     </dt>
     <dd>{{% md %}}Settings for the target S3 endpoint. Available settings are `service_access_role_arn`, `external_table_definition`, `csv_row_delimiter` (default: `\\n`), `csv_delimiter` (default: `,`), `bucket_folder`, `bucket_name` and `compression_type` (default: `NONE`). For more details, see [Using Amazon S3 as a Target for AWS Database Migration Service](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Target.S3.html).
 {{% /md %}}</dd>
@@ -1969,7 +1393,7 @@ The following state arguments are supported:
             title="Optional">
         <span>server<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The host name of the server.
 {{% /md %}}</dd>
@@ -1978,7 +1402,7 @@ The following state arguments are supported:
             title="Optional">
         <span>service<wbr>Access<wbr>Role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) used by the service access IAM role for dynamodb endpoints.
 {{% /md %}}</dd>
@@ -1987,7 +1411,7 @@ The following state arguments are supported:
             title="Optional">
         <span>ssl<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SSL mode to use for the connection. Can be one of `none | require | verify-ca | verify-full`
 {{% /md %}}</dd>
@@ -1996,7 +1420,7 @@ The following state arguments are supported:
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -2005,7 +1429,7 @@ The following state arguments are supported:
             title="Optional">
         <span>username</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user name to be used to login to the endpoint database.
 {{% /md %}}</dd>
@@ -2203,7 +1627,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Auth<wbr>Mechanism</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2211,7 +1635,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Auth<wbr>Source</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2219,7 +1643,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Auth<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2227,7 +1651,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Docs<wbr>To<wbr>Investigate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2235,7 +1659,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Extract<wbr>Doc<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2243,7 +1667,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Nesting<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2258,7 +1682,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Auth<wbr>Mechanism</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2266,7 +1690,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Auth<wbr>Source</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2274,7 +1698,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Auth<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2282,7 +1706,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Docs<wbr>To<wbr>Investigate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2290,7 +1714,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Extract<wbr>Doc<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2298,7 +1722,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Nesting<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2313,7 +1737,7 @@ The following state arguments are supported:
             title="Optional">
         <span>auth<wbr>Mechanism</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2321,7 +1745,7 @@ The following state arguments are supported:
             title="Optional">
         <span>auth<wbr>Source</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2329,7 +1753,7 @@ The following state arguments are supported:
             title="Optional">
         <span>auth<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2337,7 +1761,7 @@ The following state arguments are supported:
             title="Optional">
         <span>docs<wbr>To<wbr>Investigate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2345,7 +1769,7 @@ The following state arguments are supported:
             title="Optional">
         <span>extract<wbr>Doc<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2353,7 +1777,7 @@ The following state arguments are supported:
             title="Optional">
         <span>nesting<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2438,7 +1862,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Bucket<wbr>Folder</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2446,7 +1870,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Bucket<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2454,7 +1878,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Compression<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2462,7 +1886,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Csv<wbr>Delimiter</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2470,7 +1894,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Csv<wbr>Row<wbr>Delimiter</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2478,7 +1902,7 @@ The following state arguments are supported:
             title="Optional">
         <span>External<wbr>Table<wbr>Definition</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2486,7 +1910,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Service<wbr>Access<wbr>Role<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2501,7 +1925,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Bucket<wbr>Folder</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2509,7 +1933,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Bucket<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2517,7 +1941,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Compression<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2525,7 +1949,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Csv<wbr>Delimiter</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2533,7 +1957,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Csv<wbr>Row<wbr>Delimiter</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2541,7 +1965,7 @@ The following state arguments are supported:
             title="Optional">
         <span>External<wbr>Table<wbr>Definition</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2549,7 +1973,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Service<wbr>Access<wbr>Role<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2564,7 +1988,7 @@ The following state arguments are supported:
             title="Optional">
         <span>bucket<wbr>Folder</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2572,7 +1996,7 @@ The following state arguments are supported:
             title="Optional">
         <span>bucket<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2580,7 +2004,7 @@ The following state arguments are supported:
             title="Optional">
         <span>compression<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2588,7 +2012,7 @@ The following state arguments are supported:
             title="Optional">
         <span>csv<wbr>Delimiter</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2596,7 +2020,7 @@ The following state arguments are supported:
             title="Optional">
         <span>csv<wbr>Row<wbr>Delimiter</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2604,7 +2028,7 @@ The following state arguments are supported:
             title="Optional">
         <span>external<wbr>Table<wbr>Definition</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2612,7 +2036,7 @@ The following state arguments are supported:
             title="Optional">
         <span>service<wbr>Access<wbr>Role<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

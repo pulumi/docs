@@ -33,7 +33,7 @@ const example = new gitlab.PipelineSchedule("example", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gitlab/#PipelineSchedule">PipelineSchedule</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gitlab/#PipelineScheduleArgs">PipelineScheduleArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gitlab/#PipelineSchedule">PipelineSchedule</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gitlab/#PipelineScheduleArgs">PipelineScheduleArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -41,11 +41,11 @@ const example = new gitlab.PipelineSchedule("example", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewPipelineSchedule<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gitlab/sdk/go/gitlab/?tab=doc#PipelineScheduleArgs">PipelineScheduleArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gitlab/sdk/go/gitlab/?tab=doc#PipelineSchedule">PipelineSchedule</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewPipelineSchedule<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gitlab/sdk/go/gitlab/?tab=doc#PipelineScheduleArgs">PipelineScheduleArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gitlab/sdk/go/gitlab/?tab=doc#PipelineSchedule">PipelineSchedule</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gitlab/Pulumi.Gitlab..PipelineSchedule.html">PipelineSchedule</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gitlab/Pulumi.Gitlab.PipelineScheduleArgs.html">PipelineScheduleArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gitlab/Pulumi.Gitlab.PipelineSchedule.html">PipelineSchedule</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gitlab/Pulumi.GitLab.PipelineScheduleArgs.html">PipelineScheduleArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -137,15 +137,6 @@ const example = new gitlab.PipelineSchedule("example", {
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Active</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}The activation of pipeline schedule. If false is set, the pipeline schedule will deactivated initially.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Cron</span>
@@ -153,15 +144,6 @@ const example = new gitlab.PipelineSchedule("example", {
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The cron (e.g. `0 1 * * *`).
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Cron<wbr>Timezone</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The timezone.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -189,6 +171,24 @@ const example = new gitlab.PipelineSchedule("example", {
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The branch/tag name to be triggered.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Active</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}The activation of pipeline schedule. If false is set, the pipeline schedule will deactivated initially.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Cron<wbr>Timezone</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The timezone.
 {{% /md %}}</dd>
 
 </dl>
@@ -198,15 +198,6 @@ const example = new gitlab.PipelineSchedule("example", {
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Active</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}The activation of pipeline schedule. If false is set, the pipeline schedule will deactivated initially.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Cron</span>
@@ -214,15 +205,6 @@ const example = new gitlab.PipelineSchedule("example", {
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The cron (e.g. `0 1 * * *`).
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Cron<wbr>Timezone</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The timezone.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -252,21 +234,30 @@ const example = new gitlab.PipelineSchedule("example", {
     <dd>{{% md %}}The branch/tag name to be triggered.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>Active</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}The activation of pipeline schedule. If false is set, the pipeline schedule will deactivated initially.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Cron<wbr>Timezone</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The timezone.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>active</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}The activation of pipeline schedule. If false is set, the pipeline schedule will deactivated initially.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -275,15 +266,6 @@ const example = new gitlab.PipelineSchedule("example", {
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The cron (e.g. `0 1 * * *`).
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>cron<wbr>Timezone</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The timezone.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -313,21 +295,30 @@ const example = new gitlab.PipelineSchedule("example", {
     <dd>{{% md %}}The branch/tag name to be triggered.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>active</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}The activation of pipeline schedule. If false is set, the pipeline schedule will deactivated initially.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>cron<wbr>Timezone</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The timezone.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>active</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}The activation of pipeline schedule. If false is set, the pipeline schedule will deactivated initially.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -336,6 +327,42 @@ const example = new gitlab.PipelineSchedule("example", {
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The cron (e.g. `0 1 * * *`).
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The description of the pipeline schedule.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>project</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name or id of the project to add the schedule to.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>ref</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The branch/tag name to be triggered.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>active</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}The activation of pipeline schedule. If false is set, the pipeline schedule will deactivated initially.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -347,291 +374,10 @@ const example = new gitlab.PipelineSchedule("example", {
     <dd>{{% md %}}The timezone.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The description of the pipeline schedule.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>project</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name or id of the project to add the schedule to.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>ref</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The branch/tag name to be triggered.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
-
-
-
-
-
-## PipelineSchedule Output Properties
-
-The following output properties are available:
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Active</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}The activation of pipeline schedule. If false is set, the pipeline schedule will deactivated initially.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Cron</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The cron (e.g. `0 1 * * *`).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Cron<wbr>Timezone</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The timezone.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The description of the pipeline schedule.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Project</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name or id of the project to add the schedule to.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Ref</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The branch/tag name to be triggered.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Active</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}The activation of pipeline schedule. If false is set, the pipeline schedule will deactivated initially.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Cron</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The cron (e.g. `0 1 * * *`).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Cron<wbr>Timezone</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The timezone.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The description of the pipeline schedule.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Project</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name or id of the project to add the schedule to.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Ref</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The branch/tag name to be triggered.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>active</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}The activation of pipeline schedule. If false is set, the pipeline schedule will deactivated initially.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>cron</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The cron (e.g. `0 1 * * *`).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>cron<wbr>Timezone</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The timezone.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The description of the pipeline schedule.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>project</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name or id of the project to add the schedule to.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>ref</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The branch/tag name to be triggered.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>active</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}The activation of pipeline schedule. If false is set, the pipeline schedule will deactivated initially.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>cron</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The cron (e.g. `0 1 * * *`).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>cron_<wbr>timezone</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The timezone.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The description of the pipeline schedule.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>project</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name or id of the project to add the schedule to.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>ref</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The branch/tag name to be triggered.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
 
 
 
@@ -659,7 +405,7 @@ Get an existing PipelineSchedule resource's state with the given name, ID, and o
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gitlab/Pulumi.Gitlab..PipelineSchedule.html">PipelineSchedule</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gitlab/Pulumi.Gitlab..PipelineScheduleState.html">PipelineScheduleState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gitlab/Pulumi.Gitlab.PipelineSchedule.html">PipelineSchedule</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gitlab/Pulumi.Gitlab..PipelineScheduleState.html">PipelineScheduleState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -769,7 +515,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Active</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The activation of pipeline schedule. If false is set, the pipeline schedule will deactivated initially.
 {{% /md %}}</dd>
@@ -778,7 +524,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Cron</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The cron (e.g. `0 1 * * *`).
 {{% /md %}}</dd>
@@ -787,7 +533,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Cron<wbr>Timezone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The timezone.
 {{% /md %}}</dd>
@@ -796,7 +542,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the pipeline schedule.
 {{% /md %}}</dd>
@@ -805,7 +551,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name or id of the project to add the schedule to.
 {{% /md %}}</dd>
@@ -814,7 +560,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Ref</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The branch/tag name to be triggered.
 {{% /md %}}</dd>
@@ -830,7 +576,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Active</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The activation of pipeline schedule. If false is set, the pipeline schedule will deactivated initially.
 {{% /md %}}</dd>
@@ -839,7 +585,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Cron</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The cron (e.g. `0 1 * * *`).
 {{% /md %}}</dd>
@@ -848,7 +594,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Cron<wbr>Timezone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The timezone.
 {{% /md %}}</dd>
@@ -857,7 +603,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the pipeline schedule.
 {{% /md %}}</dd>
@@ -866,7 +612,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name or id of the project to add the schedule to.
 {{% /md %}}</dd>
@@ -875,7 +621,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Ref</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The branch/tag name to be triggered.
 {{% /md %}}</dd>
@@ -891,7 +637,7 @@ The following state arguments are supported:
             title="Optional">
         <span>active</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}The activation of pipeline schedule. If false is set, the pipeline schedule will deactivated initially.
 {{% /md %}}</dd>
@@ -900,7 +646,7 @@ The following state arguments are supported:
             title="Optional">
         <span>cron</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The cron (e.g. `0 1 * * *`).
 {{% /md %}}</dd>
@@ -909,7 +655,7 @@ The following state arguments are supported:
             title="Optional">
         <span>cron<wbr>Timezone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The timezone.
 {{% /md %}}</dd>
@@ -918,7 +664,7 @@ The following state arguments are supported:
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the pipeline schedule.
 {{% /md %}}</dd>
@@ -927,7 +673,7 @@ The following state arguments are supported:
             title="Optional">
         <span>project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name or id of the project to add the schedule to.
 {{% /md %}}</dd>
@@ -936,7 +682,7 @@ The following state arguments are supported:
             title="Optional">
         <span>ref</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The branch/tag name to be triggered.
 {{% /md %}}</dd>

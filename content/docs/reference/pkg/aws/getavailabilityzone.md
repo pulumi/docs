@@ -41,7 +41,7 @@ which provides a list of the available zones.
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupAvailabilityZone<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/?tab=doc#GetAvailabilityZoneArgs">GetAvailabilityZoneArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/?tab=doc#LookupAvailabilityZoneResult">LookupAvailabilityZoneResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupAvailabilityZone<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/?tab=doc#GetAvailabilityZoneArgs">GetAvailabilityZoneArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/?tab=doc#LookupAvailabilityZoneResult">LookupAvailabilityZoneResult</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -64,7 +64,7 @@ The following arguments are supported:
             title="Optional">
         <span>All<wbr>Availability<wbr>Zones</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set to `true` to include all Availability Zones and Local Zones regardless of your opt in status.
 {{% /md %}}</dd>
@@ -73,7 +73,7 @@ The following arguments are supported:
             title="Optional">
         <span>Filters</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getavailabilityzonefilter">List&lt;Get<wbr>Availability<wbr>Zone<wbr>Filter<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#getavailabilityzonefilter">List&lt;Get<wbr>Availability<wbr>Zone<wbr>Filter<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) for filtering. Detailed below.
 {{% /md %}}</dd>
@@ -82,7 +82,7 @@ The following arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the filter field. Valid values can be found in the [EC2 DescribeAvailabilityZones API Reference](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeAvailabilityZones.html).
 {{% /md %}}</dd>
@@ -91,7 +91,7 @@ The following arguments are supported:
             title="Optional">
         <span>State</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A specific availability zone state to require. May be any of `"available"`, `"information"` or `"impaired"`.
 {{% /md %}}</dd>
@@ -100,7 +100,7 @@ The following arguments are supported:
             title="Optional">
         <span>Zone<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The zone ID of the availability zone to select.
 {{% /md %}}</dd>
@@ -116,7 +116,7 @@ The following arguments are supported:
             title="Optional">
         <span>All<wbr>Availability<wbr>Zones</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set to `true` to include all Availability Zones and Local Zones regardless of your opt in status.
 {{% /md %}}</dd>
@@ -134,7 +134,7 @@ The following arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the filter field. Valid values can be found in the [EC2 DescribeAvailabilityZones API Reference](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeAvailabilityZones.html).
 {{% /md %}}</dd>
@@ -143,7 +143,7 @@ The following arguments are supported:
             title="Optional">
         <span>State</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A specific availability zone state to require. May be any of `"available"`, `"information"` or `"impaired"`.
 {{% /md %}}</dd>
@@ -152,7 +152,7 @@ The following arguments are supported:
             title="Optional">
         <span>Zone<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The zone ID of the availability zone to select.
 {{% /md %}}</dd>
@@ -168,7 +168,7 @@ The following arguments are supported:
             title="Optional">
         <span>all<wbr>Availability<wbr>Zones</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Set to `true` to include all Availability Zones and Local Zones regardless of your opt in status.
 {{% /md %}}</dd>
@@ -177,7 +177,7 @@ The following arguments are supported:
             title="Optional">
         <span>filters</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getavailabilityzonefilter">Get<wbr>Availability<wbr>Zone<wbr>Filter[]?</a></span>
+        <span class="property-type"><a href="#getavailabilityzonefilter">Get<wbr>Availability<wbr>Zone<wbr>Filter[]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) for filtering. Detailed below.
 {{% /md %}}</dd>
@@ -186,7 +186,7 @@ The following arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the filter field. Valid values can be found in the [EC2 DescribeAvailabilityZones API Reference](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeAvailabilityZones.html).
 {{% /md %}}</dd>
@@ -195,7 +195,7 @@ The following arguments are supported:
             title="Optional">
         <span>state</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A specific availability zone state to require. May be any of `"available"`, `"information"` or `"impaired"`.
 {{% /md %}}</dd>
@@ -204,7 +204,7 @@ The following arguments are supported:
             title="Optional">
         <span>zone<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The zone ID of the availability zone to select.
 {{% /md %}}</dd>
@@ -283,22 +283,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>All<wbr>Availability<wbr>Zones</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Filters</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getavailabilityzonefilter">List&lt;Get<wbr>Availability<wbr>Zone<wbr>Filter&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Group<wbr>Name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -372,6 +356,22 @@ The following output properties are available:
         <span>Zone<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>All<wbr>Availability<wbr>Zones</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Filters</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getavailabilityzonefilter">List&lt;Get<wbr>Availability<wbr>Zone<wbr>Filter&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -384,22 +384,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>All<wbr>Availability<wbr>Zones</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Filters</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getavailabilityzonefilter">[]Get<wbr>Availability<wbr>Zone<wbr>Filter</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Group<wbr>Name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -476,28 +460,28 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span>All<wbr>Availability<wbr>Zones</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Filters</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getavailabilityzonefilter">[]Get<wbr>Availability<wbr>Zone<wbr>Filter</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>all<wbr>Availability<wbr>Zones</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>filters</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getavailabilityzonefilter">Get<wbr>Availability<wbr>Zone<wbr>Filter[]?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -577,18 +561,11 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
     <dt class="property-"
             title="">
-        <span>all_<wbr>availability_<wbr>zones</span>
+        <span>all<wbr>Availability<wbr>Zones</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -596,9 +573,16 @@ The following output properties are available:
             title="">
         <span>filters</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getavailabilityzonefilter">List[Get<wbr>Availability<wbr>Zone<wbr>Filter]</a></span>
+        <span class="property-type"><a href="#getavailabilityzonefilter">Get<wbr>Availability<wbr>Zone<wbr>Filter[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
 
     <dt class="property-"
             title="">
@@ -678,6 +662,22 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span>all_<wbr>availability_<wbr>zones</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>filters</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getavailabilityzonefilter">List[Get<wbr>Availability<wbr>Zone<wbr>Filter]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -718,7 +718,7 @@ The following output properties are available:
             title="Required">
         <span>Values</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Set of values that are accepted for the given filter field. Results will be selected if any given value matches.
 {{% /md %}}</dd>

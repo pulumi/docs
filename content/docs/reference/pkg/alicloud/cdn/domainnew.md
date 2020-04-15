@@ -14,7 +14,7 @@ block_external_search_index: true
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/cdn/#DomainNew">DomainNew</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/cdn/#DomainNewArgs">DomainNewArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/cdn/#DomainNew">DomainNew</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/cdn/#DomainNewArgs">DomainNewArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -22,11 +22,11 @@ block_external_search_index: true
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewDomainNew<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/cdn?tab=doc#DomainNewArgs">DomainNewArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/cdn?tab=doc#DomainNew">DomainNew</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewDomainNew<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/cdn?tab=doc#DomainNewArgs">DomainNewArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/cdn?tab=doc#DomainNew">DomainNew</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.Cdn.DomainNew.html">DomainNew</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.Cdn.DomainNewArgs.html">DomainNewArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.Cdn.DomainNew.html">DomainNew</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.AliCloud.Cdn.DomainNewArgs.html">DomainNewArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -127,15 +127,6 @@ block_external_search_index: true
     <dd>{{% md %}}Cdn type of the accelerated domain. Valid values are `web`, `download`, `video`.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Certificate<wbr>Config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainnewcertificateconfig">Domain<wbr>New<wbr>Certificate<wbr>Config<wbr>Args?</a></span>
-    </dt>
-    <dd>{{% md %}}Certificate config of the accelerated domain. It's a list and consist of at most 1 item.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Domain<wbr>Name</span>
@@ -145,11 +136,29 @@ block_external_search_index: true
     <dd>{{% md %}}Name of the accelerated domain. This name without suffix can have a string of 1 to 63 characters, must contain only alphanumeric characters or "-", and must not begin or end with "-", and "-" must not in the 3th and 4th character positions at the same time. Suffix `.sh` and `.tel` are not supported.
 {{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>Sources</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#domainnewsources">Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Cdn.<wbr>Inputs.<wbr>Domain<wbr>New<wbr>Sources<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The source address list of the accelerated domain. Defaults to null. See Block Sources.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Certificate<wbr>Config</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#domainnewcertificateconfig">Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Cdn.<wbr>Inputs.<wbr>Domain<wbr>New<wbr>Certificate<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Certificate config of the accelerated domain. It's a list and consist of at most 1 item.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Resource<wbr>Group<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource group ID.
 {{% /md %}}</dd>
@@ -158,25 +167,16 @@ block_external_search_index: true
             title="Optional">
         <span>Scope</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Scope of the accelerated domain. Valid values are `domestic`, `overseas`, `global`. Default value is `domestic`. This parameter's setting is valid Only for the international users and domestic L3 and above users .
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Sources</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainnewsources">Domain<wbr>New<wbr>Sources<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}The source address list of the accelerated domain. Defaults to null. See Block Sources.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -197,15 +197,6 @@ block_external_search_index: true
     <dd>{{% md %}}Cdn type of the accelerated domain. Valid values are `web`, `download`, `video`.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Certificate<wbr>Config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainnewcertificateconfig">*Domain<wbr>New<wbr>Certificate<wbr>Config</a></span>
-    </dt>
-    <dd>{{% md %}}Certificate config of the accelerated domain. It's a list and consist of at most 1 item.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Domain<wbr>Name</span>
@@ -215,11 +206,29 @@ block_external_search_index: true
     <dd>{{% md %}}Name of the accelerated domain. This name without suffix can have a string of 1 to 63 characters, must contain only alphanumeric characters or "-", and must not begin or end with "-", and "-" must not in the 3th and 4th character positions at the same time. Suffix `.sh` and `.tel` are not supported.
 {{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>Sources</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#domainnewsources">Domain<wbr>New<wbr>Sources</a></span>
+    </dt>
+    <dd>{{% md %}}The source address list of the accelerated domain. Defaults to null. See Block Sources.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Certificate<wbr>Config</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#domainnewcertificateconfig">Domain<wbr>New<wbr>Certificate<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Certificate config of the accelerated domain. It's a list and consist of at most 1 item.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Resource<wbr>Group<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource group ID.
 {{% /md %}}</dd>
@@ -228,18 +237,9 @@ block_external_search_index: true
             title="Optional">
         <span>Scope</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Scope of the accelerated domain. Valid values are `domestic`, `overseas`, `global`. Default value is `domestic`. This parameter's setting is valid Only for the international users and domestic L3 and above users .
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Sources</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainnewsources">Domain<wbr>New<wbr>Sources</a></span>
-    </dt>
-    <dd>{{% md %}}The source address list of the accelerated domain. Defaults to null. See Block Sources.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -267,15 +267,6 @@ block_external_search_index: true
     <dd>{{% md %}}Cdn type of the accelerated domain. Valid values are `web`, `download`, `video`.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>certificate<wbr>Config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainnewcertificateconfig">Domain<wbr>New<wbr>Certificate<wbr>Config?</a></span>
-    </dt>
-    <dd>{{% md %}}Certificate config of the accelerated domain. It's a list and consist of at most 1 item.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>domain<wbr>Name</span>
@@ -283,24 +274,6 @@ block_external_search_index: true
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the accelerated domain. This name without suffix can have a string of 1 to 63 characters, must contain only alphanumeric characters or "-", and must not begin or end with "-", and "-" must not in the 3th and 4th character positions at the same time. Suffix `.sh` and `.tel` are not supported.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>resource<wbr>Group<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Resource group ID.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>scope</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Scope of the accelerated domain. Valid values are `domestic`, `overseas`, `global`. Default value is `domestic`. This parameter's setting is valid Only for the international users and domestic L3 and above users .
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -314,9 +287,36 @@ block_external_search_index: true
 
     <dt class="property-optional"
             title="Optional">
+        <span>certificate<wbr>Config</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#domainnewcertificateconfig">Domain<wbr>New<wbr>Certificate<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Certificate config of the accelerated domain. It's a list and consist of at most 1 item.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>resource<wbr>Group<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource group ID.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>scope</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Scope of the accelerated domain. Valid values are `domestic`, `overseas`, `global`. Default value is `domestic`. This parameter's setting is valid Only for the international users and domestic L3 and above users .
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -337,15 +337,6 @@ block_external_search_index: true
     <dd>{{% md %}}Cdn type of the accelerated domain. Valid values are `web`, `download`, `video`.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>certificate_<wbr>config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainnewcertificateconfig">Dict[Domain<wbr>New<wbr>Certificate<wbr>Config]</a></span>
-    </dt>
-    <dd>{{% md %}}Certificate config of the accelerated domain. It's a list and consist of at most 1 item.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>domain_<wbr>name</span>
@@ -353,6 +344,24 @@ block_external_search_index: true
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the accelerated domain. This name without suffix can have a string of 1 to 63 characters, must contain only alphanumeric characters or "-", and must not begin or end with "-", and "-" must not in the 3th and 4th character positions at the same time. Suffix `.sh` and `.tel` are not supported.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>sources</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#domainnewsources">Dict[Domain<wbr>New<wbr>Sources]</a></span>
+    </dt>
+    <dd>{{% md %}}The source address list of the accelerated domain. Defaults to null. See Block Sources.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>certificate_<wbr>config</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#domainnewcertificateconfig">Dict[Domain<wbr>New<wbr>Certificate<wbr>Config]</a></span>
+    </dt>
+    <dd>{{% md %}}Certificate config of the accelerated domain. It's a list and consist of at most 1 item.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -373,15 +382,6 @@ block_external_search_index: true
     <dd>{{% md %}}Scope of the accelerated domain. Valid values are `domestic`, `overseas`, `global`. Default value is `domestic`. This parameter's setting is valid Only for the international users and domestic L3 and above users .
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>sources</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainnewsources">Dict[Domain<wbr>New<wbr>Sources]</a></span>
-    </dt>
-    <dd>{{% md %}}The source address list of the accelerated domain. Defaults to null. See Block Sources.
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>tags</span>
@@ -395,296 +395,6 @@ block_external_search_index: true
 {{% /choosable %}}
 
 
-
-
-
-
-
-## DomainNew Output Properties
-
-The following output properties are available:
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Cdn<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Cdn type of the accelerated domain. Valid values are `web`, `download`, `video`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Certificate<wbr>Config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainnewcertificateconfig">Domain<wbr>New<wbr>Certificate<wbr>Config</a></span>
-    </dt>
-    <dd>{{% md %}}Certificate config of the accelerated domain. It's a list and consist of at most 1 item.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Domain<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the accelerated domain. This name without suffix can have a string of 1 to 63 characters, must contain only alphanumeric characters or "-", and must not begin or end with "-", and "-" must not in the 3th and 4th character positions at the same time. Suffix `.sh` and `.tel` are not supported.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Resource<wbr>Group<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource group ID.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Scope</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Scope of the accelerated domain. Valid values are `domestic`, `overseas`, `global`. Default value is `domestic`. This parameter's setting is valid Only for the international users and domestic L3 and above users .
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Sources</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainnewsources">Domain<wbr>New<wbr>Sources</a></span>
-    </dt>
-    <dd>{{% md %}}The source address list of the accelerated domain. Defaults to null. See Block Sources.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Cdn<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Cdn type of the accelerated domain. Valid values are `web`, `download`, `video`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Certificate<wbr>Config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainnewcertificateconfig">Domain<wbr>New<wbr>Certificate<wbr>Config</a></span>
-    </dt>
-    <dd>{{% md %}}Certificate config of the accelerated domain. It's a list and consist of at most 1 item.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Domain<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the accelerated domain. This name without suffix can have a string of 1 to 63 characters, must contain only alphanumeric characters or "-", and must not begin or end with "-", and "-" must not in the 3th and 4th character positions at the same time. Suffix `.sh` and `.tel` are not supported.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Resource<wbr>Group<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource group ID.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Scope</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Scope of the accelerated domain. Valid values are `domestic`, `overseas`, `global`. Default value is `domestic`. This parameter's setting is valid Only for the international users and domestic L3 and above users .
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Sources</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainnewsources">Domain<wbr>New<wbr>Sources</a></span>
-    </dt>
-    <dd>{{% md %}}The source address list of the accelerated domain. Defaults to null. See Block Sources.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>cdn<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Cdn type of the accelerated domain. Valid values are `web`, `download`, `video`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>certificate<wbr>Config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainnewcertificateconfig">Domain<wbr>New<wbr>Certificate<wbr>Config</a></span>
-    </dt>
-    <dd>{{% md %}}Certificate config of the accelerated domain. It's a list and consist of at most 1 item.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>domain<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the accelerated domain. This name without suffix can have a string of 1 to 63 characters, must contain only alphanumeric characters or "-", and must not begin or end with "-", and "-" must not in the 3th and 4th character positions at the same time. Suffix `.sh` and `.tel` are not supported.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>resource<wbr>Group<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource group ID.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>scope</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Scope of the accelerated domain. Valid values are `domestic`, `overseas`, `global`. Default value is `domestic`. This parameter's setting is valid Only for the international users and domestic L3 and above users .
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>sources</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainnewsources">Domain<wbr>New<wbr>Sources</a></span>
-    </dt>
-    <dd>{{% md %}}The source address list of the accelerated domain. Defaults to null. See Block Sources.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>cdn_<wbr>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Cdn type of the accelerated domain. Valid values are `web`, `download`, `video`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>certificate_<wbr>config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainnewcertificateconfig">Dict[Domain<wbr>New<wbr>Certificate<wbr>Config]</a></span>
-    </dt>
-    <dd>{{% md %}}Certificate config of the accelerated domain. It's a list and consist of at most 1 item.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>domain_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Name of the accelerated domain. This name without suffix can have a string of 1 to 63 characters, must contain only alphanumeric characters or "-", and must not begin or end with "-", and "-" must not in the 3th and 4th character positions at the same time. Suffix `.sh` and `.tel` are not supported.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>resource_<wbr>group_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource group ID.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>scope</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Scope of the accelerated domain. Valid values are `domestic`, `overseas`, `global`. Default value is `domestic`. This parameter's setting is valid Only for the international users and domestic L3 and above users .
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>sources</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainnewsources">Dict[Domain<wbr>New<wbr>Sources]</a></span>
-    </dt>
-    <dd>{{% md %}}The source address list of the accelerated domain. Defaults to null. See Block Sources.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
 
 
 
@@ -822,7 +532,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Cdn<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cdn type of the accelerated domain. Valid values are `web`, `download`, `video`.
 {{% /md %}}</dd>
@@ -831,7 +541,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Certificate<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainnewcertificateconfig">Domain<wbr>New<wbr>Certificate<wbr>Config<wbr>Args?</a></span>
+        <span class="property-type"><a href="#domainnewcertificateconfig">Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Cdn.<wbr>Inputs.<wbr>Domain<wbr>New<wbr>Certificate<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Certificate config of the accelerated domain. It's a list and consist of at most 1 item.
 {{% /md %}}</dd>
@@ -840,7 +550,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Domain<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the accelerated domain. This name without suffix can have a string of 1 to 63 characters, must contain only alphanumeric characters or "-", and must not begin or end with "-", and "-" must not in the 3th and 4th character positions at the same time. Suffix `.sh` and `.tel` are not supported.
 {{% /md %}}</dd>
@@ -849,7 +559,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Resource<wbr>Group<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource group ID.
 {{% /md %}}</dd>
@@ -858,7 +568,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Scope</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Scope of the accelerated domain. Valid values are `domestic`, `overseas`, `global`. Default value is `domestic`. This parameter's setting is valid Only for the international users and domestic L3 and above users .
 {{% /md %}}</dd>
@@ -867,7 +577,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Sources</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainnewsources">Domain<wbr>New<wbr>Sources<wbr>Args?</a></span>
+        <span class="property-type"><a href="#domainnewsources">Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Cdn.<wbr>Inputs.<wbr>Domain<wbr>New<wbr>Sources<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The source address list of the accelerated domain. Defaults to null. See Block Sources.
 {{% /md %}}</dd>
@@ -876,7 +586,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -892,7 +602,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Cdn<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cdn type of the accelerated domain. Valid values are `web`, `download`, `video`.
 {{% /md %}}</dd>
@@ -901,7 +611,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Certificate<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainnewcertificateconfig">*Domain<wbr>New<wbr>Certificate<wbr>Config</a></span>
+        <span class="property-type"><a href="#domainnewcertificateconfig">Domain<wbr>New<wbr>Certificate<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Certificate config of the accelerated domain. It's a list and consist of at most 1 item.
 {{% /md %}}</dd>
@@ -910,7 +620,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Domain<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the accelerated domain. This name without suffix can have a string of 1 to 63 characters, must contain only alphanumeric characters or "-", and must not begin or end with "-", and "-" must not in the 3th and 4th character positions at the same time. Suffix `.sh` and `.tel` are not supported.
 {{% /md %}}</dd>
@@ -919,7 +629,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Resource<wbr>Group<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource group ID.
 {{% /md %}}</dd>
@@ -928,7 +638,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Scope</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Scope of the accelerated domain. Valid values are `domestic`, `overseas`, `global`. Default value is `domestic`. This parameter's setting is valid Only for the international users and domestic L3 and above users .
 {{% /md %}}</dd>
@@ -937,7 +647,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Sources</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainnewsources">*Domain<wbr>New<wbr>Sources</a></span>
+        <span class="property-type"><a href="#domainnewsources">Domain<wbr>New<wbr>Sources</a></span>
     </dt>
     <dd>{{% md %}}The source address list of the accelerated domain. Defaults to null. See Block Sources.
 {{% /md %}}</dd>
@@ -962,7 +672,7 @@ The following state arguments are supported:
             title="Optional">
         <span>cdn<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cdn type of the accelerated domain. Valid values are `web`, `download`, `video`.
 {{% /md %}}</dd>
@@ -971,7 +681,7 @@ The following state arguments are supported:
             title="Optional">
         <span>certificate<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainnewcertificateconfig">Domain<wbr>New<wbr>Certificate<wbr>Config?</a></span>
+        <span class="property-type"><a href="#domainnewcertificateconfig">Domain<wbr>New<wbr>Certificate<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Certificate config of the accelerated domain. It's a list and consist of at most 1 item.
 {{% /md %}}</dd>
@@ -980,7 +690,7 @@ The following state arguments are supported:
             title="Optional">
         <span>domain<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the accelerated domain. This name without suffix can have a string of 1 to 63 characters, must contain only alphanumeric characters or "-", and must not begin or end with "-", and "-" must not in the 3th and 4th character positions at the same time. Suffix `.sh` and `.tel` are not supported.
 {{% /md %}}</dd>
@@ -989,7 +699,7 @@ The following state arguments are supported:
             title="Optional">
         <span>resource<wbr>Group<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource group ID.
 {{% /md %}}</dd>
@@ -998,7 +708,7 @@ The following state arguments are supported:
             title="Optional">
         <span>scope</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Scope of the accelerated domain. Valid values are `domestic`, `overseas`, `global`. Default value is `domestic`. This parameter's setting is valid Only for the international users and domestic L3 and above users .
 {{% /md %}}</dd>
@@ -1007,7 +717,7 @@ The following state arguments are supported:
             title="Optional">
         <span>sources</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#domainnewsources">Domain<wbr>New<wbr>Sources?</a></span>
+        <span class="property-type"><a href="#domainnewsources">Domain<wbr>New<wbr>Sources</a></span>
     </dt>
     <dd>{{% md %}}The source address list of the accelerated domain. Defaults to null. See Block Sources.
 {{% /md %}}</dd>
@@ -1016,7 +726,7 @@ The following state arguments are supported:
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1124,7 +834,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Cert<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SSL certificate name.
 {{% /md %}}</dd>
@@ -1133,7 +843,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Cert<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SSL certificate type, can be "upload", "cas" and "free".
 {{% /md %}}</dd>
@@ -1142,7 +852,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Force<wbr>Set</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Set `1` to ignore the repeated verification for certificate name, and cover the information of the origin certificate (with the same name). Set `0` to work the verification.
 {{% /md %}}</dd>
@@ -1151,7 +861,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Private<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SSL private key. This is required if `server_certificate_status` is `on`
 {{% /md %}}</dd>
@@ -1160,7 +870,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Server<wbr>Certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SSL server certificate string. This is required if `server_certificate_status` is `on`
 {{% /md %}}</dd>
@@ -1169,7 +879,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Server<wbr>Certificate<wbr>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This parameter indicates whether or not enable https. Valid values are `on` and `off`. Default value is `on`.
 {{% /md %}}</dd>
@@ -1185,7 +895,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Cert<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SSL certificate name.
 {{% /md %}}</dd>
@@ -1194,7 +904,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Cert<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SSL certificate type, can be "upload", "cas" and "free".
 {{% /md %}}</dd>
@@ -1203,7 +913,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Force<wbr>Set</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Set `1` to ignore the repeated verification for certificate name, and cover the information of the origin certificate (with the same name). Set `0` to work the verification.
 {{% /md %}}</dd>
@@ -1212,7 +922,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Private<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SSL private key. This is required if `server_certificate_status` is `on`
 {{% /md %}}</dd>
@@ -1221,7 +931,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Server<wbr>Certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SSL server certificate string. This is required if `server_certificate_status` is `on`
 {{% /md %}}</dd>
@@ -1230,7 +940,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Server<wbr>Certificate<wbr>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This parameter indicates whether or not enable https. Valid values are `on` and `off`. Default value is `on`.
 {{% /md %}}</dd>
@@ -1246,7 +956,7 @@ The following state arguments are supported:
             title="Optional">
         <span>cert<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SSL certificate name.
 {{% /md %}}</dd>
@@ -1255,7 +965,7 @@ The following state arguments are supported:
             title="Optional">
         <span>cert<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SSL certificate type, can be "upload", "cas" and "free".
 {{% /md %}}</dd>
@@ -1264,7 +974,7 @@ The following state arguments are supported:
             title="Optional">
         <span>force<wbr>Set</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Set `1` to ignore the repeated verification for certificate name, and cover the information of the origin certificate (with the same name). Set `0` to work the verification.
 {{% /md %}}</dd>
@@ -1273,7 +983,7 @@ The following state arguments are supported:
             title="Optional">
         <span>private<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SSL private key. This is required if `server_certificate_status` is `on`
 {{% /md %}}</dd>
@@ -1282,7 +992,7 @@ The following state arguments are supported:
             title="Optional">
         <span>server<wbr>Certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SSL server certificate string. This is required if `server_certificate_status` is `on`
 {{% /md %}}</dd>
@@ -1291,7 +1001,7 @@ The following state arguments are supported:
             title="Optional">
         <span>server<wbr>Certificate<wbr>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This parameter indicates whether or not enable https. Valid values are `on` and `off`. Default value is `on`.
 {{% /md %}}</dd>
@@ -1388,24 +1098,6 @@ The following state arguments are supported:
     <dd>{{% md %}}The adress of source. Valid values can be ip or doaminName. Each item's `content` can not be repeated.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Port</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}The port of source. Valid values are `443` and `80`. Default value is `80`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Priority</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}Priority of the source. Valid values are `0` and `100`. Default value is `20`.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Type</span>
@@ -1417,9 +1109,27 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>Port</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The port of source. Valid values are `443` and `80`. Default value is `80`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Priority</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Priority of the source. Valid values are `0` and `100`. Default value is `20`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Weight</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Weight of the source. Valid values are from `0` to `100`. Default value is `10`, but if type is `ipaddr`, the value can only be `10`. 
 {{% /md %}}</dd>
@@ -1440,24 +1150,6 @@ The following state arguments are supported:
     <dd>{{% md %}}The adress of source. Valid values can be ip or doaminName. Each item's `content` can not be repeated.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Port</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}The port of source. Valid values are `443` and `80`. Default value is `80`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Priority</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}Priority of the source. Valid values are `0` and `100`. Default value is `20`.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Type</span>
@@ -1469,9 +1161,27 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>Port</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The port of source. Valid values are `443` and `80`. Default value is `80`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Priority</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Priority of the source. Valid values are `0` and `100`. Default value is `20`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Weight</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Weight of the source. Valid values are from `0` to `100`. Default value is `10`, but if type is `ipaddr`, the value can only be `10`. 
 {{% /md %}}</dd>
@@ -1492,24 +1202,6 @@ The following state arguments are supported:
     <dd>{{% md %}}The adress of source. Valid values can be ip or doaminName. Each item's `content` can not be repeated.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>port</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}The port of source. Valid values are `443` and `80`. Default value is `80`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>priority</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}Priority of the source. Valid values are `0` and `100`. Default value is `20`.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>type</span>
@@ -1521,9 +1213,27 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>port</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The port of source. Valid values are `443` and `80`. Default value is `80`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>priority</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Priority of the source. Valid values are `0` and `100`. Default value is `20`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>weight</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Weight of the source. Valid values are from `0` to `100`. Default value is `10`, but if type is `ipaddr`, the value can only be `10`. 
 {{% /md %}}</dd>
@@ -1544,6 +1254,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The adress of source. Valid values can be ip or doaminName. Each item's `content` can not be repeated.
 {{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The type of the source. Valid values are `ipaddr`, `domain` and `oss`.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>port</span>
@@ -1560,15 +1279,6 @@ The following state arguments are supported:
         <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Priority of the source. Valid values are `0` and `100`. Default value is `20`.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The type of the source. Valid values are `ipaddr`, `domain` and `oss`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

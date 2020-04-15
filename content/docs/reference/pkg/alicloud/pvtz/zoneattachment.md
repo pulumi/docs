@@ -14,7 +14,7 @@ block_external_search_index: true
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/pvtz/#ZoneAttachment">ZoneAttachment</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/pvtz/#ZoneAttachmentArgs">ZoneAttachmentArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/pvtz/#ZoneAttachment">ZoneAttachment</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/pvtz/#ZoneAttachmentArgs">ZoneAttachmentArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -22,11 +22,11 @@ block_external_search_index: true
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewZoneAttachment<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/pvtz?tab=doc#ZoneAttachmentArgs">ZoneAttachmentArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/pvtz?tab=doc#ZoneAttachment">ZoneAttachment</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewZoneAttachment<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/pvtz?tab=doc#ZoneAttachmentArgs">ZoneAttachmentArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/pvtz?tab=doc#ZoneAttachment">ZoneAttachment</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.Pvtz.ZoneAttachment.html">ZoneAttachment</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.Pvtz.ZoneAttachmentArgs.html">ZoneAttachmentArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.Pvtz.ZoneAttachment.html">ZoneAttachment</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.AliCloud.Pvtz.ZoneAttachmentArgs.html">ZoneAttachmentArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -118,11 +118,20 @@ block_external_search_index: true
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Zone<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the Private Zone Record.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Lang</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The language of code.
 {{% /md %}}</dd>
@@ -131,7 +140,7 @@ block_external_search_index: true
             title="Optional">
         <span>User<wbr>Client<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user custom IP address.
 {{% /md %}}</dd>
@@ -140,7 +149,7 @@ block_external_search_index: true
             title="Optional">
         <span>Vpc<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The id List of the VPC with the same region, for example:["vpc-1","vpc-2"]. 
 {{% /md %}}</dd>
@@ -149,10 +158,17 @@ block_external_search_index: true
             title="Optional">
         <span>Vpcs</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#zoneattachmentvpc">List&lt;Zone<wbr>Attachment<wbr>Vpc<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#zoneattachmentvpc">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Pvtz.<wbr>Inputs.<wbr>Zone<wbr>Attachment<wbr>Vpc<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The List of the VPC:
 {{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
@@ -163,18 +179,11 @@ block_external_search_index: true
     <dd>{{% md %}}The name of the Private Zone Record.
 {{% /md %}}</dd>
 
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span>Lang</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The language of code.
 {{% /md %}}</dd>
@@ -183,7 +192,7 @@ block_external_search_index: true
             title="Optional">
         <span>User<wbr>Client<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user custom IP address.
 {{% /md %}}</dd>
@@ -206,57 +215,12 @@ block_external_search_index: true
     <dd>{{% md %}}The List of the VPC:
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>Zone<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the Private Zone Record.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>lang</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The language of code.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>user<wbr>Client<wbr>Ip</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The user custom IP address.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>vpc<wbr>Ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}The id List of the VPC with the same region, for example:["vpc-1","vpc-2"]. 
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>vpcs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#zoneattachmentvpc">Zone<wbr>Attachment<wbr>Vpc[]?</a></span>
-    </dt>
-    <dd>{{% md %}}The List of the VPC:
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -267,201 +231,26 @@ block_external_search_index: true
     <dd>{{% md %}}The name of the Private Zone Record.
 {{% /md %}}</dd>
 
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span>lang</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The language of code.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>user_<wbr>client_<wbr>ip</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The user custom IP address.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>vpc_<wbr>ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}The id List of the VPC with the same region, for example:["vpc-1","vpc-2"]. 
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>vpcs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#zoneattachmentvpc">List[Zone<wbr>Attachment<wbr>Vpc]</a></span>
-    </dt>
-    <dd>{{% md %}}The List of the VPC:
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>zone_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the Private Zone Record.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-
-
-
-
-
-## ZoneAttachment Output Properties
-
-The following output properties are available:
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Lang</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The language of code.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>User<wbr>Client<wbr>Ip</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The user custom IP address.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Vpc<wbr>Ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
-    </dt>
-    <dd>{{% md %}}The id List of the VPC with the same region, for example:["vpc-1","vpc-2"]. 
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Vpcs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#zoneattachmentvpc">List&lt;Zone<wbr>Attachment<wbr>Vpc&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}The List of the VPC:
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Zone<wbr>Id</span>
-        <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Private Zone Record.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Lang</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
     <dd>{{% md %}}The language of code.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span>User<wbr>Client<wbr>Ip</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The user custom IP address.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Vpc<wbr>Ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}The id List of the VPC with the same region, for example:["vpc-1","vpc-2"]. 
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Vpcs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#zoneattachmentvpc">[]Zone<wbr>Attachment<wbr>Vpc</a></span>
-    </dt>
-    <dd>{{% md %}}The List of the VPC:
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Zone<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the Private Zone Record.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>lang</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The language of code.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>user<wbr>Client<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user custom IP address.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>vpc<wbr>Ids</span>
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
@@ -469,22 +258,13 @@ The following output properties are available:
     <dd>{{% md %}}The id List of the VPC with the same region, for example:["vpc-1","vpc-2"]. 
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>vpcs</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#zoneattachmentvpc">Zone<wbr>Attachment<wbr>Vpc[]</a></span>
     </dt>
     <dd>{{% md %}}The List of the VPC:
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>zone<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the Private Zone Record.
 {{% /md %}}</dd>
 
 </dl>
@@ -494,44 +274,8 @@ The following output properties are available:
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-"
-            title="">
-        <span>lang</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The language of code.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>user_<wbr>client_<wbr>ip</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The user custom IP address.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>vpc_<wbr>ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}The id List of the VPC with the same region, for example:["vpc-1","vpc-2"]. 
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>vpcs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#zoneattachmentvpc">List[Zone<wbr>Attachment<wbr>Vpc]</a></span>
-    </dt>
-    <dd>{{% md %}}The List of the VPC:
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
+    <dt class="property-required"
+            title="Required">
         <span>zone_<wbr>id</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -539,8 +283,46 @@ The following output properties are available:
     <dd>{{% md %}}The name of the Private Zone Record.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>lang</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The language of code.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>user_<wbr>client_<wbr>ip</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The user custom IP address.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>vpc_<wbr>ids</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List[str]</span>
+    </dt>
+    <dd>{{% md %}}The id List of the VPC with the same region, for example:["vpc-1","vpc-2"]. 
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>vpcs</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#zoneattachmentvpc">List[Zone<wbr>Attachment<wbr>Vpc]</a></span>
+    </dt>
+    <dd>{{% md %}}The List of the VPC:
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
+
+
 
 
 
@@ -678,7 +460,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Lang</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The language of code.
 {{% /md %}}</dd>
@@ -687,7 +469,7 @@ The following state arguments are supported:
             title="Optional">
         <span>User<wbr>Client<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user custom IP address.
 {{% /md %}}</dd>
@@ -696,7 +478,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Vpc<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The id List of the VPC with the same region, for example:["vpc-1","vpc-2"]. 
 {{% /md %}}</dd>
@@ -705,7 +487,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Vpcs</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#zoneattachmentvpc">List&lt;Zone<wbr>Attachment<wbr>Vpc<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#zoneattachmentvpc">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Pvtz.<wbr>Inputs.<wbr>Zone<wbr>Attachment<wbr>Vpc<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The List of the VPC:
 {{% /md %}}</dd>
@@ -714,7 +496,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Zone<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Private Zone Record.
 {{% /md %}}</dd>
@@ -730,7 +512,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Lang</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The language of code.
 {{% /md %}}</dd>
@@ -739,7 +521,7 @@ The following state arguments are supported:
             title="Optional">
         <span>User<wbr>Client<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user custom IP address.
 {{% /md %}}</dd>
@@ -766,7 +548,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Zone<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Private Zone Record.
 {{% /md %}}</dd>
@@ -782,7 +564,7 @@ The following state arguments are supported:
             title="Optional">
         <span>lang</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The language of code.
 {{% /md %}}</dd>
@@ -791,7 +573,7 @@ The following state arguments are supported:
             title="Optional">
         <span>user<wbr>Client<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user custom IP address.
 {{% /md %}}</dd>
@@ -800,7 +582,7 @@ The following state arguments are supported:
             title="Optional">
         <span>vpc<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The id List of the VPC with the same region, for example:["vpc-1","vpc-2"]. 
 {{% /md %}}</dd>
@@ -809,7 +591,7 @@ The following state arguments are supported:
             title="Optional">
         <span>vpcs</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#zoneattachmentvpc">Zone<wbr>Attachment<wbr>Vpc[]?</a></span>
+        <span class="property-type"><a href="#zoneattachmentvpc">Zone<wbr>Attachment<wbr>Vpc[]</a></span>
     </dt>
     <dd>{{% md %}}The List of the VPC:
 {{% /md %}}</dd>
@@ -818,7 +600,7 @@ The following state arguments are supported:
             title="Optional">
         <span>zone<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Private Zone Record.
 {{% /md %}}</dd>
@@ -904,15 +686,6 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Region<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The region of the vpc. If not set, the current region will instead of.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Vpc<wbr>Id</span>
@@ -920,6 +693,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Id of the vpc.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Region<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The region of the vpc. If not set, the current region will instead of.
 {{% /md %}}</dd>
 
 </dl>
@@ -929,15 +711,6 @@ The following state arguments are supported:
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Region<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The region of the vpc. If not set, the current region will instead of.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Vpc<wbr>Id</span>
@@ -947,21 +720,21 @@ The following state arguments are supported:
     <dd>{{% md %}}The Id of the vpc.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>Region<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The region of the vpc. If not set, the current region will instead of.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>region<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The region of the vpc. If not set, the current region will instead of.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -972,21 +745,21 @@ The following state arguments are supported:
     <dd>{{% md %}}The Id of the vpc.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>region<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The region of the vpc. If not set, the current region will instead of.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>region<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The region of the vpc. If not set, the current region will instead of.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -995,6 +768,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Id of the vpc.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>region<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The region of the vpc. If not set, the current region will instead of.
 {{% /md %}}</dd>
 
 </dl>

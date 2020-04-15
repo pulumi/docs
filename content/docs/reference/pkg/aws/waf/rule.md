@@ -42,7 +42,7 @@ const wafrule = new aws.waf.Rule("wafrule", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/waf/#Rule">Rule</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/waf/#RuleArgs">RuleArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/waf/#Rule">Rule</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/waf/#RuleArgs">RuleArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -50,7 +50,7 @@ const wafrule = new aws.waf.Rule("wafrule", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewRule<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/waf?tab=doc#RuleArgs">RuleArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/waf?tab=doc#Rule">Rule</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewRule<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/waf?tab=doc#RuleArgs">RuleArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/waf?tab=doc#Rule">Rule</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -159,7 +159,7 @@ const wafrule = new aws.waf.Rule("wafrule", {
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name or description of the rule.
 {{% /md %}}</dd>
@@ -168,7 +168,7 @@ const wafrule = new aws.waf.Rule("wafrule", {
             title="Optional">
         <span>Predicates</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulepredicate">List&lt;Rule<wbr>Predicate<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#rulepredicate">List&lt;Rule<wbr>Predicate<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The objects to include in a rule (documented below).
 {{% /md %}}</dd>
@@ -177,7 +177,7 @@ const wafrule = new aws.waf.Rule("wafrule", {
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Key-value mapping of resource tags
 {{% /md %}}</dd>
@@ -202,7 +202,7 @@ const wafrule = new aws.waf.Rule("wafrule", {
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name or description of the rule.
 {{% /md %}}</dd>
@@ -245,7 +245,7 @@ const wafrule = new aws.waf.Rule("wafrule", {
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name or description of the rule.
 {{% /md %}}</dd>
@@ -254,7 +254,7 @@ const wafrule = new aws.waf.Rule("wafrule", {
             title="Optional">
         <span>predicates</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulepredicate">Rule<wbr>Predicate[]?</a></span>
+        <span class="property-type"><a href="#rulepredicate">Rule<wbr>Predicate[]</a></span>
     </dt>
     <dd>{{% md %}}The objects to include in a rule (documented below).
 {{% /md %}}</dd>
@@ -263,7 +263,7 @@ const wafrule = new aws.waf.Rule("wafrule", {
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Key-value mapping of resource tags
 {{% /md %}}</dd>
@@ -339,42 +339,6 @@ The following output properties are available:
     <dd>{{% md %}}The ARN of the WAF rule.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span>Metric<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name or description for the Amazon CloudWatch metric of this rule. The name can contain only alphanumeric characters (A-Z, a-z, 0-9); the name can't contain whitespace.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name or description of the rule.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Predicates</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulepredicate">List&lt;Rule<wbr>Predicate&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}The objects to include in a rule (documented below).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
-    </dt>
-    <dd>{{% md %}}Key-value mapping of resource tags
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -389,42 +353,6 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the WAF rule.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Metric<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name or description for the Amazon CloudWatch metric of this rule. The name can contain only alphanumeric characters (A-Z, a-z, 0-9); the name can't contain whitespace.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name or description of the rule.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Predicates</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulepredicate">[]Rule<wbr>Predicate</a></span>
-    </dt>
-    <dd>{{% md %}}The objects to include in a rule (documented below).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
-    </dt>
-    <dd>{{% md %}}Key-value mapping of resource tags
 {{% /md %}}</dd>
 
 </dl>
@@ -443,42 +371,6 @@ The following output properties are available:
     <dd>{{% md %}}The ARN of the WAF rule.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span>metric<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name or description for the Amazon CloudWatch metric of this rule. The name can contain only alphanumeric characters (A-Z, a-z, 0-9); the name can't contain whitespace.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name or description of the rule.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>predicates</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulepredicate">Rule<wbr>Predicate[]?</a></span>
-    </dt>
-    <dd>{{% md %}}The objects to include in a rule (documented below).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
-    </dt>
-    <dd>{{% md %}}Key-value mapping of resource tags
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -493,42 +385,6 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the WAF rule.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>metric_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name or description for the Amazon CloudWatch metric of this rule. The name can contain only alphanumeric characters (A-Z, a-z, 0-9); the name can't contain whitespace.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name or description of the rule.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>predicates</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulepredicate">List[Rule<wbr>Predicate]</a></span>
-    </dt>
-    <dd>{{% md %}}The objects to include in a rule (documented below).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
-    </dt>
-    <dd>{{% md %}}Key-value mapping of resource tags
 {{% /md %}}</dd>
 
 </dl>
@@ -670,7 +526,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the WAF rule.
 {{% /md %}}</dd>
@@ -679,7 +535,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Metric<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name or description for the Amazon CloudWatch metric of this rule. The name can contain only alphanumeric characters (A-Z, a-z, 0-9); the name can't contain whitespace.
 {{% /md %}}</dd>
@@ -688,7 +544,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name or description of the rule.
 {{% /md %}}</dd>
@@ -697,7 +553,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Predicates</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulepredicate">List&lt;Rule<wbr>Predicate<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#rulepredicate">List&lt;Rule<wbr>Predicate<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The objects to include in a rule (documented below).
 {{% /md %}}</dd>
@@ -706,7 +562,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Key-value mapping of resource tags
 {{% /md %}}</dd>
@@ -722,7 +578,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the WAF rule.
 {{% /md %}}</dd>
@@ -731,7 +587,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Metric<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name or description for the Amazon CloudWatch metric of this rule. The name can contain only alphanumeric characters (A-Z, a-z, 0-9); the name can't contain whitespace.
 {{% /md %}}</dd>
@@ -740,7 +596,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name or description of the rule.
 {{% /md %}}</dd>
@@ -774,7 +630,7 @@ The following state arguments are supported:
             title="Optional">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the WAF rule.
 {{% /md %}}</dd>
@@ -783,7 +639,7 @@ The following state arguments are supported:
             title="Optional">
         <span>metric<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name or description for the Amazon CloudWatch metric of this rule. The name can contain only alphanumeric characters (A-Z, a-z, 0-9); the name can't contain whitespace.
 {{% /md %}}</dd>
@@ -792,7 +648,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name or description of the rule.
 {{% /md %}}</dd>
@@ -801,7 +657,7 @@ The following state arguments are supported:
             title="Optional">
         <span>predicates</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#rulepredicate">Rule<wbr>Predicate[]?</a></span>
+        <span class="property-type"><a href="#rulepredicate">Rule<wbr>Predicate[]</a></span>
     </dt>
     <dd>{{% md %}}The objects to include in a rule (documented below).
 {{% /md %}}</dd>
@@ -810,7 +666,7 @@ The following state arguments are supported:
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Key-value mapping of resource tags
 {{% /md %}}</dd>

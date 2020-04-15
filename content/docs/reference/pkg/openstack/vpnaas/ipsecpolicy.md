@@ -26,7 +26,7 @@ const policy1 = new openstack.vpnaas.IpSecPolicy("policy_1", {});
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/openstack/vpnaas/#IpSecPolicy">IpSecPolicy</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/openstack/vpnaas/#IpSecPolicyArgs">IpSecPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/openstack/vpnaas/#IpSecPolicy">IpSecPolicy</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/openstack/vpnaas/#IpSecPolicyArgs">IpSecPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -34,11 +34,11 @@ const policy1 = new openstack.vpnaas.IpSecPolicy("policy_1", {});
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewIpSecPolicy<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/vpnaas?tab=doc#IpSecPolicyArgs">IpSecPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/vpnaas?tab=doc#IpSecPolicy">IpSecPolicy</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewIpSecPolicy<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/vpnaas?tab=doc#IpSecPolicyArgs">IpSecPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/vpnaas?tab=doc#IpSecPolicy">IpSecPolicy</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.Openstack.Vpnaas.IpSecPolicy.html">IpSecPolicy</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.Openstack.VPNaaS.IpSecPolicyArgs.html">IpSecPolicyArgs</a></span>? <span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.Openstack.VPNaaS.IpSecPolicy.html">IpSecPolicy</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.OpenStack.VPNaaS.IpSecPolicyArgs.html">IpSecPolicyArgs</a></span>? <span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -134,7 +134,7 @@ const policy1 = new openstack.vpnaas.IpSecPolicy("policy_1", {});
             title="Optional">
         <span>Auth<wbr>Algorithm</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The authentication hash algorithm. Valid values are sha1, sha256, sha384, sha512.
 Default is sha1. Changing this updates the algorithm of the existing policy.
@@ -144,7 +144,7 @@ Default is sha1. Changing this updates the algorithm of the existing policy.
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The human-readable description for the policy.
 Changing this updates the description of the existing policy.
@@ -154,7 +154,7 @@ Changing this updates the description of the existing policy.
             title="Optional">
         <span>Encapsulation<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The encapsulation mode. Valid values are tunnel and transport. Default is tunnel.
 Changing this updates the existing policy.
@@ -164,7 +164,7 @@ Changing this updates the existing policy.
             title="Optional">
         <span>Encryption<wbr>Algorithm</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The encryption algorithm. Valid values are 3des, aes-128, aes-192 and so on.
 The default value is aes-128. Changing this updates the existing policy.
@@ -174,7 +174,7 @@ The default value is aes-128. Changing this updates the existing policy.
             title="Optional">
         <span>Lifetimes</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipsecpolicylifetime">List&lt;Ip<wbr>Sec<wbr>Policy<wbr>Lifetime<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#ipsecpolicylifetime">List&lt;Pulumi.<wbr>Open<wbr>Stack.<wbr>VPNaa<wbr>S.<wbr>Inputs.<wbr>Ip<wbr>Sec<wbr>Policy<wbr>Lifetime<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The lifetime of the security association. Consists of Unit and Value.
 - `unit` - (Optional) The units for the lifetime of the security association. Can be either seconds or kilobytes.
@@ -187,7 +187,7 @@ Default is 3600.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the policy. Changing this updates the name of
 the existing policy.
@@ -197,7 +197,7 @@ the existing policy.
             title="Optional">
         <span>Pfs</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The perfect forward secrecy mode. Valid values are Group2, Group5 and Group14. Default is Group5.
 Changing this updates the existing policy.
@@ -207,7 +207,7 @@ Changing this updates the existing policy.
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 Networking client.
 A Networking client is needed to create an IPSec policy. If omitted, the
@@ -219,7 +219,7 @@ policy.
             title="Optional">
         <span>Tenant<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The owner of the policy. Required if admin wants to
 create a policy for another project. Changing this creates a new policy.
@@ -229,7 +229,7 @@ create a policy for another project. Changing this creates a new policy.
             title="Optional">
         <span>Transform<wbr>Protocol</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The transform protocol. Valid values are ESP, AH and AH-ESP.
 Changing this updates the existing policy. Default is ESP.
@@ -239,7 +239,7 @@ Changing this updates the existing policy. Default is ESP.
             title="Optional">
         <span>Value<wbr>Specs</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Map of additional options.
 {{% /md %}}</dd>
@@ -255,7 +255,7 @@ Changing this updates the existing policy. Default is ESP.
             title="Optional">
         <span>Auth<wbr>Algorithm</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The authentication hash algorithm. Valid values are sha1, sha256, sha384, sha512.
 Default is sha1. Changing this updates the algorithm of the existing policy.
@@ -265,7 +265,7 @@ Default is sha1. Changing this updates the algorithm of the existing policy.
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The human-readable description for the policy.
 Changing this updates the description of the existing policy.
@@ -275,7 +275,7 @@ Changing this updates the description of the existing policy.
             title="Optional">
         <span>Encapsulation<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The encapsulation mode. Valid values are tunnel and transport. Default is tunnel.
 Changing this updates the existing policy.
@@ -285,7 +285,7 @@ Changing this updates the existing policy.
             title="Optional">
         <span>Encryption<wbr>Algorithm</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The encryption algorithm. Valid values are 3des, aes-128, aes-192 and so on.
 The default value is aes-128. Changing this updates the existing policy.
@@ -308,7 +308,7 @@ Default is 3600.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the policy. Changing this updates the name of
 the existing policy.
@@ -318,7 +318,7 @@ the existing policy.
             title="Optional">
         <span>Pfs</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The perfect forward secrecy mode. Valid values are Group2, Group5 and Group14. Default is Group5.
 Changing this updates the existing policy.
@@ -328,7 +328,7 @@ Changing this updates the existing policy.
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 Networking client.
 A Networking client is needed to create an IPSec policy. If omitted, the
@@ -340,7 +340,7 @@ policy.
             title="Optional">
         <span>Tenant<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The owner of the policy. Required if admin wants to
 create a policy for another project. Changing this creates a new policy.
@@ -350,7 +350,7 @@ create a policy for another project. Changing this creates a new policy.
             title="Optional">
         <span>Transform<wbr>Protocol</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The transform protocol. Valid values are ESP, AH and AH-ESP.
 Changing this updates the existing policy. Default is ESP.
@@ -376,7 +376,7 @@ Changing this updates the existing policy. Default is ESP.
             title="Optional">
         <span>auth<wbr>Algorithm</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The authentication hash algorithm. Valid values are sha1, sha256, sha384, sha512.
 Default is sha1. Changing this updates the algorithm of the existing policy.
@@ -386,7 +386,7 @@ Default is sha1. Changing this updates the algorithm of the existing policy.
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The human-readable description for the policy.
 Changing this updates the description of the existing policy.
@@ -396,7 +396,7 @@ Changing this updates the description of the existing policy.
             title="Optional">
         <span>encapsulation<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The encapsulation mode. Valid values are tunnel and transport. Default is tunnel.
 Changing this updates the existing policy.
@@ -406,510 +406,14 @@ Changing this updates the existing policy.
             title="Optional">
         <span>encryption<wbr>Algorithm</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The encryption algorithm. Valid values are 3des, aes-128, aes-192 and so on.
-The default value is aes-128. Changing this updates the existing policy.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>lifetimes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipsecpolicylifetime">Ip<wbr>Sec<wbr>Policy<wbr>Lifetime[]?</a></span>
-    </dt>
-    <dd>{{% md %}}The lifetime of the security association. Consists of Unit and Value.
-- `unit` - (Optional) The units for the lifetime of the security association. Can be either seconds or kilobytes.
-Default is seconds.
-- `value` - (Optional) The value for the lifetime of the security association. Must be a positive integer.
-Default is 3600.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The name of the policy. Changing this updates the name of
-the existing policy.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>pfs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The perfect forward secrecy mode. Valid values are Group2, Group5 and Group14. Default is Group5.
-Changing this updates the existing policy.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The region in which to obtain the V2 Networking client.
-A Networking client is needed to create an IPSec policy. If omitted, the
-`region` argument of the provider is used. Changing this creates a new
-policy.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>tenant<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The owner of the policy. Required if admin wants to
-create a policy for another project. Changing this creates a new policy.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>transform<wbr>Protocol</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The transform protocol. Valid values are ESP, AH and AH-ESP.
-Changing this updates the existing policy. Default is ESP.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>value<wbr>Specs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
-    </dt>
-    <dd>{{% md %}}Map of additional options.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>auth_<wbr>algorithm</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The authentication hash algorithm. Valid values are sha1, sha256, sha384, sha512.
-Default is sha1. Changing this updates the algorithm of the existing policy.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The human-readable description for the policy.
-Changing this updates the description of the existing policy.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>encapsulation_<wbr>mode</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The encapsulation mode. Valid values are tunnel and transport. Default is tunnel.
-Changing this updates the existing policy.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>encryption_<wbr>algorithm</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The encryption algorithm. Valid values are 3des, aes-128, aes-192 and so on.
-The default value is aes-128. Changing this updates the existing policy.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>lifetimes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipsecpolicylifetime">List[Ip<wbr>Sec<wbr>Policy<wbr>Lifetime]</a></span>
-    </dt>
-    <dd>{{% md %}}The lifetime of the security association. Consists of Unit and Value.
-- `unit` - (Optional) The units for the lifetime of the security association. Can be either seconds or kilobytes.
-Default is seconds.
-- `value` - (Optional) The value for the lifetime of the security association. Must be a positive integer.
-Default is 3600.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the policy. Changing this updates the name of
-the existing policy.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>pfs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The perfect forward secrecy mode. Valid values are Group2, Group5 and Group14. Default is Group5.
-Changing this updates the existing policy.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The region in which to obtain the V2 Networking client.
-A Networking client is needed to create an IPSec policy. If omitted, the
-`region` argument of the provider is used. Changing this creates a new
-policy.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>tenant_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The owner of the policy. Required if admin wants to
-create a policy for another project. Changing this creates a new policy.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>transform_<wbr>protocol</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The transform protocol. Valid values are ESP, AH and AH-ESP.
-Changing this updates the existing policy. Default is ESP.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>value_<wbr>specs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
-    </dt>
-    <dd>{{% md %}}Map of additional options.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-
-
-
-
-
-## IpSecPolicy Output Properties
-
-The following output properties are available:
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Auth<wbr>Algorithm</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The authentication hash algorithm. Valid values are sha1, sha256, sha384, sha512.
-Default is sha1. Changing this updates the algorithm of the existing policy.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The human-readable description for the policy.
-Changing this updates the description of the existing policy.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Encapsulation<wbr>Mode</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The encapsulation mode. Valid values are tunnel and transport. Default is tunnel.
-Changing this updates the existing policy.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Encryption<wbr>Algorithm</span>
-        <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The encryption algorithm. Valid values are 3des, aes-128, aes-192 and so on.
 The default value is aes-128. Changing this updates the existing policy.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span>Lifetimes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipsecpolicylifetime">List&lt;Ip<wbr>Sec<wbr>Policy<wbr>Lifetime&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}The lifetime of the security association. Consists of Unit and Value.
-- `unit` - (Optional) The units for the lifetime of the security association. Can be either seconds or kilobytes.
-Default is seconds.
-- `value` - (Optional) The value for the lifetime of the security association. Must be a positive integer.
-Default is 3600.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the policy. Changing this updates the name of
-the existing policy.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Pfs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The perfect forward secrecy mode. Valid values are Group2, Group5 and Group14. Default is Group5.
-Changing this updates the existing policy.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The region in which to obtain the V2 Networking client.
-A Networking client is needed to create an IPSec policy. If omitted, the
-`region` argument of the provider is used. Changing this creates a new
-policy.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tenant<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The owner of the policy. Required if admin wants to
-create a policy for another project. Changing this creates a new policy.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Transform<wbr>Protocol</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The transform protocol. Valid values are ESP, AH and AH-ESP.
-Changing this updates the existing policy. Default is ESP.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Value<wbr>Specs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
-    </dt>
-    <dd>{{% md %}}Map of additional options.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Auth<wbr>Algorithm</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The authentication hash algorithm. Valid values are sha1, sha256, sha384, sha512.
-Default is sha1. Changing this updates the algorithm of the existing policy.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The human-readable description for the policy.
-Changing this updates the description of the existing policy.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Encapsulation<wbr>Mode</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The encapsulation mode. Valid values are tunnel and transport. Default is tunnel.
-Changing this updates the existing policy.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Encryption<wbr>Algorithm</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The encryption algorithm. Valid values are 3des, aes-128, aes-192 and so on.
-The default value is aes-128. Changing this updates the existing policy.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Lifetimes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipsecpolicylifetime">[]Ip<wbr>Sec<wbr>Policy<wbr>Lifetime</a></span>
-    </dt>
-    <dd>{{% md %}}The lifetime of the security association. Consists of Unit and Value.
-- `unit` - (Optional) The units for the lifetime of the security association. Can be either seconds or kilobytes.
-Default is seconds.
-- `value` - (Optional) The value for the lifetime of the security association. Must be a positive integer.
-Default is 3600.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the policy. Changing this updates the name of
-the existing policy.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Pfs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The perfect forward secrecy mode. Valid values are Group2, Group5 and Group14. Default is Group5.
-Changing this updates the existing policy.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The region in which to obtain the V2 Networking client.
-A Networking client is needed to create an IPSec policy. If omitted, the
-`region` argument of the provider is used. Changing this creates a new
-policy.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tenant<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The owner of the policy. Required if admin wants to
-create a policy for another project. Changing this creates a new policy.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Transform<wbr>Protocol</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The transform protocol. Valid values are ESP, AH and AH-ESP.
-Changing this updates the existing policy. Default is ESP.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Value<wbr>Specs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
-    </dt>
-    <dd>{{% md %}}Map of additional options.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>auth<wbr>Algorithm</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The authentication hash algorithm. Valid values are sha1, sha256, sha384, sha512.
-Default is sha1. Changing this updates the algorithm of the existing policy.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The human-readable description for the policy.
-Changing this updates the description of the existing policy.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>encapsulation<wbr>Mode</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The encapsulation mode. Valid values are tunnel and transport. Default is tunnel.
-Changing this updates the existing policy.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>encryption<wbr>Algorithm</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The encryption algorithm. Valid values are 3des, aes-128, aes-192 and so on.
-The default value is aes-128. Changing this updates the existing policy.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>lifetimes</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ipsecpolicylifetime">Ip<wbr>Sec<wbr>Policy<wbr>Lifetime[]</a></span>
@@ -921,8 +425,8 @@ Default is seconds.
 Default is 3600.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -931,8 +435,8 @@ Default is 3600.
 the existing policy.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>pfs</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -941,8 +445,8 @@ the existing policy.
 Changing this updates the existing policy.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>region</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -953,8 +457,8 @@ A Networking client is needed to create an IPSec policy. If omitted, the
 policy.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>tenant<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -963,8 +467,8 @@ policy.
 create a policy for another project. Changing this creates a new policy.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>transform<wbr>Protocol</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -973,11 +477,11 @@ create a policy for another project. Changing this creates a new policy.
 Changing this updates the existing policy. Default is ESP.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>value<wbr>Specs</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Map of additional options.
 {{% /md %}}</dd>
@@ -989,8 +493,8 @@ Changing this updates the existing policy. Default is ESP.
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>auth_<wbr>algorithm</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -999,8 +503,8 @@ Changing this updates the existing policy. Default is ESP.
 Default is sha1. Changing this updates the algorithm of the existing policy.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -1009,8 +513,8 @@ Default is sha1. Changing this updates the algorithm of the existing policy.
 Changing this updates the description of the existing policy.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>encapsulation_<wbr>mode</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -1019,8 +523,8 @@ Changing this updates the description of the existing policy.
 Changing this updates the existing policy.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>encryption_<wbr>algorithm</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -1029,8 +533,8 @@ Changing this updates the existing policy.
 The default value is aes-128. Changing this updates the existing policy.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>lifetimes</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ipsecpolicylifetime">List[Ip<wbr>Sec<wbr>Policy<wbr>Lifetime]</a></span>
@@ -1042,8 +546,8 @@ Default is seconds.
 Default is 3600.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -1052,8 +556,8 @@ Default is 3600.
 the existing policy.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>pfs</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -1062,8 +566,8 @@ the existing policy.
 Changing this updates the existing policy.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>region</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -1074,8 +578,8 @@ A Networking client is needed to create an IPSec policy. If omitted, the
 policy.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>tenant_<wbr>id</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -1084,8 +588,8 @@ policy.
 create a policy for another project. Changing this creates a new policy.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>transform_<wbr>protocol</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -1094,8 +598,8 @@ create a policy for another project. Changing this creates a new policy.
 Changing this updates the existing policy. Default is ESP.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>value_<wbr>specs</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
@@ -1105,6 +609,8 @@ Changing this updates the existing policy. Default is ESP.
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 
@@ -1132,7 +638,7 @@ Get an existing IpSecPolicy resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.Openstack.Vpnaas.IpSecPolicy.html">IpSecPolicy</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.Openstack.Vpnaas.IpSecPolicyState.html">IpSecPolicyState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.Openstack.VPNaaS.IpSecPolicy.html">IpSecPolicy</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.Openstack.VPNaaS.IpSecPolicyState.html">IpSecPolicyState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1242,7 +748,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Auth<wbr>Algorithm</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The authentication hash algorithm. Valid values are sha1, sha256, sha384, sha512.
 Default is sha1. Changing this updates the algorithm of the existing policy.
@@ -1252,7 +758,7 @@ Default is sha1. Changing this updates the algorithm of the existing policy.
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The human-readable description for the policy.
 Changing this updates the description of the existing policy.
@@ -1262,7 +768,7 @@ Changing this updates the description of the existing policy.
             title="Optional">
         <span>Encapsulation<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The encapsulation mode. Valid values are tunnel and transport. Default is tunnel.
 Changing this updates the existing policy.
@@ -1272,7 +778,7 @@ Changing this updates the existing policy.
             title="Optional">
         <span>Encryption<wbr>Algorithm</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The encryption algorithm. Valid values are 3des, aes-128, aes-192 and so on.
 The default value is aes-128. Changing this updates the existing policy.
@@ -1282,7 +788,7 @@ The default value is aes-128. Changing this updates the existing policy.
             title="Optional">
         <span>Lifetimes</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipsecpolicylifetime">List&lt;Ip<wbr>Sec<wbr>Policy<wbr>Lifetime<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#ipsecpolicylifetime">List&lt;Pulumi.<wbr>Open<wbr>Stack.<wbr>VPNaa<wbr>S.<wbr>Inputs.<wbr>Ip<wbr>Sec<wbr>Policy<wbr>Lifetime<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The lifetime of the security association. Consists of Unit and Value.
 - `unit` - (Optional) The units for the lifetime of the security association. Can be either seconds or kilobytes.
@@ -1295,7 +801,7 @@ Default is 3600.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the policy. Changing this updates the name of
 the existing policy.
@@ -1305,7 +811,7 @@ the existing policy.
             title="Optional">
         <span>Pfs</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The perfect forward secrecy mode. Valid values are Group2, Group5 and Group14. Default is Group5.
 Changing this updates the existing policy.
@@ -1315,7 +821,7 @@ Changing this updates the existing policy.
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 Networking client.
 A Networking client is needed to create an IPSec policy. If omitted, the
@@ -1327,7 +833,7 @@ policy.
             title="Optional">
         <span>Tenant<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The owner of the policy. Required if admin wants to
 create a policy for another project. Changing this creates a new policy.
@@ -1337,7 +843,7 @@ create a policy for another project. Changing this creates a new policy.
             title="Optional">
         <span>Transform<wbr>Protocol</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The transform protocol. Valid values are ESP, AH and AH-ESP.
 Changing this updates the existing policy. Default is ESP.
@@ -1347,7 +853,7 @@ Changing this updates the existing policy. Default is ESP.
             title="Optional">
         <span>Value<wbr>Specs</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Map of additional options.
 {{% /md %}}</dd>
@@ -1363,7 +869,7 @@ Changing this updates the existing policy. Default is ESP.
             title="Optional">
         <span>Auth<wbr>Algorithm</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The authentication hash algorithm. Valid values are sha1, sha256, sha384, sha512.
 Default is sha1. Changing this updates the algorithm of the existing policy.
@@ -1373,7 +879,7 @@ Default is sha1. Changing this updates the algorithm of the existing policy.
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The human-readable description for the policy.
 Changing this updates the description of the existing policy.
@@ -1383,7 +889,7 @@ Changing this updates the description of the existing policy.
             title="Optional">
         <span>Encapsulation<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The encapsulation mode. Valid values are tunnel and transport. Default is tunnel.
 Changing this updates the existing policy.
@@ -1393,7 +899,7 @@ Changing this updates the existing policy.
             title="Optional">
         <span>Encryption<wbr>Algorithm</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The encryption algorithm. Valid values are 3des, aes-128, aes-192 and so on.
 The default value is aes-128. Changing this updates the existing policy.
@@ -1416,7 +922,7 @@ Default is 3600.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the policy. Changing this updates the name of
 the existing policy.
@@ -1426,7 +932,7 @@ the existing policy.
             title="Optional">
         <span>Pfs</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The perfect forward secrecy mode. Valid values are Group2, Group5 and Group14. Default is Group5.
 Changing this updates the existing policy.
@@ -1436,7 +942,7 @@ Changing this updates the existing policy.
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 Networking client.
 A Networking client is needed to create an IPSec policy. If omitted, the
@@ -1448,7 +954,7 @@ policy.
             title="Optional">
         <span>Tenant<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The owner of the policy. Required if admin wants to
 create a policy for another project. Changing this creates a new policy.
@@ -1458,7 +964,7 @@ create a policy for another project. Changing this creates a new policy.
             title="Optional">
         <span>Transform<wbr>Protocol</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The transform protocol. Valid values are ESP, AH and AH-ESP.
 Changing this updates the existing policy. Default is ESP.
@@ -1484,7 +990,7 @@ Changing this updates the existing policy. Default is ESP.
             title="Optional">
         <span>auth<wbr>Algorithm</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The authentication hash algorithm. Valid values are sha1, sha256, sha384, sha512.
 Default is sha1. Changing this updates the algorithm of the existing policy.
@@ -1494,7 +1000,7 @@ Default is sha1. Changing this updates the algorithm of the existing policy.
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The human-readable description for the policy.
 Changing this updates the description of the existing policy.
@@ -1504,7 +1010,7 @@ Changing this updates the description of the existing policy.
             title="Optional">
         <span>encapsulation<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The encapsulation mode. Valid values are tunnel and transport. Default is tunnel.
 Changing this updates the existing policy.
@@ -1514,7 +1020,7 @@ Changing this updates the existing policy.
             title="Optional">
         <span>encryption<wbr>Algorithm</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The encryption algorithm. Valid values are 3des, aes-128, aes-192 and so on.
 The default value is aes-128. Changing this updates the existing policy.
@@ -1524,7 +1030,7 @@ The default value is aes-128. Changing this updates the existing policy.
             title="Optional">
         <span>lifetimes</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipsecpolicylifetime">Ip<wbr>Sec<wbr>Policy<wbr>Lifetime[]?</a></span>
+        <span class="property-type"><a href="#ipsecpolicylifetime">Ip<wbr>Sec<wbr>Policy<wbr>Lifetime[]</a></span>
     </dt>
     <dd>{{% md %}}The lifetime of the security association. Consists of Unit and Value.
 - `unit` - (Optional) The units for the lifetime of the security association. Can be either seconds or kilobytes.
@@ -1537,7 +1043,7 @@ Default is 3600.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the policy. Changing this updates the name of
 the existing policy.
@@ -1547,7 +1053,7 @@ the existing policy.
             title="Optional">
         <span>pfs</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The perfect forward secrecy mode. Valid values are Group2, Group5 and Group14. Default is Group5.
 Changing this updates the existing policy.
@@ -1557,7 +1063,7 @@ Changing this updates the existing policy.
             title="Optional">
         <span>region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 Networking client.
 A Networking client is needed to create an IPSec policy. If omitted, the
@@ -1569,7 +1075,7 @@ policy.
             title="Optional">
         <span>tenant<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The owner of the policy. Required if admin wants to
 create a policy for another project. Changing this creates a new policy.
@@ -1579,7 +1085,7 @@ create a policy for another project. Changing this creates a new policy.
             title="Optional">
         <span>transform<wbr>Protocol</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The transform protocol. Valid values are ESP, AH and AH-ESP.
 Changing this updates the existing policy. Default is ESP.
@@ -1589,7 +1095,7 @@ Changing this updates the existing policy. Default is ESP.
             title="Optional">
         <span>value<wbr>Specs</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Map of additional options.
 {{% /md %}}</dd>
@@ -1748,7 +1254,7 @@ Changing this updates the existing policy. Default is ESP.
             title="Optional">
         <span>Units</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1756,7 +1262,7 @@ Changing this updates the existing policy. Default is ESP.
             title="Optional">
         <span>Value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1771,7 +1277,7 @@ Changing this updates the existing policy. Default is ESP.
             title="Optional">
         <span>Units</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1779,7 +1285,7 @@ Changing this updates the existing policy. Default is ESP.
             title="Optional">
         <span>Value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1794,7 +1300,7 @@ Changing this updates the existing policy. Default is ESP.
             title="Optional">
         <span>units</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1802,7 +1308,7 @@ Changing this updates the existing policy. Default is ESP.
             title="Optional">
         <span>value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

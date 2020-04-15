@@ -48,7 +48,7 @@ const firewall1 = new openstack.firewall.Firewall("firewall_1", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/openstack/firewall/#Firewall">Firewall</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/openstack/firewall/#FirewallArgs">FirewallArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/openstack/firewall/#Firewall">Firewall</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/openstack/firewall/#FirewallArgs">FirewallArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -56,11 +56,11 @@ const firewall1 = new openstack.firewall.Firewall("firewall_1", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewFirewall<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/firewall?tab=doc#FirewallArgs">FirewallArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/firewall?tab=doc#Firewall">Firewall</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewFirewall<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/firewall?tab=doc#FirewallArgs">FirewallArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/firewall?tab=doc#Firewall">Firewall</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.Openstack.Firewall.Firewall.html">Firewall</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.Openstack.Firewall.FirewallArgs.html">FirewallArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.Openstack.Firewall.Firewall.html">Firewall</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.OpenStack.Firewall.FirewallArgs.html">FirewallArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -152,11 +152,21 @@ const firewall1 = new openstack.firewall.Firewall("firewall_1", {
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Policy<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The policy resource id for the firewall. Changing
+this updates the `policy_id` of an existing firewall.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Admin<wbr>State<wbr>Up</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Administrative up/down status for the firewall
 (must be "true" or "false" if provided - defaults to "true").
@@ -167,7 +177,7 @@ Changing this updates the `admin_state_up` of an existing firewall.
             title="Optional">
         <span>Associated<wbr>Routers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Router(s) to associate this firewall instance
 with. Must be a list of strings. Changing this updates the associated routers
@@ -178,7 +188,7 @@ of an existing firewall. Conflicts with `no_routers`.
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description for the firewall. Changing this
 updates the `description` of an existing firewall.
@@ -188,7 +198,7 @@ updates the `description` of an existing firewall.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A name for the firewall. Changing this
 updates the `name` of an existing firewall.
@@ -198,12 +208,51 @@ updates the `name` of an existing firewall.
             title="Optional">
         <span>No<wbr>Routers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should this firewall not be associated with any routers
 (must be "true" or "false" if provide - defaults to "false").
 Conflicts with `associated_routers`.
 {{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Region</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The region in which to obtain the v1 networking client.
+A networking client is needed to create a firewall. If omitted, the
+`region` argument of the provider is used. Changing this creates a new
+firewall.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Tenant<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The owner of the floating IP. Required if admin wants
+to create a firewall for another tenant. Changing this creates a new
+firewall.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Value<wbr>Specs</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+    </dt>
+    <dd>{{% md %}}Map of additional options.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
@@ -217,48 +266,9 @@ this updates the `policy_id` of an existing firewall.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The region in which to obtain the v1 networking client.
-A networking client is needed to create a firewall. If omitted, the
-`region` argument of the provider is used. Changing this creates a new
-firewall.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Tenant<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The owner of the floating IP. Required if admin wants
-to create a firewall for another tenant. Changing this creates a new
-firewall.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Value<wbr>Specs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
-    </dt>
-    <dd>{{% md %}}Map of additional options.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
         <span>Admin<wbr>State<wbr>Up</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Administrative up/down status for the firewall
 (must be "true" or "false" if provided - defaults to "true").
@@ -280,7 +290,7 @@ of an existing firewall. Conflicts with `no_routers`.
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description for the firewall. Changing this
 updates the `description` of an existing firewall.
@@ -290,7 +300,7 @@ updates the `description` of an existing firewall.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A name for the firewall. Changing this
 updates the `name` of an existing firewall.
@@ -300,28 +310,18 @@ updates the `name` of an existing firewall.
             title="Optional">
         <span>No<wbr>Routers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should this firewall not be associated with any routers
 (must be "true" or "false" if provide - defaults to "false").
 Conflicts with `associated_routers`.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>Policy<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The policy resource id for the firewall. Changing
-this updates the `policy_id` of an existing firewall.
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the v1 networking client.
 A networking client is needed to create a firewall. If omitted, the
@@ -333,7 +333,7 @@ firewall.
             title="Optional">
         <span>Tenant<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The owner of the floating IP. Required if admin wants
 to create a firewall for another tenant. Changing this creates a new
@@ -355,59 +355,6 @@ firewall.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>admin<wbr>State<wbr>Up</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Administrative up/down status for the firewall
-(must be "true" or "false" if provided - defaults to "true").
-Changing this updates the `admin_state_up` of an existing firewall.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>associated<wbr>Routers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}Router(s) to associate this firewall instance
-with. Must be a list of strings. Changing this updates the associated routers
-of an existing firewall. Conflicts with `no_routers`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}A description for the firewall. Changing this
-updates the `description` of an existing firewall.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}A name for the firewall. Changing this
-updates the `name` of an existing firewall.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>no<wbr>Routers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Should this firewall not be associated with any routers
-(must be "true" or "false" if provide - defaults to "false").
-Conflicts with `associated_routers`.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -421,374 +368,17 @@ this updates the `policy_id` of an existing firewall.
 
     <dt class="property-optional"
             title="Optional">
-        <span>region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The region in which to obtain the v1 networking client.
-A networking client is needed to create a firewall. If omitted, the
-`region` argument of the provider is used. Changing this creates a new
-firewall.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>tenant<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The owner of the floating IP. Required if admin wants
-to create a firewall for another tenant. Changing this creates a new
-firewall.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>value<wbr>Specs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
-    </dt>
-    <dd>{{% md %}}Map of additional options.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>admin_<wbr>state_<wbr>up</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Administrative up/down status for the firewall
-(must be "true" or "false" if provided - defaults to "true").
-Changing this updates the `admin_state_up` of an existing firewall.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>associated_<wbr>routers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}Router(s) to associate this firewall instance
-with. Must be a list of strings. Changing this updates the associated routers
-of an existing firewall. Conflicts with `no_routers`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}A description for the firewall. Changing this
-updates the `description` of an existing firewall.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}A name for the firewall. Changing this
-updates the `name` of an existing firewall.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>no_<wbr>routers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Should this firewall not be associated with any routers
-(must be "true" or "false" if provide - defaults to "false").
-Conflicts with `associated_routers`.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>policy_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The policy resource id for the firewall. Changing
-this updates the `policy_id` of an existing firewall.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The region in which to obtain the v1 networking client.
-A networking client is needed to create a firewall. If omitted, the
-`region` argument of the provider is used. Changing this creates a new
-firewall.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>tenant_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The owner of the floating IP. Required if admin wants
-to create a firewall for another tenant. Changing this creates a new
-firewall.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>value_<wbr>specs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
-    </dt>
-    <dd>{{% md %}}Map of additional options.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-
-
-
-
-
-## Firewall Output Properties
-
-The following output properties are available:
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Admin<wbr>State<wbr>Up</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Administrative up/down status for the firewall
-(must be "true" or "false" if provided - defaults to "true").
-Changing this updates the `admin_state_up` of an existing firewall.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Associated<wbr>Routers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
-    </dt>
-    <dd>{{% md %}}Router(s) to associate this firewall instance
-with. Must be a list of strings. Changing this updates the associated routers
-of an existing firewall. Conflicts with `no_routers`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}A description for the firewall. Changing this
-updates the `description` of an existing firewall.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A name for the firewall. Changing this
-updates the `name` of an existing firewall.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>No<wbr>Routers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Should this firewall not be associated with any routers
-(must be "true" or "false" if provide - defaults to "false").
-Conflicts with `associated_routers`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Policy<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The policy resource id for the firewall. Changing
-this updates the `policy_id` of an existing firewall.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The region in which to obtain the v1 networking client.
-A networking client is needed to create a firewall. If omitted, the
-`region` argument of the provider is used. Changing this creates a new
-firewall.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tenant<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The owner of the floating IP. Required if admin wants
-to create a firewall for another tenant. Changing this creates a new
-firewall.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Value<wbr>Specs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
-    </dt>
-    <dd>{{% md %}}Map of additional options.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Admin<wbr>State<wbr>Up</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Administrative up/down status for the firewall
-(must be "true" or "false" if provided - defaults to "true").
-Changing this updates the `admin_state_up` of an existing firewall.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Associated<wbr>Routers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}Router(s) to associate this firewall instance
-with. Must be a list of strings. Changing this updates the associated routers
-of an existing firewall. Conflicts with `no_routers`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}A description for the firewall. Changing this
-updates the `description` of an existing firewall.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A name for the firewall. Changing this
-updates the `name` of an existing firewall.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>No<wbr>Routers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Should this firewall not be associated with any routers
-(must be "true" or "false" if provide - defaults to "false").
-Conflicts with `associated_routers`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Policy<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The policy resource id for the firewall. Changing
-this updates the `policy_id` of an existing firewall.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The region in which to obtain the v1 networking client.
-A networking client is needed to create a firewall. If omitted, the
-`region` argument of the provider is used. Changing this creates a new
-firewall.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tenant<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The owner of the floating IP. Required if admin wants
-to create a firewall for another tenant. Changing this creates a new
-firewall.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Value<wbr>Specs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
-    </dt>
-    <dd>{{% md %}}Map of additional options.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
         <span>admin<wbr>State<wbr>Up</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Administrative up/down status for the firewall
 (must be "true" or "false" if provided - defaults to "true").
 Changing this updates the `admin_state_up` of an existing firewall.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>associated<wbr>Routers</span>
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
@@ -798,18 +388,18 @@ with. Must be a list of strings. Changing this updates the associated routers
 of an existing firewall. Conflicts with `no_routers`.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description for the firewall. Changing this
 updates the `description` of an existing firewall.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -818,29 +408,19 @@ updates the `description` of an existing firewall.
 updates the `name` of an existing firewall.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>no<wbr>Routers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should this firewall not be associated with any routers
 (must be "true" or "false" if provide - defaults to "false").
 Conflicts with `associated_routers`.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span>policy<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The policy resource id for the firewall. Changing
-this updates the `policy_id` of an existing firewall.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>region</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -851,8 +431,8 @@ A networking client is needed to create a firewall. If omitted, the
 firewall.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>tenant<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -862,11 +442,11 @@ to create a firewall for another tenant. Changing this creates a new
 firewall.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>value<wbr>Specs</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Map of additional options.
 {{% /md %}}</dd>
@@ -878,8 +458,18 @@ firewall.
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-"
-            title="">
+    <dt class="property-required"
+            title="Required">
+        <span>policy_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The policy resource id for the firewall. Changing
+this updates the `policy_id` of an existing firewall.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>admin_<wbr>state_<wbr>up</span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
@@ -889,8 +479,8 @@ firewall.
 Changing this updates the `admin_state_up` of an existing firewall.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>associated_<wbr>routers</span>
         <span class="property-indicator"></span>
         <span class="property-type">List[str]</span>
@@ -900,8 +490,8 @@ with. Must be a list of strings. Changing this updates the associated routers
 of an existing firewall. Conflicts with `no_routers`.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -910,8 +500,8 @@ of an existing firewall. Conflicts with `no_routers`.
 updates the `description` of an existing firewall.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -920,8 +510,8 @@ updates the `description` of an existing firewall.
 updates the `name` of an existing firewall.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>no_<wbr>routers</span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
@@ -931,18 +521,8 @@ updates the `name` of an existing firewall.
 Conflicts with `associated_routers`.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span>policy_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The policy resource id for the firewall. Changing
-this updates the `policy_id` of an existing firewall.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>region</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -953,8 +533,8 @@ A networking client is needed to create a firewall. If omitted, the
 firewall.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>tenant_<wbr>id</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -964,8 +544,8 @@ to create a firewall for another tenant. Changing this creates a new
 firewall.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>value_<wbr>specs</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
@@ -975,6 +555,8 @@ firewall.
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 
@@ -1112,7 +694,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Admin<wbr>State<wbr>Up</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Administrative up/down status for the firewall
 (must be "true" or "false" if provided - defaults to "true").
@@ -1123,7 +705,7 @@ Changing this updates the `admin_state_up` of an existing firewall.
             title="Optional">
         <span>Associated<wbr>Routers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Router(s) to associate this firewall instance
 with. Must be a list of strings. Changing this updates the associated routers
@@ -1134,7 +716,7 @@ of an existing firewall. Conflicts with `no_routers`.
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description for the firewall. Changing this
 updates the `description` of an existing firewall.
@@ -1144,7 +726,7 @@ updates the `description` of an existing firewall.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A name for the firewall. Changing this
 updates the `name` of an existing firewall.
@@ -1154,7 +736,7 @@ updates the `name` of an existing firewall.
             title="Optional">
         <span>No<wbr>Routers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should this firewall not be associated with any routers
 (must be "true" or "false" if provide - defaults to "false").
@@ -1165,7 +747,7 @@ Conflicts with `associated_routers`.
             title="Optional">
         <span>Policy<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The policy resource id for the firewall. Changing
 this updates the `policy_id` of an existing firewall.
@@ -1175,7 +757,7 @@ this updates the `policy_id` of an existing firewall.
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the v1 networking client.
 A networking client is needed to create a firewall. If omitted, the
@@ -1187,7 +769,7 @@ firewall.
             title="Optional">
         <span>Tenant<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The owner of the floating IP. Required if admin wants
 to create a firewall for another tenant. Changing this creates a new
@@ -1198,7 +780,7 @@ firewall.
             title="Optional">
         <span>Value<wbr>Specs</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Map of additional options.
 {{% /md %}}</dd>
@@ -1214,7 +796,7 @@ firewall.
             title="Optional">
         <span>Admin<wbr>State<wbr>Up</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Administrative up/down status for the firewall
 (must be "true" or "false" if provided - defaults to "true").
@@ -1236,7 +818,7 @@ of an existing firewall. Conflicts with `no_routers`.
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description for the firewall. Changing this
 updates the `description` of an existing firewall.
@@ -1246,7 +828,7 @@ updates the `description` of an existing firewall.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A name for the firewall. Changing this
 updates the `name` of an existing firewall.
@@ -1256,7 +838,7 @@ updates the `name` of an existing firewall.
             title="Optional">
         <span>No<wbr>Routers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should this firewall not be associated with any routers
 (must be "true" or "false" if provide - defaults to "false").
@@ -1267,7 +849,7 @@ Conflicts with `associated_routers`.
             title="Optional">
         <span>Policy<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The policy resource id for the firewall. Changing
 this updates the `policy_id` of an existing firewall.
@@ -1277,7 +859,7 @@ this updates the `policy_id` of an existing firewall.
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the v1 networking client.
 A networking client is needed to create a firewall. If omitted, the
@@ -1289,7 +871,7 @@ firewall.
             title="Optional">
         <span>Tenant<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The owner of the floating IP. Required if admin wants
 to create a firewall for another tenant. Changing this creates a new
@@ -1316,7 +898,7 @@ firewall.
             title="Optional">
         <span>admin<wbr>State<wbr>Up</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Administrative up/down status for the firewall
 (must be "true" or "false" if provided - defaults to "true").
@@ -1327,7 +909,7 @@ Changing this updates the `admin_state_up` of an existing firewall.
             title="Optional">
         <span>associated<wbr>Routers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Router(s) to associate this firewall instance
 with. Must be a list of strings. Changing this updates the associated routers
@@ -1338,7 +920,7 @@ of an existing firewall. Conflicts with `no_routers`.
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description for the firewall. Changing this
 updates the `description` of an existing firewall.
@@ -1348,7 +930,7 @@ updates the `description` of an existing firewall.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A name for the firewall. Changing this
 updates the `name` of an existing firewall.
@@ -1358,7 +940,7 @@ updates the `name` of an existing firewall.
             title="Optional">
         <span>no<wbr>Routers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should this firewall not be associated with any routers
 (must be "true" or "false" if provide - defaults to "false").
@@ -1369,7 +951,7 @@ Conflicts with `associated_routers`.
             title="Optional">
         <span>policy<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The policy resource id for the firewall. Changing
 this updates the `policy_id` of an existing firewall.
@@ -1379,7 +961,7 @@ this updates the `policy_id` of an existing firewall.
             title="Optional">
         <span>region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the v1 networking client.
 A networking client is needed to create a firewall. If omitted, the
@@ -1391,7 +973,7 @@ firewall.
             title="Optional">
         <span>tenant<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The owner of the floating IP. Required if admin wants
 to create a firewall for another tenant. Changing this creates a new
@@ -1402,7 +984,7 @@ firewall.
             title="Optional">
         <span>value<wbr>Specs</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Map of additional options.
 {{% /md %}}</dd>

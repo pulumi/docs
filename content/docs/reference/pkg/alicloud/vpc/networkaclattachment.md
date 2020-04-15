@@ -53,7 +53,7 @@ const defaultNetworkAclAttachment = new alicloud.vpc.NetworkAclAttachment("defau
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/vpc/#NetworkAclAttachment">NetworkAclAttachment</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/vpc/#NetworkAclAttachmentArgs">NetworkAclAttachmentArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/vpc/#NetworkAclAttachment">NetworkAclAttachment</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/vpc/#NetworkAclAttachmentArgs">NetworkAclAttachmentArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -61,11 +61,11 @@ const defaultNetworkAclAttachment = new alicloud.vpc.NetworkAclAttachment("defau
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewNetworkAclAttachment<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/vpc?tab=doc#NetworkAclAttachmentArgs">NetworkAclAttachmentArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/vpc?tab=doc#NetworkAclAttachment">NetworkAclAttachment</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewNetworkAclAttachment<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/vpc?tab=doc#NetworkAclAttachmentArgs">NetworkAclAttachmentArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/vpc?tab=doc#NetworkAclAttachment">NetworkAclAttachment</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.Vpc.NetworkAclAttachment.html">NetworkAclAttachment</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.Vpc.NetworkAclAttachmentArgs.html">NetworkAclAttachmentArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.Vpc.NetworkAclAttachment.html">NetworkAclAttachment</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.AliCloud.Vpc.NetworkAclAttachmentArgs.html">NetworkAclAttachmentArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -170,7 +170,7 @@ const defaultNetworkAclAttachment = new alicloud.vpc.NetworkAclAttachment("defau
             title="Required">
         <span>Resources</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkaclattachmentresource">List&lt;Network<wbr>Acl<wbr>Attachment<wbr>Resource<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#networkaclattachmentresource">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Vpc.<wbr>Inputs.<wbr>Network<wbr>Acl<wbr>Attachment<wbr>Resource<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of the resources associated with the network acl. The details see Block Resources.
 {{% /md %}}</dd>
@@ -254,116 +254,6 @@ const defaultNetworkAclAttachment = new alicloud.vpc.NetworkAclAttachment("defau
 {{% /choosable %}}
 
 
-
-
-
-
-
-## NetworkAclAttachment Output Properties
-
-The following output properties are available:
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Network<wbr>Acl<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The id of the network acl, the field can't be changed.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Resources</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkaclattachmentresource">List&lt;Network<wbr>Acl<wbr>Attachment<wbr>Resource&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}List of the resources associated with the network acl. The details see Block Resources.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Network<wbr>Acl<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The id of the network acl, the field can't be changed.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Resources</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkaclattachmentresource">[]Network<wbr>Acl<wbr>Attachment<wbr>Resource</a></span>
-    </dt>
-    <dd>{{% md %}}List of the resources associated with the network acl. The details see Block Resources.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>network<wbr>Acl<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The id of the network acl, the field can't be changed.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>resources</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkaclattachmentresource">Network<wbr>Acl<wbr>Attachment<wbr>Resource[]</a></span>
-    </dt>
-    <dd>{{% md %}}List of the resources associated with the network acl. The details see Block Resources.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>network_<wbr>acl_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The id of the network acl, the field can't be changed.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>resources</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkaclattachmentresource">List[Network<wbr>Acl<wbr>Attachment<wbr>Resource]</a></span>
-    </dt>
-    <dd>{{% md %}}List of the resources associated with the network acl. The details see Block Resources.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
 
 
 
@@ -501,7 +391,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Network<wbr>Acl<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the network acl, the field can't be changed.
 {{% /md %}}</dd>
@@ -510,7 +400,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Resources</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkaclattachmentresource">List&lt;Network<wbr>Acl<wbr>Attachment<wbr>Resource<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#networkaclattachmentresource">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Vpc.<wbr>Inputs.<wbr>Network<wbr>Acl<wbr>Attachment<wbr>Resource<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of the resources associated with the network acl. The details see Block Resources.
 {{% /md %}}</dd>
@@ -526,7 +416,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Network<wbr>Acl<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the network acl, the field can't be changed.
 {{% /md %}}</dd>
@@ -551,7 +441,7 @@ The following state arguments are supported:
             title="Optional">
         <span>network<wbr>Acl<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the network acl, the field can't be changed.
 {{% /md %}}</dd>
@@ -560,7 +450,7 @@ The following state arguments are supported:
             title="Optional">
         <span>resources</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkaclattachmentresource">Network<wbr>Acl<wbr>Attachment<wbr>Resource[]?</a></span>
+        <span class="property-type"><a href="#networkaclattachmentresource">Network<wbr>Acl<wbr>Attachment<wbr>Resource[]</a></span>
     </dt>
     <dd>{{% md %}}List of the resources associated with the network acl. The details see Block Resources.
 {{% /md %}}</dd>

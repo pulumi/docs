@@ -46,13 +46,13 @@ export const alicloudNasMountTargetsId = mt.targets[0].id;
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupMountTargets<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/nas?tab=doc#LookupMountTargetsArgs">LookupMountTargetsArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/nas?tab=doc#LookupMountTargetsResult">LookupMountTargetsResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupMountTargets<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/nas?tab=doc#LookupMountTargetsArgs">LookupMountTargetsArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/nas?tab=doc#LookupMountTargetsResult">LookupMountTargetsResult</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetMountTargets </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.Nas.GetMountTargetsResult.html">GetMountTargetsResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.Nas.GetMountTargetsArgs.html">GetMountTargetsArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.Nas.GetMountTargetsResult.html">GetMountTargetsResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.AliCloud.Nas.GetMountTargetsArgs.html">GetMountTargetsArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -65,15 +65,6 @@ The following arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Access<wbr>Group<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Filter results by a specific AccessGroupName.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>File<wbr>System<wbr>Id</span>
@@ -85,9 +76,18 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>Access<wbr>Group<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Filter results by a specific AccessGroupName.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of MountTargetDomain.
 {{% /md %}}</dd>
@@ -96,7 +96,7 @@ The following arguments are supported:
             title="Optional, Deprecated">
         <span>Mount<wbr>Target<wbr>Domain</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Filter results by a specific MountTargetDomain.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;mount_target_domain&#39; has been deprecated from provider version 1.53.0. New field &#39;ids&#39; replaces it.{{% /md %}}</p></dd>
@@ -105,7 +105,7 @@ The following arguments are supported:
             title="Optional">
         <span>Output<wbr>File</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -113,7 +113,7 @@ The following arguments are supported:
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Filter results by a specific NetworkType.
 {{% /md %}}</dd>
@@ -122,7 +122,7 @@ The following arguments are supported:
             title="Optional">
         <span>Vpc<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Filter results by a specific VpcId.
 {{% /md %}}</dd>
@@ -131,7 +131,7 @@ The following arguments are supported:
             title="Optional">
         <span>Vswitch<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Filter results by a specific VSwitchId.
 {{% /md %}}</dd>
@@ -143,15 +143,6 @@ The following arguments are supported:
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Access<wbr>Group<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Filter results by a specific AccessGroupName.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>File<wbr>System<wbr>Id</span>
@@ -159,6 +150,15 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the FileSystem that owns the MountTarget.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Access<wbr>Group<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Filter results by a specific AccessGroupName.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -174,7 +174,7 @@ The following arguments are supported:
             title="Optional, Deprecated">
         <span>Mount<wbr>Target<wbr>Domain</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Filter results by a specific MountTargetDomain.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;mount_target_domain&#39; has been deprecated from provider version 1.53.0. New field &#39;ids&#39; replaces it.{{% /md %}}</p></dd>
@@ -183,7 +183,7 @@ The following arguments are supported:
             title="Optional">
         <span>Output<wbr>File</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -191,7 +191,7 @@ The following arguments are supported:
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Filter results by a specific NetworkType.
 {{% /md %}}</dd>
@@ -200,7 +200,7 @@ The following arguments are supported:
             title="Optional">
         <span>Vpc<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Filter results by a specific VpcId.
 {{% /md %}}</dd>
@@ -209,7 +209,7 @@ The following arguments are supported:
             title="Optional">
         <span>Vswitch<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Filter results by a specific VSwitchId.
 {{% /md %}}</dd>
@@ -220,15 +220,6 @@ The following arguments are supported:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>access<wbr>Group<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Filter results by a specific AccessGroupName.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -241,9 +232,18 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>access<wbr>Group<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Filter results by a specific AccessGroupName.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of MountTargetDomain.
 {{% /md %}}</dd>
@@ -252,7 +252,7 @@ The following arguments are supported:
             title="Optional, Deprecated">
         <span>mount<wbr>Target<wbr>Domain</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Filter results by a specific MountTargetDomain.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;mount_target_domain&#39; has been deprecated from provider version 1.53.0. New field &#39;ids&#39; replaces it.{{% /md %}}</p></dd>
@@ -261,7 +261,7 @@ The following arguments are supported:
             title="Optional">
         <span>output<wbr>File</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -269,7 +269,7 @@ The following arguments are supported:
             title="Optional">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Filter results by a specific NetworkType.
 {{% /md %}}</dd>
@@ -278,7 +278,7 @@ The following arguments are supported:
             title="Optional">
         <span>vpc<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Filter results by a specific VpcId.
 {{% /md %}}</dd>
@@ -287,7 +287,7 @@ The following arguments are supported:
             title="Optional">
         <span>vswitch<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Filter results by a specific VSwitchId.
 {{% /md %}}</dd>
@@ -299,15 +299,6 @@ The following arguments are supported:
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>access_<wbr>group_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Filter results by a specific AccessGroupName.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>file_<wbr>system_<wbr>id</span>
@@ -315,6 +306,15 @@ The following arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the FileSystem that owns the MountTarget.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>access_<wbr>group_<wbr>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Filter results by a specific AccessGroupName.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -392,15 +392,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Access<wbr>Group<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}AccessGroup of The MountTarget.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>File<wbr>System<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -420,16 +411,34 @@ The following output properties are available:
             title="">
         <span>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of MountTargetDomain.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Targets</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getmounttargetstarget">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Nas.<wbr>Outputs.<wbr>Get<wbr>Mount<wbr>Targets<wbr>Target&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A list of MountTargetDomains. Each element contains the following attributes:
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Access<wbr>Group<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}AccessGroup of The MountTarget.
 {{% /md %}}</dd>
 
     <dt class="property- property-deprecated"
             title=", Deprecated">
         <span>Mount<wbr>Target<wbr>Domain</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}MountTargetDomain of the MountTarget.
 * `type`- NetworkType of The MountTarget.
@@ -439,24 +448,15 @@ The following output properties are available:
             title="">
         <span>Output<wbr>File</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>Targets</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getmounttargetstarget">List&lt;Get<wbr>Mount<wbr>Targets<wbr>Target&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}A list of MountTargetDomains. Each element contains the following attributes:
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -464,7 +464,7 @@ The following output properties are available:
             title="">
         <span>Vpc<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}VpcId of The MountTarget.
 {{% /md %}}</dd>
@@ -473,7 +473,7 @@ The following output properties are available:
             title="">
         <span>Vswitch<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}VSwitchId of The MountTarget.
 {{% /md %}}</dd>
@@ -484,15 +484,6 @@ The following output properties are available:
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Access<wbr>Group<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}AccessGroup of The MountTarget.
-{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -520,24 +511,6 @@ The following output properties are available:
     <dd>{{% md %}}A list of MountTargetDomain.
 {{% /md %}}</dd>
 
-    <dt class="property- property-deprecated"
-            title=", Deprecated">
-        <span>Mount<wbr>Target<wbr>Domain</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}MountTargetDomain of the MountTarget.
-* `type`- NetworkType of The MountTarget.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;mount_target_domain&#39; has been deprecated from provider version 1.53.0. New field &#39;ids&#39; replaces it.{{% /md %}}</p></dd>
-
-    <dt class="property-"
-            title="">
-        <span>Output<wbr>File</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span>Targets</span>
@@ -549,9 +522,36 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>Access<wbr>Group<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}AccessGroup of The MountTarget.
+{{% /md %}}</dd>
+
+    <dt class="property- property-deprecated"
+            title=", Deprecated">
+        <span>Mount<wbr>Target<wbr>Domain</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}MountTargetDomain of the MountTarget.
+* `type`- NetworkType of The MountTarget.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;mount_target_domain&#39; has been deprecated from provider version 1.53.0. New field &#39;ids&#39; replaces it.{{% /md %}}</p></dd>
+
+    <dt class="property-"
+            title="">
+        <span>Output<wbr>File</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -559,7 +559,7 @@ The following output properties are available:
             title="">
         <span>Vpc<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}VpcId of The MountTarget.
 {{% /md %}}</dd>
@@ -568,7 +568,7 @@ The following output properties are available:
             title="">
         <span>Vswitch<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}VSwitchId of The MountTarget.
 {{% /md %}}</dd>
@@ -579,15 +579,6 @@ The following output properties are available:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>access<wbr>Group<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}AccessGroup of The MountTarget.
-{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -615,24 +606,6 @@ The following output properties are available:
     <dd>{{% md %}}A list of MountTargetDomain.
 {{% /md %}}</dd>
 
-    <dt class="property- property-deprecated"
-            title=", Deprecated">
-        <span>mount<wbr>Target<wbr>Domain</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}MountTargetDomain of the MountTarget.
-* `type`- NetworkType of The MountTarget.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;mount_target_domain&#39; has been deprecated from provider version 1.53.0. New field &#39;ids&#39; replaces it.{{% /md %}}</p></dd>
-
-    <dt class="property-"
-            title="">
-        <span>output<wbr>File</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span>targets</span>
@@ -644,9 +617,36 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>access<wbr>Group<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}AccessGroup of The MountTarget.
+{{% /md %}}</dd>
+
+    <dt class="property- property-deprecated"
+            title=", Deprecated">
+        <span>mount<wbr>Target<wbr>Domain</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}MountTargetDomain of the MountTarget.
+* `type`- NetworkType of The MountTarget.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;mount_target_domain&#39; has been deprecated from provider version 1.53.0. New field &#39;ids&#39; replaces it.{{% /md %}}</p></dd>
+
+    <dt class="property-"
+            title="">
+        <span>output<wbr>File</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -654,7 +654,7 @@ The following output properties are available:
             title="">
         <span>vpc<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}VpcId of The MountTarget.
 {{% /md %}}</dd>
@@ -663,7 +663,7 @@ The following output properties are available:
             title="">
         <span>vswitch<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}VSwitchId of The MountTarget.
 {{% /md %}}</dd>
@@ -674,15 +674,6 @@ The following output properties are available:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>access_<wbr>group_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}AccessGroup of The MountTarget.
-{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -710,6 +701,24 @@ The following output properties are available:
     <dd>{{% md %}}A list of MountTargetDomain.
 {{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span>targets</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getmounttargetstarget">List[Get<wbr>Mount<wbr>Targets<wbr>Target]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of MountTargetDomains. Each element contains the following attributes:
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>access_<wbr>group_<wbr>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}AccessGroup of The MountTarget.
+{{% /md %}}</dd>
+
     <dt class="property- property-deprecated"
             title=", Deprecated">
         <span>mount_<wbr>target_<wbr>domain</span>
@@ -727,15 +736,6 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>targets</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getmounttargetstarget">List[Get<wbr>Mount<wbr>Targets<wbr>Target]</a></span>
-    </dt>
-    <dd>{{% md %}}A list of MountTargetDomains. Each element contains the following attributes:
-{{% /md %}}</dd>
 
     <dt class="property-"
             title="">

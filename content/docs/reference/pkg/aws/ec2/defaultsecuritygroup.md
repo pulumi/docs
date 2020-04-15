@@ -107,7 +107,7 @@ they are at the time of removal. You can resume managing them via the AWS Consol
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#DefaultSecurityGroup">DefaultSecurityGroup</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#DefaultSecurityGroupArgs">DefaultSecurityGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#DefaultSecurityGroup">DefaultSecurityGroup</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#DefaultSecurityGroupArgs">DefaultSecurityGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -115,7 +115,7 @@ they are at the time of removal. You can resume managing them via the AWS Consol
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewDefaultSecurityGroup<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2?tab=doc#DefaultSecurityGroupArgs">DefaultSecurityGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2?tab=doc#DefaultSecurityGroup">DefaultSecurityGroup</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewDefaultSecurityGroup<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2?tab=doc#DefaultSecurityGroupArgs">DefaultSecurityGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2?tab=doc#DefaultSecurityGroup">DefaultSecurityGroup</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -215,7 +215,7 @@ they are at the time of removal. You can resume managing them via the AWS Consol
             title="Optional">
         <span>Egress</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#defaultsecuritygroupegress">List&lt;Default<wbr>Security<wbr>Group<wbr>Egress<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#defaultsecuritygroupegress">List&lt;Default<wbr>Security<wbr>Group<wbr>Egress<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Can be specified multiple times for each
 egress rule. Each egress block supports fields documented below.
@@ -225,7 +225,7 @@ egress rule. Each egress block supports fields documented below.
             title="Optional">
         <span>Ingress</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#defaultsecuritygroupingress">List&lt;Default<wbr>Security<wbr>Group<wbr>Ingress<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#defaultsecuritygroupingress">List&lt;Default<wbr>Security<wbr>Group<wbr>Ingress<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Can be specified multiple times for each
 ingress rule. Each ingress block supports fields documented below.
@@ -235,7 +235,7 @@ ingress rule. Each ingress block supports fields documented below.
             title="Optional">
         <span>Revoke<wbr>Rules<wbr>On<wbr>Delete</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -243,7 +243,7 @@ ingress rule. Each ingress block supports fields documented below.
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -252,7 +252,7 @@ ingress rule. Each ingress block supports fields documented below.
             title="Optional">
         <span>Vpc<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The VPC ID. **Note that changing
 the `vpc_id` will _not_ restore any default security group rules that were
@@ -290,7 +290,7 @@ ingress rule. Each ingress block supports fields documented below.
             title="Optional">
         <span>Revoke<wbr>Rules<wbr>On<wbr>Delete</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -307,7 +307,7 @@ ingress rule. Each ingress block supports fields documented below.
             title="Optional">
         <span>Vpc<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The VPC ID. **Note that changing
 the `vpc_id` will _not_ restore any default security group rules that were
@@ -325,7 +325,7 @@ modified, added, or removed.** It will be left in its current state
             title="Optional">
         <span>egress</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#defaultsecuritygroupegress">Default<wbr>Security<wbr>Group<wbr>Egress[]?</a></span>
+        <span class="property-type"><a href="#defaultsecuritygroupegress">Default<wbr>Security<wbr>Group<wbr>Egress[]</a></span>
     </dt>
     <dd>{{% md %}}Can be specified multiple times for each
 egress rule. Each egress block supports fields documented below.
@@ -335,7 +335,7 @@ egress rule. Each egress block supports fields documented below.
             title="Optional">
         <span>ingress</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#defaultsecuritygroupingress">Default<wbr>Security<wbr>Group<wbr>Ingress[]?</a></span>
+        <span class="property-type"><a href="#defaultsecuritygroupingress">Default<wbr>Security<wbr>Group<wbr>Ingress[]</a></span>
     </dt>
     <dd>{{% md %}}Can be specified multiple times for each
 ingress rule. Each ingress block supports fields documented below.
@@ -345,7 +345,7 @@ ingress rule. Each ingress block supports fields documented below.
             title="Optional">
         <span>revoke<wbr>Rules<wbr>On<wbr>Delete</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -353,7 +353,7 @@ ingress rule. Each ingress block supports fields documented below.
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -362,7 +362,7 @@ ingress rule. Each ingress block supports fields documented below.
             title="Optional">
         <span>vpc<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The VPC ID. **Note that changing
 the `vpc_id` will _not_ restore any default security group rules that were
@@ -462,26 +462,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Egress</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#defaultsecuritygroupegress">List&lt;Default<wbr>Security<wbr>Group<wbr>Egress&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}Can be specified multiple times for each
-egress rule. Each egress block supports fields documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Ingress</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#defaultsecuritygroupingress">List&lt;Default<wbr>Security<wbr>Group<wbr>Ingress&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}Can be specified multiple times for each
-ingress rule. Each ingress block supports fields documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -496,34 +476,6 @@ ingress rule. Each ingress block supports fields documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The owner ID.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Revoke<wbr>Rules<wbr>On<wbr>Delete</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Vpc<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The VPC ID. **Note that changing
-the `vpc_id` will _not_ restore any default security group rules that were
-modified, added, or removed.** It will be left in its current state
 {{% /md %}}</dd>
 
 </dl>
@@ -552,26 +504,6 @@ modified, added, or removed.** It will be left in its current state
 
     <dt class="property-"
             title="">
-        <span>Egress</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#defaultsecuritygroupegress">[]Default<wbr>Security<wbr>Group<wbr>Egress</a></span>
-    </dt>
-    <dd>{{% md %}}Can be specified multiple times for each
-egress rule. Each egress block supports fields documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Ingress</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#defaultsecuritygroupingress">[]Default<wbr>Security<wbr>Group<wbr>Ingress</a></span>
-    </dt>
-    <dd>{{% md %}}Can be specified multiple times for each
-ingress rule. Each ingress block supports fields documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -586,34 +518,6 @@ ingress rule. Each ingress block supports fields documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The owner ID.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Revoke<wbr>Rules<wbr>On<wbr>Delete</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Vpc<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The VPC ID. **Note that changing
-the `vpc_id` will _not_ restore any default security group rules that were
-modified, added, or removed.** It will be left in its current state
 {{% /md %}}</dd>
 
 </dl>
@@ -642,26 +546,6 @@ modified, added, or removed.** It will be left in its current state
 
     <dt class="property-"
             title="">
-        <span>egress</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#defaultsecuritygroupegress">Default<wbr>Security<wbr>Group<wbr>Egress[]?</a></span>
-    </dt>
-    <dd>{{% md %}}Can be specified multiple times for each
-egress rule. Each egress block supports fields documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>ingress</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#defaultsecuritygroupingress">Default<wbr>Security<wbr>Group<wbr>Ingress[]?</a></span>
-    </dt>
-    <dd>{{% md %}}Can be specified multiple times for each
-ingress rule. Each ingress block supports fields documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -676,34 +560,6 @@ ingress rule. Each ingress block supports fields documented below.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The owner ID.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>revoke<wbr>Rules<wbr>On<wbr>Delete</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>vpc<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The VPC ID. **Note that changing
-the `vpc_id` will _not_ restore any default security group rules that were
-modified, added, or removed.** It will be left in its current state
 {{% /md %}}</dd>
 
 </dl>
@@ -732,26 +588,6 @@ modified, added, or removed.** It will be left in its current state
 
     <dt class="property-"
             title="">
-        <span>egress</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#defaultsecuritygroupegress">List[Default<wbr>Security<wbr>Group<wbr>Egress]</a></span>
-    </dt>
-    <dd>{{% md %}}Can be specified multiple times for each
-egress rule. Each egress block supports fields documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>ingress</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#defaultsecuritygroupingress">List[Default<wbr>Security<wbr>Group<wbr>Ingress]</a></span>
-    </dt>
-    <dd>{{% md %}}Can be specified multiple times for each
-ingress rule. Each ingress block supports fields documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -766,34 +602,6 @@ ingress rule. Each ingress block supports fields documented below.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The owner ID.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>revoke_<wbr>rules_<wbr>on_<wbr>delete</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>vpc_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The VPC ID. **Note that changing
-the `vpc_id` will _not_ restore any default security group rules that were
-modified, added, or removed.** It will be left in its current state
 {{% /md %}}</dd>
 
 </dl>
@@ -935,7 +743,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -943,7 +751,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the security group
 {{% /md %}}</dd>
@@ -952,7 +760,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Egress</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#defaultsecuritygroupegress">List&lt;Default<wbr>Security<wbr>Group<wbr>Egress<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#defaultsecuritygroupegress">List&lt;Default<wbr>Security<wbr>Group<wbr>Egress<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Can be specified multiple times for each
 egress rule. Each egress block supports fields documented below.
@@ -962,7 +770,7 @@ egress rule. Each egress block supports fields documented below.
             title="Optional">
         <span>Ingress</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#defaultsecuritygroupingress">List&lt;Default<wbr>Security<wbr>Group<wbr>Ingress<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#defaultsecuritygroupingress">List&lt;Default<wbr>Security<wbr>Group<wbr>Ingress<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Can be specified multiple times for each
 ingress rule. Each ingress block supports fields documented below.
@@ -972,7 +780,7 @@ ingress rule. Each ingress block supports fields documented below.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the security group
 {{% /md %}}</dd>
@@ -981,7 +789,7 @@ ingress rule. Each ingress block supports fields documented below.
             title="Optional">
         <span>Owner<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The owner ID.
 {{% /md %}}</dd>
@@ -990,7 +798,7 @@ ingress rule. Each ingress block supports fields documented below.
             title="Optional">
         <span>Revoke<wbr>Rules<wbr>On<wbr>Delete</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -998,7 +806,7 @@ ingress rule. Each ingress block supports fields documented below.
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1007,7 +815,7 @@ ingress rule. Each ingress block supports fields documented below.
             title="Optional">
         <span>Vpc<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The VPC ID. **Note that changing
 the `vpc_id` will _not_ restore any default security group rules that were
@@ -1025,7 +833,7 @@ modified, added, or removed.** It will be left in its current state
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1033,7 +841,7 @@ modified, added, or removed.** It will be left in its current state
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the security group
 {{% /md %}}</dd>
@@ -1062,7 +870,7 @@ ingress rule. Each ingress block supports fields documented below.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the security group
 {{% /md %}}</dd>
@@ -1071,7 +879,7 @@ ingress rule. Each ingress block supports fields documented below.
             title="Optional">
         <span>Owner<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The owner ID.
 {{% /md %}}</dd>
@@ -1080,7 +888,7 @@ ingress rule. Each ingress block supports fields documented below.
             title="Optional">
         <span>Revoke<wbr>Rules<wbr>On<wbr>Delete</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1097,7 +905,7 @@ ingress rule. Each ingress block supports fields documented below.
             title="Optional">
         <span>Vpc<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The VPC ID. **Note that changing
 the `vpc_id` will _not_ restore any default security group rules that were
@@ -1115,7 +923,7 @@ modified, added, or removed.** It will be left in its current state
             title="Optional">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1123,7 +931,7 @@ modified, added, or removed.** It will be left in its current state
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the security group
 {{% /md %}}</dd>
@@ -1132,7 +940,7 @@ modified, added, or removed.** It will be left in its current state
             title="Optional">
         <span>egress</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#defaultsecuritygroupegress">Default<wbr>Security<wbr>Group<wbr>Egress[]?</a></span>
+        <span class="property-type"><a href="#defaultsecuritygroupegress">Default<wbr>Security<wbr>Group<wbr>Egress[]</a></span>
     </dt>
     <dd>{{% md %}}Can be specified multiple times for each
 egress rule. Each egress block supports fields documented below.
@@ -1142,7 +950,7 @@ egress rule. Each egress block supports fields documented below.
             title="Optional">
         <span>ingress</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#defaultsecuritygroupingress">Default<wbr>Security<wbr>Group<wbr>Ingress[]?</a></span>
+        <span class="property-type"><a href="#defaultsecuritygroupingress">Default<wbr>Security<wbr>Group<wbr>Ingress[]</a></span>
     </dt>
     <dd>{{% md %}}Can be specified multiple times for each
 ingress rule. Each ingress block supports fields documented below.
@@ -1152,7 +960,7 @@ ingress rule. Each ingress block supports fields documented below.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the security group
 {{% /md %}}</dd>
@@ -1161,7 +969,7 @@ ingress rule. Each ingress block supports fields documented below.
             title="Optional">
         <span>owner<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The owner ID.
 {{% /md %}}</dd>
@@ -1170,7 +978,7 @@ ingress rule. Each ingress block supports fields documented below.
             title="Optional">
         <span>revoke<wbr>Rules<wbr>On<wbr>Delete</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1178,7 +986,7 @@ ingress rule. Each ingress block supports fields documented below.
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1187,7 +995,7 @@ ingress rule. Each ingress block supports fields documented below.
             title="Optional">
         <span>vpc<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The VPC ID. **Note that changing
 the `vpc_id` will _not_ restore any default security group rules that were
@@ -1313,44 +1121,11 @@ modified, added, or removed.** It will be left in its current state
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Cidr<wbr>Blocks</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The description of the security group
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>From<wbr>Port</span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Ipv6Cidr<wbr>Blocks</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Prefix<wbr>List<wbr>Ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1362,11 +1137,52 @@ modified, added, or removed.** It will be left in its current state
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>To<wbr>Port</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Cidr<wbr>Blocks</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The description of the security group
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Ipv6Cidr<wbr>Blocks</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Prefix<wbr>List<wbr>Ids</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Security<wbr>Groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1374,15 +1190,7 @@ modified, added, or removed.** It will be left in its current state
             title="Optional">
         <span>Self</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>To<wbr>Port</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1393,6 +1201,30 @@ modified, added, or removed.** It will be left in its current state
 {{% choosable language go %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>From<wbr>Port</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Protocol</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>To<wbr>Port</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Cidr<wbr>Blocks</span>
@@ -1405,18 +1237,10 @@ modified, added, or removed.** It will be left in its current state
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the security group
 {{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>From<wbr>Port</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1434,14 +1258,6 @@ modified, added, or removed.** It will be left in its current state
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>Protocol</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>Security<wbr>Groups</span>
@@ -1454,15 +1270,7 @@ modified, added, or removed.** It will be left in its current state
             title="Optional">
         <span>Self</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>To<wbr>Port</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1473,44 +1281,11 @@ modified, added, or removed.** It will be left in its current state
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>cidr<wbr>Blocks</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The description of the security group
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>from<wbr>Port</span>
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>ipv6Cidr<wbr>Blocks</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>prefix<wbr>List<wbr>Ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1522,11 +1297,52 @@ modified, added, or removed.** It will be left in its current state
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>to<wbr>Port</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>cidr<wbr>Blocks</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The description of the security group
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>ipv6Cidr<wbr>Blocks</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>prefix<wbr>List<wbr>Ids</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>security<wbr>Groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1534,15 +1350,7 @@ modified, added, or removed.** It will be left in its current state
             title="Optional">
         <span>self</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>to<wbr>Port</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1552,6 +1360,30 @@ modified, added, or removed.** It will be left in its current state
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>from_<wbr>port</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>protocol</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>to_<wbr>port</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1570,14 +1402,6 @@ modified, added, or removed.** It will be left in its current state
     <dd>{{% md %}}The description of the security group
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>from_<wbr>port</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>ipv6_<wbr>cidr_<wbr>blocks</span>
@@ -1594,14 +1418,6 @@ modified, added, or removed.** It will be left in its current state
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>protocol</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>security_<wbr>groups</span>
@@ -1615,14 +1431,6 @@ modified, added, or removed.** It will be left in its current state
         <span>self</span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>to_<wbr>port</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1648,44 +1456,11 @@ modified, added, or removed.** It will be left in its current state
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Cidr<wbr>Blocks</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The description of the security group
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>From<wbr>Port</span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Ipv6Cidr<wbr>Blocks</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Prefix<wbr>List<wbr>Ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1697,11 +1472,52 @@ modified, added, or removed.** It will be left in its current state
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>To<wbr>Port</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Cidr<wbr>Blocks</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The description of the security group
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Ipv6Cidr<wbr>Blocks</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Prefix<wbr>List<wbr>Ids</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Security<wbr>Groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1709,15 +1525,7 @@ modified, added, or removed.** It will be left in its current state
             title="Optional">
         <span>Self</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>To<wbr>Port</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1728,6 +1536,30 @@ modified, added, or removed.** It will be left in its current state
 {{% choosable language go %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>From<wbr>Port</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Protocol</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>To<wbr>Port</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Cidr<wbr>Blocks</span>
@@ -1740,18 +1572,10 @@ modified, added, or removed.** It will be left in its current state
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the security group
 {{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>From<wbr>Port</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1769,14 +1593,6 @@ modified, added, or removed.** It will be left in its current state
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>Protocol</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>Security<wbr>Groups</span>
@@ -1789,15 +1605,7 @@ modified, added, or removed.** It will be left in its current state
             title="Optional">
         <span>Self</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>To<wbr>Port</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1808,44 +1616,11 @@ modified, added, or removed.** It will be left in its current state
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>cidr<wbr>Blocks</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The description of the security group
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>from<wbr>Port</span>
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>ipv6Cidr<wbr>Blocks</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>prefix<wbr>List<wbr>Ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1857,11 +1632,52 @@ modified, added, or removed.** It will be left in its current state
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>to<wbr>Port</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>cidr<wbr>Blocks</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The description of the security group
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>ipv6Cidr<wbr>Blocks</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>prefix<wbr>List<wbr>Ids</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>security<wbr>Groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1869,15 +1685,7 @@ modified, added, or removed.** It will be left in its current state
             title="Optional">
         <span>self</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>to<wbr>Port</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1887,6 +1695,30 @@ modified, added, or removed.** It will be left in its current state
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>from_<wbr>port</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>protocol</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>to_<wbr>port</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1905,14 +1737,6 @@ modified, added, or removed.** It will be left in its current state
     <dd>{{% md %}}The description of the security group
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>from_<wbr>port</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>ipv6_<wbr>cidr_<wbr>blocks</span>
@@ -1929,14 +1753,6 @@ modified, added, or removed.** It will be left in its current state
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>protocol</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>security_<wbr>groups</span>
@@ -1950,14 +1766,6 @@ modified, added, or removed.** It will be left in its current state
         <span>self</span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>to_<wbr>port</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

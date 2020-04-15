@@ -36,7 +36,7 @@ source, which provides a detailed response about a specific Consul service.
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupServices<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-consul/sdk/go/consul/?tab=doc#GetServicesArgs">GetServicesArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-consul/sdk/go/consul/?tab=doc#LookupServicesResult">LookupServicesResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupServices<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-consul/sdk/go/consul/?tab=doc#GetServicesArgs">GetServicesArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-consul/sdk/go/consul/?tab=doc#LookupServicesResult">LookupServicesResult</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -59,7 +59,7 @@ The following arguments are supported:
             title="Optional">
         <span>Query<wbr>Options</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicesqueryoption">List&lt;Get<wbr>Services<wbr>Query<wbr>Option<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#getservicesqueryoption">List&lt;Get<wbr>Services<wbr>Query<wbr>Option<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}See below.
 {{% /md %}}</dd>
@@ -91,7 +91,7 @@ The following arguments are supported:
             title="Optional">
         <span>query<wbr>Options</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicesqueryoption">Get<wbr>Services<wbr>Query<wbr>Option[]?</a></span>
+        <span class="property-type"><a href="#getservicesqueryoption">Get<wbr>Services<wbr>Query<wbr>Option[]</a></span>
     </dt>
     <dd>{{% md %}}See below.
 {{% /md %}}</dd>
@@ -154,15 +154,7 @@ The following output properties are available:
             title="">
         <span>Names</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Query<wbr>Options</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicesqueryoption">List&lt;Get<wbr>Services<wbr>Query<wbr>Option&gt;?</a></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -170,7 +162,15 @@ The following output properties are available:
             title="">
         <span>Services</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Query<wbr>Options</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getservicesqueryoption">List&lt;Get<wbr>Services<wbr>Query<wbr>Option&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -209,17 +209,17 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Query<wbr>Options</span>
+        <span>Services</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicesqueryoption">[]Get<wbr>Services<wbr>Query<wbr>Option</a></span>
+        <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>Services</span>
+        <span>Query<wbr>Options</span>
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]string</span>
+        <span class="property-type"><a href="#getservicesqueryoption">[]Get<wbr>Services<wbr>Query<wbr>Option</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -258,17 +258,17 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>query<wbr>Options</span>
+        <span>services</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicesqueryoption">Get<wbr>Services<wbr>Query<wbr>Option[]?</a></span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>services</span>
+        <span>query<wbr>Options</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type"><a href="#getservicesqueryoption">Get<wbr>Services<wbr>Query<wbr>Option[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -307,17 +307,17 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>query_<wbr>options</span>
+        <span>services</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicesqueryoption">List[Get<wbr>Services<wbr>Query<wbr>Option]</a></span>
+        <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>services</span>
+        <span>query_<wbr>options</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
+        <span class="property-type"><a href="#getservicesqueryoption">List[Get<wbr>Services<wbr>Query<wbr>Option]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -352,7 +352,7 @@ The following output properties are available:
             title="Optional">
         <span>Allow<wbr>Stale</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, the default, allow responses from
 Consul servers that are followers.
@@ -362,7 +362,7 @@ Consul servers that are followers.
             title="Optional">
         <span>Datacenter</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Consul datacenter to query.  Defaults to the
 same value found in `query_options` parameter specified below, or if that is
@@ -374,7 +374,7 @@ configured to talk to.
             title="Optional">
         <span>Namespace</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The namespace to lookup the services.
 {{% /md %}}</dd>
@@ -383,7 +383,7 @@ configured to talk to.
             title="Optional">
         <span>Near</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -391,7 +391,7 @@ configured to talk to.
             title="Optional">
         <span>Node<wbr>Meta</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string>?</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -399,7 +399,7 @@ configured to talk to.
             title="Optional">
         <span>Require<wbr>Consistent</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true` force the client to perform a
 read on at least quorum servers and verify the result is the same.  Defaults
@@ -410,7 +410,7 @@ to `false`.
             title="Optional">
         <span>Token</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify the Consul ACL token to use when performing the
 request.  This defaults to the same API token configured by the `consul`
@@ -421,7 +421,7 @@ provider but may be overriden if necessary.
             title="Optional">
         <span>Wait<wbr>Index</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Index number used to enable blocking quereis.
 {{% /md %}}</dd>
@@ -430,7 +430,7 @@ provider but may be overriden if necessary.
             title="Optional">
         <span>Wait<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Max time the client should wait for a blocking query
 to return.
@@ -447,7 +447,7 @@ to return.
             title="Optional">
         <span>Allow<wbr>Stale</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true`, the default, allow responses from
 Consul servers that are followers.
@@ -457,7 +457,7 @@ Consul servers that are followers.
             title="Optional">
         <span>Datacenter</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Consul datacenter to query.  Defaults to the
 same value found in `query_options` parameter specified below, or if that is
@@ -469,7 +469,7 @@ configured to talk to.
             title="Optional">
         <span>Namespace</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The namespace to lookup the services.
 {{% /md %}}</dd>
@@ -478,7 +478,7 @@ configured to talk to.
             title="Optional">
         <span>Near</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -494,7 +494,7 @@ configured to talk to.
             title="Optional">
         <span>Require<wbr>Consistent</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When `true` force the client to perform a
 read on at least quorum servers and verify the result is the same.  Defaults
@@ -505,7 +505,7 @@ to `false`.
             title="Optional">
         <span>Token</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify the Consul ACL token to use when performing the
 request.  This defaults to the same API token configured by the `consul`
@@ -516,7 +516,7 @@ provider but may be overriden if necessary.
             title="Optional">
         <span>Wait<wbr>Index</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Index number used to enable blocking quereis.
 {{% /md %}}</dd>
@@ -525,7 +525,7 @@ provider but may be overriden if necessary.
             title="Optional">
         <span>Wait<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Max time the client should wait for a blocking query
 to return.
@@ -542,7 +542,7 @@ to return.
             title="Optional">
         <span>allow<wbr>Stale</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When `true`, the default, allow responses from
 Consul servers that are followers.
@@ -552,7 +552,7 @@ Consul servers that are followers.
             title="Optional">
         <span>datacenter</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Consul datacenter to query.  Defaults to the
 same value found in `query_options` parameter specified below, or if that is
@@ -564,7 +564,7 @@ configured to talk to.
             title="Optional">
         <span>namespace</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The namespace to lookup the services.
 {{% /md %}}</dd>
@@ -573,7 +573,7 @@ configured to talk to.
             title="Optional">
         <span>near</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -581,7 +581,7 @@ configured to talk to.
             title="Optional">
         <span>node<wbr>Meta</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}?</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -589,7 +589,7 @@ configured to talk to.
             title="Optional">
         <span>require<wbr>Consistent</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When `true` force the client to perform a
 read on at least quorum servers and verify the result is the same.  Defaults
@@ -600,7 +600,7 @@ to `false`.
             title="Optional">
         <span>token</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify the Consul ACL token to use when performing the
 request.  This defaults to the same API token configured by the `consul`
@@ -611,7 +611,7 @@ provider but may be overriden if necessary.
             title="Optional">
         <span>wait<wbr>Index</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Index number used to enable blocking quereis.
 {{% /md %}}</dd>
@@ -620,7 +620,7 @@ provider but may be overriden if necessary.
             title="Optional">
         <span>wait<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Max time the client should wait for a blocking query
 to return.

@@ -36,7 +36,7 @@ updated, you should expect different results in a frequent basis.
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupServiceHealth<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-consul/sdk/go/consul/?tab=doc#GetServiceHealthArgs">GetServiceHealthArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-consul/sdk/go/consul/?tab=doc#LookupServiceHealthResult">LookupServiceHealthResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupServiceHealth<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-consul/sdk/go/consul/?tab=doc#GetServiceHealthArgs">GetServiceHealthArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-consul/sdk/go/consul/?tab=doc#LookupServiceHealthResult">LookupServiceHealthResult</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -55,15 +55,6 @@ The following arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Datacenter</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The Consul datacenter to query.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Name</span>
@@ -75,9 +66,18 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>Datacenter</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Consul datacenter to query.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Near</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a node name to sort the node list in ascending order
 based on the estimated round trip time from that node.
@@ -87,7 +87,7 @@ based on the estimated round trip time from that node.
             title="Optional">
         <span>Node<wbr>Meta</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string>?</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Filter the results to nodes with the specified key/value
 pairs.
@@ -97,7 +97,7 @@ pairs.
             title="Optional">
         <span>Passing</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to return only nodes with all checks in the
 passing state. Defaults to `true`.
@@ -107,7 +107,7 @@ passing state. Defaults to `true`.
             title="Optional">
         <span>Tag</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A single tag that can be used to filter the list to return
 based on a single matching tag.
@@ -117,7 +117,7 @@ based on a single matching tag.
             title="Optional">
         <span>Wait<wbr>For</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -128,15 +128,6 @@ based on a single matching tag.
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Datacenter</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The Consul datacenter to query.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Name</span>
@@ -148,9 +139,18 @@ based on a single matching tag.
 
     <dt class="property-optional"
             title="Optional">
+        <span>Datacenter</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Consul datacenter to query.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Near</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a node name to sort the node list in ascending order
 based on the estimated round trip time from that node.
@@ -170,7 +170,7 @@ pairs.
             title="Optional">
         <span>Passing</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to return only nodes with all checks in the
 passing state. Defaults to `true`.
@@ -180,7 +180,7 @@ passing state. Defaults to `true`.
             title="Optional">
         <span>Tag</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A single tag that can be used to filter the list to return
 based on a single matching tag.
@@ -190,7 +190,7 @@ based on a single matching tag.
             title="Optional">
         <span>Wait<wbr>For</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -200,15 +200,6 @@ based on a single matching tag.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>datacenter</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The Consul datacenter to query.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -221,9 +212,18 @@ based on a single matching tag.
 
     <dt class="property-optional"
             title="Optional">
+        <span>datacenter</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Consul datacenter to query.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>near</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies a node name to sort the node list in ascending order
 based on the estimated round trip time from that node.
@@ -233,7 +233,7 @@ based on the estimated round trip time from that node.
             title="Optional">
         <span>node<wbr>Meta</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}?</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Filter the results to nodes with the specified key/value
 pairs.
@@ -243,7 +243,7 @@ pairs.
             title="Optional">
         <span>passing</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to return only nodes with all checks in the
 passing state. Defaults to `true`.
@@ -253,7 +253,7 @@ passing state. Defaults to `true`.
             title="Optional">
         <span>tag</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A single tag that can be used to filter the list to return
 based on a single matching tag.
@@ -263,7 +263,7 @@ based on a single matching tag.
             title="Optional">
         <span>wait<wbr>For</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -274,15 +274,6 @@ based on a single matching tag.
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>datacenter</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The Consul datacenter to query.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>name</span>
@@ -290,6 +281,15 @@ based on a single matching tag.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The service name to select.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>datacenter</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Consul datacenter to query.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -362,17 +362,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Datacenter</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The datacenter in which the node is running.
-* [`tagged_addresses`](https://www.consul.io/docs/agent/http/catalog.html#TaggedAddresses) -
-List of explicit LAN and WAN IP addresses for the agent.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -387,34 +376,6 @@ List of explicit LAN and WAN IP addresses for the agent.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of this health-check.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Near</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The node to which the result must be sorted to.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Node<wbr>Meta</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string>?</span>
-    </dt>
-    <dd>{{% md %}}The list of metadata to filter the nodes.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Passing</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Whether to return only nodes with all checks in the
-passing state.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -430,9 +391,48 @@ service.  Each element in the list has three attributes: `node`, `service` and
 
     <dt class="property-"
             title="">
+        <span>Datacenter</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The datacenter in which the node is running.
+* [`tagged_addresses`](https://www.consul.io/docs/agent/http/catalog.html#TaggedAddresses) -
+List of explicit LAN and WAN IP addresses for the agent.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Near</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The node to which the result must be sorted to.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Node<wbr>Meta</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The list of metadata to filter the nodes.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Passing</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to return only nodes with all checks in the
+passing state.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Tag</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the tag used to filter the list.
 {{% /md %}}</dd>
@@ -441,7 +441,7 @@ service.  Each element in the list has three attributes: `node`, `service` and
             title="">
         <span>Wait<wbr>For</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -451,17 +451,6 @@ service.  Each element in the list has three attributes: `node`, `service` and
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Datacenter</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The datacenter in which the node is running.
-* [`tagged_addresses`](https://www.consul.io/docs/agent/http/catalog.html#TaggedAddresses) -
-List of explicit LAN and WAN IP addresses for the agent.
-{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -483,9 +472,31 @@ List of explicit LAN and WAN IP addresses for the agent.
 
     <dt class="property-"
             title="">
+        <span>Results</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getservicehealthresult">[]Get<wbr>Service<wbr>Health<wbr>Result<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}A list of entries and details about each endpoint advertising a
+service.  Each element in the list has three attributes: `node`, `service` and
+`checks`.  The list of the attributes of each one is detailed below.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Datacenter</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The datacenter in which the node is running.
+* [`tagged_addresses`](https://www.consul.io/docs/agent/http/catalog.html#TaggedAddresses) -
+List of explicit LAN and WAN IP addresses for the agent.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Near</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The node to which the result must be sorted to.
 {{% /md %}}</dd>
@@ -503,7 +514,7 @@ List of explicit LAN and WAN IP addresses for the agent.
             title="">
         <span>Passing</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to return only nodes with all checks in the
 passing state.
@@ -511,20 +522,9 @@ passing state.
 
     <dt class="property-"
             title="">
-        <span>Results</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicehealthresult">[]Get<wbr>Service<wbr>Health<wbr>Result<wbr>Type</a></span>
-    </dt>
-    <dd>{{% md %}}A list of entries and details about each endpoint advertising a
-service.  Each element in the list has three attributes: `node`, `service` and
-`checks`.  The list of the attributes of each one is detailed below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Tag</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the tag used to filter the list.
 {{% /md %}}</dd>
@@ -533,7 +533,7 @@ service.  Each element in the list has three attributes: `node`, `service` and
             title="">
         <span>Wait<wbr>For</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -543,17 +543,6 @@ service.  Each element in the list has three attributes: `node`, `service` and
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>datacenter</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The datacenter in which the node is running.
-* [`tagged_addresses`](https://www.consul.io/docs/agent/http/catalog.html#TaggedAddresses) -
-List of explicit LAN and WAN IP addresses for the agent.
-{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -571,34 +560,6 @@ List of explicit LAN and WAN IP addresses for the agent.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of this health-check.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>near</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The node to which the result must be sorted to.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>node<wbr>Meta</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}?</span>
-    </dt>
-    <dd>{{% md %}}The list of metadata to filter the nodes.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>passing</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Whether to return only nodes with all checks in the
-passing state.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -614,9 +575,48 @@ service.  Each element in the list has three attributes: `node`, `service` and
 
     <dt class="property-"
             title="">
+        <span>datacenter</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The datacenter in which the node is running.
+* [`tagged_addresses`](https://www.consul.io/docs/agent/http/catalog.html#TaggedAddresses) -
+List of explicit LAN and WAN IP addresses for the agent.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>near</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The node to which the result must be sorted to.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>node<wbr>Meta</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}The list of metadata to filter the nodes.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>passing</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether to return only nodes with all checks in the
+passing state.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>tag</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the tag used to filter the list.
 {{% /md %}}</dd>
@@ -625,7 +625,7 @@ service.  Each element in the list has three attributes: `node`, `service` and
             title="">
         <span>wait<wbr>For</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -635,17 +635,6 @@ service.  Each element in the list has three attributes: `node`, `service` and
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>datacenter</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The datacenter in which the node is running.
-* [`tagged_addresses`](https://www.consul.io/docs/agent/http/catalog.html#TaggedAddresses) -
-List of explicit LAN and WAN IP addresses for the agent.
-{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -663,6 +652,28 @@ List of explicit LAN and WAN IP addresses for the agent.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of this health-check.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>results</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getservicehealthresult">List[Get<wbr>Service<wbr>Health<wbr>Result]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of entries and details about each endpoint advertising a
+service.  Each element in the list has three attributes: `node`, `service` and
+`checks`.  The list of the attributes of each one is detailed below.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>datacenter</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The datacenter in which the node is running.
+* [`tagged_addresses`](https://www.consul.io/docs/agent/http/catalog.html#TaggedAddresses) -
+List of explicit LAN and WAN IP addresses for the agent.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -691,17 +702,6 @@ List of explicit LAN and WAN IP addresses for the agent.
     </dt>
     <dd>{{% md %}}Whether to return only nodes with all checks in the
 passing state.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>results</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getservicehealthresult">List[Get<wbr>Service<wbr>Health<wbr>Result]</a></span>
-    </dt>
-    <dd>{{% md %}}A list of entries and details about each endpoint advertising a
-service.  Each element in the list has three attributes: `node`, `service` and
-`checks`.  The list of the attributes of each one is detailed below.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -958,7 +958,7 @@ service.  Each element in the list has three attributes: `node`, `service` and
             title="Required">
         <span>Service<wbr>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The list of tags associated with this health-check.
 {{% /md %}}</dd>
@@ -1289,7 +1289,7 @@ service.  Each element in the list has three attributes: `node`, `service` and
             title="Required">
         <span>Meta</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Service metadata tag information, if any.
 {{% /md %}}</dd>
@@ -1307,7 +1307,7 @@ service.  Each element in the list has three attributes: `node`, `service` and
             title="Required">
         <span>Tagged<wbr>Addresses</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1535,7 +1535,7 @@ service.  Each element in the list has three attributes: `node`, `service` and
             title="Required">
         <span>Meta</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Service metadata tag information, if any.
 {{% /md %}}</dd>
@@ -1562,7 +1562,7 @@ service.  Each element in the list has three attributes: `node`, `service` and
             title="Required">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The list of tags associated with this instance.
 {{% /md %}}</dd>

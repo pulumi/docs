@@ -112,13 +112,13 @@ The following arguments are supported:
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupNetworkInterfaces<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/ecs?tab=doc#LookupNetworkInterfacesArgs">LookupNetworkInterfacesArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/ecs?tab=doc#LookupNetworkInterfacesResult">LookupNetworkInterfacesResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupNetworkInterfaces<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/ecs?tab=doc#LookupNetworkInterfacesArgs">LookupNetworkInterfacesArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/ecs?tab=doc#LookupNetworkInterfacesResult">LookupNetworkInterfacesResult</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetNetworkInterfaces </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.Ecs.GetNetworkInterfacesResult.html">GetNetworkInterfacesResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.Ecs.GetNetworkInterfacesArgs.html">GetNetworkInterfacesArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.Ecs.GetNetworkInterfacesResult.html">GetNetworkInterfacesResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.AliCloud.Ecs.GetNetworkInterfacesArgs.html">GetNetworkInterfacesArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -135,7 +135,7 @@ The following arguments are supported:
             title="Optional">
         <span>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -143,7 +143,7 @@ The following arguments are supported:
             title="Optional">
         <span>Instance<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the instance that the ENI is attached to.
 {{% /md %}}</dd>
@@ -152,7 +152,7 @@ The following arguments are supported:
             title="Optional">
         <span>Name<wbr>Regex</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -160,7 +160,7 @@ The following arguments are supported:
             title="Optional">
         <span>Output<wbr>File</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -168,7 +168,7 @@ The following arguments are supported:
             title="Optional">
         <span>Private<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Primary private IP of the ENI.
 {{% /md %}}</dd>
@@ -177,7 +177,7 @@ The following arguments are supported:
             title="Optional">
         <span>Resource<wbr>Group<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Id of resource group.
 {{% /md %}}</dd>
@@ -186,7 +186,7 @@ The following arguments are supported:
             title="Optional">
         <span>Security<wbr>Group<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -194,7 +194,7 @@ The following arguments are supported:
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags assigned to the ENI.
 {{% /md %}}</dd>
@@ -203,7 +203,7 @@ The following arguments are supported:
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -211,7 +211,7 @@ The following arguments are supported:
             title="Optional">
         <span>Vpc<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the VPC that the ENI belongs to.
 {{% /md %}}</dd>
@@ -220,7 +220,7 @@ The following arguments are supported:
             title="Optional">
         <span>Vswitch<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the VSwitch that the ENI is linked to.
 {{% /md %}}</dd>
@@ -244,7 +244,7 @@ The following arguments are supported:
             title="Optional">
         <span>Instance<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the instance that the ENI is attached to.
 {{% /md %}}</dd>
@@ -253,7 +253,7 @@ The following arguments are supported:
             title="Optional">
         <span>Name<wbr>Regex</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -261,7 +261,7 @@ The following arguments are supported:
             title="Optional">
         <span>Output<wbr>File</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -269,7 +269,7 @@ The following arguments are supported:
             title="Optional">
         <span>Private<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Primary private IP of the ENI.
 {{% /md %}}</dd>
@@ -278,7 +278,7 @@ The following arguments are supported:
             title="Optional">
         <span>Resource<wbr>Group<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Id of resource group.
 {{% /md %}}</dd>
@@ -287,7 +287,7 @@ The following arguments are supported:
             title="Optional">
         <span>Security<wbr>Group<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -304,7 +304,7 @@ The following arguments are supported:
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -312,7 +312,7 @@ The following arguments are supported:
             title="Optional">
         <span>Vpc<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the VPC that the ENI belongs to.
 {{% /md %}}</dd>
@@ -321,7 +321,7 @@ The following arguments are supported:
             title="Optional">
         <span>Vswitch<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the VSwitch that the ENI is linked to.
 {{% /md %}}</dd>
@@ -337,7 +337,7 @@ The following arguments are supported:
             title="Optional">
         <span>ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -345,7 +345,7 @@ The following arguments are supported:
             title="Optional">
         <span>instance<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the instance that the ENI is attached to.
 {{% /md %}}</dd>
@@ -354,7 +354,7 @@ The following arguments are supported:
             title="Optional">
         <span>name<wbr>Regex</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -362,7 +362,7 @@ The following arguments are supported:
             title="Optional">
         <span>output<wbr>File</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -370,7 +370,7 @@ The following arguments are supported:
             title="Optional">
         <span>private<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Primary private IP of the ENI.
 {{% /md %}}</dd>
@@ -379,7 +379,7 @@ The following arguments are supported:
             title="Optional">
         <span>resource<wbr>Group<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Id of resource group.
 {{% /md %}}</dd>
@@ -388,7 +388,7 @@ The following arguments are supported:
             title="Optional">
         <span>security<wbr>Group<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -396,7 +396,7 @@ The following arguments are supported:
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A map of tags assigned to the ENI.
 {{% /md %}}</dd>
@@ -405,7 +405,7 @@ The following arguments are supported:
             title="Optional">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -413,7 +413,7 @@ The following arguments are supported:
             title="Optional">
         <span>vpc<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the VPC that the ENI belongs to.
 {{% /md %}}</dd>
@@ -422,7 +422,7 @@ The following arguments are supported:
             title="Optional">
         <span>vswitch<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the VSwitch that the ENI is linked to.
 {{% /md %}}</dd>
@@ -561,7 +561,24 @@ The following output properties are available:
             title="">
         <span>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Interfaces</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getnetworkinterfacesinterface">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Ecs.<wbr>Outputs.<wbr>Get<wbr>Network<wbr>Interfaces<wbr>Interface&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A list of ENIs. Each element contains the following attributes:
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Names</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -569,33 +586,16 @@ The following output properties are available:
             title="">
         <span>Instance<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the instance that the ENI is attached to.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>Interfaces</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getnetworkinterfacesinterface">List&lt;Get<wbr>Network<wbr>Interfaces<wbr>Interface&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}A list of ENIs. Each element contains the following attributes:
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Name<wbr>Regex</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Names</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -603,7 +603,7 @@ The following output properties are available:
             title="">
         <span>Output<wbr>File</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -611,7 +611,7 @@ The following output properties are available:
             title="">
         <span>Private<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Primary private IP of the ENI.
 {{% /md %}}</dd>
@@ -620,7 +620,7 @@ The following output properties are available:
             title="">
         <span>Resource<wbr>Group<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Id of resource group.
 {{% /md %}}</dd>
@@ -629,7 +629,7 @@ The following output properties are available:
             title="">
         <span>Security<wbr>Group<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -637,7 +637,7 @@ The following output properties are available:
             title="">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags assigned to the ENI.
 {{% /md %}}</dd>
@@ -646,7 +646,7 @@ The following output properties are available:
             title="">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -654,7 +654,7 @@ The following output properties are available:
             title="">
         <span>Vpc<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the VPC that the ENI belongs to.
 {{% /md %}}</dd>
@@ -663,7 +663,7 @@ The following output properties are available:
             title="">
         <span>Vswitch<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the VSwitch that the ENI is linked to.
 {{% /md %}}</dd>
@@ -694,29 +694,12 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Instance<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}ID of the instance that the ENI is attached to.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Interfaces</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getnetworkinterfacesinterface">[]Get<wbr>Network<wbr>Interfaces<wbr>Interface</a></span>
     </dt>
     <dd>{{% md %}}A list of ENIs. Each element contains the following attributes:
 {{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name<wbr>Regex</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -728,9 +711,26 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>Instance<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ID of the instance that the ENI is attached to.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Name<wbr>Regex</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Output<wbr>File</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -738,7 +738,7 @@ The following output properties are available:
             title="">
         <span>Private<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Primary private IP of the ENI.
 {{% /md %}}</dd>
@@ -747,7 +747,7 @@ The following output properties are available:
             title="">
         <span>Resource<wbr>Group<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Id of resource group.
 {{% /md %}}</dd>
@@ -756,7 +756,7 @@ The following output properties are available:
             title="">
         <span>Security<wbr>Group<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -773,7 +773,7 @@ The following output properties are available:
             title="">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -781,7 +781,7 @@ The following output properties are available:
             title="">
         <span>Vpc<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the VPC that the ENI belongs to.
 {{% /md %}}</dd>
@@ -790,7 +790,7 @@ The following output properties are available:
             title="">
         <span>Vswitch<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the VSwitch that the ENI is linked to.
 {{% /md %}}</dd>
@@ -821,29 +821,12 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>instance<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}ID of the instance that the ENI is attached to.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>interfaces</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getnetworkinterfacesinterface">Get<wbr>Network<wbr>Interfaces<wbr>Interface[]</a></span>
     </dt>
     <dd>{{% md %}}A list of ENIs. Each element contains the following attributes:
 {{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name<wbr>Regex</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -855,9 +838,26 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>instance<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ID of the instance that the ENI is attached to.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>name<wbr>Regex</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>output<wbr>File</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -865,7 +865,7 @@ The following output properties are available:
             title="">
         <span>private<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Primary private IP of the ENI.
 {{% /md %}}</dd>
@@ -874,7 +874,7 @@ The following output properties are available:
             title="">
         <span>resource<wbr>Group<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Id of resource group.
 {{% /md %}}</dd>
@@ -883,7 +883,7 @@ The following output properties are available:
             title="">
         <span>security<wbr>Group<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -891,7 +891,7 @@ The following output properties are available:
             title="">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A map of tags assigned to the ENI.
 {{% /md %}}</dd>
@@ -900,7 +900,7 @@ The following output properties are available:
             title="">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -908,7 +908,7 @@ The following output properties are available:
             title="">
         <span>vpc<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the VPC that the ENI belongs to.
 {{% /md %}}</dd>
@@ -917,7 +917,7 @@ The following output properties are available:
             title="">
         <span>vswitch<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the VSwitch that the ENI is linked to.
 {{% /md %}}</dd>
@@ -948,15 +948,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>instance_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}ID of the instance that the ENI is attached to.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>interfaces</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getnetworkinterfacesinterface">List[Get<wbr>Network<wbr>Interfaces<wbr>Interface]</a></span>
@@ -966,17 +957,26 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>name_<wbr>regex</span>
+        <span>names</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">List[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>names</span>
+        <span>instance_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}ID of the instance that the ENI is attached to.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>name_<wbr>regex</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1143,7 +1143,7 @@ The following output properties are available:
             title="Required">
         <span>Private<wbr>Ips</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of secondary private IP address that is assigned to the ENI.
 {{% /md %}}</dd>
@@ -1170,7 +1170,7 @@ The following output properties are available:
             title="Required">
         <span>Security<wbr>Groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of security group that the ENI belongs to.
 {{% /md %}}</dd>
@@ -1182,15 +1182,6 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Current status of the ENI.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
-    </dt>
-    <dd>{{% md %}}A map of tags assigned to the ENI.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1218,6 +1209,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the availability zone that the ENI belongs to.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+    </dt>
+    <dd>{{% md %}}A map of tags assigned to the ENI.
 {{% /md %}}</dd>
 
 </dl>
@@ -1335,15 +1335,6 @@ The following output properties are available:
     <dd>{{% md %}}Current status of the ENI.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
-    </dt>
-    <dd>{{% md %}}A map of tags assigned to the ENI.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Vpc<wbr>Id</span>
@@ -1369,6 +1360,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the availability zone that the ENI belongs to.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}A map of tags assigned to the ENI.
 {{% /md %}}</dd>
 
 </dl>
@@ -1486,15 +1486,6 @@ The following output properties are available:
     <dd>{{% md %}}Current status of the ENI.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
-    </dt>
-    <dd>{{% md %}}A map of tags assigned to the ENI.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>vpc<wbr>Id</span>
@@ -1520,6 +1511,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the availability zone that the ENI belongs to.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}</span>
+    </dt>
+    <dd>{{% md %}}A map of tags assigned to the ENI.
 {{% /md %}}</dd>
 
 </dl>
@@ -1637,15 +1637,6 @@ The following output properties are available:
     <dd>{{% md %}}Current status of the ENI.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
-    </dt>
-    <dd>{{% md %}}A map of tags assigned to the ENI.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>vpc_<wbr>id</span>
@@ -1671,6 +1662,15 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ID of the availability zone that the ENI belongs to.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}A map of tags assigned to the ENI.
 {{% /md %}}</dd>
 
 </dl>

@@ -39,7 +39,7 @@ const channel = new aws.pinpoint.BaiduChannel("channel", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/pinpoint/#BaiduChannel">BaiduChannel</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/pinpoint/#BaiduChannelArgs">BaiduChannelArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/pinpoint/#BaiduChannel">BaiduChannel</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/pinpoint/#BaiduChannelArgs">BaiduChannelArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -47,7 +47,7 @@ const channel = new aws.pinpoint.BaiduChannel("channel", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewBaiduChannel<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/pinpoint?tab=doc#BaiduChannelArgs">BaiduChannelArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/pinpoint?tab=doc#BaiduChannel">BaiduChannel</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewBaiduChannel<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/pinpoint?tab=doc#BaiduChannelArgs">BaiduChannelArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/pinpoint?tab=doc#BaiduChannel">BaiduChannel</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -161,15 +161,6 @@ const channel = new aws.pinpoint.BaiduChannel("channel", {
     <dd>{{% md %}}The application ID.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Specifies whether to enable the channel. Defaults to `true`.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Secret<wbr>Key</span>
@@ -177,6 +168,15 @@ const channel = new aws.pinpoint.BaiduChannel("channel", {
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Platform credential Secret key from Baidu.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Enabled</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether to enable the channel. Defaults to `true`.
 {{% /md %}}</dd>
 
 </dl>
@@ -204,15 +204,6 @@ const channel = new aws.pinpoint.BaiduChannel("channel", {
     <dd>{{% md %}}The application ID.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Specifies whether to enable the channel. Defaults to `true`.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Secret<wbr>Key</span>
@@ -220,6 +211,15 @@ const channel = new aws.pinpoint.BaiduChannel("channel", {
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Platform credential Secret key from Baidu.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Enabled</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether to enable the channel. Defaults to `true`.
 {{% /md %}}</dd>
 
 </dl>
@@ -247,15 +247,6 @@ const channel = new aws.pinpoint.BaiduChannel("channel", {
     <dd>{{% md %}}The application ID.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Specifies whether to enable the channel. Defaults to `true`.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>secret<wbr>Key</span>
@@ -263,6 +254,15 @@ const channel = new aws.pinpoint.BaiduChannel("channel", {
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Platform credential Secret key from Baidu.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>enabled</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether to enable the channel. Defaults to `true`.
 {{% /md %}}</dd>
 
 </dl>
@@ -290,15 +290,6 @@ const channel = new aws.pinpoint.BaiduChannel("channel", {
     <dd>{{% md %}}The application ID.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Specifies whether to enable the channel. Defaults to `true`.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>secret_<wbr>key</span>
@@ -308,174 +299,8 @@ const channel = new aws.pinpoint.BaiduChannel("channel", {
     <dd>{{% md %}}Platform credential Secret key from Baidu.
 {{% /md %}}</dd>
 
-</dl>
-{{% /choosable %}}
-
-
-
-
-
-
-
-## BaiduChannel Output Properties
-
-The following output properties are available:
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Api<wbr>Key</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Platform credential API key from Baidu.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Application<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The application ID.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Specifies whether to enable the channel. Defaults to `true`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Secret<wbr>Key</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Platform credential Secret key from Baidu.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Api<wbr>Key</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Platform credential API key from Baidu.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Application<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The application ID.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Specifies whether to enable the channel. Defaults to `true`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Secret<wbr>Key</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Platform credential Secret key from Baidu.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>api<wbr>Key</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Platform credential API key from Baidu.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>application<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The application ID.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Specifies whether to enable the channel. Defaults to `true`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>secret<wbr>Key</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Platform credential Secret key from Baidu.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>api_<wbr>key</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Platform credential API key from Baidu.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>application_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The application ID.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>enabled</span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
@@ -483,17 +308,10 @@ The following output properties are available:
     <dd>{{% md %}}Specifies whether to enable the channel. Defaults to `true`.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span>secret_<wbr>key</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Platform credential Secret key from Baidu.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
+
+
 
 
 
@@ -631,7 +449,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Api<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Platform credential API key from Baidu.
 {{% /md %}}</dd>
@@ -640,7 +458,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Application<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The application ID.
 {{% /md %}}</dd>
@@ -649,7 +467,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether to enable the channel. Defaults to `true`.
 {{% /md %}}</dd>
@@ -658,7 +476,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Secret<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Platform credential Secret key from Baidu.
 {{% /md %}}</dd>
@@ -674,7 +492,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Api<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Platform credential API key from Baidu.
 {{% /md %}}</dd>
@@ -683,7 +501,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Application<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The application ID.
 {{% /md %}}</dd>
@@ -692,7 +510,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether to enable the channel. Defaults to `true`.
 {{% /md %}}</dd>
@@ -701,7 +519,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Secret<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Platform credential Secret key from Baidu.
 {{% /md %}}</dd>
@@ -717,7 +535,7 @@ The following state arguments are supported:
             title="Optional">
         <span>api<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Platform credential API key from Baidu.
 {{% /md %}}</dd>
@@ -726,7 +544,7 @@ The following state arguments are supported:
             title="Optional">
         <span>application<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The application ID.
 {{% /md %}}</dd>
@@ -735,7 +553,7 @@ The following state arguments are supported:
             title="Optional">
         <span>enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies whether to enable the channel. Defaults to `true`.
 {{% /md %}}</dd>
@@ -744,7 +562,7 @@ The following state arguments are supported:
             title="Optional">
         <span>secret<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Platform credential Secret key from Baidu.
 {{% /md %}}</dd>

@@ -14,7 +14,7 @@ block_external_search_index: true
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/vpc/#NatGateway">NatGateway</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/vpc/#NatGatewayArgs">NatGatewayArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/vpc/#NatGateway">NatGateway</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/vpc/#NatGatewayArgs">NatGatewayArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -22,11 +22,11 @@ block_external_search_index: true
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewNatGateway<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/vpc?tab=doc#NatGatewayArgs">NatGatewayArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/vpc?tab=doc#NatGateway">NatGateway</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewNatGateway<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/vpc?tab=doc#NatGatewayArgs">NatGatewayArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/vpc?tab=doc#NatGateway">NatGateway</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.Vpc.NatGateway.html">NatGateway</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.Vpc.NatGatewayArgs.html">NatGatewayArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.Vpc.NatGateway.html">NatGateway</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.AliCloud.Vpc.NatGatewayArgs.html">NatGatewayArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -118,69 +118,6 @@ block_external_search_index: true
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Bandwidth<wbr>Packages</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#natgatewaybandwidthpackage">List&lt;Nat<wbr>Gateway<wbr>Bandwidth<wbr>Package<wbr>Args&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}A list of bandwidth packages for the nat gatway. Only support nat gateway created before 00:00 on November 4, 2017. Available in v1.13.0+ and v1.7.1-.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Description of the nat gateway, This description can have a string of 2 to 256 characters, It cannot begin with http:// or https://. Defaults to null.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Instance<wbr>Charge<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The billing method of the nat gateway. Valid values are "PrePaid" and "PostPaid". Default to "PostPaid".
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Name of the nat gateway. The value can have a string of 2 to 128 characters, must contain only alphanumeric characters or hyphens, such as "-",".","_", and must not begin or end with a hyphen, and must not begin with http:// or https://. Defaults to null.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Period</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}The duration that you will buy the resource, in month. It is valid when `instance_charge_type` is `PrePaid`. Default to 1. Valid values: [1-9, 12, 24, 36]. At present, the provider does not support modify "period" and you can do that via web console.
-{{% /md %}}</dd>
-
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span>Spec</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}It has been deprecated from provider version 1.7.1, and new field 'specification' can replace it.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;spec&#39; has been deprecated from provider version 1.7.1, and new field &#39;specification&#39; can replace it.{{% /md %}}</p></dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Specification</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The specification of the nat gateway. Valid values are `Small`, `Middle` and `Large`. Default to `Small`. Details refer to [Nat Gateway Specification](https://www.alibabacloud.com/help/doc-detail/42757.htm).
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Vpc<wbr>Id</span>
@@ -190,12 +127,84 @@ block_external_search_index: true
     <dd>{{% md %}}The VPC ID.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>Bandwidth<wbr>Packages</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#natgatewaybandwidthpackage">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Vpc.<wbr>Inputs.<wbr>Nat<wbr>Gateway<wbr>Bandwidth<wbr>Package<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A list of bandwidth packages for the nat gatway. Only support nat gateway created before 00:00 on November 4, 2017. Available in v1.13.0+ and v1.7.1-.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Description of the nat gateway, This description can have a string of 2 to 256 characters, It cannot begin with http:// or https://. Defaults to null.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Instance<wbr>Charge<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The billing method of the nat gateway. Valid values are "PrePaid" and "PostPaid". Default to "PostPaid".
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the nat gateway. The value can have a string of 2 to 128 characters, must contain only alphanumeric characters or hyphens, such as "-",".","_", and must not begin or end with a hyphen, and must not begin with http:// or https://. Defaults to null.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Period</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The duration that you will buy the resource, in month. It is valid when `instance_charge_type` is `PrePaid`. Default to 1. Valid values: [1-9, 12, 24, 36]. At present, the provider does not support modify "period" and you can do that via web console.
+{{% /md %}}</dd>
+
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span>Spec</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}It has been deprecated from provider version 1.7.1, and new field 'specification' can replace it.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;spec&#39; has been deprecated from provider version 1.7.1, and new field &#39;specification&#39; can replace it.{{% /md %}}</p></dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Specification</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The specification of the nat gateway. Valid values are `Small`, `Middle` and `Large`. Default to `Small`. Details refer to [Nat Gateway Specification](https://www.alibabacloud.com/help/doc-detail/42757.htm).
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Vpc<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The VPC ID.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -210,7 +219,7 @@ block_external_search_index: true
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the nat gateway, This description can have a string of 2 to 256 characters, It cannot begin with http:// or https://. Defaults to null.
 {{% /md %}}</dd>
@@ -219,7 +228,7 @@ block_external_search_index: true
             title="Optional">
         <span>Instance<wbr>Charge<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The billing method of the nat gateway. Valid values are "PrePaid" and "PostPaid". Default to "PostPaid".
 {{% /md %}}</dd>
@@ -228,7 +237,7 @@ block_external_search_index: true
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the nat gateway. The value can have a string of 2 to 128 characters, must contain only alphanumeric characters or hyphens, such as "-",".","_", and must not begin or end with a hyphen, and must not begin with http:// or https://. Defaults to null.
 {{% /md %}}</dd>
@@ -237,7 +246,7 @@ block_external_search_index: true
             title="Optional">
         <span>Period</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The duration that you will buy the resource, in month. It is valid when `instance_charge_type` is `PrePaid`. Default to 1. Valid values: [1-9, 12, 24, 36]. At present, the provider does not support modify "period" and you can do that via web console.
 {{% /md %}}</dd>
@@ -246,7 +255,7 @@ block_external_search_index: true
             title="Optional, Deprecated">
         <span>Spec</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}It has been deprecated from provider version 1.7.1, and new field 'specification' can replace it.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;spec&#39; has been deprecated from provider version 1.7.1, and new field &#39;specification&#39; can replace it.{{% /md %}}</p></dd>
@@ -255,18 +264,9 @@ block_external_search_index: true
             title="Optional">
         <span>Specification</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The specification of the nat gateway. Valid values are `Small`, `Middle` and `Large`. Default to `Small`. Details refer to [Nat Gateway Specification](https://www.alibabacloud.com/help/doc-detail/42757.htm).
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Vpc<wbr>Id</span>
-        <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The VPC ID.
+    <dd>{{% md %}}The specification of the nat gateway. Valid values are `Small`, `Middle` and `Large`. Default to `Small`. Details refer to [Nat Gateway Specification](https://www.alibabacloud.com/help/doc-detail/42757.htm).
 {{% /md %}}</dd>
 
 </dl>
@@ -275,69 +275,6 @@ block_external_search_index: true
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>bandwidth<wbr>Packages</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#natgatewaybandwidthpackage">Nat<wbr>Gateway<wbr>Bandwidth<wbr>Package[]?</a></span>
-    </dt>
-    <dd>{{% md %}}A list of bandwidth packages for the nat gatway. Only support nat gateway created before 00:00 on November 4, 2017. Available in v1.13.0+ and v1.7.1-.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Description of the nat gateway, This description can have a string of 2 to 256 characters, It cannot begin with http:// or https://. Defaults to null.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>instance<wbr>Charge<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The billing method of the nat gateway. Valid values are "PrePaid" and "PostPaid". Default to "PostPaid".
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Name of the nat gateway. The value can have a string of 2 to 128 characters, must contain only alphanumeric characters or hyphens, such as "-",".","_", and must not begin or end with a hyphen, and must not begin with http:// or https://. Defaults to null.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>period</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}The duration that you will buy the resource, in month. It is valid when `instance_charge_type` is `PrePaid`. Default to 1. Valid values: [1-9, 12, 24, 36]. At present, the provider does not support modify "period" and you can do that via web console.
-{{% /md %}}</dd>
-
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span>spec</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}It has been deprecated from provider version 1.7.1, and new field 'specification' can replace it.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;spec&#39; has been deprecated from provider version 1.7.1, and new field &#39;specification&#39; can replace it.{{% /md %}}</p></dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>specification</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The specification of the nat gateway. Valid values are `Small`, `Middle` and `Large`. Default to `Small`. Details refer to [Nat Gateway Specification](https://www.alibabacloud.com/help/doc-detail/42757.htm).
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -348,12 +285,84 @@ block_external_search_index: true
     <dd>{{% md %}}The VPC ID.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>bandwidth<wbr>Packages</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#natgatewaybandwidthpackage">Nat<wbr>Gateway<wbr>Bandwidth<wbr>Package[]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of bandwidth packages for the nat gatway. Only support nat gateway created before 00:00 on November 4, 2017. Available in v1.13.0+ and v1.7.1-.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Description of the nat gateway, This description can have a string of 2 to 256 characters, It cannot begin with http:// or https://. Defaults to null.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>instance<wbr>Charge<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The billing method of the nat gateway. Valid values are "PrePaid" and "PostPaid". Default to "PostPaid".
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the nat gateway. The value can have a string of 2 to 128 characters, must contain only alphanumeric characters or hyphens, such as "-",".","_", and must not begin or end with a hyphen, and must not begin with http:// or https://. Defaults to null.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>period</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The duration that you will buy the resource, in month. It is valid when `instance_charge_type` is `PrePaid`. Default to 1. Valid values: [1-9, 12, 24, 36]. At present, the provider does not support modify "period" and you can do that via web console.
+{{% /md %}}</dd>
+
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span>spec</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}It has been deprecated from provider version 1.7.1, and new field 'specification' can replace it.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;spec&#39; has been deprecated from provider version 1.7.1, and new field &#39;specification&#39; can replace it.{{% /md %}}</p></dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>specification</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The specification of the nat gateway. Valid values are `Small`, `Middle` and `Large`. Default to `Small`. Details refer to [Nat Gateway Specification](https://www.alibabacloud.com/help/doc-detail/42757.htm).
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>vpc_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The VPC ID.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -416,15 +425,6 @@ block_external_search_index: true
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The specification of the nat gateway. Valid values are `Small`, `Middle` and `Large`. Default to `Small`. Details refer to [Nat Gateway Specification](https://www.alibabacloud.com/help/doc-detail/42757.htm).
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>vpc_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The VPC ID.
 {{% /md %}}</dd>
 
 </dl>
@@ -457,24 +457,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Bandwidth<wbr>Packages</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#natgatewaybandwidthpackage">List&lt;Nat<wbr>Gateway<wbr>Bandwidth<wbr>Package&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}A list of bandwidth packages for the nat gatway. Only support nat gateway created before 00:00 on November 4, 2017. Available in v1.13.0+ and v1.7.1-.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Description of the nat gateway, This description can have a string of 2 to 256 characters, It cannot begin with http:// or https://. Defaults to null.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Forward<wbr>Table<wbr>Ids</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -484,65 +466,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Instance<wbr>Charge<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The billing method of the nat gateway. Valid values are "PrePaid" and "PostPaid". Default to "PostPaid".
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the nat gateway. The value can have a string of 2 to 128 characters, must contain only alphanumeric characters or hyphens, such as "-",".","_", and must not begin or end with a hyphen, and must not begin with http:// or https://. Defaults to null.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Period</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}The duration that you will buy the resource, in month. It is valid when `instance_charge_type` is `PrePaid`. Default to 1. Valid values: [1-9, 12, 24, 36]. At present, the provider does not support modify "period" and you can do that via web console.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Snat<wbr>Table<wbr>Ids</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The nat gateway will auto create a snap and forward item, the `snat_table_ids` is the created one.
-{{% /md %}}</dd>
-
-    <dt class="property- property-deprecated"
-            title=", Deprecated">
-        <span>Spec</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}It has been deprecated from provider version 1.7.1, and new field 'specification' can replace it.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;spec&#39; has been deprecated from provider version 1.7.1, and new field &#39;specification&#39; can replace it.{{% /md %}}</p></dd>
-
-    <dt class="property-"
-            title="">
-        <span>Specification</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The specification of the nat gateway. Valid values are `Small`, `Middle` and `Large`. Default to `Small`. Details refer to [Nat Gateway Specification](https://www.alibabacloud.com/help/doc-detail/42757.htm).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Vpc<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The VPC ID.
 {{% /md %}}</dd>
 
 </dl>
@@ -563,24 +491,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Bandwidth<wbr>Packages</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#natgatewaybandwidthpackage">[]Nat<wbr>Gateway<wbr>Bandwidth<wbr>Package</a></span>
-    </dt>
-    <dd>{{% md %}}A list of bandwidth packages for the nat gatway. Only support nat gateway created before 00:00 on November 4, 2017. Available in v1.13.0+ and v1.7.1-.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Description of the nat gateway, This description can have a string of 2 to 256 characters, It cannot begin with http:// or https://. Defaults to null.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Forward<wbr>Table<wbr>Ids</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -590,65 +500,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Instance<wbr>Charge<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The billing method of the nat gateway. Valid values are "PrePaid" and "PostPaid". Default to "PostPaid".
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the nat gateway. The value can have a string of 2 to 128 characters, must contain only alphanumeric characters or hyphens, such as "-",".","_", and must not begin or end with a hyphen, and must not begin with http:// or https://. Defaults to null.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Period</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}The duration that you will buy the resource, in month. It is valid when `instance_charge_type` is `PrePaid`. Default to 1. Valid values: [1-9, 12, 24, 36]. At present, the provider does not support modify "period" and you can do that via web console.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Snat<wbr>Table<wbr>Ids</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The nat gateway will auto create a snap and forward item, the `snat_table_ids` is the created one.
-{{% /md %}}</dd>
-
-    <dt class="property- property-deprecated"
-            title=", Deprecated">
-        <span>Spec</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}It has been deprecated from provider version 1.7.1, and new field 'specification' can replace it.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;spec&#39; has been deprecated from provider version 1.7.1, and new field &#39;specification&#39; can replace it.{{% /md %}}</p></dd>
-
-    <dt class="property-"
-            title="">
-        <span>Specification</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The specification of the nat gateway. Valid values are `Small`, `Middle` and `Large`. Default to `Small`. Details refer to [Nat Gateway Specification](https://www.alibabacloud.com/help/doc-detail/42757.htm).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Vpc<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The VPC ID.
 {{% /md %}}</dd>
 
 </dl>
@@ -669,24 +525,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>bandwidth<wbr>Packages</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#natgatewaybandwidthpackage">Nat<wbr>Gateway<wbr>Bandwidth<wbr>Package[]?</a></span>
-    </dt>
-    <dd>{{% md %}}A list of bandwidth packages for the nat gatway. Only support nat gateway created before 00:00 on November 4, 2017. Available in v1.13.0+ and v1.7.1-.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Description of the nat gateway, This description can have a string of 2 to 256 characters, It cannot begin with http:// or https://. Defaults to null.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>forward<wbr>Table<wbr>Ids</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -696,65 +534,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>instance<wbr>Charge<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The billing method of the nat gateway. Valid values are "PrePaid" and "PostPaid". Default to "PostPaid".
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the nat gateway. The value can have a string of 2 to 128 characters, must contain only alphanumeric characters or hyphens, such as "-",".","_", and must not begin or end with a hyphen, and must not begin with http:// or https://. Defaults to null.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>period</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}The duration that you will buy the resource, in month. It is valid when `instance_charge_type` is `PrePaid`. Default to 1. Valid values: [1-9, 12, 24, 36]. At present, the provider does not support modify "period" and you can do that via web console.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>snat<wbr>Table<wbr>Ids</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The nat gateway will auto create a snap and forward item, the `snat_table_ids` is the created one.
-{{% /md %}}</dd>
-
-    <dt class="property- property-deprecated"
-            title=", Deprecated">
-        <span>spec</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}It has been deprecated from provider version 1.7.1, and new field 'specification' can replace it.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;spec&#39; has been deprecated from provider version 1.7.1, and new field &#39;specification&#39; can replace it.{{% /md %}}</p></dd>
-
-    <dt class="property-"
-            title="">
-        <span>specification</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The specification of the nat gateway. Valid values are `Small`, `Middle` and `Large`. Default to `Small`. Details refer to [Nat Gateway Specification](https://www.alibabacloud.com/help/doc-detail/42757.htm).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>vpc<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The VPC ID.
 {{% /md %}}</dd>
 
 </dl>
@@ -775,24 +559,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>bandwidth_<wbr>packages</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#natgatewaybandwidthpackage">List[Nat<wbr>Gateway<wbr>Bandwidth<wbr>Package]</a></span>
-    </dt>
-    <dd>{{% md %}}A list of bandwidth packages for the nat gatway. Only support nat gateway created before 00:00 on November 4, 2017. Available in v1.13.0+ and v1.7.1-.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Description of the nat gateway, This description can have a string of 2 to 256 characters, It cannot begin with http:// or https://. Defaults to null.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>forward_<wbr>table_<wbr>ids</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -802,65 +568,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>instance_<wbr>charge_<wbr>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The billing method of the nat gateway. Valid values are "PrePaid" and "PostPaid". Default to "PostPaid".
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Name of the nat gateway. The value can have a string of 2 to 128 characters, must contain only alphanumeric characters or hyphens, such as "-",".","_", and must not begin or end with a hyphen, and must not begin with http:// or https://. Defaults to null.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>period</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The duration that you will buy the resource, in month. It is valid when `instance_charge_type` is `PrePaid`. Default to 1. Valid values: [1-9, 12, 24, 36]. At present, the provider does not support modify "period" and you can do that via web console.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>snat_<wbr>table_<wbr>ids</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The nat gateway will auto create a snap and forward item, the `snat_table_ids` is the created one.
-{{% /md %}}</dd>
-
-    <dt class="property- property-deprecated"
-            title=", Deprecated">
-        <span>spec</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}It has been deprecated from provider version 1.7.1, and new field 'specification' can replace it.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;spec&#39; has been deprecated from provider version 1.7.1, and new field &#39;specification&#39; can replace it.{{% /md %}}</p></dd>
-
-    <dt class="property-"
-            title="">
-        <span>specification</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The specification of the nat gateway. Valid values are `Small`, `Middle` and `Large`. Default to `Small`. Details refer to [Nat Gateway Specification](https://www.alibabacloud.com/help/doc-detail/42757.htm).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>vpc_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The VPC ID.
 {{% /md %}}</dd>
 
 </dl>
@@ -1002,7 +714,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Bandwidth<wbr>Package<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A list ID of the bandwidth packages, and split them with commas.
 {{% /md %}}</dd>
@@ -1011,7 +723,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Bandwidth<wbr>Packages</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#natgatewaybandwidthpackage">List&lt;Nat<wbr>Gateway<wbr>Bandwidth<wbr>Package<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#natgatewaybandwidthpackage">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Vpc.<wbr>Inputs.<wbr>Nat<wbr>Gateway<wbr>Bandwidth<wbr>Package<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of bandwidth packages for the nat gatway. Only support nat gateway created before 00:00 on November 4, 2017. Available in v1.13.0+ and v1.7.1-.
 {{% /md %}}</dd>
@@ -1020,7 +732,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the nat gateway, This description can have a string of 2 to 256 characters, It cannot begin with http:// or https://. Defaults to null.
 {{% /md %}}</dd>
@@ -1029,7 +741,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Forward<wbr>Table<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The nat gateway will auto create a snap and forward item, the `forward_table_ids` is the created one.
 {{% /md %}}</dd>
@@ -1038,7 +750,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Instance<wbr>Charge<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The billing method of the nat gateway. Valid values are "PrePaid" and "PostPaid". Default to "PostPaid".
 {{% /md %}}</dd>
@@ -1047,7 +759,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the nat gateway. The value can have a string of 2 to 128 characters, must contain only alphanumeric characters or hyphens, such as "-",".","_", and must not begin or end with a hyphen, and must not begin with http:// or https://. Defaults to null.
 {{% /md %}}</dd>
@@ -1056,7 +768,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Period</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The duration that you will buy the resource, in month. It is valid when `instance_charge_type` is `PrePaid`. Default to 1. Valid values: [1-9, 12, 24, 36]. At present, the provider does not support modify "period" and you can do that via web console.
 {{% /md %}}</dd>
@@ -1065,7 +777,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Snat<wbr>Table<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The nat gateway will auto create a snap and forward item, the `snat_table_ids` is the created one.
 {{% /md %}}</dd>
@@ -1074,7 +786,7 @@ The following state arguments are supported:
             title="Optional, Deprecated">
         <span>Spec</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}It has been deprecated from provider version 1.7.1, and new field 'specification' can replace it.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;spec&#39; has been deprecated from provider version 1.7.1, and new field &#39;specification&#39; can replace it.{{% /md %}}</p></dd>
@@ -1083,7 +795,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Specification</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The specification of the nat gateway. Valid values are `Small`, `Middle` and `Large`. Default to `Small`. Details refer to [Nat Gateway Specification](https://www.alibabacloud.com/help/doc-detail/42757.htm).
 {{% /md %}}</dd>
@@ -1092,7 +804,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Vpc<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The VPC ID.
 {{% /md %}}</dd>
@@ -1108,7 +820,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Bandwidth<wbr>Package<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A list ID of the bandwidth packages, and split them with commas.
 {{% /md %}}</dd>
@@ -1126,7 +838,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the nat gateway, This description can have a string of 2 to 256 characters, It cannot begin with http:// or https://. Defaults to null.
 {{% /md %}}</dd>
@@ -1135,7 +847,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Forward<wbr>Table<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The nat gateway will auto create a snap and forward item, the `forward_table_ids` is the created one.
 {{% /md %}}</dd>
@@ -1144,7 +856,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Instance<wbr>Charge<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The billing method of the nat gateway. Valid values are "PrePaid" and "PostPaid". Default to "PostPaid".
 {{% /md %}}</dd>
@@ -1153,7 +865,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the nat gateway. The value can have a string of 2 to 128 characters, must contain only alphanumeric characters or hyphens, such as "-",".","_", and must not begin or end with a hyphen, and must not begin with http:// or https://. Defaults to null.
 {{% /md %}}</dd>
@@ -1162,7 +874,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Period</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The duration that you will buy the resource, in month. It is valid when `instance_charge_type` is `PrePaid`. Default to 1. Valid values: [1-9, 12, 24, 36]. At present, the provider does not support modify "period" and you can do that via web console.
 {{% /md %}}</dd>
@@ -1171,7 +883,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Snat<wbr>Table<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The nat gateway will auto create a snap and forward item, the `snat_table_ids` is the created one.
 {{% /md %}}</dd>
@@ -1180,7 +892,7 @@ The following state arguments are supported:
             title="Optional, Deprecated">
         <span>Spec</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}It has been deprecated from provider version 1.7.1, and new field 'specification' can replace it.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;spec&#39; has been deprecated from provider version 1.7.1, and new field &#39;specification&#39; can replace it.{{% /md %}}</p></dd>
@@ -1189,7 +901,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Specification</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The specification of the nat gateway. Valid values are `Small`, `Middle` and `Large`. Default to `Small`. Details refer to [Nat Gateway Specification](https://www.alibabacloud.com/help/doc-detail/42757.htm).
 {{% /md %}}</dd>
@@ -1198,7 +910,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Vpc<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The VPC ID.
 {{% /md %}}</dd>
@@ -1214,7 +926,7 @@ The following state arguments are supported:
             title="Optional">
         <span>bandwidth<wbr>Package<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A list ID of the bandwidth packages, and split them with commas.
 {{% /md %}}</dd>
@@ -1223,7 +935,7 @@ The following state arguments are supported:
             title="Optional">
         <span>bandwidth<wbr>Packages</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#natgatewaybandwidthpackage">Nat<wbr>Gateway<wbr>Bandwidth<wbr>Package[]?</a></span>
+        <span class="property-type"><a href="#natgatewaybandwidthpackage">Nat<wbr>Gateway<wbr>Bandwidth<wbr>Package[]</a></span>
     </dt>
     <dd>{{% md %}}A list of bandwidth packages for the nat gatway. Only support nat gateway created before 00:00 on November 4, 2017. Available in v1.13.0+ and v1.7.1-.
 {{% /md %}}</dd>
@@ -1232,7 +944,7 @@ The following state arguments are supported:
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the nat gateway, This description can have a string of 2 to 256 characters, It cannot begin with http:// or https://. Defaults to null.
 {{% /md %}}</dd>
@@ -1241,7 +953,7 @@ The following state arguments are supported:
             title="Optional">
         <span>forward<wbr>Table<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The nat gateway will auto create a snap and forward item, the `forward_table_ids` is the created one.
 {{% /md %}}</dd>
@@ -1250,7 +962,7 @@ The following state arguments are supported:
             title="Optional">
         <span>instance<wbr>Charge<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The billing method of the nat gateway. Valid values are "PrePaid" and "PostPaid". Default to "PostPaid".
 {{% /md %}}</dd>
@@ -1259,7 +971,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the nat gateway. The value can have a string of 2 to 128 characters, must contain only alphanumeric characters or hyphens, such as "-",".","_", and must not begin or end with a hyphen, and must not begin with http:// or https://. Defaults to null.
 {{% /md %}}</dd>
@@ -1268,7 +980,7 @@ The following state arguments are supported:
             title="Optional">
         <span>period</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The duration that you will buy the resource, in month. It is valid when `instance_charge_type` is `PrePaid`. Default to 1. Valid values: [1-9, 12, 24, 36]. At present, the provider does not support modify "period" and you can do that via web console.
 {{% /md %}}</dd>
@@ -1277,7 +989,7 @@ The following state arguments are supported:
             title="Optional">
         <span>snat<wbr>Table<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The nat gateway will auto create a snap and forward item, the `snat_table_ids` is the created one.
 {{% /md %}}</dd>
@@ -1286,7 +998,7 @@ The following state arguments are supported:
             title="Optional, Deprecated">
         <span>spec</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}It has been deprecated from provider version 1.7.1, and new field 'specification' can replace it.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;spec&#39; has been deprecated from provider version 1.7.1, and new field &#39;specification&#39; can replace it.{{% /md %}}</p></dd>
@@ -1295,7 +1007,7 @@ The following state arguments are supported:
             title="Optional">
         <span>specification</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The specification of the nat gateway. Valid values are `Small`, `Middle` and `Large`. Default to `Small`. Details refer to [Nat Gateway Specification](https://www.alibabacloud.com/help/doc-detail/42757.htm).
 {{% /md %}}</dd>
@@ -1304,7 +1016,7 @@ The following state arguments are supported:
             title="Optional">
         <span>vpc<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The VPC ID.
 {{% /md %}}</dd>
@@ -1464,7 +1176,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Public<wbr>Ip<wbr>Addresses</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1472,7 +1184,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Zone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1503,7 +1215,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Public<wbr>Ip<wbr>Addresses</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1511,7 +1223,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Zone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1542,7 +1254,7 @@ The following state arguments are supported:
             title="Optional">
         <span>public<wbr>Ip<wbr>Addresses</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1550,7 +1262,7 @@ The following state arguments are supported:
             title="Optional">
         <span>zone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

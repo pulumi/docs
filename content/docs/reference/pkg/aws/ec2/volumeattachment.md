@@ -48,7 +48,7 @@ const ebsAtt = new aws.ec2.VolumeAttachment("ebs_att", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#VolumeAttachment">VolumeAttachment</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#VolumeAttachmentArgs">VolumeAttachmentArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#VolumeAttachment">VolumeAttachment</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#VolumeAttachmentArgs">VolumeAttachmentArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -56,7 +56,7 @@ const ebsAtt = new aws.ec2.VolumeAttachment("ebs_att", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewVolumeAttachment<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2?tab=doc#VolumeAttachmentArgs">VolumeAttachmentArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2?tab=doc#VolumeAttachment">VolumeAttachment</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewVolumeAttachment<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2?tab=doc#VolumeAttachmentArgs">VolumeAttachmentArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2?tab=doc#VolumeAttachment">VolumeAttachment</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -162,18 +162,6 @@ const ebsAtt = new aws.ec2.VolumeAttachment("ebs_att", {
 example, `/dev/sdh` or `xvdh`).  See [Device Naming on Linux Instances][1] and [Device Naming on Windows Instances][2] for more information.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Force<wbr>Detach</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Set to `true` if you want to force the
-volume to detach. Useful if previous attempts failed, but use this option only
-as a last resort, as this can result in **data loss**. See
-[Detaching an Amazon EBS Volume from an Instance][3] for more information.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Instance<wbr>Id</span>
@@ -183,19 +171,6 @@ as a last resort, as this can result in **data loss**. See
     <dd>{{% md %}}ID of the Instance to attach to
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Skip<wbr>Destroy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Set this to true if you do not wish
-to detach the volume from the instance to which it is attached at destroy
-time, and instead just remove the attachment from this provider state. This is
-useful when destroying an instance which has volumes created by some other
-means attached.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Volume<wbr>Id</span>
@@ -203,6 +178,31 @@ means attached.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the Volume to be attached
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Force<wbr>Detach</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Set to `true` if you want to force the
+volume to detach. Useful if previous attempts failed, but use this option only
+as a last resort, as this can result in **data loss**. See
+[Detaching an Amazon EBS Volume from an Instance][3] for more information.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Skip<wbr>Destroy</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Set this to true if you do not wish
+to detach the volume from the instance to which it is attached at destroy
+time, and instead just remove the attachment from this provider state. This is
+useful when destroying an instance which has volumes created by some other
+means attached.
 {{% /md %}}</dd>
 
 </dl>
@@ -222,18 +222,6 @@ means attached.
 example, `/dev/sdh` or `xvdh`).  See [Device Naming on Linux Instances][1] and [Device Naming on Windows Instances][2] for more information.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Force<wbr>Detach</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Set to `true` if you want to force the
-volume to detach. Useful if previous attempts failed, but use this option only
-as a last resort, as this can result in **data loss**. See
-[Detaching an Amazon EBS Volume from an Instance][3] for more information.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Instance<wbr>Id</span>
@@ -243,19 +231,6 @@ as a last resort, as this can result in **data loss**. See
     <dd>{{% md %}}ID of the Instance to attach to
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Skip<wbr>Destroy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Set this to true if you do not wish
-to detach the volume from the instance to which it is attached at destroy
-time, and instead just remove the attachment from this provider state. This is
-useful when destroying an instance which has volumes created by some other
-means attached.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Volume<wbr>Id</span>
@@ -263,6 +238,31 @@ means attached.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the Volume to be attached
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Force<wbr>Detach</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Set to `true` if you want to force the
+volume to detach. Useful if previous attempts failed, but use this option only
+as a last resort, as this can result in **data loss**. See
+[Detaching an Amazon EBS Volume from an Instance][3] for more information.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Skip<wbr>Destroy</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Set this to true if you do not wish
+to detach the volume from the instance to which it is attached at destroy
+time, and instead just remove the attachment from this provider state. This is
+useful when destroying an instance which has volumes created by some other
+means attached.
 {{% /md %}}</dd>
 
 </dl>
@@ -282,18 +282,6 @@ means attached.
 example, `/dev/sdh` or `xvdh`).  See [Device Naming on Linux Instances][1] and [Device Naming on Windows Instances][2] for more information.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>force<wbr>Detach</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Set to `true` if you want to force the
-volume to detach. Useful if previous attempts failed, but use this option only
-as a last resort, as this can result in **data loss**. See
-[Detaching an Amazon EBS Volume from an Instance][3] for more information.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>instance<wbr>Id</span>
@@ -303,19 +291,6 @@ as a last resort, as this can result in **data loss**. See
     <dd>{{% md %}}ID of the Instance to attach to
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>skip<wbr>Destroy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Set this to true if you do not wish
-to detach the volume from the instance to which it is attached at destroy
-time, and instead just remove the attachment from this provider state. This is
-useful when destroying an instance which has volumes created by some other
-means attached.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>volume<wbr>Id</span>
@@ -323,6 +298,31 @@ means attached.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the Volume to be attached
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>force<wbr>Detach</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Set to `true` if you want to force the
+volume to detach. Useful if previous attempts failed, but use this option only
+as a last resort, as this can result in **data loss**. See
+[Detaching an Amazon EBS Volume from an Instance][3] for more information.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>skip<wbr>Destroy</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Set this to true if you do not wish
+to detach the volume from the instance to which it is attached at destroy
+time, and instead just remove the attachment from this provider state. This is
+useful when destroying an instance which has volumes created by some other
+means attached.
 {{% /md %}}</dd>
 
 </dl>
@@ -342,6 +342,24 @@ means attached.
 example, `/dev/sdh` or `xvdh`).  See [Device Naming on Linux Instances][1] and [Device Naming on Windows Instances][2] for more information.
 {{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>instance_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}ID of the Instance to attach to
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>volume_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}ID of the Volume to be attached
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>force_<wbr>detach</span>
@@ -352,15 +370,6 @@ example, `/dev/sdh` or `xvdh`).  See [Device Naming on Linux Instances][1] and [
 volume to detach. Useful if previous attempts failed, but use this option only
 as a last resort, as this can result in **data loss**. See
 [Detaching an Amazon EBS Volume from an Instance][3] for more information.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>instance_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}ID of the Instance to attach to
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -376,269 +385,10 @@ useful when destroying an instance which has volumes created by some other
 means attached.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>volume_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}ID of the Volume to be attached
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
-
-
-
-
-
-## VolumeAttachment Output Properties
-
-The following output properties are available:
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Device<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The device name to expose to the instance (for
-example, `/dev/sdh` or `xvdh`).  See [Device Naming on Linux Instances][1] and [Device Naming on Windows Instances][2] for more information.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Force<wbr>Detach</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Set to `true` if you want to force the
-volume to detach. Useful if previous attempts failed, but use this option only
-as a last resort, as this can result in **data loss**. See
-[Detaching an Amazon EBS Volume from an Instance][3] for more information.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Instance<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}ID of the Instance to attach to
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Skip<wbr>Destroy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Set this to true if you do not wish
-to detach the volume from the instance to which it is attached at destroy
-time, and instead just remove the attachment from this provider state. This is
-useful when destroying an instance which has volumes created by some other
-means attached.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Volume<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}ID of the Volume to be attached
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Device<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The device name to expose to the instance (for
-example, `/dev/sdh` or `xvdh`).  See [Device Naming on Linux Instances][1] and [Device Naming on Windows Instances][2] for more information.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Force<wbr>Detach</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Set to `true` if you want to force the
-volume to detach. Useful if previous attempts failed, but use this option only
-as a last resort, as this can result in **data loss**. See
-[Detaching an Amazon EBS Volume from an Instance][3] for more information.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Instance<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}ID of the Instance to attach to
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Skip<wbr>Destroy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Set this to true if you do not wish
-to detach the volume from the instance to which it is attached at destroy
-time, and instead just remove the attachment from this provider state. This is
-useful when destroying an instance which has volumes created by some other
-means attached.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Volume<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}ID of the Volume to be attached
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>device<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The device name to expose to the instance (for
-example, `/dev/sdh` or `xvdh`).  See [Device Naming on Linux Instances][1] and [Device Naming on Windows Instances][2] for more information.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>force<wbr>Detach</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Set to `true` if you want to force the
-volume to detach. Useful if previous attempts failed, but use this option only
-as a last resort, as this can result in **data loss**. See
-[Detaching an Amazon EBS Volume from an Instance][3] for more information.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>instance<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}ID of the Instance to attach to
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>skip<wbr>Destroy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Set this to true if you do not wish
-to detach the volume from the instance to which it is attached at destroy
-time, and instead just remove the attachment from this provider state. This is
-useful when destroying an instance which has volumes created by some other
-means attached.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>volume<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}ID of the Volume to be attached
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>device_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The device name to expose to the instance (for
-example, `/dev/sdh` or `xvdh`).  See [Device Naming on Linux Instances][1] and [Device Naming on Windows Instances][2] for more information.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>force_<wbr>detach</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Set to `true` if you want to force the
-volume to detach. Useful if previous attempts failed, but use this option only
-as a last resort, as this can result in **data loss**. See
-[Detaching an Amazon EBS Volume from an Instance][3] for more information.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>instance_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}ID of the Instance to attach to
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>skip_<wbr>destroy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Set this to true if you do not wish
-to detach the volume from the instance to which it is attached at destroy
-time, and instead just remove the attachment from this provider state. This is
-useful when destroying an instance which has volumes created by some other
-means attached.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>volume_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}ID of the Volume to be attached
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
 
 
 
@@ -776,7 +526,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Device<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The device name to expose to the instance (for
 example, `/dev/sdh` or `xvdh`).  See [Device Naming on Linux Instances][1] and [Device Naming on Windows Instances][2] for more information.
@@ -786,7 +536,7 @@ example, `/dev/sdh` or `xvdh`).  See [Device Naming on Linux Instances][1] and [
             title="Optional">
         <span>Force<wbr>Detach</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set to `true` if you want to force the
 volume to detach. Useful if previous attempts failed, but use this option only
@@ -798,7 +548,7 @@ as a last resort, as this can result in **data loss**. See
             title="Optional">
         <span>Instance<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the Instance to attach to
 {{% /md %}}</dd>
@@ -807,7 +557,7 @@ as a last resort, as this can result in **data loss**. See
             title="Optional">
         <span>Skip<wbr>Destroy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set this to true if you do not wish
 to detach the volume from the instance to which it is attached at destroy
@@ -820,7 +570,7 @@ means attached.
             title="Optional">
         <span>Volume<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the Volume to be attached
 {{% /md %}}</dd>
@@ -836,7 +586,7 @@ means attached.
             title="Optional">
         <span>Device<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The device name to expose to the instance (for
 example, `/dev/sdh` or `xvdh`).  See [Device Naming on Linux Instances][1] and [Device Naming on Windows Instances][2] for more information.
@@ -846,7 +596,7 @@ example, `/dev/sdh` or `xvdh`).  See [Device Naming on Linux Instances][1] and [
             title="Optional">
         <span>Force<wbr>Detach</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set to `true` if you want to force the
 volume to detach. Useful if previous attempts failed, but use this option only
@@ -858,7 +608,7 @@ as a last resort, as this can result in **data loss**. See
             title="Optional">
         <span>Instance<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the Instance to attach to
 {{% /md %}}</dd>
@@ -867,7 +617,7 @@ as a last resort, as this can result in **data loss**. See
             title="Optional">
         <span>Skip<wbr>Destroy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set this to true if you do not wish
 to detach the volume from the instance to which it is attached at destroy
@@ -880,7 +630,7 @@ means attached.
             title="Optional">
         <span>Volume<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the Volume to be attached
 {{% /md %}}</dd>
@@ -896,7 +646,7 @@ means attached.
             title="Optional">
         <span>device<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The device name to expose to the instance (for
 example, `/dev/sdh` or `xvdh`).  See [Device Naming on Linux Instances][1] and [Device Naming on Windows Instances][2] for more information.
@@ -906,7 +656,7 @@ example, `/dev/sdh` or `xvdh`).  See [Device Naming on Linux Instances][1] and [
             title="Optional">
         <span>force<wbr>Detach</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Set to `true` if you want to force the
 volume to detach. Useful if previous attempts failed, but use this option only
@@ -918,7 +668,7 @@ as a last resort, as this can result in **data loss**. See
             title="Optional">
         <span>instance<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the Instance to attach to
 {{% /md %}}</dd>
@@ -927,7 +677,7 @@ as a last resort, as this can result in **data loss**. See
             title="Optional">
         <span>skip<wbr>Destroy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Set this to true if you do not wish
 to detach the volume from the instance to which it is attached at destroy
@@ -940,7 +690,7 @@ means attached.
             title="Optional">
         <span>volume<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the Volume to be attached
 {{% /md %}}</dd>

@@ -34,7 +34,7 @@ const example = new gitlab.GroupVariable("example", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gitlab/#GroupVariable">GroupVariable</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gitlab/#GroupVariableArgs">GroupVariableArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gitlab/#GroupVariable">GroupVariable</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gitlab/#GroupVariableArgs">GroupVariableArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -42,11 +42,11 @@ const example = new gitlab.GroupVariable("example", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewGroupVariable<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gitlab/sdk/go/gitlab/?tab=doc#GroupVariableArgs">GroupVariableArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gitlab/sdk/go/gitlab/?tab=doc#GroupVariable">GroupVariable</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewGroupVariable<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gitlab/sdk/go/gitlab/?tab=doc#GroupVariableArgs">GroupVariableArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gitlab/sdk/go/gitlab/?tab=doc#GroupVariable">GroupVariable</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gitlab/Pulumi.Gitlab..GroupVariable.html">GroupVariable</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gitlab/Pulumi.Gitlab.GroupVariableArgs.html">GroupVariableArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gitlab/Pulumi.Gitlab.GroupVariable.html">GroupVariable</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gitlab/Pulumi.GitLab.GroupVariableArgs.html">GroupVariableArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -156,15 +156,6 @@ const example = new gitlab.GroupVariable("example", {
     <dd>{{% md %}}The name of the variable.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Protected</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}If set to `true`, the variable will be passed only to pipelines running on protected branches and tags. Defaults to `false`.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Value</span>
@@ -176,9 +167,18 @@ const example = new gitlab.GroupVariable("example", {
 
     <dt class="property-optional"
             title="Optional">
+        <span>Protected</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If set to `true`, the variable will be passed only to pipelines running on protected branches and tags. Defaults to `false`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Variable<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of a variable. Available types are: env_var (default) and file.
 {{% /md %}}</dd>
@@ -208,15 +208,6 @@ const example = new gitlab.GroupVariable("example", {
     <dd>{{% md %}}The name of the variable.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Protected</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}If set to `true`, the variable will be passed only to pipelines running on protected branches and tags. Defaults to `false`.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Value</span>
@@ -228,9 +219,18 @@ const example = new gitlab.GroupVariable("example", {
 
     <dt class="property-optional"
             title="Optional">
+        <span>Protected</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If set to `true`, the variable will be passed only to pipelines running on protected branches and tags. Defaults to `false`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Variable<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of a variable. Available types are: env_var (default) and file.
 {{% /md %}}</dd>
@@ -260,15 +260,6 @@ const example = new gitlab.GroupVariable("example", {
     <dd>{{% md %}}The name of the variable.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>protected</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}If set to `true`, the variable will be passed only to pipelines running on protected branches and tags. Defaults to `false`.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>value</span>
@@ -280,9 +271,18 @@ const example = new gitlab.GroupVariable("example", {
 
     <dt class="property-optional"
             title="Optional">
+        <span>protected</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}If set to `true`, the variable will be passed only to pipelines running on protected branches and tags. Defaults to `false`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>variable<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of a variable. Available types are: env_var (default) and file.
 {{% /md %}}</dd>
@@ -312,15 +312,6 @@ const example = new gitlab.GroupVariable("example", {
     <dd>{{% md %}}The name of the variable.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>protected</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}If set to `true`, the variable will be passed only to pipelines running on protected branches and tags. Defaults to `false`.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>value</span>
@@ -332,208 +323,6 @@ const example = new gitlab.GroupVariable("example", {
 
     <dt class="property-optional"
             title="Optional">
-        <span>variable_<wbr>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The type of a variable. Available types are: env_var (default) and file.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-
-
-
-
-
-## GroupVariable Output Properties
-
-The following output properties are available:
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Group</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name or id of the group to add the hook to.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Key</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the variable.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Protected</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}If set to `true`, the variable will be passed only to pipelines running on protected branches and tags. Defaults to `false`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Value</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The value of the variable.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Variable<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The type of a variable. Available types are: env_var (default) and file.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Group</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name or id of the group to add the hook to.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Key</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the variable.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Protected</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}If set to `true`, the variable will be passed only to pipelines running on protected branches and tags. Defaults to `false`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Value</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The value of the variable.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Variable<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The type of a variable. Available types are: env_var (default) and file.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>group</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name or id of the group to add the hook to.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>key</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the variable.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>protected</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}If set to `true`, the variable will be passed only to pipelines running on protected branches and tags. Defaults to `false`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>value</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The value of the variable.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>variable<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The type of a variable. Available types are: env_var (default) and file.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>group</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name or id of the group to add the hook to.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>key</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the variable.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>protected</span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
@@ -541,17 +330,8 @@ The following output properties are available:
     <dd>{{% md %}}If set to `true`, the variable will be passed only to pipelines running on protected branches and tags. Defaults to `false`.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span>value</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The value of the variable.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>variable_<wbr>type</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -561,6 +341,8 @@ The following output properties are available:
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 
@@ -588,7 +370,7 @@ Get an existing GroupVariable resource's state with the given name, ID, and opti
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gitlab/Pulumi.Gitlab..GroupVariable.html">GroupVariable</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gitlab/Pulumi.Gitlab..GroupVariableState.html">GroupVariableState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gitlab/Pulumi.Gitlab.GroupVariable.html">GroupVariable</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gitlab/Pulumi.Gitlab..GroupVariableState.html">GroupVariableState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -698,7 +480,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Group</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name or id of the group to add the hook to.
 {{% /md %}}</dd>
@@ -707,7 +489,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the variable.
 {{% /md %}}</dd>
@@ -716,7 +498,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Protected</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to `true`, the variable will be passed only to pipelines running on protected branches and tags. Defaults to `false`.
 {{% /md %}}</dd>
@@ -725,7 +507,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the variable.
 {{% /md %}}</dd>
@@ -734,7 +516,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Variable<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of a variable. Available types are: env_var (default) and file.
 {{% /md %}}</dd>
@@ -750,7 +532,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Group</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name or id of the group to add the hook to.
 {{% /md %}}</dd>
@@ -759,7 +541,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the variable.
 {{% /md %}}</dd>
@@ -768,7 +550,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Protected</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to `true`, the variable will be passed only to pipelines running on protected branches and tags. Defaults to `false`.
 {{% /md %}}</dd>
@@ -777,7 +559,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the variable.
 {{% /md %}}</dd>
@@ -786,7 +568,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Variable<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of a variable. Available types are: env_var (default) and file.
 {{% /md %}}</dd>
@@ -802,7 +584,7 @@ The following state arguments are supported:
             title="Optional">
         <span>group</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name or id of the group to add the hook to.
 {{% /md %}}</dd>
@@ -811,7 +593,7 @@ The following state arguments are supported:
             title="Optional">
         <span>key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the variable.
 {{% /md %}}</dd>
@@ -820,7 +602,7 @@ The following state arguments are supported:
             title="Optional">
         <span>protected</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If set to `true`, the variable will be passed only to pipelines running on protected branches and tags. Defaults to `false`.
 {{% /md %}}</dd>
@@ -829,7 +611,7 @@ The following state arguments are supported:
             title="Optional">
         <span>value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the variable.
 {{% /md %}}</dd>
@@ -838,7 +620,7 @@ The following state arguments are supported:
             title="Optional">
         <span>variable<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of a variable. Available types are: env_var (default) and file.
 {{% /md %}}</dd>

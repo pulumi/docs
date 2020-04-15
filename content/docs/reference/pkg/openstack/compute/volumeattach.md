@@ -130,7 +130,7 @@ to enforce the volume attachments to happen one at a time.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/openstack/compute/#VolumeAttach">VolumeAttach</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/openstack/compute/#VolumeAttachArgs">VolumeAttachArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/openstack/compute/#VolumeAttach">VolumeAttach</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/openstack/compute/#VolumeAttachArgs">VolumeAttachArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -138,11 +138,11 @@ to enforce the volume attachments to happen one at a time.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewVolumeAttach<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/compute?tab=doc#VolumeAttachArgs">VolumeAttachArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/compute?tab=doc#VolumeAttach">VolumeAttach</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewVolumeAttach<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/compute?tab=doc#VolumeAttachArgs">VolumeAttachArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/compute?tab=doc#VolumeAttach">VolumeAttach</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.Openstack.Compute.VolumeAttach.html">VolumeAttach</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.Openstack.Compute.VolumeAttachArgs.html">VolumeAttachArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.Openstack.Compute.VolumeAttach.html">VolumeAttach</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.OpenStack.Compute.VolumeAttachArgs.html">VolumeAttachArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -234,17 +234,6 @@ to enforce the volume attachments to happen one at a time.
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Device</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}See Argument Reference above. _NOTE_: The correctness of this
-information is dependent upon the hypervisor in use. In some cases, this
-should not be used as an authoritative piece of information.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Instance<wbr>Id</span>
@@ -254,11 +243,31 @@ should not be used as an authoritative piece of information.
     <dd>{{% md %}}The ID of the Instance to attach the Volume to.
 {{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>Volume<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Volume to attach to an Instance.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Device</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}See Argument Reference above. _NOTE_: The correctness of this
+information is dependent upon the hypervisor in use. In some cases, this
+should not be used as an authoritative piece of information.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Multiattach</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable attachment of multiattach-capable volumes.
 {{% /md %}}</dd>
@@ -267,21 +276,12 @@ should not be used as an authoritative piece of information.
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 Compute client.
 A Compute client is needed to create a volume attachment. If omitted, the
 `region` argument of the provider is used. Changing this creates a
 new volume attachment.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Volume<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the Volume to attach to an Instance.
 {{% /md %}}</dd>
 
 </dl>
@@ -291,17 +291,6 @@ new volume attachment.
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Device</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}See Argument Reference above. _NOTE_: The correctness of this
-information is dependent upon the hypervisor in use. In some cases, this
-should not be used as an authoritative piece of information.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Instance<wbr>Id</span>
@@ -309,27 +298,6 @@ should not be used as an authoritative piece of information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Instance to attach the Volume to.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Multiattach</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Enable attachment of multiattach-capable volumes.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The region in which to obtain the V2 Compute client.
-A Compute client is needed to create a volume attachment. If omitted, the
-`region` argument of the provider is used. Changing this creates a
-new volume attachment.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -341,23 +309,44 @@ new volume attachment.
     <dd>{{% md %}}The ID of the Volume to attach to an Instance.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>Device</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}See Argument Reference above. _NOTE_: The correctness of this
+information is dependent upon the hypervisor in use. In some cases, this
+should not be used as an authoritative piece of information.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Multiattach</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable attachment of multiattach-capable volumes.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Region</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The region in which to obtain the V2 Compute client.
+A Compute client is needed to create a volume attachment. If omitted, the
+`region` argument of the provider is used. Changing this creates a
+new volume attachment.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>device</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}See Argument Reference above. _NOTE_: The correctness of this
-information is dependent upon the hypervisor in use. In some cases, this
-should not be used as an authoritative piece of information.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -366,27 +355,6 @@ should not be used as an authoritative piece of information.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Instance to attach the Volume to.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>multiattach</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Enable attachment of multiattach-capable volumes.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The region in which to obtain the V2 Compute client.
-A Compute client is needed to create a volume attachment. If omitted, the
-`region` argument of the provider is used. Changing this creates a
-new volume attachment.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -398,12 +366,62 @@ new volume attachment.
     <dd>{{% md %}}The ID of the Volume to attach to an Instance.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>device</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}See Argument Reference above. _NOTE_: The correctness of this
+information is dependent upon the hypervisor in use. In some cases, this
+should not be used as an authoritative piece of information.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>multiattach</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Enable attachment of multiattach-capable volumes.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>region</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The region in which to obtain the V2 Compute client.
+A Compute client is needed to create a volume attachment. If omitted, the
+`region` argument of the provider is used. Changing this creates a
+new volume attachment.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>instance_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Instance to attach the Volume to.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>volume_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Volume to attach to an Instance.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -414,15 +432,6 @@ new volume attachment.
     <dd>{{% md %}}See Argument Reference above. _NOTE_: The correctness of this
 information is dependent upon the hypervisor in use. In some cases, this
 should not be used as an authoritative piece of information.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>instance_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The ID of the Instance to attach the Volume to.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -446,257 +455,10 @@ A Compute client is needed to create a volume attachment. If omitted, the
 new volume attachment.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>volume_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The ID of the Volume to attach to an Instance.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
-
-
-
-
-
-## VolumeAttach Output Properties
-
-The following output properties are available:
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Device</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}See Argument Reference above. _NOTE_: The correctness of this
-information is dependent upon the hypervisor in use. In some cases, this
-should not be used as an authoritative piece of information.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Instance<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the Instance to attach the Volume to.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Multiattach</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Enable attachment of multiattach-capable volumes.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The region in which to obtain the V2 Compute client.
-A Compute client is needed to create a volume attachment. If omitted, the
-`region` argument of the provider is used. Changing this creates a
-new volume attachment.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Volume<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the Volume to attach to an Instance.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Device</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}See Argument Reference above. _NOTE_: The correctness of this
-information is dependent upon the hypervisor in use. In some cases, this
-should not be used as an authoritative piece of information.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Instance<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the Instance to attach the Volume to.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Multiattach</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Enable attachment of multiattach-capable volumes.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The region in which to obtain the V2 Compute client.
-A Compute client is needed to create a volume attachment. If omitted, the
-`region` argument of the provider is used. Changing this creates a
-new volume attachment.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Volume<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the Volume to attach to an Instance.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>device</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}See Argument Reference above. _NOTE_: The correctness of this
-information is dependent upon the hypervisor in use. In some cases, this
-should not be used as an authoritative piece of information.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>instance<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the Instance to attach the Volume to.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>multiattach</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Enable attachment of multiattach-capable volumes.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The region in which to obtain the V2 Compute client.
-A Compute client is needed to create a volume attachment. If omitted, the
-`region` argument of the provider is used. Changing this creates a
-new volume attachment.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>volume<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the Volume to attach to an Instance.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>device</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}See Argument Reference above. _NOTE_: The correctness of this
-information is dependent upon the hypervisor in use. In some cases, this
-should not be used as an authoritative piece of information.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>instance_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The ID of the Instance to attach the Volume to.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>multiattach</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Enable attachment of multiattach-capable volumes.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The region in which to obtain the V2 Compute client.
-A Compute client is needed to create a volume attachment. If omitted, the
-`region` argument of the provider is used. Changing this creates a
-new volume attachment.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>volume_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The ID of the Volume to attach to an Instance.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
 
 
 
@@ -834,7 +596,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Device</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above. _NOTE_: The correctness of this
 information is dependent upon the hypervisor in use. In some cases, this
@@ -845,7 +607,7 @@ should not be used as an authoritative piece of information.
             title="Optional">
         <span>Instance<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Instance to attach the Volume to.
 {{% /md %}}</dd>
@@ -854,7 +616,7 @@ should not be used as an authoritative piece of information.
             title="Optional">
         <span>Multiattach</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable attachment of multiattach-capable volumes.
 {{% /md %}}</dd>
@@ -863,7 +625,7 @@ should not be used as an authoritative piece of information.
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 Compute client.
 A Compute client is needed to create a volume attachment. If omitted, the
@@ -875,7 +637,7 @@ new volume attachment.
             title="Optional">
         <span>Volume<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Volume to attach to an Instance.
 {{% /md %}}</dd>
@@ -891,7 +653,7 @@ new volume attachment.
             title="Optional">
         <span>Device</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above. _NOTE_: The correctness of this
 information is dependent upon the hypervisor in use. In some cases, this
@@ -902,7 +664,7 @@ should not be used as an authoritative piece of information.
             title="Optional">
         <span>Instance<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Instance to attach the Volume to.
 {{% /md %}}</dd>
@@ -911,7 +673,7 @@ should not be used as an authoritative piece of information.
             title="Optional">
         <span>Multiattach</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable attachment of multiattach-capable volumes.
 {{% /md %}}</dd>
@@ -920,7 +682,7 @@ should not be used as an authoritative piece of information.
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 Compute client.
 A Compute client is needed to create a volume attachment. If omitted, the
@@ -932,7 +694,7 @@ new volume attachment.
             title="Optional">
         <span>Volume<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Volume to attach to an Instance.
 {{% /md %}}</dd>
@@ -948,7 +710,7 @@ new volume attachment.
             title="Optional">
         <span>device</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above. _NOTE_: The correctness of this
 information is dependent upon the hypervisor in use. In some cases, this
@@ -959,7 +721,7 @@ should not be used as an authoritative piece of information.
             title="Optional">
         <span>instance<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Instance to attach the Volume to.
 {{% /md %}}</dd>
@@ -968,7 +730,7 @@ should not be used as an authoritative piece of information.
             title="Optional">
         <span>multiattach</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable attachment of multiattach-capable volumes.
 {{% /md %}}</dd>
@@ -977,7 +739,7 @@ should not be used as an authoritative piece of information.
             title="Optional">
         <span>region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 Compute client.
 A Compute client is needed to create a volume attachment. If omitted, the
@@ -989,7 +751,7 @@ new volume attachment.
             title="Optional">
         <span>volume<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Volume to attach to an Instance.
 {{% /md %}}</dd>

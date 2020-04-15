@@ -68,7 +68,7 @@ const example = pulumi.output(aws.ec2transitgateway.getRouteTable({
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupRouteTable<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2transitgateway?tab=doc#LookupRouteTableArgs">LookupRouteTableArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2transitgateway?tab=doc#LookupRouteTableResult">LookupRouteTableResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupRouteTable<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2transitgateway?tab=doc#LookupRouteTableArgs">LookupRouteTableArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2transitgateway?tab=doc#LookupRouteTableResult">LookupRouteTableResult</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -91,7 +91,7 @@ The following arguments are supported:
             title="Optional">
         <span>Filters</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getroutetablefilter">List&lt;Get<wbr>Route<wbr>Table<wbr>Filter<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#getroutetablefilter">List&lt;Get<wbr>Route<wbr>Table<wbr>Filter<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more configuration blocks containing name-values filters. Detailed below.
 {{% /md %}}</dd>
@@ -100,7 +100,7 @@ The following arguments are supported:
             title="Optional">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of the EC2 Transit Gateway Route Table.
 {{% /md %}}</dd>
@@ -109,7 +109,7 @@ The following arguments are supported:
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Key-value tags for the EC2 Transit Gateway Route Table
 {{% /md %}}</dd>
@@ -134,7 +134,7 @@ The following arguments are supported:
             title="Optional">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of the EC2 Transit Gateway Route Table.
 {{% /md %}}</dd>
@@ -159,7 +159,7 @@ The following arguments are supported:
             title="Optional">
         <span>filters</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getroutetablefilter">Get<wbr>Route<wbr>Table<wbr>Filter[]?</a></span>
+        <span class="property-type"><a href="#getroutetablefilter">Get<wbr>Route<wbr>Table<wbr>Filter[]</a></span>
     </dt>
     <dd>{{% md %}}One or more configuration blocks containing name-values filters. Detailed below.
 {{% /md %}}</dd>
@@ -168,7 +168,7 @@ The following arguments are supported:
             title="Optional">
         <span>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of the EC2 Transit Gateway Route Table.
 {{% /md %}}</dd>
@@ -177,7 +177,7 @@ The following arguments are supported:
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Key-value tags for the EC2 Transit Gateway Route Table
 {{% /md %}}</dd>
@@ -256,26 +256,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Filters</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getroutetablefilter">List&lt;Get<wbr>Route<wbr>Table<wbr>Filter&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}EC2 Transit Gateway Route Table identifier
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Key-value tags for the EC2 Transit Gateway Route Table
 {{% /md %}}</dd>
@@ -287,6 +270,23 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}EC2 Transit Gateway identifier
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Filters</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getroutetablefilter">List&lt;Get<wbr>Route<wbr>Table<wbr>Filter&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}EC2 Transit Gateway Route Table identifier
 {{% /md %}}</dd>
 
 </dl>
@@ -316,23 +316,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Filters</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getroutetablefilter">[]Get<wbr>Route<wbr>Table<wbr>Filter</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}EC2 Transit Gateway Route Table identifier
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Tags</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
@@ -347,6 +330,23 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}EC2 Transit Gateway identifier
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Filters</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getroutetablefilter">[]Get<wbr>Route<wbr>Table<wbr>Filter</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}EC2 Transit Gateway Route Table identifier
 {{% /md %}}</dd>
 
 </dl>
@@ -376,23 +376,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>filters</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getroutetablefilter">Get<wbr>Route<wbr>Table<wbr>Filter[]?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}EC2 Transit Gateway Route Table identifier
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>tags</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
@@ -407,6 +390,23 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}EC2 Transit Gateway identifier
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>filters</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getroutetablefilter">Get<wbr>Route<wbr>Table<wbr>Filter[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}EC2 Transit Gateway Route Table identifier
 {{% /md %}}</dd>
 
 </dl>
@@ -436,23 +436,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>filters</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getroutetablefilter">List[Get<wbr>Route<wbr>Table<wbr>Filter]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}EC2 Transit Gateway Route Table identifier
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>tags</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
@@ -467,6 +450,23 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}EC2 Transit Gateway identifier
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>filters</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getroutetablefilter">List[Get<wbr>Route<wbr>Table<wbr>Filter]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}EC2 Transit Gateway Route Table identifier
 {{% /md %}}</dd>
 
 </dl>
@@ -509,7 +509,7 @@ The following output properties are available:
             title="Required">
         <span>Values</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of one or more values for the filter.
 {{% /md %}}</dd>

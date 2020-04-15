@@ -41,7 +41,7 @@ const example = pulumi.output(okta.group.getGroup({
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupGroup<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/go/okta/group?tab=doc#LookupGroupArgs">LookupGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/go/okta/group?tab=doc#LookupGroupResult">LookupGroupResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupGroup<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/go/okta/group?tab=doc#LookupGroupArgs">LookupGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/go/okta/group?tab=doc#LookupGroupResult">LookupGroupResult</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -60,15 +60,6 @@ The following arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Include<wbr>Users</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}whether or not to retrieve all member ids.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Name</span>
@@ -76,6 +67,15 @@ The following arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}name of group to retrieve.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Include<wbr>Users</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}whether or not to retrieve all member ids.
 {{% /md %}}</dd>
 
 </dl>
@@ -85,15 +85,6 @@ The following arguments are supported:
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Include<wbr>Users</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}whether or not to retrieve all member ids.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Name</span>
@@ -103,21 +94,21 @@ The following arguments are supported:
     <dd>{{% md %}}name of group to retrieve.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>Include<wbr>Users</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}whether or not to retrieve all member ids.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>include<wbr>Users</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}whether or not to retrieve all member ids.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -128,21 +119,21 @@ The following arguments are supported:
     <dd>{{% md %}}name of group to retrieve.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>include<wbr>Users</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}whether or not to retrieve all member ids.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>include_<wbr>users</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}whether or not to retrieve all member ids.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -151,6 +142,15 @@ The following arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}name of group to retrieve.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>include_<wbr>users</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}whether or not to retrieve all member ids.
 {{% /md %}}</dd>
 
 </dl>
@@ -193,14 +193,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Include<wbr>Users</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -212,10 +204,18 @@ The following output properties are available:
             title="">
         <span>Users</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}user ids that are members of this group, only included if `include_users` is set to `true`.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Include<wbr>Users</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -244,14 +244,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Include<wbr>Users</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -267,6 +259,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}user ids that are members of this group, only included if `include_users` is set to `true`.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Include<wbr>Users</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -295,14 +295,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>include<wbr>Users</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -318,6 +310,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}user ids that are members of this group, only included if `include_users` is set to `true`.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>include<wbr>Users</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -346,14 +346,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>include_<wbr>users</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -369,6 +361,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}user ids that are members of this group, only included if `include_users` is set to `true`.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>include_<wbr>users</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

@@ -39,7 +39,7 @@ const example = new okta.policy.RuleIdpDiscovery("example", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/okta/policy/#RuleIdpDiscovery">RuleIdpDiscovery</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/okta/policy/#RuleIdpDiscoveryArgs">RuleIdpDiscoveryArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/okta/policy/#RuleIdpDiscovery">RuleIdpDiscovery</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/okta/policy/#RuleIdpDiscoveryArgs">RuleIdpDiscoveryArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -47,7 +47,7 @@ const example = new okta.policy.RuleIdpDiscovery("example", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewRuleIdpDiscovery<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/go/okta/policy?tab=doc#RuleIdpDiscoveryArgs">RuleIdpDiscoveryArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/go/okta/policy?tab=doc#RuleIdpDiscovery">RuleIdpDiscovery</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewRuleIdpDiscovery<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/go/okta/policy?tab=doc#RuleIdpDiscoveryArgs">RuleIdpDiscoveryArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/go/okta/policy?tab=doc#RuleIdpDiscovery">RuleIdpDiscovery</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -143,84 +143,6 @@ const example = new okta.policy.RuleIdpDiscovery("example", {
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>App<wbr>Excludes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ruleidpdiscoveryappexclude">List&lt;Rule<wbr>Idp<wbr>Discovery<wbr>App<wbr>Exclude<wbr>Args&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}Applications to exclude in discovery rule
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>App<wbr>Includes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ruleidpdiscoveryappinclude">List&lt;Rule<wbr>Idp<wbr>Discovery<wbr>App<wbr>Include<wbr>Args&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}Applications to include in discovery rule
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Idp<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Idp<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Policy Rule Name.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Network<wbr>Connection</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Network selection mode: `"ANYWHERE"`, `"ZONE"`, `"ON_NETWORK"`, or `"OFF_NETWORK"`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Network<wbr>Excludes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}The network zones to exclude. Conflicts with `network_includes`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Network<wbr>Includes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}The network zones to include. Conflicts with `network_excludes`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Platform<wbr>Includes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ruleidpdiscoveryplatforminclude">List&lt;Rule<wbr>Idp<wbr>Discovery<wbr>Platform<wbr>Include<wbr>Args&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Policyid</span>
@@ -232,9 +154,87 @@ const example = new okta.policy.RuleIdpDiscovery("example", {
 
     <dt class="property-optional"
             title="Optional">
+        <span>App<wbr>Excludes</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#ruleidpdiscoveryappexclude">List&lt;Rule<wbr>Idp<wbr>Discovery<wbr>App<wbr>Exclude<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Applications to exclude in discovery rule
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>App<wbr>Includes</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#ruleidpdiscoveryappinclude">List&lt;Rule<wbr>Idp<wbr>Discovery<wbr>App<wbr>Include<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Applications to include in discovery rule
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Idp<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Idp<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Policy Rule Name.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Network<wbr>Connection</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Network selection mode: `"ANYWHERE"`, `"ZONE"`, `"ON_NETWORK"`, or `"OFF_NETWORK"`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Network<wbr>Excludes</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The network zones to exclude. Conflicts with `network_includes`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Network<wbr>Includes</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The network zones to include. Conflicts with `network_excludes`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Platform<wbr>Includes</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#ruleidpdiscoveryplatforminclude">List&lt;Rule<wbr>Idp<wbr>Discovery<wbr>Platform<wbr>Include<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Priority</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Policy Rule Priority, this attribute can be set to a valid priority. To avoid endless diff situation we error if an invalid priority is provided. API defaults it to the last/lowest if not there.
 {{% /md %}}</dd>
@@ -243,7 +243,7 @@ const example = new okta.policy.RuleIdpDiscovery("example", {
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy Rule Status: `"ACTIVE"` or `"INACTIVE"`.
 {{% /md %}}</dd>
@@ -252,7 +252,7 @@ const example = new okta.policy.RuleIdpDiscovery("example", {
             title="Optional">
         <span>User<wbr>Identifier<wbr>Attribute</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -260,7 +260,7 @@ const example = new okta.policy.RuleIdpDiscovery("example", {
             title="Optional">
         <span>User<wbr>Identifier<wbr>Patterns</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ruleidpdiscoveryuseridentifierpattern">List&lt;Rule<wbr>Idp<wbr>Discovery<wbr>User<wbr>Identifier<wbr>Pattern<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#ruleidpdiscoveryuseridentifierpattern">List&lt;Rule<wbr>Idp<wbr>Discovery<wbr>User<wbr>Identifier<wbr>Pattern<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -268,7 +268,7 @@ const example = new okta.policy.RuleIdpDiscovery("example", {
             title="Optional">
         <span>User<wbr>Identifier<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -278,6 +278,15 @@ const example = new okta.policy.RuleIdpDiscovery("example", {
 
 {{% choosable language go %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Policyid</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Policy ID.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -301,7 +310,7 @@ const example = new okta.policy.RuleIdpDiscovery("example", {
             title="Optional">
         <span>Idp<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -309,7 +318,7 @@ const example = new okta.policy.RuleIdpDiscovery("example", {
             title="Optional">
         <span>Idp<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -317,7 +326,7 @@ const example = new okta.policy.RuleIdpDiscovery("example", {
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy Rule Name.
 {{% /md %}}</dd>
@@ -326,7 +335,7 @@ const example = new okta.policy.RuleIdpDiscovery("example", {
             title="Optional">
         <span>Network<wbr>Connection</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Network selection mode: `"ANYWHERE"`, `"ZONE"`, `"ON_NETWORK"`, or `"OFF_NETWORK"`.
 {{% /md %}}</dd>
@@ -357,20 +366,11 @@ const example = new okta.policy.RuleIdpDiscovery("example", {
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>Policyid</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Policy ID.
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>Priority</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Policy Rule Priority, this attribute can be set to a valid priority. To avoid endless diff situation we error if an invalid priority is provided. API defaults it to the last/lowest if not there.
 {{% /md %}}</dd>
@@ -379,7 +379,7 @@ const example = new okta.policy.RuleIdpDiscovery("example", {
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy Rule Status: `"ACTIVE"` or `"INACTIVE"`.
 {{% /md %}}</dd>
@@ -388,7 +388,7 @@ const example = new okta.policy.RuleIdpDiscovery("example", {
             title="Optional">
         <span>User<wbr>Identifier<wbr>Attribute</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -404,7 +404,7 @@ const example = new okta.policy.RuleIdpDiscovery("example", {
             title="Optional">
         <span>User<wbr>Identifier<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -414,84 +414,6 @@ const example = new okta.policy.RuleIdpDiscovery("example", {
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>app<wbr>Excludes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ruleidpdiscoveryappexclude">Rule<wbr>Idp<wbr>Discovery<wbr>App<wbr>Exclude[]?</a></span>
-    </dt>
-    <dd>{{% md %}}Applications to exclude in discovery rule
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>app<wbr>Includes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ruleidpdiscoveryappinclude">Rule<wbr>Idp<wbr>Discovery<wbr>App<wbr>Include[]?</a></span>
-    </dt>
-    <dd>{{% md %}}Applications to include in discovery rule
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>idp<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>idp<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Policy Rule Name.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>network<wbr>Connection</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Network selection mode: `"ANYWHERE"`, `"ZONE"`, `"ON_NETWORK"`, or `"OFF_NETWORK"`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>network<wbr>Excludes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}The network zones to exclude. Conflicts with `network_includes`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>network<wbr>Includes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}The network zones to include. Conflicts with `network_excludes`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>platform<wbr>Includes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ruleidpdiscoveryplatforminclude">Rule<wbr>Idp<wbr>Discovery<wbr>Platform<wbr>Include[]?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -504,9 +426,87 @@ const example = new okta.policy.RuleIdpDiscovery("example", {
 
     <dt class="property-optional"
             title="Optional">
+        <span>app<wbr>Excludes</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#ruleidpdiscoveryappexclude">Rule<wbr>Idp<wbr>Discovery<wbr>App<wbr>Exclude[]</a></span>
+    </dt>
+    <dd>{{% md %}}Applications to exclude in discovery rule
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>app<wbr>Includes</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#ruleidpdiscoveryappinclude">Rule<wbr>Idp<wbr>Discovery<wbr>App<wbr>Include[]</a></span>
+    </dt>
+    <dd>{{% md %}}Applications to include in discovery rule
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>idp<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>idp<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Policy Rule Name.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>network<wbr>Connection</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Network selection mode: `"ANYWHERE"`, `"ZONE"`, `"ON_NETWORK"`, or `"OFF_NETWORK"`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>network<wbr>Excludes</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}The network zones to exclude. Conflicts with `network_includes`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>network<wbr>Includes</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}The network zones to include. Conflicts with `network_excludes`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>platform<wbr>Includes</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#ruleidpdiscoveryplatforminclude">Rule<wbr>Idp<wbr>Discovery<wbr>Platform<wbr>Include[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>priority</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Policy Rule Priority, this attribute can be set to a valid priority. To avoid endless diff situation we error if an invalid priority is provided. API defaults it to the last/lowest if not there.
 {{% /md %}}</dd>
@@ -515,7 +515,7 @@ const example = new okta.policy.RuleIdpDiscovery("example", {
             title="Optional">
         <span>status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy Rule Status: `"ACTIVE"` or `"INACTIVE"`.
 {{% /md %}}</dd>
@@ -524,7 +524,7 @@ const example = new okta.policy.RuleIdpDiscovery("example", {
             title="Optional">
         <span>user<wbr>Identifier<wbr>Attribute</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -532,7 +532,7 @@ const example = new okta.policy.RuleIdpDiscovery("example", {
             title="Optional">
         <span>user<wbr>Identifier<wbr>Patterns</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ruleidpdiscoveryuseridentifierpattern">Rule<wbr>Idp<wbr>Discovery<wbr>User<wbr>Identifier<wbr>Pattern[]?</a></span>
+        <span class="property-type"><a href="#ruleidpdiscoveryuseridentifierpattern">Rule<wbr>Idp<wbr>Discovery<wbr>User<wbr>Identifier<wbr>Pattern[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -540,7 +540,7 @@ const example = new okta.policy.RuleIdpDiscovery("example", {
             title="Optional">
         <span>user<wbr>Identifier<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -550,6 +550,15 @@ const example = new okta.policy.RuleIdpDiscovery("example", {
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>policyid</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Policy ID.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -629,15 +638,6 @@ const example = new okta.policy.RuleIdpDiscovery("example", {
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>policyid</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Policy ID.
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>priority</span>
@@ -684,560 +684,6 @@ const example = new okta.policy.RuleIdpDiscovery("example", {
 {{% /choosable %}}
 
 
-
-
-
-
-
-## RuleIdpDiscovery Output Properties
-
-The following output properties are available:
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>App<wbr>Excludes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ruleidpdiscoveryappexclude">List&lt;Rule<wbr>Idp<wbr>Discovery<wbr>App<wbr>Exclude&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}Applications to exclude in discovery rule
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>App<wbr>Includes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ruleidpdiscoveryappinclude">List&lt;Rule<wbr>Idp<wbr>Discovery<wbr>App<wbr>Include&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}Applications to include in discovery rule
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Idp<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Idp<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Policy Rule Name.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Network<wbr>Connection</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Network selection mode: `"ANYWHERE"`, `"ZONE"`, `"ON_NETWORK"`, or `"OFF_NETWORK"`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Network<wbr>Excludes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}The network zones to exclude. Conflicts with `network_includes`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Network<wbr>Includes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}The network zones to include. Conflicts with `network_excludes`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Platform<wbr>Includes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ruleidpdiscoveryplatforminclude">List&lt;Rule<wbr>Idp<wbr>Discovery<wbr>Platform<wbr>Include&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Policyid</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Policy ID.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Priority</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}Policy Rule Priority, this attribute can be set to a valid priority. To avoid endless diff situation we error if an invalid priority is provided. API defaults it to the last/lowest if not there.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Status</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Policy Rule Status: `"ACTIVE"` or `"INACTIVE"`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>User<wbr>Identifier<wbr>Attribute</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>User<wbr>Identifier<wbr>Patterns</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ruleidpdiscoveryuseridentifierpattern">List&lt;Rule<wbr>Idp<wbr>Discovery<wbr>User<wbr>Identifier<wbr>Pattern&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>User<wbr>Identifier<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>App<wbr>Excludes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ruleidpdiscoveryappexclude">[]Rule<wbr>Idp<wbr>Discovery<wbr>App<wbr>Exclude</a></span>
-    </dt>
-    <dd>{{% md %}}Applications to exclude in discovery rule
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>App<wbr>Includes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ruleidpdiscoveryappinclude">[]Rule<wbr>Idp<wbr>Discovery<wbr>App<wbr>Include</a></span>
-    </dt>
-    <dd>{{% md %}}Applications to include in discovery rule
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Idp<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Idp<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Policy Rule Name.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Network<wbr>Connection</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Network selection mode: `"ANYWHERE"`, `"ZONE"`, `"ON_NETWORK"`, or `"OFF_NETWORK"`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Network<wbr>Excludes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}The network zones to exclude. Conflicts with `network_includes`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Network<wbr>Includes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}The network zones to include. Conflicts with `network_excludes`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Platform<wbr>Includes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ruleidpdiscoveryplatforminclude">[]Rule<wbr>Idp<wbr>Discovery<wbr>Platform<wbr>Include</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Policyid</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Policy ID.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Priority</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}Policy Rule Priority, this attribute can be set to a valid priority. To avoid endless diff situation we error if an invalid priority is provided. API defaults it to the last/lowest if not there.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Status</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Policy Rule Status: `"ACTIVE"` or `"INACTIVE"`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>User<wbr>Identifier<wbr>Attribute</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>User<wbr>Identifier<wbr>Patterns</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ruleidpdiscoveryuseridentifierpattern">[]Rule<wbr>Idp<wbr>Discovery<wbr>User<wbr>Identifier<wbr>Pattern</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>User<wbr>Identifier<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>app<wbr>Excludes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ruleidpdiscoveryappexclude">Rule<wbr>Idp<wbr>Discovery<wbr>App<wbr>Exclude[]?</a></span>
-    </dt>
-    <dd>{{% md %}}Applications to exclude in discovery rule
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>app<wbr>Includes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ruleidpdiscoveryappinclude">Rule<wbr>Idp<wbr>Discovery<wbr>App<wbr>Include[]?</a></span>
-    </dt>
-    <dd>{{% md %}}Applications to include in discovery rule
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>idp<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>idp<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Policy Rule Name.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>network<wbr>Connection</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Network selection mode: `"ANYWHERE"`, `"ZONE"`, `"ON_NETWORK"`, or `"OFF_NETWORK"`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>network<wbr>Excludes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}The network zones to exclude. Conflicts with `network_includes`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>network<wbr>Includes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}The network zones to include. Conflicts with `network_excludes`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>platform<wbr>Includes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ruleidpdiscoveryplatforminclude">Rule<wbr>Idp<wbr>Discovery<wbr>Platform<wbr>Include[]?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>policyid</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Policy ID.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>priority</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}Policy Rule Priority, this attribute can be set to a valid priority. To avoid endless diff situation we error if an invalid priority is provided. API defaults it to the last/lowest if not there.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>status</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Policy Rule Status: `"ACTIVE"` or `"INACTIVE"`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>user<wbr>Identifier<wbr>Attribute</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>user<wbr>Identifier<wbr>Patterns</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ruleidpdiscoveryuseridentifierpattern">Rule<wbr>Idp<wbr>Discovery<wbr>User<wbr>Identifier<wbr>Pattern[]?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>user<wbr>Identifier<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>app_<wbr>excludes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ruleidpdiscoveryappexclude">List[Rule<wbr>Idp<wbr>Discovery<wbr>App<wbr>Exclude]</a></span>
-    </dt>
-    <dd>{{% md %}}Applications to exclude in discovery rule
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>app_<wbr>includes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ruleidpdiscoveryappinclude">List[Rule<wbr>Idp<wbr>Discovery<wbr>App<wbr>Include]</a></span>
-    </dt>
-    <dd>{{% md %}}Applications to include in discovery rule
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>idp_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>idp_<wbr>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Policy Rule Name.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>network_<wbr>connection</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Network selection mode: `"ANYWHERE"`, `"ZONE"`, `"ON_NETWORK"`, or `"OFF_NETWORK"`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>network_<wbr>excludes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}The network zones to exclude. Conflicts with `network_includes`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>network_<wbr>includes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}The network zones to include. Conflicts with `network_excludes`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>platform_<wbr>includes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ruleidpdiscoveryplatforminclude">List[Rule<wbr>Idp<wbr>Discovery<wbr>Platform<wbr>Include]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>policyid</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Policy ID.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>priority</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}Policy Rule Priority, this attribute can be set to a valid priority. To avoid endless diff situation we error if an invalid priority is provided. API defaults it to the last/lowest if not there.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>status</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Policy Rule Status: `"ACTIVE"` or `"INACTIVE"`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>user_<wbr>identifier_<wbr>attribute</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>user_<wbr>identifier_<wbr>patterns</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ruleidpdiscoveryuseridentifierpattern">List[Rule<wbr>Idp<wbr>Discovery<wbr>User<wbr>Identifier<wbr>Pattern]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>user_<wbr>identifier_<wbr>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
 
 
 
@@ -1375,7 +821,7 @@ The following state arguments are supported:
             title="Optional">
         <span>App<wbr>Excludes</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ruleidpdiscoveryappexclude">List&lt;Rule<wbr>Idp<wbr>Discovery<wbr>App<wbr>Exclude<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#ruleidpdiscoveryappexclude">List&lt;Rule<wbr>Idp<wbr>Discovery<wbr>App<wbr>Exclude<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Applications to exclude in discovery rule
 {{% /md %}}</dd>
@@ -1384,7 +830,7 @@ The following state arguments are supported:
             title="Optional">
         <span>App<wbr>Includes</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ruleidpdiscoveryappinclude">List&lt;Rule<wbr>Idp<wbr>Discovery<wbr>App<wbr>Include<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#ruleidpdiscoveryappinclude">List&lt;Rule<wbr>Idp<wbr>Discovery<wbr>App<wbr>Include<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Applications to include in discovery rule
 {{% /md %}}</dd>
@@ -1393,7 +839,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Idp<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1401,7 +847,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Idp<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1409,7 +855,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy Rule Name.
 {{% /md %}}</dd>
@@ -1418,7 +864,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Network<wbr>Connection</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Network selection mode: `"ANYWHERE"`, `"ZONE"`, `"ON_NETWORK"`, or `"OFF_NETWORK"`.
 {{% /md %}}</dd>
@@ -1427,7 +873,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Network<wbr>Excludes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The network zones to exclude. Conflicts with `network_includes`.
 {{% /md %}}</dd>
@@ -1436,7 +882,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Network<wbr>Includes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The network zones to include. Conflicts with `network_excludes`.
 {{% /md %}}</dd>
@@ -1445,7 +891,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Platform<wbr>Includes</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ruleidpdiscoveryplatforminclude">List&lt;Rule<wbr>Idp<wbr>Discovery<wbr>Platform<wbr>Include<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#ruleidpdiscoveryplatforminclude">List&lt;Rule<wbr>Idp<wbr>Discovery<wbr>Platform<wbr>Include<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1453,7 +899,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Policyid</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy ID.
 {{% /md %}}</dd>
@@ -1462,7 +908,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Priority</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Policy Rule Priority, this attribute can be set to a valid priority. To avoid endless diff situation we error if an invalid priority is provided. API defaults it to the last/lowest if not there.
 {{% /md %}}</dd>
@@ -1471,7 +917,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy Rule Status: `"ACTIVE"` or `"INACTIVE"`.
 {{% /md %}}</dd>
@@ -1480,7 +926,7 @@ The following state arguments are supported:
             title="Optional">
         <span>User<wbr>Identifier<wbr>Attribute</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1488,7 +934,7 @@ The following state arguments are supported:
             title="Optional">
         <span>User<wbr>Identifier<wbr>Patterns</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ruleidpdiscoveryuseridentifierpattern">List&lt;Rule<wbr>Idp<wbr>Discovery<wbr>User<wbr>Identifier<wbr>Pattern<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#ruleidpdiscoveryuseridentifierpattern">List&lt;Rule<wbr>Idp<wbr>Discovery<wbr>User<wbr>Identifier<wbr>Pattern<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1496,7 +942,7 @@ The following state arguments are supported:
             title="Optional">
         <span>User<wbr>Identifier<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1529,7 +975,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Idp<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1537,7 +983,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Idp<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1545,7 +991,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy Rule Name.
 {{% /md %}}</dd>
@@ -1554,7 +1000,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Network<wbr>Connection</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Network selection mode: `"ANYWHERE"`, `"ZONE"`, `"ON_NETWORK"`, or `"OFF_NETWORK"`.
 {{% /md %}}</dd>
@@ -1589,7 +1035,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Policyid</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy ID.
 {{% /md %}}</dd>
@@ -1598,7 +1044,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Priority</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Policy Rule Priority, this attribute can be set to a valid priority. To avoid endless diff situation we error if an invalid priority is provided. API defaults it to the last/lowest if not there.
 {{% /md %}}</dd>
@@ -1607,7 +1053,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy Rule Status: `"ACTIVE"` or `"INACTIVE"`.
 {{% /md %}}</dd>
@@ -1616,7 +1062,7 @@ The following state arguments are supported:
             title="Optional">
         <span>User<wbr>Identifier<wbr>Attribute</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1632,7 +1078,7 @@ The following state arguments are supported:
             title="Optional">
         <span>User<wbr>Identifier<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1647,7 +1093,7 @@ The following state arguments are supported:
             title="Optional">
         <span>app<wbr>Excludes</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ruleidpdiscoveryappexclude">Rule<wbr>Idp<wbr>Discovery<wbr>App<wbr>Exclude[]?</a></span>
+        <span class="property-type"><a href="#ruleidpdiscoveryappexclude">Rule<wbr>Idp<wbr>Discovery<wbr>App<wbr>Exclude[]</a></span>
     </dt>
     <dd>{{% md %}}Applications to exclude in discovery rule
 {{% /md %}}</dd>
@@ -1656,7 +1102,7 @@ The following state arguments are supported:
             title="Optional">
         <span>app<wbr>Includes</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ruleidpdiscoveryappinclude">Rule<wbr>Idp<wbr>Discovery<wbr>App<wbr>Include[]?</a></span>
+        <span class="property-type"><a href="#ruleidpdiscoveryappinclude">Rule<wbr>Idp<wbr>Discovery<wbr>App<wbr>Include[]</a></span>
     </dt>
     <dd>{{% md %}}Applications to include in discovery rule
 {{% /md %}}</dd>
@@ -1665,7 +1111,7 @@ The following state arguments are supported:
             title="Optional">
         <span>idp<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1673,7 +1119,7 @@ The following state arguments are supported:
             title="Optional">
         <span>idp<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1681,7 +1127,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy Rule Name.
 {{% /md %}}</dd>
@@ -1690,7 +1136,7 @@ The following state arguments are supported:
             title="Optional">
         <span>network<wbr>Connection</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Network selection mode: `"ANYWHERE"`, `"ZONE"`, `"ON_NETWORK"`, or `"OFF_NETWORK"`.
 {{% /md %}}</dd>
@@ -1699,7 +1145,7 @@ The following state arguments are supported:
             title="Optional">
         <span>network<wbr>Excludes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The network zones to exclude. Conflicts with `network_includes`.
 {{% /md %}}</dd>
@@ -1708,7 +1154,7 @@ The following state arguments are supported:
             title="Optional">
         <span>network<wbr>Includes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The network zones to include. Conflicts with `network_excludes`.
 {{% /md %}}</dd>
@@ -1717,7 +1163,7 @@ The following state arguments are supported:
             title="Optional">
         <span>platform<wbr>Includes</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ruleidpdiscoveryplatforminclude">Rule<wbr>Idp<wbr>Discovery<wbr>Platform<wbr>Include[]?</a></span>
+        <span class="property-type"><a href="#ruleidpdiscoveryplatforminclude">Rule<wbr>Idp<wbr>Discovery<wbr>Platform<wbr>Include[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1725,7 +1171,7 @@ The following state arguments are supported:
             title="Optional">
         <span>policyid</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy ID.
 {{% /md %}}</dd>
@@ -1734,7 +1180,7 @@ The following state arguments are supported:
             title="Optional">
         <span>priority</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Policy Rule Priority, this attribute can be set to a valid priority. To avoid endless diff situation we error if an invalid priority is provided. API defaults it to the last/lowest if not there.
 {{% /md %}}</dd>
@@ -1743,7 +1189,7 @@ The following state arguments are supported:
             title="Optional">
         <span>status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy Rule Status: `"ACTIVE"` or `"INACTIVE"`.
 {{% /md %}}</dd>
@@ -1752,7 +1198,7 @@ The following state arguments are supported:
             title="Optional">
         <span>user<wbr>Identifier<wbr>Attribute</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1760,7 +1206,7 @@ The following state arguments are supported:
             title="Optional">
         <span>user<wbr>Identifier<wbr>Patterns</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ruleidpdiscoveryuseridentifierpattern">Rule<wbr>Idp<wbr>Discovery<wbr>User<wbr>Identifier<wbr>Pattern[]?</a></span>
+        <span class="property-type"><a href="#ruleidpdiscoveryuseridentifierpattern">Rule<wbr>Idp<wbr>Discovery<wbr>User<wbr>Identifier<wbr>Pattern[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1768,7 +1214,7 @@ The following state arguments are supported:
             title="Optional">
         <span>user<wbr>Identifier<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1941,7 +1387,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the Rule.
 {{% /md %}}</dd>
@@ -1950,7 +1396,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy Rule Name.
 {{% /md %}}</dd>
@@ -1959,7 +1405,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1974,7 +1420,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the Rule.
 {{% /md %}}</dd>
@@ -1983,7 +1429,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy Rule Name.
 {{% /md %}}</dd>
@@ -1992,7 +1438,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2007,7 +1453,7 @@ The following state arguments are supported:
             title="Optional">
         <span>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the Rule.
 {{% /md %}}</dd>
@@ -2016,7 +1462,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy Rule Name.
 {{% /md %}}</dd>
@@ -2025,7 +1471,7 @@ The following state arguments are supported:
             title="Optional">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2088,7 +1534,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the Rule.
 {{% /md %}}</dd>
@@ -2097,7 +1543,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy Rule Name.
 {{% /md %}}</dd>
@@ -2106,7 +1552,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2121,7 +1567,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the Rule.
 {{% /md %}}</dd>
@@ -2130,7 +1576,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy Rule Name.
 {{% /md %}}</dd>
@@ -2139,7 +1585,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2154,7 +1600,7 @@ The following state arguments are supported:
             title="Optional">
         <span>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the Rule.
 {{% /md %}}</dd>
@@ -2163,7 +1609,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy Rule Name.
 {{% /md %}}</dd>
@@ -2172,7 +1618,7 @@ The following state arguments are supported:
             title="Optional">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2235,7 +1681,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Os<wbr>Expression</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2243,7 +1689,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Os<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2251,7 +1697,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2266,7 +1712,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Os<wbr>Expression</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2274,7 +1720,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Os<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2282,7 +1728,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2297,7 +1743,7 @@ The following state arguments are supported:
             title="Optional">
         <span>os<wbr>Expression</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2305,7 +1751,7 @@ The following state arguments are supported:
             title="Optional">
         <span>os<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2313,7 +1759,7 @@ The following state arguments are supported:
             title="Optional">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2374,7 +1820,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Match<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2382,7 +1828,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2397,7 +1843,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Match<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2405,7 +1851,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2420,7 +1866,7 @@ The following state arguments are supported:
             title="Optional">
         <span>match<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2428,7 +1874,7 @@ The following state arguments are supported:
             title="Optional">
         <span>value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

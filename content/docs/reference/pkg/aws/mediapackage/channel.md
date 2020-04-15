@@ -32,7 +32,7 @@ const kittens = new aws.mediapackage.Channel("kittens", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/mediapackage/#Channel">Channel</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/mediapackage/#ChannelArgs">ChannelArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/mediapackage/#Channel">Channel</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/mediapackage/#ChannelArgs">ChannelArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -40,11 +40,11 @@ const kittens = new aws.mediapackage.Channel("kittens", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewChannel<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/mediapackage?tab=doc#ChannelArgs">ChannelArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/mediapackage?tab=doc#Channel">Channel</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewChannel<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/mediapackage?tab=doc#ChannelArgs">ChannelArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/mediapackage?tab=doc#Channel">Channel</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Mediapackage.Channel.html">Channel</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.MediaPackage.ChannelArgs.html">ChannelArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.MediaPackage.Channel.html">Channel</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.MediaPackage.ChannelArgs.html">ChannelArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -149,7 +149,7 @@ const kittens = new aws.mediapackage.Channel("kittens", {
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the channel
 {{% /md %}}</dd>
@@ -158,7 +158,7 @@ const kittens = new aws.mediapackage.Channel("kittens", {
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -183,7 +183,7 @@ const kittens = new aws.mediapackage.Channel("kittens", {
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the channel
 {{% /md %}}</dd>
@@ -217,7 +217,7 @@ const kittens = new aws.mediapackage.Channel("kittens", {
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the channel
 {{% /md %}}</dd>
@@ -226,7 +226,7 @@ const kittens = new aws.mediapackage.Channel("kittens", {
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -295,38 +295,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Channel<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A unique identifier describing the channel
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A description of the channel
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Hls<wbr>Ingests</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#channelhlsingest">List&lt;Channel<wbr>Hls<wbr>Ingest&gt;</a></span>
     </dt>
     <dd>{{% md %}}A single item list of HLS ingest information
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
 
 </dl>
@@ -347,38 +320,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Channel<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A unique identifier describing the channel
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A description of the channel
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Hls<wbr>Ingests</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#channelhlsingest">[]Channel<wbr>Hls<wbr>Ingest</a></span>
     </dt>
     <dd>{{% md %}}A single item list of HLS ingest information
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
 
 </dl>
@@ -399,38 +345,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>channel<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A unique identifier describing the channel
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A description of the channel
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>hls<wbr>Ingests</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#channelhlsingest">Channel<wbr>Hls<wbr>Ingest[]</a></span>
     </dt>
     <dd>{{% md %}}A single item list of HLS ingest information
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
 
 </dl>
@@ -451,38 +370,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>channel_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}A unique identifier describing the channel
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}A description of the channel
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>hls_<wbr>ingests</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#channelhlsingest">List[Channel<wbr>Hls<wbr>Ingest]</a></span>
     </dt>
     <dd>{{% md %}}A single item list of HLS ingest information
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
 
 </dl>
@@ -514,7 +406,7 @@ Get an existing Channel resource's state with the given name, ID, and optional e
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Mediapackage.Channel.html">Channel</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Mediapackage.ChannelState.html">ChannelState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.MediaPackage.Channel.html">Channel</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.MediaPackage.ChannelState.html">ChannelState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -624,7 +516,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the channel
 {{% /md %}}</dd>
@@ -633,7 +525,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Channel<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique identifier describing the channel
 {{% /md %}}</dd>
@@ -642,7 +534,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the channel
 {{% /md %}}</dd>
@@ -651,7 +543,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Hls<wbr>Ingests</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#channelhlsingest">List&lt;Channel<wbr>Hls<wbr>Ingest<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#channelhlsingest">List&lt;Channel<wbr>Hls<wbr>Ingest<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A single item list of HLS ingest information
 {{% /md %}}</dd>
@@ -660,7 +552,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -676,7 +568,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the channel
 {{% /md %}}</dd>
@@ -685,7 +577,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Channel<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique identifier describing the channel
 {{% /md %}}</dd>
@@ -694,7 +586,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the channel
 {{% /md %}}</dd>
@@ -728,7 +620,7 @@ The following state arguments are supported:
             title="Optional">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the channel
 {{% /md %}}</dd>
@@ -737,7 +629,7 @@ The following state arguments are supported:
             title="Optional">
         <span>channel<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique identifier describing the channel
 {{% /md %}}</dd>
@@ -746,7 +638,7 @@ The following state arguments are supported:
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the channel
 {{% /md %}}</dd>
@@ -755,7 +647,7 @@ The following state arguments are supported:
             title="Optional">
         <span>hls<wbr>Ingests</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#channelhlsingest">Channel<wbr>Hls<wbr>Ingest[]?</a></span>
+        <span class="property-type"><a href="#channelhlsingest">Channel<wbr>Hls<wbr>Ingest[]</a></span>
     </dt>
     <dd>{{% md %}}A single item list of HLS ingest information
 {{% /md %}}</dd>
@@ -764,7 +656,7 @@ The following state arguments are supported:
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -854,7 +746,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Ingest<wbr>Endpoints</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#channelhlsingestingestendpoint">List&lt;Channel<wbr>Hls<wbr>Ingest<wbr>Ingest<wbr>Endpoint<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#channelhlsingestingestendpoint">List&lt;Channel<wbr>Hls<wbr>Ingest<wbr>Ingest<wbr>Endpoint<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of the ingest endpoints
 {{% /md %}}</dd>
@@ -886,7 +778,7 @@ The following state arguments are supported:
             title="Optional">
         <span>ingest<wbr>Endpoints</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#channelhlsingestingestendpoint">Channel<wbr>Hls<wbr>Ingest<wbr>Ingest<wbr>Endpoint[]?</a></span>
+        <span class="property-type"><a href="#channelhlsingestingestendpoint">Channel<wbr>Hls<wbr>Ingest<wbr>Ingest<wbr>Endpoint[]</a></span>
     </dt>
     <dd>{{% md %}}A list of the ingest endpoints
 {{% /md %}}</dd>
@@ -933,7 +825,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password
 {{% /md %}}</dd>
@@ -942,7 +834,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL
 {{% /md %}}</dd>
@@ -951,7 +843,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Username</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The username
 {{% /md %}}</dd>
@@ -967,7 +859,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password
 {{% /md %}}</dd>
@@ -976,7 +868,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL
 {{% /md %}}</dd>
@@ -985,7 +877,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Username</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The username
 {{% /md %}}</dd>
@@ -1001,7 +893,7 @@ The following state arguments are supported:
             title="Optional">
         <span>password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password
 {{% /md %}}</dd>
@@ -1010,7 +902,7 @@ The following state arguments are supported:
             title="Optional">
         <span>url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL
 {{% /md %}}</dd>
@@ -1019,7 +911,7 @@ The following state arguments are supported:
             title="Optional">
         <span>username</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The username
 {{% /md %}}</dd>

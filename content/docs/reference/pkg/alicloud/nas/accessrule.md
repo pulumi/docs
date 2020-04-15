@@ -42,7 +42,7 @@ const fooAccessRule = new alicloud.nas.AccessRule("foo", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/nas/#AccessRule">AccessRule</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/nas/#AccessRuleArgs">AccessRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/nas/#AccessRule">AccessRule</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/nas/#AccessRuleArgs">AccessRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -50,11 +50,11 @@ const fooAccessRule = new alicloud.nas.AccessRule("foo", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewAccessRule<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/nas?tab=doc#AccessRuleArgs">AccessRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/nas?tab=doc#AccessRule">AccessRule</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewAccessRule<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/nas?tab=doc#AccessRuleArgs">AccessRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/nas?tab=doc#AccessRule">AccessRule</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.Nas.AccessRule.html">AccessRule</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.Nas.AccessRuleArgs.html">AccessRuleArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.Nas.AccessRule.html">AccessRule</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.AliCloud.Nas.AccessRuleArgs.html">AccessRuleArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -155,24 +155,6 @@ const fooAccessRule = new alicloud.nas.AccessRule("foo", {
     <dd>{{% md %}}Permission group name.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Priority</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}Priority level. Range: 1-100. Default value: 1.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Rw<wbr>Access<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Read-write permission type: RDWR (default), RDONLY.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Source<wbr>Cidr<wbr>Ip</span>
@@ -184,9 +166,27 @@ const fooAccessRule = new alicloud.nas.AccessRule("foo", {
 
     <dt class="property-optional"
             title="Optional">
+        <span>Priority</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Priority level. Range: 1-100. Default value: 1.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Rw<wbr>Access<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Read-write permission type: RDWR (default), RDONLY.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>User<wbr>Access<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User permission type: no_squash (default), root_squash, all_squash.
 {{% /md %}}</dd>
@@ -207,24 +207,6 @@ const fooAccessRule = new alicloud.nas.AccessRule("foo", {
     <dd>{{% md %}}Permission group name.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Priority</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}Priority level. Range: 1-100. Default value: 1.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Rw<wbr>Access<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Read-write permission type: RDWR (default), RDONLY.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Source<wbr>Cidr<wbr>Ip</span>
@@ -236,9 +218,27 @@ const fooAccessRule = new alicloud.nas.AccessRule("foo", {
 
     <dt class="property-optional"
             title="Optional">
+        <span>Priority</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Priority level. Range: 1-100. Default value: 1.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Rw<wbr>Access<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Read-write permission type: RDWR (default), RDONLY.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>User<wbr>Access<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User permission type: no_squash (default), root_squash, all_squash.
 {{% /md %}}</dd>
@@ -259,24 +259,6 @@ const fooAccessRule = new alicloud.nas.AccessRule("foo", {
     <dd>{{% md %}}Permission group name.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>priority</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}Priority level. Range: 1-100. Default value: 1.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>rw<wbr>Access<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Read-write permission type: RDWR (default), RDONLY.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>source<wbr>Cidr<wbr>Ip</span>
@@ -288,9 +270,27 @@ const fooAccessRule = new alicloud.nas.AccessRule("foo", {
 
     <dt class="property-optional"
             title="Optional">
+        <span>priority</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Priority level. Range: 1-100. Default value: 1.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>rw<wbr>Access<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Read-write permission type: RDWR (default), RDONLY.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>user<wbr>Access<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User permission type: no_squash (default), root_squash, all_squash.
 {{% /md %}}</dd>
@@ -311,6 +311,15 @@ const fooAccessRule = new alicloud.nas.AccessRule("foo", {
     <dd>{{% md %}}Permission group name.
 {{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>source_<wbr>cidr_<wbr>ip</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Address or address segment.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>priority</span>
@@ -327,15 +336,6 @@ const fooAccessRule = new alicloud.nas.AccessRule("foo", {
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Read-write permission type: RDWR (default), RDONLY.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>source_<wbr>cidr_<wbr>ip</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Address or address segment.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -368,56 +368,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Access<wbr>Group<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Permission group name.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Access<wbr>Rule<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The nas access rule ID.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Priority</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}Priority level. Range: 1-100. Default value: 1.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Rw<wbr>Access<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Read-write permission type: RDWR (default), RDONLY.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Source<wbr>Cidr<wbr>Ip</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Address or address segment.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>User<wbr>Access<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}User permission type: no_squash (default), root_squash, all_squash.
 {{% /md %}}</dd>
 
 </dl>
@@ -429,56 +384,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Access<wbr>Group<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Permission group name.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Access<wbr>Rule<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The nas access rule ID.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Priority</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}Priority level. Range: 1-100. Default value: 1.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Rw<wbr>Access<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Read-write permission type: RDWR (default), RDONLY.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Source<wbr>Cidr<wbr>Ip</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Address or address segment.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>User<wbr>Access<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}User permission type: no_squash (default), root_squash, all_squash.
 {{% /md %}}</dd>
 
 </dl>
@@ -490,56 +400,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>access<wbr>Group<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Permission group name.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>access<wbr>Rule<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The nas access rule ID.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>priority</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}Priority level. Range: 1-100. Default value: 1.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>rw<wbr>Access<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Read-write permission type: RDWR (default), RDONLY.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>source<wbr>Cidr<wbr>Ip</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Address or address segment.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>user<wbr>Access<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}User permission type: no_squash (default), root_squash, all_squash.
 {{% /md %}}</dd>
 
 </dl>
@@ -551,56 +416,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>access_<wbr>group_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Permission group name.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>access_<wbr>rule_<wbr>id</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The nas access rule ID.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>priority</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}Priority level. Range: 1-100. Default value: 1.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>rw_<wbr>access_<wbr>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Read-write permission type: RDWR (default), RDONLY.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>source_<wbr>cidr_<wbr>ip</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Address or address segment.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>user_<wbr>access_<wbr>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}User permission type: no_squash (default), root_squash, all_squash.
 {{% /md %}}</dd>
 
 </dl>
@@ -742,7 +562,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Access<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Permission group name.
 {{% /md %}}</dd>
@@ -751,7 +571,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Access<wbr>Rule<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The nas access rule ID.
 {{% /md %}}</dd>
@@ -760,7 +580,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Priority</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Priority level. Range: 1-100. Default value: 1.
 {{% /md %}}</dd>
@@ -769,7 +589,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Rw<wbr>Access<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Read-write permission type: RDWR (default), RDONLY.
 {{% /md %}}</dd>
@@ -778,7 +598,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Source<wbr>Cidr<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Address or address segment.
 {{% /md %}}</dd>
@@ -787,7 +607,7 @@ The following state arguments are supported:
             title="Optional">
         <span>User<wbr>Access<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User permission type: no_squash (default), root_squash, all_squash.
 {{% /md %}}</dd>
@@ -803,7 +623,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Access<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Permission group name.
 {{% /md %}}</dd>
@@ -812,7 +632,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Access<wbr>Rule<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The nas access rule ID.
 {{% /md %}}</dd>
@@ -821,7 +641,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Priority</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Priority level. Range: 1-100. Default value: 1.
 {{% /md %}}</dd>
@@ -830,7 +650,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Rw<wbr>Access<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Read-write permission type: RDWR (default), RDONLY.
 {{% /md %}}</dd>
@@ -839,7 +659,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Source<wbr>Cidr<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Address or address segment.
 {{% /md %}}</dd>
@@ -848,7 +668,7 @@ The following state arguments are supported:
             title="Optional">
         <span>User<wbr>Access<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User permission type: no_squash (default), root_squash, all_squash.
 {{% /md %}}</dd>
@@ -864,7 +684,7 @@ The following state arguments are supported:
             title="Optional">
         <span>access<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Permission group name.
 {{% /md %}}</dd>
@@ -873,7 +693,7 @@ The following state arguments are supported:
             title="Optional">
         <span>access<wbr>Rule<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The nas access rule ID.
 {{% /md %}}</dd>
@@ -882,7 +702,7 @@ The following state arguments are supported:
             title="Optional">
         <span>priority</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Priority level. Range: 1-100. Default value: 1.
 {{% /md %}}</dd>
@@ -891,7 +711,7 @@ The following state arguments are supported:
             title="Optional">
         <span>rw<wbr>Access<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Read-write permission type: RDWR (default), RDONLY.
 {{% /md %}}</dd>
@@ -900,7 +720,7 @@ The following state arguments are supported:
             title="Optional">
         <span>source<wbr>Cidr<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Address or address segment.
 {{% /md %}}</dd>
@@ -909,7 +729,7 @@ The following state arguments are supported:
             title="Optional">
         <span>user<wbr>Access<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User permission type: no_squash (default), root_squash, all_squash.
 {{% /md %}}</dd>

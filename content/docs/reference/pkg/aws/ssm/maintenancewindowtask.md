@@ -94,7 +94,7 @@ const example = new aws.ssm.MaintenanceWindowTask("example", {
             notificationConfig: {
                 notificationArn: aws_sns_topic_example.arn,
                 notificationEvents: ["All"],
-                notificationType: ["Command"],
+                notificationType: "Command",
             },
             outputS3Bucket: aws_s3_bucket_example.bucket,
             outputS3KeyPrefix: "output",
@@ -150,7 +150,7 @@ const example = new aws.ssm.MaintenanceWindowTask("example", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ssm/#MaintenanceWindowTask">MaintenanceWindowTask</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ssm/#MaintenanceWindowTaskArgs">MaintenanceWindowTaskArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ssm/#MaintenanceWindowTask">MaintenanceWindowTask</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ssm/#MaintenanceWindowTaskArgs">MaintenanceWindowTaskArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -158,7 +158,7 @@ const example = new aws.ssm.MaintenanceWindowTask("example", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewMaintenanceWindowTask<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ssm?tab=doc#MaintenanceWindowTaskArgs">MaintenanceWindowTaskArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ssm?tab=doc#MaintenanceWindowTask">MaintenanceWindowTask</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewMaintenanceWindowTask<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ssm?tab=doc#MaintenanceWindowTaskArgs">MaintenanceWindowTaskArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ssm?tab=doc#MaintenanceWindowTask">MaintenanceWindowTask</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -254,24 +254,6 @@ const example = new aws.ssm.MaintenanceWindowTask("example", {
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The description of the maintenance window task.
-{{% /md %}}</dd>
-
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span>Logging<wbr>Info</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#maintenancewindowtasklogginginfo">Maintenance<wbr>Window<wbr>Task<wbr>Logging<wbr>Info<wbr>Args?</a></span>
-    </dt>
-    <dd>{{% md %}}A structure containing information about an Amazon S3 bucket to write instance-level logs to. Use `task_invocation_parameters` configuration block `run_command_parameters` configuration block `output_s3_*` arguments instead. Conflicts with `task_invocation_parameters`. Documented below.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use &#39;task_invocation_parameters&#39; argument instead{{% /md %}}</p></dd>
-
     <dt class="property-required"
             title="Required">
         <span>Max<wbr>Concurrency</span>
@@ -288,24 +270,6 @@ const example = new aws.ssm.MaintenanceWindowTask("example", {
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum number of errors allowed before this task stops being scheduled.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The name of the maintenance window task.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Priority</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}The priority of the task in the Maintenance Window, the lower the number the higher the priority. Tasks in a Maintenance Window are scheduled in priority order with tasks that have the same priority scheduled in parallel.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -335,24 +299,6 @@ const example = new aws.ssm.MaintenanceWindowTask("example", {
     <dd>{{% md %}}The ARN of the task to execute.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Task<wbr>Invocation<wbr>Parameters</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#maintenancewindowtasktaskinvocationparameters">Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters<wbr>Args?</a></span>
-    </dt>
-    <dd>{{% md %}}The parameters for task execution. This argument is conflict with `task_parameters` and `logging_info`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span>Task<wbr>Parameters</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#maintenancewindowtasktaskparameter">List&lt;Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Parameter<wbr>Args&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}A structure containing information about parameters required by the particular `task_arn`. Use `parameter` configuration blocks under the `task_invocation_parameters` configuration block instead. Conflicts with `task_invocation_parameters`. Documented below.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use &#39;task_invocation_parameters&#39; argument instead{{% /md %}}</p></dd>
-
     <dt class="property-required"
             title="Required">
         <span>Task<wbr>Type</span>
@@ -371,18 +317,11 @@ const example = new aws.ssm.MaintenanceWindowTask("example", {
     <dd>{{% md %}}The Id of the maintenance window to register the task with.
 {{% /md %}}</dd>
 
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the maintenance window task.
 {{% /md %}}</dd>
@@ -391,10 +330,53 @@ const example = new aws.ssm.MaintenanceWindowTask("example", {
             title="Optional, Deprecated">
         <span>Logging<wbr>Info</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#maintenancewindowtasklogginginfo">*Maintenance<wbr>Window<wbr>Task<wbr>Logging<wbr>Info</a></span>
+        <span class="property-type"><a href="#maintenancewindowtasklogginginfo">Maintenance<wbr>Window<wbr>Task<wbr>Logging<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A structure containing information about an Amazon S3 bucket to write instance-level logs to. Use `task_invocation_parameters` configuration block `run_command_parameters` configuration block `output_s3_*` arguments instead. Conflicts with `task_invocation_parameters`. Documented below.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use &#39;task_invocation_parameters&#39; argument instead{{% /md %}}</p></dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the maintenance window task.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Priority</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The priority of the task in the Maintenance Window, the lower the number the higher the priority. Tasks in a Maintenance Window are scheduled in priority order with tasks that have the same priority scheduled in parallel.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Task<wbr>Invocation<wbr>Parameters</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#maintenancewindowtasktaskinvocationparameters">Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The parameters for task execution. This argument is conflict with `task_parameters` and `logging_info`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span>Task<wbr>Parameters</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#maintenancewindowtasktaskparameter">List&lt;Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Parameter<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A structure containing information about parameters required by the particular `task_arn`. Use `parameter` configuration blocks under the `task_invocation_parameters` configuration block instead. Conflicts with `task_invocation_parameters`. Documented below.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use &#39;task_invocation_parameters&#39; argument instead{{% /md %}}</p></dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
@@ -412,24 +394,6 @@ const example = new aws.ssm.MaintenanceWindowTask("example", {
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum number of errors allowed before this task stops being scheduled.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The name of the maintenance window task.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Priority</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}The priority of the task in the Maintenance Window, the lower the number the higher the priority. Tasks in a Maintenance Window are scheduled in priority order with tasks that have the same priority scheduled in parallel.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -459,24 +423,6 @@ const example = new aws.ssm.MaintenanceWindowTask("example", {
     <dd>{{% md %}}The ARN of the task to execute.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Task<wbr>Invocation<wbr>Parameters</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#maintenancewindowtasktaskinvocationparameters">*Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters</a></span>
-    </dt>
-    <dd>{{% md %}}The parameters for task execution. This argument is conflict with `task_parameters` and `logging_info`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span>Task<wbr>Parameters</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#maintenancewindowtasktaskparameter">[]Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Parameter</a></span>
-    </dt>
-    <dd>{{% md %}}A structure containing information about parameters required by the particular `task_arn`. Use `parameter` configuration blocks under the `task_invocation_parameters` configuration block instead. Conflicts with `task_invocation_parameters`. Documented below.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use &#39;task_invocation_parameters&#39; argument instead{{% /md %}}</p></dd>
-
     <dt class="property-required"
             title="Required">
         <span>Task<wbr>Type</span>
@@ -495,30 +441,66 @@ const example = new aws.ssm.MaintenanceWindowTask("example", {
     <dd>{{% md %}}The Id of the maintenance window to register the task with.
 {{% /md %}}</dd>
 
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the maintenance window task.
 {{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>logging<wbr>Info</span>
+        <span>Logging<wbr>Info</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#maintenancewindowtasklogginginfo">Maintenance<wbr>Window<wbr>Task<wbr>Logging<wbr>Info?</a></span>
+        <span class="property-type"><a href="#maintenancewindowtasklogginginfo">Maintenance<wbr>Window<wbr>Task<wbr>Logging<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}A structure containing information about an Amazon S3 bucket to write instance-level logs to. Use `task_invocation_parameters` configuration block `run_command_parameters` configuration block `output_s3_*` arguments instead. Conflicts with `task_invocation_parameters`. Documented below.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use &#39;task_invocation_parameters&#39; argument instead{{% /md %}}</p></dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the maintenance window task.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Priority</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The priority of the task in the Maintenance Window, the lower the number the higher the priority. Tasks in a Maintenance Window are scheduled in priority order with tasks that have the same priority scheduled in parallel.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Task<wbr>Invocation<wbr>Parameters</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#maintenancewindowtasktaskinvocationparameters">Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters</a></span>
+    </dt>
+    <dd>{{% md %}}The parameters for task execution. This argument is conflict with `task_parameters` and `logging_info`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span>Task<wbr>Parameters</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#maintenancewindowtasktaskparameter">[]Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Parameter</a></span>
+    </dt>
+    <dd>{{% md %}}A structure containing information about parameters required by the particular `task_arn`. Use `parameter` configuration blocks under the `task_invocation_parameters` configuration block instead. Conflicts with `task_invocation_parameters`. Documented below.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use &#39;task_invocation_parameters&#39; argument instead{{% /md %}}</p></dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
@@ -536,24 +518,6 @@ const example = new aws.ssm.MaintenanceWindowTask("example", {
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum number of errors allowed before this task stops being scheduled.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The name of the maintenance window task.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>priority</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}The priority of the task in the Maintenance Window, the lower the number the higher the priority. Tasks in a Maintenance Window are scheduled in priority order with tasks that have the same priority scheduled in parallel.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -583,24 +547,6 @@ const example = new aws.ssm.MaintenanceWindowTask("example", {
     <dd>{{% md %}}The ARN of the task to execute.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>task<wbr>Invocation<wbr>Parameters</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#maintenancewindowtasktaskinvocationparameters">Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters?</a></span>
-    </dt>
-    <dd>{{% md %}}The parameters for task execution. This argument is conflict with `task_parameters` and `logging_info`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span>task<wbr>Parameters</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#maintenancewindowtasktaskparameter">Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Parameter[]?</a></span>
-    </dt>
-    <dd>{{% md %}}A structure containing information about parameters required by the particular `task_arn`. Use `parameter` configuration blocks under the `task_invocation_parameters` configuration block instead. Conflicts with `task_invocation_parameters`. Documented below.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use &#39;task_invocation_parameters&#39; argument instead{{% /md %}}</p></dd>
-
     <dt class="property-required"
             title="Required">
         <span>task<wbr>Type</span>
@@ -619,435 +565,26 @@ const example = new aws.ssm.MaintenanceWindowTask("example", {
     <dd>{{% md %}}The Id of the maintenance window to register the task with.
 {{% /md %}}</dd>
 
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the maintenance window task.
 {{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
-        <span>logging_<wbr>info</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#maintenancewindowtasklogginginfo">Dict[Maintenance<wbr>Window<wbr>Task<wbr>Logging<wbr>Info]</a></span>
-    </dt>
-    <dd>{{% md %}}A structure containing information about an Amazon S3 bucket to write instance-level logs to. Use `task_invocation_parameters` configuration block `run_command_parameters` configuration block `output_s3_*` arguments instead. Conflicts with `task_invocation_parameters`. Documented below.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use &#39;task_invocation_parameters&#39; argument instead{{% /md %}}</p></dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>max_<wbr>concurrency</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The maximum number of targets this task can be run for in parallel.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>max_<wbr>errors</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The maximum number of errors allowed before this task stops being scheduled.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the maintenance window task.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>priority</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The priority of the task in the Maintenance Window, the lower the number the higher the priority. Tasks in a Maintenance Window are scheduled in priority order with tasks that have the same priority scheduled in parallel.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>service_<wbr>role_<wbr>arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The role that should be assumed when executing the task.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>targets</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#maintenancewindowtasktarget">List[Maintenance<wbr>Window<wbr>Task<wbr>Target]</a></span>
-    </dt>
-    <dd>{{% md %}}The targets (either instances or window target ids). Instances are specified using Key=InstanceIds,Values=instanceid1,instanceid2. Window target ids are specified using Key=WindowTargetIds,Values=window target id1, window target id2.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>task_<wbr>arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The ARN of the task to execute.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>task_<wbr>invocation_<wbr>parameters</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#maintenancewindowtasktaskinvocationparameters">Dict[Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters]</a></span>
-    </dt>
-    <dd>{{% md %}}The parameters for task execution. This argument is conflict with `task_parameters` and `logging_info`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span>task_<wbr>parameters</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#maintenancewindowtasktaskparameter">List[Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Parameter]</a></span>
-    </dt>
-    <dd>{{% md %}}A structure containing information about parameters required by the particular `task_arn`. Use `parameter` configuration blocks under the `task_invocation_parameters` configuration block instead. Conflicts with `task_invocation_parameters`. Documented below.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use &#39;task_invocation_parameters&#39; argument instead{{% /md %}}</p></dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>task_<wbr>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The type of task being registered. The only allowed value is `RUN_COMMAND`.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>window_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The Id of the maintenance window to register the task with.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-
-
-
-
-
-## MaintenanceWindowTask Output Properties
-
-The following output properties are available:
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The description of the maintenance window task.
-{{% /md %}}</dd>
-
-    <dt class="property- property-deprecated"
-            title=", Deprecated">
-        <span>Logging<wbr>Info</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#maintenancewindowtasklogginginfo">Maintenance<wbr>Window<wbr>Task<wbr>Logging<wbr>Info?</a></span>
-    </dt>
-    <dd>{{% md %}}A structure containing information about an Amazon S3 bucket to write instance-level logs to. Use `task_invocation_parameters` configuration block `run_command_parameters` configuration block `output_s3_*` arguments instead. Conflicts with `task_invocation_parameters`. Documented below.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use &#39;task_invocation_parameters&#39; argument instead{{% /md %}}</p></dd>
-
-    <dt class="property-"
-            title="">
-        <span>Max<wbr>Concurrency</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The maximum number of targets this task can be run for in parallel.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Max<wbr>Errors</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The maximum number of errors allowed before this task stops being scheduled.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the maintenance window task.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Priority</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}The priority of the task in the Maintenance Window, the lower the number the higher the priority. Tasks in a Maintenance Window are scheduled in priority order with tasks that have the same priority scheduled in parallel.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Service<wbr>Role<wbr>Arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The role that should be assumed when executing the task.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Targets</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#maintenancewindowtasktarget">List&lt;Maintenance<wbr>Window<wbr>Task<wbr>Target&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}The targets (either instances or window target ids). Instances are specified using Key=InstanceIds,Values=instanceid1,instanceid2. Window target ids are specified using Key=WindowTargetIds,Values=window target id1, window target id2.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Task<wbr>Arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ARN of the task to execute.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Task<wbr>Invocation<wbr>Parameters</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#maintenancewindowtasktaskinvocationparameters">Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters?</a></span>
-    </dt>
-    <dd>{{% md %}}The parameters for task execution. This argument is conflict with `task_parameters` and `logging_info`.
-{{% /md %}}</dd>
-
-    <dt class="property- property-deprecated"
-            title=", Deprecated">
-        <span>Task<wbr>Parameters</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#maintenancewindowtasktaskparameter">List&lt;Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Parameter&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}A structure containing information about parameters required by the particular `task_arn`. Use `parameter` configuration blocks under the `task_invocation_parameters` configuration block instead. Conflicts with `task_invocation_parameters`. Documented below.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use &#39;task_invocation_parameters&#39; argument instead{{% /md %}}</p></dd>
-
-    <dt class="property-"
-            title="">
-        <span>Task<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The type of task being registered. The only allowed value is `RUN_COMMAND`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Window<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Id of the maintenance window to register the task with.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The description of the maintenance window task.
-{{% /md %}}</dd>
-
-    <dt class="property- property-deprecated"
-            title=", Deprecated">
-        <span>Logging<wbr>Info</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#maintenancewindowtasklogginginfo">*Maintenance<wbr>Window<wbr>Task<wbr>Logging<wbr>Info</a></span>
-    </dt>
-    <dd>{{% md %}}A structure containing information about an Amazon S3 bucket to write instance-level logs to. Use `task_invocation_parameters` configuration block `run_command_parameters` configuration block `output_s3_*` arguments instead. Conflicts with `task_invocation_parameters`. Documented below.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use &#39;task_invocation_parameters&#39; argument instead{{% /md %}}</p></dd>
-
-    <dt class="property-"
-            title="">
-        <span>Max<wbr>Concurrency</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The maximum number of targets this task can be run for in parallel.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Max<wbr>Errors</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The maximum number of errors allowed before this task stops being scheduled.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the maintenance window task.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Priority</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}The priority of the task in the Maintenance Window, the lower the number the higher the priority. Tasks in a Maintenance Window are scheduled in priority order with tasks that have the same priority scheduled in parallel.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Service<wbr>Role<wbr>Arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The role that should be assumed when executing the task.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Targets</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#maintenancewindowtasktarget">[]Maintenance<wbr>Window<wbr>Task<wbr>Target</a></span>
-    </dt>
-    <dd>{{% md %}}The targets (either instances or window target ids). Instances are specified using Key=InstanceIds,Values=instanceid1,instanceid2. Window target ids are specified using Key=WindowTargetIds,Values=window target id1, window target id2.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Task<wbr>Arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ARN of the task to execute.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Task<wbr>Invocation<wbr>Parameters</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#maintenancewindowtasktaskinvocationparameters">*Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters</a></span>
-    </dt>
-    <dd>{{% md %}}The parameters for task execution. This argument is conflict with `task_parameters` and `logging_info`.
-{{% /md %}}</dd>
-
-    <dt class="property- property-deprecated"
-            title=", Deprecated">
-        <span>Task<wbr>Parameters</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#maintenancewindowtasktaskparameter">[]Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Parameter</a></span>
-    </dt>
-    <dd>{{% md %}}A structure containing information about parameters required by the particular `task_arn`. Use `parameter` configuration blocks under the `task_invocation_parameters` configuration block instead. Conflicts with `task_invocation_parameters`. Documented below.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use &#39;task_invocation_parameters&#39; argument instead{{% /md %}}</p></dd>
-
-    <dt class="property-"
-            title="">
-        <span>Task<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The type of task being registered. The only allowed value is `RUN_COMMAND`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Window<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Id of the maintenance window to register the task with.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The description of the maintenance window task.
-{{% /md %}}</dd>
-
-    <dt class="property- property-deprecated"
-            title=", Deprecated">
         <span>logging<wbr>Info</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#maintenancewindowtasklogginginfo">Maintenance<wbr>Window<wbr>Task<wbr>Logging<wbr>Info?</a></span>
+        <span class="property-type"><a href="#maintenancewindowtasklogginginfo">Maintenance<wbr>Window<wbr>Task<wbr>Logging<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}A structure containing information about an Amazon S3 bucket to write instance-level logs to. Use `task_invocation_parameters` configuration block `run_command_parameters` configuration block `output_s3_*` arguments instead. Conflicts with `task_invocation_parameters`. Documented below.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use &#39;task_invocation_parameters&#39; argument instead{{% /md %}}</p></dd>
 
-    <dt class="property-"
-            title="">
-        <span>max<wbr>Concurrency</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The maximum number of targets this task can be run for in parallel.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>max<wbr>Errors</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The maximum number of errors allowed before this task stops being scheduled.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -1055,77 +592,32 @@ The following output properties are available:
     <dd>{{% md %}}The name of the maintenance window task.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>priority</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The priority of the task in the Maintenance Window, the lower the number the higher the priority. Tasks in a Maintenance Window are scheduled in priority order with tasks that have the same priority scheduled in parallel.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span>service<wbr>Role<wbr>Arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The role that should be assumed when executing the task.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>targets</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#maintenancewindowtasktarget">Maintenance<wbr>Window<wbr>Task<wbr>Target[]</a></span>
-    </dt>
-    <dd>{{% md %}}The targets (either instances or window target ids). Instances are specified using Key=InstanceIds,Values=instanceid1,instanceid2. Window target ids are specified using Key=WindowTargetIds,Values=window target id1, window target id2.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>task<wbr>Arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ARN of the task to execute.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>task<wbr>Invocation<wbr>Parameters</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#maintenancewindowtasktaskinvocationparameters">Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters?</a></span>
+        <span class="property-type"><a href="#maintenancewindowtasktaskinvocationparameters">Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters</a></span>
     </dt>
     <dd>{{% md %}}The parameters for task execution. This argument is conflict with `task_parameters` and `logging_info`.
 {{% /md %}}</dd>
 
-    <dt class="property- property-deprecated"
-            title=", Deprecated">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span>task<wbr>Parameters</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#maintenancewindowtasktaskparameter">Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Parameter[]?</a></span>
+        <span class="property-type"><a href="#maintenancewindowtasktaskparameter">Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Parameter[]</a></span>
     </dt>
     <dd>{{% md %}}A structure containing information about parameters required by the particular `task_arn`. Use `parameter` configuration blocks under the `task_invocation_parameters` configuration block instead. Conflicts with `task_invocation_parameters`. Documented below.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use &#39;task_invocation_parameters&#39; argument instead{{% /md %}}</p></dd>
-
-    <dt class="property-"
-            title="">
-        <span>task<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The type of task being registered. The only allowed value is `RUN_COMMAND`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>window<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Id of the maintenance window to register the task with.
-{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1134,26 +626,8 @@ The following output properties are available:
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-"
-            title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The description of the maintenance window task.
-{{% /md %}}</dd>
-
-    <dt class="property- property-deprecated"
-            title=", Deprecated">
-        <span>logging_<wbr>info</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#maintenancewindowtasklogginginfo">Dict[Maintenance<wbr>Window<wbr>Task<wbr>Logging<wbr>Info]</a></span>
-    </dt>
-    <dd>{{% md %}}A structure containing information about an Amazon S3 bucket to write instance-level logs to. Use `task_invocation_parameters` configuration block `run_command_parameters` configuration block `output_s3_*` arguments instead. Conflicts with `task_invocation_parameters`. Documented below.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use &#39;task_invocation_parameters&#39; argument instead{{% /md %}}</p></dd>
-
-    <dt class="property-"
-            title="">
+    <dt class="property-required"
+            title="Required">
         <span>max_<wbr>concurrency</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -1161,8 +635,8 @@ The following output properties are available:
     <dd>{{% md %}}The maximum number of targets this task can be run for in parallel.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-required"
+            title="Required">
         <span>max_<wbr>errors</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -1170,26 +644,8 @@ The following output properties are available:
     <dd>{{% md %}}The maximum number of errors allowed before this task stops being scheduled.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the maintenance window task.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>priority</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The priority of the task in the Maintenance Window, the lower the number the higher the priority. Tasks in a Maintenance Window are scheduled in priority order with tasks that have the same priority scheduled in parallel.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
+    <dt class="property-required"
+            title="Required">
         <span>service_<wbr>role_<wbr>arn</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -1197,8 +653,8 @@ The following output properties are available:
     <dd>{{% md %}}The role that should be assumed when executing the task.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-required"
+            title="Required">
         <span>targets</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#maintenancewindowtasktarget">List[Maintenance<wbr>Window<wbr>Task<wbr>Target]</a></span>
@@ -1206,8 +662,8 @@ The following output properties are available:
     <dd>{{% md %}}The targets (either instances or window target ids). Instances are specified using Key=InstanceIds,Values=instanceid1,instanceid2. Window target ids are specified using Key=WindowTargetIds,Values=window target id1, window target id2.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-required"
+            title="Required">
         <span>task_<wbr>arn</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -1215,26 +671,8 @@ The following output properties are available:
     <dd>{{% md %}}The ARN of the task to execute.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span>task_<wbr>invocation_<wbr>parameters</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#maintenancewindowtasktaskinvocationparameters">Dict[Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters]</a></span>
-    </dt>
-    <dd>{{% md %}}The parameters for task execution. This argument is conflict with `task_parameters` and `logging_info`.
-{{% /md %}}</dd>
-
-    <dt class="property- property-deprecated"
-            title=", Deprecated">
-        <span>task_<wbr>parameters</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#maintenancewindowtasktaskparameter">List[Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Parameter]</a></span>
-    </dt>
-    <dd>{{% md %}}A structure containing information about parameters required by the particular `task_arn`. Use `parameter` configuration blocks under the `task_invocation_parameters` configuration block instead. Conflicts with `task_invocation_parameters`. Documented below.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use &#39;task_invocation_parameters&#39; argument instead{{% /md %}}</p></dd>
-
-    <dt class="property-"
-            title="">
+    <dt class="property-required"
+            title="Required">
         <span>task_<wbr>type</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -1242,8 +680,8 @@ The following output properties are available:
     <dd>{{% md %}}The type of task being registered. The only allowed value is `RUN_COMMAND`.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-required"
+            title="Required">
         <span>window_<wbr>id</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -1251,8 +689,64 @@ The following output properties are available:
     <dd>{{% md %}}The Id of the maintenance window to register the task with.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The description of the maintenance window task.
+{{% /md %}}</dd>
+
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span>logging_<wbr>info</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#maintenancewindowtasklogginginfo">Dict[Maintenance<wbr>Window<wbr>Task<wbr>Logging<wbr>Info]</a></span>
+    </dt>
+    <dd>{{% md %}}A structure containing information about an Amazon S3 bucket to write instance-level logs to. Use `task_invocation_parameters` configuration block `run_command_parameters` configuration block `output_s3_*` arguments instead. Conflicts with `task_invocation_parameters`. Documented below.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use &#39;task_invocation_parameters&#39; argument instead{{% /md %}}</p></dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the maintenance window task.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>priority</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}The priority of the task in the Maintenance Window, the lower the number the higher the priority. Tasks in a Maintenance Window are scheduled in priority order with tasks that have the same priority scheduled in parallel.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>task_<wbr>invocation_<wbr>parameters</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#maintenancewindowtasktaskinvocationparameters">Dict[Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters]</a></span>
+    </dt>
+    <dd>{{% md %}}The parameters for task execution. This argument is conflict with `task_parameters` and `logging_info`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span>task_<wbr>parameters</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#maintenancewindowtasktaskparameter">List[Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Parameter]</a></span>
+    </dt>
+    <dd>{{% md %}}A structure containing information about parameters required by the particular `task_arn`. Use `parameter` configuration blocks under the `task_invocation_parameters` configuration block instead. Conflicts with `task_invocation_parameters`. Documented below.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use &#39;task_invocation_parameters&#39; argument instead{{% /md %}}</p></dd>
+
 </dl>
 {{% /choosable %}}
+
+
 
 
 
@@ -1390,7 +884,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the maintenance window task.
 {{% /md %}}</dd>
@@ -1399,7 +893,7 @@ The following state arguments are supported:
             title="Optional, Deprecated">
         <span>Logging<wbr>Info</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#maintenancewindowtasklogginginfo">Maintenance<wbr>Window<wbr>Task<wbr>Logging<wbr>Info<wbr>Args?</a></span>
+        <span class="property-type"><a href="#maintenancewindowtasklogginginfo">Maintenance<wbr>Window<wbr>Task<wbr>Logging<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A structure containing information about an Amazon S3 bucket to write instance-level logs to. Use `task_invocation_parameters` configuration block `run_command_parameters` configuration block `output_s3_*` arguments instead. Conflicts with `task_invocation_parameters`. Documented below.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use &#39;task_invocation_parameters&#39; argument instead{{% /md %}}</p></dd>
@@ -1408,7 +902,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Max<wbr>Concurrency</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum number of targets this task can be run for in parallel.
 {{% /md %}}</dd>
@@ -1417,7 +911,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Max<wbr>Errors</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum number of errors allowed before this task stops being scheduled.
 {{% /md %}}</dd>
@@ -1426,7 +920,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the maintenance window task.
 {{% /md %}}</dd>
@@ -1435,7 +929,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Priority</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The priority of the task in the Maintenance Window, the lower the number the higher the priority. Tasks in a Maintenance Window are scheduled in priority order with tasks that have the same priority scheduled in parallel.
 {{% /md %}}</dd>
@@ -1444,7 +938,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Service<wbr>Role<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The role that should be assumed when executing the task.
 {{% /md %}}</dd>
@@ -1453,7 +947,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Targets</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#maintenancewindowtasktarget">List&lt;Maintenance<wbr>Window<wbr>Task<wbr>Target<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#maintenancewindowtasktarget">List&lt;Maintenance<wbr>Window<wbr>Task<wbr>Target<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The targets (either instances or window target ids). Instances are specified using Key=InstanceIds,Values=instanceid1,instanceid2. Window target ids are specified using Key=WindowTargetIds,Values=window target id1, window target id2.
 {{% /md %}}</dd>
@@ -1462,7 +956,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Task<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the task to execute.
 {{% /md %}}</dd>
@@ -1471,7 +965,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Task<wbr>Invocation<wbr>Parameters</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#maintenancewindowtasktaskinvocationparameters">Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters<wbr>Args?</a></span>
+        <span class="property-type"><a href="#maintenancewindowtasktaskinvocationparameters">Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The parameters for task execution. This argument is conflict with `task_parameters` and `logging_info`.
 {{% /md %}}</dd>
@@ -1480,7 +974,7 @@ The following state arguments are supported:
             title="Optional, Deprecated">
         <span>Task<wbr>Parameters</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#maintenancewindowtasktaskparameter">List&lt;Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Parameter<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#maintenancewindowtasktaskparameter">List&lt;Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Parameter<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A structure containing information about parameters required by the particular `task_arn`. Use `parameter` configuration blocks under the `task_invocation_parameters` configuration block instead. Conflicts with `task_invocation_parameters`. Documented below.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use &#39;task_invocation_parameters&#39; argument instead{{% /md %}}</p></dd>
@@ -1489,7 +983,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Task<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of task being registered. The only allowed value is `RUN_COMMAND`.
 {{% /md %}}</dd>
@@ -1498,7 +992,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Window<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Id of the maintenance window to register the task with.
 {{% /md %}}</dd>
@@ -1514,7 +1008,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the maintenance window task.
 {{% /md %}}</dd>
@@ -1523,7 +1017,7 @@ The following state arguments are supported:
             title="Optional, Deprecated">
         <span>Logging<wbr>Info</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#maintenancewindowtasklogginginfo">*Maintenance<wbr>Window<wbr>Task<wbr>Logging<wbr>Info</a></span>
+        <span class="property-type"><a href="#maintenancewindowtasklogginginfo">Maintenance<wbr>Window<wbr>Task<wbr>Logging<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}A structure containing information about an Amazon S3 bucket to write instance-level logs to. Use `task_invocation_parameters` configuration block `run_command_parameters` configuration block `output_s3_*` arguments instead. Conflicts with `task_invocation_parameters`. Documented below.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use &#39;task_invocation_parameters&#39; argument instead{{% /md %}}</p></dd>
@@ -1532,7 +1026,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Max<wbr>Concurrency</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum number of targets this task can be run for in parallel.
 {{% /md %}}</dd>
@@ -1541,7 +1035,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Max<wbr>Errors</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum number of errors allowed before this task stops being scheduled.
 {{% /md %}}</dd>
@@ -1550,7 +1044,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the maintenance window task.
 {{% /md %}}</dd>
@@ -1559,7 +1053,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Priority</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The priority of the task in the Maintenance Window, the lower the number the higher the priority. Tasks in a Maintenance Window are scheduled in priority order with tasks that have the same priority scheduled in parallel.
 {{% /md %}}</dd>
@@ -1568,7 +1062,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Service<wbr>Role<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The role that should be assumed when executing the task.
 {{% /md %}}</dd>
@@ -1586,7 +1080,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Task<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the task to execute.
 {{% /md %}}</dd>
@@ -1595,7 +1089,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Task<wbr>Invocation<wbr>Parameters</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#maintenancewindowtasktaskinvocationparameters">*Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters</a></span>
+        <span class="property-type"><a href="#maintenancewindowtasktaskinvocationparameters">Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters</a></span>
     </dt>
     <dd>{{% md %}}The parameters for task execution. This argument is conflict with `task_parameters` and `logging_info`.
 {{% /md %}}</dd>
@@ -1613,7 +1107,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Task<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of task being registered. The only allowed value is `RUN_COMMAND`.
 {{% /md %}}</dd>
@@ -1622,7 +1116,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Window<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Id of the maintenance window to register the task with.
 {{% /md %}}</dd>
@@ -1638,7 +1132,7 @@ The following state arguments are supported:
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the maintenance window task.
 {{% /md %}}</dd>
@@ -1647,7 +1141,7 @@ The following state arguments are supported:
             title="Optional, Deprecated">
         <span>logging<wbr>Info</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#maintenancewindowtasklogginginfo">Maintenance<wbr>Window<wbr>Task<wbr>Logging<wbr>Info?</a></span>
+        <span class="property-type"><a href="#maintenancewindowtasklogginginfo">Maintenance<wbr>Window<wbr>Task<wbr>Logging<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}A structure containing information about an Amazon S3 bucket to write instance-level logs to. Use `task_invocation_parameters` configuration block `run_command_parameters` configuration block `output_s3_*` arguments instead. Conflicts with `task_invocation_parameters`. Documented below.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use &#39;task_invocation_parameters&#39; argument instead{{% /md %}}</p></dd>
@@ -1656,7 +1150,7 @@ The following state arguments are supported:
             title="Optional">
         <span>max<wbr>Concurrency</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum number of targets this task can be run for in parallel.
 {{% /md %}}</dd>
@@ -1665,7 +1159,7 @@ The following state arguments are supported:
             title="Optional">
         <span>max<wbr>Errors</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum number of errors allowed before this task stops being scheduled.
 {{% /md %}}</dd>
@@ -1674,7 +1168,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the maintenance window task.
 {{% /md %}}</dd>
@@ -1683,7 +1177,7 @@ The following state arguments are supported:
             title="Optional">
         <span>priority</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The priority of the task in the Maintenance Window, the lower the number the higher the priority. Tasks in a Maintenance Window are scheduled in priority order with tasks that have the same priority scheduled in parallel.
 {{% /md %}}</dd>
@@ -1692,7 +1186,7 @@ The following state arguments are supported:
             title="Optional">
         <span>service<wbr>Role<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The role that should be assumed when executing the task.
 {{% /md %}}</dd>
@@ -1701,7 +1195,7 @@ The following state arguments are supported:
             title="Optional">
         <span>targets</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#maintenancewindowtasktarget">Maintenance<wbr>Window<wbr>Task<wbr>Target[]?</a></span>
+        <span class="property-type"><a href="#maintenancewindowtasktarget">Maintenance<wbr>Window<wbr>Task<wbr>Target[]</a></span>
     </dt>
     <dd>{{% md %}}The targets (either instances or window target ids). Instances are specified using Key=InstanceIds,Values=instanceid1,instanceid2. Window target ids are specified using Key=WindowTargetIds,Values=window target id1, window target id2.
 {{% /md %}}</dd>
@@ -1710,7 +1204,7 @@ The following state arguments are supported:
             title="Optional">
         <span>task<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the task to execute.
 {{% /md %}}</dd>
@@ -1719,7 +1213,7 @@ The following state arguments are supported:
             title="Optional">
         <span>task<wbr>Invocation<wbr>Parameters</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#maintenancewindowtasktaskinvocationparameters">Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters?</a></span>
+        <span class="property-type"><a href="#maintenancewindowtasktaskinvocationparameters">Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters</a></span>
     </dt>
     <dd>{{% md %}}The parameters for task execution. This argument is conflict with `task_parameters` and `logging_info`.
 {{% /md %}}</dd>
@@ -1728,7 +1222,7 @@ The following state arguments are supported:
             title="Optional, Deprecated">
         <span>task<wbr>Parameters</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#maintenancewindowtasktaskparameter">Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Parameter[]?</a></span>
+        <span class="property-type"><a href="#maintenancewindowtasktaskparameter">Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Parameter[]</a></span>
     </dt>
     <dd>{{% md %}}A structure containing information about parameters required by the particular `task_arn`. Use `parameter` configuration blocks under the `task_invocation_parameters` configuration block instead. Conflicts with `task_invocation_parameters`. Documented below.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use &#39;task_invocation_parameters&#39; argument instead{{% /md %}}</p></dd>
@@ -1737,7 +1231,7 @@ The following state arguments are supported:
             title="Optional">
         <span>task<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of task being registered. The only allowed value is `RUN_COMMAND`.
 {{% /md %}}</dd>
@@ -1746,7 +1240,7 @@ The following state arguments are supported:
             title="Optional">
         <span>window<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Id of the maintenance window to register the task with.
 {{% /md %}}</dd>
@@ -1912,17 +1406,17 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>S3Bucket<wbr>Prefix</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>S3Region</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>S3Bucket<wbr>Prefix</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
@@ -1943,17 +1437,17 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>S3Bucket<wbr>Prefix</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>S3Region</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>S3Bucket<wbr>Prefix</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
@@ -1974,17 +1468,17 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>s3Bucket<wbr>Prefix</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>s3Region</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>s3Bucket<wbr>Prefix</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
@@ -2005,17 +1499,17 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>s3Bucket<wbr>Prefix</span>
+    <dt class="property-required"
+            title="Required">
+        <span>s3_<wbr>region</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>s3_<wbr>region</span>
+    <dt class="property-optional"
+            title="Optional">
+        <span>s3Bucket<wbr>Prefix</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -2055,7 +1549,7 @@ The following state arguments are supported:
             title="Required">
         <span>Values</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2154,7 +1648,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Automation<wbr>Parameters</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#maintenancewindowtasktaskinvocationparametersautomationparameters">Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters<wbr>Automation<wbr>Parameters<wbr>Args?</a></span>
+        <span class="property-type"><a href="#maintenancewindowtasktaskinvocationparametersautomationparameters">Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters<wbr>Automation<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The parameters for an AUTOMATION task type. Documented below.
 {{% /md %}}</dd>
@@ -2163,7 +1657,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Lambda<wbr>Parameters</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#maintenancewindowtasktaskinvocationparameterslambdaparameters">Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters<wbr>Lambda<wbr>Parameters<wbr>Args?</a></span>
+        <span class="property-type"><a href="#maintenancewindowtasktaskinvocationparameterslambdaparameters">Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters<wbr>Lambda<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The parameters for a LAMBDA task type. Documented below.
 {{% /md %}}</dd>
@@ -2172,7 +1666,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Run<wbr>Command<wbr>Parameters</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#maintenancewindowtasktaskinvocationparametersruncommandparameters">Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters<wbr>Run<wbr>Command<wbr>Parameters<wbr>Args?</a></span>
+        <span class="property-type"><a href="#maintenancewindowtasktaskinvocationparametersruncommandparameters">Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters<wbr>Run<wbr>Command<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The parameters for a RUN_COMMAND task type. Documented below.
 {{% /md %}}</dd>
@@ -2181,7 +1675,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Step<wbr>Functions<wbr>Parameters</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#maintenancewindowtasktaskinvocationparametersstepfunctionsparameters">Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters<wbr>Step<wbr>Functions<wbr>Parameters<wbr>Args?</a></span>
+        <span class="property-type"><a href="#maintenancewindowtasktaskinvocationparametersstepfunctionsparameters">Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters<wbr>Step<wbr>Functions<wbr>Parameters<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The parameters for a STEP_FUNCTIONS task type. Documented below.
 {{% /md %}}</dd>
@@ -2197,7 +1691,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Automation<wbr>Parameters</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#maintenancewindowtasktaskinvocationparametersautomationparameters">*Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters<wbr>Automation<wbr>Parameters</a></span>
+        <span class="property-type"><a href="#maintenancewindowtasktaskinvocationparametersautomationparameters">Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters<wbr>Automation<wbr>Parameters</a></span>
     </dt>
     <dd>{{% md %}}The parameters for an AUTOMATION task type. Documented below.
 {{% /md %}}</dd>
@@ -2206,7 +1700,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Lambda<wbr>Parameters</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#maintenancewindowtasktaskinvocationparameterslambdaparameters">*Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters<wbr>Lambda<wbr>Parameters</a></span>
+        <span class="property-type"><a href="#maintenancewindowtasktaskinvocationparameterslambdaparameters">Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters<wbr>Lambda<wbr>Parameters</a></span>
     </dt>
     <dd>{{% md %}}The parameters for a LAMBDA task type. Documented below.
 {{% /md %}}</dd>
@@ -2215,7 +1709,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Run<wbr>Command<wbr>Parameters</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#maintenancewindowtasktaskinvocationparametersruncommandparameters">*Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters<wbr>Run<wbr>Command<wbr>Parameters</a></span>
+        <span class="property-type"><a href="#maintenancewindowtasktaskinvocationparametersruncommandparameters">Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters<wbr>Run<wbr>Command<wbr>Parameters</a></span>
     </dt>
     <dd>{{% md %}}The parameters for a RUN_COMMAND task type. Documented below.
 {{% /md %}}</dd>
@@ -2224,7 +1718,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Step<wbr>Functions<wbr>Parameters</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#maintenancewindowtasktaskinvocationparametersstepfunctionsparameters">*Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters<wbr>Step<wbr>Functions<wbr>Parameters</a></span>
+        <span class="property-type"><a href="#maintenancewindowtasktaskinvocationparametersstepfunctionsparameters">Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters<wbr>Step<wbr>Functions<wbr>Parameters</a></span>
     </dt>
     <dd>{{% md %}}The parameters for a STEP_FUNCTIONS task type. Documented below.
 {{% /md %}}</dd>
@@ -2240,7 +1734,7 @@ The following state arguments are supported:
             title="Optional">
         <span>automation<wbr>Parameters</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#maintenancewindowtasktaskinvocationparametersautomationparameters">Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters<wbr>Automation<wbr>Parameters?</a></span>
+        <span class="property-type"><a href="#maintenancewindowtasktaskinvocationparametersautomationparameters">Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters<wbr>Automation<wbr>Parameters</a></span>
     </dt>
     <dd>{{% md %}}The parameters for an AUTOMATION task type. Documented below.
 {{% /md %}}</dd>
@@ -2249,7 +1743,7 @@ The following state arguments are supported:
             title="Optional">
         <span>lambda<wbr>Parameters</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#maintenancewindowtasktaskinvocationparameterslambdaparameters">Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters<wbr>Lambda<wbr>Parameters?</a></span>
+        <span class="property-type"><a href="#maintenancewindowtasktaskinvocationparameterslambdaparameters">Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters<wbr>Lambda<wbr>Parameters</a></span>
     </dt>
     <dd>{{% md %}}The parameters for a LAMBDA task type. Documented below.
 {{% /md %}}</dd>
@@ -2258,7 +1752,7 @@ The following state arguments are supported:
             title="Optional">
         <span>run<wbr>Command<wbr>Parameters</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#maintenancewindowtasktaskinvocationparametersruncommandparameters">Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters<wbr>Run<wbr>Command<wbr>Parameters?</a></span>
+        <span class="property-type"><a href="#maintenancewindowtasktaskinvocationparametersruncommandparameters">Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters<wbr>Run<wbr>Command<wbr>Parameters</a></span>
     </dt>
     <dd>{{% md %}}The parameters for a RUN_COMMAND task type. Documented below.
 {{% /md %}}</dd>
@@ -2267,7 +1761,7 @@ The following state arguments are supported:
             title="Optional">
         <span>step<wbr>Functions<wbr>Parameters</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#maintenancewindowtasktaskinvocationparametersstepfunctionsparameters">Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters<wbr>Step<wbr>Functions<wbr>Parameters?</a></span>
+        <span class="property-type"><a href="#maintenancewindowtasktaskinvocationparametersstepfunctionsparameters">Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters<wbr>Step<wbr>Functions<wbr>Parameters</a></span>
     </dt>
     <dd>{{% md %}}The parameters for a STEP_FUNCTIONS task type. Documented below.
 {{% /md %}}</dd>
@@ -2341,7 +1835,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Document<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of an Automation document to use during task execution.
 {{% /md %}}</dd>
@@ -2350,7 +1844,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Parameters</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#maintenancewindowtasktaskinvocationparametersautomationparametersparameter">List&lt;Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters<wbr>Automation<wbr>Parameters<wbr>Parameter<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#maintenancewindowtasktaskinvocationparametersautomationparametersparameter">List&lt;Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters<wbr>Automation<wbr>Parameters<wbr>Parameter<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The parameters for the RUN_COMMAND task execution. Documented below.
 {{% /md %}}</dd>
@@ -2366,7 +1860,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Document<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of an Automation document to use during task execution.
 {{% /md %}}</dd>
@@ -2391,7 +1885,7 @@ The following state arguments are supported:
             title="Optional">
         <span>document<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of an Automation document to use during task execution.
 {{% /md %}}</dd>
@@ -2400,7 +1894,7 @@ The following state arguments are supported:
             title="Optional">
         <span>parameters</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#maintenancewindowtasktaskinvocationparametersautomationparametersparameter">Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters<wbr>Automation<wbr>Parameters<wbr>Parameter[]?</a></span>
+        <span class="property-type"><a href="#maintenancewindowtasktaskinvocationparametersautomationparametersparameter">Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters<wbr>Automation<wbr>Parameters<wbr>Parameter[]</a></span>
     </dt>
     <dd>{{% md %}}The parameters for the RUN_COMMAND task execution. Documented below.
 {{% /md %}}</dd>
@@ -2465,7 +1959,7 @@ The following state arguments are supported:
             title="Required">
         <span>Values</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The array of strings.
 {{% /md %}}</dd>
@@ -2571,7 +2065,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Client<wbr>Context</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Pass client-specific information to the Lambda function that you are invoking.
 {{% /md %}}</dd>
@@ -2580,7 +2074,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Payload</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}JSON to provide to your Lambda function as input.
 {{% /md %}}</dd>
@@ -2589,7 +2083,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Qualifier</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify a Lambda function version or alias name.
 {{% /md %}}</dd>
@@ -2605,7 +2099,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Client<wbr>Context</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Pass client-specific information to the Lambda function that you are invoking.
 {{% /md %}}</dd>
@@ -2614,7 +2108,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Payload</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}JSON to provide to your Lambda function as input.
 {{% /md %}}</dd>
@@ -2623,7 +2117,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Qualifier</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify a Lambda function version or alias name.
 {{% /md %}}</dd>
@@ -2639,7 +2133,7 @@ The following state arguments are supported:
             title="Optional">
         <span>client<wbr>Context</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Pass client-specific information to the Lambda function that you are invoking.
 {{% /md %}}</dd>
@@ -2648,7 +2142,7 @@ The following state arguments are supported:
             title="Optional">
         <span>payload</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}JSON to provide to your Lambda function as input.
 {{% /md %}}</dd>
@@ -2657,7 +2151,7 @@ The following state arguments are supported:
             title="Optional">
         <span>qualifier</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify a Lambda function version or alias name.
 {{% /md %}}</dd>
@@ -2722,7 +2216,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Comment</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Information about the command(s) to execute.
 {{% /md %}}</dd>
@@ -2731,7 +2225,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Document<wbr>Hash</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SHA-256 or SHA-1 hash created by the system when the document was created. SHA-1 hashes have been deprecated.
 {{% /md %}}</dd>
@@ -2740,7 +2234,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Document<wbr>Hash<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SHA-256 or SHA-1. SHA-1 hashes have been deprecated. Valid values: `Sha256` and `Sha1`
 {{% /md %}}</dd>
@@ -2749,7 +2243,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Notification<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#maintenancewindowtasktaskinvocationparametersruncommandparametersnotificationconfig">Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters<wbr>Run<wbr>Command<wbr>Parameters<wbr>Notification<wbr>Config<wbr>Args?</a></span>
+        <span class="property-type"><a href="#maintenancewindowtasktaskinvocationparametersruncommandparametersnotificationconfig">Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters<wbr>Run<wbr>Command<wbr>Parameters<wbr>Notification<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configurations for sending notifications about command status changes on a per-instance basis. Documented below.
 {{% /md %}}</dd>
@@ -2758,7 +2252,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Output<wbr>S3Bucket</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Amazon S3 bucket.
 {{% /md %}}</dd>
@@ -2767,7 +2261,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Output<wbr>S3Key<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon S3 bucket subfolder.
 {{% /md %}}</dd>
@@ -2776,7 +2270,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Parameters</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#maintenancewindowtasktaskinvocationparametersruncommandparametersparameter">List&lt;Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters<wbr>Run<wbr>Command<wbr>Parameters<wbr>Parameter<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#maintenancewindowtasktaskinvocationparametersruncommandparametersparameter">List&lt;Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters<wbr>Run<wbr>Command<wbr>Parameters<wbr>Parameter<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The parameters for the RUN_COMMAND task execution. Documented below.
 {{% /md %}}</dd>
@@ -2785,7 +2279,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Service<wbr>Role<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IAM service role to assume during task execution.
 {{% /md %}}</dd>
@@ -2794,7 +2288,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Timeout<wbr>Seconds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}If this time is reached and the command has not already started executing, it doesn't run.
 {{% /md %}}</dd>
@@ -2810,7 +2304,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Comment</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Information about the command(s) to execute.
 {{% /md %}}</dd>
@@ -2819,7 +2313,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Document<wbr>Hash</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SHA-256 or SHA-1 hash created by the system when the document was created. SHA-1 hashes have been deprecated.
 {{% /md %}}</dd>
@@ -2828,7 +2322,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Document<wbr>Hash<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SHA-256 or SHA-1. SHA-1 hashes have been deprecated. Valid values: `Sha256` and `Sha1`
 {{% /md %}}</dd>
@@ -2837,7 +2331,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Notification<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#maintenancewindowtasktaskinvocationparametersruncommandparametersnotificationconfig">*Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters<wbr>Run<wbr>Command<wbr>Parameters<wbr>Notification<wbr>Config</a></span>
+        <span class="property-type"><a href="#maintenancewindowtasktaskinvocationparametersruncommandparametersnotificationconfig">Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters<wbr>Run<wbr>Command<wbr>Parameters<wbr>Notification<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Configurations for sending notifications about command status changes on a per-instance basis. Documented below.
 {{% /md %}}</dd>
@@ -2846,7 +2340,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Output<wbr>S3Bucket</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Amazon S3 bucket.
 {{% /md %}}</dd>
@@ -2855,7 +2349,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Output<wbr>S3Key<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon S3 bucket subfolder.
 {{% /md %}}</dd>
@@ -2873,7 +2367,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Service<wbr>Role<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IAM service role to assume during task execution.
 {{% /md %}}</dd>
@@ -2882,7 +2376,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Timeout<wbr>Seconds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}If this time is reached and the command has not already started executing, it doesn't run.
 {{% /md %}}</dd>
@@ -2898,7 +2392,7 @@ The following state arguments are supported:
             title="Optional">
         <span>comment</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Information about the command(s) to execute.
 {{% /md %}}</dd>
@@ -2907,7 +2401,7 @@ The following state arguments are supported:
             title="Optional">
         <span>document<wbr>Hash</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SHA-256 or SHA-1 hash created by the system when the document was created. SHA-1 hashes have been deprecated.
 {{% /md %}}</dd>
@@ -2916,7 +2410,7 @@ The following state arguments are supported:
             title="Optional">
         <span>document<wbr>Hash<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SHA-256 or SHA-1. SHA-1 hashes have been deprecated. Valid values: `Sha256` and `Sha1`
 {{% /md %}}</dd>
@@ -2925,7 +2419,7 @@ The following state arguments are supported:
             title="Optional">
         <span>notification<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#maintenancewindowtasktaskinvocationparametersruncommandparametersnotificationconfig">Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters<wbr>Run<wbr>Command<wbr>Parameters<wbr>Notification<wbr>Config?</a></span>
+        <span class="property-type"><a href="#maintenancewindowtasktaskinvocationparametersruncommandparametersnotificationconfig">Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters<wbr>Run<wbr>Command<wbr>Parameters<wbr>Notification<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Configurations for sending notifications about command status changes on a per-instance basis. Documented below.
 {{% /md %}}</dd>
@@ -2934,7 +2428,7 @@ The following state arguments are supported:
             title="Optional">
         <span>output<wbr>S3Bucket</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Amazon S3 bucket.
 {{% /md %}}</dd>
@@ -2943,7 +2437,7 @@ The following state arguments are supported:
             title="Optional">
         <span>output<wbr>S3Key<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon S3 bucket subfolder.
 {{% /md %}}</dd>
@@ -2952,7 +2446,7 @@ The following state arguments are supported:
             title="Optional">
         <span>parameters</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#maintenancewindowtasktaskinvocationparametersruncommandparametersparameter">Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters<wbr>Run<wbr>Command<wbr>Parameters<wbr>Parameter[]?</a></span>
+        <span class="property-type"><a href="#maintenancewindowtasktaskinvocationparametersruncommandparametersparameter">Maintenance<wbr>Window<wbr>Task<wbr>Task<wbr>Invocation<wbr>Parameters<wbr>Run<wbr>Command<wbr>Parameters<wbr>Parameter[]</a></span>
     </dt>
     <dd>{{% md %}}The parameters for the RUN_COMMAND task execution. Documented below.
 {{% /md %}}</dd>
@@ -2961,7 +2455,7 @@ The following state arguments are supported:
             title="Optional">
         <span>service<wbr>Role<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IAM service role to assume during task execution.
 {{% /md %}}</dd>
@@ -2970,7 +2464,7 @@ The following state arguments are supported:
             title="Optional">
         <span>timeout<wbr>Seconds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}If this time is reached and the command has not already started executing, it doesn't run.
 {{% /md %}}</dd>
@@ -3089,7 +2583,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Notification<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An Amazon Resource Name (ARN) for a Simple Notification Service (SNS) topic. Run Command pushes notifications about command status changes to this topic.
 {{% /md %}}</dd>
@@ -3098,7 +2592,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Notification<wbr>Events</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The different events for which you can receive notifications. Valid values: `All`, `InProgress`, `Success`, `TimedOut`, `Cancelled`, and `Failed`
 {{% /md %}}</dd>
@@ -3107,7 +2601,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Notification<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}When specified with `Command`, receive notification when the status of a command changes. When specified with `Invocation`, for commands sent to multiple instances, receive notification on a per-instance basis when the status of a command changes. Valid values: `Command` and `Invocation`
 {{% /md %}}</dd>
@@ -3123,7 +2617,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Notification<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An Amazon Resource Name (ARN) for a Simple Notification Service (SNS) topic. Run Command pushes notifications about command status changes to this topic.
 {{% /md %}}</dd>
@@ -3141,7 +2635,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Notification<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}When specified with `Command`, receive notification when the status of a command changes. When specified with `Invocation`, for commands sent to multiple instances, receive notification on a per-instance basis when the status of a command changes. Valid values: `Command` and `Invocation`
 {{% /md %}}</dd>
@@ -3157,7 +2651,7 @@ The following state arguments are supported:
             title="Optional">
         <span>notification<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An Amazon Resource Name (ARN) for a Simple Notification Service (SNS) topic. Run Command pushes notifications about command status changes to this topic.
 {{% /md %}}</dd>
@@ -3166,7 +2660,7 @@ The following state arguments are supported:
             title="Optional">
         <span>notification<wbr>Events</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The different events for which you can receive notifications. Valid values: `All`, `InProgress`, `Success`, `TimedOut`, `Cancelled`, and `Failed`
 {{% /md %}}</dd>
@@ -3175,7 +2669,7 @@ The following state arguments are supported:
             title="Optional">
         <span>notification<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}When specified with `Command`, receive notification when the status of a command changes. When specified with `Invocation`, for commands sent to multiple instances, receive notification on a per-instance basis when the status of a command changes. Valid values: `Command` and `Invocation`
 {{% /md %}}</dd>
@@ -3249,7 +2743,7 @@ The following state arguments are supported:
             title="Required">
         <span>Values</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The array of strings.
 {{% /md %}}</dd>
@@ -3355,7 +2849,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Input</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The inputs for the STEP_FUNCTION task.
 {{% /md %}}</dd>
@@ -3364,7 +2858,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the STEP_FUNCTION task.
 {{% /md %}}</dd>
@@ -3380,7 +2874,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Input</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The inputs for the STEP_FUNCTION task.
 {{% /md %}}</dd>
@@ -3389,7 +2883,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the STEP_FUNCTION task.
 {{% /md %}}</dd>
@@ -3405,7 +2899,7 @@ The following state arguments are supported:
             title="Optional">
         <span>input</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The inputs for the STEP_FUNCTION task.
 {{% /md %}}</dd>
@@ -3414,7 +2908,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the STEP_FUNCTION task.
 {{% /md %}}</dd>
@@ -3479,7 +2973,7 @@ The following state arguments are supported:
             title="Required">
         <span>Values</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

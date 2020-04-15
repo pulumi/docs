@@ -34,7 +34,7 @@ const conn1 = new openstack.vpnaas.SiteConnection("conn_1", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/openstack/vpnaas/#SiteConnection">SiteConnection</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/openstack/vpnaas/#SiteConnectionArgs">SiteConnectionArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/openstack/vpnaas/#SiteConnection">SiteConnection</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/openstack/vpnaas/#SiteConnectionArgs">SiteConnectionArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -42,11 +42,11 @@ const conn1 = new openstack.vpnaas.SiteConnection("conn_1", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewSiteConnection<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/vpnaas?tab=doc#SiteConnectionArgs">SiteConnectionArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/vpnaas?tab=doc#SiteConnection">SiteConnection</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewSiteConnection<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/vpnaas?tab=doc#SiteConnectionArgs">SiteConnectionArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/vpnaas?tab=doc#SiteConnection">SiteConnection</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.Openstack.Vpnaas.SiteConnection.html">SiteConnection</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.Openstack.VPNaaS.SiteConnectionArgs.html">SiteConnectionArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.Openstack.VPNaaS.SiteConnection.html">SiteConnection</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.OpenStack.VPNaaS.SiteConnectionArgs.html">SiteConnectionArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -138,38 +138,6 @@ const conn1 = new openstack.vpnaas.SiteConnection("conn_1", {
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Admin<wbr>State<wbr>Up</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}The administrative state of the resource. Can either be up(true) or down(false).
-Changing this updates the administrative state of the existing connection.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The human-readable description for the connection.
-Changing this updates the description of the existing connection.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Dpds</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#siteconnectiondpd">List&lt;Site<wbr>Connection<wbr>Dpd<wbr>Args&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}A dictionary with dead peer detection (DPD) protocol controls.
-- `action` - (Optional) The dead peer detection (DPD) action.
-A valid value is clear, hold, restart, disabled, or restart-by-peer.
-Default value is hold.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Ikepolicy<wbr>Id</span>
@@ -177,15 +145,6 @@ Default value is hold.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the IKE policy. Changing this creates a new connection.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Initiator</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}A valid value is response-only or bi-directional. Default is bi-directional.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -197,49 +156,6 @@ Default value is hold.
     <dd>{{% md %}}The ID of the IPsec policy. Changing this creates a new connection.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Local<wbr>Ep<wbr>Group<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The ID for the endpoint group that contains private subnets for the local side of the connection.
-You must specify this parameter with the peer_ep_group_id parameter unless
-in backward- compatible mode where peer_cidrs is provided with a subnet_id for the VPN service.
-Changing this updates the existing connection.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Local<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}An ID to be used instead of the external IP address for a virtual router used in traffic between instances on different networks in east-west traffic.
-Most often, local ID would be domain name, email address, etc.
-If this is not configured then the external IP address will be used as the ID.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Mtu</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}The maximum transmission unit (MTU) value to address fragmentation.
-Minimum value is 68 for IPv4, and 1280 for IPv6.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The name of the connection. Changing this updates the name of
-the existing connection.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Peer<wbr>Address</span>
@@ -247,26 +163,6 @@ the existing connection.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The peer gateway public IPv4 or IPv6 address or FQDN.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Peer<wbr>Cidrs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}Unique list of valid peer private CIDRs in the form < net_address > / < prefix > .
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Peer<wbr>Ep<wbr>Group<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The ID for the endpoint group that contains private CIDRs in the form < net_address > / < prefix > for the peer side of the connection.
-You must specify this parameter with the local_ep_group_id parameter unless in backward-compatible mode
-where peer_cidrs is provided with a subnet_id for the VPN service.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -289,11 +185,124 @@ Changing this updates the existing policy.
     <dd>{{% md %}}The pre-shared key. A valid value is any string.
 {{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>Vpnservice<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the VPN service. Changing this creates a new connection.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Admin<wbr>State<wbr>Up</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}The administrative state of the resource. Can either be up(true) or down(false).
+Changing this updates the administrative state of the existing connection.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The human-readable description for the connection.
+Changing this updates the description of the existing connection.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Dpds</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#siteconnectiondpd">List&lt;Pulumi.<wbr>Open<wbr>Stack.<wbr>VPNaa<wbr>S.<wbr>Inputs.<wbr>Site<wbr>Connection<wbr>Dpd<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A dictionary with dead peer detection (DPD) protocol controls.
+- `action` - (Optional) The dead peer detection (DPD) action.
+A valid value is clear, hold, restart, disabled, or restart-by-peer.
+Default value is hold.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Initiator</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A valid value is response-only or bi-directional. Default is bi-directional.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Local<wbr>Ep<wbr>Group<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID for the endpoint group that contains private subnets for the local side of the connection.
+You must specify this parameter with the peer_ep_group_id parameter unless
+in backward- compatible mode where peer_cidrs is provided with a subnet_id for the VPN service.
+Changing this updates the existing connection.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Local<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An ID to be used instead of the external IP address for a virtual router used in traffic between instances on different networks in east-west traffic.
+Most often, local ID would be domain name, email address, etc.
+If this is not configured then the external IP address will be used as the ID.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Mtu</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The maximum transmission unit (MTU) value to address fragmentation.
+Minimum value is 68 for IPv4, and 1280 for IPv6.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the connection. Changing this updates the name of
+the existing connection.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Peer<wbr>Cidrs</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Unique list of valid peer private CIDRs in the form < net_address > / < prefix > .
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Peer<wbr>Ep<wbr>Group<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID for the endpoint group that contains private CIDRs in the form < net_address > / < prefix > for the peer side of the connection.
+You must specify this parameter with the local_ep_group_id parameter unless in backward-compatible mode
+where peer_cidrs is provided with a subnet_id for the VPN service.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 Networking client.
 A Networking client is needed to create an IPSec site connection. If omitted, the
@@ -305,7 +314,7 @@ site connection.
             title="Optional">
         <span>Tenant<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The owner of the connection. Required if admin wants to
 create a connection for another project. Changing this creates a new connection.
@@ -315,9 +324,63 @@ create a connection for another project. Changing this creates a new connection.
             title="Optional">
         <span>Value<wbr>Specs</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Map of additional options.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Ikepolicy<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the IKE policy. Changing this creates a new connection.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Ipsecpolicy<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the IPsec policy. Changing this creates a new connection.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Peer<wbr>Address</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The peer gateway public IPv4 or IPv6 address or FQDN.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Peer<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The peer router identity for authentication. A valid value is an IPv4 address, IPv6 address, e-mail address, key ID, or FQDN.
+Typically, this value matches the peer_address value.
+Changing this updates the existing policy.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Psk</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The pre-shared key. A valid value is any string.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -329,18 +392,11 @@ create a connection for another project. Changing this creates a new connection.
     <dd>{{% md %}}The ID of the VPN service. Changing this creates a new connection.
 {{% /md %}}</dd>
 
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span>Admin<wbr>State<wbr>Up</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The administrative state of the resource. Can either be up(true) or down(false).
 Changing this updates the administrative state of the existing connection.
@@ -350,7 +406,7 @@ Changing this updates the administrative state of the existing connection.
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The human-readable description for the connection.
 Changing this updates the description of the existing connection.
@@ -368,38 +424,20 @@ A valid value is clear, hold, restart, disabled, or restart-by-peer.
 Default value is hold.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>Ikepolicy<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the IKE policy. Changing this creates a new connection.
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>Initiator</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}A valid value is response-only or bi-directional. Default is bi-directional.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Ipsecpolicy<wbr>Id</span>
-        <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the IPsec policy. Changing this creates a new connection.
+    <dd>{{% md %}}A valid value is response-only or bi-directional. Default is bi-directional.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Local<wbr>Ep<wbr>Group<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID for the endpoint group that contains private subnets for the local side of the connection.
 You must specify this parameter with the peer_ep_group_id parameter unless
@@ -411,7 +449,7 @@ Changing this updates the existing connection.
             title="Optional">
         <span>Local<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An ID to be used instead of the external IP address for a virtual router used in traffic between instances on different networks in east-west traffic.
 Most often, local ID would be domain name, email address, etc.
@@ -422,7 +460,7 @@ If this is not configured then the external IP address will be used as the ID.
             title="Optional">
         <span>Mtu</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum transmission unit (MTU) value to address fragmentation.
 Minimum value is 68 for IPv4, and 1280 for IPv6.
@@ -432,19 +470,10 @@ Minimum value is 68 for IPv4, and 1280 for IPv6.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the connection. Changing this updates the name of
 the existing connection.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Peer<wbr>Address</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The peer gateway public IPv4 or IPv6 address or FQDN.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -460,38 +489,18 @@ the existing connection.
             title="Optional">
         <span>Peer<wbr>Ep<wbr>Group<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID for the endpoint group that contains private CIDRs in the form < net_address > / < prefix > for the peer side of the connection.
 You must specify this parameter with the local_ep_group_id parameter unless in backward-compatible mode
 where peer_cidrs is provided with a subnet_id for the VPN service.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>Peer<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The peer router identity for authentication. A valid value is an IPv4 address, IPv6 address, e-mail address, key ID, or FQDN.
-Typically, this value matches the peer_address value.
-Changing this updates the existing policy.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Psk</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The pre-shared key. A valid value is any string.
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 Networking client.
 A Networking client is needed to create an IPSec site connection. If omitted, the
@@ -503,7 +512,7 @@ site connection.
             title="Optional">
         <span>Tenant<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The owner of the connection. Required if admin wants to
 create a connection for another project. Changing this creates a new connection.
@@ -518,53 +527,12 @@ create a connection for another project. Changing this creates a new connection.
     <dd>{{% md %}}Map of additional options.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>Vpnservice<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the VPN service. Changing this creates a new connection.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>admin<wbr>State<wbr>Up</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}The administrative state of the resource. Can either be up(true) or down(false).
-Changing this updates the administrative state of the existing connection.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The human-readable description for the connection.
-Changing this updates the description of the existing connection.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>dpds</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#siteconnectiondpd">Site<wbr>Connection<wbr>Dpd[]?</a></span>
-    </dt>
-    <dd>{{% md %}}A dictionary with dead peer detection (DPD) protocol controls.
-- `action` - (Optional) The dead peer detection (DPD) action.
-A valid value is clear, hold, restart, disabled, or restart-by-peer.
-Default value is hold.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -573,15 +541,6 @@ Default value is hold.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the IKE policy. Changing this creates a new connection.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>initiator</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}A valid value is response-only or bi-directional. Default is bi-directional.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -593,49 +552,6 @@ Default value is hold.
     <dd>{{% md %}}The ID of the IPsec policy. Changing this creates a new connection.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>local<wbr>Ep<wbr>Group<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The ID for the endpoint group that contains private subnets for the local side of the connection.
-You must specify this parameter with the peer_ep_group_id parameter unless
-in backward- compatible mode where peer_cidrs is provided with a subnet_id for the VPN service.
-Changing this updates the existing connection.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>local<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}An ID to be used instead of the external IP address for a virtual router used in traffic between instances on different networks in east-west traffic.
-Most often, local ID would be domain name, email address, etc.
-If this is not configured then the external IP address will be used as the ID.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>mtu</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}The maximum transmission unit (MTU) value to address fragmentation.
-Minimum value is 68 for IPv4, and 1280 for IPv6.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The name of the connection. Changing this updates the name of
-the existing connection.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>peer<wbr>Address</span>
@@ -643,26 +559,6 @@ the existing connection.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The peer gateway public IPv4 or IPv6 address or FQDN.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>peer<wbr>Cidrs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}Unique list of valid peer private CIDRs in the form < net_address > / < prefix > .
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>peer<wbr>Ep<wbr>Group<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The ID for the endpoint group that contains private CIDRs in the form < net_address > / < prefix > for the peer side of the connection.
-You must specify this parameter with the local_ep_group_id parameter unless in backward-compatible mode
-where peer_cidrs is provided with a subnet_id for the VPN service.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -685,37 +581,6 @@ Changing this updates the existing policy.
     <dd>{{% md %}}The pre-shared key. A valid value is any string.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The region in which to obtain the V2 Networking client.
-A Networking client is needed to create an IPSec site connection. If omitted, the
-`region` argument of the provider is used. Changing this creates a new
-site connection.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>tenant<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The owner of the connection. Required if admin wants to
-create a connection for another project. Changing this creates a new connection.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>value<wbr>Specs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
-    </dt>
-    <dd>{{% md %}}Map of additional options.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>vpnservice<wbr>Id</span>
@@ -725,641 +590,28 @@ create a connection for another project. Changing this creates a new connection.
     <dd>{{% md %}}The ID of the VPN service. Changing this creates a new connection.
 {{% /md %}}</dd>
 
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
-        <span>admin_<wbr>state_<wbr>up</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}The administrative state of the resource. Can either be up(true) or down(false).
-Changing this updates the administrative state of the existing connection.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The human-readable description for the connection.
-Changing this updates the description of the existing connection.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>dpds</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#siteconnectiondpd">List[Site<wbr>Connection<wbr>Dpd]</a></span>
-    </dt>
-    <dd>{{% md %}}A dictionary with dead peer detection (DPD) protocol controls.
-- `action` - (Optional) The dead peer detection (DPD) action.
-A valid value is clear, hold, restart, disabled, or restart-by-peer.
-Default value is hold.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>ikepolicy_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The ID of the IKE policy. Changing this creates a new connection.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>initiator</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}A valid value is response-only or bi-directional. Default is bi-directional.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>ipsecpolicy_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The ID of the IPsec policy. Changing this creates a new connection.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>local_<wbr>ep_<wbr>group_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The ID for the endpoint group that contains private subnets for the local side of the connection.
-You must specify this parameter with the peer_ep_group_id parameter unless
-in backward- compatible mode where peer_cidrs is provided with a subnet_id for the VPN service.
-Changing this updates the existing connection.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>local_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}An ID to be used instead of the external IP address for a virtual router used in traffic between instances on different networks in east-west traffic.
-Most often, local ID would be domain name, email address, etc.
-If this is not configured then the external IP address will be used as the ID.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>mtu</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The maximum transmission unit (MTU) value to address fragmentation.
-Minimum value is 68 for IPv4, and 1280 for IPv6.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the connection. Changing this updates the name of
-the existing connection.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>peer_<wbr>address</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The peer gateway public IPv4 or IPv6 address or FQDN.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>peer_<wbr>cidrs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}Unique list of valid peer private CIDRs in the form < net_address > / < prefix > .
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>peer_<wbr>ep_<wbr>group_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The ID for the endpoint group that contains private CIDRs in the form < net_address > / < prefix > for the peer side of the connection.
-You must specify this parameter with the local_ep_group_id parameter unless in backward-compatible mode
-where peer_cidrs is provided with a subnet_id for the VPN service.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>peer_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The peer router identity for authentication. A valid value is an IPv4 address, IPv6 address, e-mail address, key ID, or FQDN.
-Typically, this value matches the peer_address value.
-Changing this updates the existing policy.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>psk</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The pre-shared key. A valid value is any string.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The region in which to obtain the V2 Networking client.
-A Networking client is needed to create an IPSec site connection. If omitted, the
-`region` argument of the provider is used. Changing this creates a new
-site connection.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>tenant_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The owner of the connection. Required if admin wants to
-create a connection for another project. Changing this creates a new connection.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>value_<wbr>specs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
-    </dt>
-    <dd>{{% md %}}Map of additional options.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>vpnservice_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The ID of the VPN service. Changing this creates a new connection.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-
-
-
-
-
-## SiteConnection Output Properties
-
-The following output properties are available:
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Admin<wbr>State<wbr>Up</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}The administrative state of the resource. Can either be up(true) or down(false).
-Changing this updates the administrative state of the existing connection.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The human-readable description for the connection.
-Changing this updates the description of the existing connection.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Dpds</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#siteconnectiondpd">List&lt;Site<wbr>Connection<wbr>Dpd&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}A dictionary with dead peer detection (DPD) protocol controls.
-- `action` - (Optional) The dead peer detection (DPD) action.
-A valid value is clear, hold, restart, disabled, or restart-by-peer.
-Default value is hold.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Ikepolicy<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the IKE policy. Changing this creates a new connection.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Initiator</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A valid value is response-only or bi-directional. Default is bi-directional.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Ipsecpolicy<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the IPsec policy. Changing this creates a new connection.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Local<wbr>Ep<wbr>Group<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The ID for the endpoint group that contains private subnets for the local side of the connection.
-You must specify this parameter with the peer_ep_group_id parameter unless
-in backward- compatible mode where peer_cidrs is provided with a subnet_id for the VPN service.
-Changing this updates the existing connection.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Local<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}An ID to be used instead of the external IP address for a virtual router used in traffic between instances on different networks in east-west traffic.
-Most often, local ID would be domain name, email address, etc.
-If this is not configured then the external IP address will be used as the ID.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Mtu</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The maximum transmission unit (MTU) value to address fragmentation.
-Minimum value is 68 for IPv4, and 1280 for IPv6.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the connection. Changing this updates the name of
-the existing connection.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Peer<wbr>Address</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The peer gateway public IPv4 or IPv6 address or FQDN.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Peer<wbr>Cidrs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}Unique list of valid peer private CIDRs in the form < net_address > / < prefix > .
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Peer<wbr>Ep<wbr>Group<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The ID for the endpoint group that contains private CIDRs in the form < net_address > / < prefix > for the peer side of the connection.
-You must specify this parameter with the local_ep_group_id parameter unless in backward-compatible mode
-where peer_cidrs is provided with a subnet_id for the VPN service.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Peer<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The peer router identity for authentication. A valid value is an IPv4 address, IPv6 address, e-mail address, key ID, or FQDN.
-Typically, this value matches the peer_address value.
-Changing this updates the existing policy.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Psk</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The pre-shared key. A valid value is any string.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The region in which to obtain the V2 Networking client.
-A Networking client is needed to create an IPSec site connection. If omitted, the
-`region` argument of the provider is used. Changing this creates a new
-site connection.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tenant<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The owner of the connection. Required if admin wants to
-create a connection for another project. Changing this creates a new connection.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Value<wbr>Specs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
-    </dt>
-    <dd>{{% md %}}Map of additional options.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Vpnservice<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the VPN service. Changing this creates a new connection.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Admin<wbr>State<wbr>Up</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}The administrative state of the resource. Can either be up(true) or down(false).
-Changing this updates the administrative state of the existing connection.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The human-readable description for the connection.
-Changing this updates the description of the existing connection.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Dpds</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#siteconnectiondpd">[]Site<wbr>Connection<wbr>Dpd</a></span>
-    </dt>
-    <dd>{{% md %}}A dictionary with dead peer detection (DPD) protocol controls.
-- `action` - (Optional) The dead peer detection (DPD) action.
-A valid value is clear, hold, restart, disabled, or restart-by-peer.
-Default value is hold.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Ikepolicy<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the IKE policy. Changing this creates a new connection.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Initiator</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A valid value is response-only or bi-directional. Default is bi-directional.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Ipsecpolicy<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the IPsec policy. Changing this creates a new connection.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Local<wbr>Ep<wbr>Group<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The ID for the endpoint group that contains private subnets for the local side of the connection.
-You must specify this parameter with the peer_ep_group_id parameter unless
-in backward- compatible mode where peer_cidrs is provided with a subnet_id for the VPN service.
-Changing this updates the existing connection.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Local<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}An ID to be used instead of the external IP address for a virtual router used in traffic between instances on different networks in east-west traffic.
-Most often, local ID would be domain name, email address, etc.
-If this is not configured then the external IP address will be used as the ID.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Mtu</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The maximum transmission unit (MTU) value to address fragmentation.
-Minimum value is 68 for IPv4, and 1280 for IPv6.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the connection. Changing this updates the name of
-the existing connection.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Peer<wbr>Address</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The peer gateway public IPv4 or IPv6 address or FQDN.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Peer<wbr>Cidrs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}Unique list of valid peer private CIDRs in the form < net_address > / < prefix > .
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Peer<wbr>Ep<wbr>Group<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The ID for the endpoint group that contains private CIDRs in the form < net_address > / < prefix > for the peer side of the connection.
-You must specify this parameter with the local_ep_group_id parameter unless in backward-compatible mode
-where peer_cidrs is provided with a subnet_id for the VPN service.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Peer<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The peer router identity for authentication. A valid value is an IPv4 address, IPv6 address, e-mail address, key ID, or FQDN.
-Typically, this value matches the peer_address value.
-Changing this updates the existing policy.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Psk</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The pre-shared key. A valid value is any string.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The region in which to obtain the V2 Networking client.
-A Networking client is needed to create an IPSec site connection. If omitted, the
-`region` argument of the provider is used. Changing this creates a new
-site connection.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tenant<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The owner of the connection. Required if admin wants to
-create a connection for another project. Changing this creates a new connection.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Value<wbr>Specs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
-    </dt>
-    <dd>{{% md %}}Map of additional options.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Vpnservice<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the VPN service. Changing this creates a new connection.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
         <span>admin<wbr>State<wbr>Up</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}The administrative state of the resource. Can either be up(true) or down(false).
 Changing this updates the administrative state of the existing connection.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The human-readable description for the connection.
 Changing this updates the description of the existing connection.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>dpds</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#siteconnectiondpd">Site<wbr>Connection<wbr>Dpd[]</a></span>
@@ -1370,17 +622,8 @@ A valid value is clear, hold, restart, disabled, or restart-by-peer.
 Default value is hold.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span>ikepolicy<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the IKE policy. Changing this creates a new connection.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>initiator</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -1388,20 +631,11 @@ Default value is hold.
     <dd>{{% md %}}A valid value is response-only or bi-directional. Default is bi-directional.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span>ipsecpolicy<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the IPsec policy. Changing this creates a new connection.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>local<wbr>Ep<wbr>Group<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID for the endpoint group that contains private subnets for the local side of the connection.
 You must specify this parameter with the peer_ep_group_id parameter unless
@@ -1409,19 +643,19 @@ in backward- compatible mode where peer_cidrs is provided with a subnet_id for t
 Changing this updates the existing connection.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>local<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An ID to be used instead of the external IP address for a virtual router used in traffic between instances on different networks in east-west traffic.
 Most often, local ID would be domain name, email address, etc.
 If this is not configured then the external IP address will be used as the ID.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>mtu</span>
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
@@ -1430,8 +664,8 @@ If this is not configured then the external IP address will be used as the ID.
 Minimum value is 68 for IPv4, and 1280 for IPv6.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -1440,57 +674,28 @@ Minimum value is 68 for IPv4, and 1280 for IPv6.
 the existing connection.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span>peer<wbr>Address</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The peer gateway public IPv4 or IPv6 address or FQDN.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>peer<wbr>Cidrs</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Unique list of valid peer private CIDRs in the form < net_address > / < prefix > .
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>peer<wbr>Ep<wbr>Group<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID for the endpoint group that contains private CIDRs in the form < net_address > / < prefix > for the peer side of the connection.
 You must specify this parameter with the local_ep_group_id parameter unless in backward-compatible mode
 where peer_cidrs is provided with a subnet_id for the VPN service.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span>peer<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The peer router identity for authentication. A valid value is an IPv4 address, IPv6 address, e-mail address, key ID, or FQDN.
-Typically, this value matches the peer_address value.
-Changing this updates the existing policy.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>psk</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The pre-shared key. A valid value is any string.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>region</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -1501,8 +706,8 @@ A Networking client is needed to create an IPSec site connection. If omitted, th
 site connection.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>tenant<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -1511,22 +716,13 @@ site connection.
 create a connection for another project. Changing this creates a new connection.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>value<wbr>Specs</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Map of additional options.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>vpnservice<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the VPN service. Changing this creates a new connection.
 {{% /md %}}</dd>
 
 </dl>
@@ -1536,8 +732,64 @@ create a connection for another project. Changing this creates a new connection.
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-"
-            title="">
+    <dt class="property-required"
+            title="Required">
+        <span>ikepolicy_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ID of the IKE policy. Changing this creates a new connection.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>ipsecpolicy_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ID of the IPsec policy. Changing this creates a new connection.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>peer_<wbr>address</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The peer gateway public IPv4 or IPv6 address or FQDN.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>peer_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The peer router identity for authentication. A valid value is an IPv4 address, IPv6 address, e-mail address, key ID, or FQDN.
+Typically, this value matches the peer_address value.
+Changing this updates the existing policy.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>psk</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The pre-shared key. A valid value is any string.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>vpnservice_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ID of the VPN service. Changing this creates a new connection.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>admin_<wbr>state_<wbr>up</span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
@@ -1546,8 +798,8 @@ create a connection for another project. Changing this creates a new connection.
 Changing this updates the administrative state of the existing connection.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -1556,8 +808,8 @@ Changing this updates the administrative state of the existing connection.
 Changing this updates the description of the existing connection.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>dpds</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#siteconnectiondpd">List[Site<wbr>Connection<wbr>Dpd]</a></span>
@@ -1568,17 +820,8 @@ A valid value is clear, hold, restart, disabled, or restart-by-peer.
 Default value is hold.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span>ikepolicy_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The ID of the IKE policy. Changing this creates a new connection.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>initiator</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -1586,17 +829,8 @@ Default value is hold.
     <dd>{{% md %}}A valid value is response-only or bi-directional. Default is bi-directional.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span>ipsecpolicy_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The ID of the IPsec policy. Changing this creates a new connection.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>local_<wbr>ep_<wbr>group_<wbr>id</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -1607,8 +841,8 @@ in backward- compatible mode where peer_cidrs is provided with a subnet_id for t
 Changing this updates the existing connection.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>local_<wbr>id</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -1618,8 +852,8 @@ Most often, local ID would be domain name, email address, etc.
 If this is not configured then the external IP address will be used as the ID.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>mtu</span>
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
@@ -1628,8 +862,8 @@ If this is not configured then the external IP address will be used as the ID.
 Minimum value is 68 for IPv4, and 1280 for IPv6.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -1638,17 +872,8 @@ Minimum value is 68 for IPv4, and 1280 for IPv6.
 the existing connection.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span>peer_<wbr>address</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The peer gateway public IPv4 or IPv6 address or FQDN.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>peer_<wbr>cidrs</span>
         <span class="property-indicator"></span>
         <span class="property-type">List[str]</span>
@@ -1656,8 +881,8 @@ the existing connection.
     <dd>{{% md %}}Unique list of valid peer private CIDRs in the form < net_address > / < prefix > .
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>peer_<wbr>ep_<wbr>group_<wbr>id</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -1667,28 +892,8 @@ You must specify this parameter with the local_ep_group_id parameter unless in b
 where peer_cidrs is provided with a subnet_id for the VPN service.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span>peer_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The peer router identity for authentication. A valid value is an IPv4 address, IPv6 address, e-mail address, key ID, or FQDN.
-Typically, this value matches the peer_address value.
-Changing this updates the existing policy.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>psk</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The pre-shared key. A valid value is any string.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>region</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -1699,8 +904,8 @@ A Networking client is needed to create an IPSec site connection. If omitted, th
 site connection.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>tenant_<wbr>id</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -1709,8 +914,8 @@ site connection.
 create a connection for another project. Changing this creates a new connection.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>value_<wbr>specs</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
@@ -1718,17 +923,10 @@ create a connection for another project. Changing this creates a new connection.
     <dd>{{% md %}}Map of additional options.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span>vpnservice_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The ID of the VPN service. Changing this creates a new connection.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
+
+
 
 
 
@@ -1756,7 +954,7 @@ Get an existing SiteConnection resource's state with the given name, ID, and opt
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.Openstack.Vpnaas.SiteConnection.html">SiteConnection</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.Openstack.Vpnaas.SiteConnectionState.html">SiteConnectionState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.Openstack.VPNaaS.SiteConnection.html">SiteConnection</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.Openstack.VPNaaS.SiteConnectionState.html">SiteConnectionState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1866,7 +1064,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Admin<wbr>State<wbr>Up</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The administrative state of the resource. Can either be up(true) or down(false).
 Changing this updates the administrative state of the existing connection.
@@ -1876,7 +1074,7 @@ Changing this updates the administrative state of the existing connection.
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The human-readable description for the connection.
 Changing this updates the description of the existing connection.
@@ -1886,7 +1084,7 @@ Changing this updates the description of the existing connection.
             title="Optional">
         <span>Dpds</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#siteconnectiondpd">List&lt;Site<wbr>Connection<wbr>Dpd<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#siteconnectiondpd">List&lt;Pulumi.<wbr>Open<wbr>Stack.<wbr>VPNaa<wbr>S.<wbr>Inputs.<wbr>Site<wbr>Connection<wbr>Dpd<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A dictionary with dead peer detection (DPD) protocol controls.
 - `action` - (Optional) The dead peer detection (DPD) action.
@@ -1898,7 +1096,7 @@ Default value is hold.
             title="Optional">
         <span>Ikepolicy<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the IKE policy. Changing this creates a new connection.
 {{% /md %}}</dd>
@@ -1907,7 +1105,7 @@ Default value is hold.
             title="Optional">
         <span>Initiator</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A valid value is response-only or bi-directional. Default is bi-directional.
 {{% /md %}}</dd>
@@ -1916,7 +1114,7 @@ Default value is hold.
             title="Optional">
         <span>Ipsecpolicy<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the IPsec policy. Changing this creates a new connection.
 {{% /md %}}</dd>
@@ -1925,7 +1123,7 @@ Default value is hold.
             title="Optional">
         <span>Local<wbr>Ep<wbr>Group<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID for the endpoint group that contains private subnets for the local side of the connection.
 You must specify this parameter with the peer_ep_group_id parameter unless
@@ -1937,7 +1135,7 @@ Changing this updates the existing connection.
             title="Optional">
         <span>Local<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An ID to be used instead of the external IP address for a virtual router used in traffic between instances on different networks in east-west traffic.
 Most often, local ID would be domain name, email address, etc.
@@ -1948,7 +1146,7 @@ If this is not configured then the external IP address will be used as the ID.
             title="Optional">
         <span>Mtu</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum transmission unit (MTU) value to address fragmentation.
 Minimum value is 68 for IPv4, and 1280 for IPv6.
@@ -1958,7 +1156,7 @@ Minimum value is 68 for IPv4, and 1280 for IPv6.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the connection. Changing this updates the name of
 the existing connection.
@@ -1968,7 +1166,7 @@ the existing connection.
             title="Optional">
         <span>Peer<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The peer gateway public IPv4 or IPv6 address or FQDN.
 {{% /md %}}</dd>
@@ -1977,7 +1175,7 @@ the existing connection.
             title="Optional">
         <span>Peer<wbr>Cidrs</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Unique list of valid peer private CIDRs in the form < net_address > / < prefix > .
 {{% /md %}}</dd>
@@ -1986,7 +1184,7 @@ the existing connection.
             title="Optional">
         <span>Peer<wbr>Ep<wbr>Group<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID for the endpoint group that contains private CIDRs in the form < net_address > / < prefix > for the peer side of the connection.
 You must specify this parameter with the local_ep_group_id parameter unless in backward-compatible mode
@@ -1997,7 +1195,7 @@ where peer_cidrs is provided with a subnet_id for the VPN service.
             title="Optional">
         <span>Peer<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The peer router identity for authentication. A valid value is an IPv4 address, IPv6 address, e-mail address, key ID, or FQDN.
 Typically, this value matches the peer_address value.
@@ -2008,7 +1206,7 @@ Changing this updates the existing policy.
             title="Optional">
         <span>Psk</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The pre-shared key. A valid value is any string.
 {{% /md %}}</dd>
@@ -2017,7 +1215,7 @@ Changing this updates the existing policy.
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 Networking client.
 A Networking client is needed to create an IPSec site connection. If omitted, the
@@ -2029,7 +1227,7 @@ site connection.
             title="Optional">
         <span>Tenant<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The owner of the connection. Required if admin wants to
 create a connection for another project. Changing this creates a new connection.
@@ -2039,7 +1237,7 @@ create a connection for another project. Changing this creates a new connection.
             title="Optional">
         <span>Value<wbr>Specs</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Map of additional options.
 {{% /md %}}</dd>
@@ -2048,7 +1246,7 @@ create a connection for another project. Changing this creates a new connection.
             title="Optional">
         <span>Vpnservice<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the VPN service. Changing this creates a new connection.
 {{% /md %}}</dd>
@@ -2064,7 +1262,7 @@ create a connection for another project. Changing this creates a new connection.
             title="Optional">
         <span>Admin<wbr>State<wbr>Up</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The administrative state of the resource. Can either be up(true) or down(false).
 Changing this updates the administrative state of the existing connection.
@@ -2074,7 +1272,7 @@ Changing this updates the administrative state of the existing connection.
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The human-readable description for the connection.
 Changing this updates the description of the existing connection.
@@ -2096,7 +1294,7 @@ Default value is hold.
             title="Optional">
         <span>Ikepolicy<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the IKE policy. Changing this creates a new connection.
 {{% /md %}}</dd>
@@ -2105,7 +1303,7 @@ Default value is hold.
             title="Optional">
         <span>Initiator</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A valid value is response-only or bi-directional. Default is bi-directional.
 {{% /md %}}</dd>
@@ -2114,7 +1312,7 @@ Default value is hold.
             title="Optional">
         <span>Ipsecpolicy<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the IPsec policy. Changing this creates a new connection.
 {{% /md %}}</dd>
@@ -2123,7 +1321,7 @@ Default value is hold.
             title="Optional">
         <span>Local<wbr>Ep<wbr>Group<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID for the endpoint group that contains private subnets for the local side of the connection.
 You must specify this parameter with the peer_ep_group_id parameter unless
@@ -2135,7 +1333,7 @@ Changing this updates the existing connection.
             title="Optional">
         <span>Local<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An ID to be used instead of the external IP address for a virtual router used in traffic between instances on different networks in east-west traffic.
 Most often, local ID would be domain name, email address, etc.
@@ -2146,7 +1344,7 @@ If this is not configured then the external IP address will be used as the ID.
             title="Optional">
         <span>Mtu</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum transmission unit (MTU) value to address fragmentation.
 Minimum value is 68 for IPv4, and 1280 for IPv6.
@@ -2156,7 +1354,7 @@ Minimum value is 68 for IPv4, and 1280 for IPv6.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the connection. Changing this updates the name of
 the existing connection.
@@ -2166,7 +1364,7 @@ the existing connection.
             title="Optional">
         <span>Peer<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The peer gateway public IPv4 or IPv6 address or FQDN.
 {{% /md %}}</dd>
@@ -2184,7 +1382,7 @@ the existing connection.
             title="Optional">
         <span>Peer<wbr>Ep<wbr>Group<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID for the endpoint group that contains private CIDRs in the form < net_address > / < prefix > for the peer side of the connection.
 You must specify this parameter with the local_ep_group_id parameter unless in backward-compatible mode
@@ -2195,7 +1393,7 @@ where peer_cidrs is provided with a subnet_id for the VPN service.
             title="Optional">
         <span>Peer<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The peer router identity for authentication. A valid value is an IPv4 address, IPv6 address, e-mail address, key ID, or FQDN.
 Typically, this value matches the peer_address value.
@@ -2206,7 +1404,7 @@ Changing this updates the existing policy.
             title="Optional">
         <span>Psk</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The pre-shared key. A valid value is any string.
 {{% /md %}}</dd>
@@ -2215,7 +1413,7 @@ Changing this updates the existing policy.
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 Networking client.
 A Networking client is needed to create an IPSec site connection. If omitted, the
@@ -2227,7 +1425,7 @@ site connection.
             title="Optional">
         <span>Tenant<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The owner of the connection. Required if admin wants to
 create a connection for another project. Changing this creates a new connection.
@@ -2246,7 +1444,7 @@ create a connection for another project. Changing this creates a new connection.
             title="Optional">
         <span>Vpnservice<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the VPN service. Changing this creates a new connection.
 {{% /md %}}</dd>
@@ -2262,7 +1460,7 @@ create a connection for another project. Changing this creates a new connection.
             title="Optional">
         <span>admin<wbr>State<wbr>Up</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}The administrative state of the resource. Can either be up(true) or down(false).
 Changing this updates the administrative state of the existing connection.
@@ -2272,7 +1470,7 @@ Changing this updates the administrative state of the existing connection.
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The human-readable description for the connection.
 Changing this updates the description of the existing connection.
@@ -2282,7 +1480,7 @@ Changing this updates the description of the existing connection.
             title="Optional">
         <span>dpds</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#siteconnectiondpd">Site<wbr>Connection<wbr>Dpd[]?</a></span>
+        <span class="property-type"><a href="#siteconnectiondpd">Site<wbr>Connection<wbr>Dpd[]</a></span>
     </dt>
     <dd>{{% md %}}A dictionary with dead peer detection (DPD) protocol controls.
 - `action` - (Optional) The dead peer detection (DPD) action.
@@ -2294,7 +1492,7 @@ Default value is hold.
             title="Optional">
         <span>ikepolicy<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the IKE policy. Changing this creates a new connection.
 {{% /md %}}</dd>
@@ -2303,7 +1501,7 @@ Default value is hold.
             title="Optional">
         <span>initiator</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A valid value is response-only or bi-directional. Default is bi-directional.
 {{% /md %}}</dd>
@@ -2312,7 +1510,7 @@ Default value is hold.
             title="Optional">
         <span>ipsecpolicy<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the IPsec policy. Changing this creates a new connection.
 {{% /md %}}</dd>
@@ -2321,7 +1519,7 @@ Default value is hold.
             title="Optional">
         <span>local<wbr>Ep<wbr>Group<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID for the endpoint group that contains private subnets for the local side of the connection.
 You must specify this parameter with the peer_ep_group_id parameter unless
@@ -2333,7 +1531,7 @@ Changing this updates the existing connection.
             title="Optional">
         <span>local<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An ID to be used instead of the external IP address for a virtual router used in traffic between instances on different networks in east-west traffic.
 Most often, local ID would be domain name, email address, etc.
@@ -2344,7 +1542,7 @@ If this is not configured then the external IP address will be used as the ID.
             title="Optional">
         <span>mtu</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum transmission unit (MTU) value to address fragmentation.
 Minimum value is 68 for IPv4, and 1280 for IPv6.
@@ -2354,7 +1552,7 @@ Minimum value is 68 for IPv4, and 1280 for IPv6.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the connection. Changing this updates the name of
 the existing connection.
@@ -2364,7 +1562,7 @@ the existing connection.
             title="Optional">
         <span>peer<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The peer gateway public IPv4 or IPv6 address or FQDN.
 {{% /md %}}</dd>
@@ -2373,7 +1571,7 @@ the existing connection.
             title="Optional">
         <span>peer<wbr>Cidrs</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Unique list of valid peer private CIDRs in the form < net_address > / < prefix > .
 {{% /md %}}</dd>
@@ -2382,7 +1580,7 @@ the existing connection.
             title="Optional">
         <span>peer<wbr>Ep<wbr>Group<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID for the endpoint group that contains private CIDRs in the form < net_address > / < prefix > for the peer side of the connection.
 You must specify this parameter with the local_ep_group_id parameter unless in backward-compatible mode
@@ -2393,7 +1591,7 @@ where peer_cidrs is provided with a subnet_id for the VPN service.
             title="Optional">
         <span>peer<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The peer router identity for authentication. A valid value is an IPv4 address, IPv6 address, e-mail address, key ID, or FQDN.
 Typically, this value matches the peer_address value.
@@ -2404,7 +1602,7 @@ Changing this updates the existing policy.
             title="Optional">
         <span>psk</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The pre-shared key. A valid value is any string.
 {{% /md %}}</dd>
@@ -2413,7 +1611,7 @@ Changing this updates the existing policy.
             title="Optional">
         <span>region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 Networking client.
 A Networking client is needed to create an IPSec site connection. If omitted, the
@@ -2425,7 +1623,7 @@ site connection.
             title="Optional">
         <span>tenant<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The owner of the connection. Required if admin wants to
 create a connection for another project. Changing this creates a new connection.
@@ -2435,7 +1633,7 @@ create a connection for another project. Changing this creates a new connection.
             title="Optional">
         <span>value<wbr>Specs</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Map of additional options.
 {{% /md %}}</dd>
@@ -2444,7 +1642,7 @@ create a connection for another project. Changing this creates a new connection.
             title="Optional">
         <span>vpnservice<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the VPN service. Changing this creates a new connection.
 {{% /md %}}</dd>
@@ -2680,7 +1878,7 @@ create a connection for another project. Changing this creates a new connection.
             title="Optional">
         <span>Action</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2688,7 +1886,7 @@ create a connection for another project. Changing this creates a new connection.
             title="Optional">
         <span>Interval</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2696,7 +1894,7 @@ create a connection for another project. Changing this creates a new connection.
             title="Optional">
         <span>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2711,7 +1909,7 @@ create a connection for another project. Changing this creates a new connection.
             title="Optional">
         <span>Action</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2719,7 +1917,7 @@ create a connection for another project. Changing this creates a new connection.
             title="Optional">
         <span>Interval</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2727,7 +1925,7 @@ create a connection for another project. Changing this creates a new connection.
             title="Optional">
         <span>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2742,7 +1940,7 @@ create a connection for another project. Changing this creates a new connection.
             title="Optional">
         <span>action</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2750,7 +1948,7 @@ create a connection for another project. Changing this creates a new connection.
             title="Optional">
         <span>interval</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2758,7 +1956,7 @@ create a connection for another project. Changing this creates a new connection.
             title="Optional">
         <span>timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

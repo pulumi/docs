@@ -76,7 +76,7 @@ import * as pulumi from "@pulumi/pulumi";
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/spotinst/gke/#OceanImport">OceanImport</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/spotinst/gke/#OceanImportArgs">OceanImportArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/spotinst/gke/#OceanImport">OceanImport</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/spotinst/gke/#OceanImportArgs">OceanImportArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -84,11 +84,11 @@ import * as pulumi from "@pulumi/pulumi";
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewOceanImport<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/go/spotinst/gke?tab=doc#OceanImportArgs">OceanImportArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/go/spotinst/gke?tab=doc#OceanImport">OceanImport</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewOceanImport<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/go/spotinst/gke?tab=doc#OceanImportArgs">OceanImportArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/go/spotinst/gke?tab=doc#OceanImport">OceanImport</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.Spotinst.Gke.OceanImport.html">OceanImport</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.Spotinst.Gke.OceanImportArgs.html">OceanImportArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.Spotinst.Gke.OceanImport.html">OceanImport</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Gke.OceanImportArgs.html">OceanImportArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -180,15 +180,6 @@ import * as pulumi from "@pulumi/pulumi";
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Backend<wbr>Services</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanimportbackendservice">List&lt;Ocean<wbr>Import<wbr>Backend<wbr>Service<wbr>Args&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}Describes the backend service configurations.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Cluster<wbr>Name</span>
@@ -196,15 +187,6 @@ import * as pulumi from "@pulumi/pulumi";
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The GKE cluster name.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Desired<wbr>Capacity</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}The number of instances to launch and maintain in the cluster. 
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -218,9 +200,27 @@ import * as pulumi from "@pulumi/pulumi";
 
     <dt class="property-optional"
             title="Optional">
+        <span>Backend<wbr>Services</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanimportbackendservice">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Gke.<wbr>Inputs.<wbr>Ocean<wbr>Import<wbr>Backend<wbr>Service<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Describes the backend service configurations.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Desired<wbr>Capacity</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of instances to launch and maintain in the cluster. 
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Max<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The upper limit of instances the cluster can scale up to.
 {{% /md %}}</dd>
@@ -229,7 +229,7 @@ import * as pulumi from "@pulumi/pulumi";
             title="Optional">
         <span>Min<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The lower limit of instances the cluster can scale down to.
 {{% /md %}}</dd>
@@ -238,7 +238,7 @@ import * as pulumi from "@pulumi/pulumi";
             title="Optional">
         <span>Scheduled<wbr>Tasks</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanimportscheduledtask">List&lt;Ocean<wbr>Import<wbr>Scheduled<wbr>Task<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#oceanimportscheduledtask">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Gke.<wbr>Inputs.<wbr>Ocean<wbr>Import<wbr>Scheduled<wbr>Task<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -246,7 +246,7 @@ import * as pulumi from "@pulumi/pulumi";
             title="Optional">
         <span>Whitelists</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -257,15 +257,6 @@ import * as pulumi from "@pulumi/pulumi";
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Backend<wbr>Services</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanimportbackendservice">[]Ocean<wbr>Import<wbr>Backend<wbr>Service</a></span>
-    </dt>
-    <dd>{{% md %}}Describes the backend service configurations.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Cluster<wbr>Name</span>
@@ -273,15 +264,6 @@ import * as pulumi from "@pulumi/pulumi";
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The GKE cluster name.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Desired<wbr>Capacity</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}The number of instances to launch and maintain in the cluster. 
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -295,9 +277,27 @@ import * as pulumi from "@pulumi/pulumi";
 
     <dt class="property-optional"
             title="Optional">
+        <span>Backend<wbr>Services</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanimportbackendservice">[]Ocean<wbr>Import<wbr>Backend<wbr>Service</a></span>
+    </dt>
+    <dd>{{% md %}}Describes the backend service configurations.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Desired<wbr>Capacity</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of instances to launch and maintain in the cluster. 
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Max<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The upper limit of instances the cluster can scale up to.
 {{% /md %}}</dd>
@@ -306,7 +306,7 @@ import * as pulumi from "@pulumi/pulumi";
             title="Optional">
         <span>Min<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The lower limit of instances the cluster can scale down to.
 {{% /md %}}</dd>
@@ -334,15 +334,6 @@ import * as pulumi from "@pulumi/pulumi";
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>backend<wbr>Services</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanimportbackendservice">Ocean<wbr>Import<wbr>Backend<wbr>Service[]?</a></span>
-    </dt>
-    <dd>{{% md %}}Describes the backend service configurations.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>cluster<wbr>Name</span>
@@ -350,15 +341,6 @@ import * as pulumi from "@pulumi/pulumi";
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The GKE cluster name.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>desired<wbr>Capacity</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}The number of instances to launch and maintain in the cluster. 
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -372,9 +354,27 @@ import * as pulumi from "@pulumi/pulumi";
 
     <dt class="property-optional"
             title="Optional">
+        <span>backend<wbr>Services</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanimportbackendservice">Ocean<wbr>Import<wbr>Backend<wbr>Service[]</a></span>
+    </dt>
+    <dd>{{% md %}}Describes the backend service configurations.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>desired<wbr>Capacity</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The number of instances to launch and maintain in the cluster. 
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>max<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The upper limit of instances the cluster can scale up to.
 {{% /md %}}</dd>
@@ -383,7 +383,7 @@ import * as pulumi from "@pulumi/pulumi";
             title="Optional">
         <span>min<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The lower limit of instances the cluster can scale down to.
 {{% /md %}}</dd>
@@ -392,7 +392,7 @@ import * as pulumi from "@pulumi/pulumi";
             title="Optional">
         <span>scheduled<wbr>Tasks</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanimportscheduledtask">Ocean<wbr>Import<wbr>Scheduled<wbr>Task[]?</a></span>
+        <span class="property-type"><a href="#oceanimportscheduledtask">Ocean<wbr>Import<wbr>Scheduled<wbr>Task[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -400,7 +400,7 @@ import * as pulumi from "@pulumi/pulumi";
             title="Optional">
         <span>whitelists</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -411,15 +411,6 @@ import * as pulumi from "@pulumi/pulumi";
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>backend_<wbr>services</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanimportbackendservice">List[Ocean<wbr>Import<wbr>Backend<wbr>Service]</a></span>
-    </dt>
-    <dd>{{% md %}}Describes the backend service configurations.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>cluster_<wbr>name</span>
@@ -429,15 +420,6 @@ import * as pulumi from "@pulumi/pulumi";
     <dd>{{% md %}}The GKE cluster name.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>desired_<wbr>capacity</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The number of instances to launch and maintain in the cluster. 
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>location</span>
@@ -445,6 +427,24 @@ import * as pulumi from "@pulumi/pulumi";
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The zone the master cluster is located in. 
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>backend_<wbr>services</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanimportbackendservice">List[Ocean<wbr>Import<wbr>Backend<wbr>Service]</a></span>
+    </dt>
+    <dd>{{% md %}}Describes the backend service configurations.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>desired_<wbr>capacity</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}The number of instances to launch and maintain in the cluster. 
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -502,79 +502,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Backend<wbr>Services</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanimportbackendservice">List&lt;Ocean<wbr>Import<wbr>Backend<wbr>Service&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}Describes the backend service configurations.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Cluster<wbr>Controller<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Cluster<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The GKE cluster name.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Desired<wbr>Capacity</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The number of instances to launch and maintain in the cluster. 
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Location</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The zone the master cluster is located in. 
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Max<wbr>Size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The upper limit of instances the cluster can scale up to.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Min<wbr>Size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The lower limit of instances the cluster can scale down to.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Scheduled<wbr>Tasks</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanimportscheduledtask">List&lt;Ocean<wbr>Import<wbr>Scheduled<wbr>Task&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Whitelists</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -587,79 +517,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Backend<wbr>Services</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanimportbackendservice">[]Ocean<wbr>Import<wbr>Backend<wbr>Service</a></span>
-    </dt>
-    <dd>{{% md %}}Describes the backend service configurations.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Cluster<wbr>Controller<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Cluster<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The GKE cluster name.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Desired<wbr>Capacity</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The number of instances to launch and maintain in the cluster. 
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Location</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The zone the master cluster is located in. 
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Max<wbr>Size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The upper limit of instances the cluster can scale up to.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Min<wbr>Size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The lower limit of instances the cluster can scale down to.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Scheduled<wbr>Tasks</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanimportscheduledtask">[]Ocean<wbr>Import<wbr>Scheduled<wbr>Task</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Whitelists</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -672,79 +532,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>backend<wbr>Services</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanimportbackendservice">Ocean<wbr>Import<wbr>Backend<wbr>Service[]?</a></span>
-    </dt>
-    <dd>{{% md %}}Describes the backend service configurations.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>cluster<wbr>Controller<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>cluster<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The GKE cluster name.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>desired<wbr>Capacity</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}The number of instances to launch and maintain in the cluster. 
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>location</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The zone the master cluster is located in. 
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>max<wbr>Size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}The upper limit of instances the cluster can scale up to.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>min<wbr>Size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}The lower limit of instances the cluster can scale down to.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>scheduled<wbr>Tasks</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanimportscheduledtask">Ocean<wbr>Import<wbr>Scheduled<wbr>Task[]?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>whitelists</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -757,79 +547,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>backend_<wbr>services</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanimportbackendservice">List[Ocean<wbr>Import<wbr>Backend<wbr>Service]</a></span>
-    </dt>
-    <dd>{{% md %}}Describes the backend service configurations.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>cluster_<wbr>controller_<wbr>id</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>cluster_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The GKE cluster name.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>desired_<wbr>capacity</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The number of instances to launch and maintain in the cluster. 
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>location</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The zone the master cluster is located in. 
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>max_<wbr>size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The upper limit of instances the cluster can scale up to.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>min_<wbr>size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The lower limit of instances the cluster can scale down to.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>scheduled_<wbr>tasks</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanimportscheduledtask">List[Ocean<wbr>Import<wbr>Scheduled<wbr>Task]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>whitelists</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -972,7 +692,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Backend<wbr>Services</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanimportbackendservice">List&lt;Ocean<wbr>Import<wbr>Backend<wbr>Service<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#oceanimportbackendservice">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Gke.<wbr>Inputs.<wbr>Ocean<wbr>Import<wbr>Backend<wbr>Service<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Describes the backend service configurations.
 {{% /md %}}</dd>
@@ -981,7 +701,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Cluster<wbr>Controller<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -989,7 +709,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Cluster<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The GKE cluster name.
 {{% /md %}}</dd>
@@ -998,7 +718,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Desired<wbr>Capacity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of instances to launch and maintain in the cluster. 
 {{% /md %}}</dd>
@@ -1007,7 +727,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The zone the master cluster is located in. 
 {{% /md %}}</dd>
@@ -1016,7 +736,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Max<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The upper limit of instances the cluster can scale up to.
 {{% /md %}}</dd>
@@ -1025,7 +745,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Min<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The lower limit of instances the cluster can scale down to.
 {{% /md %}}</dd>
@@ -1034,7 +754,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Scheduled<wbr>Tasks</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanimportscheduledtask">List&lt;Ocean<wbr>Import<wbr>Scheduled<wbr>Task<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#oceanimportscheduledtask">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Gke.<wbr>Inputs.<wbr>Ocean<wbr>Import<wbr>Scheduled<wbr>Task<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1042,7 +762,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Whitelists</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1066,7 +786,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Cluster<wbr>Controller<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1074,7 +794,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Cluster<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The GKE cluster name.
 {{% /md %}}</dd>
@@ -1083,7 +803,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Desired<wbr>Capacity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of instances to launch and maintain in the cluster. 
 {{% /md %}}</dd>
@@ -1092,7 +812,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The zone the master cluster is located in. 
 {{% /md %}}</dd>
@@ -1101,7 +821,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Max<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The upper limit of instances the cluster can scale up to.
 {{% /md %}}</dd>
@@ -1110,7 +830,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Min<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The lower limit of instances the cluster can scale down to.
 {{% /md %}}</dd>
@@ -1142,7 +862,7 @@ The following state arguments are supported:
             title="Optional">
         <span>backend<wbr>Services</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanimportbackendservice">Ocean<wbr>Import<wbr>Backend<wbr>Service[]?</a></span>
+        <span class="property-type"><a href="#oceanimportbackendservice">Ocean<wbr>Import<wbr>Backend<wbr>Service[]</a></span>
     </dt>
     <dd>{{% md %}}Describes the backend service configurations.
 {{% /md %}}</dd>
@@ -1151,7 +871,7 @@ The following state arguments are supported:
             title="Optional">
         <span>cluster<wbr>Controller<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1159,7 +879,7 @@ The following state arguments are supported:
             title="Optional">
         <span>cluster<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The GKE cluster name.
 {{% /md %}}</dd>
@@ -1168,7 +888,7 @@ The following state arguments are supported:
             title="Optional">
         <span>desired<wbr>Capacity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of instances to launch and maintain in the cluster. 
 {{% /md %}}</dd>
@@ -1177,7 +897,7 @@ The following state arguments are supported:
             title="Optional">
         <span>location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The zone the master cluster is located in. 
 {{% /md %}}</dd>
@@ -1186,7 +906,7 @@ The following state arguments are supported:
             title="Optional">
         <span>max<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The upper limit of instances the cluster can scale up to.
 {{% /md %}}</dd>
@@ -1195,7 +915,7 @@ The following state arguments are supported:
             title="Optional">
         <span>min<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The lower limit of instances the cluster can scale down to.
 {{% /md %}}</dd>
@@ -1204,7 +924,7 @@ The following state arguments are supported:
             title="Optional">
         <span>scheduled<wbr>Tasks</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanimportscheduledtask">Ocean<wbr>Import<wbr>Scheduled<wbr>Task[]?</a></span>
+        <span class="property-type"><a href="#oceanimportscheduledtask">Ocean<wbr>Import<wbr>Scheduled<wbr>Task[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1212,7 +932,7 @@ The following state arguments are supported:
             title="Optional">
         <span>whitelists</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1330,11 +1050,20 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Service<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the backend service.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Location<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sets which location the backend services will be active. Valid values: `regional`, `global`.
 {{% /md %}}</dd>
@@ -1343,7 +1072,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Named<wbr>Ports</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanimportbackendservicenamedport">List&lt;Ocean<wbr>Import<wbr>Backend<wbr>Service<wbr>Named<wbr>Port<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#oceanimportbackendservicenamedport">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Gke.<wbr>Inputs.<wbr>Ocean<wbr>Import<wbr>Backend<wbr>Service<wbr>Named<wbr>Port<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1351,10 +1080,17 @@ The following state arguments are supported:
             title="Optional">
         <span>Scheme</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Use when `location_type` is `regional`. Set the traffic for the backend service to either between the instances in the vpc or to traffic from the internet. Valid values: `INTERNAL`, `EXTERNAL`.
 {{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
@@ -1365,18 +1101,11 @@ The following state arguments are supported:
     <dd>{{% md %}}The name of the backend service.
 {{% /md %}}</dd>
 
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span>Location<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sets which location the backend services will be active. Valid values: `regional`, `global`.
 {{% /md %}}</dd>
@@ -1393,18 +1122,9 @@ The following state arguments are supported:
             title="Optional">
         <span>Scheme</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Use when `location_type` is `regional`. Set the traffic for the backend service to either between the instances in the vpc or to traffic from the internet. Valid values: `INTERNAL`, `EXTERNAL`.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Service<wbr>Name</span>
-        <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the backend service.
+    <dd>{{% md %}}Use when `location_type` is `regional`. Set the traffic for the backend service to either between the instances in the vpc or to traffic from the internet. Valid values: `INTERNAL`, `EXTERNAL`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1413,32 +1133,6 @@ The following state arguments are supported:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>location<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Sets which location the backend services will be active. Valid values: `regional`, `global`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>named<wbr>Ports</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanimportbackendservicenamedport">Ocean<wbr>Import<wbr>Backend<wbr>Service<wbr>Named<wbr>Port[]?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>scheme</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Use when `location_type` is `regional`. Set the traffic for the backend service to either between the instances in the vpc or to traffic from the internet. Valid values: `INTERNAL`, `EXTERNAL`.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1449,12 +1143,47 @@ The following state arguments are supported:
     <dd>{{% md %}}The name of the backend service.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>location<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Sets which location the backend services will be active. Valid values: `regional`, `global`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>named<wbr>Ports</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanimportbackendservicenamedport">Ocean<wbr>Import<wbr>Backend<wbr>Service<wbr>Named<wbr>Port[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>scheme</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Use when `location_type` is `regional`. Set the traffic for the backend service to either between the instances in the vpc or to traffic from the internet. Valid values: `INTERNAL`, `EXTERNAL`.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>service<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the backend service.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1480,15 +1209,6 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Use when `location_type` is `regional`. Set the traffic for the backend service to either between the instances in the vpc or to traffic from the internet. Valid values: `INTERNAL`, `EXTERNAL`.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>service<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the backend service.
 {{% /md %}}</dd>
 
 </dl>
@@ -1525,7 +1245,7 @@ The following state arguments are supported:
             title="Required">
         <span>Ports</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of ports.
 {{% /md %}}</dd>
@@ -1628,7 +1348,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Shutdown<wbr>Hours</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanimportscheduledtaskshutdownhours">Ocean<wbr>Import<wbr>Scheduled<wbr>Task<wbr>Shutdown<wbr>Hours<wbr>Args?</a></span>
+        <span class="property-type"><a href="#oceanimportscheduledtaskshutdownhours">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Gke.<wbr>Inputs.<wbr>Ocean<wbr>Import<wbr>Scheduled<wbr>Task<wbr>Shutdown<wbr>Hours<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1636,7 +1356,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Tasks</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanimportscheduledtasktask">List&lt;Ocean<wbr>Import<wbr>Scheduled<wbr>Task<wbr>Task<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#oceanimportscheduledtasktask">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Gke.<wbr>Inputs.<wbr>Ocean<wbr>Import<wbr>Scheduled<wbr>Task<wbr>Task<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1651,7 +1371,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Shutdown<wbr>Hours</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanimportscheduledtaskshutdownhours">*Ocean<wbr>Import<wbr>Scheduled<wbr>Task<wbr>Shutdown<wbr>Hours</a></span>
+        <span class="property-type"><a href="#oceanimportscheduledtaskshutdownhours">Ocean<wbr>Import<wbr>Scheduled<wbr>Task<wbr>Shutdown<wbr>Hours</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1674,7 +1394,7 @@ The following state arguments are supported:
             title="Optional">
         <span>shutdown<wbr>Hours</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanimportscheduledtaskshutdownhours">Ocean<wbr>Import<wbr>Scheduled<wbr>Task<wbr>Shutdown<wbr>Hours?</a></span>
+        <span class="property-type"><a href="#oceanimportscheduledtaskshutdownhours">Ocean<wbr>Import<wbr>Scheduled<wbr>Task<wbr>Shutdown<wbr>Hours</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1682,7 +1402,7 @@ The following state arguments are supported:
             title="Optional">
         <span>tasks</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanimportscheduledtasktask">Ocean<wbr>Import<wbr>Scheduled<wbr>Task<wbr>Task[]?</a></span>
+        <span class="property-type"><a href="#oceanimportscheduledtasktask">Ocean<wbr>Import<wbr>Scheduled<wbr>Task<wbr>Task[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1731,19 +1451,19 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Is<wbr>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Time<wbr>Windows</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Is<wbr>Enabled</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1754,19 +1474,19 @@ The following state arguments are supported:
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Is<wbr>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Time<wbr>Windows</span>
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Is<wbr>Enabled</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1777,19 +1497,19 @@ The following state arguments are supported:
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>is<wbr>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>time<wbr>Windows</span>
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>is<wbr>Enabled</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1800,19 +1520,19 @@ The following state arguments are supported:
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>is<wbr>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>time<wbr>Windows</span>
         <span class="property-indicator"></span>
         <span class="property-type">List[str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>is<wbr>Enabled</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1838,14 +1558,6 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Batch<wbr>Size<wbr>Percentage</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Cron<wbr>Expression</span>
@@ -1867,6 +1579,14 @@ The following state arguments are supported:
         <span>Task<wbr>Type</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Batch<wbr>Size<wbr>Percentage</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1877,14 +1597,6 @@ The following state arguments are supported:
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Batch<wbr>Size<wbr>Percentage</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Cron<wbr>Expression</span>
@@ -1909,20 +1621,20 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>Batch<wbr>Size<wbr>Percentage</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>batch<wbr>Size<wbr>Percentage</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1948,20 +1660,20 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>batch<wbr>Size<wbr>Percentage</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>batch<wbr>Size<wbr>Percentage</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1984,6 +1696,14 @@ The following state arguments are supported:
         <span>task<wbr>Type</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>batch<wbr>Size<wbr>Percentage</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

@@ -33,13 +33,13 @@ Filters support regular expression for the cluster name, searches by clusterId, 
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupEndpoints<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/polardb?tab=doc#LookupEndpointsArgs">LookupEndpointsArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/polardb?tab=doc#LookupEndpointsResult">LookupEndpointsResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupEndpoints<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/polardb?tab=doc#LookupEndpointsArgs">LookupEndpointsArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/polardb?tab=doc#LookupEndpointsResult">LookupEndpointsResult</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetEndpoints </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.Polardb.GetEndpointsResult.html">GetEndpointsResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.PolarDB.GetEndpointsArgs.html">GetEndpointsArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.Polardb.GetEndpointsResult.html">GetEndpointsResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.AliCloud.PolarDB.GetEndpointsArgs.html">GetEndpointsArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -65,7 +65,7 @@ The following arguments are supported:
             title="Optional">
         <span>Db<wbr>Endpoint<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}endpoint of the cluster.
 {{% /md %}}</dd>
@@ -90,7 +90,7 @@ The following arguments are supported:
             title="Optional">
         <span>Db<wbr>Endpoint<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}endpoint of the cluster.
 {{% /md %}}</dd>
@@ -115,7 +115,7 @@ The following arguments are supported:
             title="Optional">
         <span>db<wbr>Endpoint<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}endpoint of the cluster.
 {{% /md %}}</dd>
@@ -175,18 +175,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Db<wbr>Endpoint<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The endpoint ID.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Endpoints</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getendpointsendpoint">List&lt;Get<wbr>Endpoints<wbr>Endpoint&gt;</a></span>
+        <span class="property-type"><a href="#getendpointsendpoint">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Polar<wbr>DB.<wbr>Outputs.<wbr>Get<wbr>Endpoints<wbr>Endpoint&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of PolarDB cluster endpoints. Each element contains the following attributes:
 {{% /md %}}</dd>
@@ -198,6 +189,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Db<wbr>Endpoint<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The endpoint ID.
 {{% /md %}}</dd>
 
 </dl>
@@ -217,15 +217,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Db<wbr>Endpoint<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The endpoint ID.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Endpoints</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getendpointsendpoint">[]Get<wbr>Endpoints<wbr>Endpoint</a></span>
@@ -240,6 +231,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Db<wbr>Endpoint<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The endpoint ID.
 {{% /md %}}</dd>
 
 </dl>
@@ -259,15 +259,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>db<wbr>Endpoint<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The endpoint ID.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>endpoints</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getendpointsendpoint">Get<wbr>Endpoints<wbr>Endpoint[]</a></span>
@@ -282,6 +273,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>db<wbr>Endpoint<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The endpoint ID.
 {{% /md %}}</dd>
 
 </dl>
@@ -301,15 +301,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>db_<wbr>endpoint_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The endpoint ID.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>endpoints</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getendpointsendpoint">List[Get<wbr>Endpoints<wbr>Endpoint]</a></span>
@@ -324,6 +315,15 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>db_<wbr>endpoint_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The endpoint ID.
 {{% /md %}}</dd>
 
 </dl>
@@ -357,7 +357,7 @@ The following output properties are available:
             title="Required">
         <span>Address<wbr>Items</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getendpointsendpointaddressitem">List&lt;Get<wbr>Endpoints<wbr>Endpoint<wbr>Address<wbr>Item<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getendpointsendpointaddressitem">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Polar<wbr>DB.<wbr>Inputs.<wbr>Get<wbr>Endpoints<wbr>Endpoint<wbr>Address<wbr>Item<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of endpoint addresses. Each element contains the following attributes.
 {{% /md %}}</dd>

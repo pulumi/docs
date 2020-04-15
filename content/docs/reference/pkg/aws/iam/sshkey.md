@@ -36,7 +36,7 @@ const userSshKey = new aws.iam.SshKey("user", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/iam/#SshKey">SshKey</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/iam/#SshKeyArgs">SshKeyArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/iam/#SshKey">SshKey</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/iam/#SshKeyArgs">SshKeyArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -44,7 +44,7 @@ const userSshKey = new aws.iam.SshKey("user", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewSshKey<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/iam?tab=doc#SshKeyArgs">SshKeyArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/iam?tab=doc#SshKey">SshKey</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewSshKey<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/iam?tab=doc#SshKeyArgs">SshKeyArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/iam?tab=doc#SshKey">SshKey</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -158,15 +158,6 @@ const userSshKey = new aws.iam.SshKey("user", {
     <dd>{{% md %}}The SSH public key. The public key must be encoded in ssh-rsa format or PEM format.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Status</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The status to assign to the SSH public key. Active means the key can be used for authentication with an AWS CodeCommit repository. Inactive means the key cannot be used. Default is `active`.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Username</span>
@@ -174,6 +165,15 @@ const userSshKey = new aws.iam.SshKey("user", {
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the IAM user to associate the SSH public key with.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Status</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The status to assign to the SSH public key. Active means the key can be used for authentication with an AWS CodeCommit repository. Inactive means the key cannot be used. Default is `active`.
 {{% /md %}}</dd>
 
 </dl>
@@ -201,15 +201,6 @@ const userSshKey = new aws.iam.SshKey("user", {
     <dd>{{% md %}}The SSH public key. The public key must be encoded in ssh-rsa format or PEM format.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Status</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The status to assign to the SSH public key. Active means the key can be used for authentication with an AWS CodeCommit repository. Inactive means the key cannot be used. Default is `active`.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Username</span>
@@ -217,6 +208,15 @@ const userSshKey = new aws.iam.SshKey("user", {
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the IAM user to associate the SSH public key with.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Status</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The status to assign to the SSH public key. Active means the key can be used for authentication with an AWS CodeCommit repository. Inactive means the key cannot be used. Default is `active`.
 {{% /md %}}</dd>
 
 </dl>
@@ -244,15 +244,6 @@ const userSshKey = new aws.iam.SshKey("user", {
     <dd>{{% md %}}The SSH public key. The public key must be encoded in ssh-rsa format or PEM format.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>status</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The status to assign to the SSH public key. Active means the key can be used for authentication with an AWS CodeCommit repository. Inactive means the key cannot be used. Default is `active`.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>username</span>
@@ -260,6 +251,15 @@ const userSshKey = new aws.iam.SshKey("user", {
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the IAM user to associate the SSH public key with.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>status</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The status to assign to the SSH public key. Active means the key can be used for authentication with an AWS CodeCommit repository. Inactive means the key cannot be used. Default is `active`.
 {{% /md %}}</dd>
 
 </dl>
@@ -287,15 +287,6 @@ const userSshKey = new aws.iam.SshKey("user", {
     <dd>{{% md %}}The SSH public key. The public key must be encoded in ssh-rsa format or PEM format.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>status</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The status to assign to the SSH public key. Active means the key can be used for authentication with an AWS CodeCommit repository. Inactive means the key cannot be used. Default is `active`.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>username</span>
@@ -303,6 +294,15 @@ const userSshKey = new aws.iam.SshKey("user", {
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the IAM user to associate the SSH public key with.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>status</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The status to assign to the SSH public key. Active means the key can be used for authentication with an AWS CodeCommit repository. Inactive means the key cannot be used. Default is `active`.
 {{% /md %}}</dd>
 
 </dl>
@@ -326,15 +326,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Encoding</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the public key encoding format to use in the response. To retrieve the public key in ssh-rsa format, use `SSH`. To retrieve the public key in PEM format, use `PEM`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Fingerprint</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -344,38 +335,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Public<wbr>Key</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The SSH public key. The public key must be encoded in ssh-rsa format or PEM format.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Ssh<wbr>Public<wbr>Key<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier for the SSH public key.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Status</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The status to assign to the SSH public key. Active means the key can be used for authentication with an AWS CodeCommit repository. Inactive means the key cannot be used. Default is `active`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Username</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the IAM user to associate the SSH public key with.
 {{% /md %}}</dd>
 
 </dl>
@@ -387,29 +351,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Encoding</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the public key encoding format to use in the response. To retrieve the public key in ssh-rsa format, use `SSH`. To retrieve the public key in PEM format, use `PEM`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Fingerprint</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The MD5 message digest of the SSH public key.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Public<wbr>Key</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The SSH public key. The public key must be encoded in ssh-rsa format or PEM format.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -421,24 +367,6 @@ The following output properties are available:
     <dd>{{% md %}}The unique identifier for the SSH public key.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span>Status</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The status to assign to the SSH public key. Active means the key can be used for authentication with an AWS CodeCommit repository. Inactive means the key cannot be used. Default is `active`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Username</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the IAM user to associate the SSH public key with.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -448,29 +376,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>encoding</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the public key encoding format to use in the response. To retrieve the public key in ssh-rsa format, use `SSH`. To retrieve the public key in PEM format, use `PEM`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>fingerprint</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The MD5 message digest of the SSH public key.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>public<wbr>Key</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The SSH public key. The public key must be encoded in ssh-rsa format or PEM format.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -482,39 +392,12 @@ The following output properties are available:
     <dd>{{% md %}}The unique identifier for the SSH public key.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span>status</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The status to assign to the SSH public key. Active means the key can be used for authentication with an AWS CodeCommit repository. Inactive means the key cannot be used. Default is `active`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>username</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the IAM user to associate the SSH public key with.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>encoding</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Specifies the public key encoding format to use in the response. To retrieve the public key in ssh-rsa format, use `SSH`. To retrieve the public key in PEM format, use `PEM`.
-{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -527,38 +410,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>public_<wbr>key</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The SSH public key. The public key must be encoded in ssh-rsa format or PEM format.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>ssh_<wbr>public_<wbr>key_<wbr>id</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The unique identifier for the SSH public key.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>status</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The status to assign to the SSH public key. Active means the key can be used for authentication with an AWS CodeCommit repository. Inactive means the key cannot be used. Default is `active`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>username</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the IAM user to associate the SSH public key with.
 {{% /md %}}</dd>
 
 </dl>
@@ -700,7 +556,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Encoding</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the public key encoding format to use in the response. To retrieve the public key in ssh-rsa format, use `SSH`. To retrieve the public key in PEM format, use `PEM`.
 {{% /md %}}</dd>
@@ -709,7 +565,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Fingerprint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The MD5 message digest of the SSH public key.
 {{% /md %}}</dd>
@@ -718,7 +574,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Public<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SSH public key. The public key must be encoded in ssh-rsa format or PEM format.
 {{% /md %}}</dd>
@@ -727,7 +583,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Ssh<wbr>Public<wbr>Key<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier for the SSH public key.
 {{% /md %}}</dd>
@@ -736,7 +592,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status to assign to the SSH public key. Active means the key can be used for authentication with an AWS CodeCommit repository. Inactive means the key cannot be used. Default is `active`.
 {{% /md %}}</dd>
@@ -745,7 +601,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Username</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the IAM user to associate the SSH public key with.
 {{% /md %}}</dd>
@@ -761,7 +617,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Encoding</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the public key encoding format to use in the response. To retrieve the public key in ssh-rsa format, use `SSH`. To retrieve the public key in PEM format, use `PEM`.
 {{% /md %}}</dd>
@@ -770,7 +626,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Fingerprint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The MD5 message digest of the SSH public key.
 {{% /md %}}</dd>
@@ -779,7 +635,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Public<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SSH public key. The public key must be encoded in ssh-rsa format or PEM format.
 {{% /md %}}</dd>
@@ -788,7 +644,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Ssh<wbr>Public<wbr>Key<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier for the SSH public key.
 {{% /md %}}</dd>
@@ -797,7 +653,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status to assign to the SSH public key. Active means the key can be used for authentication with an AWS CodeCommit repository. Inactive means the key cannot be used. Default is `active`.
 {{% /md %}}</dd>
@@ -806,7 +662,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Username</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the IAM user to associate the SSH public key with.
 {{% /md %}}</dd>
@@ -822,7 +678,7 @@ The following state arguments are supported:
             title="Optional">
         <span>encoding</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the public key encoding format to use in the response. To retrieve the public key in ssh-rsa format, use `SSH`. To retrieve the public key in PEM format, use `PEM`.
 {{% /md %}}</dd>
@@ -831,7 +687,7 @@ The following state arguments are supported:
             title="Optional">
         <span>fingerprint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The MD5 message digest of the SSH public key.
 {{% /md %}}</dd>
@@ -840,7 +696,7 @@ The following state arguments are supported:
             title="Optional">
         <span>public<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SSH public key. The public key must be encoded in ssh-rsa format or PEM format.
 {{% /md %}}</dd>
@@ -849,7 +705,7 @@ The following state arguments are supported:
             title="Optional">
         <span>ssh<wbr>Public<wbr>Key<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unique identifier for the SSH public key.
 {{% /md %}}</dd>
@@ -858,7 +714,7 @@ The following state arguments are supported:
             title="Optional">
         <span>status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status to assign to the SSH public key. Active means the key can be used for authentication with an AWS CodeCommit repository. Inactive means the key cannot be used. Default is `active`.
 {{% /md %}}</dd>
@@ -867,7 +723,7 @@ The following state arguments are supported:
             title="Optional">
         <span>username</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the IAM user to associate the SSH public key with.
 {{% /md %}}</dd>

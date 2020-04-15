@@ -40,7 +40,7 @@ const jiraMyteamXX = new signalfx.jira.Integration("jira_myteamXX", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/signalfx/jira/#Integration">Integration</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/signalfx/jira/#IntegrationArgs">IntegrationArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/signalfx/jira/#Integration">Integration</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/signalfx/jira/#IntegrationArgs">IntegrationArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -48,11 +48,11 @@ const jiraMyteamXX = new signalfx.jira.Integration("jira_myteamXX", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewIntegration<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/go/signalfx/jira?tab=doc#IntegrationArgs">IntegrationArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/go/signalfx/jira?tab=doc#Integration">Integration</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewIntegration<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/go/signalfx/jira?tab=doc#IntegrationArgs">IntegrationArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/go/signalfx/jira?tab=doc#Integration">Integration</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Signalfx/Pulumi.Signalfx.Jira.Integration.html">Integration</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Signalfx/Pulumi.Signalfx.Jira.IntegrationArgs.html">IntegrationArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Signalfx/Pulumi.Signalfx.Jira.Integration.html">Integration</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Signalfx/Pulumi.SignalFx.Jira.IntegrationArgs.html">IntegrationArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -144,24 +144,6 @@ const jiraMyteamXX = new signalfx.jira.Integration("jira_myteamXX", {
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Api<wbr>Token</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The API token for the user email
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Assignee<wbr>Display<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Jira display name for the assignee.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Assignee<wbr>Name</span>
@@ -207,24 +189,6 @@ const jiraMyteamXX = new signalfx.jira.Integration("jira_myteamXX", {
     <dd>{{% md %}}Issue type (for example, Story) for tickets that Jira creates for detector notifications. SignalFx validates issue types, so you must specify a type that's valid for the Jira project specified in `projectKey`.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Name of the integration.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Password</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Password used to authenticate the Jira integration.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Project<wbr>Key</span>
@@ -236,9 +200,45 @@ const jiraMyteamXX = new signalfx.jira.Integration("jira_myteamXX", {
 
     <dt class="property-optional"
             title="Optional">
+        <span>Api<wbr>Token</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The API token for the user email
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Assignee<wbr>Display<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Jira display name for the assignee.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the integration.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Password</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Password used to authenticate the Jira integration.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>User<wbr>Email</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Email address used to authenticate the Jira integration.
 {{% /md %}}</dd>
@@ -247,7 +247,7 @@ const jiraMyteamXX = new signalfx.jira.Integration("jira_myteamXX", {
             title="Optional">
         <span>Username</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User name used to authenticate the Jira integration.
 {{% /md %}}</dd>
@@ -259,24 +259,6 @@ const jiraMyteamXX = new signalfx.jira.Integration("jira_myteamXX", {
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Api<wbr>Token</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The API token for the user email
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Assignee<wbr>Display<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Jira display name for the assignee.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Assignee<wbr>Name</span>
@@ -322,24 +304,6 @@ const jiraMyteamXX = new signalfx.jira.Integration("jira_myteamXX", {
     <dd>{{% md %}}Issue type (for example, Story) for tickets that Jira creates for detector notifications. SignalFx validates issue types, so you must specify a type that's valid for the Jira project specified in `projectKey`.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Name of the integration.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Password</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Password used to authenticate the Jira integration.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Project<wbr>Key</span>
@@ -351,9 +315,45 @@ const jiraMyteamXX = new signalfx.jira.Integration("jira_myteamXX", {
 
     <dt class="property-optional"
             title="Optional">
+        <span>Api<wbr>Token</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The API token for the user email
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Assignee<wbr>Display<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Jira display name for the assignee.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the integration.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Password</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Password used to authenticate the Jira integration.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>User<wbr>Email</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Email address used to authenticate the Jira integration.
 {{% /md %}}</dd>
@@ -362,7 +362,7 @@ const jiraMyteamXX = new signalfx.jira.Integration("jira_myteamXX", {
             title="Optional">
         <span>Username</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User name used to authenticate the Jira integration.
 {{% /md %}}</dd>
@@ -373,24 +373,6 @@ const jiraMyteamXX = new signalfx.jira.Integration("jira_myteamXX", {
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>api<wbr>Token</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The API token for the user email
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>assignee<wbr>Display<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Jira display name for the assignee.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -437,24 +419,6 @@ const jiraMyteamXX = new signalfx.jira.Integration("jira_myteamXX", {
     <dd>{{% md %}}Issue type (for example, Story) for tickets that Jira creates for detector notifications. SignalFx validates issue types, so you must specify a type that's valid for the Jira project specified in `projectKey`.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Name of the integration.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>password</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Password used to authenticate the Jira integration.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>project<wbr>Key</span>
@@ -466,451 +430,24 @@ const jiraMyteamXX = new signalfx.jira.Integration("jira_myteamXX", {
 
     <dt class="property-optional"
             title="Optional">
-        <span>user<wbr>Email</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Email address used to authenticate the Jira integration.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>username</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}User name used to authenticate the Jira integration.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>api_<wbr>token</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The API token for the user email
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>assignee_<wbr>display_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Jira display name for the assignee.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>assignee_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Jira user name for the assignee.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>auth_<wbr>method</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Authentication method used when creating the Jira integration. One of `EmailAndToken` (using `user_email` and `api_token`) or `UsernameAndPassword` (using `username` and `password`).
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>base_<wbr>url</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Base URL of the Jira instance that's integrated with SignalFx.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Whether the integration is enabled.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>issue_<wbr>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Issue type (for example, Story) for tickets that Jira creates for detector notifications. SignalFx validates issue types, so you must specify a type that's valid for the Jira project specified in `projectKey`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Name of the integration.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>password</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Password used to authenticate the Jira integration.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>project_<wbr>key</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Jira key of an existing project. When Jira creates a new ticket for a detector notification, the ticket is assigned to this project.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>user_<wbr>email</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Email address used to authenticate the Jira integration.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>username</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}User name used to authenticate the Jira integration.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-
-
-
-
-
-## Integration Output Properties
-
-The following output properties are available:
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Api<wbr>Token</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The API token for the user email
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Assignee<wbr>Display<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Jira display name for the assignee.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Assignee<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Jira user name for the assignee.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Auth<wbr>Method</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Authentication method used when creating the Jira integration. One of `EmailAndToken` (using `user_email` and `api_token`) or `UsernameAndPassword` (using `username` and `password`).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Base<wbr>Url</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Base URL of the Jira instance that's integrated with SignalFx.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Whether the integration is enabled.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Issue<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Issue type (for example, Story) for tickets that Jira creates for detector notifications. SignalFx validates issue types, so you must specify a type that's valid for the Jira project specified in `projectKey`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the integration.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Password</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Password used to authenticate the Jira integration.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Project<wbr>Key</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Jira key of an existing project. When Jira creates a new ticket for a detector notification, the ticket is assigned to this project.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>User<wbr>Email</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Email address used to authenticate the Jira integration.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Username</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}User name used to authenticate the Jira integration.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Api<wbr>Token</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The API token for the user email
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Assignee<wbr>Display<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Jira display name for the assignee.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Assignee<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Jira user name for the assignee.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Auth<wbr>Method</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Authentication method used when creating the Jira integration. One of `EmailAndToken` (using `user_email` and `api_token`) or `UsernameAndPassword` (using `username` and `password`).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Base<wbr>Url</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Base URL of the Jira instance that's integrated with SignalFx.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Whether the integration is enabled.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Issue<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Issue type (for example, Story) for tickets that Jira creates for detector notifications. SignalFx validates issue types, so you must specify a type that's valid for the Jira project specified in `projectKey`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the integration.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Password</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Password used to authenticate the Jira integration.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Project<wbr>Key</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Jira key of an existing project. When Jira creates a new ticket for a detector notification, the ticket is assigned to this project.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>User<wbr>Email</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Email address used to authenticate the Jira integration.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Username</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}User name used to authenticate the Jira integration.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
         <span>api<wbr>Token</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The API token for the user email
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>assignee<wbr>Display<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Jira display name for the assignee.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span>assignee<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Jira user name for the assignee.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>auth<wbr>Method</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Authentication method used when creating the Jira integration. One of `EmailAndToken` (using `user_email` and `api_token`) or `UsernameAndPassword` (using `username` and `password`).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>base<wbr>Url</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Base URL of the Jira instance that's integrated with SignalFx.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
-    </dt>
-    <dd>{{% md %}}Whether the integration is enabled.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>issue<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Issue type (for example, Story) for tickets that Jira creates for detector notifications. SignalFx validates issue types, so you must specify a type that's valid for the Jira project specified in `projectKey`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -918,38 +455,29 @@ The following output properties are available:
     <dd>{{% md %}}Name of the integration.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password used to authenticate the Jira integration.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span>project<wbr>Key</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Jira key of an existing project. When Jira creates a new ticket for a detector notification, the ticket is assigned to this project.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>user<wbr>Email</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Email address used to authenticate the Jira integration.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>username</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User name used to authenticate the Jira integration.
 {{% /md %}}</dd>
@@ -961,26 +489,8 @@ The following output properties are available:
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-"
-            title="">
-        <span>api_<wbr>token</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The API token for the user email
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>assignee_<wbr>display_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Jira display name for the assignee.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
+    <dt class="property-required"
+            title="Required">
         <span>assignee_<wbr>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -988,8 +498,8 @@ The following output properties are available:
     <dd>{{% md %}}Jira user name for the assignee.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-required"
+            title="Required">
         <span>auth_<wbr>method</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -997,8 +507,8 @@ The following output properties are available:
     <dd>{{% md %}}Authentication method used when creating the Jira integration. One of `EmailAndToken` (using `user_email` and `api_token`) or `UsernameAndPassword` (using `username` and `password`).
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-required"
+            title="Required">
         <span>base_<wbr>url</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -1006,8 +516,8 @@ The following output properties are available:
     <dd>{{% md %}}Base URL of the Jira instance that's integrated with SignalFx.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-required"
+            title="Required">
         <span>enabled</span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
@@ -1015,8 +525,8 @@ The following output properties are available:
     <dd>{{% md %}}Whether the integration is enabled.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-required"
+            title="Required">
         <span>issue_<wbr>type</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -1024,26 +534,8 @@ The following output properties are available:
     <dd>{{% md %}}Issue type (for example, Story) for tickets that Jira creates for detector notifications. SignalFx validates issue types, so you must specify a type that's valid for the Jira project specified in `projectKey`.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Name of the integration.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>password</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Password used to authenticate the Jira integration.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
+    <dt class="property-required"
+            title="Required">
         <span>project_<wbr>key</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -1051,8 +543,44 @@ The following output properties are available:
     <dd>{{% md %}}Jira key of an existing project. When Jira creates a new ticket for a detector notification, the ticket is assigned to this project.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
+        <span>api_<wbr>token</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The API token for the user email
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>assignee_<wbr>display_<wbr>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Jira display name for the assignee.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Name of the integration.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>password</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Password used to authenticate the Jira integration.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>user_<wbr>email</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -1060,8 +588,8 @@ The following output properties are available:
     <dd>{{% md %}}Email address used to authenticate the Jira integration.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>username</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -1071,6 +599,8 @@ The following output properties are available:
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 
@@ -1208,7 +738,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Api<wbr>Token</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The API token for the user email
 {{% /md %}}</dd>
@@ -1217,7 +747,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Assignee<wbr>Display<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Jira display name for the assignee.
 {{% /md %}}</dd>
@@ -1226,7 +756,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Assignee<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Jira user name for the assignee.
 {{% /md %}}</dd>
@@ -1235,7 +765,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Auth<wbr>Method</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Authentication method used when creating the Jira integration. One of `EmailAndToken` (using `user_email` and `api_token`) or `UsernameAndPassword` (using `username` and `password`).
 {{% /md %}}</dd>
@@ -1244,7 +774,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Base<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Base URL of the Jira instance that's integrated with SignalFx.
 {{% /md %}}</dd>
@@ -1253,7 +783,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the integration is enabled.
 {{% /md %}}</dd>
@@ -1262,7 +792,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Issue<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Issue type (for example, Story) for tickets that Jira creates for detector notifications. SignalFx validates issue types, so you must specify a type that's valid for the Jira project specified in `projectKey`.
 {{% /md %}}</dd>
@@ -1271,7 +801,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the integration.
 {{% /md %}}</dd>
@@ -1280,7 +810,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password used to authenticate the Jira integration.
 {{% /md %}}</dd>
@@ -1289,7 +819,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Project<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Jira key of an existing project. When Jira creates a new ticket for a detector notification, the ticket is assigned to this project.
 {{% /md %}}</dd>
@@ -1298,7 +828,7 @@ The following state arguments are supported:
             title="Optional">
         <span>User<wbr>Email</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Email address used to authenticate the Jira integration.
 {{% /md %}}</dd>
@@ -1307,7 +837,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Username</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User name used to authenticate the Jira integration.
 {{% /md %}}</dd>
@@ -1323,7 +853,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Api<wbr>Token</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The API token for the user email
 {{% /md %}}</dd>
@@ -1332,7 +862,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Assignee<wbr>Display<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Jira display name for the assignee.
 {{% /md %}}</dd>
@@ -1341,7 +871,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Assignee<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Jira user name for the assignee.
 {{% /md %}}</dd>
@@ -1350,7 +880,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Auth<wbr>Method</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Authentication method used when creating the Jira integration. One of `EmailAndToken` (using `user_email` and `api_token`) or `UsernameAndPassword` (using `username` and `password`).
 {{% /md %}}</dd>
@@ -1359,7 +889,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Base<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Base URL of the Jira instance that's integrated with SignalFx.
 {{% /md %}}</dd>
@@ -1368,7 +898,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the integration is enabled.
 {{% /md %}}</dd>
@@ -1377,7 +907,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Issue<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Issue type (for example, Story) for tickets that Jira creates for detector notifications. SignalFx validates issue types, so you must specify a type that's valid for the Jira project specified in `projectKey`.
 {{% /md %}}</dd>
@@ -1386,7 +916,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the integration.
 {{% /md %}}</dd>
@@ -1395,7 +925,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password used to authenticate the Jira integration.
 {{% /md %}}</dd>
@@ -1404,7 +934,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Project<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Jira key of an existing project. When Jira creates a new ticket for a detector notification, the ticket is assigned to this project.
 {{% /md %}}</dd>
@@ -1413,7 +943,7 @@ The following state arguments are supported:
             title="Optional">
         <span>User<wbr>Email</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Email address used to authenticate the Jira integration.
 {{% /md %}}</dd>
@@ -1422,7 +952,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Username</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User name used to authenticate the Jira integration.
 {{% /md %}}</dd>
@@ -1438,7 +968,7 @@ The following state arguments are supported:
             title="Optional">
         <span>api<wbr>Token</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The API token for the user email
 {{% /md %}}</dd>
@@ -1447,7 +977,7 @@ The following state arguments are supported:
             title="Optional">
         <span>assignee<wbr>Display<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Jira display name for the assignee.
 {{% /md %}}</dd>
@@ -1456,7 +986,7 @@ The following state arguments are supported:
             title="Optional">
         <span>assignee<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Jira user name for the assignee.
 {{% /md %}}</dd>
@@ -1465,7 +995,7 @@ The following state arguments are supported:
             title="Optional">
         <span>auth<wbr>Method</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Authentication method used when creating the Jira integration. One of `EmailAndToken` (using `user_email` and `api_token`) or `UsernameAndPassword` (using `username` and `password`).
 {{% /md %}}</dd>
@@ -1474,7 +1004,7 @@ The following state arguments are supported:
             title="Optional">
         <span>base<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Base URL of the Jira instance that's integrated with SignalFx.
 {{% /md %}}</dd>
@@ -1483,7 +1013,7 @@ The following state arguments are supported:
             title="Optional">
         <span>enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the integration is enabled.
 {{% /md %}}</dd>
@@ -1492,7 +1022,7 @@ The following state arguments are supported:
             title="Optional">
         <span>issue<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Issue type (for example, Story) for tickets that Jira creates for detector notifications. SignalFx validates issue types, so you must specify a type that's valid for the Jira project specified in `projectKey`.
 {{% /md %}}</dd>
@@ -1501,7 +1031,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the integration.
 {{% /md %}}</dd>
@@ -1510,7 +1040,7 @@ The following state arguments are supported:
             title="Optional">
         <span>password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password used to authenticate the Jira integration.
 {{% /md %}}</dd>
@@ -1519,7 +1049,7 @@ The following state arguments are supported:
             title="Optional">
         <span>project<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Jira key of an existing project. When Jira creates a new ticket for a detector notification, the ticket is assigned to this project.
 {{% /md %}}</dd>
@@ -1528,7 +1058,7 @@ The following state arguments are supported:
             title="Optional">
         <span>user<wbr>Email</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Email address used to authenticate the Jira integration.
 {{% /md %}}</dd>
@@ -1537,7 +1067,7 @@ The following state arguments are supported:
             title="Optional">
         <span>username</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User name used to authenticate the Jira integration.
 {{% /md %}}</dd>

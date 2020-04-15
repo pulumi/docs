@@ -19,7 +19,7 @@ documentation](https://docs.gitlab.com/ce/push_rules/push_rules.html#push-rules)
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gitlab/#ProjectPushRules">ProjectPushRules</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gitlab/#ProjectPushRulesArgs">ProjectPushRulesArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gitlab/#ProjectPushRules">ProjectPushRules</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gitlab/#ProjectPushRulesArgs">ProjectPushRulesArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -27,11 +27,11 @@ documentation](https://docs.gitlab.com/ce/push_rules/push_rules.html#push-rules)
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewProjectPushRules<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gitlab/sdk/go/gitlab/?tab=doc#ProjectPushRulesArgs">ProjectPushRulesArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gitlab/sdk/go/gitlab/?tab=doc#ProjectPushRules">ProjectPushRules</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewProjectPushRules<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gitlab/sdk/go/gitlab/?tab=doc#ProjectPushRulesArgs">ProjectPushRulesArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gitlab/sdk/go/gitlab/?tab=doc#ProjectPushRules">ProjectPushRules</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gitlab/Pulumi.Gitlab..ProjectPushRules.html">ProjectPushRules</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gitlab/Pulumi.Gitlab.ProjectPushRulesArgs.html">ProjectPushRulesArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gitlab/Pulumi.Gitlab.ProjectPushRules.html">ProjectPushRules</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gitlab/Pulumi.GitLab.ProjectPushRulesArgs.html">ProjectPushRulesArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -123,11 +123,20 @@ documentation](https://docs.gitlab.com/ce/push_rules/push_rules.html#push-rules)
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Project</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name or id of the project to add the push rules to.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Author<wbr>Email<wbr>Regex</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}All commit author emails must match this regex, e.g. "@my-company.com$"
 {{% /md %}}</dd>
@@ -136,7 +145,7 @@ documentation](https://docs.gitlab.com/ce/push_rules/push_rules.html#push-rules)
             title="Optional">
         <span>Branch<wbr>Name<wbr>Regex</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}All branch names must match this regex, e.g. "(feature|hotfix)\/*"
 {{% /md %}}</dd>
@@ -145,7 +154,7 @@ documentation](https://docs.gitlab.com/ce/push_rules/push_rules.html#push-rules)
             title="Optional">
         <span>Commit<wbr>Message<wbr>Regex</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}All commit messages must match this regex, e.g. "Fixed \d+\..*"
 {{% /md %}}</dd>
@@ -154,7 +163,7 @@ documentation](https://docs.gitlab.com/ce/push_rules/push_rules.html#push-rules)
             title="Optional">
         <span>Deny<wbr>Delete<wbr>Tag</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Deny deleting a tag
 {{% /md %}}</dd>
@@ -163,7 +172,7 @@ documentation](https://docs.gitlab.com/ce/push_rules/push_rules.html#push-rules)
             title="Optional">
         <span>File<wbr>Name<wbr>Regex</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}All commited filenames must not match this regex, e.g. "(jar|exe)$"
 {{% /md %}}</dd>
@@ -172,7 +181,7 @@ documentation](https://docs.gitlab.com/ce/push_rules/push_rules.html#push-rules)
             title="Optional">
         <span>Max<wbr>File<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum file size (MB)
 {{% /md %}}</dd>
@@ -181,7 +190,7 @@ documentation](https://docs.gitlab.com/ce/push_rules/push_rules.html#push-rules)
             title="Optional">
         <span>Member<wbr>Check</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Restrict commits by author (email) to existing GitLab users
 {{% /md %}}</dd>
@@ -190,18 +199,9 @@ documentation](https://docs.gitlab.com/ce/push_rules/push_rules.html#push-rules)
             title="Optional">
         <span>Prevent<wbr>Secrets</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}GitLab will reject any files that are likely to contain secrets
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Project</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name or id of the project to add the push rules to.
 {{% /md %}}</dd>
 
 </dl>
@@ -211,78 +211,6 @@ documentation](https://docs.gitlab.com/ce/push_rules/push_rules.html#push-rules)
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Author<wbr>Email<wbr>Regex</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}All commit author emails must match this regex, e.g. "@my-company.com$"
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Branch<wbr>Name<wbr>Regex</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}All branch names must match this regex, e.g. "(feature|hotfix)\/*"
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Commit<wbr>Message<wbr>Regex</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}All commit messages must match this regex, e.g. "Fixed \d+\..*"
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Deny<wbr>Delete<wbr>Tag</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Deny deleting a tag
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>File<wbr>Name<wbr>Regex</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}All commited filenames must not match this regex, e.g. "(jar|exe)$"
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Max<wbr>File<wbr>Size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}Maximum file size (MB)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Member<wbr>Check</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Restrict commits by author (email) to existing GitLab users
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Prevent<wbr>Secrets</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}GitLab will reject any files that are likely to contain secrets
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Project</span>
@@ -292,84 +220,84 @@ documentation](https://docs.gitlab.com/ce/push_rules/push_rules.html#push-rules)
     <dd>{{% md %}}The name or id of the project to add the push rules to.
 {{% /md %}}</dd>
 
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
-        <span>author<wbr>Email<wbr>Regex</span>
+        <span>Author<wbr>Email<wbr>Regex</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}All commit author emails must match this regex, e.g. "@my-company.com$"
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>branch<wbr>Name<wbr>Regex</span>
+        <span>Branch<wbr>Name<wbr>Regex</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}All branch names must match this regex, e.g. "(feature|hotfix)\/*"
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>commit<wbr>Message<wbr>Regex</span>
+        <span>Commit<wbr>Message<wbr>Regex</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}All commit messages must match this regex, e.g. "Fixed \d+\..*"
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>deny<wbr>Delete<wbr>Tag</span>
+        <span>Deny<wbr>Delete<wbr>Tag</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Deny deleting a tag
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>file<wbr>Name<wbr>Regex</span>
+        <span>File<wbr>Name<wbr>Regex</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}All commited filenames must not match this regex, e.g. "(jar|exe)$"
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>max<wbr>File<wbr>Size</span>
+        <span>Max<wbr>File<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum file size (MB)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>member<wbr>Check</span>
+        <span>Member<wbr>Check</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Restrict commits by author (email) to existing GitLab users
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>prevent<wbr>Secrets</span>
+        <span>Prevent<wbr>Secrets</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}GitLab will reject any files that are likely to contain secrets
 {{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
@@ -380,12 +308,93 @@ documentation](https://docs.gitlab.com/ce/push_rules/push_rules.html#push-rules)
     <dd>{{% md %}}The name or id of the project to add the push rules to.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>author<wbr>Email<wbr>Regex</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}All commit author emails must match this regex, e.g. "@my-company.com$"
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>branch<wbr>Name<wbr>Regex</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}All branch names must match this regex, e.g. "(feature|hotfix)\/*"
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>commit<wbr>Message<wbr>Regex</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}All commit messages must match this regex, e.g. "Fixed \d+\..*"
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>deny<wbr>Delete<wbr>Tag</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Deny deleting a tag
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>file<wbr>Name<wbr>Regex</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}All commited filenames must not match this regex, e.g. "(jar|exe)$"
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>max<wbr>File<wbr>Size</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Maximum file size (MB)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>member<wbr>Check</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Restrict commits by author (email) to existing GitLab users
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>prevent<wbr>Secrets</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}GitLab will reject any files that are likely to contain secrets
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>project</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name or id of the project to add the push rules to.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -459,381 +468,10 @@ documentation](https://docs.gitlab.com/ce/push_rules/push_rules.html#push-rules)
     <dd>{{% md %}}GitLab will reject any files that are likely to contain secrets
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>project</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name or id of the project to add the push rules to.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
-
-
-
-
-
-## ProjectPushRules Output Properties
-
-The following output properties are available:
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Author<wbr>Email<wbr>Regex</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}All commit author emails must match this regex, e.g. "@my-company.com$"
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Branch<wbr>Name<wbr>Regex</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}All branch names must match this regex, e.g. "(feature|hotfix)\/*"
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Commit<wbr>Message<wbr>Regex</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}All commit messages must match this regex, e.g. "Fixed \d+\..*"
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Deny<wbr>Delete<wbr>Tag</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Deny deleting a tag
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>File<wbr>Name<wbr>Regex</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}All commited filenames must not match this regex, e.g. "(jar|exe)$"
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Max<wbr>File<wbr>Size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}Maximum file size (MB)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Member<wbr>Check</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Restrict commits by author (email) to existing GitLab users
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Prevent<wbr>Secrets</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}GitLab will reject any files that are likely to contain secrets
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Project</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name or id of the project to add the push rules to.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Author<wbr>Email<wbr>Regex</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}All commit author emails must match this regex, e.g. "@my-company.com$"
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Branch<wbr>Name<wbr>Regex</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}All branch names must match this regex, e.g. "(feature|hotfix)\/*"
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Commit<wbr>Message<wbr>Regex</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}All commit messages must match this regex, e.g. "Fixed \d+\..*"
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Deny<wbr>Delete<wbr>Tag</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Deny deleting a tag
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>File<wbr>Name<wbr>Regex</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}All commited filenames must not match this regex, e.g. "(jar|exe)$"
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Max<wbr>File<wbr>Size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}Maximum file size (MB)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Member<wbr>Check</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Restrict commits by author (email) to existing GitLab users
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Prevent<wbr>Secrets</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}GitLab will reject any files that are likely to contain secrets
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Project</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name or id of the project to add the push rules to.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>author<wbr>Email<wbr>Regex</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}All commit author emails must match this regex, e.g. "@my-company.com$"
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>branch<wbr>Name<wbr>Regex</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}All branch names must match this regex, e.g. "(feature|hotfix)\/*"
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>commit<wbr>Message<wbr>Regex</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}All commit messages must match this regex, e.g. "Fixed \d+\..*"
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>deny<wbr>Delete<wbr>Tag</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Deny deleting a tag
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>file<wbr>Name<wbr>Regex</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}All commited filenames must not match this regex, e.g. "(jar|exe)$"
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>max<wbr>File<wbr>Size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}Maximum file size (MB)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>member<wbr>Check</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Restrict commits by author (email) to existing GitLab users
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>prevent<wbr>Secrets</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}GitLab will reject any files that are likely to contain secrets
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>project</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name or id of the project to add the push rules to.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>author_<wbr>email_<wbr>regex</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}All commit author emails must match this regex, e.g. "@my-company.com$"
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>branch_<wbr>name_<wbr>regex</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}All branch names must match this regex, e.g. "(feature|hotfix)\/*"
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>commit_<wbr>message_<wbr>regex</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}All commit messages must match this regex, e.g. "Fixed \d+\..*"
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>deny_<wbr>delete_<wbr>tag</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Deny deleting a tag
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>file_<wbr>name_<wbr>regex</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}All commited filenames must not match this regex, e.g. "(jar|exe)$"
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>max_<wbr>file_<wbr>size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}Maximum file size (MB)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>member_<wbr>check</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Restrict commits by author (email) to existing GitLab users
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>prevent_<wbr>secrets</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}GitLab will reject any files that are likely to contain secrets
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>project</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name or id of the project to add the push rules to.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
 
 
 
@@ -861,7 +499,7 @@ Get an existing ProjectPushRules resource's state with the given name, ID, and o
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gitlab/Pulumi.Gitlab..ProjectPushRules.html">ProjectPushRules</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gitlab/Pulumi.Gitlab..ProjectPushRulesState.html">ProjectPushRulesState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gitlab/Pulumi.Gitlab.ProjectPushRules.html">ProjectPushRules</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gitlab/Pulumi.Gitlab..ProjectPushRulesState.html">ProjectPushRulesState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -971,7 +609,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Author<wbr>Email<wbr>Regex</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}All commit author emails must match this regex, e.g. "@my-company.com$"
 {{% /md %}}</dd>
@@ -980,7 +618,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Branch<wbr>Name<wbr>Regex</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}All branch names must match this regex, e.g. "(feature|hotfix)\/*"
 {{% /md %}}</dd>
@@ -989,7 +627,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Commit<wbr>Message<wbr>Regex</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}All commit messages must match this regex, e.g. "Fixed \d+\..*"
 {{% /md %}}</dd>
@@ -998,7 +636,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Deny<wbr>Delete<wbr>Tag</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Deny deleting a tag
 {{% /md %}}</dd>
@@ -1007,7 +645,7 @@ The following state arguments are supported:
             title="Optional">
         <span>File<wbr>Name<wbr>Regex</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}All commited filenames must not match this regex, e.g. "(jar|exe)$"
 {{% /md %}}</dd>
@@ -1016,7 +654,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Max<wbr>File<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum file size (MB)
 {{% /md %}}</dd>
@@ -1025,7 +663,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Member<wbr>Check</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Restrict commits by author (email) to existing GitLab users
 {{% /md %}}</dd>
@@ -1034,7 +672,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Prevent<wbr>Secrets</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}GitLab will reject any files that are likely to contain secrets
 {{% /md %}}</dd>
@@ -1043,7 +681,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name or id of the project to add the push rules to.
 {{% /md %}}</dd>
@@ -1059,7 +697,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Author<wbr>Email<wbr>Regex</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}All commit author emails must match this regex, e.g. "@my-company.com$"
 {{% /md %}}</dd>
@@ -1068,7 +706,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Branch<wbr>Name<wbr>Regex</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}All branch names must match this regex, e.g. "(feature|hotfix)\/*"
 {{% /md %}}</dd>
@@ -1077,7 +715,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Commit<wbr>Message<wbr>Regex</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}All commit messages must match this regex, e.g. "Fixed \d+\..*"
 {{% /md %}}</dd>
@@ -1086,7 +724,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Deny<wbr>Delete<wbr>Tag</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Deny deleting a tag
 {{% /md %}}</dd>
@@ -1095,7 +733,7 @@ The following state arguments are supported:
             title="Optional">
         <span>File<wbr>Name<wbr>Regex</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}All commited filenames must not match this regex, e.g. "(jar|exe)$"
 {{% /md %}}</dd>
@@ -1104,7 +742,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Max<wbr>File<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum file size (MB)
 {{% /md %}}</dd>
@@ -1113,7 +751,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Member<wbr>Check</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Restrict commits by author (email) to existing GitLab users
 {{% /md %}}</dd>
@@ -1122,7 +760,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Prevent<wbr>Secrets</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}GitLab will reject any files that are likely to contain secrets
 {{% /md %}}</dd>
@@ -1131,7 +769,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name or id of the project to add the push rules to.
 {{% /md %}}</dd>
@@ -1147,7 +785,7 @@ The following state arguments are supported:
             title="Optional">
         <span>author<wbr>Email<wbr>Regex</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}All commit author emails must match this regex, e.g. "@my-company.com$"
 {{% /md %}}</dd>
@@ -1156,7 +794,7 @@ The following state arguments are supported:
             title="Optional">
         <span>branch<wbr>Name<wbr>Regex</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}All branch names must match this regex, e.g. "(feature|hotfix)\/*"
 {{% /md %}}</dd>
@@ -1165,7 +803,7 @@ The following state arguments are supported:
             title="Optional">
         <span>commit<wbr>Message<wbr>Regex</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}All commit messages must match this regex, e.g. "Fixed \d+\..*"
 {{% /md %}}</dd>
@@ -1174,7 +812,7 @@ The following state arguments are supported:
             title="Optional">
         <span>deny<wbr>Delete<wbr>Tag</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Deny deleting a tag
 {{% /md %}}</dd>
@@ -1183,7 +821,7 @@ The following state arguments are supported:
             title="Optional">
         <span>file<wbr>Name<wbr>Regex</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}All commited filenames must not match this regex, e.g. "(jar|exe)$"
 {{% /md %}}</dd>
@@ -1192,7 +830,7 @@ The following state arguments are supported:
             title="Optional">
         <span>max<wbr>File<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Maximum file size (MB)
 {{% /md %}}</dd>
@@ -1201,7 +839,7 @@ The following state arguments are supported:
             title="Optional">
         <span>member<wbr>Check</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Restrict commits by author (email) to existing GitLab users
 {{% /md %}}</dd>
@@ -1210,7 +848,7 @@ The following state arguments are supported:
             title="Optional">
         <span>prevent<wbr>Secrets</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}GitLab will reject any files that are likely to contain secrets
 {{% /md %}}</dd>
@@ -1219,7 +857,7 @@ The following state arguments are supported:
             title="Optional">
         <span>project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name or id of the project to add the push rules to.
 {{% /md %}}</dd>

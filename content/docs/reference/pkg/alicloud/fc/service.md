@@ -14,7 +14,7 @@ block_external_search_index: true
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/fc/#Service">Service</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/fc/#ServiceArgs">ServiceArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/fc/#Service">Service</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/fc/#ServiceArgs">ServiceArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -22,11 +22,11 @@ block_external_search_index: true
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewService<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/fc?tab=doc#ServiceArgs">ServiceArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/fc?tab=doc#Service">Service</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewService<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/fc?tab=doc#ServiceArgs">ServiceArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/fc?tab=doc#Service">Service</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.Fc.Service.html">Service</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.FC.ServiceArgs.html">ServiceArgs</a></span>? <span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.FC.Service.html">Service</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.AliCloud.FC.ServiceArgs.html">ServiceArgs</a></span>? <span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -122,7 +122,7 @@ block_external_search_index: true
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The function compute service description.
 {{% /md %}}</dd>
@@ -131,7 +131,7 @@ block_external_search_index: true
             title="Optional">
         <span>Internet<wbr>Access</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to allow the service to access Internet. Default to "true".
 {{% /md %}}</dd>
@@ -140,7 +140,7 @@ block_external_search_index: true
             title="Optional">
         <span>Log<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicelogconfig">Service<wbr>Log<wbr>Config<wbr>Args?</a></span>
+        <span class="property-type"><a href="#servicelogconfig">Pulumi.<wbr>Ali<wbr>Cloud.<wbr>FC.<wbr>Inputs.<wbr>Service<wbr>Log<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Provide this to store your FC service logs. Fields documented below. See [Create a Service](https://www.alibabacloud.com/help/doc-detail/51924.htm).
 {{% /md %}}</dd>
@@ -149,7 +149,7 @@ block_external_search_index: true
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Function Compute service name. It is the only in one Alicloud account and is conflict with "name_prefix".
 {{% /md %}}</dd>
@@ -158,7 +158,7 @@ block_external_search_index: true
             title="Optional">
         <span>Name<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Setting a prefix to get a only name. It is conflict with "name".
 {{% /md %}}</dd>
@@ -167,7 +167,7 @@ block_external_search_index: true
             title="Optional">
         <span>Role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}RAM role arn attached to the Function Compute service. This governs both who / what can invoke your Function, as well as what resources our Function has access to. See [User Permissions](https://www.alibabacloud.com/help/doc-detail/52885.htm) for more details.
 {{% /md %}}</dd>
@@ -176,7 +176,7 @@ block_external_search_index: true
             title="Optional">
         <span>Vpc<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicevpcconfig">Service<wbr>Vpc<wbr>Config<wbr>Args?</a></span>
+        <span class="property-type"><a href="#servicevpcconfig">Pulumi.<wbr>Ali<wbr>Cloud.<wbr>FC.<wbr>Inputs.<wbr>Service<wbr>Vpc<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Provide this to allow your FC service to access your VPC. Fields documented below. See [Function Compute Service in VPC](https://www.alibabacloud.com/help/faq-detail/72959.htm).
 {{% /md %}}</dd>
@@ -192,7 +192,7 @@ block_external_search_index: true
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The function compute service description.
 {{% /md %}}</dd>
@@ -201,7 +201,7 @@ block_external_search_index: true
             title="Optional">
         <span>Internet<wbr>Access</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to allow the service to access Internet. Default to "true".
 {{% /md %}}</dd>
@@ -210,7 +210,7 @@ block_external_search_index: true
             title="Optional">
         <span>Log<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicelogconfig">*Service<wbr>Log<wbr>Config</a></span>
+        <span class="property-type"><a href="#servicelogconfig">Service<wbr>Log<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Provide this to store your FC service logs. Fields documented below. See [Create a Service](https://www.alibabacloud.com/help/doc-detail/51924.htm).
 {{% /md %}}</dd>
@@ -219,7 +219,7 @@ block_external_search_index: true
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Function Compute service name. It is the only in one Alicloud account and is conflict with "name_prefix".
 {{% /md %}}</dd>
@@ -228,7 +228,7 @@ block_external_search_index: true
             title="Optional">
         <span>Name<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Setting a prefix to get a only name. It is conflict with "name".
 {{% /md %}}</dd>
@@ -237,7 +237,7 @@ block_external_search_index: true
             title="Optional">
         <span>Role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}RAM role arn attached to the Function Compute service. This governs both who / what can invoke your Function, as well as what resources our Function has access to. See [User Permissions](https://www.alibabacloud.com/help/doc-detail/52885.htm) for more details.
 {{% /md %}}</dd>
@@ -246,7 +246,7 @@ block_external_search_index: true
             title="Optional">
         <span>Vpc<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicevpcconfig">*Service<wbr>Vpc<wbr>Config</a></span>
+        <span class="property-type"><a href="#servicevpcconfig">Service<wbr>Vpc<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Provide this to allow your FC service to access your VPC. Fields documented below. See [Function Compute Service in VPC](https://www.alibabacloud.com/help/faq-detail/72959.htm).
 {{% /md %}}</dd>
@@ -262,7 +262,7 @@ block_external_search_index: true
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The function compute service description.
 {{% /md %}}</dd>
@@ -271,7 +271,7 @@ block_external_search_index: true
             title="Optional">
         <span>internet<wbr>Access</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to allow the service to access Internet. Default to "true".
 {{% /md %}}</dd>
@@ -280,7 +280,7 @@ block_external_search_index: true
             title="Optional">
         <span>log<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicelogconfig">Service<wbr>Log<wbr>Config?</a></span>
+        <span class="property-type"><a href="#servicelogconfig">Service<wbr>Log<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Provide this to store your FC service logs. Fields documented below. See [Create a Service](https://www.alibabacloud.com/help/doc-detail/51924.htm).
 {{% /md %}}</dd>
@@ -289,7 +289,7 @@ block_external_search_index: true
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Function Compute service name. It is the only in one Alicloud account and is conflict with "name_prefix".
 {{% /md %}}</dd>
@@ -298,7 +298,7 @@ block_external_search_index: true
             title="Optional">
         <span>name<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Setting a prefix to get a only name. It is conflict with "name".
 {{% /md %}}</dd>
@@ -307,7 +307,7 @@ block_external_search_index: true
             title="Optional">
         <span>role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}RAM role arn attached to the Function Compute service. This governs both who / what can invoke your Function, as well as what resources our Function has access to. See [User Permissions](https://www.alibabacloud.com/help/doc-detail/52885.htm) for more details.
 {{% /md %}}</dd>
@@ -316,7 +316,7 @@ block_external_search_index: true
             title="Optional">
         <span>vpc<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicevpcconfig">Service<wbr>Vpc<wbr>Config?</a></span>
+        <span class="property-type"><a href="#servicevpcconfig">Service<wbr>Vpc<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Provide this to allow your FC service to access your VPC. Fields documented below. See [Function Compute Service in VPC](https://www.alibabacloud.com/help/faq-detail/72959.htm).
 {{% /md %}}</dd>
@@ -412,24 +412,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The function compute service description.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Internet<wbr>Access</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Whether to allow the service to access Internet. Default to "true".
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Last<wbr>Modified</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -439,56 +421,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Log<wbr>Config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicelogconfig">Service<wbr>Log<wbr>Config?</a></span>
-    </dt>
-    <dd>{{% md %}}Provide this to store your FC service logs. Fields documented below. See [Create a Service](https://www.alibabacloud.com/help/doc-detail/51924.htm).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Function Compute service name. It is the only in one Alicloud account and is conflict with "name_prefix".
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name<wbr>Prefix</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Setting a prefix to get a only name. It is conflict with "name".
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Role</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}RAM role arn attached to the Function Compute service. This governs both who / what can invoke your Function, as well as what resources our Function has access to. See [User Permissions](https://www.alibabacloud.com/help/doc-detail/52885.htm) for more details.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Service<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Function Compute service ID.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Vpc<wbr>Config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicevpcconfig">Service<wbr>Vpc<wbr>Config?</a></span>
-    </dt>
-    <dd>{{% md %}}Provide this to allow your FC service to access your VPC. Fields documented below. See [Function Compute Service in VPC](https://www.alibabacloud.com/help/faq-detail/72959.htm).
 {{% /md %}}</dd>
 
 </dl>
@@ -500,65 +437,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The function compute service description.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Internet<wbr>Access</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Whether to allow the service to access Internet. Default to "true".
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Last<wbr>Modified</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date this resource was last modified.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Log<wbr>Config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicelogconfig">*Service<wbr>Log<wbr>Config</a></span>
-    </dt>
-    <dd>{{% md %}}Provide this to store your FC service logs. Fields documented below. See [Create a Service](https://www.alibabacloud.com/help/doc-detail/51924.htm).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Function Compute service name. It is the only in one Alicloud account and is conflict with "name_prefix".
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name<wbr>Prefix</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Setting a prefix to get a only name. It is conflict with "name".
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Role</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}RAM role arn attached to the Function Compute service. This governs both who / what can invoke your Function, as well as what resources our Function has access to. See [User Permissions](https://www.alibabacloud.com/help/doc-detail/52885.htm) for more details.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -570,39 +453,12 @@ The following output properties are available:
     <dd>{{% md %}}The Function Compute service ID.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span>Vpc<wbr>Config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicevpcconfig">*Service<wbr>Vpc<wbr>Config</a></span>
-    </dt>
-    <dd>{{% md %}}Provide this to allow your FC service to access your VPC. Fields documented below. See [Function Compute Service in VPC](https://www.alibabacloud.com/help/faq-detail/72959.htm).
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The function compute service description.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>internet<wbr>Access</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Whether to allow the service to access Internet. Default to "true".
-{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -615,56 +471,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>log<wbr>Config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicelogconfig">Service<wbr>Log<wbr>Config?</a></span>
-    </dt>
-    <dd>{{% md %}}Provide this to store your FC service logs. Fields documented below. See [Create a Service](https://www.alibabacloud.com/help/doc-detail/51924.htm).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Function Compute service name. It is the only in one Alicloud account and is conflict with "name_prefix".
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name<wbr>Prefix</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Setting a prefix to get a only name. It is conflict with "name".
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>role</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}RAM role arn attached to the Function Compute service. This governs both who / what can invoke your Function, as well as what resources our Function has access to. See [User Permissions](https://www.alibabacloud.com/help/doc-detail/52885.htm) for more details.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>service<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Function Compute service ID.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>vpc<wbr>Config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicevpcconfig">Service<wbr>Vpc<wbr>Config?</a></span>
-    </dt>
-    <dd>{{% md %}}Provide this to allow your FC service to access your VPC. Fields documented below. See [Function Compute Service in VPC](https://www.alibabacloud.com/help/faq-detail/72959.htm).
 {{% /md %}}</dd>
 
 </dl>
@@ -673,24 +484,6 @@ The following output properties are available:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The function compute service description.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>internet_<wbr>access</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Whether to allow the service to access Internet. Default to "true".
-{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -703,56 +496,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>log_<wbr>config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicelogconfig">Dict[Service<wbr>Log<wbr>Config]</a></span>
-    </dt>
-    <dd>{{% md %}}Provide this to store your FC service logs. Fields documented below. See [Create a Service](https://www.alibabacloud.com/help/doc-detail/51924.htm).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The Function Compute service name. It is the only in one Alicloud account and is conflict with "name_prefix".
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name_<wbr>prefix</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Setting a prefix to get a only name. It is conflict with "name".
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>role</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}RAM role arn attached to the Function Compute service. This governs both who / what can invoke your Function, as well as what resources our Function has access to. See [User Permissions](https://www.alibabacloud.com/help/doc-detail/52885.htm) for more details.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>service_<wbr>id</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Function Compute service ID.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>vpc_<wbr>config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicevpcconfig">Dict[Service<wbr>Vpc<wbr>Config]</a></span>
-    </dt>
-    <dd>{{% md %}}Provide this to allow your FC service to access your VPC. Fields documented below. See [Function Compute Service in VPC](https://www.alibabacloud.com/help/faq-detail/72959.htm).
 {{% /md %}}</dd>
 
 </dl>
@@ -784,7 +532,7 @@ Get an existing Service resource's state with the given name, ID, and optional e
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.Fc.Service.html">Service</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.Fc.ServiceState.html">ServiceState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.FC.Service.html">Service</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.FC.ServiceState.html">ServiceState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -894,7 +642,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The function compute service description.
 {{% /md %}}</dd>
@@ -903,7 +651,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Internet<wbr>Access</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to allow the service to access Internet. Default to "true".
 {{% /md %}}</dd>
@@ -912,7 +660,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Last<wbr>Modified</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date this resource was last modified.
 {{% /md %}}</dd>
@@ -921,7 +669,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Log<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicelogconfig">Service<wbr>Log<wbr>Config<wbr>Args?</a></span>
+        <span class="property-type"><a href="#servicelogconfig">Pulumi.<wbr>Ali<wbr>Cloud.<wbr>FC.<wbr>Inputs.<wbr>Service<wbr>Log<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Provide this to store your FC service logs. Fields documented below. See [Create a Service](https://www.alibabacloud.com/help/doc-detail/51924.htm).
 {{% /md %}}</dd>
@@ -930,7 +678,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Function Compute service name. It is the only in one Alicloud account and is conflict with "name_prefix".
 {{% /md %}}</dd>
@@ -939,7 +687,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Setting a prefix to get a only name. It is conflict with "name".
 {{% /md %}}</dd>
@@ -948,7 +696,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}RAM role arn attached to the Function Compute service. This governs both who / what can invoke your Function, as well as what resources our Function has access to. See [User Permissions](https://www.alibabacloud.com/help/doc-detail/52885.htm) for more details.
 {{% /md %}}</dd>
@@ -957,7 +705,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Service<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Function Compute service ID.
 {{% /md %}}</dd>
@@ -966,7 +714,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Vpc<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicevpcconfig">Service<wbr>Vpc<wbr>Config<wbr>Args?</a></span>
+        <span class="property-type"><a href="#servicevpcconfig">Pulumi.<wbr>Ali<wbr>Cloud.<wbr>FC.<wbr>Inputs.<wbr>Service<wbr>Vpc<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Provide this to allow your FC service to access your VPC. Fields documented below. See [Function Compute Service in VPC](https://www.alibabacloud.com/help/faq-detail/72959.htm).
 {{% /md %}}</dd>
@@ -982,7 +730,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The function compute service description.
 {{% /md %}}</dd>
@@ -991,7 +739,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Internet<wbr>Access</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to allow the service to access Internet. Default to "true".
 {{% /md %}}</dd>
@@ -1000,7 +748,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Last<wbr>Modified</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date this resource was last modified.
 {{% /md %}}</dd>
@@ -1009,7 +757,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Log<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicelogconfig">*Service<wbr>Log<wbr>Config</a></span>
+        <span class="property-type"><a href="#servicelogconfig">Service<wbr>Log<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Provide this to store your FC service logs. Fields documented below. See [Create a Service](https://www.alibabacloud.com/help/doc-detail/51924.htm).
 {{% /md %}}</dd>
@@ -1018,7 +766,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Function Compute service name. It is the only in one Alicloud account and is conflict with "name_prefix".
 {{% /md %}}</dd>
@@ -1027,7 +775,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Setting a prefix to get a only name. It is conflict with "name".
 {{% /md %}}</dd>
@@ -1036,7 +784,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}RAM role arn attached to the Function Compute service. This governs both who / what can invoke your Function, as well as what resources our Function has access to. See [User Permissions](https://www.alibabacloud.com/help/doc-detail/52885.htm) for more details.
 {{% /md %}}</dd>
@@ -1045,7 +793,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Service<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Function Compute service ID.
 {{% /md %}}</dd>
@@ -1054,7 +802,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Vpc<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicevpcconfig">*Service<wbr>Vpc<wbr>Config</a></span>
+        <span class="property-type"><a href="#servicevpcconfig">Service<wbr>Vpc<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Provide this to allow your FC service to access your VPC. Fields documented below. See [Function Compute Service in VPC](https://www.alibabacloud.com/help/faq-detail/72959.htm).
 {{% /md %}}</dd>
@@ -1070,7 +818,7 @@ The following state arguments are supported:
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The function compute service description.
 {{% /md %}}</dd>
@@ -1079,7 +827,7 @@ The following state arguments are supported:
             title="Optional">
         <span>internet<wbr>Access</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to allow the service to access Internet. Default to "true".
 {{% /md %}}</dd>
@@ -1088,7 +836,7 @@ The following state arguments are supported:
             title="Optional">
         <span>last<wbr>Modified</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date this resource was last modified.
 {{% /md %}}</dd>
@@ -1097,7 +845,7 @@ The following state arguments are supported:
             title="Optional">
         <span>log<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicelogconfig">Service<wbr>Log<wbr>Config?</a></span>
+        <span class="property-type"><a href="#servicelogconfig">Service<wbr>Log<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Provide this to store your FC service logs. Fields documented below. See [Create a Service](https://www.alibabacloud.com/help/doc-detail/51924.htm).
 {{% /md %}}</dd>
@@ -1106,7 +854,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Function Compute service name. It is the only in one Alicloud account and is conflict with "name_prefix".
 {{% /md %}}</dd>
@@ -1115,7 +863,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Setting a prefix to get a only name. It is conflict with "name".
 {{% /md %}}</dd>
@@ -1124,7 +872,7 @@ The following state arguments are supported:
             title="Optional">
         <span>role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}RAM role arn attached to the Function Compute service. This governs both who / what can invoke your Function, as well as what resources our Function has access to. See [User Permissions](https://www.alibabacloud.com/help/doc-detail/52885.htm) for more details.
 {{% /md %}}</dd>
@@ -1133,7 +881,7 @@ The following state arguments are supported:
             title="Optional">
         <span>service<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Function Compute service ID.
 {{% /md %}}</dd>
@@ -1142,7 +890,7 @@ The following state arguments are supported:
             title="Optional">
         <span>vpc<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicevpcconfig">Service<wbr>Vpc<wbr>Config?</a></span>
+        <span class="property-type"><a href="#servicevpcconfig">Service<wbr>Vpc<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Provide this to allow your FC service to access your VPC. Fields documented below. See [Function Compute Service in VPC](https://www.alibabacloud.com/help/faq-detail/72959.htm).
 {{% /md %}}</dd>
@@ -1388,22 +1136,22 @@ The following state arguments are supported:
     <dd>{{% md %}}A security group ID associated with the FC service.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Vpc<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Vswitch<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of vswitch IDs associated with the FC service.
 {{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Vpc<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1421,14 +1169,6 @@ The following state arguments are supported:
     <dd>{{% md %}}A security group ID associated with the FC service.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Vpc<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Vswitch<wbr>Ids</span>
@@ -1437,6 +1177,14 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}A list of vswitch IDs associated with the FC service.
 {{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Vpc<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1454,14 +1202,6 @@ The following state arguments are supported:
     <dd>{{% md %}}A security group ID associated with the FC service.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>vpc<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>vswitch<wbr>Ids</span>
@@ -1470,6 +1210,14 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}A list of vswitch IDs associated with the FC service.
 {{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>vpc<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1487,14 +1235,6 @@ The following state arguments are supported:
     <dd>{{% md %}}A security group ID associated with the FC service.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>vpc_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>vswitch_<wbr>ids</span>
@@ -1503,6 +1243,14 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}A list of vswitch IDs associated with the FC service.
 {{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>vpc_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

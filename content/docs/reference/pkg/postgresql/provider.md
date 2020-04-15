@@ -20,7 +20,7 @@ construction to achieve fine-grained programmatic control over provider settings
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/postgresql/#Provider">Provider</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/postgresql/#ProviderArgs">ProviderArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/postgresql/#Provider">Provider</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/postgresql/#ProviderArgs">ProviderArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -28,11 +28,11 @@ construction to achieve fine-grained programmatic control over provider settings
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewProvider<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-postgresql/sdk/go/postgresql/?tab=doc#ProviderArgs">ProviderArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-postgresql/sdk/go/postgresql/?tab=doc#Provider">Provider</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewProvider<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-postgresql/sdk/go/postgresql/?tab=doc#ProviderArgs">ProviderArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-postgresql/sdk/go/postgresql/?tab=doc#Provider">Provider</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Postgresql/Pulumi.Postgresql..Provider.html">Provider</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Postgresql/Pulumi.Pulumi.PostgresqlArgs.html">ProviderArgs</a></span>? <span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Postgresql/Pulumi.Postgresql.Provider.html">Provider</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Postgresql/Pulumi.Pulumi.PostgresqlArgs.html">ProviderArgs</a></span>? <span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -128,7 +128,7 @@ construction to achieve fine-grained programmatic control over provider settings
             title="Optional">
         <span>Connect<wbr>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum wait for connection, in seconds. Zero or not specified means wait indefinitely.
 {{% /md %}}</dd>
@@ -137,7 +137,7 @@ construction to achieve fine-grained programmatic control over provider settings
             title="Optional">
         <span>Database</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the database to connect to in order to conenct to (defaults to `postgres`).
 {{% /md %}}</dd>
@@ -146,7 +146,7 @@ construction to achieve fine-grained programmatic control over provider settings
             title="Optional">
         <span>Database<wbr>Username</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Database username associated to the connected user (for user name maps)
 {{% /md %}}</dd>
@@ -155,7 +155,7 @@ construction to achieve fine-grained programmatic control over provider settings
             title="Optional">
         <span>Expected<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify the expected version of PostgreSQL.
 {{% /md %}}</dd>
@@ -164,7 +164,7 @@ construction to achieve fine-grained programmatic control over provider settings
             title="Optional">
         <span>Host</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of PostgreSQL server address to connect to
 {{% /md %}}</dd>
@@ -173,7 +173,7 @@ construction to achieve fine-grained programmatic control over provider settings
             title="Optional">
         <span>Max<wbr>Connections</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum number of connections to establish to the database. Zero means unlimited.
 {{% /md %}}</dd>
@@ -182,7 +182,7 @@ construction to achieve fine-grained programmatic control over provider settings
             title="Optional">
         <span>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password to be used if the PostgreSQL server demands password authentication
 {{% /md %}}</dd>
@@ -191,7 +191,7 @@ construction to achieve fine-grained programmatic control over provider settings
             title="Optional">
         <span>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The PostgreSQL port number to connect to at the server host, or socket file name extension for Unix-domain connections
 {{% /md %}}</dd>
@@ -200,7 +200,7 @@ construction to achieve fine-grained programmatic control over provider settings
             title="Optional, Deprecated">
         <span>Ssl<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Rename PostgreSQL provider `ssl_mode` attribute to `sslmode`{{% /md %}}</p></dd>
 
@@ -208,7 +208,7 @@ construction to achieve fine-grained programmatic control over provider settings
             title="Optional">
         <span>Sslmode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This option determines whether or with what priority a secure SSL TCP/IP connection will be negotiated with the
 PostgreSQL server
@@ -218,7 +218,7 @@ PostgreSQL server
             title="Optional">
         <span>Superuser</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specify if the user to connect as is a Postgres superuser or not.If not, some feature might be disabled (e.g.:
 Refreshing state password from Postgres)
@@ -228,7 +228,7 @@ Refreshing state password from Postgres)
             title="Optional">
         <span>Username</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}PostgreSQL user name to connect as
 {{% /md %}}</dd>
@@ -244,7 +244,7 @@ Refreshing state password from Postgres)
             title="Optional">
         <span>Connect<wbr>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum wait for connection, in seconds. Zero or not specified means wait indefinitely.
 {{% /md %}}</dd>
@@ -253,7 +253,7 @@ Refreshing state password from Postgres)
             title="Optional">
         <span>Database</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the database to connect to in order to conenct to (defaults to `postgres`).
 {{% /md %}}</dd>
@@ -262,7 +262,7 @@ Refreshing state password from Postgres)
             title="Optional">
         <span>Database<wbr>Username</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Database username associated to the connected user (for user name maps)
 {{% /md %}}</dd>
@@ -271,7 +271,7 @@ Refreshing state password from Postgres)
             title="Optional">
         <span>Expected<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify the expected version of PostgreSQL.
 {{% /md %}}</dd>
@@ -280,7 +280,7 @@ Refreshing state password from Postgres)
             title="Optional">
         <span>Host</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of PostgreSQL server address to connect to
 {{% /md %}}</dd>
@@ -289,7 +289,7 @@ Refreshing state password from Postgres)
             title="Optional">
         <span>Max<wbr>Connections</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum number of connections to establish to the database. Zero means unlimited.
 {{% /md %}}</dd>
@@ -298,7 +298,7 @@ Refreshing state password from Postgres)
             title="Optional">
         <span>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password to be used if the PostgreSQL server demands password authentication
 {{% /md %}}</dd>
@@ -307,7 +307,7 @@ Refreshing state password from Postgres)
             title="Optional">
         <span>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The PostgreSQL port number to connect to at the server host, or socket file name extension for Unix-domain connections
 {{% /md %}}</dd>
@@ -316,7 +316,7 @@ Refreshing state password from Postgres)
             title="Optional, Deprecated">
         <span>Ssl<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Rename PostgreSQL provider `ssl_mode` attribute to `sslmode`{{% /md %}}</p></dd>
 
@@ -324,7 +324,7 @@ Refreshing state password from Postgres)
             title="Optional">
         <span>Sslmode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This option determines whether or with what priority a secure SSL TCP/IP connection will be negotiated with the
 PostgreSQL server
@@ -334,7 +334,7 @@ PostgreSQL server
             title="Optional">
         <span>Superuser</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specify if the user to connect as is a Postgres superuser or not.If not, some feature might be disabled (e.g.:
 Refreshing state password from Postgres)
@@ -344,7 +344,7 @@ Refreshing state password from Postgres)
             title="Optional">
         <span>Username</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}PostgreSQL user name to connect as
 {{% /md %}}</dd>
@@ -360,7 +360,7 @@ Refreshing state password from Postgres)
             title="Optional">
         <span>connect<wbr>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Maximum wait for connection, in seconds. Zero or not specified means wait indefinitely.
 {{% /md %}}</dd>
@@ -369,7 +369,7 @@ Refreshing state password from Postgres)
             title="Optional">
         <span>database</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the database to connect to in order to conenct to (defaults to `postgres`).
 {{% /md %}}</dd>
@@ -378,7 +378,7 @@ Refreshing state password from Postgres)
             title="Optional">
         <span>database<wbr>Username</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Database username associated to the connected user (for user name maps)
 {{% /md %}}</dd>
@@ -387,7 +387,7 @@ Refreshing state password from Postgres)
             title="Optional">
         <span>expected<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify the expected version of PostgreSQL.
 {{% /md %}}</dd>
@@ -396,7 +396,7 @@ Refreshing state password from Postgres)
             title="Optional">
         <span>host</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of PostgreSQL server address to connect to
 {{% /md %}}</dd>
@@ -405,7 +405,7 @@ Refreshing state password from Postgres)
             title="Optional">
         <span>max<wbr>Connections</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Maximum number of connections to establish to the database. Zero means unlimited.
 {{% /md %}}</dd>
@@ -414,7 +414,7 @@ Refreshing state password from Postgres)
             title="Optional">
         <span>password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password to be used if the PostgreSQL server demands password authentication
 {{% /md %}}</dd>
@@ -423,7 +423,7 @@ Refreshing state password from Postgres)
             title="Optional">
         <span>port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The PostgreSQL port number to connect to at the server host, or socket file name extension for Unix-domain connections
 {{% /md %}}</dd>
@@ -432,7 +432,7 @@ Refreshing state password from Postgres)
             title="Optional, Deprecated">
         <span>ssl<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Rename PostgreSQL provider `ssl_mode` attribute to `sslmode`{{% /md %}}</p></dd>
 
@@ -440,7 +440,7 @@ Refreshing state password from Postgres)
             title="Optional">
         <span>sslmode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This option determines whether or with what priority a secure SSL TCP/IP connection will be negotiated with the
 PostgreSQL server
@@ -450,7 +450,7 @@ PostgreSQL server
             title="Optional">
         <span>superuser</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specify if the user to connect as is a Postgres superuser or not.If not, some feature might be disabled (e.g.:
 Refreshing state password from Postgres)
@@ -460,7 +460,7 @@ Refreshing state password from Postgres)
             title="Optional">
         <span>username</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}PostgreSQL user name to connect as
 {{% /md %}}</dd>

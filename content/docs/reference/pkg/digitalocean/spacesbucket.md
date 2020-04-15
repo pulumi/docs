@@ -74,7 +74,7 @@ const foobar = new digitalocean.SpacesBucket("foobar", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/#SpacesBucket">SpacesBucket</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/#SpacesBucketArgs">SpacesBucketArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/#SpacesBucket">SpacesBucket</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/#SpacesBucketArgs">SpacesBucketArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -82,11 +82,11 @@ const foobar = new digitalocean.SpacesBucket("foobar", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewSpacesBucket<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/go/digitalocean/?tab=doc#SpacesBucketArgs">SpacesBucketArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/go/digitalocean/?tab=doc#SpacesBucket">SpacesBucket</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewSpacesBucket<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/go/digitalocean/?tab=doc#SpacesBucketArgs">SpacesBucketArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/go/digitalocean/?tab=doc#SpacesBucket">SpacesBucket</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.Digitalocean..SpacesBucket.html">SpacesBucket</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.Digitalocean.SpacesBucketArgs.html">SpacesBucketArgs</a></span>? <span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.Digitalocean.SpacesBucket.html">SpacesBucket</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.DigitalOcean.SpacesBucketArgs.html">SpacesBucketArgs</a></span>? <span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -182,7 +182,7 @@ const foobar = new digitalocean.SpacesBucket("foobar", {
             title="Optional">
         <span>Acl</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Canned ACL applied on bucket creation (`private` or `public-read`)
 {{% /md %}}</dd>
@@ -191,7 +191,7 @@ const foobar = new digitalocean.SpacesBucket("foobar", {
             title="Optional">
         <span>Cors<wbr>Rules</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spacesbucketcorsrule">List&lt;Spaces<wbr>Bucket<wbr>Cors<wbr>Rule<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#spacesbucketcorsrule">List&lt;Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Inputs.<wbr>Spaces<wbr>Bucket<wbr>Cors<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A container holding a list of elements describing allowed methods for a specific origin.
 {{% /md %}}</dd>
@@ -200,7 +200,7 @@ const foobar = new digitalocean.SpacesBucket("foobar", {
             title="Optional">
         <span>Force<wbr>Destroy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Unless `true`, the bucket will only be destroyed if empty (Defaults to `false`)
 {{% /md %}}</dd>
@@ -209,7 +209,7 @@ const foobar = new digitalocean.SpacesBucket("foobar", {
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the bucket
 {{% /md %}}</dd>
@@ -218,7 +218,7 @@ const foobar = new digitalocean.SpacesBucket("foobar", {
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region where the bucket resides (Defaults to `nyc3`)
 {{% /md %}}</dd>
@@ -234,7 +234,7 @@ const foobar = new digitalocean.SpacesBucket("foobar", {
             title="Optional">
         <span>Acl</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Canned ACL applied on bucket creation (`private` or `public-read`)
 {{% /md %}}</dd>
@@ -252,7 +252,7 @@ const foobar = new digitalocean.SpacesBucket("foobar", {
             title="Optional">
         <span>Force<wbr>Destroy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Unless `true`, the bucket will only be destroyed if empty (Defaults to `false`)
 {{% /md %}}</dd>
@@ -261,7 +261,7 @@ const foobar = new digitalocean.SpacesBucket("foobar", {
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the bucket
 {{% /md %}}</dd>
@@ -270,7 +270,7 @@ const foobar = new digitalocean.SpacesBucket("foobar", {
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region where the bucket resides (Defaults to `nyc3`)
 {{% /md %}}</dd>
@@ -286,7 +286,7 @@ const foobar = new digitalocean.SpacesBucket("foobar", {
             title="Optional">
         <span>acl</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Canned ACL applied on bucket creation (`private` or `public-read`)
 {{% /md %}}</dd>
@@ -295,7 +295,7 @@ const foobar = new digitalocean.SpacesBucket("foobar", {
             title="Optional">
         <span>cors<wbr>Rules</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spacesbucketcorsrule">Spaces<wbr>Bucket<wbr>Cors<wbr>Rule[]?</a></span>
+        <span class="property-type"><a href="#spacesbucketcorsrule">Spaces<wbr>Bucket<wbr>Cors<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}A container holding a list of elements describing allowed methods for a specific origin.
 {{% /md %}}</dd>
@@ -304,7 +304,7 @@ const foobar = new digitalocean.SpacesBucket("foobar", {
             title="Optional">
         <span>force<wbr>Destroy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Unless `true`, the bucket will only be destroyed if empty (Defaults to `false`)
 {{% /md %}}</dd>
@@ -313,7 +313,7 @@ const foobar = new digitalocean.SpacesBucket("foobar", {
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the bucket
 {{% /md %}}</dd>
@@ -322,7 +322,7 @@ const foobar = new digitalocean.SpacesBucket("foobar", {
             title="Optional">
         <span>region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Region?</span>
+        <span class="property-type">Region</span>
     </dt>
     <dd>{{% md %}}The region where the bucket resides (Defaults to `nyc3`)
 {{% /md %}}</dd>
@@ -400,56 +400,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Acl</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Canned ACL applied on bucket creation (`private` or `public-read`)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Bucket<wbr>Domain<wbr>Name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The FQDN of the bucket (e.g. bucket-name.nyc3.digitaloceanspaces.com)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Cors<wbr>Rules</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spacesbucketcorsrule">List&lt;Spaces<wbr>Bucket<wbr>Cors<wbr>Rule&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}A container holding a list of elements describing allowed methods for a specific origin.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Force<wbr>Destroy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Unless `true`, the bucket will only be destroyed if empty (Defaults to `false`)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the bucket
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The region where the bucket resides (Defaults to `nyc3`)
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -470,56 +425,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Acl</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Canned ACL applied on bucket creation (`private` or `public-read`)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Bucket<wbr>Domain<wbr>Name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The FQDN of the bucket (e.g. bucket-name.nyc3.digitaloceanspaces.com)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Cors<wbr>Rules</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spacesbucketcorsrule">[]Spaces<wbr>Bucket<wbr>Cors<wbr>Rule</a></span>
-    </dt>
-    <dd>{{% md %}}A container holding a list of elements describing allowed methods for a specific origin.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Force<wbr>Destroy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Unless `true`, the bucket will only be destroyed if empty (Defaults to `false`)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the bucket
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The region where the bucket resides (Defaults to `nyc3`)
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -540,56 +450,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>acl</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Canned ACL applied on bucket creation (`private` or `public-read`)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>bucket<wbr>Domain<wbr>Name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The FQDN of the bucket (e.g. bucket-name.nyc3.digitaloceanspaces.com)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>cors<wbr>Rules</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spacesbucketcorsrule">Spaces<wbr>Bucket<wbr>Cors<wbr>Rule[]?</a></span>
-    </dt>
-    <dd>{{% md %}}A container holding a list of elements describing allowed methods for a specific origin.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>force<wbr>Destroy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Unless `true`, the bucket will only be destroyed if empty (Defaults to `false`)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the bucket
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Region?</span>
-    </dt>
-    <dd>{{% md %}}The region where the bucket resides (Defaults to `nyc3`)
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -610,56 +475,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>acl</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Canned ACL applied on bucket creation (`private` or `public-read`)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>bucket_<wbr>domain_<wbr>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The FQDN of the bucket (e.g. bucket-name.nyc3.digitaloceanspaces.com)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>cors_<wbr>rules</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spacesbucketcorsrule">List[Spaces<wbr>Bucket<wbr>Cors<wbr>Rule]</a></span>
-    </dt>
-    <dd>{{% md %}}A container holding a list of elements describing allowed methods for a specific origin.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>force_<wbr>destroy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Unless `true`, the bucket will only be destroyed if empty (Defaults to `false`)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the bucket
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The region where the bucket resides (Defaults to `nyc3`)
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -700,7 +520,7 @@ Get an existing SpacesBucket resource's state with the given name, ID, and optio
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.Digitalocean..SpacesBucket.html">SpacesBucket</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.Digitalocean..SpacesBucketState.html">SpacesBucketState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.Digitalocean.SpacesBucket.html">SpacesBucket</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.Digitalocean..SpacesBucketState.html">SpacesBucketState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -810,7 +630,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Acl</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Canned ACL applied on bucket creation (`private` or `public-read`)
 {{% /md %}}</dd>
@@ -819,7 +639,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Bucket<wbr>Domain<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The FQDN of the bucket (e.g. bucket-name.nyc3.digitaloceanspaces.com)
 {{% /md %}}</dd>
@@ -828,7 +648,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Cors<wbr>Rules</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spacesbucketcorsrule">List&lt;Spaces<wbr>Bucket<wbr>Cors<wbr>Rule<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#spacesbucketcorsrule">List&lt;Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Inputs.<wbr>Spaces<wbr>Bucket<wbr>Cors<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A container holding a list of elements describing allowed methods for a specific origin.
 {{% /md %}}</dd>
@@ -837,7 +657,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Force<wbr>Destroy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Unless `true`, the bucket will only be destroyed if empty (Defaults to `false`)
 {{% /md %}}</dd>
@@ -846,7 +666,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the bucket
 {{% /md %}}</dd>
@@ -855,7 +675,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region where the bucket resides (Defaults to `nyc3`)
 {{% /md %}}</dd>
@@ -864,7 +684,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Urn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The uniform resource name for the bucket
 {{% /md %}}</dd>
@@ -880,7 +700,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Acl</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Canned ACL applied on bucket creation (`private` or `public-read`)
 {{% /md %}}</dd>
@@ -889,7 +709,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Bucket<wbr>Domain<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The FQDN of the bucket (e.g. bucket-name.nyc3.digitaloceanspaces.com)
 {{% /md %}}</dd>
@@ -907,7 +727,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Force<wbr>Destroy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Unless `true`, the bucket will only be destroyed if empty (Defaults to `false`)
 {{% /md %}}</dd>
@@ -916,7 +736,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the bucket
 {{% /md %}}</dd>
@@ -925,7 +745,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region where the bucket resides (Defaults to `nyc3`)
 {{% /md %}}</dd>
@@ -934,7 +754,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Urn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The uniform resource name for the bucket
 {{% /md %}}</dd>
@@ -950,7 +770,7 @@ The following state arguments are supported:
             title="Optional">
         <span>acl</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Canned ACL applied on bucket creation (`private` or `public-read`)
 {{% /md %}}</dd>
@@ -959,7 +779,7 @@ The following state arguments are supported:
             title="Optional">
         <span>bucket<wbr>Domain<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The FQDN of the bucket (e.g. bucket-name.nyc3.digitaloceanspaces.com)
 {{% /md %}}</dd>
@@ -968,7 +788,7 @@ The following state arguments are supported:
             title="Optional">
         <span>cors<wbr>Rules</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spacesbucketcorsrule">Spaces<wbr>Bucket<wbr>Cors<wbr>Rule[]?</a></span>
+        <span class="property-type"><a href="#spacesbucketcorsrule">Spaces<wbr>Bucket<wbr>Cors<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}A container holding a list of elements describing allowed methods for a specific origin.
 {{% /md %}}</dd>
@@ -977,7 +797,7 @@ The following state arguments are supported:
             title="Optional">
         <span>force<wbr>Destroy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Unless `true`, the bucket will only be destroyed if empty (Defaults to `false`)
 {{% /md %}}</dd>
@@ -986,7 +806,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the bucket
 {{% /md %}}</dd>
@@ -995,7 +815,7 @@ The following state arguments are supported:
             title="Optional">
         <span>region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Region?</span>
+        <span class="property-type">Region</span>
     </dt>
     <dd>{{% md %}}The region where the bucket resides (Defaults to `nyc3`)
 {{% /md %}}</dd>
@@ -1004,7 +824,7 @@ The following state arguments are supported:
             title="Optional">
         <span>urn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The uniform resource name for the bucket
 {{% /md %}}</dd>
@@ -1108,20 +928,11 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Allowed<wbr>Headers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}A list of headers that will be included in the CORS preflight request's `Access-Control-Request-Headers`. A header may contain one wildcard (e.g. `x-amz-*`).
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Allowed<wbr>Methods</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of HTTP methods (e.g. `GET`) which are allowed from the specified origin.
 {{% /md %}}</dd>
@@ -1130,16 +941,25 @@ The following state arguments are supported:
             title="Required">
         <span>Allowed<wbr>Origins</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of hosts from which requests using the specified methods are allowed. A host may contain one wildcard (e.g. http://*.example.com).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
+        <span>Allowed<wbr>Headers</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of headers that will be included in the CORS preflight request's `Access-Control-Request-Headers`. A header may contain one wildcard (e.g. `x-amz-*`).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Max<wbr>Age<wbr>Seconds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time in seconds that browser can cache the response for a preflight request.
 {{% /md %}}</dd>
@@ -1151,15 +971,6 @@ The following state arguments are supported:
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Allowed<wbr>Headers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}A list of headers that will be included in the CORS preflight request's `Access-Control-Request-Headers`. A header may contain one wildcard (e.g. `x-amz-*`).
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Allowed<wbr>Methods</span>
@@ -1180,9 +991,18 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>Allowed<wbr>Headers</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of headers that will be included in the CORS preflight request's `Access-Control-Request-Headers`. A header may contain one wildcard (e.g. `x-amz-*`).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Max<wbr>Age<wbr>Seconds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time in seconds that browser can cache the response for a preflight request.
 {{% /md %}}</dd>
@@ -1194,15 +1014,6 @@ The following state arguments are supported:
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>allowed<wbr>Headers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}A list of headers that will be included in the CORS preflight request's `Access-Control-Request-Headers`. A header may contain one wildcard (e.g. `x-amz-*`).
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>allowed<wbr>Methods</span>
@@ -1223,9 +1034,18 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>allowed<wbr>Headers</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list of headers that will be included in the CORS preflight request's `Access-Control-Request-Headers`. A header may contain one wildcard (e.g. `x-amz-*`).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>max<wbr>Age<wbr>Seconds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The time in seconds that browser can cache the response for a preflight request.
 {{% /md %}}</dd>
@@ -1237,15 +1057,6 @@ The following state arguments are supported:
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>allowed<wbr>Headers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}A list of headers that will be included in the CORS preflight request's `Access-Control-Request-Headers`. A header may contain one wildcard (e.g. `x-amz-*`).
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>allowed<wbr>Methods</span>
@@ -1262,6 +1073,15 @@ The following state arguments are supported:
         <span class="property-type">List[str]</span>
     </dt>
     <dd>{{% md %}}A list of hosts from which requests using the specified methods are allowed. A host may contain one wildcard (e.g. http://*.example.com).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>allowed<wbr>Headers</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of headers that will be included in the CORS preflight request's `Access-Control-Request-Headers`. A header may contain one wildcard (e.g. `x-amz-*`).
 {{% /md %}}</dd>
 
     <dt class="property-optional"

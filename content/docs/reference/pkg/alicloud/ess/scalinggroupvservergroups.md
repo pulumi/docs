@@ -105,7 +105,7 @@ the vserver_group supports the following:
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/ess/#ScalingGroupVServerGroups">ScalingGroupVServerGroups</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/ess/#ScalingGroupVServerGroupsArgs">ScalingGroupVServerGroupsArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/ess/#ScalingGroupVServerGroups">ScalingGroupVServerGroups</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/ess/#ScalingGroupVServerGroupsArgs">ScalingGroupVServerGroupsArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -113,11 +113,11 @@ the vserver_group supports the following:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewScalingGroupVServerGroups<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/ess?tab=doc#ScalingGroupVServerGroupsArgs">ScalingGroupVServerGroupsArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/ess?tab=doc#ScalingGroupVServerGroups">ScalingGroupVServerGroups</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewScalingGroupVServerGroups<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/ess?tab=doc#ScalingGroupVServerGroupsArgs">ScalingGroupVServerGroupsArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/ess?tab=doc#ScalingGroupVServerGroups">ScalingGroupVServerGroups</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.Ess.ScalingGroupVServerGroups.html">ScalingGroupVServerGroups</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.Ess.ScalingGroupVServerGroupsArgs.html">ScalingGroupVServerGroupsArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.Ess.ScalingGroupVServerGroups.html">ScalingGroupVServerGroups</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.AliCloud.Ess.ScalingGroupVServerGroupsArgs.html">ScalingGroupVServerGroupsArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -209,15 +209,6 @@ the vserver_group supports the following:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Force</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}If instances of scaling group are attached/removed from slb backend server when attach/detach vserver group from scaling group. Default to true.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Scaling<wbr>Group<wbr>Id</span>
@@ -231,9 +222,18 @@ the vserver_group supports the following:
             title="Required">
         <span>Vserver<wbr>Groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalinggroupvservergroupsvservergroup">List&lt;Scaling<wbr>Group<wbr>VServer<wbr>Groups<wbr>Vserver<wbr>Group<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#scalinggroupvservergroupsvservergroup">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Ess.<wbr>Inputs.<wbr>Scaling<wbr>Group<wbr>VServer<wbr>Groups<wbr>Vserver<wbr>Group<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of vserver groups attached on scaling group. See Block vserver_group below for details.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Force</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If instances of scaling group are attached/removed from slb backend server when attach/detach vserver group from scaling group. Default to true.
 {{% /md %}}</dd>
 
 </dl>
@@ -242,15 +242,6 @@ the vserver_group supports the following:
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Force</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}If instances of scaling group are attached/removed from slb backend server when attach/detach vserver group from scaling group. Default to true.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -270,21 +261,21 @@ the vserver_group supports the following:
     <dd>{{% md %}}A list of vserver groups attached on scaling group. See Block vserver_group below for details.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>Force</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If instances of scaling group are attached/removed from slb backend server when attach/detach vserver group from scaling group. Default to true.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>force</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}If instances of scaling group are attached/removed from slb backend server when attach/detach vserver group from scaling group. Default to true.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -304,12 +295,39 @@ the vserver_group supports the following:
     <dd>{{% md %}}A list of vserver groups attached on scaling group. See Block vserver_group below for details.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>force</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}If instances of scaling group are attached/removed from slb backend server when attach/detach vserver group from scaling group. Default to true.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>scaling_<wbr>group_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}ID of the scaling group.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>vserver_<wbr>groups</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#scalinggroupvservergroupsvservergroup">List[Scaling<wbr>Group<wbr>VServer<wbr>Groups<wbr>Vserver<wbr>Group]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of vserver groups attached on scaling group. See Block vserver_group below for details.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -320,174 +338,10 @@ the vserver_group supports the following:
     <dd>{{% md %}}If instances of scaling group are attached/removed from slb backend server when attach/detach vserver group from scaling group. Default to true.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>scaling_<wbr>group_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}ID of the scaling group.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>vserver_<wbr>groups</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalinggroupvservergroupsvservergroup">List[Scaling<wbr>Group<wbr>VServer<wbr>Groups<wbr>Vserver<wbr>Group]</a></span>
-    </dt>
-    <dd>{{% md %}}A list of vserver groups attached on scaling group. See Block vserver_group below for details.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
-
-
-
-
-
-## ScalingGroupVServerGroups Output Properties
-
-The following output properties are available:
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Force</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}If instances of scaling group are attached/removed from slb backend server when attach/detach vserver group from scaling group. Default to true.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Scaling<wbr>Group<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}ID of the scaling group.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Vserver<wbr>Groups</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalinggroupvservergroupsvservergroup">List&lt;Scaling<wbr>Group<wbr>VServer<wbr>Groups<wbr>Vserver<wbr>Group&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}A list of vserver groups attached on scaling group. See Block vserver_group below for details.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Force</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}If instances of scaling group are attached/removed from slb backend server when attach/detach vserver group from scaling group. Default to true.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Scaling<wbr>Group<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}ID of the scaling group.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Vserver<wbr>Groups</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalinggroupvservergroupsvservergroup">[]Scaling<wbr>Group<wbr>VServer<wbr>Groups<wbr>Vserver<wbr>Group</a></span>
-    </dt>
-    <dd>{{% md %}}A list of vserver groups attached on scaling group. See Block vserver_group below for details.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>force</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}If instances of scaling group are attached/removed from slb backend server when attach/detach vserver group from scaling group. Default to true.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>scaling<wbr>Group<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}ID of the scaling group.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>vserver<wbr>Groups</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalinggroupvservergroupsvservergroup">Scaling<wbr>Group<wbr>VServer<wbr>Groups<wbr>Vserver<wbr>Group[]</a></span>
-    </dt>
-    <dd>{{% md %}}A list of vserver groups attached on scaling group. See Block vserver_group below for details.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>force</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}If instances of scaling group are attached/removed from slb backend server when attach/detach vserver group from scaling group. Default to true.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>scaling_<wbr>group_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}ID of the scaling group.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>vserver_<wbr>groups</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalinggroupvservergroupsvservergroup">List[Scaling<wbr>Group<wbr>VServer<wbr>Groups<wbr>Vserver<wbr>Group]</a></span>
-    </dt>
-    <dd>{{% md %}}A list of vserver groups attached on scaling group. See Block vserver_group below for details.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
 
 
 
@@ -625,7 +479,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Force</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If instances of scaling group are attached/removed from slb backend server when attach/detach vserver group from scaling group. Default to true.
 {{% /md %}}</dd>
@@ -634,7 +488,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Scaling<wbr>Group<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the scaling group.
 {{% /md %}}</dd>
@@ -643,7 +497,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Vserver<wbr>Groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalinggroupvservergroupsvservergroup">List&lt;Scaling<wbr>Group<wbr>VServer<wbr>Groups<wbr>Vserver<wbr>Group<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#scalinggroupvservergroupsvservergroup">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Ess.<wbr>Inputs.<wbr>Scaling<wbr>Group<wbr>VServer<wbr>Groups<wbr>Vserver<wbr>Group<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of vserver groups attached on scaling group. See Block vserver_group below for details.
 {{% /md %}}</dd>
@@ -659,7 +513,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Force</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If instances of scaling group are attached/removed from slb backend server when attach/detach vserver group from scaling group. Default to true.
 {{% /md %}}</dd>
@@ -668,7 +522,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Scaling<wbr>Group<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the scaling group.
 {{% /md %}}</dd>
@@ -693,7 +547,7 @@ The following state arguments are supported:
             title="Optional">
         <span>force</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If instances of scaling group are attached/removed from slb backend server when attach/detach vserver group from scaling group. Default to true.
 {{% /md %}}</dd>
@@ -702,7 +556,7 @@ The following state arguments are supported:
             title="Optional">
         <span>scaling<wbr>Group<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the scaling group.
 {{% /md %}}</dd>
@@ -711,7 +565,7 @@ The following state arguments are supported:
             title="Optional">
         <span>vserver<wbr>Groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalinggroupvservergroupsvservergroup">Scaling<wbr>Group<wbr>VServer<wbr>Groups<wbr>Vserver<wbr>Group[]?</a></span>
+        <span class="property-type"><a href="#scalinggroupvservergroupsvservergroup">Scaling<wbr>Group<wbr>VServer<wbr>Groups<wbr>Vserver<wbr>Group[]</a></span>
     </dt>
     <dd>{{% md %}}A list of vserver groups attached on scaling group. See Block vserver_group below for details.
 {{% /md %}}</dd>
@@ -791,7 +645,7 @@ The following state arguments are supported:
             title="Required">
         <span>Vserver<wbr>Attributes</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scalinggroupvservergroupsvservergroupvserverattribute">List&lt;Scaling<wbr>Group<wbr>VServer<wbr>Groups<wbr>Vserver<wbr>Group<wbr>Vserver<wbr>Attribute<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#scalinggroupvservergroupsvservergroupvserverattribute">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Ess.<wbr>Inputs.<wbr>Scaling<wbr>Group<wbr>VServer<wbr>Groups<wbr>Vserver<wbr>Group<wbr>Vserver<wbr>Attribute<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

@@ -45,7 +45,7 @@ const myTargetSet = new spotinst.multai.TargetSet("my_target_set", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/spotinst/multai/#TargetSet">TargetSet</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/spotinst/multai/#TargetSetArgs">TargetSetArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/spotinst/multai/#TargetSet">TargetSet</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/spotinst/multai/#TargetSetArgs">TargetSetArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -53,11 +53,11 @@ const myTargetSet = new spotinst.multai.TargetSet("my_target_set", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewTargetSet<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/go/spotinst/multai?tab=doc#TargetSetArgs">TargetSetArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/go/spotinst/multai?tab=doc#TargetSet">TargetSet</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewTargetSet<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/go/spotinst/multai?tab=doc#TargetSetArgs">TargetSetArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/go/spotinst/multai?tab=doc#TargetSet">TargetSet</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.Spotinst.Multai.TargetSet.html">TargetSet</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.Spotinst.Multai.TargetSetArgs.html">TargetSetArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.Spotinst.Multai.TargetSet.html">TargetSet</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Multai.TargetSetArgs.html">TargetSetArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -171,27 +171,9 @@ const myTargetSet = new spotinst.multai.TargetSet("my_target_set", {
             title="Required">
         <span>Health<wbr>Check</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#targetsethealthcheck">Target<wbr>Set<wbr>Health<wbr>Check<wbr>Args</a></span>
+        <span class="property-type"><a href="#targetsethealthcheck">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Multai.<wbr>Inputs.<wbr>Target<wbr>Set<wbr>Health<wbr>Check<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The name of the Target Set. Must contain only alphanumeric characters or hyphens, and must not begin or end with a hyphen.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Port</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}The port on which the load balancer is listening.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -202,15 +184,6 @@ const myTargetSet = new spotinst.multai.TargetSet("my_target_set", {
     <dd>{{% md %}}The protocol to allow connections to the target for the health check.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#targetsettag">List&lt;Target<wbr>Set<wbr>Tag<wbr>Args&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}A list of key:value paired tags.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Weight</span>
@@ -218,6 +191,33 @@ const myTargetSet = new spotinst.multai.TargetSet("my_target_set", {
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Defines how traffic is distributed between the Target Set.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the Target Set. Must contain only alphanumeric characters or hyphens, and must not begin or end with a hyphen.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Port</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The port on which the load balancer is listening.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#targetsettag">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Multai.<wbr>Inputs.<wbr>Target<wbr>Set<wbr>Tag<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A list of key:value paired tags.
 {{% /md %}}</dd>
 
 </dl>
@@ -253,24 +253,6 @@ const myTargetSet = new spotinst.multai.TargetSet("my_target_set", {
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The name of the Target Set. Must contain only alphanumeric characters or hyphens, and must not begin or end with a hyphen.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Port</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}The port on which the load balancer is listening.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Protocol</span>
@@ -280,15 +262,6 @@ const myTargetSet = new spotinst.multai.TargetSet("my_target_set", {
     <dd>{{% md %}}The protocol to allow connections to the target for the health check.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#targetsettag">[]Target<wbr>Set<wbr>Tag</a></span>
-    </dt>
-    <dd>{{% md %}}A list of key:value paired tags.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Weight</span>
@@ -296,6 +269,33 @@ const myTargetSet = new spotinst.multai.TargetSet("my_target_set", {
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Defines how traffic is distributed between the Target Set.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the Target Set. Must contain only alphanumeric characters or hyphens, and must not begin or end with a hyphen.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Port</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The port on which the load balancer is listening.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#targetsettag">[]Target<wbr>Set<wbr>Tag</a></span>
+    </dt>
+    <dd>{{% md %}}A list of key:value paired tags.
 {{% /md %}}</dd>
 
 </dl>
@@ -331,24 +331,6 @@ const myTargetSet = new spotinst.multai.TargetSet("my_target_set", {
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The name of the Target Set. Must contain only alphanumeric characters or hyphens, and must not begin or end with a hyphen.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>port</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}The port on which the load balancer is listening.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>protocol</span>
@@ -358,15 +340,6 @@ const myTargetSet = new spotinst.multai.TargetSet("my_target_set", {
     <dd>{{% md %}}The protocol to allow connections to the target for the health check.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#targetsettag">Target<wbr>Set<wbr>Tag[]?</a></span>
-    </dt>
-    <dd>{{% md %}}A list of key:value paired tags.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>weight</span>
@@ -374,6 +347,33 @@ const myTargetSet = new spotinst.multai.TargetSet("my_target_set", {
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Defines how traffic is distributed between the Target Set.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the Target Set. Must contain only alphanumeric characters or hyphens, and must not begin or end with a hyphen.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>port</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The port on which the load balancer is listening.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#targetsettag">Target<wbr>Set<wbr>Tag[]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of key:value paired tags.
 {{% /md %}}</dd>
 
 </dl>
@@ -409,24 +409,6 @@ const myTargetSet = new spotinst.multai.TargetSet("my_target_set", {
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the Target Set. Must contain only alphanumeric characters or hyphens, and must not begin or end with a hyphen.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>port</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The port on which the load balancer is listening.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>protocol</span>
@@ -434,15 +416,6 @@ const myTargetSet = new spotinst.multai.TargetSet("my_target_set", {
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The protocol to allow connections to the target for the health check.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#targetsettag">List[Target<wbr>Set<wbr>Tag]</a></span>
-    </dt>
-    <dd>{{% md %}}A list of key:value paired tags.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -454,287 +427,8 @@ const myTargetSet = new spotinst.multai.TargetSet("my_target_set", {
     <dd>{{% md %}}Defines how traffic is distributed between the Target Set.
 {{% /md %}}</dd>
 
-</dl>
-{{% /choosable %}}
-
-
-
-
-
-
-
-## TargetSet Output Properties
-
-The following output properties are available:
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Balancer<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The id of the balancer.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Deployment<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The id of the deployment.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Health<wbr>Check</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#targetsethealthcheck">Target<wbr>Set<wbr>Health<wbr>Check</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the Target Set. Must contain only alphanumeric characters or hyphens, and must not begin or end with a hyphen.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Port</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}The port on which the load balancer is listening.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Protocol</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The protocol to allow connections to the target for the health check.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#targetsettag">List&lt;Target<wbr>Set<wbr>Tag&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}A list of key:value paired tags.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Weight</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Defines how traffic is distributed between the Target Set.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Balancer<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The id of the balancer.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Deployment<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The id of the deployment.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Health<wbr>Check</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#targetsethealthcheck">Target<wbr>Set<wbr>Health<wbr>Check</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the Target Set. Must contain only alphanumeric characters or hyphens, and must not begin or end with a hyphen.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Port</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}The port on which the load balancer is listening.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Protocol</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The protocol to allow connections to the target for the health check.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#targetsettag">[]Target<wbr>Set<wbr>Tag</a></span>
-    </dt>
-    <dd>{{% md %}}A list of key:value paired tags.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Weight</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Defines how traffic is distributed between the Target Set.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>balancer<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The id of the balancer.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>deployment<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The id of the deployment.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>health<wbr>Check</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#targetsethealthcheck">Target<wbr>Set<wbr>Health<wbr>Check</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the Target Set. Must contain only alphanumeric characters or hyphens, and must not begin or end with a hyphen.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>port</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}The port on which the load balancer is listening.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>protocol</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The protocol to allow connections to the target for the health check.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#targetsettag">Target<wbr>Set<wbr>Tag[]?</a></span>
-    </dt>
-    <dd>{{% md %}}A list of key:value paired tags.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>weight</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}Defines how traffic is distributed between the Target Set.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>balancer_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The id of the balancer.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>deployment_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The id of the deployment.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>health_<wbr>check</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#targetsethealthcheck">Dict[Target<wbr>Set<wbr>Health<wbr>Check]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -742,8 +436,8 @@ The following output properties are available:
     <dd>{{% md %}}The name of the Target Set. Must contain only alphanumeric characters or hyphens, and must not begin or end with a hyphen.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>port</span>
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
@@ -751,17 +445,8 @@ The following output properties are available:
     <dd>{{% md %}}The port on which the load balancer is listening.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span>protocol</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The protocol to allow connections to the target for the health check.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#targetsettag">List[Target<wbr>Set<wbr>Tag]</a></span>
@@ -769,17 +454,10 @@ The following output properties are available:
     <dd>{{% md %}}A list of key:value paired tags.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span>weight</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}Defines how traffic is distributed between the Target Set.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
+
+
 
 
 
@@ -917,7 +595,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Balancer<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the balancer.
 {{% /md %}}</dd>
@@ -926,7 +604,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Deployment<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the deployment.
 {{% /md %}}</dd>
@@ -935,7 +613,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Health<wbr>Check</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#targetsethealthcheck">Target<wbr>Set<wbr>Health<wbr>Check<wbr>Args?</a></span>
+        <span class="property-type"><a href="#targetsethealthcheck">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Multai.<wbr>Inputs.<wbr>Target<wbr>Set<wbr>Health<wbr>Check<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -943,7 +621,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Target Set. Must contain only alphanumeric characters or hyphens, and must not begin or end with a hyphen.
 {{% /md %}}</dd>
@@ -952,7 +630,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port on which the load balancer is listening.
 {{% /md %}}</dd>
@@ -961,7 +639,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Protocol</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The protocol to allow connections to the target for the health check.
 {{% /md %}}</dd>
@@ -970,7 +648,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#targetsettag">List&lt;Target<wbr>Set<wbr>Tag<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#targetsettag">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Multai.<wbr>Inputs.<wbr>Target<wbr>Set<wbr>Tag<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of key:value paired tags.
 {{% /md %}}</dd>
@@ -979,7 +657,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Weight</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Defines how traffic is distributed between the Target Set.
 {{% /md %}}</dd>
@@ -995,7 +673,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Balancer<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the balancer.
 {{% /md %}}</dd>
@@ -1004,7 +682,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Deployment<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the deployment.
 {{% /md %}}</dd>
@@ -1013,7 +691,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Health<wbr>Check</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#targetsethealthcheck">*Target<wbr>Set<wbr>Health<wbr>Check</a></span>
+        <span class="property-type"><a href="#targetsethealthcheck">Target<wbr>Set<wbr>Health<wbr>Check</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1021,7 +699,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Target Set. Must contain only alphanumeric characters or hyphens, and must not begin or end with a hyphen.
 {{% /md %}}</dd>
@@ -1030,7 +708,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port on which the load balancer is listening.
 {{% /md %}}</dd>
@@ -1039,7 +717,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Protocol</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The protocol to allow connections to the target for the health check.
 {{% /md %}}</dd>
@@ -1057,7 +735,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Weight</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Defines how traffic is distributed between the Target Set.
 {{% /md %}}</dd>
@@ -1073,7 +751,7 @@ The following state arguments are supported:
             title="Optional">
         <span>balancer<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the balancer.
 {{% /md %}}</dd>
@@ -1082,7 +760,7 @@ The following state arguments are supported:
             title="Optional">
         <span>deployment<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the deployment.
 {{% /md %}}</dd>
@@ -1091,7 +769,7 @@ The following state arguments are supported:
             title="Optional">
         <span>health<wbr>Check</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#targetsethealthcheck">Target<wbr>Set<wbr>Health<wbr>Check?</a></span>
+        <span class="property-type"><a href="#targetsethealthcheck">Target<wbr>Set<wbr>Health<wbr>Check</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1099,7 +777,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Target Set. Must contain only alphanumeric characters or hyphens, and must not begin or end with a hyphen.
 {{% /md %}}</dd>
@@ -1108,7 +786,7 @@ The following state arguments are supported:
             title="Optional">
         <span>port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The port on which the load balancer is listening.
 {{% /md %}}</dd>
@@ -1117,7 +795,7 @@ The following state arguments are supported:
             title="Optional">
         <span>protocol</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The protocol to allow connections to the target for the health check.
 {{% /md %}}</dd>
@@ -1126,7 +804,7 @@ The following state arguments are supported:
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#targetsettag">Target<wbr>Set<wbr>Tag[]?</a></span>
+        <span class="property-type"><a href="#targetsettag">Target<wbr>Set<wbr>Tag[]</a></span>
     </dt>
     <dd>{{% md %}}A list of key:value paired tags.
 {{% /md %}}</dd>
@@ -1135,7 +813,7 @@ The following state arguments are supported:
             title="Optional">
         <span>weight</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Defines how traffic is distributed between the Target Set.
 {{% /md %}}</dd>
@@ -1274,15 +952,6 @@ The following state arguments are supported:
     <dd>{{% md %}}The path to perform the health check.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Port</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}The port on which the load balancer is listening.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Protocol</span>
@@ -1308,6 +977,15 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Total number of allowed unhealthy Targets.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Port</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The port on which the load balancer is listening.
 {{% /md %}}</dd>
 
 </dl>
@@ -1344,15 +1022,6 @@ The following state arguments are supported:
     <dd>{{% md %}}The path to perform the health check.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Port</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}The port on which the load balancer is listening.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Protocol</span>
@@ -1378,6 +1047,15 @@ The following state arguments are supported:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Total number of allowed unhealthy Targets.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Port</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The port on which the load balancer is listening.
 {{% /md %}}</dd>
 
 </dl>
@@ -1414,15 +1092,6 @@ The following state arguments are supported:
     <dd>{{% md %}}The path to perform the health check.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>port</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}The port on which the load balancer is listening.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>protocol</span>
@@ -1448,6 +1117,15 @@ The following state arguments are supported:
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Total number of allowed unhealthy Targets.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>port</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The port on which the load balancer is listening.
 {{% /md %}}</dd>
 
 </dl>
@@ -1484,15 +1162,6 @@ The following state arguments are supported:
     <dd>{{% md %}}The path to perform the health check.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>port</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The port on which the load balancer is listening.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>protocol</span>
@@ -1518,6 +1187,15 @@ The following state arguments are supported:
         <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Total number of allowed unhealthy Targets.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>port</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}The port on which the load balancer is listening.
 {{% /md %}}</dd>
 
 </dl>

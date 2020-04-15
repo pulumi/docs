@@ -27,13 +27,13 @@ block_external_search_index: true
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupKubernetesCluster<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/go/digitalocean/?tab=doc#GetKubernetesClusterArgs">GetKubernetesClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/go/digitalocean/?tab=doc#LookupKubernetesClusterResult">LookupKubernetesClusterResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupKubernetesCluster<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/go/digitalocean/?tab=doc#GetKubernetesClusterArgs">GetKubernetesClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/go/digitalocean/?tab=doc#LookupKubernetesClusterResult">LookupKubernetesClusterResult</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetKubernetesCluster </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.Digitalocean.GetKubernetesClusterResult.html">GetKubernetesClusterResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.Digitalocean.GetKubernetesClusterArgs.html">GetKubernetesClusterArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.Digitalocean.GetKubernetesClusterResult.html">GetKubernetesClusterResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.DigitalOcean.GetKubernetesClusterArgs.html">GetKubernetesClusterArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -59,7 +59,7 @@ The following arguments are supported:
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of tag names to be applied to the Kubernetes cluster.
 {{% /md %}}</dd>
@@ -109,7 +109,7 @@ The following arguments are supported:
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of tag names to be applied to the Kubernetes cluster.
 {{% /md %}}</dd>
@@ -208,7 +208,7 @@ The following output properties are available:
             title="">
         <span>Kube<wbr>Configs</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkubernetesclusterkubeconfig">List&lt;Get<wbr>Kubernetes<wbr>Cluster<wbr>Kube<wbr>Config&gt;</a></span>
+        <span class="property-type"><a href="#getkubernetesclusterkubeconfig">List&lt;Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Outputs.<wbr>Get<wbr>Kubernetes<wbr>Cluster<wbr>Kube<wbr>Config&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -224,7 +224,7 @@ The following output properties are available:
             title="">
         <span>Node<wbr>Pools</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkubernetesclusternodepool">List&lt;Get<wbr>Kubernetes<wbr>Cluster<wbr>Node<wbr>Pool&gt;</a></span>
+        <span class="property-type"><a href="#getkubernetesclusternodepool">List&lt;Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Outputs.<wbr>Get<wbr>Kubernetes<wbr>Cluster<wbr>Node<wbr>Pool&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of node pools associated with the cluster. Each node pool exports the following attributes:
 - `id` -  The unique ID that can be used to identify and reference the node pool.
@@ -274,15 +274,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}A list of tag names to be applied to the Kubernetes cluster.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Updated<wbr>At</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -305,6 +296,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The slug identifier for the version of Kubernetes used for the cluster.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of tag names to be applied to the Kubernetes cluster.
 {{% /md %}}</dd>
 
 </dl>
@@ -429,15 +429,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}A list of tag names to be applied to the Kubernetes cluster.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Updated<wbr>At</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -460,6 +451,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The slug identifier for the version of Kubernetes used for the cluster.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of tag names to be applied to the Kubernetes cluster.
 {{% /md %}}</dd>
 
 </dl>
@@ -584,15 +584,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}A list of tag names to be applied to the Kubernetes cluster.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>updated<wbr>At</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -615,6 +606,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The slug identifier for the version of Kubernetes used for the cluster.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list of tag names to be applied to the Kubernetes cluster.
 {{% /md %}}</dd>
 
 </dl>
@@ -739,15 +739,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}A list of tag names to be applied to the Kubernetes cluster.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>updated_<wbr>at</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -770,6 +761,15 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The slug identifier for the version of Kubernetes used for the cluster.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of tag names to be applied to the Kubernetes cluster.
 {{% /md %}}</dd>
 
 </dl>
@@ -1095,7 +1095,7 @@ The following output properties are available:
             title="Required">
         <span>Labels</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1136,7 +1136,7 @@ The following output properties are available:
             title="Required">
         <span>Nodes</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkubernetesclusternodepoolnode">List&lt;Get<wbr>Kubernetes<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getkubernetesclusternodepoolnode">List&lt;Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Inputs.<wbr>Get<wbr>Kubernetes<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1152,7 +1152,7 @@ The following output properties are available:
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of tag names to be applied to the Kubernetes cluster.
 {{% /md %}}</dd>
@@ -1348,7 +1348,7 @@ The following output properties are available:
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of tag names to be applied to the Kubernetes cluster.
 {{% /md %}}</dd>

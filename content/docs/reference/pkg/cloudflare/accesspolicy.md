@@ -19,7 +19,7 @@ particular resource.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/cloudflare/#AccessPolicy">AccessPolicy</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/cloudflare/#AccessPolicyArgs">AccessPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/cloudflare/#AccessPolicy">AccessPolicy</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/cloudflare/#AccessPolicyArgs">AccessPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -27,11 +27,11 @@ particular resource.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewAccessPolicy<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-cloudflare/sdk/go/cloudflare/?tab=doc#AccessPolicyArgs">AccessPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-cloudflare/sdk/go/cloudflare/?tab=doc#AccessPolicy">AccessPolicy</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewAccessPolicy<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-cloudflare/sdk/go/cloudflare/?tab=doc#AccessPolicyArgs">AccessPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-cloudflare/sdk/go/cloudflare/?tab=doc#AccessPolicy">AccessPolicy</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Cloudflare/Pulumi.Cloudflare..AccessPolicy.html">AccessPolicy</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Cloudflare/Pulumi.Cloudflare.AccessPolicyArgs.html">AccessPolicyArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Cloudflare/Pulumi.Cloudflare.AccessPolicy.html">AccessPolicy</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Cloudflare/Pulumi.Cloudflare.AccessPolicyArgs.html">AccessPolicyArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -143,15 +143,6 @@ associated with.
 Allowed values: `allow`, `deny`, `non_identity`, `bypass`
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Excludes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesspolicyexclude">List&lt;Access<wbr>Policy<wbr>Exclude<wbr>Args&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}A series of access conditions, see [Access Groups](https://www.terraform.io/docs/providers/cloudflare/r/access_group.html#conditions).
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Includes</span>
@@ -170,24 +161,6 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
     <dd>{{% md %}}Friendly name of the Access Application.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Precedence</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}The unique precedence for policies on a single application. Integer.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Requires</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesspolicyrequire">List&lt;Access<wbr>Policy<wbr>Require<wbr>Args&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}A series of access conditions, see [Access Groups](https://www.terraform.io/docs/providers/cloudflare/r/access_group.html#conditions).
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Zone<wbr>Id</span>
@@ -196,6 +169,33 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
     </dt>
     <dd>{{% md %}}The DNS zone to which the access rule should be
 added.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Excludes</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accesspolicyexclude">List&lt;Access<wbr>Policy<wbr>Exclude<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A series of access conditions, see [Access Groups](https://www.terraform.io/docs/providers/cloudflare/r/access_group.html#conditions).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Precedence</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The unique precedence for policies on a single application. Integer.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Requires</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accesspolicyrequire">List&lt;Access<wbr>Policy<wbr>Require<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A series of access conditions, see [Access Groups](https://www.terraform.io/docs/providers/cloudflare/r/access_group.html#conditions).
 {{% /md %}}</dd>
 
 </dl>
@@ -225,15 +225,6 @@ associated with.
 Allowed values: `allow`, `deny`, `non_identity`, `bypass`
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Excludes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesspolicyexclude">[]Access<wbr>Policy<wbr>Exclude</a></span>
-    </dt>
-    <dd>{{% md %}}A series of access conditions, see [Access Groups](https://www.terraform.io/docs/providers/cloudflare/r/access_group.html#conditions).
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Includes</span>
@@ -252,11 +243,30 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
     <dd>{{% md %}}Friendly name of the Access Application.
 {{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>Zone<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The DNS zone to which the access rule should be
+added.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Excludes</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accesspolicyexclude">[]Access<wbr>Policy<wbr>Exclude</a></span>
+    </dt>
+    <dd>{{% md %}}A series of access conditions, see [Access Groups](https://www.terraform.io/docs/providers/cloudflare/r/access_group.html#conditions).
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Precedence</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The unique precedence for policies on a single application. Integer.
 {{% /md %}}</dd>
@@ -268,16 +278,6 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-type"><a href="#accesspolicyrequire">[]Access<wbr>Policy<wbr>Require</a></span>
     </dt>
     <dd>{{% md %}}A series of access conditions, see [Access Groups](https://www.terraform.io/docs/providers/cloudflare/r/access_group.html#conditions).
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Zone<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The DNS zone to which the access rule should be
-added.
 {{% /md %}}</dd>
 
 </dl>
@@ -307,15 +307,6 @@ associated with.
 Allowed values: `allow`, `deny`, `non_identity`, `bypass`
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>excludes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesspolicyexclude">Access<wbr>Policy<wbr>Exclude[]?</a></span>
-    </dt>
-    <dd>{{% md %}}A series of access conditions, see [Access Groups](https://www.terraform.io/docs/providers/cloudflare/r/access_group.html#conditions).
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>includes</span>
@@ -334,24 +325,6 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
     <dd>{{% md %}}Friendly name of the Access Application.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>precedence</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}The unique precedence for policies on a single application. Integer.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>requires</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesspolicyrequire">Access<wbr>Policy<wbr>Require[]?</a></span>
-    </dt>
-    <dd>{{% md %}}A series of access conditions, see [Access Groups](https://www.terraform.io/docs/providers/cloudflare/r/access_group.html#conditions).
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>zone<wbr>Id</span>
@@ -360,6 +333,33 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
     </dt>
     <dd>{{% md %}}The DNS zone to which the access rule should be
 added.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>excludes</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accesspolicyexclude">Access<wbr>Policy<wbr>Exclude[]</a></span>
+    </dt>
+    <dd>{{% md %}}A series of access conditions, see [Access Groups](https://www.terraform.io/docs/providers/cloudflare/r/access_group.html#conditions).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>precedence</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The unique precedence for policies on a single application. Integer.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>requires</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accesspolicyrequire">Access<wbr>Policy<wbr>Require[]</a></span>
+    </dt>
+    <dd>{{% md %}}A series of access conditions, see [Access Groups](https://www.terraform.io/docs/providers/cloudflare/r/access_group.html#conditions).
 {{% /md %}}</dd>
 
 </dl>
@@ -389,15 +389,6 @@ associated with.
 Allowed values: `allow`, `deny`, `non_identity`, `bypass`
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>excludes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesspolicyexclude">List[Access<wbr>Policy<wbr>Exclude]</a></span>
-    </dt>
-    <dd>{{% md %}}A series of access conditions, see [Access Groups](https://www.terraform.io/docs/providers/cloudflare/r/access_group.html#conditions).
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>includes</span>
@@ -414,6 +405,25 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Friendly name of the Access Application.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>zone_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The DNS zone to which the access rule should be
+added.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>excludes</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#accesspolicyexclude">List[Access<wbr>Policy<wbr>Exclude]</a></span>
+    </dt>
+    <dd>{{% md %}}A series of access conditions, see [Access Groups](https://www.terraform.io/docs/providers/cloudflare/r/access_group.html#conditions).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -434,358 +444,10 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
     <dd>{{% md %}}A series of access conditions, see [Access Groups](https://www.terraform.io/docs/providers/cloudflare/r/access_group.html#conditions).
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>zone_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The DNS zone to which the access rule should be
-added.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
-
-
-
-
-
-## AccessPolicy Output Properties
-
-The following output properties are available:
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Application<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the application the policy is
-associated with.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Decision</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Defines the action Access will take if the policy matches the user.
-Allowed values: `allow`, `deny`, `non_identity`, `bypass`
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Excludes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesspolicyexclude">List&lt;Access<wbr>Policy<wbr>Exclude&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}A series of access conditions, see [Access Groups](https://www.terraform.io/docs/providers/cloudflare/r/access_group.html#conditions).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Includes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesspolicyinclude">List&lt;Access<wbr>Policy<wbr>Include&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}A series of access conditions, see [Access Groups](https://www.terraform.io/docs/providers/cloudflare/r/access_group.html#conditions).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Friendly name of the Access Application.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Precedence</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}The unique precedence for policies on a single application. Integer.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Requires</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesspolicyrequire">List&lt;Access<wbr>Policy<wbr>Require&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}A series of access conditions, see [Access Groups](https://www.terraform.io/docs/providers/cloudflare/r/access_group.html#conditions).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Zone<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The DNS zone to which the access rule should be
-added.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Application<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the application the policy is
-associated with.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Decision</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Defines the action Access will take if the policy matches the user.
-Allowed values: `allow`, `deny`, `non_identity`, `bypass`
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Excludes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesspolicyexclude">[]Access<wbr>Policy<wbr>Exclude</a></span>
-    </dt>
-    <dd>{{% md %}}A series of access conditions, see [Access Groups](https://www.terraform.io/docs/providers/cloudflare/r/access_group.html#conditions).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Includes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesspolicyinclude">[]Access<wbr>Policy<wbr>Include</a></span>
-    </dt>
-    <dd>{{% md %}}A series of access conditions, see [Access Groups](https://www.terraform.io/docs/providers/cloudflare/r/access_group.html#conditions).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Friendly name of the Access Application.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Precedence</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}The unique precedence for policies on a single application. Integer.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Requires</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesspolicyrequire">[]Access<wbr>Policy<wbr>Require</a></span>
-    </dt>
-    <dd>{{% md %}}A series of access conditions, see [Access Groups](https://www.terraform.io/docs/providers/cloudflare/r/access_group.html#conditions).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Zone<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The DNS zone to which the access rule should be
-added.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>application<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the application the policy is
-associated with.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>decision</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Defines the action Access will take if the policy matches the user.
-Allowed values: `allow`, `deny`, `non_identity`, `bypass`
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>excludes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesspolicyexclude">Access<wbr>Policy<wbr>Exclude[]?</a></span>
-    </dt>
-    <dd>{{% md %}}A series of access conditions, see [Access Groups](https://www.terraform.io/docs/providers/cloudflare/r/access_group.html#conditions).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>includes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesspolicyinclude">Access<wbr>Policy<wbr>Include[]</a></span>
-    </dt>
-    <dd>{{% md %}}A series of access conditions, see [Access Groups](https://www.terraform.io/docs/providers/cloudflare/r/access_group.html#conditions).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Friendly name of the Access Application.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>precedence</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}The unique precedence for policies on a single application. Integer.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>requires</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesspolicyrequire">Access<wbr>Policy<wbr>Require[]?</a></span>
-    </dt>
-    <dd>{{% md %}}A series of access conditions, see [Access Groups](https://www.terraform.io/docs/providers/cloudflare/r/access_group.html#conditions).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>zone<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The DNS zone to which the access rule should be
-added.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>application_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The ID of the application the policy is
-associated with.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>decision</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Defines the action Access will take if the policy matches the user.
-Allowed values: `allow`, `deny`, `non_identity`, `bypass`
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>excludes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesspolicyexclude">List[Access<wbr>Policy<wbr>Exclude]</a></span>
-    </dt>
-    <dd>{{% md %}}A series of access conditions, see [Access Groups](https://www.terraform.io/docs/providers/cloudflare/r/access_group.html#conditions).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>includes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesspolicyinclude">List[Access<wbr>Policy<wbr>Include]</a></span>
-    </dt>
-    <dd>{{% md %}}A series of access conditions, see [Access Groups](https://www.terraform.io/docs/providers/cloudflare/r/access_group.html#conditions).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Friendly name of the Access Application.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>precedence</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The unique precedence for policies on a single application. Integer.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>requires</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesspolicyrequire">List[Access<wbr>Policy<wbr>Require]</a></span>
-    </dt>
-    <dd>{{% md %}}A series of access conditions, see [Access Groups](https://www.terraform.io/docs/providers/cloudflare/r/access_group.html#conditions).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>zone_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The DNS zone to which the access rule should be
-added.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
 
 
 
@@ -813,7 +475,7 @@ Get an existing AccessPolicy resource's state with the given name, ID, and optio
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Cloudflare/Pulumi.Cloudflare..AccessPolicy.html">AccessPolicy</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Cloudflare/Pulumi.Cloudflare..AccessPolicyState.html">AccessPolicyState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Cloudflare/Pulumi.Cloudflare.AccessPolicy.html">AccessPolicy</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Cloudflare/Pulumi.Cloudflare..AccessPolicyState.html">AccessPolicyState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -923,7 +585,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Application<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the application the policy is
 associated with.
@@ -933,7 +595,7 @@ associated with.
             title="Optional">
         <span>Decision</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Defines the action Access will take if the policy matches the user.
 Allowed values: `allow`, `deny`, `non_identity`, `bypass`
@@ -943,7 +605,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
             title="Optional">
         <span>Excludes</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesspolicyexclude">List&lt;Access<wbr>Policy<wbr>Exclude<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#accesspolicyexclude">List&lt;Access<wbr>Policy<wbr>Exclude<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A series of access conditions, see [Access Groups](https://www.terraform.io/docs/providers/cloudflare/r/access_group.html#conditions).
 {{% /md %}}</dd>
@@ -952,7 +614,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
             title="Optional">
         <span>Includes</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesspolicyinclude">List&lt;Access<wbr>Policy<wbr>Include<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#accesspolicyinclude">List&lt;Access<wbr>Policy<wbr>Include<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A series of access conditions, see [Access Groups](https://www.terraform.io/docs/providers/cloudflare/r/access_group.html#conditions).
 {{% /md %}}</dd>
@@ -961,7 +623,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Friendly name of the Access Application.
 {{% /md %}}</dd>
@@ -970,7 +632,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
             title="Optional">
         <span>Precedence</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The unique precedence for policies on a single application. Integer.
 {{% /md %}}</dd>
@@ -979,7 +641,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
             title="Optional">
         <span>Requires</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesspolicyrequire">List&lt;Access<wbr>Policy<wbr>Require<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#accesspolicyrequire">List&lt;Access<wbr>Policy<wbr>Require<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A series of access conditions, see [Access Groups](https://www.terraform.io/docs/providers/cloudflare/r/access_group.html#conditions).
 {{% /md %}}</dd>
@@ -988,7 +650,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
             title="Optional">
         <span>Zone<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS zone to which the access rule should be
 added.
@@ -1005,7 +667,7 @@ added.
             title="Optional">
         <span>Application<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the application the policy is
 associated with.
@@ -1015,7 +677,7 @@ associated with.
             title="Optional">
         <span>Decision</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Defines the action Access will take if the policy matches the user.
 Allowed values: `allow`, `deny`, `non_identity`, `bypass`
@@ -1043,7 +705,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Friendly name of the Access Application.
 {{% /md %}}</dd>
@@ -1052,7 +714,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
             title="Optional">
         <span>Precedence</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The unique precedence for policies on a single application. Integer.
 {{% /md %}}</dd>
@@ -1070,7 +732,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
             title="Optional">
         <span>Zone<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS zone to which the access rule should be
 added.
@@ -1087,7 +749,7 @@ added.
             title="Optional">
         <span>application<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the application the policy is
 associated with.
@@ -1097,7 +759,7 @@ associated with.
             title="Optional">
         <span>decision</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Defines the action Access will take if the policy matches the user.
 Allowed values: `allow`, `deny`, `non_identity`, `bypass`
@@ -1107,7 +769,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
             title="Optional">
         <span>excludes</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesspolicyexclude">Access<wbr>Policy<wbr>Exclude[]?</a></span>
+        <span class="property-type"><a href="#accesspolicyexclude">Access<wbr>Policy<wbr>Exclude[]</a></span>
     </dt>
     <dd>{{% md %}}A series of access conditions, see [Access Groups](https://www.terraform.io/docs/providers/cloudflare/r/access_group.html#conditions).
 {{% /md %}}</dd>
@@ -1116,7 +778,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
             title="Optional">
         <span>includes</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesspolicyinclude">Access<wbr>Policy<wbr>Include[]?</a></span>
+        <span class="property-type"><a href="#accesspolicyinclude">Access<wbr>Policy<wbr>Include[]</a></span>
     </dt>
     <dd>{{% md %}}A series of access conditions, see [Access Groups](https://www.terraform.io/docs/providers/cloudflare/r/access_group.html#conditions).
 {{% /md %}}</dd>
@@ -1125,7 +787,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Friendly name of the Access Application.
 {{% /md %}}</dd>
@@ -1134,7 +796,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
             title="Optional">
         <span>precedence</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The unique precedence for policies on a single application. Integer.
 {{% /md %}}</dd>
@@ -1143,7 +805,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
             title="Optional">
         <span>requires</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesspolicyrequire">Access<wbr>Policy<wbr>Require[]?</a></span>
+        <span class="property-type"><a href="#accesspolicyrequire">Access<wbr>Policy<wbr>Require[]</a></span>
     </dt>
     <dd>{{% md %}}A series of access conditions, see [Access Groups](https://www.terraform.io/docs/providers/cloudflare/r/access_group.html#conditions).
 {{% /md %}}</dd>
@@ -1152,7 +814,7 @@ Allowed values: `allow`, `deny`, `non_identity`, `bypass`
             title="Optional">
         <span>zone<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS zone to which the access rule should be
 added.
@@ -1273,7 +935,7 @@ added.
             title="Optional">
         <span>Any<wbr>Valid<wbr>Service<wbr>Token</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1281,7 +943,7 @@ added.
             title="Optional">
         <span>Azures</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesspolicyexcludeazure">List&lt;Access<wbr>Policy<wbr>Exclude<wbr>Azure<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#accesspolicyexcludeazure">List&lt;Access<wbr>Policy<wbr>Exclude<wbr>Azure<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1289,7 +951,7 @@ added.
             title="Optional">
         <span>Certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1297,7 +959,7 @@ added.
             title="Optional">
         <span>Common<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1305,7 +967,7 @@ added.
             title="Optional">
         <span>Email<wbr>Domains</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1313,7 +975,7 @@ added.
             title="Optional">
         <span>Emails</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1321,7 +983,7 @@ added.
             title="Optional">
         <span>Everyone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1329,7 +991,7 @@ added.
             title="Optional">
         <span>Githubs</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesspolicyexcludegithub">List&lt;Access<wbr>Policy<wbr>Exclude<wbr>Github<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#accesspolicyexcludegithub">List&lt;Access<wbr>Policy<wbr>Exclude<wbr>Github<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1337,7 +999,7 @@ added.
             title="Optional">
         <span>Groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1345,7 +1007,7 @@ added.
             title="Optional">
         <span>Gsuites</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesspolicyexcludegsuite">List&lt;Access<wbr>Policy<wbr>Exclude<wbr>Gsuite<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#accesspolicyexcludegsuite">List&lt;Access<wbr>Policy<wbr>Exclude<wbr>Gsuite<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1353,7 +1015,7 @@ added.
             title="Optional">
         <span>Ips</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1361,7 +1023,7 @@ added.
             title="Optional">
         <span>Oktas</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesspolicyexcludeokta">List&lt;Access<wbr>Policy<wbr>Exclude<wbr>Okta<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#accesspolicyexcludeokta">List&lt;Access<wbr>Policy<wbr>Exclude<wbr>Okta<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1369,7 +1031,7 @@ added.
             title="Optional">
         <span>Samls</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesspolicyexcludesaml">List&lt;Access<wbr>Policy<wbr>Exclude<wbr>Saml<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#accesspolicyexcludesaml">List&lt;Access<wbr>Policy<wbr>Exclude<wbr>Saml<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1377,7 +1039,7 @@ added.
             title="Optional">
         <span>Service<wbr>Tokens</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1392,7 +1054,7 @@ added.
             title="Optional">
         <span>Any<wbr>Valid<wbr>Service<wbr>Token</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1408,7 +1070,7 @@ added.
             title="Optional">
         <span>Certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1416,7 +1078,7 @@ added.
             title="Optional">
         <span>Common<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1440,7 +1102,7 @@ added.
             title="Optional">
         <span>Everyone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1511,7 +1173,7 @@ added.
             title="Optional">
         <span>any<wbr>Valid<wbr>Service<wbr>Token</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1519,7 +1181,7 @@ added.
             title="Optional">
         <span>azures</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesspolicyexcludeazure">Access<wbr>Policy<wbr>Exclude<wbr>Azure[]?</a></span>
+        <span class="property-type"><a href="#accesspolicyexcludeazure">Access<wbr>Policy<wbr>Exclude<wbr>Azure[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1527,7 +1189,7 @@ added.
             title="Optional">
         <span>certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1535,7 +1197,7 @@ added.
             title="Optional">
         <span>common<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1543,7 +1205,7 @@ added.
             title="Optional">
         <span>email<wbr>Domains</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1551,7 +1213,7 @@ added.
             title="Optional">
         <span>emails</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1559,7 +1221,7 @@ added.
             title="Optional">
         <span>everyone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1567,7 +1229,7 @@ added.
             title="Optional">
         <span>githubs</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesspolicyexcludegithub">Access<wbr>Policy<wbr>Exclude<wbr>Github[]?</a></span>
+        <span class="property-type"><a href="#accesspolicyexcludegithub">Access<wbr>Policy<wbr>Exclude<wbr>Github[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1575,7 +1237,7 @@ added.
             title="Optional">
         <span>groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1583,7 +1245,7 @@ added.
             title="Optional">
         <span>gsuites</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesspolicyexcludegsuite">Access<wbr>Policy<wbr>Exclude<wbr>Gsuite[]?</a></span>
+        <span class="property-type"><a href="#accesspolicyexcludegsuite">Access<wbr>Policy<wbr>Exclude<wbr>Gsuite[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1591,7 +1253,7 @@ added.
             title="Optional">
         <span>ips</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1599,7 +1261,7 @@ added.
             title="Optional">
         <span>oktas</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesspolicyexcludeokta">Access<wbr>Policy<wbr>Exclude<wbr>Okta[]?</a></span>
+        <span class="property-type"><a href="#accesspolicyexcludeokta">Access<wbr>Policy<wbr>Exclude<wbr>Okta[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1607,7 +1269,7 @@ added.
             title="Optional">
         <span>samls</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesspolicyexcludesaml">Access<wbr>Policy<wbr>Exclude<wbr>Saml[]?</a></span>
+        <span class="property-type"><a href="#accesspolicyexcludesaml">Access<wbr>Policy<wbr>Exclude<wbr>Saml[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1615,7 +1277,7 @@ added.
             title="Optional">
         <span>service<wbr>Tokens</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1764,7 +1426,7 @@ added.
             title="Optional">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1772,7 +1434,7 @@ added.
             title="Optional">
         <span>Identity<wbr>Provider<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1787,7 +1449,7 @@ added.
             title="Optional">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1795,7 +1457,7 @@ added.
             title="Optional">
         <span>Identity<wbr>Provider<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1810,7 +1472,7 @@ added.
             title="Optional">
         <span>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1818,7 +1480,7 @@ added.
             title="Optional">
         <span>identity<wbr>Provider<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1871,7 +1533,7 @@ added.
             title="Optional">
         <span>Identity<wbr>Provider<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1879,7 +1541,7 @@ added.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Friendly name of the Access Application.
 {{% /md %}}</dd>
@@ -1895,7 +1557,7 @@ added.
             title="Optional">
         <span>Identity<wbr>Provider<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1903,7 +1565,7 @@ added.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Friendly name of the Access Application.
 {{% /md %}}</dd>
@@ -1919,7 +1581,7 @@ added.
             title="Optional">
         <span>identity<wbr>Provider<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1927,7 +1589,7 @@ added.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Friendly name of the Access Application.
 {{% /md %}}</dd>
@@ -1982,7 +1644,7 @@ added.
             title="Optional">
         <span>Email</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1990,7 +1652,7 @@ added.
             title="Optional">
         <span>Identity<wbr>Provider<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2005,7 +1667,7 @@ added.
             title="Optional">
         <span>Email</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2013,7 +1675,7 @@ added.
             title="Optional">
         <span>Identity<wbr>Provider<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2028,7 +1690,7 @@ added.
             title="Optional">
         <span>email</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2036,7 +1698,7 @@ added.
             title="Optional">
         <span>identity<wbr>Provider<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2089,7 +1751,7 @@ added.
             title="Optional">
         <span>Identity<wbr>Provider<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2097,7 +1759,7 @@ added.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Friendly name of the Access Application.
 {{% /md %}}</dd>
@@ -2113,7 +1775,7 @@ added.
             title="Optional">
         <span>Identity<wbr>Provider<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2121,7 +1783,7 @@ added.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Friendly name of the Access Application.
 {{% /md %}}</dd>
@@ -2137,7 +1799,7 @@ added.
             title="Optional">
         <span>identity<wbr>Provider<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2145,7 +1807,7 @@ added.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Friendly name of the Access Application.
 {{% /md %}}</dd>
@@ -2200,7 +1862,7 @@ added.
             title="Optional">
         <span>Attribute<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2208,7 +1870,7 @@ added.
             title="Optional">
         <span>Attribute<wbr>Value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2216,7 +1878,7 @@ added.
             title="Optional">
         <span>Identity<wbr>Provider<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2231,7 +1893,7 @@ added.
             title="Optional">
         <span>Attribute<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2239,7 +1901,7 @@ added.
             title="Optional">
         <span>Attribute<wbr>Value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2247,7 +1909,7 @@ added.
             title="Optional">
         <span>Identity<wbr>Provider<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2262,7 +1924,7 @@ added.
             title="Optional">
         <span>attribute<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2270,7 +1932,7 @@ added.
             title="Optional">
         <span>attribute<wbr>Value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2278,7 +1940,7 @@ added.
             title="Optional">
         <span>identity<wbr>Provider<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2339,7 +2001,7 @@ added.
             title="Optional">
         <span>Any<wbr>Valid<wbr>Service<wbr>Token</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2347,7 +2009,7 @@ added.
             title="Optional">
         <span>Azures</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesspolicyincludeazure">List&lt;Access<wbr>Policy<wbr>Include<wbr>Azure<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#accesspolicyincludeazure">List&lt;Access<wbr>Policy<wbr>Include<wbr>Azure<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2355,7 +2017,7 @@ added.
             title="Optional">
         <span>Certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2363,7 +2025,7 @@ added.
             title="Optional">
         <span>Common<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2371,7 +2033,7 @@ added.
             title="Optional">
         <span>Email<wbr>Domains</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2379,7 +2041,7 @@ added.
             title="Optional">
         <span>Emails</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2387,7 +2049,7 @@ added.
             title="Optional">
         <span>Everyone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2395,7 +2057,7 @@ added.
             title="Optional">
         <span>Githubs</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesspolicyincludegithub">List&lt;Access<wbr>Policy<wbr>Include<wbr>Github<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#accesspolicyincludegithub">List&lt;Access<wbr>Policy<wbr>Include<wbr>Github<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2403,7 +2065,7 @@ added.
             title="Optional">
         <span>Groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2411,7 +2073,7 @@ added.
             title="Optional">
         <span>Gsuites</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesspolicyincludegsuite">List&lt;Access<wbr>Policy<wbr>Include<wbr>Gsuite<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#accesspolicyincludegsuite">List&lt;Access<wbr>Policy<wbr>Include<wbr>Gsuite<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2419,7 +2081,7 @@ added.
             title="Optional">
         <span>Ips</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2427,7 +2089,7 @@ added.
             title="Optional">
         <span>Oktas</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesspolicyincludeokta">List&lt;Access<wbr>Policy<wbr>Include<wbr>Okta<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#accesspolicyincludeokta">List&lt;Access<wbr>Policy<wbr>Include<wbr>Okta<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2435,7 +2097,7 @@ added.
             title="Optional">
         <span>Samls</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesspolicyincludesaml">List&lt;Access<wbr>Policy<wbr>Include<wbr>Saml<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#accesspolicyincludesaml">List&lt;Access<wbr>Policy<wbr>Include<wbr>Saml<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2443,7 +2105,7 @@ added.
             title="Optional">
         <span>Service<wbr>Tokens</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2458,7 +2120,7 @@ added.
             title="Optional">
         <span>Any<wbr>Valid<wbr>Service<wbr>Token</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2474,7 +2136,7 @@ added.
             title="Optional">
         <span>Certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2482,7 +2144,7 @@ added.
             title="Optional">
         <span>Common<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2506,7 +2168,7 @@ added.
             title="Optional">
         <span>Everyone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2577,7 +2239,7 @@ added.
             title="Optional">
         <span>any<wbr>Valid<wbr>Service<wbr>Token</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2585,7 +2247,7 @@ added.
             title="Optional">
         <span>azures</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesspolicyincludeazure">Access<wbr>Policy<wbr>Include<wbr>Azure[]?</a></span>
+        <span class="property-type"><a href="#accesspolicyincludeazure">Access<wbr>Policy<wbr>Include<wbr>Azure[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2593,7 +2255,7 @@ added.
             title="Optional">
         <span>certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2601,7 +2263,7 @@ added.
             title="Optional">
         <span>common<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2609,7 +2271,7 @@ added.
             title="Optional">
         <span>email<wbr>Domains</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2617,7 +2279,7 @@ added.
             title="Optional">
         <span>emails</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2625,7 +2287,7 @@ added.
             title="Optional">
         <span>everyone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2633,7 +2295,7 @@ added.
             title="Optional">
         <span>githubs</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesspolicyincludegithub">Access<wbr>Policy<wbr>Include<wbr>Github[]?</a></span>
+        <span class="property-type"><a href="#accesspolicyincludegithub">Access<wbr>Policy<wbr>Include<wbr>Github[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2641,7 +2303,7 @@ added.
             title="Optional">
         <span>groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2649,7 +2311,7 @@ added.
             title="Optional">
         <span>gsuites</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesspolicyincludegsuite">Access<wbr>Policy<wbr>Include<wbr>Gsuite[]?</a></span>
+        <span class="property-type"><a href="#accesspolicyincludegsuite">Access<wbr>Policy<wbr>Include<wbr>Gsuite[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2657,7 +2319,7 @@ added.
             title="Optional">
         <span>ips</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2665,7 +2327,7 @@ added.
             title="Optional">
         <span>oktas</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesspolicyincludeokta">Access<wbr>Policy<wbr>Include<wbr>Okta[]?</a></span>
+        <span class="property-type"><a href="#accesspolicyincludeokta">Access<wbr>Policy<wbr>Include<wbr>Okta[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2673,7 +2335,7 @@ added.
             title="Optional">
         <span>samls</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesspolicyincludesaml">Access<wbr>Policy<wbr>Include<wbr>Saml[]?</a></span>
+        <span class="property-type"><a href="#accesspolicyincludesaml">Access<wbr>Policy<wbr>Include<wbr>Saml[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2681,7 +2343,7 @@ added.
             title="Optional">
         <span>service<wbr>Tokens</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2830,7 +2492,7 @@ added.
             title="Optional">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2838,7 +2500,7 @@ added.
             title="Optional">
         <span>Identity<wbr>Provider<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2853,7 +2515,7 @@ added.
             title="Optional">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2861,7 +2523,7 @@ added.
             title="Optional">
         <span>Identity<wbr>Provider<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2876,7 +2538,7 @@ added.
             title="Optional">
         <span>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2884,7 +2546,7 @@ added.
             title="Optional">
         <span>identity<wbr>Provider<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2937,7 +2599,7 @@ added.
             title="Optional">
         <span>Identity<wbr>Provider<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2945,7 +2607,7 @@ added.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Friendly name of the Access Application.
 {{% /md %}}</dd>
@@ -2961,7 +2623,7 @@ added.
             title="Optional">
         <span>Identity<wbr>Provider<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2969,7 +2631,7 @@ added.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Friendly name of the Access Application.
 {{% /md %}}</dd>
@@ -2985,7 +2647,7 @@ added.
             title="Optional">
         <span>identity<wbr>Provider<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2993,7 +2655,7 @@ added.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Friendly name of the Access Application.
 {{% /md %}}</dd>
@@ -3048,7 +2710,7 @@ added.
             title="Optional">
         <span>Email</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3056,7 +2718,7 @@ added.
             title="Optional">
         <span>Identity<wbr>Provider<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3071,7 +2733,7 @@ added.
             title="Optional">
         <span>Email</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3079,7 +2741,7 @@ added.
             title="Optional">
         <span>Identity<wbr>Provider<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3094,7 +2756,7 @@ added.
             title="Optional">
         <span>email</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3102,7 +2764,7 @@ added.
             title="Optional">
         <span>identity<wbr>Provider<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3155,7 +2817,7 @@ added.
             title="Optional">
         <span>Identity<wbr>Provider<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3163,7 +2825,7 @@ added.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Friendly name of the Access Application.
 {{% /md %}}</dd>
@@ -3179,7 +2841,7 @@ added.
             title="Optional">
         <span>Identity<wbr>Provider<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3187,7 +2849,7 @@ added.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Friendly name of the Access Application.
 {{% /md %}}</dd>
@@ -3203,7 +2865,7 @@ added.
             title="Optional">
         <span>identity<wbr>Provider<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3211,7 +2873,7 @@ added.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Friendly name of the Access Application.
 {{% /md %}}</dd>
@@ -3266,7 +2928,7 @@ added.
             title="Optional">
         <span>Attribute<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3274,7 +2936,7 @@ added.
             title="Optional">
         <span>Attribute<wbr>Value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3282,7 +2944,7 @@ added.
             title="Optional">
         <span>Identity<wbr>Provider<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3297,7 +2959,7 @@ added.
             title="Optional">
         <span>Attribute<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3305,7 +2967,7 @@ added.
             title="Optional">
         <span>Attribute<wbr>Value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3313,7 +2975,7 @@ added.
             title="Optional">
         <span>Identity<wbr>Provider<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3328,7 +2990,7 @@ added.
             title="Optional">
         <span>attribute<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3336,7 +2998,7 @@ added.
             title="Optional">
         <span>attribute<wbr>Value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3344,7 +3006,7 @@ added.
             title="Optional">
         <span>identity<wbr>Provider<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3405,7 +3067,7 @@ added.
             title="Optional">
         <span>Any<wbr>Valid<wbr>Service<wbr>Token</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3413,7 +3075,7 @@ added.
             title="Optional">
         <span>Azures</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesspolicyrequireazure">List&lt;Access<wbr>Policy<wbr>Require<wbr>Azure<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#accesspolicyrequireazure">List&lt;Access<wbr>Policy<wbr>Require<wbr>Azure<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3421,7 +3083,7 @@ added.
             title="Optional">
         <span>Certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3429,7 +3091,7 @@ added.
             title="Optional">
         <span>Common<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3437,7 +3099,7 @@ added.
             title="Optional">
         <span>Email<wbr>Domains</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3445,7 +3107,7 @@ added.
             title="Optional">
         <span>Emails</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3453,7 +3115,7 @@ added.
             title="Optional">
         <span>Everyone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3461,7 +3123,7 @@ added.
             title="Optional">
         <span>Githubs</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesspolicyrequiregithub">List&lt;Access<wbr>Policy<wbr>Require<wbr>Github<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#accesspolicyrequiregithub">List&lt;Access<wbr>Policy<wbr>Require<wbr>Github<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3469,7 +3131,7 @@ added.
             title="Optional">
         <span>Groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3477,7 +3139,7 @@ added.
             title="Optional">
         <span>Gsuites</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesspolicyrequiregsuite">List&lt;Access<wbr>Policy<wbr>Require<wbr>Gsuite<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#accesspolicyrequiregsuite">List&lt;Access<wbr>Policy<wbr>Require<wbr>Gsuite<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3485,7 +3147,7 @@ added.
             title="Optional">
         <span>Ips</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3493,7 +3155,7 @@ added.
             title="Optional">
         <span>Oktas</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesspolicyrequireokta">List&lt;Access<wbr>Policy<wbr>Require<wbr>Okta<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#accesspolicyrequireokta">List&lt;Access<wbr>Policy<wbr>Require<wbr>Okta<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3501,7 +3163,7 @@ added.
             title="Optional">
         <span>Samls</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesspolicyrequiresaml">List&lt;Access<wbr>Policy<wbr>Require<wbr>Saml<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#accesspolicyrequiresaml">List&lt;Access<wbr>Policy<wbr>Require<wbr>Saml<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3509,7 +3171,7 @@ added.
             title="Optional">
         <span>Service<wbr>Tokens</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3524,7 +3186,7 @@ added.
             title="Optional">
         <span>Any<wbr>Valid<wbr>Service<wbr>Token</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3540,7 +3202,7 @@ added.
             title="Optional">
         <span>Certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3548,7 +3210,7 @@ added.
             title="Optional">
         <span>Common<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3572,7 +3234,7 @@ added.
             title="Optional">
         <span>Everyone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3643,7 +3305,7 @@ added.
             title="Optional">
         <span>any<wbr>Valid<wbr>Service<wbr>Token</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3651,7 +3313,7 @@ added.
             title="Optional">
         <span>azures</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesspolicyrequireazure">Access<wbr>Policy<wbr>Require<wbr>Azure[]?</a></span>
+        <span class="property-type"><a href="#accesspolicyrequireazure">Access<wbr>Policy<wbr>Require<wbr>Azure[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3659,7 +3321,7 @@ added.
             title="Optional">
         <span>certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3667,7 +3329,7 @@ added.
             title="Optional">
         <span>common<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3675,7 +3337,7 @@ added.
             title="Optional">
         <span>email<wbr>Domains</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3683,7 +3345,7 @@ added.
             title="Optional">
         <span>emails</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3691,7 +3353,7 @@ added.
             title="Optional">
         <span>everyone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3699,7 +3361,7 @@ added.
             title="Optional">
         <span>githubs</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesspolicyrequiregithub">Access<wbr>Policy<wbr>Require<wbr>Github[]?</a></span>
+        <span class="property-type"><a href="#accesspolicyrequiregithub">Access<wbr>Policy<wbr>Require<wbr>Github[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3707,7 +3369,7 @@ added.
             title="Optional">
         <span>groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3715,7 +3377,7 @@ added.
             title="Optional">
         <span>gsuites</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesspolicyrequiregsuite">Access<wbr>Policy<wbr>Require<wbr>Gsuite[]?</a></span>
+        <span class="property-type"><a href="#accesspolicyrequiregsuite">Access<wbr>Policy<wbr>Require<wbr>Gsuite[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3723,7 +3385,7 @@ added.
             title="Optional">
         <span>ips</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3731,7 +3393,7 @@ added.
             title="Optional">
         <span>oktas</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesspolicyrequireokta">Access<wbr>Policy<wbr>Require<wbr>Okta[]?</a></span>
+        <span class="property-type"><a href="#accesspolicyrequireokta">Access<wbr>Policy<wbr>Require<wbr>Okta[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3739,7 +3401,7 @@ added.
             title="Optional">
         <span>samls</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#accesspolicyrequiresaml">Access<wbr>Policy<wbr>Require<wbr>Saml[]?</a></span>
+        <span class="property-type"><a href="#accesspolicyrequiresaml">Access<wbr>Policy<wbr>Require<wbr>Saml[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3747,7 +3409,7 @@ added.
             title="Optional">
         <span>service<wbr>Tokens</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3896,7 +3558,7 @@ added.
             title="Optional">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3904,7 +3566,7 @@ added.
             title="Optional">
         <span>Identity<wbr>Provider<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3919,7 +3581,7 @@ added.
             title="Optional">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3927,7 +3589,7 @@ added.
             title="Optional">
         <span>Identity<wbr>Provider<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3942,7 +3604,7 @@ added.
             title="Optional">
         <span>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3950,7 +3612,7 @@ added.
             title="Optional">
         <span>identity<wbr>Provider<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4003,7 +3665,7 @@ added.
             title="Optional">
         <span>Identity<wbr>Provider<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4011,7 +3673,7 @@ added.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Friendly name of the Access Application.
 {{% /md %}}</dd>
@@ -4027,7 +3689,7 @@ added.
             title="Optional">
         <span>Identity<wbr>Provider<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4035,7 +3697,7 @@ added.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Friendly name of the Access Application.
 {{% /md %}}</dd>
@@ -4051,7 +3713,7 @@ added.
             title="Optional">
         <span>identity<wbr>Provider<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4059,7 +3721,7 @@ added.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Friendly name of the Access Application.
 {{% /md %}}</dd>
@@ -4114,7 +3776,7 @@ added.
             title="Optional">
         <span>Email</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4122,7 +3784,7 @@ added.
             title="Optional">
         <span>Identity<wbr>Provider<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4137,7 +3799,7 @@ added.
             title="Optional">
         <span>Email</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4145,7 +3807,7 @@ added.
             title="Optional">
         <span>Identity<wbr>Provider<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4160,7 +3822,7 @@ added.
             title="Optional">
         <span>email</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4168,7 +3830,7 @@ added.
             title="Optional">
         <span>identity<wbr>Provider<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4221,7 +3883,7 @@ added.
             title="Optional">
         <span>Identity<wbr>Provider<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4229,7 +3891,7 @@ added.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Friendly name of the Access Application.
 {{% /md %}}</dd>
@@ -4245,7 +3907,7 @@ added.
             title="Optional">
         <span>Identity<wbr>Provider<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4253,7 +3915,7 @@ added.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Friendly name of the Access Application.
 {{% /md %}}</dd>
@@ -4269,7 +3931,7 @@ added.
             title="Optional">
         <span>identity<wbr>Provider<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4277,7 +3939,7 @@ added.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Friendly name of the Access Application.
 {{% /md %}}</dd>
@@ -4332,7 +3994,7 @@ added.
             title="Optional">
         <span>Attribute<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4340,7 +4002,7 @@ added.
             title="Optional">
         <span>Attribute<wbr>Value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4348,7 +4010,7 @@ added.
             title="Optional">
         <span>Identity<wbr>Provider<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4363,7 +4025,7 @@ added.
             title="Optional">
         <span>Attribute<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4371,7 +4033,7 @@ added.
             title="Optional">
         <span>Attribute<wbr>Value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4379,7 +4041,7 @@ added.
             title="Optional">
         <span>Identity<wbr>Provider<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4394,7 +4056,7 @@ added.
             title="Optional">
         <span>attribute<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4402,7 +4064,7 @@ added.
             title="Optional">
         <span>attribute<wbr>Value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4410,7 +4072,7 @@ added.
             title="Optional">
         <span>identity<wbr>Provider<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

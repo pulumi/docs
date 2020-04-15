@@ -45,7 +45,7 @@ const defaultClusterParameterGroup = new aws.rds.ClusterParameterGroup("default"
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/rds/#ClusterParameterGroup">ClusterParameterGroup</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/rds/#ClusterParameterGroupArgs">ClusterParameterGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/rds/#ClusterParameterGroup">ClusterParameterGroup</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/rds/#ClusterParameterGroupArgs">ClusterParameterGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -53,7 +53,7 @@ const defaultClusterParameterGroup = new aws.rds.ClusterParameterGroup("default"
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewClusterParameterGroup<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/rds?tab=doc#ClusterParameterGroupArgs">ClusterParameterGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/rds?tab=doc#ClusterParameterGroup">ClusterParameterGroup</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewClusterParameterGroup<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/rds?tab=doc#ClusterParameterGroupArgs">ClusterParameterGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/rds?tab=doc#ClusterParameterGroup">ClusterParameterGroup</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -149,15 +149,6 @@ const defaultClusterParameterGroup = new aws.rds.ClusterParameterGroup("default"
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The description of the DB cluster parameter group. Defaults to "Managed by Pulumi".
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Family</span>
@@ -169,9 +160,18 @@ const defaultClusterParameterGroup = new aws.rds.ClusterParameterGroup("default"
 
     <dt class="property-optional"
             title="Optional">
+        <span>Description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The description of the DB cluster parameter group. Defaults to "Managed by Pulumi".
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the DB parameter.
 {{% /md %}}</dd>
@@ -180,7 +180,7 @@ const defaultClusterParameterGroup = new aws.rds.ClusterParameterGroup("default"
             title="Optional">
         <span>Name<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creates a unique name beginning with the specified prefix. Conflicts with `name`.
 {{% /md %}}</dd>
@@ -189,7 +189,7 @@ const defaultClusterParameterGroup = new aws.rds.ClusterParameterGroup("default"
             title="Optional">
         <span>Parameters</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterparametergroupparameter">List&lt;Cluster<wbr>Parameter<wbr>Group<wbr>Parameter<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#clusterparametergroupparameter">List&lt;Cluster<wbr>Parameter<wbr>Group<wbr>Parameter<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of DB parameters to apply. Note that parameters may differ from a family to an other. Full list of all parameters can be discovered via [`aws rds describe-db-cluster-parameters`](https://docs.aws.amazon.com/cli/latest/reference/rds/describe-db-cluster-parameters.html) after initial creation of the group.
 {{% /md %}}</dd>
@@ -198,7 +198,7 @@ const defaultClusterParameterGroup = new aws.rds.ClusterParameterGroup("default"
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -210,15 +210,6 @@ const defaultClusterParameterGroup = new aws.rds.ClusterParameterGroup("default"
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The description of the DB cluster parameter group. Defaults to "Managed by Pulumi".
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Family</span>
@@ -230,9 +221,18 @@ const defaultClusterParameterGroup = new aws.rds.ClusterParameterGroup("default"
 
     <dt class="property-optional"
             title="Optional">
+        <span>Description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The description of the DB cluster parameter group. Defaults to "Managed by Pulumi".
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the DB parameter.
 {{% /md %}}</dd>
@@ -241,7 +241,7 @@ const defaultClusterParameterGroup = new aws.rds.ClusterParameterGroup("default"
             title="Optional">
         <span>Name<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creates a unique name beginning with the specified prefix. Conflicts with `name`.
 {{% /md %}}</dd>
@@ -271,15 +271,6 @@ const defaultClusterParameterGroup = new aws.rds.ClusterParameterGroup("default"
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The description of the DB cluster parameter group. Defaults to "Managed by Pulumi".
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>family</span>
@@ -291,9 +282,18 @@ const defaultClusterParameterGroup = new aws.rds.ClusterParameterGroup("default"
 
     <dt class="property-optional"
             title="Optional">
+        <span>description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The description of the DB cluster parameter group. Defaults to "Managed by Pulumi".
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the DB parameter.
 {{% /md %}}</dd>
@@ -302,7 +302,7 @@ const defaultClusterParameterGroup = new aws.rds.ClusterParameterGroup("default"
             title="Optional">
         <span>name<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creates a unique name beginning with the specified prefix. Conflicts with `name`.
 {{% /md %}}</dd>
@@ -311,7 +311,7 @@ const defaultClusterParameterGroup = new aws.rds.ClusterParameterGroup("default"
             title="Optional">
         <span>parameters</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterparametergroupparameter">Cluster<wbr>Parameter<wbr>Group<wbr>Parameter[]?</a></span>
+        <span class="property-type"><a href="#clusterparametergroupparameter">Cluster<wbr>Parameter<wbr>Group<wbr>Parameter[]</a></span>
     </dt>
     <dd>{{% md %}}A list of DB parameters to apply. Note that parameters may differ from a family to an other. Full list of all parameters can be discovered via [`aws rds describe-db-cluster-parameters`](https://docs.aws.amazon.com/cli/latest/reference/rds/describe-db-cluster-parameters.html) after initial creation of the group.
 {{% /md %}}</dd>
@@ -320,7 +320,7 @@ const defaultClusterParameterGroup = new aws.rds.ClusterParameterGroup("default"
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -332,15 +332,6 @@ const defaultClusterParameterGroup = new aws.rds.ClusterParameterGroup("default"
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The description of the DB cluster parameter group. Defaults to "Managed by Pulumi".
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>family</span>
@@ -348,6 +339,15 @@ const defaultClusterParameterGroup = new aws.rds.ClusterParameterGroup("default"
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The family of the DB cluster parameter group.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The description of the DB cluster parameter group. Defaults to "Managed by Pulumi".
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -414,60 +414,6 @@ The following output properties are available:
     <dd>{{% md %}}The ARN of the db cluster parameter group.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The description of the DB cluster parameter group. Defaults to "Managed by Pulumi".
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Family</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The family of the DB cluster parameter group.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the DB parameter.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name<wbr>Prefix</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Creates a unique name beginning with the specified prefix. Conflicts with `name`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Parameters</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterparametergroupparameter">List&lt;Cluster<wbr>Parameter<wbr>Group<wbr>Parameter&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}A list of DB parameters to apply. Note that parameters may differ from a family to an other. Full list of all parameters can be discovered via [`aws rds describe-db-cluster-parameters`](https://docs.aws.amazon.com/cli/latest/reference/rds/describe-db-cluster-parameters.html) after initial creation of the group.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -482,60 +428,6 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the db cluster parameter group.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The description of the DB cluster parameter group. Defaults to "Managed by Pulumi".
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Family</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The family of the DB cluster parameter group.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the DB parameter.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name<wbr>Prefix</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Creates a unique name beginning with the specified prefix. Conflicts with `name`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Parameters</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterparametergroupparameter">[]Cluster<wbr>Parameter<wbr>Group<wbr>Parameter</a></span>
-    </dt>
-    <dd>{{% md %}}A list of DB parameters to apply. Note that parameters may differ from a family to an other. Full list of all parameters can be discovered via [`aws rds describe-db-cluster-parameters`](https://docs.aws.amazon.com/cli/latest/reference/rds/describe-db-cluster-parameters.html) after initial creation of the group.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
 
 </dl>
@@ -554,60 +446,6 @@ The following output properties are available:
     <dd>{{% md %}}The ARN of the db cluster parameter group.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The description of the DB cluster parameter group. Defaults to "Managed by Pulumi".
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>family</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The family of the DB cluster parameter group.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the DB parameter.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name<wbr>Prefix</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Creates a unique name beginning with the specified prefix. Conflicts with `name`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>parameters</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterparametergroupparameter">Cluster<wbr>Parameter<wbr>Group<wbr>Parameter[]?</a></span>
-    </dt>
-    <dd>{{% md %}}A list of DB parameters to apply. Note that parameters may differ from a family to an other. Full list of all parameters can be discovered via [`aws rds describe-db-cluster-parameters`](https://docs.aws.amazon.com/cli/latest/reference/rds/describe-db-cluster-parameters.html) after initial creation of the group.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -622,60 +460,6 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the db cluster parameter group.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The description of the DB cluster parameter group. Defaults to "Managed by Pulumi".
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>family</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The family of the DB cluster parameter group.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the DB parameter.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name_<wbr>prefix</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Creates a unique name beginning with the specified prefix. Conflicts with `name`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>parameters</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterparametergroupparameter">List[Cluster<wbr>Parameter<wbr>Group<wbr>Parameter]</a></span>
-    </dt>
-    <dd>{{% md %}}A list of DB parameters to apply. Note that parameters may differ from a family to an other. Full list of all parameters can be discovered via [`aws rds describe-db-cluster-parameters`](https://docs.aws.amazon.com/cli/latest/reference/rds/describe-db-cluster-parameters.html) after initial creation of the group.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
 
 </dl>
@@ -817,7 +601,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the db cluster parameter group.
 {{% /md %}}</dd>
@@ -826,7 +610,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the DB cluster parameter group. Defaults to "Managed by Pulumi".
 {{% /md %}}</dd>
@@ -835,7 +619,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Family</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The family of the DB cluster parameter group.
 {{% /md %}}</dd>
@@ -844,7 +628,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the DB parameter.
 {{% /md %}}</dd>
@@ -853,7 +637,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creates a unique name beginning with the specified prefix. Conflicts with `name`.
 {{% /md %}}</dd>
@@ -862,7 +646,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Parameters</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterparametergroupparameter">List&lt;Cluster<wbr>Parameter<wbr>Group<wbr>Parameter<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#clusterparametergroupparameter">List&lt;Cluster<wbr>Parameter<wbr>Group<wbr>Parameter<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of DB parameters to apply. Note that parameters may differ from a family to an other. Full list of all parameters can be discovered via [`aws rds describe-db-cluster-parameters`](https://docs.aws.amazon.com/cli/latest/reference/rds/describe-db-cluster-parameters.html) after initial creation of the group.
 {{% /md %}}</dd>
@@ -871,7 +655,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -887,7 +671,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the db cluster parameter group.
 {{% /md %}}</dd>
@@ -896,7 +680,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the DB cluster parameter group. Defaults to "Managed by Pulumi".
 {{% /md %}}</dd>
@@ -905,7 +689,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Family</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The family of the DB cluster parameter group.
 {{% /md %}}</dd>
@@ -914,7 +698,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the DB parameter.
 {{% /md %}}</dd>
@@ -923,7 +707,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creates a unique name beginning with the specified prefix. Conflicts with `name`.
 {{% /md %}}</dd>
@@ -957,7 +741,7 @@ The following state arguments are supported:
             title="Optional">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the db cluster parameter group.
 {{% /md %}}</dd>
@@ -966,7 +750,7 @@ The following state arguments are supported:
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the DB cluster parameter group. Defaults to "Managed by Pulumi".
 {{% /md %}}</dd>
@@ -975,7 +759,7 @@ The following state arguments are supported:
             title="Optional">
         <span>family</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The family of the DB cluster parameter group.
 {{% /md %}}</dd>
@@ -984,7 +768,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the DB parameter.
 {{% /md %}}</dd>
@@ -993,7 +777,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creates a unique name beginning with the specified prefix. Conflicts with `name`.
 {{% /md %}}</dd>
@@ -1002,7 +786,7 @@ The following state arguments are supported:
             title="Optional">
         <span>parameters</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterparametergroupparameter">Cluster<wbr>Parameter<wbr>Group<wbr>Parameter[]?</a></span>
+        <span class="property-type"><a href="#clusterparametergroupparameter">Cluster<wbr>Parameter<wbr>Group<wbr>Parameter[]</a></span>
     </dt>
     <dd>{{% md %}}A list of DB parameters to apply. Note that parameters may differ from a family to an other. Full list of all parameters can be discovered via [`aws rds describe-db-cluster-parameters`](https://docs.aws.amazon.com/cli/latest/reference/rds/describe-db-cluster-parameters.html) after initial creation of the group.
 {{% /md %}}</dd>
@@ -1011,7 +795,7 @@ The following state arguments are supported:
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1115,17 +899,6 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Apply<wbr>Method</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}"immediate" (default), or "pending-reboot". Some
-engines can't apply some parameters without a reboot, and you will need to
-specify "pending-reboot" here.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Name</span>
@@ -1142,6 +915,17 @@ specify "pending-reboot" here.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the DB parameter.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Apply<wbr>Method</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}"immediate" (default), or "pending-reboot". Some
+engines can't apply some parameters without a reboot, and you will need to
+specify "pending-reboot" here.
 {{% /md %}}</dd>
 
 </dl>
@@ -1151,17 +935,6 @@ specify "pending-reboot" here.
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Apply<wbr>Method</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}"immediate" (default), or "pending-reboot". Some
-engines can't apply some parameters without a reboot, and you will need to
-specify "pending-reboot" here.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Name</span>
@@ -1180,23 +953,23 @@ specify "pending-reboot" here.
     <dd>{{% md %}}The value of the DB parameter.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>Apply<wbr>Method</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}"immediate" (default), or "pending-reboot". Some
+engines can't apply some parameters without a reboot, and you will need to
+specify "pending-reboot" here.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>apply<wbr>Method</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}"immediate" (default), or "pending-reboot". Some
-engines can't apply some parameters without a reboot, and you will need to
-specify "pending-reboot" here.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1214,6 +987,17 @@ specify "pending-reboot" here.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the DB parameter.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>apply<wbr>Method</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}"immediate" (default), or "pending-reboot". Some
+engines can't apply some parameters without a reboot, and you will need to
+specify "pending-reboot" here.
 {{% /md %}}</dd>
 
 </dl>
@@ -1223,17 +1007,6 @@ specify "pending-reboot" here.
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>apply<wbr>Method</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}"immediate" (default), or "pending-reboot". Some
-engines can't apply some parameters without a reboot, and you will need to
-specify "pending-reboot" here.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>name</span>
@@ -1250,6 +1023,17 @@ specify "pending-reboot" here.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value of the DB parameter.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>apply<wbr>Method</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}"immediate" (default), or "pending-reboot". Some
+engines can't apply some parameters without a reboot, and you will need to
+specify "pending-reboot" here.
 {{% /md %}}</dd>
 
 </dl>

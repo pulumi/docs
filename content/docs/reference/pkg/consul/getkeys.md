@@ -54,7 +54,7 @@ const appInstance = new aws.ec2.Instance("app", {
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupKeys<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-consul/sdk/go/consul/?tab=doc#GetKeysArgs">GetKeysArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-consul/sdk/go/consul/?tab=doc#LookupKeysResult">LookupKeysResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupKeys<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-consul/sdk/go/consul/?tab=doc#GetKeysArgs">GetKeysArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-consul/sdk/go/consul/?tab=doc#LookupKeysResult">LookupKeysResult</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -77,7 +77,7 @@ The following arguments are supported:
             title="Optional">
         <span>Datacenter</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The datacenter to use. This overrides the
 agent's default datacenter and the datacenter in the provider setup.
@@ -87,7 +87,7 @@ agent's default datacenter and the datacenter in the provider setup.
             title="Optional">
         <span>Keys</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkeyskey">List&lt;Get<wbr>Keys<wbr>Key<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#getkeyskey">List&lt;Get<wbr>Keys<wbr>Key<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies a key in Consul to be read. Supported
 values documented below. Multiple blocks supported.
@@ -97,7 +97,7 @@ values documented below. Multiple blocks supported.
             title="Optional">
         <span>Namespace</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The namespace to lookup the keys.
 {{% /md %}}</dd>
@@ -106,7 +106,7 @@ values documented below. Multiple blocks supported.
             title="Optional">
         <span>Token</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ACL token to use. This overrides the
 token that the agent provides by default.
@@ -123,7 +123,7 @@ token that the agent provides by default.
             title="Optional">
         <span>Datacenter</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The datacenter to use. This overrides the
 agent's default datacenter and the datacenter in the provider setup.
@@ -143,7 +143,7 @@ values documented below. Multiple blocks supported.
             title="Optional">
         <span>Namespace</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The namespace to lookup the keys.
 {{% /md %}}</dd>
@@ -152,7 +152,7 @@ values documented below. Multiple blocks supported.
             title="Optional">
         <span>Token</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ACL token to use. This overrides the
 token that the agent provides by default.
@@ -169,7 +169,7 @@ token that the agent provides by default.
             title="Optional">
         <span>datacenter</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The datacenter to use. This overrides the
 agent's default datacenter and the datacenter in the provider setup.
@@ -179,7 +179,7 @@ agent's default datacenter and the datacenter in the provider setup.
             title="Optional">
         <span>keys</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkeyskey">Get<wbr>Keys<wbr>Key[]?</a></span>
+        <span class="property-type"><a href="#getkeyskey">Get<wbr>Keys<wbr>Key[]</a></span>
     </dt>
     <dd>{{% md %}}Specifies a key in Consul to be read. Supported
 values documented below. Multiple blocks supported.
@@ -189,7 +189,7 @@ values documented below. Multiple blocks supported.
             title="Optional">
         <span>namespace</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The namespace to lookup the keys.
 {{% /md %}}</dd>
@@ -198,7 +198,7 @@ values documented below. Multiple blocks supported.
             title="Optional">
         <span>token</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ACL token to use. This overrides the
 token that the agent provides by default.
@@ -292,9 +292,17 @@ has the value of the key.
 
     <dt class="property-"
             title="">
+        <span>Var</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Keys</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkeyskey">List&lt;Get<wbr>Keys<wbr>Key&gt;?</a></span>
+        <span class="property-type"><a href="#getkeyskey">List&lt;Get<wbr>Keys<wbr>Key&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -302,7 +310,7 @@ has the value of the key.
             title="">
         <span>Namespace</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -310,15 +318,7 @@ has the value of the key.
             title="">
         <span>Token</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Var</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -351,6 +351,14 @@ has the value of the key.
 
     <dt class="property-"
             title="">
+        <span>Var</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Keys</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getkeyskey">[]Get<wbr>Keys<wbr>Key</a></span>
@@ -361,7 +369,7 @@ has the value of the key.
             title="">
         <span>Namespace</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -369,15 +377,7 @@ has the value of the key.
             title="">
         <span>Token</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Var</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -410,9 +410,17 @@ has the value of the key.
 
     <dt class="property-"
             title="">
+        <span>var</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>keys</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getkeyskey">Get<wbr>Keys<wbr>Key[]?</a></span>
+        <span class="property-type"><a href="#getkeyskey">Get<wbr>Keys<wbr>Key[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -420,7 +428,7 @@ has the value of the key.
             title="">
         <span>namespace</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -428,15 +436,7 @@ has the value of the key.
             title="">
         <span>token</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>var</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -469,6 +469,14 @@ has the value of the key.
 
     <dt class="property-"
             title="">
+        <span>var</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[str, str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>keys</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getkeyskey">List[Get<wbr>Keys<wbr>Key]</a></span>
@@ -488,14 +496,6 @@ has the value of the key.
         <span>token</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>var</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -526,16 +526,6 @@ has the value of the key.
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Default</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}This is the default value to set for `var.<name>`
-if the key does not exist in Consul. Defaults to an empty string.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Name</span>
@@ -555,6 +545,16 @@ in Consul.
     </dt>
     <dd>{{% md %}}This is the path in Consul that should be read
 or written to.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Default</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}This is the default value to set for `var.<name>`
+if the key does not exist in Consul. Defaults to an empty string.
 {{% /md %}}</dd>
 
 </dl>
@@ -564,16 +564,6 @@ or written to.
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Default</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}This is the default value to set for `var.<name>`
-if the key does not exist in Consul. Defaults to an empty string.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Name</span>
@@ -595,22 +585,22 @@ in Consul.
 or written to.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>Default</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}This is the default value to set for `var.<name>`
+if the key does not exist in Consul. Defaults to an empty string.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>default</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}This is the default value to set for `var.<name>`
-if the key does not exist in Consul. Defaults to an empty string.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -631,6 +621,16 @@ in Consul.
     </dt>
     <dd>{{% md %}}This is the path in Consul that should be read
 or written to.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>default</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}This is the default value to set for `var.<name>`
+if the key does not exist in Consul. Defaults to an empty string.
 {{% /md %}}</dd>
 
 </dl>
@@ -640,16 +640,6 @@ or written to.
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>default</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}This is the default value to set for `var.<name>`
-if the key does not exist in Consul. Defaults to an empty string.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>name</span>
@@ -669,6 +659,16 @@ in Consul.
     </dt>
     <dd>{{% md %}}This is the path in Consul that should be read
 or written to.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>default</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}This is the default value to set for `var.<name>`
+if the key does not exist in Consul. Defaults to an empty string.
 {{% /md %}}</dd>
 
 </dl>

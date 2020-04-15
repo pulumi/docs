@@ -78,7 +78,7 @@ const tfenvtest = new aws.elasticbeanstalk.Environment("tfenvtest", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/elasticbeanstalk/#Environment">Environment</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/elasticbeanstalk/#EnvironmentArgs">EnvironmentArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/elasticbeanstalk/#Environment">Environment</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/elasticbeanstalk/#EnvironmentArgs">EnvironmentArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -86,11 +86,11 @@ const tfenvtest = new aws.elasticbeanstalk.Environment("tfenvtest", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewEnvironment<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/elasticbeanstalk?tab=doc#EnvironmentArgs">EnvironmentArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/elasticbeanstalk?tab=doc#Environment">Environment</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewEnvironment<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/elasticbeanstalk?tab=doc#EnvironmentArgs">EnvironmentArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/elasticbeanstalk?tab=doc#Environment">Environment</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Elasticbeanstalk.Environment.html">Environment</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticBeanstalk.EnvironmentArgs.html">EnvironmentArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticBeanstalk.Environment.html">Environment</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticBeanstalk.EnvironmentArgs.html">EnvironmentArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -196,7 +196,7 @@ to be deployed
             title="Optional">
         <span>Cname<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Prefix to use for the fully qualified DNS name of
 the Environment.
@@ -206,7 +206,7 @@ the Environment.
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Short description of the Environment
 {{% /md %}}</dd>
@@ -215,7 +215,7 @@ the Environment.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique name for this Environment. This name is used
 in the application URL
@@ -225,7 +225,7 @@ in the application URL
             title="Optional">
         <span>Platform<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The [ARN][2] of the Elastic Beanstalk [Platform][3]
 to use in deployment
@@ -235,7 +235,7 @@ to use in deployment
             title="Optional">
         <span>Poll<wbr>Interval</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time between polling the AWS API to
 check if changes have been applied. Use this to adjust the rate of API calls
@@ -247,7 +247,7 @@ use the default behavior, which is an exponential backoff
             title="Optional">
         <span>Settings</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentsetting">List&lt;Environment<wbr>Setting<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#environmentsetting">List&lt;Environment<wbr>Setting<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Option settings to configure the new Environment. These
 override specific values that are set as defaults. The format is detailed
@@ -258,7 +258,7 @@ below in Option Settings
             title="Optional">
         <span>Solution<wbr>Stack<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A solution stack to base your environment
 off of. Example stacks can be found in the [Amazon API documentation][1]
@@ -268,7 +268,7 @@ off of. Example stacks can be found in the [Amazon API documentation][1]
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A set of tags to apply to the Environment.
 {{% /md %}}</dd>
@@ -277,7 +277,7 @@ off of. Example stacks can be found in the [Amazon API documentation][1]
             title="Optional">
         <span>Template<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Elastic Beanstalk Configuration
 template to use in deployment
@@ -287,7 +287,7 @@ template to use in deployment
             title="Optional">
         <span>Tier</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Elastic Beanstalk Environment tier. Valid values are `Worker`
 or `WebServer`. If tier is left blank `WebServer` will be used.
@@ -297,7 +297,7 @@ or `WebServer`. If tier is left blank `WebServer` will be used.
             title="Optional">
         <span>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Elastic Beanstalk Application Version
 to use in deployment.
@@ -307,7 +307,7 @@ to use in deployment.
             title="Optional">
         <span>Wait<wbr>For<wbr>Ready<wbr>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum
 [duration](https://golang.org/pkg/time/#ParseDuration) that this provider should
@@ -336,7 +336,7 @@ to be deployed
             title="Optional">
         <span>Cname<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Prefix to use for the fully qualified DNS name of
 the Environment.
@@ -346,7 +346,7 @@ the Environment.
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Short description of the Environment
 {{% /md %}}</dd>
@@ -355,7 +355,7 @@ the Environment.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique name for this Environment. This name is used
 in the application URL
@@ -365,7 +365,7 @@ in the application URL
             title="Optional">
         <span>Platform<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The [ARN][2] of the Elastic Beanstalk [Platform][3]
 to use in deployment
@@ -375,7 +375,7 @@ to use in deployment
             title="Optional">
         <span>Poll<wbr>Interval</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time between polling the AWS API to
 check if changes have been applied. Use this to adjust the rate of API calls
@@ -398,7 +398,7 @@ below in Option Settings
             title="Optional">
         <span>Solution<wbr>Stack<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A solution stack to base your environment
 off of. Example stacks can be found in the [Amazon API documentation][1]
@@ -417,7 +417,7 @@ off of. Example stacks can be found in the [Amazon API documentation][1]
             title="Optional">
         <span>Template<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Elastic Beanstalk Configuration
 template to use in deployment
@@ -427,7 +427,7 @@ template to use in deployment
             title="Optional">
         <span>Tier</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Elastic Beanstalk Environment tier. Valid values are `Worker`
 or `WebServer`. If tier is left blank `WebServer` will be used.
@@ -437,7 +437,7 @@ or `WebServer`. If tier is left blank `WebServer` will be used.
             title="Optional">
         <span>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Elastic Beanstalk Application Version
 to use in deployment.
@@ -447,7 +447,7 @@ to use in deployment.
             title="Optional">
         <span>Wait<wbr>For<wbr>Ready<wbr>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum
 [duration](https://golang.org/pkg/time/#ParseDuration) that this provider should
@@ -476,7 +476,7 @@ to be deployed
             title="Optional">
         <span>cname<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Prefix to use for the fully qualified DNS name of
 the Environment.
@@ -486,7 +486,7 @@ the Environment.
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Short description of the Environment
 {{% /md %}}</dd>
@@ -495,7 +495,7 @@ the Environment.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique name for this Environment. This name is used
 in the application URL
@@ -505,7 +505,7 @@ in the application URL
             title="Optional">
         <span>platform<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The [ARN][2] of the Elastic Beanstalk [Platform][3]
 to use in deployment
@@ -515,7 +515,7 @@ to use in deployment
             title="Optional">
         <span>poll<wbr>Interval</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time between polling the AWS API to
 check if changes have been applied. Use this to adjust the rate of API calls
@@ -527,7 +527,7 @@ use the default behavior, which is an exponential backoff
             title="Optional">
         <span>settings</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentsetting">Environment<wbr>Setting[]?</a></span>
+        <span class="property-type"><a href="#environmentsetting">Environment<wbr>Setting[]</a></span>
     </dt>
     <dd>{{% md %}}Option settings to configure the new Environment. These
 override specific values that are set as defaults. The format is detailed
@@ -538,7 +538,7 @@ below in Option Settings
             title="Optional">
         <span>solution<wbr>Stack<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A solution stack to base your environment
 off of. Example stacks can be found in the [Amazon API documentation][1]
@@ -548,7 +548,7 @@ off of. Example stacks can be found in the [Amazon API documentation][1]
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A set of tags to apply to the Environment.
 {{% /md %}}</dd>
@@ -557,7 +557,7 @@ off of. Example stacks can be found in the [Amazon API documentation][1]
             title="Optional">
         <span>template<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Elastic Beanstalk Configuration
 template to use in deployment
@@ -567,7 +567,7 @@ template to use in deployment
             title="Optional">
         <span>tier</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Elastic Beanstalk Environment tier. Valid values are `Worker`
 or `WebServer`. If tier is left blank `WebServer` will be used.
@@ -577,7 +577,7 @@ or `WebServer`. If tier is left blank `WebServer` will be used.
             title="Optional">
         <span>version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ApplicationVersion?</span>
+        <span class="property-type">Application<wbr>Version</span>
     </dt>
     <dd>{{% md %}}The name of the Elastic Beanstalk Application Version
 to use in deployment.
@@ -587,7 +587,7 @@ to use in deployment.
             title="Optional">
         <span>wait<wbr>For<wbr>Ready<wbr>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum
 [duration](https://golang.org/pkg/time/#ParseDuration) that this provider should
@@ -606,7 +606,7 @@ out.
             title="Required">
         <span>application</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">string | str</span>
     </dt>
     <dd>{{% md %}}Name of the application that contains the version
 to be deployed
@@ -767,16 +767,6 @@ the configuration.
 
     <dt class="property-"
             title="">
-        <span>Application</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the application that contains the version
-to be deployed
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Arn</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -787,7 +777,7 @@ to be deployed
             title="">
         <span>Autoscaling<wbr>Groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The autoscaling groups used by this Environment.
 {{% /md %}}</dd>
@@ -803,25 +793,6 @@ to be deployed
 
     <dt class="property-"
             title="">
-        <span>Cname<wbr>Prefix</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Prefix to use for the fully qualified DNS name of
-the Environment.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Short description of the Environment
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Endpoint<wbr>Url</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -833,7 +804,7 @@ the Environment.
             title="">
         <span>Instances</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Instances used by this Environment.
 {{% /md %}}</dd>
@@ -842,7 +813,7 @@ the Environment.
             title="">
         <span>Launch<wbr>Configurations</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Launch configurations in use by this Environment.
 {{% /md %}}</dd>
@@ -851,131 +822,27 @@ the Environment.
             title="">
         <span>Load<wbr>Balancers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Elastic load balancers in use by this Environment.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A unique name for this Environment. This name is used
-in the application URL
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Platform<wbr>Arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The [ARN][2] of the Elastic Beanstalk [Platform][3]
-to use in deployment
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Poll<wbr>Interval</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The time between polling the AWS API to
-check if changes have been applied. Use this to adjust the rate of API calls
-for any `create` or `update` action. Minimum `10s`, maximum `180s`. Omit this to
-use the default behavior, which is an exponential backoff
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Queues</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}SQS queues in use by this Environment.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>Settings</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentsetting">List&lt;Environment<wbr>Setting&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}Option settings to configure the new Environment. These
-override specific values that are set as defaults. The format is detailed
-below in Option Settings
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Solution<wbr>Stack<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A solution stack to base your environment
-off of. Example stacks can be found in the [Amazon API documentation][1]
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
-    </dt>
-    <dd>{{% md %}}A set of tags to apply to the Environment.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Template<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The name of the Elastic Beanstalk Configuration
-template to use in deployment
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tier</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Elastic Beanstalk Environment tier. Valid values are `Worker`
-or `WebServer`. If tier is left blank `WebServer` will be used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Triggers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Autoscaling triggers in use by this Environment.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the Elastic Beanstalk Application Version
-to use in deployment.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Wait<wbr>For<wbr>Ready<wbr>Timeout</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The maximum
-[duration](https://golang.org/pkg/time/#ParseDuration) that this provider should
-wait for an Elastic Beanstalk Environment to be in a ready state before timing
-out.
 {{% /md %}}</dd>
 
 </dl>
@@ -998,16 +865,6 @@ the configuration.
 
     <dt class="property-"
             title="">
-        <span>Application</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the application that contains the version
-to be deployed
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Arn</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -1030,25 +887,6 @@ to be deployed
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Fully qualified DNS name for this Environment.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Cname<wbr>Prefix</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Prefix to use for the fully qualified DNS name of
-the Environment.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Short description of the Environment
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1089,38 +927,6 @@ the Environment.
 
     <dt class="property-"
             title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A unique name for this Environment. This name is used
-in the application URL
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Platform<wbr>Arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The [ARN][2] of the Elastic Beanstalk [Platform][3]
-to use in deployment
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Poll<wbr>Interval</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The time between polling the AWS API to
-check if changes have been applied. Use this to adjust the rate of API calls
-for any `create` or `update` action. Minimum `10s`, maximum `180s`. Omit this to
-use the default behavior, which is an exponential backoff
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Queues</span>
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
@@ -1130,83 +936,11 @@ use the default behavior, which is an exponential backoff
 
     <dt class="property-"
             title="">
-        <span>Settings</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentsetting">[]Environment<wbr>Setting</a></span>
-    </dt>
-    <dd>{{% md %}}Option settings to configure the new Environment. These
-override specific values that are set as defaults. The format is detailed
-below in Option Settings
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Solution<wbr>Stack<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A solution stack to base your environment
-off of. Example stacks can be found in the [Amazon API documentation][1]
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
-    </dt>
-    <dd>{{% md %}}A set of tags to apply to the Environment.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Template<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The name of the Elastic Beanstalk Configuration
-template to use in deployment
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tier</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Elastic Beanstalk Environment tier. Valid values are `Worker`
-or `WebServer`. If tier is left blank `WebServer` will be used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Triggers</span>
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}Autoscaling triggers in use by this Environment.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the Elastic Beanstalk Application Version
-to use in deployment.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Wait<wbr>For<wbr>Ready<wbr>Timeout</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The maximum
-[duration](https://golang.org/pkg/time/#ParseDuration) that this provider should
-wait for an Elastic Beanstalk Environment to be in a ready state before timing
-out.
 {{% /md %}}</dd>
 
 </dl>
@@ -1225,16 +959,6 @@ out.
     <dd>{{% md %}}List of all option settings configured in this Environment. These
 are a combination of default settings and their overrides from `setting` in
 the configuration.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>application</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the application that contains the version
-to be deployed
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1261,25 +985,6 @@ to be deployed
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Fully qualified DNS name for this Environment.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>cname<wbr>Prefix</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Prefix to use for the fully qualified DNS name of
-the Environment.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Short description of the Environment
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1320,38 +1025,6 @@ the Environment.
 
     <dt class="property-"
             title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A unique name for this Environment. This name is used
-in the application URL
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>platform<wbr>Arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The [ARN][2] of the Elastic Beanstalk [Platform][3]
-to use in deployment
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>poll<wbr>Interval</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The time between polling the AWS API to
-check if changes have been applied. Use this to adjust the rate of API calls
-for any `create` or `update` action. Minimum `10s`, maximum `180s`. Omit this to
-use the default behavior, which is an exponential backoff
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>queues</span>
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
@@ -1361,83 +1034,11 @@ use the default behavior, which is an exponential backoff
 
     <dt class="property-"
             title="">
-        <span>settings</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentsetting">Environment<wbr>Setting[]?</a></span>
-    </dt>
-    <dd>{{% md %}}Option settings to configure the new Environment. These
-override specific values that are set as defaults. The format is detailed
-below in Option Settings
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>solution<wbr>Stack<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A solution stack to base your environment
-off of. Example stacks can be found in the [Amazon API documentation][1]
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
-    </dt>
-    <dd>{{% md %}}A set of tags to apply to the Environment.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>template<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The name of the Elastic Beanstalk Configuration
-template to use in deployment
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tier</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Elastic Beanstalk Environment tier. Valid values are `Worker`
-or `WebServer`. If tier is left blank `WebServer` will be used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>triggers</span>
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Autoscaling triggers in use by this Environment.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">ApplicationVersion</span>
-    </dt>
-    <dd>{{% md %}}The name of the Elastic Beanstalk Application Version
-to use in deployment.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>wait<wbr>For<wbr>Ready<wbr>Timeout</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The maximum
-[duration](https://golang.org/pkg/time/#ParseDuration) that this provider should
-wait for an Elastic Beanstalk Environment to be in a ready state before timing
-out.
 {{% /md %}}</dd>
 
 </dl>
@@ -1456,16 +1057,6 @@ out.
     <dd>{{% md %}}List of all option settings configured in this Environment. These
 are a combination of default settings and their overrides from `setting` in
 the configuration.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>application</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Name of the application that contains the version
-to be deployed
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1492,25 +1083,6 @@ to be deployed
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Fully qualified DNS name for this Environment.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>cname_<wbr>prefix</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Prefix to use for the fully qualified DNS name of
-the Environment.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Short description of the Environment
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1551,38 +1123,6 @@ the Environment.
 
     <dt class="property-"
             title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}A unique name for this Environment. This name is used
-in the application URL
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>platform_<wbr>arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The [ARN][2] of the Elastic Beanstalk [Platform][3]
-to use in deployment
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>poll_<wbr>interval</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The time between polling the AWS API to
-check if changes have been applied. Use this to adjust the rate of API calls
-for any `create` or `update` action. Minimum `10s`, maximum `180s`. Omit this to
-use the default behavior, which is an exponential backoff
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>queues</span>
         <span class="property-indicator"></span>
         <span class="property-type">List[str]</span>
@@ -1592,83 +1132,11 @@ use the default behavior, which is an exponential backoff
 
     <dt class="property-"
             title="">
-        <span>settings</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentsetting">List[Environment<wbr>Setting]</a></span>
-    </dt>
-    <dd>{{% md %}}Option settings to configure the new Environment. These
-override specific values that are set as defaults. The format is detailed
-below in Option Settings
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>solution_<wbr>stack_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}A solution stack to base your environment
-off of. Example stacks can be found in the [Amazon API documentation][1]
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
-    </dt>
-    <dd>{{% md %}}A set of tags to apply to the Environment.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>template_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the Elastic Beanstalk Configuration
-template to use in deployment
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tier</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Elastic Beanstalk Environment tier. Valid values are `Worker`
-or `WebServer`. If tier is left blank `WebServer` will be used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>triggers</span>
         <span class="property-indicator"></span>
         <span class="property-type">List[str]</span>
     </dt>
     <dd>{{% md %}}Autoscaling triggers in use by this Environment.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the Elastic Beanstalk Application Version
-to use in deployment.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>wait_<wbr>for_<wbr>ready_<wbr>timeout</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The maximum
-[duration](https://golang.org/pkg/time/#ParseDuration) that this provider should
-wait for an Elastic Beanstalk Environment to be in a ready state before timing
-out.
 {{% /md %}}</dd>
 
 </dl>
@@ -1700,7 +1168,7 @@ Get an existing Environment resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Elasticbeanstalk.Environment.html">Environment</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Elasticbeanstalk.EnvironmentState.html">EnvironmentState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticBeanstalk.Environment.html">Environment</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ElasticBeanstalk.EnvironmentState.html">EnvironmentState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1810,7 +1278,7 @@ The following state arguments are supported:
             title="Optional">
         <span>All<wbr>Settings</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentallsetting">List&lt;Environment<wbr>All<wbr>Setting<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#environmentallsetting">List&lt;Environment<wbr>All<wbr>Setting<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of all option settings configured in this Environment. These
 are a combination of default settings and their overrides from `setting` in
@@ -1821,7 +1289,7 @@ the configuration.
             title="Optional">
         <span>Application</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the application that contains the version
 to be deployed
@@ -1831,7 +1299,7 @@ to be deployed
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1839,7 +1307,7 @@ to be deployed
             title="Optional">
         <span>Autoscaling<wbr>Groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The autoscaling groups used by this Environment.
 {{% /md %}}</dd>
@@ -1848,7 +1316,7 @@ to be deployed
             title="Optional">
         <span>Cname</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Fully qualified DNS name for this Environment.
 {{% /md %}}</dd>
@@ -1857,7 +1325,7 @@ to be deployed
             title="Optional">
         <span>Cname<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Prefix to use for the fully qualified DNS name of
 the Environment.
@@ -1867,7 +1335,7 @@ the Environment.
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Short description of the Environment
 {{% /md %}}</dd>
@@ -1876,7 +1344,7 @@ the Environment.
             title="Optional">
         <span>Endpoint<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL to the Load Balancer for this Environment
 {{% /md %}}</dd>
@@ -1885,7 +1353,7 @@ the Environment.
             title="Optional">
         <span>Instances</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Instances used by this Environment.
 {{% /md %}}</dd>
@@ -1894,7 +1362,7 @@ the Environment.
             title="Optional">
         <span>Launch<wbr>Configurations</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Launch configurations in use by this Environment.
 {{% /md %}}</dd>
@@ -1903,7 +1371,7 @@ the Environment.
             title="Optional">
         <span>Load<wbr>Balancers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Elastic load balancers in use by this Environment.
 {{% /md %}}</dd>
@@ -1912,7 +1380,7 @@ the Environment.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique name for this Environment. This name is used
 in the application URL
@@ -1922,7 +1390,7 @@ in the application URL
             title="Optional">
         <span>Platform<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The [ARN][2] of the Elastic Beanstalk [Platform][3]
 to use in deployment
@@ -1932,7 +1400,7 @@ to use in deployment
             title="Optional">
         <span>Poll<wbr>Interval</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time between polling the AWS API to
 check if changes have been applied. Use this to adjust the rate of API calls
@@ -1944,7 +1412,7 @@ use the default behavior, which is an exponential backoff
             title="Optional">
         <span>Queues</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}SQS queues in use by this Environment.
 {{% /md %}}</dd>
@@ -1953,7 +1421,7 @@ use the default behavior, which is an exponential backoff
             title="Optional">
         <span>Settings</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentsetting">List&lt;Environment<wbr>Setting<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#environmentsetting">List&lt;Environment<wbr>Setting<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Option settings to configure the new Environment. These
 override specific values that are set as defaults. The format is detailed
@@ -1964,7 +1432,7 @@ below in Option Settings
             title="Optional">
         <span>Solution<wbr>Stack<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A solution stack to base your environment
 off of. Example stacks can be found in the [Amazon API documentation][1]
@@ -1974,7 +1442,7 @@ off of. Example stacks can be found in the [Amazon API documentation][1]
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A set of tags to apply to the Environment.
 {{% /md %}}</dd>
@@ -1983,7 +1451,7 @@ off of. Example stacks can be found in the [Amazon API documentation][1]
             title="Optional">
         <span>Template<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Elastic Beanstalk Configuration
 template to use in deployment
@@ -1993,7 +1461,7 @@ template to use in deployment
             title="Optional">
         <span>Tier</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Elastic Beanstalk Environment tier. Valid values are `Worker`
 or `WebServer`. If tier is left blank `WebServer` will be used.
@@ -2003,7 +1471,7 @@ or `WebServer`. If tier is left blank `WebServer` will be used.
             title="Optional">
         <span>Triggers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Autoscaling triggers in use by this Environment.
 {{% /md %}}</dd>
@@ -2012,7 +1480,7 @@ or `WebServer`. If tier is left blank `WebServer` will be used.
             title="Optional">
         <span>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Elastic Beanstalk Application Version
 to use in deployment.
@@ -2022,7 +1490,7 @@ to use in deployment.
             title="Optional">
         <span>Wait<wbr>For<wbr>Ready<wbr>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum
 [duration](https://golang.org/pkg/time/#ParseDuration) that this provider should
@@ -2062,7 +1530,7 @@ to be deployed
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2079,7 +1547,7 @@ to be deployed
             title="Optional">
         <span>Cname</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Fully qualified DNS name for this Environment.
 {{% /md %}}</dd>
@@ -2088,7 +1556,7 @@ to be deployed
             title="Optional">
         <span>Cname<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Prefix to use for the fully qualified DNS name of
 the Environment.
@@ -2098,7 +1566,7 @@ the Environment.
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Short description of the Environment
 {{% /md %}}</dd>
@@ -2107,7 +1575,7 @@ the Environment.
             title="Optional">
         <span>Endpoint<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL to the Load Balancer for this Environment
 {{% /md %}}</dd>
@@ -2143,7 +1611,7 @@ the Environment.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique name for this Environment. This name is used
 in the application URL
@@ -2153,7 +1621,7 @@ in the application URL
             title="Optional">
         <span>Platform<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The [ARN][2] of the Elastic Beanstalk [Platform][3]
 to use in deployment
@@ -2163,7 +1631,7 @@ to use in deployment
             title="Optional">
         <span>Poll<wbr>Interval</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time between polling the AWS API to
 check if changes have been applied. Use this to adjust the rate of API calls
@@ -2195,7 +1663,7 @@ below in Option Settings
             title="Optional">
         <span>Solution<wbr>Stack<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A solution stack to base your environment
 off of. Example stacks can be found in the [Amazon API documentation][1]
@@ -2214,7 +1682,7 @@ off of. Example stacks can be found in the [Amazon API documentation][1]
             title="Optional">
         <span>Template<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Elastic Beanstalk Configuration
 template to use in deployment
@@ -2224,7 +1692,7 @@ template to use in deployment
             title="Optional">
         <span>Tier</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Elastic Beanstalk Environment tier. Valid values are `Worker`
 or `WebServer`. If tier is left blank `WebServer` will be used.
@@ -2243,7 +1711,7 @@ or `WebServer`. If tier is left blank `WebServer` will be used.
             title="Optional">
         <span>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Elastic Beanstalk Application Version
 to use in deployment.
@@ -2253,7 +1721,7 @@ to use in deployment.
             title="Optional">
         <span>Wait<wbr>For<wbr>Ready<wbr>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum
 [duration](https://golang.org/pkg/time/#ParseDuration) that this provider should
@@ -2272,7 +1740,7 @@ out.
             title="Optional">
         <span>all<wbr>Settings</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentallsetting">Environment<wbr>All<wbr>Setting[]?</a></span>
+        <span class="property-type"><a href="#environmentallsetting">Environment<wbr>All<wbr>Setting[]</a></span>
     </dt>
     <dd>{{% md %}}List of all option settings configured in this Environment. These
 are a combination of default settings and their overrides from `setting` in
@@ -2293,7 +1761,7 @@ to be deployed
             title="Optional">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2301,7 +1769,7 @@ to be deployed
             title="Optional">
         <span>autoscaling<wbr>Groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The autoscaling groups used by this Environment.
 {{% /md %}}</dd>
@@ -2310,7 +1778,7 @@ to be deployed
             title="Optional">
         <span>cname</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Fully qualified DNS name for this Environment.
 {{% /md %}}</dd>
@@ -2319,7 +1787,7 @@ to be deployed
             title="Optional">
         <span>cname<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Prefix to use for the fully qualified DNS name of
 the Environment.
@@ -2329,7 +1797,7 @@ the Environment.
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Short description of the Environment
 {{% /md %}}</dd>
@@ -2338,7 +1806,7 @@ the Environment.
             title="Optional">
         <span>endpoint<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL to the Load Balancer for this Environment
 {{% /md %}}</dd>
@@ -2347,7 +1815,7 @@ the Environment.
             title="Optional">
         <span>instances</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Instances used by this Environment.
 {{% /md %}}</dd>
@@ -2356,7 +1824,7 @@ the Environment.
             title="Optional">
         <span>launch<wbr>Configurations</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Launch configurations in use by this Environment.
 {{% /md %}}</dd>
@@ -2365,7 +1833,7 @@ the Environment.
             title="Optional">
         <span>load<wbr>Balancers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Elastic load balancers in use by this Environment.
 {{% /md %}}</dd>
@@ -2374,7 +1842,7 @@ the Environment.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique name for this Environment. This name is used
 in the application URL
@@ -2384,7 +1852,7 @@ in the application URL
             title="Optional">
         <span>platform<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The [ARN][2] of the Elastic Beanstalk [Platform][3]
 to use in deployment
@@ -2394,7 +1862,7 @@ to use in deployment
             title="Optional">
         <span>poll<wbr>Interval</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time between polling the AWS API to
 check if changes have been applied. Use this to adjust the rate of API calls
@@ -2406,7 +1874,7 @@ use the default behavior, which is an exponential backoff
             title="Optional">
         <span>queues</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}SQS queues in use by this Environment.
 {{% /md %}}</dd>
@@ -2415,7 +1883,7 @@ use the default behavior, which is an exponential backoff
             title="Optional">
         <span>settings</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#environmentsetting">Environment<wbr>Setting[]?</a></span>
+        <span class="property-type"><a href="#environmentsetting">Environment<wbr>Setting[]</a></span>
     </dt>
     <dd>{{% md %}}Option settings to configure the new Environment. These
 override specific values that are set as defaults. The format is detailed
@@ -2426,7 +1894,7 @@ below in Option Settings
             title="Optional">
         <span>solution<wbr>Stack<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A solution stack to base your environment
 off of. Example stacks can be found in the [Amazon API documentation][1]
@@ -2436,7 +1904,7 @@ off of. Example stacks can be found in the [Amazon API documentation][1]
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A set of tags to apply to the Environment.
 {{% /md %}}</dd>
@@ -2445,7 +1913,7 @@ off of. Example stacks can be found in the [Amazon API documentation][1]
             title="Optional">
         <span>template<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Elastic Beanstalk Configuration
 template to use in deployment
@@ -2455,7 +1923,7 @@ template to use in deployment
             title="Optional">
         <span>tier</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Elastic Beanstalk Environment tier. Valid values are `Worker`
 or `WebServer`. If tier is left blank `WebServer` will be used.
@@ -2465,7 +1933,7 @@ or `WebServer`. If tier is left blank `WebServer` will be used.
             title="Optional">
         <span>triggers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Autoscaling triggers in use by this Environment.
 {{% /md %}}</dd>
@@ -2474,7 +1942,7 @@ or `WebServer`. If tier is left blank `WebServer` will be used.
             title="Optional">
         <span>version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ApplicationVersion?</span>
+        <span class="property-type">Application<wbr>Version</span>
     </dt>
     <dd>{{% md %}}The name of the Elastic Beanstalk Application Version
 to use in deployment.
@@ -2484,7 +1952,7 @@ to use in deployment.
             title="Optional">
         <span>wait<wbr>For<wbr>Ready<wbr>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum
 [duration](https://golang.org/pkg/time/#ParseDuration) that this provider should
@@ -2514,7 +1982,7 @@ the configuration.
             title="Optional">
         <span>application</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">string | str</span>
     </dt>
     <dd>{{% md %}}Name of the application that contains the version
 to be deployed
@@ -2770,17 +2238,17 @@ in the application URL
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Resource</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Value</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Resource</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
@@ -2811,17 +2279,17 @@ in the application URL
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Resource</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Value</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Resource</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
@@ -2852,17 +2320,17 @@ in the application URL
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>resource</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>value</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>resource</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
@@ -2893,17 +2361,17 @@ in the application URL
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>resource</span>
+    <dt class="property-required"
+            title="Required">
+        <span>value</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>value</span>
+    <dt class="property-optional"
+            title="Optional">
+        <span>resource</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -2949,17 +2417,17 @@ in the application URL
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Resource</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Value</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Resource</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
@@ -2990,17 +2458,17 @@ in the application URL
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Resource</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Value</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Resource</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
@@ -3031,17 +2499,17 @@ in the application URL
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>resource</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>value</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>resource</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
@@ -3072,17 +2540,17 @@ in the application URL
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>resource</span>
+    <dt class="property-required"
+            title="Required">
+        <span>value</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>value</span>
+    <dt class="property-optional"
+            title="Optional">
+        <span>resource</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>

@@ -50,7 +50,7 @@ export const vpnGatewayId = selected.id!;
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupVpnGateway<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2?tab=doc#LookupVpnGatewayArgs">LookupVpnGatewayArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2?tab=doc#LookupVpnGatewayResult">LookupVpnGatewayResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupVpnGateway<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2?tab=doc#LookupVpnGatewayArgs">LookupVpnGatewayArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2?tab=doc#LookupVpnGatewayResult">LookupVpnGatewayResult</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -73,7 +73,7 @@ The following arguments are supported:
             title="Optional">
         <span>Amazon<wbr>Side<wbr>Asn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Autonomous System Number (ASN) for the Amazon side of the specific VPN Gateway to retrieve.
 {{% /md %}}</dd>
@@ -82,7 +82,7 @@ The following arguments are supported:
             title="Optional">
         <span>Attached<wbr>Vpc<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of a VPC attached to the specific VPN Gateway to retrieve.
 {{% /md %}}</dd>
@@ -91,7 +91,7 @@ The following arguments are supported:
             title="Optional">
         <span>Availability<wbr>Zone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Availability Zone of the specific VPN Gateway to retrieve.
 {{% /md %}}</dd>
@@ -100,7 +100,7 @@ The following arguments are supported:
             title="Optional">
         <span>Filters</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getvpngatewayfilter">List&lt;Get<wbr>Vpn<wbr>Gateway<wbr>Filter<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#getvpngatewayfilter">List&lt;Get<wbr>Vpn<wbr>Gateway<wbr>Filter<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Custom filter block as described below.
 {{% /md %}}</dd>
@@ -109,7 +109,7 @@ The following arguments are supported:
             title="Optional">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the specific VPN Gateway to retrieve.
 {{% /md %}}</dd>
@@ -118,7 +118,7 @@ The following arguments are supported:
             title="Optional">
         <span>State</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The state of the specific VPN Gateway to retrieve.
 {{% /md %}}</dd>
@@ -127,7 +127,7 @@ The following arguments are supported:
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags, each pair of which must exactly match
 a pair on the desired VPN Gateway.
@@ -144,7 +144,7 @@ a pair on the desired VPN Gateway.
             title="Optional">
         <span>Amazon<wbr>Side<wbr>Asn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Autonomous System Number (ASN) for the Amazon side of the specific VPN Gateway to retrieve.
 {{% /md %}}</dd>
@@ -153,7 +153,7 @@ a pair on the desired VPN Gateway.
             title="Optional">
         <span>Attached<wbr>Vpc<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of a VPC attached to the specific VPN Gateway to retrieve.
 {{% /md %}}</dd>
@@ -162,7 +162,7 @@ a pair on the desired VPN Gateway.
             title="Optional">
         <span>Availability<wbr>Zone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Availability Zone of the specific VPN Gateway to retrieve.
 {{% /md %}}</dd>
@@ -180,7 +180,7 @@ a pair on the desired VPN Gateway.
             title="Optional">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the specific VPN Gateway to retrieve.
 {{% /md %}}</dd>
@@ -189,7 +189,7 @@ a pair on the desired VPN Gateway.
             title="Optional">
         <span>State</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The state of the specific VPN Gateway to retrieve.
 {{% /md %}}</dd>
@@ -215,7 +215,7 @@ a pair on the desired VPN Gateway.
             title="Optional">
         <span>amazon<wbr>Side<wbr>Asn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Autonomous System Number (ASN) for the Amazon side of the specific VPN Gateway to retrieve.
 {{% /md %}}</dd>
@@ -224,7 +224,7 @@ a pair on the desired VPN Gateway.
             title="Optional">
         <span>attached<wbr>Vpc<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of a VPC attached to the specific VPN Gateway to retrieve.
 {{% /md %}}</dd>
@@ -233,7 +233,7 @@ a pair on the desired VPN Gateway.
             title="Optional">
         <span>availability<wbr>Zone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Availability Zone of the specific VPN Gateway to retrieve.
 {{% /md %}}</dd>
@@ -242,7 +242,7 @@ a pair on the desired VPN Gateway.
             title="Optional">
         <span>filters</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getvpngatewayfilter">Get<wbr>Vpn<wbr>Gateway<wbr>Filter[]?</a></span>
+        <span class="property-type"><a href="#getvpngatewayfilter">Get<wbr>Vpn<wbr>Gateway<wbr>Filter[]</a></span>
     </dt>
     <dd>{{% md %}}Custom filter block as described below.
 {{% /md %}}</dd>
@@ -251,7 +251,7 @@ a pair on the desired VPN Gateway.
             title="Optional">
         <span>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the specific VPN Gateway to retrieve.
 {{% /md %}}</dd>
@@ -260,7 +260,7 @@ a pair on the desired VPN Gateway.
             title="Optional">
         <span>state</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The state of the specific VPN Gateway to retrieve.
 {{% /md %}}</dd>
@@ -269,7 +269,7 @@ a pair on the desired VPN Gateway.
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags, each pair of which must exactly match
 a pair on the desired VPN Gateway.
@@ -392,14 +392,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Filters</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getvpngatewayfilter">List&lt;Get<wbr>Vpn<wbr>Gateway<wbr>Filter&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -418,7 +410,15 @@ The following output properties are available:
             title="">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Filters</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getvpngatewayfilter">List&lt;Get<wbr>Vpn<wbr>Gateway<wbr>Filter&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -455,14 +455,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Filters</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getvpngatewayfilter">[]Get<wbr>Vpn<wbr>Gateway<wbr>Filter</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -482,6 +474,14 @@ The following output properties are available:
         <span>Tags</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Filters</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getvpngatewayfilter">[]Get<wbr>Vpn<wbr>Gateway<wbr>Filter</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -518,14 +518,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>filters</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getvpngatewayfilter">Get<wbr>Vpn<wbr>Gateway<wbr>Filter[]?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>id</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -545,6 +537,14 @@ The following output properties are available:
         <span>tags</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>filters</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getvpngatewayfilter">Get<wbr>Vpn<wbr>Gateway<wbr>Filter[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -581,14 +581,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>filters</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getvpngatewayfilter">List[Get<wbr>Vpn<wbr>Gateway<wbr>Filter]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>id</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -608,6 +600,14 @@ The following output properties are available:
         <span>tags</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>filters</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getvpngatewayfilter">List[Get<wbr>Vpn<wbr>Gateway<wbr>Filter]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -652,7 +652,7 @@ The following output properties are available:
             title="Required">
         <span>Values</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Set of values that are accepted for the given field.
 A VPN Gateway will be selected if any one of the given values matches.

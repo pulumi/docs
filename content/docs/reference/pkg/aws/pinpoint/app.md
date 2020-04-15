@@ -38,7 +38,7 @@ const example = new aws.pinpoint.App("example", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/pinpoint/#App">App</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/pinpoint/#AppArgs">AppArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/pinpoint/#App">App</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/pinpoint/#AppArgs">AppArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -46,7 +46,7 @@ const example = new aws.pinpoint.App("example", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewApp<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/pinpoint?tab=doc#AppArgs">AppArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/pinpoint?tab=doc#App">App</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewApp<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/pinpoint?tab=doc#AppArgs">AppArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/pinpoint?tab=doc#App">App</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -146,7 +146,7 @@ const example = new aws.pinpoint.App("example", {
             title="Optional">
         <span>Campaign<wbr>Hook</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appcampaignhook">App<wbr>Campaign<wbr>Hook<wbr>Args?</a></span>
+        <span class="property-type"><a href="#appcampaignhook">App<wbr>Campaign<wbr>Hook<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The default campaign limits for the app. These limits apply to each campaign for the app, unless the campaign overrides the default with limits of its own
 {{% /md %}}</dd>
@@ -155,7 +155,7 @@ const example = new aws.pinpoint.App("example", {
             title="Optional">
         <span>Limits</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applimits">App<wbr>Limits<wbr>Args?</a></span>
+        <span class="property-type"><a href="#applimits">App<wbr>Limits<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The default campaign limits for the app. These limits apply to each campaign for the app, unless the campaign overrides the default with limits of its own
 {{% /md %}}</dd>
@@ -164,7 +164,7 @@ const example = new aws.pinpoint.App("example", {
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The application name. By default generated by this provider
 {{% /md %}}</dd>
@@ -173,7 +173,7 @@ const example = new aws.pinpoint.App("example", {
             title="Optional">
         <span>Name<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Pinpoint application. Conflicts with `name`
 {{% /md %}}</dd>
@@ -182,7 +182,7 @@ const example = new aws.pinpoint.App("example", {
             title="Optional">
         <span>Quiet<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appquiettime">App<wbr>Quiet<wbr>Time<wbr>Args?</a></span>
+        <span class="property-type"><a href="#appquiettime">App<wbr>Quiet<wbr>Time<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The default quiet time for the app. Each campaign for this app sends no messages during this time unless the campaign overrides the default with a quiet time of its own
 {{% /md %}}</dd>
@@ -191,7 +191,7 @@ const example = new aws.pinpoint.App("example", {
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Key-value mapping of resource tags
 {{% /md %}}</dd>
@@ -207,7 +207,7 @@ const example = new aws.pinpoint.App("example", {
             title="Optional">
         <span>Campaign<wbr>Hook</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appcampaignhook">*App<wbr>Campaign<wbr>Hook</a></span>
+        <span class="property-type"><a href="#appcampaignhook">App<wbr>Campaign<wbr>Hook</a></span>
     </dt>
     <dd>{{% md %}}The default campaign limits for the app. These limits apply to each campaign for the app, unless the campaign overrides the default with limits of its own
 {{% /md %}}</dd>
@@ -216,7 +216,7 @@ const example = new aws.pinpoint.App("example", {
             title="Optional">
         <span>Limits</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applimits">*App<wbr>Limits</a></span>
+        <span class="property-type"><a href="#applimits">App<wbr>Limits</a></span>
     </dt>
     <dd>{{% md %}}The default campaign limits for the app. These limits apply to each campaign for the app, unless the campaign overrides the default with limits of its own
 {{% /md %}}</dd>
@@ -225,7 +225,7 @@ const example = new aws.pinpoint.App("example", {
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The application name. By default generated by this provider
 {{% /md %}}</dd>
@@ -234,7 +234,7 @@ const example = new aws.pinpoint.App("example", {
             title="Optional">
         <span>Name<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Pinpoint application. Conflicts with `name`
 {{% /md %}}</dd>
@@ -243,7 +243,7 @@ const example = new aws.pinpoint.App("example", {
             title="Optional">
         <span>Quiet<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appquiettime">*App<wbr>Quiet<wbr>Time</a></span>
+        <span class="property-type"><a href="#appquiettime">App<wbr>Quiet<wbr>Time</a></span>
     </dt>
     <dd>{{% md %}}The default quiet time for the app. Each campaign for this app sends no messages during this time unless the campaign overrides the default with a quiet time of its own
 {{% /md %}}</dd>
@@ -268,7 +268,7 @@ const example = new aws.pinpoint.App("example", {
             title="Optional">
         <span>campaign<wbr>Hook</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appcampaignhook">App<wbr>Campaign<wbr>Hook?</a></span>
+        <span class="property-type"><a href="#appcampaignhook">App<wbr>Campaign<wbr>Hook</a></span>
     </dt>
     <dd>{{% md %}}The default campaign limits for the app. These limits apply to each campaign for the app, unless the campaign overrides the default with limits of its own
 {{% /md %}}</dd>
@@ -277,7 +277,7 @@ const example = new aws.pinpoint.App("example", {
             title="Optional">
         <span>limits</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applimits">App<wbr>Limits?</a></span>
+        <span class="property-type"><a href="#applimits">App<wbr>Limits</a></span>
     </dt>
     <dd>{{% md %}}The default campaign limits for the app. These limits apply to each campaign for the app, unless the campaign overrides the default with limits of its own
 {{% /md %}}</dd>
@@ -286,7 +286,7 @@ const example = new aws.pinpoint.App("example", {
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The application name. By default generated by this provider
 {{% /md %}}</dd>
@@ -295,7 +295,7 @@ const example = new aws.pinpoint.App("example", {
             title="Optional">
         <span>name<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Pinpoint application. Conflicts with `name`
 {{% /md %}}</dd>
@@ -304,7 +304,7 @@ const example = new aws.pinpoint.App("example", {
             title="Optional">
         <span>quiet<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appquiettime">App<wbr>Quiet<wbr>Time?</a></span>
+        <span class="property-type"><a href="#appquiettime">App<wbr>Quiet<wbr>Time</a></span>
     </dt>
     <dd>{{% md %}}The default quiet time for the app. Each campaign for this app sends no messages during this time unless the campaign overrides the default with a quiet time of its own
 {{% /md %}}</dd>
@@ -313,7 +313,7 @@ const example = new aws.pinpoint.App("example", {
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Key-value mapping of resource tags
 {{% /md %}}</dd>
@@ -416,60 +416,6 @@ The following output properties are available:
     <dd>{{% md %}}Amazon Resource Name (ARN) of the PinPoint Application
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span>Campaign<wbr>Hook</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appcampaignhook">App<wbr>Campaign<wbr>Hook?</a></span>
-    </dt>
-    <dd>{{% md %}}The default campaign limits for the app. These limits apply to each campaign for the app, unless the campaign overrides the default with limits of its own
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Limits</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applimits">App<wbr>Limits?</a></span>
-    </dt>
-    <dd>{{% md %}}The default campaign limits for the app. These limits apply to each campaign for the app, unless the campaign overrides the default with limits of its own
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The application name. By default generated by this provider
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name<wbr>Prefix</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The name of the Pinpoint application. Conflicts with `name`
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Quiet<wbr>Time</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appquiettime">App<wbr>Quiet<wbr>Time?</a></span>
-    </dt>
-    <dd>{{% md %}}The default quiet time for the app. Each campaign for this app sends no messages during this time unless the campaign overrides the default with a quiet time of its own
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
-    </dt>
-    <dd>{{% md %}}Key-value mapping of resource tags
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -493,60 +439,6 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the PinPoint Application
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Campaign<wbr>Hook</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appcampaignhook">*App<wbr>Campaign<wbr>Hook</a></span>
-    </dt>
-    <dd>{{% md %}}The default campaign limits for the app. These limits apply to each campaign for the app, unless the campaign overrides the default with limits of its own
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Limits</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applimits">*App<wbr>Limits</a></span>
-    </dt>
-    <dd>{{% md %}}The default campaign limits for the app. These limits apply to each campaign for the app, unless the campaign overrides the default with limits of its own
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The application name. By default generated by this provider
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name<wbr>Prefix</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The name of the Pinpoint application. Conflicts with `name`
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Quiet<wbr>Time</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appquiettime">*App<wbr>Quiet<wbr>Time</a></span>
-    </dt>
-    <dd>{{% md %}}The default quiet time for the app. Each campaign for this app sends no messages during this time unless the campaign overrides the default with a quiet time of its own
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
-    </dt>
-    <dd>{{% md %}}Key-value mapping of resource tags
 {{% /md %}}</dd>
 
 </dl>
@@ -574,60 +466,6 @@ The following output properties are available:
     <dd>{{% md %}}Amazon Resource Name (ARN) of the PinPoint Application
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span>campaign<wbr>Hook</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appcampaignhook">App<wbr>Campaign<wbr>Hook?</a></span>
-    </dt>
-    <dd>{{% md %}}The default campaign limits for the app. These limits apply to each campaign for the app, unless the campaign overrides the default with limits of its own
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>limits</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applimits">App<wbr>Limits?</a></span>
-    </dt>
-    <dd>{{% md %}}The default campaign limits for the app. These limits apply to each campaign for the app, unless the campaign overrides the default with limits of its own
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The application name. By default generated by this provider
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name<wbr>Prefix</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The name of the Pinpoint application. Conflicts with `name`
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>quiet<wbr>Time</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appquiettime">App<wbr>Quiet<wbr>Time?</a></span>
-    </dt>
-    <dd>{{% md %}}The default quiet time for the app. Each campaign for this app sends no messages during this time unless the campaign overrides the default with a quiet time of its own
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
-    </dt>
-    <dd>{{% md %}}Key-value mapping of resource tags
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -651,60 +489,6 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the PinPoint Application
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>campaign_<wbr>hook</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appcampaignhook">Dict[App<wbr>Campaign<wbr>Hook]</a></span>
-    </dt>
-    <dd>{{% md %}}The default campaign limits for the app. These limits apply to each campaign for the app, unless the campaign overrides the default with limits of its own
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>limits</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applimits">Dict[App<wbr>Limits]</a></span>
-    </dt>
-    <dd>{{% md %}}The default campaign limits for the app. These limits apply to each campaign for the app, unless the campaign overrides the default with limits of its own
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The application name. By default generated by this provider
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name_<wbr>prefix</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the Pinpoint application. Conflicts with `name`
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>quiet_<wbr>time</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appquiettime">Dict[App<wbr>Quiet<wbr>Time]</a></span>
-    </dt>
-    <dd>{{% md %}}The default quiet time for the app. Each campaign for this app sends no messages during this time unless the campaign overrides the default with a quiet time of its own
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
-    </dt>
-    <dd>{{% md %}}Key-value mapping of resource tags
 {{% /md %}}</dd>
 
 </dl>
@@ -846,7 +630,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Application<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Application ID of the Pinpoint App.
 {{% /md %}}</dd>
@@ -855,7 +639,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the PinPoint Application
 {{% /md %}}</dd>
@@ -864,7 +648,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Campaign<wbr>Hook</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appcampaignhook">App<wbr>Campaign<wbr>Hook<wbr>Args?</a></span>
+        <span class="property-type"><a href="#appcampaignhook">App<wbr>Campaign<wbr>Hook<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The default campaign limits for the app. These limits apply to each campaign for the app, unless the campaign overrides the default with limits of its own
 {{% /md %}}</dd>
@@ -873,7 +657,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Limits</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applimits">App<wbr>Limits<wbr>Args?</a></span>
+        <span class="property-type"><a href="#applimits">App<wbr>Limits<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The default campaign limits for the app. These limits apply to each campaign for the app, unless the campaign overrides the default with limits of its own
 {{% /md %}}</dd>
@@ -882,7 +666,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The application name. By default generated by this provider
 {{% /md %}}</dd>
@@ -891,7 +675,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Pinpoint application. Conflicts with `name`
 {{% /md %}}</dd>
@@ -900,7 +684,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Quiet<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appquiettime">App<wbr>Quiet<wbr>Time<wbr>Args?</a></span>
+        <span class="property-type"><a href="#appquiettime">App<wbr>Quiet<wbr>Time<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The default quiet time for the app. Each campaign for this app sends no messages during this time unless the campaign overrides the default with a quiet time of its own
 {{% /md %}}</dd>
@@ -909,7 +693,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Key-value mapping of resource tags
 {{% /md %}}</dd>
@@ -925,7 +709,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Application<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Application ID of the Pinpoint App.
 {{% /md %}}</dd>
@@ -934,7 +718,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the PinPoint Application
 {{% /md %}}</dd>
@@ -943,7 +727,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Campaign<wbr>Hook</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appcampaignhook">*App<wbr>Campaign<wbr>Hook</a></span>
+        <span class="property-type"><a href="#appcampaignhook">App<wbr>Campaign<wbr>Hook</a></span>
     </dt>
     <dd>{{% md %}}The default campaign limits for the app. These limits apply to each campaign for the app, unless the campaign overrides the default with limits of its own
 {{% /md %}}</dd>
@@ -952,7 +736,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Limits</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applimits">*App<wbr>Limits</a></span>
+        <span class="property-type"><a href="#applimits">App<wbr>Limits</a></span>
     </dt>
     <dd>{{% md %}}The default campaign limits for the app. These limits apply to each campaign for the app, unless the campaign overrides the default with limits of its own
 {{% /md %}}</dd>
@@ -961,7 +745,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The application name. By default generated by this provider
 {{% /md %}}</dd>
@@ -970,7 +754,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Pinpoint application. Conflicts with `name`
 {{% /md %}}</dd>
@@ -979,7 +763,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Quiet<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appquiettime">*App<wbr>Quiet<wbr>Time</a></span>
+        <span class="property-type"><a href="#appquiettime">App<wbr>Quiet<wbr>Time</a></span>
     </dt>
     <dd>{{% md %}}The default quiet time for the app. Each campaign for this app sends no messages during this time unless the campaign overrides the default with a quiet time of its own
 {{% /md %}}</dd>
@@ -1004,7 +788,7 @@ The following state arguments are supported:
             title="Optional">
         <span>application<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Application ID of the Pinpoint App.
 {{% /md %}}</dd>
@@ -1013,7 +797,7 @@ The following state arguments are supported:
             title="Optional">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the PinPoint Application
 {{% /md %}}</dd>
@@ -1022,7 +806,7 @@ The following state arguments are supported:
             title="Optional">
         <span>campaign<wbr>Hook</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appcampaignhook">App<wbr>Campaign<wbr>Hook?</a></span>
+        <span class="property-type"><a href="#appcampaignhook">App<wbr>Campaign<wbr>Hook</a></span>
     </dt>
     <dd>{{% md %}}The default campaign limits for the app. These limits apply to each campaign for the app, unless the campaign overrides the default with limits of its own
 {{% /md %}}</dd>
@@ -1031,7 +815,7 @@ The following state arguments are supported:
             title="Optional">
         <span>limits</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applimits">App<wbr>Limits?</a></span>
+        <span class="property-type"><a href="#applimits">App<wbr>Limits</a></span>
     </dt>
     <dd>{{% md %}}The default campaign limits for the app. These limits apply to each campaign for the app, unless the campaign overrides the default with limits of its own
 {{% /md %}}</dd>
@@ -1040,7 +824,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The application name. By default generated by this provider
 {{% /md %}}</dd>
@@ -1049,7 +833,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Pinpoint application. Conflicts with `name`
 {{% /md %}}</dd>
@@ -1058,7 +842,7 @@ The following state arguments are supported:
             title="Optional">
         <span>quiet<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appquiettime">App<wbr>Quiet<wbr>Time?</a></span>
+        <span class="property-type"><a href="#appquiettime">App<wbr>Quiet<wbr>Time</a></span>
     </dt>
     <dd>{{% md %}}The default quiet time for the app. Each campaign for this app sends no messages during this time unless the campaign overrides the default with a quiet time of its own
 {{% /md %}}</dd>
@@ -1067,7 +851,7 @@ The following state arguments are supported:
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Key-value mapping of resource tags
 {{% /md %}}</dd>
@@ -1184,7 +968,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Lambda<wbr>Function<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Lambda function name or ARN to be called for delivery. Conflicts with `web_url`
 {{% /md %}}</dd>
@@ -1193,7 +977,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}What mode Lambda should be invoked in. Valid values for this parameter are `DELIVERY`, `FILTER`.  
 {{% /md %}}</dd>
@@ -1202,7 +986,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Web<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Web URL to call for hook. If the URL has authentication specified it will be added as authentication to the request. Conflicts with `lambda_function_name`
 {{% /md %}}</dd>
@@ -1218,7 +1002,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Lambda<wbr>Function<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Lambda function name or ARN to be called for delivery. Conflicts with `web_url`
 {{% /md %}}</dd>
@@ -1227,7 +1011,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}What mode Lambda should be invoked in. Valid values for this parameter are `DELIVERY`, `FILTER`.  
 {{% /md %}}</dd>
@@ -1236,7 +1020,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Web<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Web URL to call for hook. If the URL has authentication specified it will be added as authentication to the request. Conflicts with `lambda_function_name`
 {{% /md %}}</dd>
@@ -1252,7 +1036,7 @@ The following state arguments are supported:
             title="Optional">
         <span>lambda<wbr>Function<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Lambda function name or ARN to be called for delivery. Conflicts with `web_url`
 {{% /md %}}</dd>
@@ -1261,7 +1045,7 @@ The following state arguments are supported:
             title="Optional">
         <span>mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}What mode Lambda should be invoked in. Valid values for this parameter are `DELIVERY`, `FILTER`.  
 {{% /md %}}</dd>
@@ -1270,7 +1054,7 @@ The following state arguments are supported:
             title="Optional">
         <span>web<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Web URL to call for hook. If the URL has authentication specified it will be added as authentication to the request. Conflicts with `lambda_function_name`
 {{% /md %}}</dd>
@@ -1335,7 +1119,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Daily</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of messages that the campaign can send daily. 
 {{% /md %}}</dd>
@@ -1344,7 +1128,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Maximum<wbr>Duration</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The length of time (in seconds) that the campaign can run before it ends and message deliveries stop. This duration begins at the scheduled start time for the campaign. The minimum value is 60.
 {{% /md %}}</dd>
@@ -1353,7 +1137,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Messages<wbr>Per<wbr>Second</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of messages that the campaign can send per second. The minimum value is 50, and the maximum is 20000.
 {{% /md %}}</dd>
@@ -1362,7 +1146,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Total</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum total number of messages that the campaign can send.
 {{% /md %}}</dd>
@@ -1378,7 +1162,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Daily</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of messages that the campaign can send daily. 
 {{% /md %}}</dd>
@@ -1387,7 +1171,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Maximum<wbr>Duration</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The length of time (in seconds) that the campaign can run before it ends and message deliveries stop. This duration begins at the scheduled start time for the campaign. The minimum value is 60.
 {{% /md %}}</dd>
@@ -1396,7 +1180,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Messages<wbr>Per<wbr>Second</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of messages that the campaign can send per second. The minimum value is 50, and the maximum is 20000.
 {{% /md %}}</dd>
@@ -1405,7 +1189,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Total</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum total number of messages that the campaign can send.
 {{% /md %}}</dd>
@@ -1421,7 +1205,7 @@ The following state arguments are supported:
             title="Optional">
         <span>daily</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum number of messages that the campaign can send daily. 
 {{% /md %}}</dd>
@@ -1430,7 +1214,7 @@ The following state arguments are supported:
             title="Optional">
         <span>maximum<wbr>Duration</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The length of time (in seconds) that the campaign can run before it ends and message deliveries stop. This duration begins at the scheduled start time for the campaign. The minimum value is 60.
 {{% /md %}}</dd>
@@ -1439,7 +1223,7 @@ The following state arguments are supported:
             title="Optional">
         <span>messages<wbr>Per<wbr>Second</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of messages that the campaign can send per second. The minimum value is 50, and the maximum is 20000.
 {{% /md %}}</dd>
@@ -1448,7 +1232,7 @@ The following state arguments are supported:
             title="Optional">
         <span>total</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum total number of messages that the campaign can send.
 {{% /md %}}</dd>
@@ -1522,7 +1306,7 @@ The following state arguments are supported:
             title="Optional">
         <span>End</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default end time for quiet time in ISO 8601 format. Required if `start` is set
 {{% /md %}}</dd>
@@ -1531,7 +1315,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Start</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default start time for quiet time in ISO 8601 format. Required if `end` is set
 {{% /md %}}</dd>
@@ -1547,7 +1331,7 @@ The following state arguments are supported:
             title="Optional">
         <span>End</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default end time for quiet time in ISO 8601 format. Required if `start` is set
 {{% /md %}}</dd>
@@ -1556,7 +1340,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Start</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default start time for quiet time in ISO 8601 format. Required if `end` is set
 {{% /md %}}</dd>
@@ -1572,7 +1356,7 @@ The following state arguments are supported:
             title="Optional">
         <span>end</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default end time for quiet time in ISO 8601 format. Required if `start` is set
 {{% /md %}}</dd>
@@ -1581,7 +1365,7 @@ The following state arguments are supported:
             title="Optional">
         <span>start</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default start time for quiet time in ISO 8601 format. Required if `end` is set
 {{% /md %}}</dd>

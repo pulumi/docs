@@ -60,7 +60,7 @@ const defaultRouteTable = new aws.ec2.DefaultRouteTable("r", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#DefaultRouteTable">DefaultRouteTable</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#DefaultRouteTableArgs">DefaultRouteTableArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#DefaultRouteTable">DefaultRouteTable</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#DefaultRouteTableArgs">DefaultRouteTableArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -68,7 +68,7 @@ const defaultRouteTable = new aws.ec2.DefaultRouteTable("r", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewDefaultRouteTable<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2?tab=doc#DefaultRouteTableArgs">DefaultRouteTableArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2?tab=doc#DefaultRouteTable">DefaultRouteTable</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewDefaultRouteTable<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2?tab=doc#DefaultRouteTableArgs">DefaultRouteTableArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2?tab=doc#DefaultRouteTable">DefaultRouteTable</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -177,7 +177,7 @@ const defaultRouteTable = new aws.ec2.DefaultRouteTable("r", {
             title="Optional">
         <span>Propagating<wbr>Vgws</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of virtual gateways for propagation.
 {{% /md %}}</dd>
@@ -186,7 +186,7 @@ const defaultRouteTable = new aws.ec2.DefaultRouteTable("r", {
             title="Optional">
         <span>Routes</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#defaultroutetableroute">List&lt;Default<wbr>Route<wbr>Table<wbr>Route<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#defaultroutetableroute">List&lt;Default<wbr>Route<wbr>Table<wbr>Route<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of route objects. Their keys are documented below.
 {{% /md %}}</dd>
@@ -195,7 +195,7 @@ const defaultRouteTable = new aws.ec2.DefaultRouteTable("r", {
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -263,7 +263,7 @@ const defaultRouteTable = new aws.ec2.DefaultRouteTable("r", {
             title="Optional">
         <span>propagating<wbr>Vgws</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of virtual gateways for propagation.
 {{% /md %}}</dd>
@@ -272,7 +272,7 @@ const defaultRouteTable = new aws.ec2.DefaultRouteTable("r", {
             title="Optional">
         <span>routes</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#defaultroutetableroute">Default<wbr>Route<wbr>Table<wbr>Route[]?</a></span>
+        <span class="property-type"><a href="#defaultroutetableroute">Default<wbr>Route<wbr>Table<wbr>Route[]</a></span>
     </dt>
     <dd>{{% md %}}A list of route objects. Their keys are documented below.
 {{% /md %}}</dd>
@@ -281,7 +281,7 @@ const defaultRouteTable = new aws.ec2.DefaultRouteTable("r", {
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -350,47 +350,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Default<wbr>Route<wbr>Table<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the Default Routing Table.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Owner<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the AWS account that owns the route table
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Propagating<wbr>Vgws</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}A list of virtual gateways for propagation.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Routes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#defaultroutetableroute">List&lt;Default<wbr>Route<wbr>Table<wbr>Route&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}A list of route objects. Their keys are documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -410,47 +374,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Default<wbr>Route<wbr>Table<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the Default Routing Table.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Owner<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the AWS account that owns the route table
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Propagating<wbr>Vgws</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}A list of virtual gateways for propagation.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Routes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#defaultroutetableroute">[]Default<wbr>Route<wbr>Table<wbr>Route</a></span>
-    </dt>
-    <dd>{{% md %}}A list of route objects. Their keys are documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -470,47 +398,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>default<wbr>Route<wbr>Table<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the Default Routing Table.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>owner<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the AWS account that owns the route table
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>propagating<wbr>Vgws</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}A list of virtual gateways for propagation.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>routes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#defaultroutetableroute">Default<wbr>Route<wbr>Table<wbr>Route[]</a></span>
-    </dt>
-    <dd>{{% md %}}A list of route objects. Their keys are documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -530,47 +422,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>default_<wbr>route_<wbr>table_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The ID of the Default Routing Table.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>owner_<wbr>id</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the AWS account that owns the route table
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>propagating_<wbr>vgws</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}A list of virtual gateways for propagation.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>routes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#defaultroutetableroute">List[Default<wbr>Route<wbr>Table<wbr>Route]</a></span>
-    </dt>
-    <dd>{{% md %}}A list of route objects. Their keys are documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -720,7 +576,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Default<wbr>Route<wbr>Table<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Default Routing Table.
 {{% /md %}}</dd>
@@ -729,7 +585,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Owner<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the AWS account that owns the route table
 {{% /md %}}</dd>
@@ -738,7 +594,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Propagating<wbr>Vgws</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of virtual gateways for propagation.
 {{% /md %}}</dd>
@@ -747,7 +603,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Routes</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#defaultroutetableroute">List&lt;Default<wbr>Route<wbr>Table<wbr>Route<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#defaultroutetableroute">List&lt;Default<wbr>Route<wbr>Table<wbr>Route<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of route objects. Their keys are documented below.
 {{% /md %}}</dd>
@@ -756,7 +612,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -765,7 +621,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Vpc<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -780,7 +636,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Default<wbr>Route<wbr>Table<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Default Routing Table.
 {{% /md %}}</dd>
@@ -789,7 +645,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Owner<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the AWS account that owns the route table
 {{% /md %}}</dd>
@@ -825,7 +681,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Vpc<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -840,7 +696,7 @@ The following state arguments are supported:
             title="Optional">
         <span>default<wbr>Route<wbr>Table<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Default Routing Table.
 {{% /md %}}</dd>
@@ -849,7 +705,7 @@ The following state arguments are supported:
             title="Optional">
         <span>owner<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the AWS account that owns the route table
 {{% /md %}}</dd>
@@ -858,7 +714,7 @@ The following state arguments are supported:
             title="Optional">
         <span>propagating<wbr>Vgws</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of virtual gateways for propagation.
 {{% /md %}}</dd>
@@ -867,7 +723,7 @@ The following state arguments are supported:
             title="Optional">
         <span>routes</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#defaultroutetableroute">Default<wbr>Route<wbr>Table<wbr>Route[]?</a></span>
+        <span class="property-type"><a href="#defaultroutetableroute">Default<wbr>Route<wbr>Table<wbr>Route[]</a></span>
     </dt>
     <dd>{{% md %}}A list of route objects. Their keys are documented below.
 {{% /md %}}</dd>
@@ -876,7 +732,7 @@ The following state arguments are supported:
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -885,7 +741,7 @@ The following state arguments are supported:
             title="Optional">
         <span>vpc<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -982,7 +838,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Cidr<wbr>Block</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CIDR block of the route.
 {{% /md %}}</dd>
@@ -991,7 +847,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Egress<wbr>Only<wbr>Gateway<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of a VPC Egress Only Internet Gateway.
 {{% /md %}}</dd>
@@ -1000,7 +856,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Gateway<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of a VPC internet gateway or a virtual private gateway.
 {{% /md %}}</dd>
@@ -1009,7 +865,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Instance<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of an EC2 instance.
 {{% /md %}}</dd>
@@ -1018,7 +874,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Ipv6Cidr<wbr>Block</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Ipv6 CIDR block of the route
 {{% /md %}}</dd>
@@ -1027,7 +883,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Nat<wbr>Gateway<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of a VPC NAT gateway.
 {{% /md %}}</dd>
@@ -1036,7 +892,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Network<wbr>Interface<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of an EC2 network interface.
 {{% /md %}}</dd>
@@ -1045,7 +901,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Transit<wbr>Gateway<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of an EC2 Transit Gateway.
 {{% /md %}}</dd>
@@ -1054,7 +910,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Vpc<wbr>Peering<wbr>Connection<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of a VPC peering connection.
 {{% /md %}}</dd>
@@ -1070,7 +926,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Cidr<wbr>Block</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CIDR block of the route.
 {{% /md %}}</dd>
@@ -1079,7 +935,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Egress<wbr>Only<wbr>Gateway<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of a VPC Egress Only Internet Gateway.
 {{% /md %}}</dd>
@@ -1088,7 +944,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Gateway<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of a VPC internet gateway or a virtual private gateway.
 {{% /md %}}</dd>
@@ -1097,7 +953,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Instance<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of an EC2 instance.
 {{% /md %}}</dd>
@@ -1106,7 +962,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Ipv6Cidr<wbr>Block</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Ipv6 CIDR block of the route
 {{% /md %}}</dd>
@@ -1115,7 +971,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Nat<wbr>Gateway<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of a VPC NAT gateway.
 {{% /md %}}</dd>
@@ -1124,7 +980,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Network<wbr>Interface<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of an EC2 network interface.
 {{% /md %}}</dd>
@@ -1133,7 +989,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Transit<wbr>Gateway<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of an EC2 Transit Gateway.
 {{% /md %}}</dd>
@@ -1142,7 +998,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Vpc<wbr>Peering<wbr>Connection<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of a VPC peering connection.
 {{% /md %}}</dd>
@@ -1158,7 +1014,7 @@ The following state arguments are supported:
             title="Optional">
         <span>cidr<wbr>Block</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CIDR block of the route.
 {{% /md %}}</dd>
@@ -1167,7 +1023,7 @@ The following state arguments are supported:
             title="Optional">
         <span>egress<wbr>Only<wbr>Gateway<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of a VPC Egress Only Internet Gateway.
 {{% /md %}}</dd>
@@ -1176,7 +1032,7 @@ The following state arguments are supported:
             title="Optional">
         <span>gateway<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of a VPC internet gateway or a virtual private gateway.
 {{% /md %}}</dd>
@@ -1185,7 +1041,7 @@ The following state arguments are supported:
             title="Optional">
         <span>instance<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of an EC2 instance.
 {{% /md %}}</dd>
@@ -1194,7 +1050,7 @@ The following state arguments are supported:
             title="Optional">
         <span>ipv6Cidr<wbr>Block</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Ipv6 CIDR block of the route
 {{% /md %}}</dd>
@@ -1203,7 +1059,7 @@ The following state arguments are supported:
             title="Optional">
         <span>nat<wbr>Gateway<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of a VPC NAT gateway.
 {{% /md %}}</dd>
@@ -1212,7 +1068,7 @@ The following state arguments are supported:
             title="Optional">
         <span>network<wbr>Interface<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of an EC2 network interface.
 {{% /md %}}</dd>
@@ -1221,7 +1077,7 @@ The following state arguments are supported:
             title="Optional">
         <span>transit<wbr>Gateway<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of an EC2 Transit Gateway.
 {{% /md %}}</dd>
@@ -1230,7 +1086,7 @@ The following state arguments are supported:
             title="Optional">
         <span>vpc<wbr>Peering<wbr>Connection<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of a VPC peering connection.
 {{% /md %}}</dd>

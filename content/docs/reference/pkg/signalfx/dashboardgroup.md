@@ -19,7 +19,7 @@ In the SignalFx web UI, a [dashboard group](https://developers.signalfx.com/dash
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/signalfx/#DashboardGroup">DashboardGroup</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/signalfx/#DashboardGroupArgs">DashboardGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/signalfx/#DashboardGroup">DashboardGroup</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/signalfx/#DashboardGroupArgs">DashboardGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -27,11 +27,11 @@ In the SignalFx web UI, a [dashboard group](https://developers.signalfx.com/dash
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewDashboardGroup<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/go/signalfx/?tab=doc#DashboardGroupArgs">DashboardGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/go/signalfx/?tab=doc#DashboardGroup">DashboardGroup</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewDashboardGroup<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/go/signalfx/?tab=doc#DashboardGroupArgs">DashboardGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/go/signalfx/?tab=doc#DashboardGroup">DashboardGroup</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Signalfx/Pulumi.Signalfx..DashboardGroup.html">DashboardGroup</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Signalfx/Pulumi.Signalfx.DashboardGroupArgs.html">DashboardGroupArgs</a></span>? <span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Signalfx/Pulumi.Signalfx.DashboardGroup.html">DashboardGroup</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Signalfx/Pulumi.SignalFx.DashboardGroupArgs.html">DashboardGroupArgs</a></span>? <span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -127,7 +127,7 @@ In the SignalFx web UI, a [dashboard group](https://developers.signalfx.com/dash
             title="Optional">
         <span>Authorized<wbr>Writer<wbr>Teams</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Team IDs that have write access to this dashboard group. Remember to use an admin's token if using this feature and to include that admin's team (or user id in `authorized_writer_teams`).
 {{% /md %}}</dd>
@@ -136,7 +136,7 @@ In the SignalFx web UI, a [dashboard group](https://developers.signalfx.com/dash
             title="Optional">
         <span>Authorized<wbr>Writer<wbr>Users</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}User IDs that have write access to this dashboard group. Remember to use an admin's token if using this feature and to include that admin's user id (or team id in `authorized_writer_teams`).
 {{% /md %}}</dd>
@@ -145,7 +145,7 @@ In the SignalFx web UI, a [dashboard group](https://developers.signalfx.com/dash
             title="Optional">
         <span>Dashboards</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardgroupdashboard">List&lt;Dashboard<wbr>Group<wbr>Dashboard<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#dashboardgroupdashboard">List&lt;Pulumi.<wbr>Signal<wbr>Fx.<wbr>Inputs.<wbr>Dashboard<wbr>Group<wbr>Dashboard<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}[Mirrored dashboards](https://docs.signalfx.com/en/latest/dashboards/dashboard-mirrors.html) in this dashboard group. **Note:** This feature is not present in all accounts. Please contact support if you are unsure.
 {{% /md %}}</dd>
@@ -154,7 +154,7 @@ In the SignalFx web UI, a [dashboard group](https://developers.signalfx.com/dash
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the dashboard group.
 {{% /md %}}</dd>
@@ -163,7 +163,7 @@ In the SignalFx web UI, a [dashboard group](https://developers.signalfx.com/dash
             title="Optional">
         <span>Import<wbr>Qualifiers</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardgroupimportqualifier">List&lt;Dashboard<wbr>Group<wbr>Import<wbr>Qualifier<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#dashboardgroupimportqualifier">List&lt;Pulumi.<wbr>Signal<wbr>Fx.<wbr>Inputs.<wbr>Dashboard<wbr>Group<wbr>Import<wbr>Qualifier<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -171,7 +171,7 @@ In the SignalFx web UI, a [dashboard group](https://developers.signalfx.com/dash
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the dashboard group.
 {{% /md %}}</dd>
@@ -180,7 +180,7 @@ In the SignalFx web UI, a [dashboard group](https://developers.signalfx.com/dash
             title="Optional">
         <span>Teams</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Team IDs to associate the dashboard group to.
 {{% /md %}}</dd>
@@ -223,7 +223,7 @@ In the SignalFx web UI, a [dashboard group](https://developers.signalfx.com/dash
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the dashboard group.
 {{% /md %}}</dd>
@@ -240,7 +240,7 @@ In the SignalFx web UI, a [dashboard group](https://developers.signalfx.com/dash
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the dashboard group.
 {{% /md %}}</dd>
@@ -265,7 +265,7 @@ In the SignalFx web UI, a [dashboard group](https://developers.signalfx.com/dash
             title="Optional">
         <span>authorized<wbr>Writer<wbr>Teams</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Team IDs that have write access to this dashboard group. Remember to use an admin's token if using this feature and to include that admin's team (or user id in `authorized_writer_teams`).
 {{% /md %}}</dd>
@@ -274,7 +274,7 @@ In the SignalFx web UI, a [dashboard group](https://developers.signalfx.com/dash
             title="Optional">
         <span>authorized<wbr>Writer<wbr>Users</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}User IDs that have write access to this dashboard group. Remember to use an admin's token if using this feature and to include that admin's user id (or team id in `authorized_writer_teams`).
 {{% /md %}}</dd>
@@ -283,7 +283,7 @@ In the SignalFx web UI, a [dashboard group](https://developers.signalfx.com/dash
             title="Optional">
         <span>dashboards</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardgroupdashboard">Dashboard<wbr>Group<wbr>Dashboard[]?</a></span>
+        <span class="property-type"><a href="#dashboardgroupdashboard">Dashboard<wbr>Group<wbr>Dashboard[]</a></span>
     </dt>
     <dd>{{% md %}}[Mirrored dashboards](https://docs.signalfx.com/en/latest/dashboards/dashboard-mirrors.html) in this dashboard group. **Note:** This feature is not present in all accounts. Please contact support if you are unsure.
 {{% /md %}}</dd>
@@ -292,7 +292,7 @@ In the SignalFx web UI, a [dashboard group](https://developers.signalfx.com/dash
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the dashboard group.
 {{% /md %}}</dd>
@@ -301,7 +301,7 @@ In the SignalFx web UI, a [dashboard group](https://developers.signalfx.com/dash
             title="Optional">
         <span>import<wbr>Qualifiers</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardgroupimportqualifier">Dashboard<wbr>Group<wbr>Import<wbr>Qualifier[]?</a></span>
+        <span class="property-type"><a href="#dashboardgroupimportqualifier">Dashboard<wbr>Group<wbr>Import<wbr>Qualifier[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -309,7 +309,7 @@ In the SignalFx web UI, a [dashboard group](https://developers.signalfx.com/dash
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the dashboard group.
 {{% /md %}}</dd>
@@ -318,7 +318,7 @@ In the SignalFx web UI, a [dashboard group](https://developers.signalfx.com/dash
             title="Optional">
         <span>teams</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Team IDs to associate the dashboard group to.
 {{% /md %}}</dd>
@@ -396,292 +396,6 @@ In the SignalFx web UI, a [dashboard group](https://developers.signalfx.com/dash
 {{% /choosable %}}
 
 
-
-
-
-
-
-## DashboardGroup Output Properties
-
-The following output properties are available:
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Authorized<wbr>Writer<wbr>Teams</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}Team IDs that have write access to this dashboard group. Remember to use an admin's token if using this feature and to include that admin's team (or user id in `authorized_writer_teams`).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Authorized<wbr>Writer<wbr>Users</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}User IDs that have write access to this dashboard group. Remember to use an admin's token if using this feature and to include that admin's user id (or team id in `authorized_writer_teams`).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Dashboards</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardgroupdashboard">List&lt;Dashboard<wbr>Group<wbr>Dashboard&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}[Mirrored dashboards](https://docs.signalfx.com/en/latest/dashboards/dashboard-mirrors.html) in this dashboard group. **Note:** This feature is not present in all accounts. Please contact support if you are unsure.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Description of the dashboard group.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Import<wbr>Qualifiers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardgroupimportqualifier">List&lt;Dashboard<wbr>Group<wbr>Import<wbr>Qualifier&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the dashboard group.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Teams</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}Team IDs to associate the dashboard group to.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Authorized<wbr>Writer<wbr>Teams</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}Team IDs that have write access to this dashboard group. Remember to use an admin's token if using this feature and to include that admin's team (or user id in `authorized_writer_teams`).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Authorized<wbr>Writer<wbr>Users</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}User IDs that have write access to this dashboard group. Remember to use an admin's token if using this feature and to include that admin's user id (or team id in `authorized_writer_teams`).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Dashboards</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardgroupdashboard">[]Dashboard<wbr>Group<wbr>Dashboard</a></span>
-    </dt>
-    <dd>{{% md %}}[Mirrored dashboards](https://docs.signalfx.com/en/latest/dashboards/dashboard-mirrors.html) in this dashboard group. **Note:** This feature is not present in all accounts. Please contact support if you are unsure.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Description of the dashboard group.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Import<wbr>Qualifiers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardgroupimportqualifier">[]Dashboard<wbr>Group<wbr>Import<wbr>Qualifier</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the dashboard group.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Teams</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}Team IDs to associate the dashboard group to.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>authorized<wbr>Writer<wbr>Teams</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}Team IDs that have write access to this dashboard group. Remember to use an admin's token if using this feature and to include that admin's team (or user id in `authorized_writer_teams`).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>authorized<wbr>Writer<wbr>Users</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}User IDs that have write access to this dashboard group. Remember to use an admin's token if using this feature and to include that admin's user id (or team id in `authorized_writer_teams`).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>dashboards</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardgroupdashboard">Dashboard<wbr>Group<wbr>Dashboard[]?</a></span>
-    </dt>
-    <dd>{{% md %}}[Mirrored dashboards](https://docs.signalfx.com/en/latest/dashboards/dashboard-mirrors.html) in this dashboard group. **Note:** This feature is not present in all accounts. Please contact support if you are unsure.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Description of the dashboard group.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>import<wbr>Qualifiers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardgroupimportqualifier">Dashboard<wbr>Group<wbr>Import<wbr>Qualifier[]?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the dashboard group.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>teams</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}Team IDs to associate the dashboard group to.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>authorized_<wbr>writer_<wbr>teams</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}Team IDs that have write access to this dashboard group. Remember to use an admin's token if using this feature and to include that admin's team (or user id in `authorized_writer_teams`).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>authorized_<wbr>writer_<wbr>users</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}User IDs that have write access to this dashboard group. Remember to use an admin's token if using this feature and to include that admin's user id (or team id in `authorized_writer_teams`).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>dashboards</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardgroupdashboard">List[Dashboard<wbr>Group<wbr>Dashboard]</a></span>
-    </dt>
-    <dd>{{% md %}}[Mirrored dashboards](https://docs.signalfx.com/en/latest/dashboards/dashboard-mirrors.html) in this dashboard group. **Note:** This feature is not present in all accounts. Please contact support if you are unsure.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Description of the dashboard group.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>import_<wbr>qualifiers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardgroupimportqualifier">List[Dashboard<wbr>Group<wbr>Import<wbr>Qualifier]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Name of the dashboard group.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>teams</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}Team IDs to associate the dashboard group to.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
 
 
 
@@ -709,7 +423,7 @@ Get an existing DashboardGroup resource's state with the given name, ID, and opt
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Signalfx/Pulumi.Signalfx..DashboardGroup.html">DashboardGroup</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Signalfx/Pulumi.Signalfx..DashboardGroupState.html">DashboardGroupState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Signalfx/Pulumi.Signalfx.DashboardGroup.html">DashboardGroup</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Signalfx/Pulumi.Signalfx..DashboardGroupState.html">DashboardGroupState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -819,7 +533,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Authorized<wbr>Writer<wbr>Teams</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Team IDs that have write access to this dashboard group. Remember to use an admin's token if using this feature and to include that admin's team (or user id in `authorized_writer_teams`).
 {{% /md %}}</dd>
@@ -828,7 +542,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Authorized<wbr>Writer<wbr>Users</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}User IDs that have write access to this dashboard group. Remember to use an admin's token if using this feature and to include that admin's user id (or team id in `authorized_writer_teams`).
 {{% /md %}}</dd>
@@ -837,7 +551,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Dashboards</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardgroupdashboard">List&lt;Dashboard<wbr>Group<wbr>Dashboard<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#dashboardgroupdashboard">List&lt;Pulumi.<wbr>Signal<wbr>Fx.<wbr>Inputs.<wbr>Dashboard<wbr>Group<wbr>Dashboard<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}[Mirrored dashboards](https://docs.signalfx.com/en/latest/dashboards/dashboard-mirrors.html) in this dashboard group. **Note:** This feature is not present in all accounts. Please contact support if you are unsure.
 {{% /md %}}</dd>
@@ -846,7 +560,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the dashboard group.
 {{% /md %}}</dd>
@@ -855,7 +569,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Import<wbr>Qualifiers</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardgroupimportqualifier">List&lt;Dashboard<wbr>Group<wbr>Import<wbr>Qualifier<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#dashboardgroupimportqualifier">List&lt;Pulumi.<wbr>Signal<wbr>Fx.<wbr>Inputs.<wbr>Dashboard<wbr>Group<wbr>Import<wbr>Qualifier<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -863,7 +577,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the dashboard group.
 {{% /md %}}</dd>
@@ -872,7 +586,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Teams</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Team IDs to associate the dashboard group to.
 {{% /md %}}</dd>
@@ -915,7 +629,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the dashboard group.
 {{% /md %}}</dd>
@@ -932,7 +646,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the dashboard group.
 {{% /md %}}</dd>
@@ -957,7 +671,7 @@ The following state arguments are supported:
             title="Optional">
         <span>authorized<wbr>Writer<wbr>Teams</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Team IDs that have write access to this dashboard group. Remember to use an admin's token if using this feature and to include that admin's team (or user id in `authorized_writer_teams`).
 {{% /md %}}</dd>
@@ -966,7 +680,7 @@ The following state arguments are supported:
             title="Optional">
         <span>authorized<wbr>Writer<wbr>Users</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}User IDs that have write access to this dashboard group. Remember to use an admin's token if using this feature and to include that admin's user id (or team id in `authorized_writer_teams`).
 {{% /md %}}</dd>
@@ -975,7 +689,7 @@ The following state arguments are supported:
             title="Optional">
         <span>dashboards</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardgroupdashboard">Dashboard<wbr>Group<wbr>Dashboard[]?</a></span>
+        <span class="property-type"><a href="#dashboardgroupdashboard">Dashboard<wbr>Group<wbr>Dashboard[]</a></span>
     </dt>
     <dd>{{% md %}}[Mirrored dashboards](https://docs.signalfx.com/en/latest/dashboards/dashboard-mirrors.html) in this dashboard group. **Note:** This feature is not present in all accounts. Please contact support if you are unsure.
 {{% /md %}}</dd>
@@ -984,7 +698,7 @@ The following state arguments are supported:
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the dashboard group.
 {{% /md %}}</dd>
@@ -993,7 +707,7 @@ The following state arguments are supported:
             title="Optional">
         <span>import<wbr>Qualifiers</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardgroupimportqualifier">Dashboard<wbr>Group<wbr>Import<wbr>Qualifier[]?</a></span>
+        <span class="property-type"><a href="#dashboardgroupimportqualifier">Dashboard<wbr>Group<wbr>Import<wbr>Qualifier[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1001,7 +715,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the dashboard group.
 {{% /md %}}</dd>
@@ -1010,7 +724,7 @@ The following state arguments are supported:
             title="Optional">
         <span>teams</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Team IDs to associate the dashboard group to.
 {{% /md %}}</dd>
@@ -1126,7 +840,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Description<wbr>Override</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description that will override the original dashboards's description.
 {{% /md %}}</dd>
@@ -1135,7 +849,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Filter<wbr>Overrides</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardgroupdashboardfilteroverride">List&lt;Dashboard<wbr>Group<wbr>Dashboard<wbr>Filter<wbr>Override<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#dashboardgroupdashboardfilteroverride">List&lt;Pulumi.<wbr>Signal<wbr>Fx.<wbr>Inputs.<wbr>Dashboard<wbr>Group<wbr>Dashboard<wbr>Filter<wbr>Override<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The description that will override the original dashboards's description.
 {{% /md %}}</dd>
@@ -1144,7 +858,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name<wbr>Override</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name that will override the original dashboards's name.
 {{% /md %}}</dd>
@@ -1153,7 +867,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Variable<wbr>Overrides</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardgroupdashboardvariableoverride">List&lt;Dashboard<wbr>Group<wbr>Dashboard<wbr>Variable<wbr>Override<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#dashboardgroupdashboardvariableoverride">List&lt;Pulumi.<wbr>Signal<wbr>Fx.<wbr>Inputs.<wbr>Dashboard<wbr>Group<wbr>Dashboard<wbr>Variable<wbr>Override<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1177,7 +891,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Description<wbr>Override</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description that will override the original dashboards's description.
 {{% /md %}}</dd>
@@ -1195,7 +909,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name<wbr>Override</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name that will override the original dashboards's name.
 {{% /md %}}</dd>
@@ -1228,7 +942,7 @@ The following state arguments are supported:
             title="Optional">
         <span>description<wbr>Override</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description that will override the original dashboards's description.
 {{% /md %}}</dd>
@@ -1237,7 +951,7 @@ The following state arguments are supported:
             title="Optional">
         <span>filter<wbr>Overrides</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardgroupdashboardfilteroverride">Dashboard<wbr>Group<wbr>Dashboard<wbr>Filter<wbr>Override[]?</a></span>
+        <span class="property-type"><a href="#dashboardgroupdashboardfilteroverride">Dashboard<wbr>Group<wbr>Dashboard<wbr>Filter<wbr>Override[]</a></span>
     </dt>
     <dd>{{% md %}}The description that will override the original dashboards's description.
 {{% /md %}}</dd>
@@ -1246,7 +960,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name<wbr>Override</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name that will override the original dashboards's name.
 {{% /md %}}</dd>
@@ -1255,7 +969,7 @@ The following state arguments are supported:
             title="Optional">
         <span>variable<wbr>Overrides</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardgroupdashboardvariableoverride">Dashboard<wbr>Group<wbr>Dashboard<wbr>Variable<wbr>Override[]?</a></span>
+        <span class="property-type"><a href="#dashboardgroupdashboardvariableoverride">Dashboard<wbr>Group<wbr>Dashboard<wbr>Variable<wbr>Override[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1332,15 +1046,6 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Negated</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}If true,  only data that does not match the specified value of the specified property appear in the event overlay. Defaults to `false`.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Property</span>
@@ -1354,9 +1059,18 @@ The following state arguments are supported:
             title="Required">
         <span>Values</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}(Optional) List of of strings (which will be treated as an OR filter on the property).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Negated</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If true,  only data that does not match the specified value of the specified property appear in the event overlay. Defaults to `false`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1365,15 +1079,6 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Negated</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}If true,  only data that does not match the specified value of the specified property appear in the event overlay. Defaults to `false`.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1393,21 +1098,21 @@ The following state arguments are supported:
     <dd>{{% md %}}(Optional) List of of strings (which will be treated as an OR filter on the property).
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>Negated</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If true,  only data that does not match the specified value of the specified property appear in the event overlay. Defaults to `false`.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>negated</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}If true,  only data that does not match the specified value of the specified property appear in the event overlay. Defaults to `false`.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1427,21 +1132,21 @@ The following state arguments are supported:
     <dd>{{% md %}}(Optional) List of of strings (which will be treated as an OR filter on the property).
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>negated</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}If true,  only data that does not match the specified value of the specified property appear in the event overlay. Defaults to `false`.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>negated</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}If true,  only data that does not match the specified value of the specified property appear in the event overlay. Defaults to `false`.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1459,6 +1164,15 @@ The following state arguments are supported:
         <span class="property-type">List[str]</span>
     </dt>
     <dd>{{% md %}}(Optional) List of of strings (which will be treated as an OR filter on the property).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>negated</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If true,  only data that does not match the specified value of the specified property appear in the event overlay. Defaults to `false`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1496,7 +1210,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Values</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}(Optional) List of of strings (which will be treated as an OR filter on the property).
 {{% /md %}}</dd>
@@ -1505,7 +1219,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Values<wbr>Suggesteds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of strings of suggested values for this variable; these suggestions will receive priority when values are autosuggested for this variable.
 {{% /md %}}</dd>
@@ -1564,7 +1278,7 @@ The following state arguments are supported:
             title="Optional">
         <span>values</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}(Optional) List of of strings (which will be treated as an OR filter on the property).
 {{% /md %}}</dd>
@@ -1573,7 +1287,7 @@ The following state arguments are supported:
             title="Optional">
         <span>values<wbr>Suggesteds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of strings of suggested values for this variable; these suggestions will receive priority when values are autosuggested for this variable.
 {{% /md %}}</dd>
@@ -1634,19 +1348,19 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Filters</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardgroupimportqualifierfilter">List&lt;Dashboard<wbr>Group<wbr>Import<wbr>Qualifier<wbr>Filter<wbr>Args&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Metric</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Filters</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dashboardgroupimportqualifierfilter">List&lt;Pulumi.<wbr>Signal<wbr>Fx.<wbr>Inputs.<wbr>Dashboard<wbr>Group<wbr>Import<wbr>Qualifier<wbr>Filter<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1657,19 +1371,19 @@ The following state arguments are supported:
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Filters</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardgroupimportqualifierfilter">[]Dashboard<wbr>Group<wbr>Import<wbr>Qualifier<wbr>Filter</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Metric</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Filters</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dashboardgroupimportqualifierfilter">[]Dashboard<wbr>Group<wbr>Import<wbr>Qualifier<wbr>Filter</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1680,19 +1394,19 @@ The following state arguments are supported:
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>filters</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardgroupimportqualifierfilter">Dashboard<wbr>Group<wbr>Import<wbr>Qualifier<wbr>Filter[]?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>metric</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>filters</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dashboardgroupimportqualifierfilter">Dashboard<wbr>Group<wbr>Import<wbr>Qualifier<wbr>Filter[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1703,19 +1417,19 @@ The following state arguments are supported:
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>filters</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#dashboardgroupimportqualifierfilter">List[Dashboard<wbr>Group<wbr>Import<wbr>Qualifier<wbr>Filter]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>metric</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>filters</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dashboardgroupimportqualifierfilter">List[Dashboard<wbr>Group<wbr>Import<wbr>Qualifier<wbr>Filter]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1741,15 +1455,6 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Negated</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}If true,  only data that does not match the specified value of the specified property appear in the event overlay. Defaults to `false`.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Property</span>
@@ -1763,9 +1468,18 @@ The following state arguments are supported:
             title="Required">
         <span>Values</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}(Optional) List of of strings (which will be treated as an OR filter on the property).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Negated</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If true,  only data that does not match the specified value of the specified property appear in the event overlay. Defaults to `false`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1774,15 +1488,6 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Negated</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}If true,  only data that does not match the specified value of the specified property appear in the event overlay. Defaults to `false`.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1802,21 +1507,21 @@ The following state arguments are supported:
     <dd>{{% md %}}(Optional) List of of strings (which will be treated as an OR filter on the property).
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>Negated</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If true,  only data that does not match the specified value of the specified property appear in the event overlay. Defaults to `false`.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>negated</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}If true,  only data that does not match the specified value of the specified property appear in the event overlay. Defaults to `false`.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1836,21 +1541,21 @@ The following state arguments are supported:
     <dd>{{% md %}}(Optional) List of of strings (which will be treated as an OR filter on the property).
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>negated</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}If true,  only data that does not match the specified value of the specified property appear in the event overlay. Defaults to `false`.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>negated</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}If true,  only data that does not match the specified value of the specified property appear in the event overlay. Defaults to `false`.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1868,6 +1573,15 @@ The following state arguments are supported:
         <span class="property-type">List[str]</span>
     </dt>
     <dd>{{% md %}}(Optional) List of of strings (which will be treated as an OR filter on the property).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>negated</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If true,  only data that does not match the specified value of the specified property appear in the event overlay. Defaults to `false`.
 {{% /md %}}</dd>
 
 </dl>

@@ -90,7 +90,7 @@ Supported nested arguments for the `options` configuration block:
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/acm/#Certificate">Certificate</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/acm/#CertificateArgs">CertificateArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/acm/#Certificate">Certificate</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/acm/#CertificateArgs">CertificateArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -98,7 +98,7 @@ Supported nested arguments for the `options` configuration block:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewCertificate<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/acm?tab=doc#CertificateArgs">CertificateArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/acm?tab=doc#Certificate">Certificate</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewCertificate<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/acm?tab=doc#CertificateArgs">CertificateArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/acm?tab=doc#Certificate">Certificate</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -198,7 +198,7 @@ Supported nested arguments for the `options` configuration block:
             title="Optional">
         <span>Certificate<wbr>Authority<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARN of an ACMPCA
 {{% /md %}}</dd>
@@ -207,7 +207,7 @@ Supported nested arguments for the `options` configuration block:
             title="Optional">
         <span>Certificate<wbr>Body</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The certificate's PEM-formatted public key
 {{% /md %}}</dd>
@@ -216,7 +216,7 @@ Supported nested arguments for the `options` configuration block:
             title="Optional">
         <span>Certificate<wbr>Chain</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The certificate's PEM-formatted chain
 * Creating a private CA issued certificate
@@ -226,7 +226,7 @@ Supported nested arguments for the `options` configuration block:
             title="Optional">
         <span>Domain<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A domain name for which the certificate should be issued
 {{% /md %}}</dd>
@@ -235,7 +235,7 @@ Supported nested arguments for the `options` configuration block:
             title="Optional">
         <span>Options</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificateoptions">Certificate<wbr>Options<wbr>Args?</a></span>
+        <span class="property-type"><a href="#certificateoptions">Certificate<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -243,7 +243,7 @@ Supported nested arguments for the `options` configuration block:
             title="Optional">
         <span>Private<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The certificate's PEM-formatted private key
 {{% /md %}}</dd>
@@ -252,7 +252,7 @@ Supported nested arguments for the `options` configuration block:
             title="Optional">
         <span>Subject<wbr>Alternative<wbr>Names</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of domains that should be SANs in the issued certificate
 {{% /md %}}</dd>
@@ -261,7 +261,7 @@ Supported nested arguments for the `options` configuration block:
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -270,7 +270,7 @@ Supported nested arguments for the `options` configuration block:
             title="Optional">
         <span>Validation<wbr>Method</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Which method to use for validation. `DNS` or `EMAIL` are valid, `NONE` can be used for certificates that were imported into ACM and then into state managed by this provider.
 * Importing an existing certificate
@@ -287,7 +287,7 @@ Supported nested arguments for the `options` configuration block:
             title="Optional">
         <span>Certificate<wbr>Authority<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARN of an ACMPCA
 {{% /md %}}</dd>
@@ -296,7 +296,7 @@ Supported nested arguments for the `options` configuration block:
             title="Optional">
         <span>Certificate<wbr>Body</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The certificate's PEM-formatted public key
 {{% /md %}}</dd>
@@ -305,7 +305,7 @@ Supported nested arguments for the `options` configuration block:
             title="Optional">
         <span>Certificate<wbr>Chain</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The certificate's PEM-formatted chain
 * Creating a private CA issued certificate
@@ -315,7 +315,7 @@ Supported nested arguments for the `options` configuration block:
             title="Optional">
         <span>Domain<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A domain name for which the certificate should be issued
 {{% /md %}}</dd>
@@ -324,7 +324,7 @@ Supported nested arguments for the `options` configuration block:
             title="Optional">
         <span>Options</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificateoptions">*Certificate<wbr>Options</a></span>
+        <span class="property-type"><a href="#certificateoptions">Certificate<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -332,7 +332,7 @@ Supported nested arguments for the `options` configuration block:
             title="Optional">
         <span>Private<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The certificate's PEM-formatted private key
 {{% /md %}}</dd>
@@ -359,7 +359,7 @@ Supported nested arguments for the `options` configuration block:
             title="Optional">
         <span>Validation<wbr>Method</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Which method to use for validation. `DNS` or `EMAIL` are valid, `NONE` can be used for certificates that were imported into ACM and then into state managed by this provider.
 * Importing an existing certificate
@@ -376,7 +376,7 @@ Supported nested arguments for the `options` configuration block:
             title="Optional">
         <span>certificate<wbr>Authority<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARN of an ACMPCA
 {{% /md %}}</dd>
@@ -385,7 +385,7 @@ Supported nested arguments for the `options` configuration block:
             title="Optional">
         <span>certificate<wbr>Body</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The certificate's PEM-formatted public key
 {{% /md %}}</dd>
@@ -394,7 +394,7 @@ Supported nested arguments for the `options` configuration block:
             title="Optional">
         <span>certificate<wbr>Chain</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The certificate's PEM-formatted chain
 * Creating a private CA issued certificate
@@ -404,7 +404,7 @@ Supported nested arguments for the `options` configuration block:
             title="Optional">
         <span>domain<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A domain name for which the certificate should be issued
 {{% /md %}}</dd>
@@ -413,7 +413,7 @@ Supported nested arguments for the `options` configuration block:
             title="Optional">
         <span>options</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificateoptions">Certificate<wbr>Options?</a></span>
+        <span class="property-type"><a href="#certificateoptions">Certificate<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -421,7 +421,7 @@ Supported nested arguments for the `options` configuration block:
             title="Optional">
         <span>private<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The certificate's PEM-formatted private key
 {{% /md %}}</dd>
@@ -430,7 +430,7 @@ Supported nested arguments for the `options` configuration block:
             title="Optional">
         <span>subject<wbr>Alternative<wbr>Names</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of domains that should be SANs in the issued certificate
 {{% /md %}}</dd>
@@ -439,7 +439,7 @@ Supported nested arguments for the `options` configuration block:
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -448,7 +448,7 @@ Supported nested arguments for the `options` configuration block:
             title="Optional">
         <span>validation<wbr>Method</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Which method to use for validation. `DNS` or `EMAIL` are valid, `NONE` can be used for certificates that were imported into ACM and then into state managed by this provider.
 * Importing an existing certificate
@@ -573,43 +573,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Certificate<wbr>Authority<wbr>Arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}ARN of an ACMPCA
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Certificate<wbr>Body</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The certificate's PEM-formatted public key
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Certificate<wbr>Chain</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The certificate's PEM-formatted chain
-* Creating a private CA issued certificate
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Domain<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A domain name for which the certificate should be issued
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Domain<wbr>Validation<wbr>Options</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#certificatedomainvalidationoption">List&lt;Certificate<wbr>Domain<wbr>Validation<wbr>Option&gt;</a></span>
@@ -619,56 +582,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Options</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificateoptions">Certificate<wbr>Options?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Private<wbr>Key</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The certificate's PEM-formatted private key
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Subject<wbr>Alternative<wbr>Names</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
-    </dt>
-    <dd>{{% md %}}A list of domains that should be SANs in the issued certificate
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Validation<wbr>Emails</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of addresses that received a validation E-Mail. Only set if `EMAIL`-validation was used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Validation<wbr>Method</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Which method to use for validation. `DNS` or `EMAIL` are valid, `NONE` can be used for certificates that were imported into ACM and then into state managed by this provider.
-* Importing an existing certificate
 {{% /md %}}</dd>
 
 </dl>
@@ -689,43 +607,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Certificate<wbr>Authority<wbr>Arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}ARN of an ACMPCA
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Certificate<wbr>Body</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The certificate's PEM-formatted public key
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Certificate<wbr>Chain</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The certificate's PEM-formatted chain
-* Creating a private CA issued certificate
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Domain<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A domain name for which the certificate should be issued
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Domain<wbr>Validation<wbr>Options</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#certificatedomainvalidationoption">[]Certificate<wbr>Domain<wbr>Validation<wbr>Option</a></span>
@@ -735,56 +616,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Options</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificateoptions">*Certificate<wbr>Options</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Private<wbr>Key</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The certificate's PEM-formatted private key
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Subject<wbr>Alternative<wbr>Names</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}A list of domains that should be SANs in the issued certificate
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Validation<wbr>Emails</span>
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of addresses that received a validation E-Mail. Only set if `EMAIL`-validation was used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Validation<wbr>Method</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Which method to use for validation. `DNS` or `EMAIL` are valid, `NONE` can be used for certificates that were imported into ACM and then into state managed by this provider.
-* Importing an existing certificate
 {{% /md %}}</dd>
 
 </dl>
@@ -805,43 +641,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>certificate<wbr>Authority<wbr>Arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}ARN of an ACMPCA
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>certificate<wbr>Body</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The certificate's PEM-formatted public key
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>certificate<wbr>Chain</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The certificate's PEM-formatted chain
-* Creating a private CA issued certificate
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>domain<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A domain name for which the certificate should be issued
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>domain<wbr>Validation<wbr>Options</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#certificatedomainvalidationoption">Certificate<wbr>Domain<wbr>Validation<wbr>Option[]</a></span>
@@ -851,56 +650,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>options</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificateoptions">Certificate<wbr>Options?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>private<wbr>Key</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The certificate's PEM-formatted private key
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>subject<wbr>Alternative<wbr>Names</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
-    </dt>
-    <dd>{{% md %}}A list of domains that should be SANs in the issued certificate
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>validation<wbr>Emails</span>
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of addresses that received a validation E-Mail. Only set if `EMAIL`-validation was used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>validation<wbr>Method</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Which method to use for validation. `DNS` or `EMAIL` are valid, `NONE` can be used for certificates that were imported into ACM and then into state managed by this provider.
-* Importing an existing certificate
 {{% /md %}}</dd>
 
 </dl>
@@ -921,43 +675,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>certificate_<wbr>authority_<wbr>arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}ARN of an ACMPCA
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>certificate_<wbr>body</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The certificate's PEM-formatted public key
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>certificate_<wbr>chain</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The certificate's PEM-formatted chain
-* Creating a private CA issued certificate
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>domain_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}A domain name for which the certificate should be issued
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>domain_<wbr>validation_<wbr>options</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#certificatedomainvalidationoption">List[Certificate<wbr>Domain<wbr>Validation<wbr>Option]</a></span>
@@ -967,56 +684,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>options</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificateoptions">Dict[Certificate<wbr>Options]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>private_<wbr>key</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The certificate's PEM-formatted private key
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>subject_<wbr>alternative_<wbr>names</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}A list of domains that should be SANs in the issued certificate
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>validation_<wbr>emails</span>
         <span class="property-indicator"></span>
         <span class="property-type">List[str]</span>
     </dt>
     <dd>{{% md %}}A list of addresses that received a validation E-Mail. Only set if `EMAIL`-validation was used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>validation_<wbr>method</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Which method to use for validation. `DNS` or `EMAIL` are valid, `NONE` can be used for certificates that were imported into ACM and then into state managed by this provider.
-* Importing an existing certificate
 {{% /md %}}</dd>
 
 </dl>
@@ -1158,7 +830,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the certificate
 {{% /md %}}</dd>
@@ -1167,7 +839,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Certificate<wbr>Authority<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARN of an ACMPCA
 {{% /md %}}</dd>
@@ -1176,7 +848,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Certificate<wbr>Body</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The certificate's PEM-formatted public key
 {{% /md %}}</dd>
@@ -1185,7 +857,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Certificate<wbr>Chain</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The certificate's PEM-formatted chain
 * Creating a private CA issued certificate
@@ -1195,7 +867,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Domain<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A domain name for which the certificate should be issued
 {{% /md %}}</dd>
@@ -1204,7 +876,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Domain<wbr>Validation<wbr>Options</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatedomainvalidationoption">List&lt;Certificate<wbr>Domain<wbr>Validation<wbr>Option<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#certificatedomainvalidationoption">List&lt;Certificate<wbr>Domain<wbr>Validation<wbr>Option<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of attributes to feed into other resources to complete certificate validation. Can have more than one element, e.g. if SANs are defined. Only set if `DNS`-validation was used.
 {{% /md %}}</dd>
@@ -1213,7 +885,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Options</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificateoptions">Certificate<wbr>Options<wbr>Args?</a></span>
+        <span class="property-type"><a href="#certificateoptions">Certificate<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1221,7 +893,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Private<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The certificate's PEM-formatted private key
 {{% /md %}}</dd>
@@ -1230,7 +902,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Subject<wbr>Alternative<wbr>Names</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of domains that should be SANs in the issued certificate
 {{% /md %}}</dd>
@@ -1239,7 +911,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1248,7 +920,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Validation<wbr>Emails</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of addresses that received a validation E-Mail. Only set if `EMAIL`-validation was used.
 {{% /md %}}</dd>
@@ -1257,7 +929,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Validation<wbr>Method</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Which method to use for validation. `DNS` or `EMAIL` are valid, `NONE` can be used for certificates that were imported into ACM and then into state managed by this provider.
 * Importing an existing certificate
@@ -1274,7 +946,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the certificate
 {{% /md %}}</dd>
@@ -1283,7 +955,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Certificate<wbr>Authority<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARN of an ACMPCA
 {{% /md %}}</dd>
@@ -1292,7 +964,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Certificate<wbr>Body</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The certificate's PEM-formatted public key
 {{% /md %}}</dd>
@@ -1301,7 +973,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Certificate<wbr>Chain</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The certificate's PEM-formatted chain
 * Creating a private CA issued certificate
@@ -1311,7 +983,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Domain<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A domain name for which the certificate should be issued
 {{% /md %}}</dd>
@@ -1329,7 +1001,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Options</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificateoptions">*Certificate<wbr>Options</a></span>
+        <span class="property-type"><a href="#certificateoptions">Certificate<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1337,7 +1009,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Private<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The certificate's PEM-formatted private key
 {{% /md %}}</dd>
@@ -1373,7 +1045,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Validation<wbr>Method</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Which method to use for validation. `DNS` or `EMAIL` are valid, `NONE` can be used for certificates that were imported into ACM and then into state managed by this provider.
 * Importing an existing certificate
@@ -1390,7 +1062,7 @@ The following state arguments are supported:
             title="Optional">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the certificate
 {{% /md %}}</dd>
@@ -1399,7 +1071,7 @@ The following state arguments are supported:
             title="Optional">
         <span>certificate<wbr>Authority<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ARN of an ACMPCA
 {{% /md %}}</dd>
@@ -1408,7 +1080,7 @@ The following state arguments are supported:
             title="Optional">
         <span>certificate<wbr>Body</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The certificate's PEM-formatted public key
 {{% /md %}}</dd>
@@ -1417,7 +1089,7 @@ The following state arguments are supported:
             title="Optional">
         <span>certificate<wbr>Chain</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The certificate's PEM-formatted chain
 * Creating a private CA issued certificate
@@ -1427,7 +1099,7 @@ The following state arguments are supported:
             title="Optional">
         <span>domain<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A domain name for which the certificate should be issued
 {{% /md %}}</dd>
@@ -1436,7 +1108,7 @@ The following state arguments are supported:
             title="Optional">
         <span>domain<wbr>Validation<wbr>Options</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificatedomainvalidationoption">Certificate<wbr>Domain<wbr>Validation<wbr>Option[]?</a></span>
+        <span class="property-type"><a href="#certificatedomainvalidationoption">Certificate<wbr>Domain<wbr>Validation<wbr>Option[]</a></span>
     </dt>
     <dd>{{% md %}}A list of attributes to feed into other resources to complete certificate validation. Can have more than one element, e.g. if SANs are defined. Only set if `DNS`-validation was used.
 {{% /md %}}</dd>
@@ -1445,7 +1117,7 @@ The following state arguments are supported:
             title="Optional">
         <span>options</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certificateoptions">Certificate<wbr>Options?</a></span>
+        <span class="property-type"><a href="#certificateoptions">Certificate<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1453,7 +1125,7 @@ The following state arguments are supported:
             title="Optional">
         <span>private<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The certificate's PEM-formatted private key
 {{% /md %}}</dd>
@@ -1462,7 +1134,7 @@ The following state arguments are supported:
             title="Optional">
         <span>subject<wbr>Alternative<wbr>Names</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of domains that should be SANs in the issued certificate
 {{% /md %}}</dd>
@@ -1471,7 +1143,7 @@ The following state arguments are supported:
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1480,7 +1152,7 @@ The following state arguments are supported:
             title="Optional">
         <span>validation<wbr>Emails</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of addresses that received a validation E-Mail. Only set if `EMAIL`-validation was used.
 {{% /md %}}</dd>
@@ -1489,7 +1161,7 @@ The following state arguments are supported:
             title="Optional">
         <span>validation<wbr>Method</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Which method to use for validation. `DNS` or `EMAIL` are valid, `NONE` can be used for certificates that were imported into ACM and then into state managed by this provider.
 * Importing an existing certificate
@@ -1644,7 +1316,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Domain<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A domain name for which the certificate should be issued
 {{% /md %}}</dd>
@@ -1653,7 +1325,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Resource<wbr>Record<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the DNS record to create to validate the certificate
 {{% /md %}}</dd>
@@ -1662,7 +1334,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Resource<wbr>Record<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of DNS record to create
 {{% /md %}}</dd>
@@ -1671,7 +1343,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Resource<wbr>Record<wbr>Value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value the DNS record needs to have
 {{% /md %}}</dd>
@@ -1687,7 +1359,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Domain<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A domain name for which the certificate should be issued
 {{% /md %}}</dd>
@@ -1696,7 +1368,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Resource<wbr>Record<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the DNS record to create to validate the certificate
 {{% /md %}}</dd>
@@ -1705,7 +1377,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Resource<wbr>Record<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of DNS record to create
 {{% /md %}}</dd>
@@ -1714,7 +1386,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Resource<wbr>Record<wbr>Value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value the DNS record needs to have
 {{% /md %}}</dd>
@@ -1730,7 +1402,7 @@ The following state arguments are supported:
             title="Optional">
         <span>domain<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A domain name for which the certificate should be issued
 {{% /md %}}</dd>
@@ -1739,7 +1411,7 @@ The following state arguments are supported:
             title="Optional">
         <span>resource<wbr>Record<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the DNS record to create to validate the certificate
 {{% /md %}}</dd>
@@ -1748,7 +1420,7 @@ The following state arguments are supported:
             title="Optional">
         <span>resource<wbr>Record<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of DNS record to create
 {{% /md %}}</dd>
@@ -1757,7 +1429,7 @@ The following state arguments are supported:
             title="Optional">
         <span>resource<wbr>Record<wbr>Value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value the DNS record needs to have
 {{% /md %}}</dd>
@@ -1831,7 +1503,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Certificate<wbr>Transparency<wbr>Logging<wbr>Preference</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1846,7 +1518,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Certificate<wbr>Transparency<wbr>Logging<wbr>Preference</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1861,7 +1533,7 @@ The following state arguments are supported:
             title="Optional">
         <span>certificate<wbr>Transparency<wbr>Logging<wbr>Preference</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

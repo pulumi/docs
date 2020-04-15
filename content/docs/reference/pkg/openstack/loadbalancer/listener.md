@@ -33,7 +33,7 @@ const listener1 = new openstack.loadbalancer.Listener("listener_1", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/openstack/loadbalancer/#Listener">Listener</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/openstack/loadbalancer/#ListenerArgs">ListenerArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/openstack/loadbalancer/#Listener">Listener</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/openstack/loadbalancer/#ListenerArgs">ListenerArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -41,11 +41,11 @@ const listener1 = new openstack.loadbalancer.Listener("listener_1", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewListener<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/loadbalancer?tab=doc#ListenerArgs">ListenerArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/loadbalancer?tab=doc#Listener">Listener</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewListener<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/loadbalancer?tab=doc#ListenerArgs">ListenerArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/loadbalancer?tab=doc#Listener">Listener</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.Openstack.Loadbalancer.Listener.html">Listener</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.Openstack.LoadBalancer.ListenerArgs.html">ListenerArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.Openstack.LoadBalancer.Listener.html">Listener</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.OpenStack.LoadBalancer.ListenerArgs.html">ListenerArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -137,69 +137,6 @@ const listener1 = new openstack.loadbalancer.Listener("listener_1", {
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Admin<wbr>State<wbr>Up</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}The administrative state of the Listener.
-A valid value is true (UP) or false (DOWN).
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Connection<wbr>Limit</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}The maximum number of connections allowed
-for the Listener.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Default<wbr>Pool<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The ID of the default pool with which the
-Listener is associated.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Default<wbr>Tls<wbr>Container<wbr>Ref</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}A reference to a Barbican Secrets
-container which stores TLS information. This is required if the protocol
-is `TERMINATED_HTTPS`. See
-[here](https://wiki.openstack.org/wiki/Network/LBaaS/docs/how-to-create-tls-loadbalancer)
-for more information.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Human-readable description for the Listener.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Insert<wbr>Headers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
-    </dt>
-    <dd>{{% md %}}The list of key value pairs representing headers to insert
-into the request before it is sent to the backend members. Changing this updates the headers of the
-existing listener.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Loadbalancer<wbr>Id</span>
@@ -208,16 +145,6 @@ existing listener.
     </dt>
     <dd>{{% md %}}The load balancer on which to provision this
 Listener. Changing this creates a new Listener.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Human-readable name for the Listener. Does not have
-to be unique.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -243,88 +170,9 @@ Changing this creates a new Listener.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The region in which to obtain the V2 Networking client.
-A Networking client is needed to create an . If omitted, the
-`region` argument of the provider is used. Changing this creates a new
-Listener.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Sni<wbr>Container<wbr>Refs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}A list of references to Barbican Secrets
-containers which store SNI information. See
-[here](https://wiki.openstack.org/wiki/Network/LBaaS/docs/how-to-create-tls-loadbalancer)
-for more information.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Tenant<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Required for admins. The UUID of the tenant who owns
-the Listener.  Only administrative users can specify a tenant UUID
-other than their own. Changing this creates a new Listener.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Timeout<wbr>Client<wbr>Data</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}The client inactivity timeout in milliseconds.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Timeout<wbr>Member<wbr>Connect</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}The member connection timeout in milliseconds.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Timeout<wbr>Member<wbr>Data</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}The member inactivity timeout in milliseconds.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Timeout<wbr>Tcp<wbr>Inspect</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}The time in milliseconds, to wait for additional
-TCP packets for content inspection.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
         <span>Admin<wbr>State<wbr>Up</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The administrative state of the Listener.
 A valid value is true (UP) or false (DOWN).
@@ -334,7 +182,7 @@ A valid value is true (UP) or false (DOWN).
             title="Optional">
         <span>Connection<wbr>Limit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of connections allowed
 for the Listener.
@@ -344,7 +192,7 @@ for the Listener.
             title="Optional">
         <span>Default<wbr>Pool<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the default pool with which the
 Listener is associated.
@@ -354,7 +202,7 @@ Listener is associated.
             title="Optional">
         <span>Default<wbr>Tls<wbr>Container<wbr>Ref</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A reference to a Barbican Secrets
 container which stores TLS information. This is required if the protocol
@@ -367,7 +215,190 @@ for more information.
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Human-readable description for the Listener.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Insert<wbr>Headers</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+    </dt>
+    <dd>{{% md %}}The list of key value pairs representing headers to insert
+into the request before it is sent to the backend members. Changing this updates the headers of the
+existing listener.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Human-readable name for the Listener. Does not have
+to be unique.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Region</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The region in which to obtain the V2 Networking client.
+A Networking client is needed to create an . If omitted, the
+`region` argument of the provider is used. Changing this creates a new
+Listener.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Sni<wbr>Container<wbr>Refs</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of references to Barbican Secrets
+containers which store SNI information. See
+[here](https://wiki.openstack.org/wiki/Network/LBaaS/docs/how-to-create-tls-loadbalancer)
+for more information.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Tenant<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Required for admins. The UUID of the tenant who owns
+the Listener.  Only administrative users can specify a tenant UUID
+other than their own. Changing this creates a new Listener.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Timeout<wbr>Client<wbr>Data</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The client inactivity timeout in milliseconds.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Timeout<wbr>Member<wbr>Connect</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The member connection timeout in milliseconds.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Timeout<wbr>Member<wbr>Data</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The member inactivity timeout in milliseconds.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Timeout<wbr>Tcp<wbr>Inspect</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The time in milliseconds, to wait for additional
+TCP packets for content inspection.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Loadbalancer<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The load balancer on which to provision this
+Listener. Changing this creates a new Listener.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Protocol</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The protocol - can either be TCP, HTTP, HTTPS,
+TERMINATED_HTTPS or UDP (supported only in Octavia). Changing this creates a
+new Listener.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Protocol<wbr>Port</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The port on which to listen for client traffic.
+Changing this creates a new Listener.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Admin<wbr>State<wbr>Up</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}The administrative state of the Listener.
+A valid value is true (UP) or false (DOWN).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Connection<wbr>Limit</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The maximum number of connections allowed
+for the Listener.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Default<wbr>Pool<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the default pool with which the
+Listener is associated.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Default<wbr>Tls<wbr>Container<wbr>Ref</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A reference to a Barbican Secrets
+container which stores TLS information. This is required if the protocol
+is `TERMINATED_HTTPS`. See
+[here](https://wiki.openstack.org/wiki/Network/LBaaS/docs/how-to-create-tls-loadbalancer)
+for more information.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Human-readable description for the Listener.
 {{% /md %}}</dd>
@@ -383,52 +414,21 @@ into the request before it is sent to the backend members. Changing this updates
 existing listener.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>Loadbalancer<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The load balancer on which to provision this
-Listener. Changing this creates a new Listener.
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Human-readable name for the Listener. Does not have
 to be unique.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Protocol</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The protocol - can either be TCP, HTTP, HTTPS,
-TERMINATED_HTTPS or UDP (supported only in Octavia). Changing this creates a
-new Listener.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Protocol<wbr>Port</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The port on which to listen for client traffic.
-Changing this creates a new Listener.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 Networking client.
 A Networking client is needed to create an . If omitted, the
@@ -452,7 +452,7 @@ for more information.
             title="Optional">
         <span>Tenant<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required for admins. The UUID of the tenant who owns
 the Listener.  Only administrative users can specify a tenant UUID
@@ -463,7 +463,7 @@ other than their own. Changing this creates a new Listener.
             title="Optional">
         <span>Timeout<wbr>Client<wbr>Data</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The client inactivity timeout in milliseconds.
 {{% /md %}}</dd>
@@ -472,7 +472,7 @@ other than their own. Changing this creates a new Listener.
             title="Optional">
         <span>Timeout<wbr>Member<wbr>Connect</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The member connection timeout in milliseconds.
 {{% /md %}}</dd>
@@ -481,7 +481,7 @@ other than their own. Changing this creates a new Listener.
             title="Optional">
         <span>Timeout<wbr>Member<wbr>Data</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The member inactivity timeout in milliseconds.
 {{% /md %}}</dd>
@@ -490,7 +490,7 @@ other than their own. Changing this creates a new Listener.
             title="Optional">
         <span>Timeout<wbr>Tcp<wbr>Inspect</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time in milliseconds, to wait for additional
 TCP packets for content inspection.
@@ -503,69 +503,6 @@ TCP packets for content inspection.
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>admin<wbr>State<wbr>Up</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}The administrative state of the Listener.
-A valid value is true (UP) or false (DOWN).
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>connection<wbr>Limit</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}The maximum number of connections allowed
-for the Listener.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>default<wbr>Pool<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The ID of the default pool with which the
-Listener is associated.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>default<wbr>Tls<wbr>Container<wbr>Ref</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}A reference to a Barbican Secrets
-container which stores TLS information. This is required if the protocol
-is `TERMINATED_HTTPS`. See
-[here](https://wiki.openstack.org/wiki/Network/LBaaS/docs/how-to-create-tls-loadbalancer)
-for more information.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Human-readable description for the Listener.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>insert<wbr>Headers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
-    </dt>
-    <dd>{{% md %}}The list of key value pairs representing headers to insert
-into the request before it is sent to the backend members. Changing this updates the headers of the
-existing listener.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>loadbalancer<wbr>Id</span>
@@ -574,16 +511,6 @@ existing listener.
     </dt>
     <dd>{{% md %}}The load balancer on which to provision this
 Listener. Changing this creates a new Listener.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Human-readable name for the Listener. Does not have
-to be unique.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -609,9 +536,82 @@ Changing this creates a new Listener.
 
     <dt class="property-optional"
             title="Optional">
+        <span>admin<wbr>State<wbr>Up</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}The administrative state of the Listener.
+A valid value is true (UP) or false (DOWN).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>connection<wbr>Limit</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The maximum number of connections allowed
+for the Listener.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>default<wbr>Pool<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the default pool with which the
+Listener is associated.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>default<wbr>Tls<wbr>Container<wbr>Ref</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A reference to a Barbican Secrets
+container which stores TLS information. This is required if the protocol
+is `TERMINATED_HTTPS`. See
+[here](https://wiki.openstack.org/wiki/Network/LBaaS/docs/how-to-create-tls-loadbalancer)
+for more information.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Human-readable description for the Listener.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>insert<wbr>Headers</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}</span>
+    </dt>
+    <dd>{{% md %}}The list of key value pairs representing headers to insert
+into the request before it is sent to the backend members. Changing this updates the headers of the
+existing listener.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Human-readable name for the Listener. Does not have
+to be unique.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 Networking client.
 A Networking client is needed to create an . If omitted, the
@@ -623,7 +623,7 @@ Listener.
             title="Optional">
         <span>sni<wbr>Container<wbr>Refs</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of references to Barbican Secrets
 containers which store SNI information. See
@@ -635,7 +635,7 @@ for more information.
             title="Optional">
         <span>tenant<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required for admins. The UUID of the tenant who owns
 the Listener.  Only administrative users can specify a tenant UUID
@@ -646,7 +646,7 @@ other than their own. Changing this creates a new Listener.
             title="Optional">
         <span>timeout<wbr>Client<wbr>Data</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The client inactivity timeout in milliseconds.
 {{% /md %}}</dd>
@@ -655,7 +655,7 @@ other than their own. Changing this creates a new Listener.
             title="Optional">
         <span>timeout<wbr>Member<wbr>Connect</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The member connection timeout in milliseconds.
 {{% /md %}}</dd>
@@ -664,7 +664,7 @@ other than their own. Changing this creates a new Listener.
             title="Optional">
         <span>timeout<wbr>Member<wbr>Data</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The member inactivity timeout in milliseconds.
 {{% /md %}}</dd>
@@ -673,7 +673,7 @@ other than their own. Changing this creates a new Listener.
             title="Optional">
         <span>timeout<wbr>Tcp<wbr>Inspect</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The time in milliseconds, to wait for additional
 TCP packets for content inspection.
@@ -685,6 +685,37 @@ TCP packets for content inspection.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>loadbalancer_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The load balancer on which to provision this
+Listener. Changing this creates a new Listener.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>protocol</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The protocol - can either be TCP, HTTP, HTTPS,
+TERMINATED_HTTPS or UDP (supported only in Octavia). Changing this creates a
+new Listener.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>protocol_<wbr>port</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}The port on which to listen for client traffic.
+Changing this creates a new Listener.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -749,16 +780,6 @@ into the request before it is sent to the backend members. Changing this updates
 existing listener.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>loadbalancer_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The load balancer on which to provision this
-Listener. Changing this creates a new Listener.
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>name</span>
@@ -767,27 +788,6 @@ Listener. Changing this creates a new Listener.
     </dt>
     <dd>{{% md %}}Human-readable name for the Listener. Does not have
 to be unique.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>protocol</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The protocol - can either be TCP, HTTP, HTTPS,
-TERMINATED_HTTPS or UDP (supported only in Octavia). Changing this creates a
-new Listener.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>protocol_<wbr>port</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The port on which to listen for client traffic.
-Changing this creates a new Listener.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -866,748 +866,6 @@ TCP packets for content inspection.
 {{% /choosable %}}
 
 
-
-
-
-
-
-## Listener Output Properties
-
-The following output properties are available:
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Admin<wbr>State<wbr>Up</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}The administrative state of the Listener.
-A valid value is true (UP) or false (DOWN).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Connection<wbr>Limit</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The maximum number of connections allowed
-for the Listener.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Default<wbr>Pool<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the default pool with which the
-Listener is associated.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Default<wbr>Tls<wbr>Container<wbr>Ref</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}A reference to a Barbican Secrets
-container which stores TLS information. This is required if the protocol
-is `TERMINATED_HTTPS`. See
-[here](https://wiki.openstack.org/wiki/Network/LBaaS/docs/how-to-create-tls-loadbalancer)
-for more information.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Human-readable description for the Listener.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Insert<wbr>Headers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
-    </dt>
-    <dd>{{% md %}}The list of key value pairs representing headers to insert
-into the request before it is sent to the backend members. Changing this updates the headers of the
-existing listener.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Loadbalancer<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The load balancer on which to provision this
-Listener. Changing this creates a new Listener.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Human-readable name for the Listener. Does not have
-to be unique.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Protocol</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The protocol - can either be TCP, HTTP, HTTPS,
-TERMINATED_HTTPS or UDP (supported only in Octavia). Changing this creates a
-new Listener.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Protocol<wbr>Port</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The port on which to listen for client traffic.
-Changing this creates a new Listener.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The region in which to obtain the V2 Networking client.
-A Networking client is needed to create an . If omitted, the
-`region` argument of the provider is used. Changing this creates a new
-Listener.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Sni<wbr>Container<wbr>Refs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}A list of references to Barbican Secrets
-containers which store SNI information. See
-[here](https://wiki.openstack.org/wiki/Network/LBaaS/docs/how-to-create-tls-loadbalancer)
-for more information.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tenant<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Required for admins. The UUID of the tenant who owns
-the Listener.  Only administrative users can specify a tenant UUID
-other than their own. Changing this creates a new Listener.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Timeout<wbr>Client<wbr>Data</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The client inactivity timeout in milliseconds.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Timeout<wbr>Member<wbr>Connect</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The member connection timeout in milliseconds.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Timeout<wbr>Member<wbr>Data</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The member inactivity timeout in milliseconds.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Timeout<wbr>Tcp<wbr>Inspect</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The time in milliseconds, to wait for additional
-TCP packets for content inspection.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Admin<wbr>State<wbr>Up</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}The administrative state of the Listener.
-A valid value is true (UP) or false (DOWN).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Connection<wbr>Limit</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The maximum number of connections allowed
-for the Listener.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Default<wbr>Pool<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the default pool with which the
-Listener is associated.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Default<wbr>Tls<wbr>Container<wbr>Ref</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}A reference to a Barbican Secrets
-container which stores TLS information. This is required if the protocol
-is `TERMINATED_HTTPS`. See
-[here](https://wiki.openstack.org/wiki/Network/LBaaS/docs/how-to-create-tls-loadbalancer)
-for more information.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Human-readable description for the Listener.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Insert<wbr>Headers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
-    </dt>
-    <dd>{{% md %}}The list of key value pairs representing headers to insert
-into the request before it is sent to the backend members. Changing this updates the headers of the
-existing listener.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Loadbalancer<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The load balancer on which to provision this
-Listener. Changing this creates a new Listener.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Human-readable name for the Listener. Does not have
-to be unique.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Protocol</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The protocol - can either be TCP, HTTP, HTTPS,
-TERMINATED_HTTPS or UDP (supported only in Octavia). Changing this creates a
-new Listener.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Protocol<wbr>Port</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The port on which to listen for client traffic.
-Changing this creates a new Listener.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The region in which to obtain the V2 Networking client.
-A Networking client is needed to create an . If omitted, the
-`region` argument of the provider is used. Changing this creates a new
-Listener.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Sni<wbr>Container<wbr>Refs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}A list of references to Barbican Secrets
-containers which store SNI information. See
-[here](https://wiki.openstack.org/wiki/Network/LBaaS/docs/how-to-create-tls-loadbalancer)
-for more information.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tenant<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Required for admins. The UUID of the tenant who owns
-the Listener.  Only administrative users can specify a tenant UUID
-other than their own. Changing this creates a new Listener.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Timeout<wbr>Client<wbr>Data</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The client inactivity timeout in milliseconds.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Timeout<wbr>Member<wbr>Connect</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The member connection timeout in milliseconds.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Timeout<wbr>Member<wbr>Data</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The member inactivity timeout in milliseconds.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Timeout<wbr>Tcp<wbr>Inspect</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The time in milliseconds, to wait for additional
-TCP packets for content inspection.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>admin<wbr>State<wbr>Up</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}The administrative state of the Listener.
-A valid value is true (UP) or false (DOWN).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>connection<wbr>Limit</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}The maximum number of connections allowed
-for the Listener.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>default<wbr>Pool<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the default pool with which the
-Listener is associated.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>default<wbr>Tls<wbr>Container<wbr>Ref</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}A reference to a Barbican Secrets
-container which stores TLS information. This is required if the protocol
-is `TERMINATED_HTTPS`. See
-[here](https://wiki.openstack.org/wiki/Network/LBaaS/docs/how-to-create-tls-loadbalancer)
-for more information.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Human-readable description for the Listener.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>insert<wbr>Headers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
-    </dt>
-    <dd>{{% md %}}The list of key value pairs representing headers to insert
-into the request before it is sent to the backend members. Changing this updates the headers of the
-existing listener.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>loadbalancer<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The load balancer on which to provision this
-Listener. Changing this creates a new Listener.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Human-readable name for the Listener. Does not have
-to be unique.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>protocol</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The protocol - can either be TCP, HTTP, HTTPS,
-TERMINATED_HTTPS or UDP (supported only in Octavia). Changing this creates a
-new Listener.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>protocol<wbr>Port</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}The port on which to listen for client traffic.
-Changing this creates a new Listener.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The region in which to obtain the V2 Networking client.
-A Networking client is needed to create an . If omitted, the
-`region` argument of the provider is used. Changing this creates a new
-Listener.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>sni<wbr>Container<wbr>Refs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}A list of references to Barbican Secrets
-containers which store SNI information. See
-[here](https://wiki.openstack.org/wiki/Network/LBaaS/docs/how-to-create-tls-loadbalancer)
-for more information.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tenant<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Required for admins. The UUID of the tenant who owns
-the Listener.  Only administrative users can specify a tenant UUID
-other than their own. Changing this creates a new Listener.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>timeout<wbr>Client<wbr>Data</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}The client inactivity timeout in milliseconds.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>timeout<wbr>Member<wbr>Connect</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}The member connection timeout in milliseconds.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>timeout<wbr>Member<wbr>Data</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}The member inactivity timeout in milliseconds.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>timeout<wbr>Tcp<wbr>Inspect</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}The time in milliseconds, to wait for additional
-TCP packets for content inspection.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>admin_<wbr>state_<wbr>up</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}The administrative state of the Listener.
-A valid value is true (UP) or false (DOWN).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>connection_<wbr>limit</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The maximum number of connections allowed
-for the Listener.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>default_<wbr>pool_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The ID of the default pool with which the
-Listener is associated.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>default_<wbr>tls_<wbr>container_<wbr>ref</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}A reference to a Barbican Secrets
-container which stores TLS information. This is required if the protocol
-is `TERMINATED_HTTPS`. See
-[here](https://wiki.openstack.org/wiki/Network/LBaaS/docs/how-to-create-tls-loadbalancer)
-for more information.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Human-readable description for the Listener.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>insert_<wbr>headers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
-    </dt>
-    <dd>{{% md %}}The list of key value pairs representing headers to insert
-into the request before it is sent to the backend members. Changing this updates the headers of the
-existing listener.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>loadbalancer_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The load balancer on which to provision this
-Listener. Changing this creates a new Listener.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Human-readable name for the Listener. Does not have
-to be unique.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>protocol</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The protocol - can either be TCP, HTTP, HTTPS,
-TERMINATED_HTTPS or UDP (supported only in Octavia). Changing this creates a
-new Listener.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>protocol_<wbr>port</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The port on which to listen for client traffic.
-Changing this creates a new Listener.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The region in which to obtain the V2 Networking client.
-A Networking client is needed to create an . If omitted, the
-`region` argument of the provider is used. Changing this creates a new
-Listener.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>sni_<wbr>container_<wbr>refs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}A list of references to Barbican Secrets
-containers which store SNI information. See
-[here](https://wiki.openstack.org/wiki/Network/LBaaS/docs/how-to-create-tls-loadbalancer)
-for more information.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tenant_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Required for admins. The UUID of the tenant who owns
-the Listener.  Only administrative users can specify a tenant UUID
-other than their own. Changing this creates a new Listener.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>timeout_<wbr>client_<wbr>data</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The client inactivity timeout in milliseconds.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>timeout_<wbr>member_<wbr>connect</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The member connection timeout in milliseconds.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>timeout_<wbr>member_<wbr>data</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The member inactivity timeout in milliseconds.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>timeout_<wbr>tcp_<wbr>inspect</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The time in milliseconds, to wait for additional
-TCP packets for content inspection.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
 
 
 
@@ -1635,7 +893,7 @@ Get an existing Listener resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.Openstack.Loadbalancer.Listener.html">Listener</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.Openstack.Loadbalancer.ListenerState.html">ListenerState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.Openstack.LoadBalancer.Listener.html">Listener</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.Openstack.LoadBalancer.ListenerState.html">ListenerState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1745,7 +1003,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Admin<wbr>State<wbr>Up</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The administrative state of the Listener.
 A valid value is true (UP) or false (DOWN).
@@ -1755,7 +1013,7 @@ A valid value is true (UP) or false (DOWN).
             title="Optional">
         <span>Connection<wbr>Limit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of connections allowed
 for the Listener.
@@ -1765,7 +1023,7 @@ for the Listener.
             title="Optional">
         <span>Default<wbr>Pool<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the default pool with which the
 Listener is associated.
@@ -1775,7 +1033,7 @@ Listener is associated.
             title="Optional">
         <span>Default<wbr>Tls<wbr>Container<wbr>Ref</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A reference to a Barbican Secrets
 container which stores TLS information. This is required if the protocol
@@ -1788,7 +1046,7 @@ for more information.
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Human-readable description for the Listener.
 {{% /md %}}</dd>
@@ -1797,7 +1055,7 @@ for more information.
             title="Optional">
         <span>Insert<wbr>Headers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}The list of key value pairs representing headers to insert
 into the request before it is sent to the backend members. Changing this updates the headers of the
@@ -1808,7 +1066,7 @@ existing listener.
             title="Optional">
         <span>Loadbalancer<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The load balancer on which to provision this
 Listener. Changing this creates a new Listener.
@@ -1818,7 +1076,7 @@ Listener. Changing this creates a new Listener.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Human-readable name for the Listener. Does not have
 to be unique.
@@ -1828,7 +1086,7 @@ to be unique.
             title="Optional">
         <span>Protocol</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The protocol - can either be TCP, HTTP, HTTPS,
 TERMINATED_HTTPS or UDP (supported only in Octavia). Changing this creates a
@@ -1839,7 +1097,7 @@ new Listener.
             title="Optional">
         <span>Protocol<wbr>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port on which to listen for client traffic.
 Changing this creates a new Listener.
@@ -1849,7 +1107,7 @@ Changing this creates a new Listener.
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 Networking client.
 A Networking client is needed to create an . If omitted, the
@@ -1861,7 +1119,7 @@ Listener.
             title="Optional">
         <span>Sni<wbr>Container<wbr>Refs</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of references to Barbican Secrets
 containers which store SNI information. See
@@ -1873,7 +1131,7 @@ for more information.
             title="Optional">
         <span>Tenant<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required for admins. The UUID of the tenant who owns
 the Listener.  Only administrative users can specify a tenant UUID
@@ -1884,7 +1142,7 @@ other than their own. Changing this creates a new Listener.
             title="Optional">
         <span>Timeout<wbr>Client<wbr>Data</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The client inactivity timeout in milliseconds.
 {{% /md %}}</dd>
@@ -1893,7 +1151,7 @@ other than their own. Changing this creates a new Listener.
             title="Optional">
         <span>Timeout<wbr>Member<wbr>Connect</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The member connection timeout in milliseconds.
 {{% /md %}}</dd>
@@ -1902,7 +1160,7 @@ other than their own. Changing this creates a new Listener.
             title="Optional">
         <span>Timeout<wbr>Member<wbr>Data</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The member inactivity timeout in milliseconds.
 {{% /md %}}</dd>
@@ -1911,7 +1169,7 @@ other than their own. Changing this creates a new Listener.
             title="Optional">
         <span>Timeout<wbr>Tcp<wbr>Inspect</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time in milliseconds, to wait for additional
 TCP packets for content inspection.
@@ -1928,7 +1186,7 @@ TCP packets for content inspection.
             title="Optional">
         <span>Admin<wbr>State<wbr>Up</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The administrative state of the Listener.
 A valid value is true (UP) or false (DOWN).
@@ -1938,7 +1196,7 @@ A valid value is true (UP) or false (DOWN).
             title="Optional">
         <span>Connection<wbr>Limit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of connections allowed
 for the Listener.
@@ -1948,7 +1206,7 @@ for the Listener.
             title="Optional">
         <span>Default<wbr>Pool<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the default pool with which the
 Listener is associated.
@@ -1958,7 +1216,7 @@ Listener is associated.
             title="Optional">
         <span>Default<wbr>Tls<wbr>Container<wbr>Ref</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A reference to a Barbican Secrets
 container which stores TLS information. This is required if the protocol
@@ -1971,7 +1229,7 @@ for more information.
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Human-readable description for the Listener.
 {{% /md %}}</dd>
@@ -1991,7 +1249,7 @@ existing listener.
             title="Optional">
         <span>Loadbalancer<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The load balancer on which to provision this
 Listener. Changing this creates a new Listener.
@@ -2001,7 +1259,7 @@ Listener. Changing this creates a new Listener.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Human-readable name for the Listener. Does not have
 to be unique.
@@ -2011,7 +1269,7 @@ to be unique.
             title="Optional">
         <span>Protocol</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The protocol - can either be TCP, HTTP, HTTPS,
 TERMINATED_HTTPS or UDP (supported only in Octavia). Changing this creates a
@@ -2022,7 +1280,7 @@ new Listener.
             title="Optional">
         <span>Protocol<wbr>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port on which to listen for client traffic.
 Changing this creates a new Listener.
@@ -2032,7 +1290,7 @@ Changing this creates a new Listener.
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 Networking client.
 A Networking client is needed to create an . If omitted, the
@@ -2056,7 +1314,7 @@ for more information.
             title="Optional">
         <span>Tenant<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required for admins. The UUID of the tenant who owns
 the Listener.  Only administrative users can specify a tenant UUID
@@ -2067,7 +1325,7 @@ other than their own. Changing this creates a new Listener.
             title="Optional">
         <span>Timeout<wbr>Client<wbr>Data</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The client inactivity timeout in milliseconds.
 {{% /md %}}</dd>
@@ -2076,7 +1334,7 @@ other than their own. Changing this creates a new Listener.
             title="Optional">
         <span>Timeout<wbr>Member<wbr>Connect</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The member connection timeout in milliseconds.
 {{% /md %}}</dd>
@@ -2085,7 +1343,7 @@ other than their own. Changing this creates a new Listener.
             title="Optional">
         <span>Timeout<wbr>Member<wbr>Data</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The member inactivity timeout in milliseconds.
 {{% /md %}}</dd>
@@ -2094,7 +1352,7 @@ other than their own. Changing this creates a new Listener.
             title="Optional">
         <span>Timeout<wbr>Tcp<wbr>Inspect</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time in milliseconds, to wait for additional
 TCP packets for content inspection.
@@ -2111,7 +1369,7 @@ TCP packets for content inspection.
             title="Optional">
         <span>admin<wbr>State<wbr>Up</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}The administrative state of the Listener.
 A valid value is true (UP) or false (DOWN).
@@ -2121,7 +1379,7 @@ A valid value is true (UP) or false (DOWN).
             title="Optional">
         <span>connection<wbr>Limit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum number of connections allowed
 for the Listener.
@@ -2131,7 +1389,7 @@ for the Listener.
             title="Optional">
         <span>default<wbr>Pool<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the default pool with which the
 Listener is associated.
@@ -2141,7 +1399,7 @@ Listener is associated.
             title="Optional">
         <span>default<wbr>Tls<wbr>Container<wbr>Ref</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A reference to a Barbican Secrets
 container which stores TLS information. This is required if the protocol
@@ -2154,7 +1412,7 @@ for more information.
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Human-readable description for the Listener.
 {{% /md %}}</dd>
@@ -2163,7 +1421,7 @@ for more information.
             title="Optional">
         <span>insert<wbr>Headers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}The list of key value pairs representing headers to insert
 into the request before it is sent to the backend members. Changing this updates the headers of the
@@ -2174,7 +1432,7 @@ existing listener.
             title="Optional">
         <span>loadbalancer<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The load balancer on which to provision this
 Listener. Changing this creates a new Listener.
@@ -2184,7 +1442,7 @@ Listener. Changing this creates a new Listener.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Human-readable name for the Listener. Does not have
 to be unique.
@@ -2194,7 +1452,7 @@ to be unique.
             title="Optional">
         <span>protocol</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The protocol - can either be TCP, HTTP, HTTPS,
 TERMINATED_HTTPS or UDP (supported only in Octavia). Changing this creates a
@@ -2205,7 +1463,7 @@ new Listener.
             title="Optional">
         <span>protocol<wbr>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The port on which to listen for client traffic.
 Changing this creates a new Listener.
@@ -2215,7 +1473,7 @@ Changing this creates a new Listener.
             title="Optional">
         <span>region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 Networking client.
 A Networking client is needed to create an . If omitted, the
@@ -2227,7 +1485,7 @@ Listener.
             title="Optional">
         <span>sni<wbr>Container<wbr>Refs</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of references to Barbican Secrets
 containers which store SNI information. See
@@ -2239,7 +1497,7 @@ for more information.
             title="Optional">
         <span>tenant<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Required for admins. The UUID of the tenant who owns
 the Listener.  Only administrative users can specify a tenant UUID
@@ -2250,7 +1508,7 @@ other than their own. Changing this creates a new Listener.
             title="Optional">
         <span>timeout<wbr>Client<wbr>Data</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The client inactivity timeout in milliseconds.
 {{% /md %}}</dd>
@@ -2259,7 +1517,7 @@ other than their own. Changing this creates a new Listener.
             title="Optional">
         <span>timeout<wbr>Member<wbr>Connect</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The member connection timeout in milliseconds.
 {{% /md %}}</dd>
@@ -2268,7 +1526,7 @@ other than their own. Changing this creates a new Listener.
             title="Optional">
         <span>timeout<wbr>Member<wbr>Data</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The member inactivity timeout in milliseconds.
 {{% /md %}}</dd>
@@ -2277,7 +1535,7 @@ other than their own. Changing this creates a new Listener.
             title="Optional">
         <span>timeout<wbr>Tcp<wbr>Inspect</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The time in milliseconds, to wait for additional
 TCP packets for content inspection.

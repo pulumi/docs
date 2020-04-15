@@ -43,7 +43,7 @@ const testExchange = new rabbitmq.Exchange("test", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/rabbitmq/#Exchange">Exchange</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/rabbitmq/#ExchangeArgs">ExchangeArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/rabbitmq/#Exchange">Exchange</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/rabbitmq/#ExchangeArgs">ExchangeArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -51,11 +51,11 @@ const testExchange = new rabbitmq.Exchange("test", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewExchange<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rabbitmq/sdk/go/rabbitmq/?tab=doc#ExchangeArgs">ExchangeArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rabbitmq/sdk/go/rabbitmq/?tab=doc#Exchange">Exchange</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewExchange<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rabbitmq/sdk/go/rabbitmq/?tab=doc#ExchangeArgs">ExchangeArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rabbitmq/sdk/go/rabbitmq/?tab=doc#Exchange">Exchange</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rabbitmq/Pulumi.Rabbitmq..Exchange.html">Exchange</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rabbitmq/Pulumi.Rabbitmq.ExchangeArgs.html">ExchangeArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rabbitmq/Pulumi.Rabbitmq.Exchange.html">Exchange</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rabbitmq/Pulumi.RabbitMQ.ExchangeArgs.html">ExchangeArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -147,20 +147,11 @@ const testExchange = new rabbitmq.Exchange("test", {
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The name of the exchange.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Settings</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exchangesettings">Exchange<wbr>Settings<wbr>Args</a></span>
+        <span class="property-type"><a href="#exchangesettings">Pulumi.<wbr>Rabbit<wbr>MQ.<wbr>Inputs.<wbr>Exchange<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The settings of the exchange. The structure is
 described below.
@@ -168,9 +159,18 @@ described below.
 
     <dt class="property-optional"
             title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the exchange.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Vhost</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The vhost to create the resource in.
 {{% /md %}}</dd>
@@ -181,15 +181,6 @@ described below.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The name of the exchange.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -203,9 +194,18 @@ described below.
 
     <dt class="property-optional"
             title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the exchange.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Vhost</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The vhost to create the resource in.
 {{% /md %}}</dd>
@@ -216,15 +216,6 @@ described below.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The name of the exchange.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -238,9 +229,18 @@ described below.
 
     <dt class="property-optional"
             title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the exchange.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>vhost</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The vhost to create the resource in.
 {{% /md %}}</dd>
@@ -251,15 +251,6 @@ described below.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the exchange.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -273,139 +264,6 @@ described below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>vhost</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The vhost to create the resource in.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-
-
-
-
-
-## Exchange Output Properties
-
-The following output properties are available:
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the exchange.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Settings</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exchangesettings">Exchange<wbr>Settings</a></span>
-    </dt>
-    <dd>{{% md %}}The settings of the exchange. The structure is
-described below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Vhost</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The vhost to create the resource in.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the exchange.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Settings</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exchangesettings">Exchange<wbr>Settings</a></span>
-    </dt>
-    <dd>{{% md %}}The settings of the exchange. The structure is
-described below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Vhost</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The vhost to create the resource in.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the exchange.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>settings</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exchangesettings">Exchange<wbr>Settings</a></span>
-    </dt>
-    <dd>{{% md %}}The settings of the exchange. The structure is
-described below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>vhost</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The vhost to create the resource in.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -413,18 +271,8 @@ described below.
     <dd>{{% md %}}The name of the exchange.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span>settings</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exchangesettings">Dict[Exchange<wbr>Settings]</a></span>
-    </dt>
-    <dd>{{% md %}}The settings of the exchange. The structure is
-described below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>vhost</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -434,6 +282,8 @@ described below.
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 
@@ -461,7 +311,7 @@ Get an existing Exchange resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rabbitmq/Pulumi.Rabbitmq..Exchange.html">Exchange</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rabbitmq/Pulumi.Rabbitmq..ExchangeState.html">ExchangeState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rabbitmq/Pulumi.Rabbitmq.Exchange.html">Exchange</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rabbitmq/Pulumi.Rabbitmq..ExchangeState.html">ExchangeState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -571,7 +421,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the exchange.
 {{% /md %}}</dd>
@@ -580,7 +430,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Settings</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exchangesettings">Exchange<wbr>Settings<wbr>Args?</a></span>
+        <span class="property-type"><a href="#exchangesettings">Pulumi.<wbr>Rabbit<wbr>MQ.<wbr>Inputs.<wbr>Exchange<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The settings of the exchange. The structure is
 described below.
@@ -590,7 +440,7 @@ described below.
             title="Optional">
         <span>Vhost</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The vhost to create the resource in.
 {{% /md %}}</dd>
@@ -606,7 +456,7 @@ described below.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the exchange.
 {{% /md %}}</dd>
@@ -615,7 +465,7 @@ described below.
             title="Optional">
         <span>Settings</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exchangesettings">*Exchange<wbr>Settings</a></span>
+        <span class="property-type"><a href="#exchangesettings">Exchange<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}The settings of the exchange. The structure is
 described below.
@@ -625,7 +475,7 @@ described below.
             title="Optional">
         <span>Vhost</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The vhost to create the resource in.
 {{% /md %}}</dd>
@@ -641,7 +491,7 @@ described below.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the exchange.
 {{% /md %}}</dd>
@@ -650,7 +500,7 @@ described below.
             title="Optional">
         <span>settings</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#exchangesettings">Exchange<wbr>Settings?</a></span>
+        <span class="property-type"><a href="#exchangesettings">Exchange<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}The settings of the exchange. The structure is
 described below.
@@ -660,7 +510,7 @@ described below.
             title="Optional">
         <span>vhost</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The vhost to create the resource in.
 {{% /md %}}</dd>
@@ -729,35 +579,6 @@ described below.
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Arguments</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
-    </dt>
-    <dd>{{% md %}}Additional key/value settings for the exchange.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Auto<wbr>Delete</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Whether the exchange will self-delete when all
-queues have finished using it.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Durable</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Whether the exchange survives server restarts.
-Defaults to `false`.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Type</span>
@@ -767,12 +588,50 @@ Defaults to `false`.
     <dd>{{% md %}}The type of exchange.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>Arguments</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+    </dt>
+    <dd>{{% md %}}Additional key/value settings for the exchange.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Auto<wbr>Delete</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether the exchange will self-delete when all
+queues have finished using it.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Durable</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether the exchange survives server restarts.
+Defaults to `false`.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of exchange.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -787,7 +646,7 @@ Defaults to `false`.
             title="Optional">
         <span>Auto<wbr>Delete</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the exchange will self-delete when all
 queues have finished using it.
@@ -797,19 +656,10 @@ queues have finished using it.
             title="Optional">
         <span>Durable</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the exchange survives server restarts.
 Defaults to `false`.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The type of exchange.
 {{% /md %}}</dd>
 
 </dl>
@@ -818,35 +668,6 @@ Defaults to `false`.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>arguments</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
-    </dt>
-    <dd>{{% md %}}Additional key/value settings for the exchange.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>auto<wbr>Delete</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Whether the exchange will self-delete when all
-queues have finished using it.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>durable</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Whether the exchange survives server restarts.
-Defaults to `false`.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -857,12 +678,50 @@ Defaults to `false`.
     <dd>{{% md %}}The type of exchange.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>arguments</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}</span>
+    </dt>
+    <dd>{{% md %}}Additional key/value settings for the exchange.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>auto<wbr>Delete</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether the exchange will self-delete when all
+queues have finished using it.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>durable</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether the exchange survives server restarts.
+Defaults to `false`.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The type of exchange.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -891,15 +750,6 @@ queues have finished using it.
     </dt>
     <dd>{{% md %}}Whether the exchange survives server restarts.
 Defaults to `false`.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The type of exchange.
 {{% /md %}}</dd>
 
 </dl>

@@ -90,7 +90,7 @@ const monitoring = new openstack.identity.ApplicationCredential("monitoring", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/openstack/identity/#ApplicationCredential">ApplicationCredential</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/openstack/identity/#ApplicationCredentialArgs">ApplicationCredentialArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/openstack/identity/#ApplicationCredential">ApplicationCredential</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/openstack/identity/#ApplicationCredentialArgs">ApplicationCredentialArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -98,11 +98,11 @@ const monitoring = new openstack.identity.ApplicationCredential("monitoring", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewApplicationCredential<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/identity?tab=doc#ApplicationCredentialArgs">ApplicationCredentialArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/identity?tab=doc#ApplicationCredential">ApplicationCredential</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewApplicationCredential<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/identity?tab=doc#ApplicationCredentialArgs">ApplicationCredentialArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/identity?tab=doc#ApplicationCredential">ApplicationCredential</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.Openstack.Identity.ApplicationCredential.html">ApplicationCredential</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.Openstack.Identity.ApplicationCredentialArgs.html">ApplicationCredentialArgs</a></span>? <span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.Openstack.Identity.ApplicationCredential.html">ApplicationCredential</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.OpenStack.Identity.ApplicationCredentialArgs.html">ApplicationCredentialArgs</a></span>? <span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -198,7 +198,7 @@ const monitoring = new openstack.identity.ApplicationCredential("monitoring", {
             title="Optional">
         <span>Access<wbr>Rules</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationcredentialaccessrule">List&lt;Application<wbr>Credential<wbr>Access<wbr>Rule<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#applicationcredentialaccessrule">List&lt;Pulumi.<wbr>Open<wbr>Stack.<wbr>Identity.<wbr>Inputs.<wbr>Application<wbr>Credential<wbr>Access<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A collection of one or more access rules, which
 this application credential allows to follow. The structure is described
@@ -209,7 +209,7 @@ below. Changing this creates a new application credential.
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the application credential.
 Changing this creates a new application credential.
@@ -219,7 +219,7 @@ Changing this creates a new application credential.
             title="Optional">
         <span>Expires<wbr>At</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The expiration time of the application credential
 in the RFC3339 timestamp format (e.g. `2019-03-09T12:58:49Z`). If omitted,
@@ -231,7 +231,7 @@ application credential.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A name of the application credential. Changing this
 creates a new application credential.
@@ -241,7 +241,7 @@ creates a new application credential.
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V3 Keystone client.
 If omitted, the `region` argument of the provider is used. Changing this
@@ -252,7 +252,7 @@ creates a new application credential.
             title="Optional">
         <span>Roles</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A collection of one or more role names, which this
 application credential has to be associated with its project. If omitted,
@@ -265,7 +265,7 @@ credential.
             title="Optional">
         <span>Secret</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The secret for the application credential. If omitted,
 it will be generated by the server. Changing this creates a new application
@@ -276,7 +276,7 @@ credential.
             title="Optional">
         <span>Unrestricted</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A flag indicating whether the application
 credential may be used for creation or destruction of other application
@@ -305,7 +305,7 @@ below. Changing this creates a new application credential.
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the application credential.
 Changing this creates a new application credential.
@@ -315,7 +315,7 @@ Changing this creates a new application credential.
             title="Optional">
         <span>Expires<wbr>At</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The expiration time of the application credential
 in the RFC3339 timestamp format (e.g. `2019-03-09T12:58:49Z`). If omitted,
@@ -327,7 +327,7 @@ application credential.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A name of the application credential. Changing this
 creates a new application credential.
@@ -337,7 +337,7 @@ creates a new application credential.
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V3 Keystone client.
 If omitted, the `region` argument of the provider is used. Changing this
@@ -361,7 +361,7 @@ credential.
             title="Optional">
         <span>Secret</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The secret for the application credential. If omitted,
 it will be generated by the server. Changing this creates a new application
@@ -372,7 +372,7 @@ credential.
             title="Optional">
         <span>Unrestricted</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A flag indicating whether the application
 credential may be used for creation or destruction of other application
@@ -390,7 +390,7 @@ credentials or trusts. Changing this creates a new application credential.
             title="Optional">
         <span>access<wbr>Rules</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationcredentialaccessrule">Application<wbr>Credential<wbr>Access<wbr>Rule[]?</a></span>
+        <span class="property-type"><a href="#applicationcredentialaccessrule">Application<wbr>Credential<wbr>Access<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}A collection of one or more access rules, which
 this application credential allows to follow. The structure is described
@@ -401,7 +401,7 @@ below. Changing this creates a new application credential.
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the application credential.
 Changing this creates a new application credential.
@@ -411,7 +411,7 @@ Changing this creates a new application credential.
             title="Optional">
         <span>expires<wbr>At</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The expiration time of the application credential
 in the RFC3339 timestamp format (e.g. `2019-03-09T12:58:49Z`). If omitted,
@@ -423,7 +423,7 @@ application credential.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A name of the application credential. Changing this
 creates a new application credential.
@@ -433,7 +433,7 @@ creates a new application credential.
             title="Optional">
         <span>region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V3 Keystone client.
 If omitted, the `region` argument of the provider is used. Changing this
@@ -444,7 +444,7 @@ creates a new application credential.
             title="Optional">
         <span>roles</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A collection of one or more role names, which this
 application credential has to be associated with its project. If omitted,
@@ -457,7 +457,7 @@ credential.
             title="Optional">
         <span>secret</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The secret for the application credential. If omitted,
 it will be generated by the server. Changing this creates a new application
@@ -468,7 +468,7 @@ credential.
             title="Optional">
         <span>unrestricted</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}A flag indicating whether the application
 credential may be used for creation or destruction of other application
@@ -592,49 +592,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Access<wbr>Rules</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationcredentialaccessrule">List&lt;Application<wbr>Credential<wbr>Access<wbr>Rule&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}A collection of one or more access rules, which
-this application credential allows to follow. The structure is described
-below. Changing this creates a new application credential.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}A description of the application credential.
-Changing this creates a new application credential.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Expires<wbr>At</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The expiration time of the application credential
-in the RFC3339 timestamp format (e.g. `2019-03-09T12:58:49Z`). If omitted,
-an application credential will never expire. Changing this creates a new
-application credential.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A name of the application credential. Changing this
-creates a new application credential.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Project<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -642,52 +599,6 @@ creates a new application credential.
     <dd>{{% md %}}The ID of the project the application credential was created
 for and that authentication requests using this application credential will
 be scoped to.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The region in which to obtain the V3 Keystone client.
-If omitted, the `region` argument of the provider is used. Changing this
-creates a new application credential.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Roles</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
-    </dt>
-    <dd>{{% md %}}A collection of one or more role names, which this
-application credential has to be associated with its project. If omitted,
-all the current user's roles within the scoped project will be inherited by
-a new application credential. Changing this creates a new application
-credential.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Secret</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The secret for the application credential. If omitted,
-it will be generated by the server. Changing this creates a new application
-credential.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Unrestricted</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}A flag indicating whether the application
-credential may be used for creation or destruction of other application
-credentials or trusts. Changing this creates a new application credential.
 {{% /md %}}</dd>
 
 </dl>
@@ -699,49 +610,6 @@ credentials or trusts. Changing this creates a new application credential.
 
     <dt class="property-"
             title="">
-        <span>Access<wbr>Rules</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationcredentialaccessrule">[]Application<wbr>Credential<wbr>Access<wbr>Rule</a></span>
-    </dt>
-    <dd>{{% md %}}A collection of one or more access rules, which
-this application credential allows to follow. The structure is described
-below. Changing this creates a new application credential.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}A description of the application credential.
-Changing this creates a new application credential.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Expires<wbr>At</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The expiration time of the application credential
-in the RFC3339 timestamp format (e.g. `2019-03-09T12:58:49Z`). If omitted,
-an application credential will never expire. Changing this creates a new
-application credential.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A name of the application credential. Changing this
-creates a new application credential.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Project<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -751,101 +619,12 @@ for and that authentication requests using this application credential will
 be scoped to.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span>Region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The region in which to obtain the V3 Keystone client.
-If omitted, the `region` argument of the provider is used. Changing this
-creates a new application credential.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Roles</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}A collection of one or more role names, which this
-application credential has to be associated with its project. If omitted,
-all the current user's roles within the scoped project will be inherited by
-a new application credential. Changing this creates a new application
-credential.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Secret</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The secret for the application credential. If omitted,
-it will be generated by the server. Changing this creates a new application
-credential.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Unrestricted</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}A flag indicating whether the application
-credential may be used for creation or destruction of other application
-credentials or trusts. Changing this creates a new application credential.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>access<wbr>Rules</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationcredentialaccessrule">Application<wbr>Credential<wbr>Access<wbr>Rule[]?</a></span>
-    </dt>
-    <dd>{{% md %}}A collection of one or more access rules, which
-this application credential allows to follow. The structure is described
-below. Changing this creates a new application credential.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}A description of the application credential.
-Changing this creates a new application credential.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>expires<wbr>At</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The expiration time of the application credential
-in the RFC3339 timestamp format (e.g. `2019-03-09T12:58:49Z`). If omitted,
-an application credential will never expire. Changing this creates a new
-application credential.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A name of the application credential. Changing this
-creates a new application credential.
-{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -858,101 +637,12 @@ for and that authentication requests using this application credential will
 be scoped to.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span>region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The region in which to obtain the V3 Keystone client.
-If omitted, the `region` argument of the provider is used. Changing this
-creates a new application credential.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>roles</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
-    </dt>
-    <dd>{{% md %}}A collection of one or more role names, which this
-application credential has to be associated with its project. If omitted,
-all the current user's roles within the scoped project will be inherited by
-a new application credential. Changing this creates a new application
-credential.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>secret</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The secret for the application credential. If omitted,
-it will be generated by the server. Changing this creates a new application
-credential.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>unrestricted</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}A flag indicating whether the application
-credential may be used for creation or destruction of other application
-credentials or trusts. Changing this creates a new application credential.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>access_<wbr>rules</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationcredentialaccessrule">List[Application<wbr>Credential<wbr>Access<wbr>Rule]</a></span>
-    </dt>
-    <dd>{{% md %}}A collection of one or more access rules, which
-this application credential allows to follow. The structure is described
-below. Changing this creates a new application credential.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}A description of the application credential.
-Changing this creates a new application credential.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>expires_<wbr>at</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The expiration time of the application credential
-in the RFC3339 timestamp format (e.g. `2019-03-09T12:58:49Z`). If omitted,
-an application credential will never expire. Changing this creates a new
-application credential.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}A name of the application credential. Changing this
-creates a new application credential.
-{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -963,52 +653,6 @@ creates a new application credential.
     <dd>{{% md %}}The ID of the project the application credential was created
 for and that authentication requests using this application credential will
 be scoped to.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The region in which to obtain the V3 Keystone client.
-If omitted, the `region` argument of the provider is used. Changing this
-creates a new application credential.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>roles</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}A collection of one or more role names, which this
-application credential has to be associated with its project. If omitted,
-all the current user's roles within the scoped project will be inherited by
-a new application credential. Changing this creates a new application
-credential.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>secret</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The secret for the application credential. If omitted,
-it will be generated by the server. Changing this creates a new application
-credential.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>unrestricted</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}A flag indicating whether the application
-credential may be used for creation or destruction of other application
-credentials or trusts. Changing this creates a new application credential.
 {{% /md %}}</dd>
 
 </dl>
@@ -1150,7 +794,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Access<wbr>Rules</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationcredentialaccessrule">List&lt;Application<wbr>Credential<wbr>Access<wbr>Rule<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#applicationcredentialaccessrule">List&lt;Pulumi.<wbr>Open<wbr>Stack.<wbr>Identity.<wbr>Inputs.<wbr>Application<wbr>Credential<wbr>Access<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A collection of one or more access rules, which
 this application credential allows to follow. The structure is described
@@ -1161,7 +805,7 @@ below. Changing this creates a new application credential.
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the application credential.
 Changing this creates a new application credential.
@@ -1171,7 +815,7 @@ Changing this creates a new application credential.
             title="Optional">
         <span>Expires<wbr>At</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The expiration time of the application credential
 in the RFC3339 timestamp format (e.g. `2019-03-09T12:58:49Z`). If omitted,
@@ -1183,7 +827,7 @@ application credential.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A name of the application credential. Changing this
 creates a new application credential.
@@ -1193,7 +837,7 @@ creates a new application credential.
             title="Optional">
         <span>Project<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project the application credential was created
 for and that authentication requests using this application credential will
@@ -1204,7 +848,7 @@ be scoped to.
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V3 Keystone client.
 If omitted, the `region` argument of the provider is used. Changing this
@@ -1215,7 +859,7 @@ creates a new application credential.
             title="Optional">
         <span>Roles</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A collection of one or more role names, which this
 application credential has to be associated with its project. If omitted,
@@ -1228,7 +872,7 @@ credential.
             title="Optional">
         <span>Secret</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The secret for the application credential. If omitted,
 it will be generated by the server. Changing this creates a new application
@@ -1239,7 +883,7 @@ credential.
             title="Optional">
         <span>Unrestricted</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A flag indicating whether the application
 credential may be used for creation or destruction of other application
@@ -1268,7 +912,7 @@ below. Changing this creates a new application credential.
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the application credential.
 Changing this creates a new application credential.
@@ -1278,7 +922,7 @@ Changing this creates a new application credential.
             title="Optional">
         <span>Expires<wbr>At</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The expiration time of the application credential
 in the RFC3339 timestamp format (e.g. `2019-03-09T12:58:49Z`). If omitted,
@@ -1290,7 +934,7 @@ application credential.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A name of the application credential. Changing this
 creates a new application credential.
@@ -1300,7 +944,7 @@ creates a new application credential.
             title="Optional">
         <span>Project<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project the application credential was created
 for and that authentication requests using this application credential will
@@ -1311,7 +955,7 @@ be scoped to.
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V3 Keystone client.
 If omitted, the `region` argument of the provider is used. Changing this
@@ -1335,7 +979,7 @@ credential.
             title="Optional">
         <span>Secret</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The secret for the application credential. If omitted,
 it will be generated by the server. Changing this creates a new application
@@ -1346,7 +990,7 @@ credential.
             title="Optional">
         <span>Unrestricted</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A flag indicating whether the application
 credential may be used for creation or destruction of other application
@@ -1364,7 +1008,7 @@ credentials or trusts. Changing this creates a new application credential.
             title="Optional">
         <span>access<wbr>Rules</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationcredentialaccessrule">Application<wbr>Credential<wbr>Access<wbr>Rule[]?</a></span>
+        <span class="property-type"><a href="#applicationcredentialaccessrule">Application<wbr>Credential<wbr>Access<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}A collection of one or more access rules, which
 this application credential allows to follow. The structure is described
@@ -1375,7 +1019,7 @@ below. Changing this creates a new application credential.
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the application credential.
 Changing this creates a new application credential.
@@ -1385,7 +1029,7 @@ Changing this creates a new application credential.
             title="Optional">
         <span>expires<wbr>At</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The expiration time of the application credential
 in the RFC3339 timestamp format (e.g. `2019-03-09T12:58:49Z`). If omitted,
@@ -1397,7 +1041,7 @@ application credential.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A name of the application credential. Changing this
 creates a new application credential.
@@ -1407,7 +1051,7 @@ creates a new application credential.
             title="Optional">
         <span>project<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the project the application credential was created
 for and that authentication requests using this application credential will
@@ -1418,7 +1062,7 @@ be scoped to.
             title="Optional">
         <span>region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V3 Keystone client.
 If omitted, the `region` argument of the provider is used. Changing this
@@ -1429,7 +1073,7 @@ creates a new application credential.
             title="Optional">
         <span>roles</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A collection of one or more role names, which this
 application credential has to be associated with its project. If omitted,
@@ -1442,7 +1086,7 @@ credential.
             title="Optional">
         <span>secret</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The secret for the application credential. If omitted,
 it will be generated by the server. Changing this creates a new application
@@ -1453,7 +1097,7 @@ credential.
             title="Optional">
         <span>unrestricted</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}A flag indicating whether the application
 credential may be used for creation or destruction of other application
@@ -1596,16 +1240,6 @@ credentials or trusts. Changing this creates a new application credential.
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The ID of the existing access rule. The access rule ID of
-another application credential can be provided.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Method</span>
@@ -1640,6 +1274,16 @@ application credential is granted to access. Must be a service type that is
 listed in the service catalog and not a code name for a service. E.g.
 **identity**, **compute**, **volumev3**, **image**, **network**,
 **object-store**, **sharev2**, **dns**, **key-manager**, **monitoring**, etc.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the existing access rule. The access rule ID of
+another application credential can be provided.
 {{% /md %}}</dd>
 
 </dl>
@@ -1649,16 +1293,6 @@ listed in the service catalog and not a code name for a service. E.g.
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the existing access rule. The access rule ID of
-another application credential can be provided.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Method</span>
@@ -1695,22 +1329,22 @@ listed in the service catalog and not a code name for a service. E.g.
 **object-store**, **sharev2**, **dns**, **key-manager**, **monitoring**, etc.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the existing access rule. The access rule ID of
+another application credential can be provided.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The ID of the existing access rule. The access rule ID of
-another application credential can be provided.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1746,6 +1380,16 @@ application credential is granted to access. Must be a service type that is
 listed in the service catalog and not a code name for a service. E.g.
 **identity**, **compute**, **volumev3**, **image**, **network**,
 **object-store**, **sharev2**, **dns**, **key-manager**, **monitoring**, etc.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the existing access rule. The access rule ID of
+another application credential can be provided.
 {{% /md %}}</dd>
 
 </dl>
@@ -1755,16 +1399,6 @@ listed in the service catalog and not a code name for a service. E.g.
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The ID of the existing access rule. The access rule ID of
-another application credential can be provided.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>method</span>
@@ -1799,6 +1433,16 @@ application credential is granted to access. Must be a service type that is
 listed in the service catalog and not a code name for a service. E.g.
 **identity**, **compute**, **volumev3**, **image**, **network**,
 **object-store**, **sharev2**, **dns**, **key-manager**, **monitoring**, etc.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ID of the existing access rule. The access rule ID of
+another application credential can be provided.
 {{% /md %}}</dd>
 
 </dl>

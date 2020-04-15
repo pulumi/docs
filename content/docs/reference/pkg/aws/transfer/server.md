@@ -62,7 +62,7 @@ const fooServer = new aws.transfer.Server("foo", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/transfer/#Server">Server</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/transfer/#ServerArgs">ServerArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/transfer/#Server">Server</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/transfer/#ServerArgs">ServerArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -70,7 +70,7 @@ const fooServer = new aws.transfer.Server("foo", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewServer<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/transfer?tab=doc#ServerArgs">ServerArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/transfer?tab=doc#Server">Server</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewServer<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/transfer?tab=doc#ServerArgs">ServerArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/transfer?tab=doc#Server">Server</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -170,7 +170,7 @@ const fooServer = new aws.transfer.Server("foo", {
             title="Optional">
         <span>Endpoint<wbr>Details</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverendpointdetails">Server<wbr>Endpoint<wbr>Details<wbr>Args?</a></span>
+        <span class="property-type"><a href="#serverendpointdetails">Server<wbr>Endpoint<wbr>Details<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The virtual private cloud (VPC) endpoint settings that you want to configure for your SFTP server. Fields documented below.
 {{% /md %}}</dd>
@@ -179,7 +179,7 @@ const fooServer = new aws.transfer.Server("foo", {
             title="Optional">
         <span>Endpoint<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of endpoint that you want your SFTP server connect to. If you connect to a `VPC_ENDPOINT`, your SFTP server isn't accessible over the public internet. If you want to connect your SFTP server via public internet, set `PUBLIC`.  Defaults to `PUBLIC`.
 {{% /md %}}</dd>
@@ -188,7 +188,7 @@ const fooServer = new aws.transfer.Server("foo", {
             title="Optional">
         <span>Force<wbr>Destroy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean that indicates all users associated with the server should be deleted so that the Server can be destroyed without error. The default value is `false`.
 {{% /md %}}</dd>
@@ -197,7 +197,7 @@ const fooServer = new aws.transfer.Server("foo", {
             title="Optional">
         <span>Host<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}RSA private key (e.g. as generated by the `ssh-keygen -N "" -f my-new-server-key` command).
 {{% /md %}}</dd>
@@ -206,7 +206,7 @@ const fooServer = new aws.transfer.Server("foo", {
             title="Optional">
         <span>Identity<wbr>Provider<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The mode of authentication enabled for this service. The default value is `SERVICE_MANAGED`, which allows you to store and access SFTP user credentials within the service. `API_GATEWAY` indicates that user authentication requires a call to an API Gateway endpoint URL provided by you to integrate an identity provider of your choice.
 {{% /md %}}</dd>
@@ -215,7 +215,7 @@ const fooServer = new aws.transfer.Server("foo", {
             title="Optional">
         <span>Invocation<wbr>Role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the IAM role used to authenticate the user account with an `identity_provider_type` of `API_GATEWAY`.
 {{% /md %}}</dd>
@@ -224,7 +224,7 @@ const fooServer = new aws.transfer.Server("foo", {
             title="Optional">
         <span>Logging<wbr>Role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of an IAM role that allows the service to write your SFTP users’ activity to your Amazon CloudWatch logs for monitoring and auditing purposes.
 {{% /md %}}</dd>
@@ -233,7 +233,7 @@ const fooServer = new aws.transfer.Server("foo", {
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -242,7 +242,7 @@ const fooServer = new aws.transfer.Server("foo", {
             title="Optional">
         <span>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}- URL of the service endpoint used to authenticate users with an `identity_provider_type` of `API_GATEWAY`.
 {{% /md %}}</dd>
@@ -258,7 +258,7 @@ const fooServer = new aws.transfer.Server("foo", {
             title="Optional">
         <span>Endpoint<wbr>Details</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverendpointdetails">*Server<wbr>Endpoint<wbr>Details</a></span>
+        <span class="property-type"><a href="#serverendpointdetails">Server<wbr>Endpoint<wbr>Details</a></span>
     </dt>
     <dd>{{% md %}}The virtual private cloud (VPC) endpoint settings that you want to configure for your SFTP server. Fields documented below.
 {{% /md %}}</dd>
@@ -267,7 +267,7 @@ const fooServer = new aws.transfer.Server("foo", {
             title="Optional">
         <span>Endpoint<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of endpoint that you want your SFTP server connect to. If you connect to a `VPC_ENDPOINT`, your SFTP server isn't accessible over the public internet. If you want to connect your SFTP server via public internet, set `PUBLIC`.  Defaults to `PUBLIC`.
 {{% /md %}}</dd>
@@ -276,7 +276,7 @@ const fooServer = new aws.transfer.Server("foo", {
             title="Optional">
         <span>Force<wbr>Destroy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean that indicates all users associated with the server should be deleted so that the Server can be destroyed without error. The default value is `false`.
 {{% /md %}}</dd>
@@ -285,7 +285,7 @@ const fooServer = new aws.transfer.Server("foo", {
             title="Optional">
         <span>Host<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}RSA private key (e.g. as generated by the `ssh-keygen -N "" -f my-new-server-key` command).
 {{% /md %}}</dd>
@@ -294,7 +294,7 @@ const fooServer = new aws.transfer.Server("foo", {
             title="Optional">
         <span>Identity<wbr>Provider<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The mode of authentication enabled for this service. The default value is `SERVICE_MANAGED`, which allows you to store and access SFTP user credentials within the service. `API_GATEWAY` indicates that user authentication requires a call to an API Gateway endpoint URL provided by you to integrate an identity provider of your choice.
 {{% /md %}}</dd>
@@ -303,7 +303,7 @@ const fooServer = new aws.transfer.Server("foo", {
             title="Optional">
         <span>Invocation<wbr>Role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the IAM role used to authenticate the user account with an `identity_provider_type` of `API_GATEWAY`.
 {{% /md %}}</dd>
@@ -312,7 +312,7 @@ const fooServer = new aws.transfer.Server("foo", {
             title="Optional">
         <span>Logging<wbr>Role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of an IAM role that allows the service to write your SFTP users’ activity to your Amazon CloudWatch logs for monitoring and auditing purposes.
 {{% /md %}}</dd>
@@ -330,7 +330,7 @@ const fooServer = new aws.transfer.Server("foo", {
             title="Optional">
         <span>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}- URL of the service endpoint used to authenticate users with an `identity_provider_type` of `API_GATEWAY`.
 {{% /md %}}</dd>
@@ -346,7 +346,7 @@ const fooServer = new aws.transfer.Server("foo", {
             title="Optional">
         <span>endpoint<wbr>Details</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverendpointdetails">Server<wbr>Endpoint<wbr>Details?</a></span>
+        <span class="property-type"><a href="#serverendpointdetails">Server<wbr>Endpoint<wbr>Details</a></span>
     </dt>
     <dd>{{% md %}}The virtual private cloud (VPC) endpoint settings that you want to configure for your SFTP server. Fields documented below.
 {{% /md %}}</dd>
@@ -355,7 +355,7 @@ const fooServer = new aws.transfer.Server("foo", {
             title="Optional">
         <span>endpoint<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of endpoint that you want your SFTP server connect to. If you connect to a `VPC_ENDPOINT`, your SFTP server isn't accessible over the public internet. If you want to connect your SFTP server via public internet, set `PUBLIC`.  Defaults to `PUBLIC`.
 {{% /md %}}</dd>
@@ -364,7 +364,7 @@ const fooServer = new aws.transfer.Server("foo", {
             title="Optional">
         <span>force<wbr>Destroy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}A boolean that indicates all users associated with the server should be deleted so that the Server can be destroyed without error. The default value is `false`.
 {{% /md %}}</dd>
@@ -373,7 +373,7 @@ const fooServer = new aws.transfer.Server("foo", {
             title="Optional">
         <span>host<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}RSA private key (e.g. as generated by the `ssh-keygen -N "" -f my-new-server-key` command).
 {{% /md %}}</dd>
@@ -382,7 +382,7 @@ const fooServer = new aws.transfer.Server("foo", {
             title="Optional">
         <span>identity<wbr>Provider<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The mode of authentication enabled for this service. The default value is `SERVICE_MANAGED`, which allows you to store and access SFTP user credentials within the service. `API_GATEWAY` indicates that user authentication requires a call to an API Gateway endpoint URL provided by you to integrate an identity provider of your choice.
 {{% /md %}}</dd>
@@ -391,7 +391,7 @@ const fooServer = new aws.transfer.Server("foo", {
             title="Optional">
         <span>invocation<wbr>Role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the IAM role used to authenticate the user account with an `identity_provider_type` of `API_GATEWAY`.
 {{% /md %}}</dd>
@@ -400,7 +400,7 @@ const fooServer = new aws.transfer.Server("foo", {
             title="Optional">
         <span>logging<wbr>Role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of an IAM role that allows the service to write your SFTP users’ activity to your Amazon CloudWatch logs for monitoring and auditing purposes.
 {{% /md %}}</dd>
@@ -409,7 +409,7 @@ const fooServer = new aws.transfer.Server("foo", {
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -418,7 +418,7 @@ const fooServer = new aws.transfer.Server("foo", {
             title="Optional">
         <span>url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}- URL of the service endpoint used to authenticate users with an `identity_provider_type` of `API_GATEWAY`.
 {{% /md %}}</dd>
@@ -550,92 +550,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Endpoint<wbr>Details</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverendpointdetails">Server<wbr>Endpoint<wbr>Details?</a></span>
-    </dt>
-    <dd>{{% md %}}The virtual private cloud (VPC) endpoint settings that you want to configure for your SFTP server. Fields documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Endpoint<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The type of endpoint that you want your SFTP server connect to. If you connect to a `VPC_ENDPOINT`, your SFTP server isn't accessible over the public internet. If you want to connect your SFTP server via public internet, set `PUBLIC`.  Defaults to `PUBLIC`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Force<wbr>Destroy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}A boolean that indicates all users associated with the server should be deleted so that the Server can be destroyed without error. The default value is `false`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Host<wbr>Key</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}RSA private key (e.g. as generated by the `ssh-keygen -N "" -f my-new-server-key` command).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Host<wbr>Key<wbr>Fingerprint</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This value contains the message-digest algorithm (MD5) hash of the server's host key. This value is equivalent to the output of the `ssh-keygen -l -E md5 -f my-new-server-key` command.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Identity<wbr>Provider<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The mode of authentication enabled for this service. The default value is `SERVICE_MANAGED`, which allows you to store and access SFTP user credentials within the service. `API_GATEWAY` indicates that user authentication requires a call to an API Gateway endpoint URL provided by you to integrate an identity provider of your choice.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Invocation<wbr>Role</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Amazon Resource Name (ARN) of the IAM role used to authenticate the user account with an `identity_provider_type` of `API_GATEWAY`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Logging<wbr>Role</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Amazon Resource Name (ARN) of an IAM role that allows the service to write your SFTP users’ activity to your Amazon CloudWatch logs for monitoring and auditing purposes.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Url</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}- URL of the service endpoint used to authenticate users with an `identity_provider_type` of `API_GATEWAY`.
 {{% /md %}}</dd>
 
 </dl>
@@ -665,92 +584,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Endpoint<wbr>Details</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverendpointdetails">*Server<wbr>Endpoint<wbr>Details</a></span>
-    </dt>
-    <dd>{{% md %}}The virtual private cloud (VPC) endpoint settings that you want to configure for your SFTP server. Fields documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Endpoint<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The type of endpoint that you want your SFTP server connect to. If you connect to a `VPC_ENDPOINT`, your SFTP server isn't accessible over the public internet. If you want to connect your SFTP server via public internet, set `PUBLIC`.  Defaults to `PUBLIC`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Force<wbr>Destroy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}A boolean that indicates all users associated with the server should be deleted so that the Server can be destroyed without error. The default value is `false`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Host<wbr>Key</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}RSA private key (e.g. as generated by the `ssh-keygen -N "" -f my-new-server-key` command).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Host<wbr>Key<wbr>Fingerprint</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This value contains the message-digest algorithm (MD5) hash of the server's host key. This value is equivalent to the output of the `ssh-keygen -l -E md5 -f my-new-server-key` command.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Identity<wbr>Provider<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The mode of authentication enabled for this service. The default value is `SERVICE_MANAGED`, which allows you to store and access SFTP user credentials within the service. `API_GATEWAY` indicates that user authentication requires a call to an API Gateway endpoint URL provided by you to integrate an identity provider of your choice.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Invocation<wbr>Role</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Amazon Resource Name (ARN) of the IAM role used to authenticate the user account with an `identity_provider_type` of `API_GATEWAY`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Logging<wbr>Role</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Amazon Resource Name (ARN) of an IAM role that allows the service to write your SFTP users’ activity to your Amazon CloudWatch logs for monitoring and auditing purposes.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Url</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}- URL of the service endpoint used to authenticate users with an `identity_provider_type` of `API_GATEWAY`.
 {{% /md %}}</dd>
 
 </dl>
@@ -780,92 +618,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>endpoint<wbr>Details</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverendpointdetails">Server<wbr>Endpoint<wbr>Details?</a></span>
-    </dt>
-    <dd>{{% md %}}The virtual private cloud (VPC) endpoint settings that you want to configure for your SFTP server. Fields documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>endpoint<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The type of endpoint that you want your SFTP server connect to. If you connect to a `VPC_ENDPOINT`, your SFTP server isn't accessible over the public internet. If you want to connect your SFTP server via public internet, set `PUBLIC`.  Defaults to `PUBLIC`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>force<wbr>Destroy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}A boolean that indicates all users associated with the server should be deleted so that the Server can be destroyed without error. The default value is `false`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>host<wbr>Key</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}RSA private key (e.g. as generated by the `ssh-keygen -N "" -f my-new-server-key` command).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>host<wbr>Key<wbr>Fingerprint</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This value contains the message-digest algorithm (MD5) hash of the server's host key. This value is equivalent to the output of the `ssh-keygen -l -E md5 -f my-new-server-key` command.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>identity<wbr>Provider<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The mode of authentication enabled for this service. The default value is `SERVICE_MANAGED`, which allows you to store and access SFTP user credentials within the service. `API_GATEWAY` indicates that user authentication requires a call to an API Gateway endpoint URL provided by you to integrate an identity provider of your choice.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>invocation<wbr>Role</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Amazon Resource Name (ARN) of the IAM role used to authenticate the user account with an `identity_provider_type` of `API_GATEWAY`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>logging<wbr>Role</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Amazon Resource Name (ARN) of an IAM role that allows the service to write your SFTP users’ activity to your Amazon CloudWatch logs for monitoring and auditing purposes.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>url</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}- URL of the service endpoint used to authenticate users with an `identity_provider_type` of `API_GATEWAY`.
 {{% /md %}}</dd>
 
 </dl>
@@ -895,92 +652,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>endpoint_<wbr>details</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverendpointdetails">Dict[Server<wbr>Endpoint<wbr>Details]</a></span>
-    </dt>
-    <dd>{{% md %}}The virtual private cloud (VPC) endpoint settings that you want to configure for your SFTP server. Fields documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>endpoint_<wbr>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The type of endpoint that you want your SFTP server connect to. If you connect to a `VPC_ENDPOINT`, your SFTP server isn't accessible over the public internet. If you want to connect your SFTP server via public internet, set `PUBLIC`.  Defaults to `PUBLIC`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>force_<wbr>destroy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}A boolean that indicates all users associated with the server should be deleted so that the Server can be destroyed without error. The default value is `false`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>host_<wbr>key</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}RSA private key (e.g. as generated by the `ssh-keygen -N "" -f my-new-server-key` command).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>host_<wbr>key_<wbr>fingerprint</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}This value contains the message-digest algorithm (MD5) hash of the server's host key. This value is equivalent to the output of the `ssh-keygen -l -E md5 -f my-new-server-key` command.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>identity_<wbr>provider_<wbr>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The mode of authentication enabled for this service. The default value is `SERVICE_MANAGED`, which allows you to store and access SFTP user credentials within the service. `API_GATEWAY` indicates that user authentication requires a call to an API Gateway endpoint URL provided by you to integrate an identity provider of your choice.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>invocation_<wbr>role</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Amazon Resource Name (ARN) of the IAM role used to authenticate the user account with an `identity_provider_type` of `API_GATEWAY`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>logging_<wbr>role</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Amazon Resource Name (ARN) of an IAM role that allows the service to write your SFTP users’ activity to your Amazon CloudWatch logs for monitoring and auditing purposes.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>url</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}- URL of the service endpoint used to authenticate users with an `identity_provider_type` of `API_GATEWAY`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1122,7 +798,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of Transfer Server
 {{% /md %}}</dd>
@@ -1131,7 +807,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Endpoint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint of the Transfer Server (e.g. `s-12345678.server.transfer.REGION.amazonaws.com`)
 {{% /md %}}</dd>
@@ -1140,7 +816,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Endpoint<wbr>Details</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverendpointdetails">Server<wbr>Endpoint<wbr>Details<wbr>Args?</a></span>
+        <span class="property-type"><a href="#serverendpointdetails">Server<wbr>Endpoint<wbr>Details<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The virtual private cloud (VPC) endpoint settings that you want to configure for your SFTP server. Fields documented below.
 {{% /md %}}</dd>
@@ -1149,7 +825,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Endpoint<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of endpoint that you want your SFTP server connect to. If you connect to a `VPC_ENDPOINT`, your SFTP server isn't accessible over the public internet. If you want to connect your SFTP server via public internet, set `PUBLIC`.  Defaults to `PUBLIC`.
 {{% /md %}}</dd>
@@ -1158,7 +834,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Force<wbr>Destroy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean that indicates all users associated with the server should be deleted so that the Server can be destroyed without error. The default value is `false`.
 {{% /md %}}</dd>
@@ -1167,7 +843,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Host<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}RSA private key (e.g. as generated by the `ssh-keygen -N "" -f my-new-server-key` command).
 {{% /md %}}</dd>
@@ -1176,7 +852,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Host<wbr>Key<wbr>Fingerprint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This value contains the message-digest algorithm (MD5) hash of the server's host key. This value is equivalent to the output of the `ssh-keygen -l -E md5 -f my-new-server-key` command.
 {{% /md %}}</dd>
@@ -1185,7 +861,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Identity<wbr>Provider<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The mode of authentication enabled for this service. The default value is `SERVICE_MANAGED`, which allows you to store and access SFTP user credentials within the service. `API_GATEWAY` indicates that user authentication requires a call to an API Gateway endpoint URL provided by you to integrate an identity provider of your choice.
 {{% /md %}}</dd>
@@ -1194,7 +870,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Invocation<wbr>Role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the IAM role used to authenticate the user account with an `identity_provider_type` of `API_GATEWAY`.
 {{% /md %}}</dd>
@@ -1203,7 +879,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Logging<wbr>Role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of an IAM role that allows the service to write your SFTP users’ activity to your Amazon CloudWatch logs for monitoring and auditing purposes.
 {{% /md %}}</dd>
@@ -1212,7 +888,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1221,7 +897,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}- URL of the service endpoint used to authenticate users with an `identity_provider_type` of `API_GATEWAY`.
 {{% /md %}}</dd>
@@ -1237,7 +913,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of Transfer Server
 {{% /md %}}</dd>
@@ -1246,7 +922,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Endpoint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint of the Transfer Server (e.g. `s-12345678.server.transfer.REGION.amazonaws.com`)
 {{% /md %}}</dd>
@@ -1255,7 +931,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Endpoint<wbr>Details</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverendpointdetails">*Server<wbr>Endpoint<wbr>Details</a></span>
+        <span class="property-type"><a href="#serverendpointdetails">Server<wbr>Endpoint<wbr>Details</a></span>
     </dt>
     <dd>{{% md %}}The virtual private cloud (VPC) endpoint settings that you want to configure for your SFTP server. Fields documented below.
 {{% /md %}}</dd>
@@ -1264,7 +940,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Endpoint<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of endpoint that you want your SFTP server connect to. If you connect to a `VPC_ENDPOINT`, your SFTP server isn't accessible over the public internet. If you want to connect your SFTP server via public internet, set `PUBLIC`.  Defaults to `PUBLIC`.
 {{% /md %}}</dd>
@@ -1273,7 +949,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Force<wbr>Destroy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}A boolean that indicates all users associated with the server should be deleted so that the Server can be destroyed without error. The default value is `false`.
 {{% /md %}}</dd>
@@ -1282,7 +958,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Host<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}RSA private key (e.g. as generated by the `ssh-keygen -N "" -f my-new-server-key` command).
 {{% /md %}}</dd>
@@ -1291,7 +967,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Host<wbr>Key<wbr>Fingerprint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This value contains the message-digest algorithm (MD5) hash of the server's host key. This value is equivalent to the output of the `ssh-keygen -l -E md5 -f my-new-server-key` command.
 {{% /md %}}</dd>
@@ -1300,7 +976,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Identity<wbr>Provider<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The mode of authentication enabled for this service. The default value is `SERVICE_MANAGED`, which allows you to store and access SFTP user credentials within the service. `API_GATEWAY` indicates that user authentication requires a call to an API Gateway endpoint URL provided by you to integrate an identity provider of your choice.
 {{% /md %}}</dd>
@@ -1309,7 +985,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Invocation<wbr>Role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the IAM role used to authenticate the user account with an `identity_provider_type` of `API_GATEWAY`.
 {{% /md %}}</dd>
@@ -1318,7 +994,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Logging<wbr>Role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of an IAM role that allows the service to write your SFTP users’ activity to your Amazon CloudWatch logs for monitoring and auditing purposes.
 {{% /md %}}</dd>
@@ -1336,7 +1012,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}- URL of the service endpoint used to authenticate users with an `identity_provider_type` of `API_GATEWAY`.
 {{% /md %}}</dd>
@@ -1352,7 +1028,7 @@ The following state arguments are supported:
             title="Optional">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of Transfer Server
 {{% /md %}}</dd>
@@ -1361,7 +1037,7 @@ The following state arguments are supported:
             title="Optional">
         <span>endpoint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint of the Transfer Server (e.g. `s-12345678.server.transfer.REGION.amazonaws.com`)
 {{% /md %}}</dd>
@@ -1370,7 +1046,7 @@ The following state arguments are supported:
             title="Optional">
         <span>endpoint<wbr>Details</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serverendpointdetails">Server<wbr>Endpoint<wbr>Details?</a></span>
+        <span class="property-type"><a href="#serverendpointdetails">Server<wbr>Endpoint<wbr>Details</a></span>
     </dt>
     <dd>{{% md %}}The virtual private cloud (VPC) endpoint settings that you want to configure for your SFTP server. Fields documented below.
 {{% /md %}}</dd>
@@ -1379,7 +1055,7 @@ The following state arguments are supported:
             title="Optional">
         <span>endpoint<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of endpoint that you want your SFTP server connect to. If you connect to a `VPC_ENDPOINT`, your SFTP server isn't accessible over the public internet. If you want to connect your SFTP server via public internet, set `PUBLIC`.  Defaults to `PUBLIC`.
 {{% /md %}}</dd>
@@ -1388,7 +1064,7 @@ The following state arguments are supported:
             title="Optional">
         <span>force<wbr>Destroy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}A boolean that indicates all users associated with the server should be deleted so that the Server can be destroyed without error. The default value is `false`.
 {{% /md %}}</dd>
@@ -1397,7 +1073,7 @@ The following state arguments are supported:
             title="Optional">
         <span>host<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}RSA private key (e.g. as generated by the `ssh-keygen -N "" -f my-new-server-key` command).
 {{% /md %}}</dd>
@@ -1406,7 +1082,7 @@ The following state arguments are supported:
             title="Optional">
         <span>host<wbr>Key<wbr>Fingerprint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This value contains the message-digest algorithm (MD5) hash of the server's host key. This value is equivalent to the output of the `ssh-keygen -l -E md5 -f my-new-server-key` command.
 {{% /md %}}</dd>
@@ -1415,7 +1091,7 @@ The following state arguments are supported:
             title="Optional">
         <span>identity<wbr>Provider<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The mode of authentication enabled for this service. The default value is `SERVICE_MANAGED`, which allows you to store and access SFTP user credentials within the service. `API_GATEWAY` indicates that user authentication requires a call to an API Gateway endpoint URL provided by you to integrate an identity provider of your choice.
 {{% /md %}}</dd>
@@ -1424,7 +1100,7 @@ The following state arguments are supported:
             title="Optional">
         <span>invocation<wbr>Role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the IAM role used to authenticate the user account with an `identity_provider_type` of `API_GATEWAY`.
 {{% /md %}}</dd>
@@ -1433,7 +1109,7 @@ The following state arguments are supported:
             title="Optional">
         <span>logging<wbr>Role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of an IAM role that allows the service to write your SFTP users’ activity to your Amazon CloudWatch logs for monitoring and auditing purposes.
 {{% /md %}}</dd>
@@ -1442,7 +1118,7 @@ The following state arguments are supported:
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1451,7 +1127,7 @@ The following state arguments are supported:
             title="Optional">
         <span>url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}- URL of the service endpoint used to authenticate users with an `identity_provider_type` of `API_GATEWAY`.
 {{% /md %}}</dd>

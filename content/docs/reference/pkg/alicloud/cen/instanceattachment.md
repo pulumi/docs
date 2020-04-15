@@ -14,7 +14,7 @@ block_external_search_index: true
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/cen/#InstanceAttachment">InstanceAttachment</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/cen/#InstanceAttachmentArgs">InstanceAttachmentArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/cen/#InstanceAttachment">InstanceAttachment</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/cen/#InstanceAttachmentArgs">InstanceAttachmentArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -22,11 +22,11 @@ block_external_search_index: true
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewInstanceAttachment<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/cen?tab=doc#InstanceAttachmentArgs">InstanceAttachmentArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/cen?tab=doc#InstanceAttachment">InstanceAttachment</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewInstanceAttachment<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/cen?tab=doc#InstanceAttachmentArgs">InstanceAttachmentArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/cen?tab=doc#InstanceAttachment">InstanceAttachment</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.Cen.InstanceAttachment.html">InstanceAttachment</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.Cen.InstanceAttachmentArgs.html">InstanceAttachmentArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.Cen.InstanceAttachment.html">InstanceAttachment</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.AliCloud.Cen.InstanceAttachmentArgs.html">InstanceAttachmentArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -127,15 +127,6 @@ block_external_search_index: true
     <dd>{{% md %}}The ID of the child instance to attach.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Child<wbr>Instance<wbr>Owner<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The uid of the child instance. Only used when attach a child instance of other account.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Child<wbr>Instance<wbr>Region<wbr>Id</span>
@@ -152,6 +143,15 @@ block_external_search_index: true
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the CEN.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Child<wbr>Instance<wbr>Owner<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The uid of the child instance. Only used when attach a child instance of other account.
 {{% /md %}}</dd>
 
 </dl>
@@ -170,15 +170,6 @@ block_external_search_index: true
     <dd>{{% md %}}The ID of the child instance to attach.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Child<wbr>Instance<wbr>Owner<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The uid of the child instance. Only used when attach a child instance of other account.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Child<wbr>Instance<wbr>Region<wbr>Id</span>
@@ -197,6 +188,15 @@ block_external_search_index: true
     <dd>{{% md %}}The ID of the CEN.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>Child<wbr>Instance<wbr>Owner<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The uid of the child instance. Only used when attach a child instance of other account.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -211,15 +211,6 @@ block_external_search_index: true
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the child instance to attach.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>child<wbr>Instance<wbr>Owner<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The uid of the child instance. Only used when attach a child instance of other account.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -240,6 +231,15 @@ block_external_search_index: true
     <dd>{{% md %}}The ID of the CEN.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>child<wbr>Instance<wbr>Owner<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The uid of the child instance. Only used when attach a child instance of other account.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -254,6 +254,24 @@ block_external_search_index: true
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the child instance to attach.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>child_<wbr>instance_<wbr>region_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The region ID of the child instance to attach.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>instance_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ID of the CEN.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -265,210 +283,10 @@ block_external_search_index: true
     <dd>{{% md %}}The uid of the child instance. Only used when attach a child instance of other account.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>child_<wbr>instance_<wbr>region_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The region ID of the child instance to attach.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>instance_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The ID of the CEN.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
-
-
-
-
-
-## InstanceAttachment Output Properties
-
-The following output properties are available:
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Child<wbr>Instance<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the child instance to attach.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Child<wbr>Instance<wbr>Owner<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The uid of the child instance. Only used when attach a child instance of other account.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Child<wbr>Instance<wbr>Region<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The region ID of the child instance to attach.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Instance<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the CEN.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Child<wbr>Instance<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the child instance to attach.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Child<wbr>Instance<wbr>Owner<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The uid of the child instance. Only used when attach a child instance of other account.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Child<wbr>Instance<wbr>Region<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The region ID of the child instance to attach.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Instance<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the CEN.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>child<wbr>Instance<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the child instance to attach.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>child<wbr>Instance<wbr>Owner<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The uid of the child instance. Only used when attach a child instance of other account.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>child<wbr>Instance<wbr>Region<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The region ID of the child instance to attach.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>instance<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the CEN.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>child_<wbr>instance_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The ID of the child instance to attach.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>child_<wbr>instance_<wbr>owner_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The uid of the child instance. Only used when attach a child instance of other account.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>child_<wbr>instance_<wbr>region_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The region ID of the child instance to attach.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>instance_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The ID of the CEN.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
 
 
 
@@ -606,7 +424,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Child<wbr>Instance<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the child instance to attach.
 {{% /md %}}</dd>
@@ -615,7 +433,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Child<wbr>Instance<wbr>Owner<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The uid of the child instance. Only used when attach a child instance of other account.
 {{% /md %}}</dd>
@@ -624,7 +442,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Child<wbr>Instance<wbr>Region<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region ID of the child instance to attach.
 {{% /md %}}</dd>
@@ -633,7 +451,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Instance<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the CEN.
 {{% /md %}}</dd>
@@ -649,7 +467,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Child<wbr>Instance<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the child instance to attach.
 {{% /md %}}</dd>
@@ -658,7 +476,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Child<wbr>Instance<wbr>Owner<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The uid of the child instance. Only used when attach a child instance of other account.
 {{% /md %}}</dd>
@@ -667,7 +485,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Child<wbr>Instance<wbr>Region<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region ID of the child instance to attach.
 {{% /md %}}</dd>
@@ -676,7 +494,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Instance<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the CEN.
 {{% /md %}}</dd>
@@ -692,7 +510,7 @@ The following state arguments are supported:
             title="Optional">
         <span>child<wbr>Instance<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the child instance to attach.
 {{% /md %}}</dd>
@@ -701,7 +519,7 @@ The following state arguments are supported:
             title="Optional">
         <span>child<wbr>Instance<wbr>Owner<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The uid of the child instance. Only used when attach a child instance of other account.
 {{% /md %}}</dd>
@@ -710,7 +528,7 @@ The following state arguments are supported:
             title="Optional">
         <span>child<wbr>Instance<wbr>Region<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region ID of the child instance to attach.
 {{% /md %}}</dd>
@@ -719,7 +537,7 @@ The following state arguments are supported:
             title="Optional">
         <span>instance<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the CEN.
 {{% /md %}}</dd>

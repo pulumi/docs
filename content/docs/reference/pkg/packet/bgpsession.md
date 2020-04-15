@@ -21,7 +21,7 @@ BGP session must be linked to a device running [BIRD](https://bird.network.cz) o
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/packet/#BgpSession">BgpSession</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/packet/#BgpSessionArgs">BgpSessionArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/packet/#BgpSession">BgpSession</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/packet/#BgpSessionArgs">BgpSessionArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -29,11 +29,11 @@ BGP session must be linked to a device running [BIRD](https://bird.network.cz) o
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewBgpSession<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-packet/sdk/go/packet/?tab=doc#BgpSessionArgs">BgpSessionArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-packet/sdk/go/packet/?tab=doc#BgpSession">BgpSession</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewBgpSession<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-packet/sdk/go/packet/?tab=doc#BgpSessionArgs">BgpSessionArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-packet/sdk/go/packet/?tab=doc#BgpSession">BgpSession</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Packet/Pulumi.Packet..BgpSession.html">BgpSession</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Packet/Pulumi.Packet.BgpSessionArgs.html">BgpSessionArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Packet/Pulumi.Packet.BgpSession.html">BgpSession</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Packet/Pulumi.Packet.BgpSessionArgs.html">BgpSessionArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -134,15 +134,6 @@ BGP session must be linked to a device running [BIRD](https://bird.network.cz) o
     <dd>{{% md %}}`ipv4` or `ipv6`
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Default<wbr>Route</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Boolean flag to set the default route policy. False by default.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Device<wbr>Id</span>
@@ -150,6 +141,15 @@ BGP session must be linked to a device running [BIRD](https://bird.network.cz) o
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of device 
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Default<wbr>Route</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Boolean flag to set the default route policy. False by default.
 {{% /md %}}</dd>
 
 </dl>
@@ -168,15 +168,6 @@ BGP session must be linked to a device running [BIRD](https://bird.network.cz) o
     <dd>{{% md %}}`ipv4` or `ipv6`
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Default<wbr>Route</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Boolean flag to set the default route policy. False by default.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Device<wbr>Id</span>
@@ -184,6 +175,15 @@ BGP session must be linked to a device running [BIRD](https://bird.network.cz) o
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of device 
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Default<wbr>Route</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Boolean flag to set the default route policy. False by default.
 {{% /md %}}</dd>
 
 </dl>
@@ -202,15 +202,6 @@ BGP session must be linked to a device running [BIRD](https://bird.network.cz) o
     <dd>{{% md %}}`ipv4` or `ipv6`
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>default<wbr>Route</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Boolean flag to set the default route policy. False by default.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>device<wbr>Id</span>
@@ -218,6 +209,15 @@ BGP session must be linked to a device running [BIRD](https://bird.network.cz) o
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of device 
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>default<wbr>Route</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Boolean flag to set the default route policy. False by default.
 {{% /md %}}</dd>
 
 </dl>
@@ -236,15 +236,6 @@ BGP session must be linked to a device running [BIRD](https://bird.network.cz) o
     <dd>{{% md %}}`ipv4` or `ipv6`
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>default_<wbr>route</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Boolean flag to set the default route policy. False by default.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>device_<wbr>id</span>
@@ -252,6 +243,15 @@ BGP session must be linked to a device running [BIRD](https://bird.network.cz) o
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ID of device 
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>default_<wbr>route</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Boolean flag to set the default route policy. False by default.
 {{% /md %}}</dd>
 
 </dl>
@@ -275,33 +275,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Address<wbr>Family</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}`ipv4` or `ipv6`
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Default<wbr>Route</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Boolean flag to set the default route policy. False by default.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Device<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}ID of device 
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Status</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -314,33 +287,6 @@ The following output properties are available:
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Address<wbr>Family</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}`ipv4` or `ipv6`
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Default<wbr>Route</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Boolean flag to set the default route policy. False by default.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Device<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}ID of device 
-{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -359,33 +305,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>address<wbr>Family</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}`ipv4` or `ipv6`
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>default<wbr>Route</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Boolean flag to set the default route policy. False by default.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>device<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}ID of device 
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>status</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -398,33 +317,6 @@ The following output properties are available:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>address_<wbr>family</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}`ipv4` or `ipv6`
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>default_<wbr>route</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Boolean flag to set the default route policy. False by default.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>device_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}ID of device 
-{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -463,7 +355,7 @@ Get an existing BgpSession resource's state with the given name, ID, and optiona
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Packet/Pulumi.Packet..BgpSession.html">BgpSession</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Packet/Pulumi.Packet..BgpSessionState.html">BgpSessionState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Packet/Pulumi.Packet.BgpSession.html">BgpSession</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Packet/Pulumi.Packet..BgpSessionState.html">BgpSessionState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -573,7 +465,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Address<wbr>Family</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}`ipv4` or `ipv6`
 {{% /md %}}</dd>
@@ -582,7 +474,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Default<wbr>Route</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean flag to set the default route policy. False by default.
 {{% /md %}}</dd>
@@ -591,7 +483,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Device<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of device 
 {{% /md %}}</dd>
@@ -600,7 +492,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -615,7 +507,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Address<wbr>Family</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}`ipv4` or `ipv6`
 {{% /md %}}</dd>
@@ -624,7 +516,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Default<wbr>Route</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean flag to set the default route policy. False by default.
 {{% /md %}}</dd>
@@ -633,7 +525,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Device<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of device 
 {{% /md %}}</dd>
@@ -642,7 +534,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -657,7 +549,7 @@ The following state arguments are supported:
             title="Optional">
         <span>address<wbr>Family</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}`ipv4` or `ipv6`
 {{% /md %}}</dd>
@@ -666,7 +558,7 @@ The following state arguments are supported:
             title="Optional">
         <span>default<wbr>Route</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Boolean flag to set the default route policy. False by default.
 {{% /md %}}</dd>
@@ -675,7 +567,7 @@ The following state arguments are supported:
             title="Optional">
         <span>device<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of device 
 {{% /md %}}</dd>
@@ -684,7 +576,7 @@ The following state arguments are supported:
             title="Optional">
         <span>status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

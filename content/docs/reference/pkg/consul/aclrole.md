@@ -37,7 +37,7 @@ const read = new consul.AclRole("read", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/consul/#AclRole">AclRole</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/consul/#AclRoleArgs">AclRoleArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/consul/#AclRole">AclRole</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/consul/#AclRoleArgs">AclRoleArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -45,11 +45,11 @@ const read = new consul.AclRole("read", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewAclRole<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-consul/sdk/go/consul/?tab=doc#AclRoleArgs">AclRoleArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-consul/sdk/go/consul/?tab=doc#AclRole">AclRole</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewAclRole<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-consul/sdk/go/consul/?tab=doc#AclRoleArgs">AclRoleArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-consul/sdk/go/consul/?tab=doc#AclRole">AclRole</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Consul/Pulumi.Consul..AclRole.html">AclRole</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Consul/Pulumi.Consul.AclRoleArgs.html">AclRoleArgs</a></span>? <span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Consul/Pulumi.Consul.AclRole.html">AclRole</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Consul/Pulumi.Consul.AclRoleArgs.html">AclRoleArgs</a></span>? <span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -145,7 +145,7 @@ const read = new consul.AclRole("read", {
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A free form human readable description of the role.
 {{% /md %}}</dd>
@@ -154,7 +154,7 @@ const read = new consul.AclRole("read", {
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the ACL role.
 {{% /md %}}</dd>
@@ -163,7 +163,7 @@ const read = new consul.AclRole("read", {
             title="Optional">
         <span>Namespace</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The namespace to create the role within.
 {{% /md %}}</dd>
@@ -172,7 +172,7 @@ const read = new consul.AclRole("read", {
             title="Optional">
         <span>Policies</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The list of policies that should be applied to the role.
 {{% /md %}}</dd>
@@ -181,7 +181,7 @@ const read = new consul.AclRole("read", {
             title="Optional">
         <span>Service<wbr>Identities</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aclroleserviceidentity">List&lt;Acl<wbr>Role<wbr>Service<wbr>Identity<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#aclroleserviceidentity">List&lt;Acl<wbr>Role<wbr>Service<wbr>Identity<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of service identities that should
 be applied to the role.
@@ -198,7 +198,7 @@ be applied to the role.
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A free form human readable description of the role.
 {{% /md %}}</dd>
@@ -207,7 +207,7 @@ be applied to the role.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the ACL role.
 {{% /md %}}</dd>
@@ -216,7 +216,7 @@ be applied to the role.
             title="Optional">
         <span>Namespace</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The namespace to create the role within.
 {{% /md %}}</dd>
@@ -251,7 +251,7 @@ be applied to the role.
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A free form human readable description of the role.
 {{% /md %}}</dd>
@@ -260,7 +260,7 @@ be applied to the role.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the ACL role.
 {{% /md %}}</dd>
@@ -269,7 +269,7 @@ be applied to the role.
             title="Optional">
         <span>namespace</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The namespace to create the role within.
 {{% /md %}}</dd>
@@ -278,7 +278,7 @@ be applied to the role.
             title="Optional">
         <span>policies</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The list of policies that should be applied to the role.
 {{% /md %}}</dd>
@@ -287,7 +287,7 @@ be applied to the role.
             title="Optional">
         <span>service<wbr>Identities</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aclroleserviceidentity">Acl<wbr>Role<wbr>Service<wbr>Identity[]?</a></span>
+        <span class="property-type"><a href="#aclroleserviceidentity">Acl<wbr>Role<wbr>Service<wbr>Identity[]</a></span>
     </dt>
     <dd>{{% md %}}The list of service identities that should
 be applied to the role.
@@ -350,228 +350,6 @@ be applied to the role.
 {{% /choosable %}}
 
 
-
-
-
-
-
-## AclRole Output Properties
-
-The following output properties are available:
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}A free form human readable description of the role.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the ACL role.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Namespace</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The namespace to create the role within.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Policies</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}The list of policies that should be applied to the role.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Service<wbr>Identities</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aclroleserviceidentity">List&lt;Acl<wbr>Role<wbr>Service<wbr>Identity&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}The list of service identities that should
-be applied to the role.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}A free form human readable description of the role.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the ACL role.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Namespace</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The namespace to create the role within.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Policies</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}The list of policies that should be applied to the role.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Service<wbr>Identities</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aclroleserviceidentity">[]Acl<wbr>Role<wbr>Service<wbr>Identity</a></span>
-    </dt>
-    <dd>{{% md %}}The list of service identities that should
-be applied to the role.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}A free form human readable description of the role.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the ACL role.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>namespace</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The namespace to create the role within.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>policies</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}The list of policies that should be applied to the role.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>service<wbr>Identities</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aclroleserviceidentity">Acl<wbr>Role<wbr>Service<wbr>Identity[]?</a></span>
-    </dt>
-    <dd>{{% md %}}The list of service identities that should
-be applied to the role.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}A free form human readable description of the role.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the ACL role.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>namespace</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The namespace to create the role within.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>policies</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}The list of policies that should be applied to the role.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>service_<wbr>identities</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aclroleserviceidentity">List[Acl<wbr>Role<wbr>Service<wbr>Identity]</a></span>
-    </dt>
-    <dd>{{% md %}}The list of service identities that should
-be applied to the role.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
 
 
 
@@ -599,7 +377,7 @@ Get an existing AclRole resource's state with the given name, ID, and optional e
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Consul/Pulumi.Consul..AclRole.html">AclRole</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Consul/Pulumi.Consul..AclRoleState.html">AclRoleState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Consul/Pulumi.Consul.AclRole.html">AclRole</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Consul/Pulumi.Consul..AclRoleState.html">AclRoleState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -709,7 +487,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A free form human readable description of the role.
 {{% /md %}}</dd>
@@ -718,7 +496,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the ACL role.
 {{% /md %}}</dd>
@@ -727,7 +505,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Namespace</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The namespace to create the role within.
 {{% /md %}}</dd>
@@ -736,7 +514,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Policies</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The list of policies that should be applied to the role.
 {{% /md %}}</dd>
@@ -745,7 +523,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Service<wbr>Identities</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aclroleserviceidentity">List&lt;Acl<wbr>Role<wbr>Service<wbr>Identity<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#aclroleserviceidentity">List&lt;Acl<wbr>Role<wbr>Service<wbr>Identity<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of service identities that should
 be applied to the role.
@@ -762,7 +540,7 @@ be applied to the role.
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A free form human readable description of the role.
 {{% /md %}}</dd>
@@ -771,7 +549,7 @@ be applied to the role.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the ACL role.
 {{% /md %}}</dd>
@@ -780,7 +558,7 @@ be applied to the role.
             title="Optional">
         <span>Namespace</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The namespace to create the role within.
 {{% /md %}}</dd>
@@ -815,7 +593,7 @@ be applied to the role.
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A free form human readable description of the role.
 {{% /md %}}</dd>
@@ -824,7 +602,7 @@ be applied to the role.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the ACL role.
 {{% /md %}}</dd>
@@ -833,7 +611,7 @@ be applied to the role.
             title="Optional">
         <span>namespace</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The namespace to create the role within.
 {{% /md %}}</dd>
@@ -842,7 +620,7 @@ be applied to the role.
             title="Optional">
         <span>policies</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The list of policies that should be applied to the role.
 {{% /md %}}</dd>
@@ -851,7 +629,7 @@ be applied to the role.
             title="Optional">
         <span>service<wbr>Identities</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aclroleserviceidentity">Acl<wbr>Role<wbr>Service<wbr>Identity[]?</a></span>
+        <span class="property-type"><a href="#aclroleserviceidentity">Acl<wbr>Role<wbr>Service<wbr>Identity[]</a></span>
     </dt>
     <dd>{{% md %}}The list of service identities that should
 be applied to the role.
@@ -939,15 +717,6 @@ be applied to the role.
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Datacenters</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}The datacenters the effective policy is valid within.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Service<wbr>Name</span>
@@ -957,12 +726,30 @@ be applied to the role.
     <dd>{{% md %}}The name of the service.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>Datacenters</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The datacenters the effective policy is valid within.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Service<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the service.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -973,30 +760,12 @@ be applied to the role.
     <dd>{{% md %}}The datacenters the effective policy is valid within.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>Service<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the service.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>datacenters</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}The datacenters the effective policy is valid within.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1005,6 +774,15 @@ be applied to the role.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the service.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>datacenters</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}The datacenters the effective policy is valid within.
 {{% /md %}}</dd>
 
 </dl>
@@ -1014,15 +792,6 @@ be applied to the role.
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>datacenters</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}The datacenters the effective policy is valid within.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>service<wbr>Name</span>
@@ -1030,6 +799,15 @@ be applied to the role.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the service.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>datacenters</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List[str]</span>
+    </dt>
+    <dd>{{% md %}}The datacenters the effective policy is valid within.
 {{% /md %}}</dd>
 
 </dl>

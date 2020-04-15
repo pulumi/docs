@@ -18,7 +18,7 @@ Manages an EKS Node Group, which can provision and optionally update an Auto Sca
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/eks/#NodeGroup">NodeGroup</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/eks/#NodeGroupArgs">NodeGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/eks/#NodeGroup">NodeGroup</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/eks/#NodeGroupArgs">NodeGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -26,7 +26,7 @@ Manages an EKS Node Group, which can provision and optionally update an Auto Sca
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewNodeGroup<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/eks?tab=doc#NodeGroupArgs">NodeGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/eks?tab=doc#NodeGroup">NodeGroup</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewNodeGroup<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/eks?tab=doc#NodeGroupArgs">NodeGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/eks?tab=doc#NodeGroup">NodeGroup</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -122,15 +122,6 @@ Manages an EKS Node Group, which can provision and optionally update an Auto Sca
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Ami<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Type of Amazon Machine Image (AMI) associated with the EKS Node Group. Defaults to `AL2_x86_64`. Valid values: `AL2_x86_64`, `AL2_x86_64_GPU`. This provider will only perform drift detection if a configuration value is provided.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Cluster<wbr>Name</span>
@@ -140,42 +131,6 @@ Manages an EKS Node Group, which can provision and optionally update an Auto Sca
     <dd>{{% md %}}Name of the EKS Cluster.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Disk<wbr>Size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}Disk size in GiB for worker nodes. Defaults to `20`. This provider will only perform drift detection if a configuration value is provided.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Instance<wbr>Types</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Set of instance types associated with the EKS Node Group. Defaults to `["t3.medium"]`. This provider will only perform drift detection if a configuration value is provided. Currently, the EKS API only accepts a single value in the set.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Labels</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string>?</span>
-    </dt>
-    <dd>{{% md %}}Key-value mapping of Kubernetes labels. Only labels that are applied with the EKS API are managed by this argument. Other Kubernetes labels applied to the EKS Node Group will not be managed.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Node<wbr>Group<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Name of the EKS Node Group.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Node<wbr>Role<wbr>Arn</span>
@@ -183,24 +138,6 @@ Manages an EKS Node Group, which can provision and optionally update an Auto Sca
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the IAM Role that provides permissions for the EKS Node Group.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Release<wbr>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}AMI version of the EKS Node Group. Defaults to latest version for Kubernetes version.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Remote<wbr>Access</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodegroupremoteaccess">Node<wbr>Group<wbr>Remote<wbr>Access<wbr>Args?</a></span>
-    </dt>
-    <dd>{{% md %}}Configuration block with remote access settings. Detailed below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -216,16 +153,79 @@ Manages an EKS Node Group, which can provision and optionally update an Auto Sca
             title="Required">
         <span>Subnet<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Identifiers of EC2 Subnets to associate with the EKS Node Group. These subnets must have the following resource tag: `kubernetes.io/cluster/CLUSTER_NAME` (where `CLUSTER_NAME` is replaced with the name of the EKS Cluster).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
+        <span>Ami<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of Amazon Machine Image (AMI) associated with the EKS Node Group. Defaults to `AL2_x86_64`. Valid values: `AL2_x86_64`, `AL2_x86_64_GPU`. This provider will only perform drift detection if a configuration value is provided.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Disk<wbr>Size</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Disk size in GiB for worker nodes. Defaults to `20`. This provider will only perform drift detection if a configuration value is provided.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Instance<wbr>Types</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Set of instance types associated with the EKS Node Group. Defaults to `["t3.medium"]`. This provider will only perform drift detection if a configuration value is provided. Currently, the EKS API only accepts a single value in the set.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Labels</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Key-value mapping of Kubernetes labels. Only labels that are applied with the EKS API are managed by this argument. Other Kubernetes labels applied to the EKS Node Group will not be managed.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Node<wbr>Group<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the EKS Node Group.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Release<wbr>Version</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}AMI version of the EKS Node Group. Defaults to latest version for Kubernetes version.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Remote<wbr>Access</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#nodegroupremoteaccess">Node<wbr>Group<wbr>Remote<wbr>Access<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block with remote access settings. Detailed below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Key-value mapping of resource tags.
 {{% /md %}}</dd>
@@ -234,7 +234,7 @@ Manages an EKS Node Group, which can provision and optionally update an Auto Sca
             title="Optional">
         <span>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Kubernetes version. Defaults to EKS Cluster Kubernetes version. This provider will only perform drift detection if a configuration value is provided.
 {{% /md %}}</dd>
@@ -246,15 +246,6 @@ Manages an EKS Node Group, which can provision and optionally update an Auto Sca
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Ami<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Type of Amazon Machine Image (AMI) associated with the EKS Node Group. Defaults to `AL2_x86_64`. Valid values: `AL2_x86_64`, `AL2_x86_64_GPU`. This provider will only perform drift detection if a configuration value is provided.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Cluster<wbr>Name</span>
@@ -264,42 +255,6 @@ Manages an EKS Node Group, which can provision and optionally update an Auto Sca
     <dd>{{% md %}}Name of the EKS Cluster.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Disk<wbr>Size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}Disk size in GiB for worker nodes. Defaults to `20`. This provider will only perform drift detection if a configuration value is provided.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Instance<wbr>Types</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Set of instance types associated with the EKS Node Group. Defaults to `["t3.medium"]`. This provider will only perform drift detection if a configuration value is provided. Currently, the EKS API only accepts a single value in the set.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Labels</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]string</span>
-    </dt>
-    <dd>{{% md %}}Key-value mapping of Kubernetes labels. Only labels that are applied with the EKS API are managed by this argument. Other Kubernetes labels applied to the EKS Node Group will not be managed.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Node<wbr>Group<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Name of the EKS Node Group.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Node<wbr>Role<wbr>Arn</span>
@@ -307,24 +262,6 @@ Manages an EKS Node Group, which can provision and optionally update an Auto Sca
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the IAM Role that provides permissions for the EKS Node Group.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Release<wbr>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}AMI version of the EKS Node Group. Defaults to latest version for Kubernetes version.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Remote<wbr>Access</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodegroupremoteaccess">*Node<wbr>Group<wbr>Remote<wbr>Access</a></span>
-    </dt>
-    <dd>{{% md %}}Configuration block with remote access settings. Detailed below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -347,6 +284,69 @@ Manages an EKS Node Group, which can provision and optionally update an Auto Sca
 
     <dt class="property-optional"
             title="Optional">
+        <span>Ami<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of Amazon Machine Image (AMI) associated with the EKS Node Group. Defaults to `AL2_x86_64`. Valid values: `AL2_x86_64`, `AL2_x86_64_GPU`. This provider will only perform drift detection if a configuration value is provided.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Disk<wbr>Size</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Disk size in GiB for worker nodes. Defaults to `20`. This provider will only perform drift detection if a configuration value is provided.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Instance<wbr>Types</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Set of instance types associated with the EKS Node Group. Defaults to `["t3.medium"]`. This provider will only perform drift detection if a configuration value is provided. Currently, the EKS API only accepts a single value in the set.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Labels</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}Key-value mapping of Kubernetes labels. Only labels that are applied with the EKS API are managed by this argument. Other Kubernetes labels applied to the EKS Node Group will not be managed.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Node<wbr>Group<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the EKS Node Group.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Release<wbr>Version</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}AMI version of the EKS Node Group. Defaults to latest version for Kubernetes version.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Remote<wbr>Access</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#nodegroupremoteaccess">Node<wbr>Group<wbr>Remote<wbr>Access</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block with remote access settings. Detailed below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
@@ -358,7 +358,7 @@ Manages an EKS Node Group, which can provision and optionally update an Auto Sca
             title="Optional">
         <span>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Kubernetes version. Defaults to EKS Cluster Kubernetes version. This provider will only perform drift detection if a configuration value is provided.
 {{% /md %}}</dd>
@@ -370,15 +370,6 @@ Manages an EKS Node Group, which can provision and optionally update an Auto Sca
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>ami<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Type of Amazon Machine Image (AMI) associated with the EKS Node Group. Defaults to `AL2_x86_64`. Valid values: `AL2_x86_64`, `AL2_x86_64_GPU`. This provider will only perform drift detection if a configuration value is provided.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>cluster<wbr>Name</span>
@@ -388,42 +379,6 @@ Manages an EKS Node Group, which can provision and optionally update an Auto Sca
     <dd>{{% md %}}Name of the EKS Cluster.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>disk<wbr>Size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}Disk size in GiB for worker nodes. Defaults to `20`. This provider will only perform drift detection if a configuration value is provided.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>instance<wbr>Types</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Set of instance types associated with the EKS Node Group. Defaults to `["t3.medium"]`. This provider will only perform drift detection if a configuration value is provided. Currently, the EKS API only accepts a single value in the set.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>labels</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}?</span>
-    </dt>
-    <dd>{{% md %}}Key-value mapping of Kubernetes labels. Only labels that are applied with the EKS API are managed by this argument. Other Kubernetes labels applied to the EKS Node Group will not be managed.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>node<wbr>Group<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Name of the EKS Node Group.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>node<wbr>Role<wbr>Arn</span>
@@ -431,24 +386,6 @@ Manages an EKS Node Group, which can provision and optionally update an Auto Sca
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the IAM Role that provides permissions for the EKS Node Group.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>release<wbr>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}AMI version of the EKS Node Group. Defaults to latest version for Kubernetes version.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>remote<wbr>Access</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodegroupremoteaccess">Node<wbr>Group<wbr>Remote<wbr>Access?</a></span>
-    </dt>
-    <dd>{{% md %}}Configuration block with remote access settings. Detailed below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -471,9 +408,72 @@ Manages an EKS Node Group, which can provision and optionally update an Auto Sca
 
     <dt class="property-optional"
             title="Optional">
+        <span>ami<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of Amazon Machine Image (AMI) associated with the EKS Node Group. Defaults to `AL2_x86_64`. Valid values: `AL2_x86_64`, `AL2_x86_64_GPU`. This provider will only perform drift detection if a configuration value is provided.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>disk<wbr>Size</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Disk size in GiB for worker nodes. Defaults to `20`. This provider will only perform drift detection if a configuration value is provided.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>instance<wbr>Types</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Set of instance types associated with the EKS Node Group. Defaults to `["t3.medium"]`. This provider will only perform drift detection if a configuration value is provided. Currently, the EKS API only accepts a single value in the set.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>labels</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}Key-value mapping of Kubernetes labels. Only labels that are applied with the EKS API are managed by this argument. Other Kubernetes labels applied to the EKS Node Group will not be managed.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>node<wbr>Group<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the EKS Node Group.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>release<wbr>Version</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}AMI version of the EKS Node Group. Defaults to latest version for Kubernetes version.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>remote<wbr>Access</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#nodegroupremoteaccess">Node<wbr>Group<wbr>Remote<wbr>Access</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block with remote access settings. Detailed below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Key-value mapping of resource tags.
 {{% /md %}}</dd>
@@ -482,7 +482,7 @@ Manages an EKS Node Group, which can provision and optionally update an Auto Sca
             title="Optional">
         <span>version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Kubernetes version. Defaults to EKS Cluster Kubernetes version. This provider will only perform drift detection if a configuration value is provided.
 {{% /md %}}</dd>
@@ -494,15 +494,6 @@ Manages an EKS Node Group, which can provision and optionally update an Auto Sca
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>ami_<wbr>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Type of Amazon Machine Image (AMI) associated with the EKS Node Group. Defaults to `AL2_x86_64`. Valid values: `AL2_x86_64`, `AL2_x86_64_GPU`. This provider will only perform drift detection if a configuration value is provided.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>cluster_<wbr>name</span>
@@ -510,6 +501,42 @@ Manages an EKS Node Group, which can provision and optionally update an Auto Sca
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the EKS Cluster.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>node_<wbr>role_<wbr>arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Amazon Resource Name (ARN) of the IAM Role that provides permissions for the EKS Node Group.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>scaling_<wbr>config</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#nodegroupscalingconfig">Dict[Node<wbr>Group<wbr>Scaling<wbr>Config]</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block with scaling settings. Detailed below.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>subnet_<wbr>ids</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List[str]</span>
+    </dt>
+    <dd>{{% md %}}Identifiers of EC2 Subnets to associate with the EKS Node Group. These subnets must have the following resource tag: `kubernetes.io/cluster/CLUSTER_NAME` (where `CLUSTER_NAME` is replaced with the name of the EKS Cluster).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>ami_<wbr>type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Type of Amazon Machine Image (AMI) associated with the EKS Node Group. Defaults to `AL2_x86_64`. Valid values: `AL2_x86_64`, `AL2_x86_64_GPU`. This provider will only perform drift detection if a configuration value is provided.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -548,15 +575,6 @@ Manages an EKS Node Group, which can provision and optionally update an Auto Sca
     <dd>{{% md %}}Name of the EKS Node Group.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>node_<wbr>role_<wbr>arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Amazon Resource Name (ARN) of the IAM Role that provides permissions for the EKS Node Group.
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>release_<wbr>version</span>
@@ -573,24 +591,6 @@ Manages an EKS Node Group, which can provision and optionally update an Auto Sca
         <span class="property-type"><a href="#nodegroupremoteaccess">Dict[Node<wbr>Group<wbr>Remote<wbr>Access]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with remote access settings. Detailed below.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>scaling_<wbr>config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodegroupscalingconfig">Dict[Node<wbr>Group<wbr>Scaling<wbr>Config]</a></span>
-    </dt>
-    <dd>{{% md %}}Configuration block with scaling settings. Detailed below.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>subnet_<wbr>ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}Identifiers of EC2 Subnets to associate with the EKS Node Group. These subnets must have the following resource tag: `kubernetes.io/cluster/CLUSTER_NAME` (where `CLUSTER_NAME` is replaced with the name of the EKS Cluster).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -632,92 +632,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Ami<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Type of Amazon Machine Image (AMI) associated with the EKS Node Group. Defaults to `AL2_x86_64`. Valid values: `AL2_x86_64`, `AL2_x86_64_GPU`. This provider will only perform drift detection if a configuration value is provided.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Arn</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the EKS Node Group.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Cluster<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the EKS Cluster.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Disk<wbr>Size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Disk size in GiB for worker nodes. Defaults to `20`. This provider will only perform drift detection if a configuration value is provided.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Instance<wbr>Types</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Set of instance types associated with the EKS Node Group. Defaults to `["t3.medium"]`. This provider will only perform drift detection if a configuration value is provided. Currently, the EKS API only accepts a single value in the set.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Labels</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string>?</span>
-    </dt>
-    <dd>{{% md %}}Key-value mapping of Kubernetes labels. Only labels that are applied with the EKS API are managed by this argument. Other Kubernetes labels applied to the EKS Node Group will not be managed.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Node<wbr>Group<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the EKS Node Group.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Node<wbr>Role<wbr>Arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Amazon Resource Name (ARN) of the IAM Role that provides permissions for the EKS Node Group.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Release<wbr>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}AMI version of the EKS Node Group. Defaults to latest version for Kubernetes version.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Remote<wbr>Access</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodegroupremoteaccess">Node<wbr>Group<wbr>Remote<wbr>Access?</a></span>
-    </dt>
-    <dd>{{% md %}}Configuration block with remote access settings. Detailed below.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -731,47 +650,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Scaling<wbr>Config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodegroupscalingconfig">Node<wbr>Group<wbr>Scaling<wbr>Config</a></span>
-    </dt>
-    <dd>{{% md %}}Configuration block with scaling settings. Detailed below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Status</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Status of the EKS Node Group.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Subnet<wbr>Ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
-    </dt>
-    <dd>{{% md %}}Identifiers of EC2 Subnets to associate with the EKS Node Group. These subnets must have the following resource tag: `kubernetes.io/cluster/CLUSTER_NAME` (where `CLUSTER_NAME` is replaced with the name of the EKS Cluster).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
-    </dt>
-    <dd>{{% md %}}Key-value mapping of resource tags.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kubernetes version. Defaults to EKS Cluster Kubernetes version. This provider will only perform drift detection if a configuration value is provided.
 {{% /md %}}</dd>
 
 </dl>
@@ -783,92 +666,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Ami<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Type of Amazon Machine Image (AMI) associated with the EKS Node Group. Defaults to `AL2_x86_64`. Valid values: `AL2_x86_64`, `AL2_x86_64_GPU`. This provider will only perform drift detection if a configuration value is provided.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Arn</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the EKS Node Group.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Cluster<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the EKS Cluster.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Disk<wbr>Size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Disk size in GiB for worker nodes. Defaults to `20`. This provider will only perform drift detection if a configuration value is provided.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Instance<wbr>Types</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Set of instance types associated with the EKS Node Group. Defaults to `["t3.medium"]`. This provider will only perform drift detection if a configuration value is provided. Currently, the EKS API only accepts a single value in the set.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Labels</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]string</span>
-    </dt>
-    <dd>{{% md %}}Key-value mapping of Kubernetes labels. Only labels that are applied with the EKS API are managed by this argument. Other Kubernetes labels applied to the EKS Node Group will not be managed.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Node<wbr>Group<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the EKS Node Group.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Node<wbr>Role<wbr>Arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Amazon Resource Name (ARN) of the IAM Role that provides permissions for the EKS Node Group.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Release<wbr>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}AMI version of the EKS Node Group. Defaults to latest version for Kubernetes version.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Remote<wbr>Access</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodegroupremoteaccess">*Node<wbr>Group<wbr>Remote<wbr>Access</a></span>
-    </dt>
-    <dd>{{% md %}}Configuration block with remote access settings. Detailed below.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -882,47 +684,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Scaling<wbr>Config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodegroupscalingconfig">Node<wbr>Group<wbr>Scaling<wbr>Config</a></span>
-    </dt>
-    <dd>{{% md %}}Configuration block with scaling settings. Detailed below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Status</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Status of the EKS Node Group.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Subnet<wbr>Ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}Identifiers of EC2 Subnets to associate with the EKS Node Group. These subnets must have the following resource tag: `kubernetes.io/cluster/CLUSTER_NAME` (where `CLUSTER_NAME` is replaced with the name of the EKS Cluster).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
-    </dt>
-    <dd>{{% md %}}Key-value mapping of resource tags.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kubernetes version. Defaults to EKS Cluster Kubernetes version. This provider will only perform drift detection if a configuration value is provided.
 {{% /md %}}</dd>
 
 </dl>
@@ -934,92 +700,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>ami<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Type of Amazon Machine Image (AMI) associated with the EKS Node Group. Defaults to `AL2_x86_64`. Valid values: `AL2_x86_64`, `AL2_x86_64_GPU`. This provider will only perform drift detection if a configuration value is provided.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>arn</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the EKS Node Group.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>cluster<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the EKS Cluster.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>disk<wbr>Size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}Disk size in GiB for worker nodes. Defaults to `20`. This provider will only perform drift detection if a configuration value is provided.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>instance<wbr>Types</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Set of instance types associated with the EKS Node Group. Defaults to `["t3.medium"]`. This provider will only perform drift detection if a configuration value is provided. Currently, the EKS API only accepts a single value in the set.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>labels</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}?</span>
-    </dt>
-    <dd>{{% md %}}Key-value mapping of Kubernetes labels. Only labels that are applied with the EKS API are managed by this argument. Other Kubernetes labels applied to the EKS Node Group will not be managed.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>node<wbr>Group<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the EKS Node Group.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>node<wbr>Role<wbr>Arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Amazon Resource Name (ARN) of the IAM Role that provides permissions for the EKS Node Group.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>release<wbr>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}AMI version of the EKS Node Group. Defaults to latest version for Kubernetes version.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>remote<wbr>Access</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodegroupremoteaccess">Node<wbr>Group<wbr>Remote<wbr>Access?</a></span>
-    </dt>
-    <dd>{{% md %}}Configuration block with remote access settings. Detailed below.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1033,47 +718,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>scaling<wbr>Config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodegroupscalingconfig">Node<wbr>Group<wbr>Scaling<wbr>Config</a></span>
-    </dt>
-    <dd>{{% md %}}Configuration block with scaling settings. Detailed below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>status</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Status of the EKS Node Group.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>subnet<wbr>Ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
-    </dt>
-    <dd>{{% md %}}Identifiers of EC2 Subnets to associate with the EKS Node Group. These subnets must have the following resource tag: `kubernetes.io/cluster/CLUSTER_NAME` (where `CLUSTER_NAME` is replaced with the name of the EKS Cluster).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
-    </dt>
-    <dd>{{% md %}}Key-value mapping of resource tags.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Kubernetes version. Defaults to EKS Cluster Kubernetes version. This provider will only perform drift detection if a configuration value is provided.
 {{% /md %}}</dd>
 
 </dl>
@@ -1085,92 +734,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>ami_<wbr>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Type of Amazon Machine Image (AMI) associated with the EKS Node Group. Defaults to `AL2_x86_64`. Valid values: `AL2_x86_64`, `AL2_x86_64_GPU`. This provider will only perform drift detection if a configuration value is provided.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>arn</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the EKS Node Group.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>cluster_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Name of the EKS Cluster.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>disk_<wbr>size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}Disk size in GiB for worker nodes. Defaults to `20`. This provider will only perform drift detection if a configuration value is provided.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>instance_<wbr>types</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Set of instance types associated with the EKS Node Group. Defaults to `["t3.medium"]`. This provider will only perform drift detection if a configuration value is provided. Currently, the EKS API only accepts a single value in the set.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>labels</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
-    </dt>
-    <dd>{{% md %}}Key-value mapping of Kubernetes labels. Only labels that are applied with the EKS API are managed by this argument. Other Kubernetes labels applied to the EKS Node Group will not be managed.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>node_<wbr>group_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Name of the EKS Node Group.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>node_<wbr>role_<wbr>arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Amazon Resource Name (ARN) of the IAM Role that provides permissions for the EKS Node Group.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>release_<wbr>version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}AMI version of the EKS Node Group. Defaults to latest version for Kubernetes version.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>remote_<wbr>access</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodegroupremoteaccess">Dict[Node<wbr>Group<wbr>Remote<wbr>Access]</a></span>
-    </dt>
-    <dd>{{% md %}}Configuration block with remote access settings. Detailed below.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1184,47 +752,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>scaling_<wbr>config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodegroupscalingconfig">Dict[Node<wbr>Group<wbr>Scaling<wbr>Config]</a></span>
-    </dt>
-    <dd>{{% md %}}Configuration block with scaling settings. Detailed below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>status</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Status of the EKS Node Group.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>subnet_<wbr>ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}Identifiers of EC2 Subnets to associate with the EKS Node Group. These subnets must have the following resource tag: `kubernetes.io/cluster/CLUSTER_NAME` (where `CLUSTER_NAME` is replaced with the name of the EKS Cluster).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
-    </dt>
-    <dd>{{% md %}}Key-value mapping of resource tags.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Kubernetes version. Defaults to EKS Cluster Kubernetes version. This provider will only perform drift detection if a configuration value is provided.
 {{% /md %}}</dd>
 
 </dl>
@@ -1366,7 +898,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Ami<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of Amazon Machine Image (AMI) associated with the EKS Node Group. Defaults to `AL2_x86_64`. Valid values: `AL2_x86_64`, `AL2_x86_64_GPU`. This provider will only perform drift detection if a configuration value is provided.
 {{% /md %}}</dd>
@@ -1375,7 +907,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the EKS Node Group.
 {{% /md %}}</dd>
@@ -1384,7 +916,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Cluster<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the EKS Cluster.
 {{% /md %}}</dd>
@@ -1393,7 +925,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Disk<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Disk size in GiB for worker nodes. Defaults to `20`. This provider will only perform drift detection if a configuration value is provided.
 {{% /md %}}</dd>
@@ -1402,7 +934,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Instance<wbr>Types</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Set of instance types associated with the EKS Node Group. Defaults to `["t3.medium"]`. This provider will only perform drift detection if a configuration value is provided. Currently, the EKS API only accepts a single value in the set.
 {{% /md %}}</dd>
@@ -1411,7 +943,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Labels</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string>?</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Key-value mapping of Kubernetes labels. Only labels that are applied with the EKS API are managed by this argument. Other Kubernetes labels applied to the EKS Node Group will not be managed.
 {{% /md %}}</dd>
@@ -1420,7 +952,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Node<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the EKS Node Group.
 {{% /md %}}</dd>
@@ -1429,7 +961,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Node<wbr>Role<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the IAM Role that provides permissions for the EKS Node Group.
 {{% /md %}}</dd>
@@ -1438,7 +970,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Release<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}AMI version of the EKS Node Group. Defaults to latest version for Kubernetes version.
 {{% /md %}}</dd>
@@ -1447,7 +979,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Remote<wbr>Access</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodegroupremoteaccess">Node<wbr>Group<wbr>Remote<wbr>Access<wbr>Args?</a></span>
+        <span class="property-type"><a href="#nodegroupremoteaccess">Node<wbr>Group<wbr>Remote<wbr>Access<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with remote access settings. Detailed below.
 {{% /md %}}</dd>
@@ -1456,7 +988,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Resources</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodegroupresource">List&lt;Node<wbr>Group<wbr>Resource<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#nodegroupresource">List&lt;Node<wbr>Group<wbr>Resource<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of objects containing information about underlying resources.
 {{% /md %}}</dd>
@@ -1465,7 +997,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Scaling<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodegroupscalingconfig">Node<wbr>Group<wbr>Scaling<wbr>Config<wbr>Args?</a></span>
+        <span class="property-type"><a href="#nodegroupscalingconfig">Node<wbr>Group<wbr>Scaling<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with scaling settings. Detailed below.
 {{% /md %}}</dd>
@@ -1474,7 +1006,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Status of the EKS Node Group.
 {{% /md %}}</dd>
@@ -1483,7 +1015,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Subnet<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Identifiers of EC2 Subnets to associate with the EKS Node Group. These subnets must have the following resource tag: `kubernetes.io/cluster/CLUSTER_NAME` (where `CLUSTER_NAME` is replaced with the name of the EKS Cluster).
 {{% /md %}}</dd>
@@ -1492,7 +1024,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Key-value mapping of resource tags.
 {{% /md %}}</dd>
@@ -1501,7 +1033,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Kubernetes version. Defaults to EKS Cluster Kubernetes version. This provider will only perform drift detection if a configuration value is provided.
 {{% /md %}}</dd>
@@ -1517,7 +1049,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Ami<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of Amazon Machine Image (AMI) associated with the EKS Node Group. Defaults to `AL2_x86_64`. Valid values: `AL2_x86_64`, `AL2_x86_64_GPU`. This provider will only perform drift detection if a configuration value is provided.
 {{% /md %}}</dd>
@@ -1526,7 +1058,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the EKS Node Group.
 {{% /md %}}</dd>
@@ -1535,7 +1067,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Cluster<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the EKS Cluster.
 {{% /md %}}</dd>
@@ -1544,7 +1076,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Disk<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Disk size in GiB for worker nodes. Defaults to `20`. This provider will only perform drift detection if a configuration value is provided.
 {{% /md %}}</dd>
@@ -1553,7 +1085,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Instance<wbr>Types</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Set of instance types associated with the EKS Node Group. Defaults to `["t3.medium"]`. This provider will only perform drift detection if a configuration value is provided. Currently, the EKS API only accepts a single value in the set.
 {{% /md %}}</dd>
@@ -1571,7 +1103,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Node<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the EKS Node Group.
 {{% /md %}}</dd>
@@ -1580,7 +1112,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Node<wbr>Role<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the IAM Role that provides permissions for the EKS Node Group.
 {{% /md %}}</dd>
@@ -1589,7 +1121,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Release<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}AMI version of the EKS Node Group. Defaults to latest version for Kubernetes version.
 {{% /md %}}</dd>
@@ -1598,7 +1130,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Remote<wbr>Access</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodegroupremoteaccess">*Node<wbr>Group<wbr>Remote<wbr>Access</a></span>
+        <span class="property-type"><a href="#nodegroupremoteaccess">Node<wbr>Group<wbr>Remote<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with remote access settings. Detailed below.
 {{% /md %}}</dd>
@@ -1616,7 +1148,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Scaling<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodegroupscalingconfig">*Node<wbr>Group<wbr>Scaling<wbr>Config</a></span>
+        <span class="property-type"><a href="#nodegroupscalingconfig">Node<wbr>Group<wbr>Scaling<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with scaling settings. Detailed below.
 {{% /md %}}</dd>
@@ -1625,7 +1157,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Status of the EKS Node Group.
 {{% /md %}}</dd>
@@ -1652,7 +1184,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Kubernetes version. Defaults to EKS Cluster Kubernetes version. This provider will only perform drift detection if a configuration value is provided.
 {{% /md %}}</dd>
@@ -1668,7 +1200,7 @@ The following state arguments are supported:
             title="Optional">
         <span>ami<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Type of Amazon Machine Image (AMI) associated with the EKS Node Group. Defaults to `AL2_x86_64`. Valid values: `AL2_x86_64`, `AL2_x86_64_GPU`. This provider will only perform drift detection if a configuration value is provided.
 {{% /md %}}</dd>
@@ -1677,7 +1209,7 @@ The following state arguments are supported:
             title="Optional">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the EKS Node Group.
 {{% /md %}}</dd>
@@ -1686,7 +1218,7 @@ The following state arguments are supported:
             title="Optional">
         <span>cluster<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the EKS Cluster.
 {{% /md %}}</dd>
@@ -1695,7 +1227,7 @@ The following state arguments are supported:
             title="Optional">
         <span>disk<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Disk size in GiB for worker nodes. Defaults to `20`. This provider will only perform drift detection if a configuration value is provided.
 {{% /md %}}</dd>
@@ -1704,7 +1236,7 @@ The following state arguments are supported:
             title="Optional">
         <span>instance<wbr>Types</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Set of instance types associated with the EKS Node Group. Defaults to `["t3.medium"]`. This provider will only perform drift detection if a configuration value is provided. Currently, the EKS API only accepts a single value in the set.
 {{% /md %}}</dd>
@@ -1713,7 +1245,7 @@ The following state arguments are supported:
             title="Optional">
         <span>labels</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}?</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Key-value mapping of Kubernetes labels. Only labels that are applied with the EKS API are managed by this argument. Other Kubernetes labels applied to the EKS Node Group will not be managed.
 {{% /md %}}</dd>
@@ -1722,7 +1254,7 @@ The following state arguments are supported:
             title="Optional">
         <span>node<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the EKS Node Group.
 {{% /md %}}</dd>
@@ -1731,7 +1263,7 @@ The following state arguments are supported:
             title="Optional">
         <span>node<wbr>Role<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the IAM Role that provides permissions for the EKS Node Group.
 {{% /md %}}</dd>
@@ -1740,7 +1272,7 @@ The following state arguments are supported:
             title="Optional">
         <span>release<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}AMI version of the EKS Node Group. Defaults to latest version for Kubernetes version.
 {{% /md %}}</dd>
@@ -1749,7 +1281,7 @@ The following state arguments are supported:
             title="Optional">
         <span>remote<wbr>Access</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodegroupremoteaccess">Node<wbr>Group<wbr>Remote<wbr>Access?</a></span>
+        <span class="property-type"><a href="#nodegroupremoteaccess">Node<wbr>Group<wbr>Remote<wbr>Access</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with remote access settings. Detailed below.
 {{% /md %}}</dd>
@@ -1758,7 +1290,7 @@ The following state arguments are supported:
             title="Optional">
         <span>resources</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodegroupresource">Node<wbr>Group<wbr>Resource[]?</a></span>
+        <span class="property-type"><a href="#nodegroupresource">Node<wbr>Group<wbr>Resource[]</a></span>
     </dt>
     <dd>{{% md %}}List of objects containing information about underlying resources.
 {{% /md %}}</dd>
@@ -1767,7 +1299,7 @@ The following state arguments are supported:
             title="Optional">
         <span>scaling<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodegroupscalingconfig">Node<wbr>Group<wbr>Scaling<wbr>Config?</a></span>
+        <span class="property-type"><a href="#nodegroupscalingconfig">Node<wbr>Group<wbr>Scaling<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with scaling settings. Detailed below.
 {{% /md %}}</dd>
@@ -1776,7 +1308,7 @@ The following state arguments are supported:
             title="Optional">
         <span>status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Status of the EKS Node Group.
 {{% /md %}}</dd>
@@ -1785,7 +1317,7 @@ The following state arguments are supported:
             title="Optional">
         <span>subnet<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Identifiers of EC2 Subnets to associate with the EKS Node Group. These subnets must have the following resource tag: `kubernetes.io/cluster/CLUSTER_NAME` (where `CLUSTER_NAME` is replaced with the name of the EKS Cluster).
 {{% /md %}}</dd>
@@ -1794,7 +1326,7 @@ The following state arguments are supported:
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Key-value mapping of resource tags.
 {{% /md %}}</dd>
@@ -1803,7 +1335,7 @@ The following state arguments are supported:
             title="Optional">
         <span>version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Kubernetes version. Defaults to EKS Cluster Kubernetes version. This provider will only perform drift detection if a configuration value is provided.
 {{% /md %}}</dd>
@@ -1992,7 +1524,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Ec2Ssh<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}EC2 Key Pair name that provides access for SSH communication with the worker nodes in the EKS Node Group. If you specify this configuration, but do not specify `source_security_group_ids` when you create an EKS Node Group, port 22 on the worker nodes is opened to the Internet (0.0.0.0/0).
 {{% /md %}}</dd>
@@ -2001,7 +1533,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Source<wbr>Security<wbr>Group<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Set of EC2 Security Group IDs to allow SSH access (port 22) from on the worker nodes. If you specify `ec2_ssh_key`, but do not specify this configuration when you create an EKS Node Group, port 22 on the worker nodes is opened to the Internet (0.0.0.0/0).
 {{% /md %}}</dd>
@@ -2017,7 +1549,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Ec2Ssh<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}EC2 Key Pair name that provides access for SSH communication with the worker nodes in the EKS Node Group. If you specify this configuration, but do not specify `source_security_group_ids` when you create an EKS Node Group, port 22 on the worker nodes is opened to the Internet (0.0.0.0/0).
 {{% /md %}}</dd>
@@ -2042,7 +1574,7 @@ The following state arguments are supported:
             title="Optional">
         <span>ec2Ssh<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}EC2 Key Pair name that provides access for SSH communication with the worker nodes in the EKS Node Group. If you specify this configuration, but do not specify `source_security_group_ids` when you create an EKS Node Group, port 22 on the worker nodes is opened to the Internet (0.0.0.0/0).
 {{% /md %}}</dd>
@@ -2051,7 +1583,7 @@ The following state arguments are supported:
             title="Optional">
         <span>source<wbr>Security<wbr>Group<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Set of EC2 Security Group IDs to allow SSH access (port 22) from on the worker nodes. If you specify `ec2_ssh_key`, but do not specify this configuration when you create an EKS Node Group, port 22 on the worker nodes is opened to the Internet (0.0.0.0/0).
 {{% /md %}}</dd>
@@ -2107,7 +1639,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Autoscaling<wbr>Groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodegroupresourceautoscalinggroup">List&lt;Node<wbr>Group<wbr>Resource<wbr>Autoscaling<wbr>Group<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#nodegroupresourceautoscalinggroup">List&lt;Node<wbr>Group<wbr>Resource<wbr>Autoscaling<wbr>Group<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of objects containing information about AutoScaling Groups.
 {{% /md %}}</dd>
@@ -2116,7 +1648,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Remote<wbr>Access<wbr>Security<wbr>Group<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of the remote access EC2 Security Group.
 {{% /md %}}</dd>
@@ -2141,7 +1673,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Remote<wbr>Access<wbr>Security<wbr>Group<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of the remote access EC2 Security Group.
 {{% /md %}}</dd>
@@ -2157,7 +1689,7 @@ The following state arguments are supported:
             title="Optional">
         <span>autoscaling<wbr>Groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodegroupresourceautoscalinggroup">Node<wbr>Group<wbr>Resource<wbr>Autoscaling<wbr>Group[]?</a></span>
+        <span class="property-type"><a href="#nodegroupresourceautoscalinggroup">Node<wbr>Group<wbr>Resource<wbr>Autoscaling<wbr>Group[]</a></span>
     </dt>
     <dd>{{% md %}}List of objects containing information about AutoScaling Groups.
 {{% /md %}}</dd>
@@ -2166,7 +1698,7 @@ The following state arguments are supported:
             title="Optional">
         <span>remote<wbr>Access<wbr>Security<wbr>Group<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of the remote access EC2 Security Group.
 {{% /md %}}</dd>
@@ -2222,7 +1754,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the AutoScaling Group.
 {{% /md %}}</dd>
@@ -2238,7 +1770,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the AutoScaling Group.
 {{% /md %}}</dd>
@@ -2254,7 +1786,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the AutoScaling Group.
 {{% /md %}}</dd>

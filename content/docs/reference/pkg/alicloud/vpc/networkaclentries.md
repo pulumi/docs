@@ -78,7 +78,7 @@ const defaultNetworkAclEntries = new alicloud.vpc.NetworkAclEntries("default", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/vpc/#NetworkAclEntries">NetworkAclEntries</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/vpc/#NetworkAclEntriesArgs">NetworkAclEntriesArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/vpc/#NetworkAclEntries">NetworkAclEntries</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/vpc/#NetworkAclEntriesArgs">NetworkAclEntriesArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -86,11 +86,11 @@ const defaultNetworkAclEntries = new alicloud.vpc.NetworkAclEntries("default", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewNetworkAclEntries<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/vpc?tab=doc#NetworkAclEntriesArgs">NetworkAclEntriesArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/vpc?tab=doc#NetworkAclEntries">NetworkAclEntries</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewNetworkAclEntries<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/vpc?tab=doc#NetworkAclEntriesArgs">NetworkAclEntriesArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/vpc?tab=doc#NetworkAclEntries">NetworkAclEntries</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.Vpc.NetworkAclEntries.html">NetworkAclEntries</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.Vpc.NetworkAclEntriesArgs.html">NetworkAclEntriesArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.Vpc.NetworkAclEntries.html">NetworkAclEntries</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.AliCloud.Vpc.NetworkAclEntriesArgs.html">NetworkAclEntriesArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -182,24 +182,6 @@ const defaultNetworkAclEntries = new alicloud.vpc.NetworkAclEntries("default", {
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Egresses</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkaclentriesegress">List&lt;Network<wbr>Acl<wbr>Entries<wbr>Egress<wbr>Args&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}List of the egress entries of the network acl. The order of the egress entries determines the priority. The details see Block Egress.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Ingresses</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkaclentriesingress">List&lt;Network<wbr>Acl<wbr>Entries<wbr>Ingress<wbr>Args&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}List of the ingress entries of the network acl. The order of the ingress entries determines the priority. The details see Block Ingress.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Network<wbr>Acl<wbr>Id</span>
@@ -209,12 +191,39 @@ const defaultNetworkAclEntries = new alicloud.vpc.NetworkAclEntries("default", {
     <dd>{{% md %}}The id of the network acl, the field can't be changed.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>Egresses</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#networkaclentriesegress">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Vpc.<wbr>Inputs.<wbr>Network<wbr>Acl<wbr>Entries<wbr>Egress<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}List of the egress entries of the network acl. The order of the egress entries determines the priority. The details see Block Egress.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Ingresses</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#networkaclentriesingress">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Vpc.<wbr>Inputs.<wbr>Network<wbr>Acl<wbr>Entries<wbr>Ingress<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}List of the ingress entries of the network acl. The order of the ingress entries determines the priority. The details see Block Ingress.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Network<wbr>Acl<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The id of the network acl, the field can't be changed.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -234,39 +243,12 @@ const defaultNetworkAclEntries = new alicloud.vpc.NetworkAclEntries("default", {
     <dd>{{% md %}}List of the ingress entries of the network acl. The order of the ingress entries determines the priority. The details see Block Ingress.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>Network<wbr>Acl<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The id of the network acl, the field can't be changed.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>egresses</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkaclentriesegress">Network<wbr>Acl<wbr>Entries<wbr>Egress[]?</a></span>
-    </dt>
-    <dd>{{% md %}}List of the egress entries of the network acl. The order of the egress entries determines the priority. The details see Block Egress.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>ingresses</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkaclentriesingress">Network<wbr>Acl<wbr>Entries<wbr>Ingress[]?</a></span>
-    </dt>
-    <dd>{{% md %}}List of the ingress entries of the network acl. The order of the ingress entries determines the priority. The details see Block Ingress.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -277,12 +259,39 @@ const defaultNetworkAclEntries = new alicloud.vpc.NetworkAclEntries("default", {
     <dd>{{% md %}}The id of the network acl, the field can't be changed.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>egresses</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#networkaclentriesegress">Network<wbr>Acl<wbr>Entries<wbr>Egress[]</a></span>
+    </dt>
+    <dd>{{% md %}}List of the egress entries of the network acl. The order of the egress entries determines the priority. The details see Block Egress.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>ingresses</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#networkaclentriesingress">Network<wbr>Acl<wbr>Entries<wbr>Ingress[]</a></span>
+    </dt>
+    <dd>{{% md %}}List of the ingress entries of the network acl. The order of the ingress entries determines the priority. The details see Block Ingress.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>network_<wbr>acl_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The id of the network acl, the field can't be changed.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -302,165 +311,10 @@ const defaultNetworkAclEntries = new alicloud.vpc.NetworkAclEntries("default", {
     <dd>{{% md %}}List of the ingress entries of the network acl. The order of the ingress entries determines the priority. The details see Block Ingress.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>network_<wbr>acl_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The id of the network acl, the field can't be changed.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
-
-
-
-
-
-## NetworkAclEntries Output Properties
-
-The following output properties are available:
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Egresses</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkaclentriesegress">List&lt;Network<wbr>Acl<wbr>Entries<wbr>Egress&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}List of the egress entries of the network acl. The order of the egress entries determines the priority. The details see Block Egress.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Ingresses</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkaclentriesingress">List&lt;Network<wbr>Acl<wbr>Entries<wbr>Ingress&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}List of the ingress entries of the network acl. The order of the ingress entries determines the priority. The details see Block Ingress.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Network<wbr>Acl<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The id of the network acl, the field can't be changed.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Egresses</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkaclentriesegress">[]Network<wbr>Acl<wbr>Entries<wbr>Egress</a></span>
-    </dt>
-    <dd>{{% md %}}List of the egress entries of the network acl. The order of the egress entries determines the priority. The details see Block Egress.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Ingresses</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkaclentriesingress">[]Network<wbr>Acl<wbr>Entries<wbr>Ingress</a></span>
-    </dt>
-    <dd>{{% md %}}List of the ingress entries of the network acl. The order of the ingress entries determines the priority. The details see Block Ingress.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Network<wbr>Acl<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The id of the network acl, the field can't be changed.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>egresses</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkaclentriesegress">Network<wbr>Acl<wbr>Entries<wbr>Egress[]?</a></span>
-    </dt>
-    <dd>{{% md %}}List of the egress entries of the network acl. The order of the egress entries determines the priority. The details see Block Egress.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>ingresses</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkaclentriesingress">Network<wbr>Acl<wbr>Entries<wbr>Ingress[]?</a></span>
-    </dt>
-    <dd>{{% md %}}List of the ingress entries of the network acl. The order of the ingress entries determines the priority. The details see Block Ingress.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>network<wbr>Acl<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The id of the network acl, the field can't be changed.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>egresses</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkaclentriesegress">List[Network<wbr>Acl<wbr>Entries<wbr>Egress]</a></span>
-    </dt>
-    <dd>{{% md %}}List of the egress entries of the network acl. The order of the egress entries determines the priority. The details see Block Egress.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>ingresses</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkaclentriesingress">List[Network<wbr>Acl<wbr>Entries<wbr>Ingress]</a></span>
-    </dt>
-    <dd>{{% md %}}List of the ingress entries of the network acl. The order of the ingress entries determines the priority. The details see Block Ingress.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>network_<wbr>acl_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The id of the network acl, the field can't be changed.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
 
 
 
@@ -598,7 +452,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Egresses</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkaclentriesegress">List&lt;Network<wbr>Acl<wbr>Entries<wbr>Egress<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#networkaclentriesegress">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Vpc.<wbr>Inputs.<wbr>Network<wbr>Acl<wbr>Entries<wbr>Egress<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of the egress entries of the network acl. The order of the egress entries determines the priority. The details see Block Egress.
 {{% /md %}}</dd>
@@ -607,7 +461,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Ingresses</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkaclentriesingress">List&lt;Network<wbr>Acl<wbr>Entries<wbr>Ingress<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#networkaclentriesingress">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Vpc.<wbr>Inputs.<wbr>Network<wbr>Acl<wbr>Entries<wbr>Ingress<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of the ingress entries of the network acl. The order of the ingress entries determines the priority. The details see Block Ingress.
 {{% /md %}}</dd>
@@ -616,7 +470,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Network<wbr>Acl<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the network acl, the field can't be changed.
 {{% /md %}}</dd>
@@ -650,7 +504,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Network<wbr>Acl<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the network acl, the field can't be changed.
 {{% /md %}}</dd>
@@ -666,7 +520,7 @@ The following state arguments are supported:
             title="Optional">
         <span>egresses</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkaclentriesegress">Network<wbr>Acl<wbr>Entries<wbr>Egress[]?</a></span>
+        <span class="property-type"><a href="#networkaclentriesegress">Network<wbr>Acl<wbr>Entries<wbr>Egress[]</a></span>
     </dt>
     <dd>{{% md %}}List of the egress entries of the network acl. The order of the egress entries determines the priority. The details see Block Egress.
 {{% /md %}}</dd>
@@ -675,7 +529,7 @@ The following state arguments are supported:
             title="Optional">
         <span>ingresses</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkaclentriesingress">Network<wbr>Acl<wbr>Entries<wbr>Ingress[]?</a></span>
+        <span class="property-type"><a href="#networkaclentriesingress">Network<wbr>Acl<wbr>Entries<wbr>Ingress[]</a></span>
     </dt>
     <dd>{{% md %}}List of the ingress entries of the network acl. The order of the ingress entries determines the priority. The details see Block Ingress.
 {{% /md %}}</dd>
@@ -684,7 +538,7 @@ The following state arguments are supported:
             title="Optional">
         <span>network<wbr>Acl<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the network acl, the field can't be changed.
 {{% /md %}}</dd>
@@ -756,7 +610,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the egress entry.
 {{% /md %}}</dd>
@@ -765,7 +619,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Destination<wbr>Cidr<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The destination ip of the egress entry.
 {{% /md %}}</dd>
@@ -774,7 +628,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Entry<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The entry type of the egress entry. It must be `custom` or `system`. Default value is `custom`.
 {{% /md %}}</dd>
@@ -783,7 +637,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the egress entry.
 {{% /md %}}</dd>
@@ -792,7 +646,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The policy of the egress entry. It must be `accept` or `drop`.
 {{% /md %}}</dd>
@@ -801,7 +655,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The port of the egress entry.
 {{% /md %}}</dd>
@@ -810,7 +664,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Protocol</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The protocol of the egress entry.
 {{% /md %}}</dd>
@@ -826,7 +680,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the egress entry.
 {{% /md %}}</dd>
@@ -835,7 +689,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Destination<wbr>Cidr<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The destination ip of the egress entry.
 {{% /md %}}</dd>
@@ -844,7 +698,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Entry<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The entry type of the egress entry. It must be `custom` or `system`. Default value is `custom`.
 {{% /md %}}</dd>
@@ -853,7 +707,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the egress entry.
 {{% /md %}}</dd>
@@ -862,7 +716,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The policy of the egress entry. It must be `accept` or `drop`.
 {{% /md %}}</dd>
@@ -871,7 +725,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The port of the egress entry.
 {{% /md %}}</dd>
@@ -880,7 +734,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Protocol</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The protocol of the egress entry.
 {{% /md %}}</dd>
@@ -896,7 +750,7 @@ The following state arguments are supported:
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the egress entry.
 {{% /md %}}</dd>
@@ -905,7 +759,7 @@ The following state arguments are supported:
             title="Optional">
         <span>destination<wbr>Cidr<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The destination ip of the egress entry.
 {{% /md %}}</dd>
@@ -914,7 +768,7 @@ The following state arguments are supported:
             title="Optional">
         <span>entry<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The entry type of the egress entry. It must be `custom` or `system`. Default value is `custom`.
 {{% /md %}}</dd>
@@ -923,7 +777,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the egress entry.
 {{% /md %}}</dd>
@@ -932,7 +786,7 @@ The following state arguments are supported:
             title="Optional">
         <span>policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The policy of the egress entry. It must be `accept` or `drop`.
 {{% /md %}}</dd>
@@ -941,7 +795,7 @@ The following state arguments are supported:
             title="Optional">
         <span>port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The port of the egress entry.
 {{% /md %}}</dd>
@@ -950,7 +804,7 @@ The following state arguments are supported:
             title="Optional">
         <span>protocol</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The protocol of the egress entry.
 {{% /md %}}</dd>
@@ -1051,7 +905,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the egress entry.
 {{% /md %}}</dd>
@@ -1060,7 +914,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Entry<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The entry type of the egress entry. It must be `custom` or `system`. Default value is `custom`.
 {{% /md %}}</dd>
@@ -1069,7 +923,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the egress entry.
 {{% /md %}}</dd>
@@ -1078,7 +932,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The policy of the egress entry. It must be `accept` or `drop`.
 {{% /md %}}</dd>
@@ -1087,7 +941,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The port of the egress entry.
 {{% /md %}}</dd>
@@ -1096,7 +950,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Protocol</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The protocol of the egress entry.
 {{% /md %}}</dd>
@@ -1105,7 +959,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Source<wbr>Cidr<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The source ip of the ingress entry.
 {{% /md %}}</dd>
@@ -1121,7 +975,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the egress entry.
 {{% /md %}}</dd>
@@ -1130,7 +984,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Entry<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The entry type of the egress entry. It must be `custom` or `system`. Default value is `custom`.
 {{% /md %}}</dd>
@@ -1139,7 +993,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the egress entry.
 {{% /md %}}</dd>
@@ -1148,7 +1002,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The policy of the egress entry. It must be `accept` or `drop`.
 {{% /md %}}</dd>
@@ -1157,7 +1011,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The port of the egress entry.
 {{% /md %}}</dd>
@@ -1166,7 +1020,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Protocol</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The protocol of the egress entry.
 {{% /md %}}</dd>
@@ -1175,7 +1029,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Source<wbr>Cidr<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The source ip of the ingress entry.
 {{% /md %}}</dd>
@@ -1191,7 +1045,7 @@ The following state arguments are supported:
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the egress entry.
 {{% /md %}}</dd>
@@ -1200,7 +1054,7 @@ The following state arguments are supported:
             title="Optional">
         <span>entry<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The entry type of the egress entry. It must be `custom` or `system`. Default value is `custom`.
 {{% /md %}}</dd>
@@ -1209,7 +1063,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the egress entry.
 {{% /md %}}</dd>
@@ -1218,7 +1072,7 @@ The following state arguments are supported:
             title="Optional">
         <span>policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The policy of the egress entry. It must be `accept` or `drop`.
 {{% /md %}}</dd>
@@ -1227,7 +1081,7 @@ The following state arguments are supported:
             title="Optional">
         <span>port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The port of the egress entry.
 {{% /md %}}</dd>
@@ -1236,7 +1090,7 @@ The following state arguments are supported:
             title="Optional">
         <span>protocol</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The protocol of the egress entry.
 {{% /md %}}</dd>
@@ -1245,7 +1099,7 @@ The following state arguments are supported:
             title="Optional">
         <span>source<wbr>Cidr<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The source ip of the ingress entry.
 {{% /md %}}</dd>

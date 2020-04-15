@@ -43,7 +43,7 @@ See the docs for the `keycloak..Realm` resource for details on the exported attr
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupRealm<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-keycloak/sdk/go/keycloak/?tab=doc#GetRealmArgs">GetRealmArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-keycloak/sdk/go/keycloak/?tab=doc#LookupRealmResult">LookupRealmResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupRealm<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-keycloak/sdk/go/keycloak/?tab=doc#GetRealmArgs">GetRealmArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-keycloak/sdk/go/keycloak/?tab=doc#LookupRealmResult">LookupRealmResult</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -62,30 +62,6 @@ The following arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Attributes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Display<wbr>Name<wbr>Html</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Internationalizations</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getrealminternationalization">List&lt;Get<wbr>Realm<wbr>Internationalization<wbr>Args&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Realm</span>
@@ -96,9 +72,33 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>Attributes</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Display<wbr>Name<wbr>Html</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Internationalizations</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getrealminternationalization">List&lt;Get<wbr>Realm<wbr>Internationalization<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Security<wbr>Defenses</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getrealmsecuritydefense">List&lt;Get<wbr>Realm<wbr>Security<wbr>Defense<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#getrealmsecuritydefense">List&lt;Get<wbr>Realm<wbr>Security<wbr>Defense<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -106,7 +106,7 @@ The following arguments are supported:
             title="Optional">
         <span>Smtp<wbr>Servers</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getrealmsmtpserver">List&lt;Get<wbr>Realm<wbr>Smtp<wbr>Server<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#getrealmsmtpserver">List&lt;Get<wbr>Realm<wbr>Smtp<wbr>Server<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -116,6 +116,14 @@ The following arguments are supported:
 
 {{% choosable language go %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Realm</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -129,7 +137,7 @@ The following arguments are supported:
             title="Optional">
         <span>Display<wbr>Name<wbr>Html</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -138,14 +146,6 @@ The following arguments are supported:
         <span>Internationalizations</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getrealminternationalization">[]Get<wbr>Realm<wbr>Internationalization</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Realm</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -172,30 +172,6 @@ The following arguments are supported:
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>attributes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>display<wbr>Name<wbr>Html</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>internationalizations</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getrealminternationalization">Get<wbr>Realm<wbr>Internationalization[]?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>realm</span>
@@ -206,9 +182,33 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>attributes</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>display<wbr>Name<wbr>Html</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>internationalizations</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getrealminternationalization">Get<wbr>Realm<wbr>Internationalization[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>security<wbr>Defenses</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getrealmsecuritydefense">Get<wbr>Realm<wbr>Security<wbr>Defense[]?</a></span>
+        <span class="property-type"><a href="#getrealmsecuritydefense">Get<wbr>Realm<wbr>Security<wbr>Defense[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -216,7 +216,7 @@ The following arguments are supported:
             title="Optional">
         <span>smtp<wbr>Servers</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getrealmsmtpserver">Get<wbr>Realm<wbr>Smtp<wbr>Server[]?</a></span>
+        <span class="property-type"><a href="#getrealmsmtpserver">Get<wbr>Realm<wbr>Smtp<wbr>Server[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -226,6 +226,14 @@ The following arguments are supported:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>realm</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -248,14 +256,6 @@ The following arguments are supported:
         <span>internationalizations</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getrealminternationalization">List[Get<wbr>Realm<wbr>Internationalization]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>realm</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -371,7 +371,7 @@ The following output properties are available:
             title="">
         <span>Attributes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -404,14 +404,6 @@ The following output properties are available:
         <span>Display<wbr>Name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Display<wbr>Name<wbr>Html</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -624,6 +616,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span>Display<wbr>Name<wbr>Html</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -740,14 +740,6 @@ The following output properties are available:
         <span>Display<wbr>Name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Display<wbr>Name<wbr>Html</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -960,6 +952,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span>Display<wbr>Name<wbr>Html</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -1076,14 +1076,6 @@ The following output properties are available:
         <span>display<wbr>Name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>display<wbr>Name<wbr>Html</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1296,6 +1288,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span>display<wbr>Name<wbr>Html</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -1410,14 +1410,6 @@ The following output properties are available:
     <dt class="property-"
             title="">
         <span>display_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>display_<wbr>name_<wbr>html</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -1632,6 +1624,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span>display_<wbr>name_<wbr>html</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -1671,7 +1671,7 @@ The following output properties are available:
             title="Required">
         <span>Supported<wbr>Locales</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

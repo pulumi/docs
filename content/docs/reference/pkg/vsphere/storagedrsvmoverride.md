@@ -88,7 +88,7 @@ const drsVmOverride = new vsphere.StorageDrsVmOverride("drs_vm_override", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#StorageDrsVmOverride">StorageDrsVmOverride</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#StorageDrsVmOverrideArgs">StorageDrsVmOverrideArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#StorageDrsVmOverride">StorageDrsVmOverride</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#StorageDrsVmOverrideArgs">StorageDrsVmOverrideArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -96,11 +96,11 @@ const drsVmOverride = new vsphere.StorageDrsVmOverride("drs_vm_override", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewStorageDrsVmOverride<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/go/vsphere/?tab=doc#StorageDrsVmOverrideArgs">StorageDrsVmOverrideArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/go/vsphere/?tab=doc#StorageDrsVmOverride">StorageDrsVmOverride</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewStorageDrsVmOverride<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/go/vsphere/?tab=doc#StorageDrsVmOverrideArgs">StorageDrsVmOverrideArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/go/vsphere/?tab=doc#StorageDrsVmOverride">StorageDrsVmOverride</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.Vsphere..StorageDrsVmOverride.html">StorageDrsVmOverride</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.Vsphere.StorageDrsVmOverrideArgs.html">StorageDrsVmOverrideArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.Vsphere.StorageDrsVmOverride.html">StorageDrsVmOverride</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.VSphere.StorageDrsVmOverrideArgs.html">StorageDrsVmOverrideArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -203,11 +203,21 @@ ID][docs-about-morefs] of the datastore cluster to put the override in.
 Forces a new resource if changed.
 {{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>Virtual<wbr>Machine<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The UUID of the virtual machine to create
+the override for.  Forces a new resource if changed.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Sdrs<wbr>Automation<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Overrides any Storage DRS automation
 levels for this virtual machine. Can be one of `automated` or `manual`. When
@@ -219,7 +229,7 @@ not specified, the datastore cluster's settings are used according to the
             title="Optional">
         <span>Sdrs<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Overrides the default Storage DRS setting for
 this virtual machine. When not specified, the datastore cluster setting is
@@ -230,23 +240,13 @@ used.
             title="Optional">
         <span>Sdrs<wbr>Intra<wbr>Vm<wbr>Affinity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Overrides the intra-VM affinity setting
 for this virtual machine. When `true`, all disks for this virtual machine
 will be kept on the same datastore. When `false`, Storage DRS may locate
 individual disks on different datastores if it helps satisfy cluster
 requirements. When not specified, the datastore cluster's settings are used.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Virtual<wbr>Machine<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The UUID of the virtual machine to create
-the override for.  Forces a new resource if changed.
 {{% /md %}}</dd>
 
 </dl>
@@ -267,11 +267,21 @@ ID][docs-about-morefs] of the datastore cluster to put the override in.
 Forces a new resource if changed.
 {{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>Virtual<wbr>Machine<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The UUID of the virtual machine to create
+the override for.  Forces a new resource if changed.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Sdrs<wbr>Automation<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Overrides any Storage DRS automation
 levels for this virtual machine. Can be one of `automated` or `manual`. When
@@ -283,7 +293,7 @@ not specified, the datastore cluster's settings are used according to the
             title="Optional">
         <span>Sdrs<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Overrides the default Storage DRS setting for
 this virtual machine. When not specified, the datastore cluster setting is
@@ -294,23 +304,13 @@ used.
             title="Optional">
         <span>Sdrs<wbr>Intra<wbr>Vm<wbr>Affinity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Overrides the intra-VM affinity setting
 for this virtual machine. When `true`, all disks for this virtual machine
 will be kept on the same datastore. When `false`, Storage DRS may locate
 individual disks on different datastores if it helps satisfy cluster
 requirements. When not specified, the datastore cluster's settings are used.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Virtual<wbr>Machine<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The UUID of the virtual machine to create
-the override for.  Forces a new resource if changed.
 {{% /md %}}</dd>
 
 </dl>
@@ -331,11 +331,21 @@ ID][docs-about-morefs] of the datastore cluster to put the override in.
 Forces a new resource if changed.
 {{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>virtual<wbr>Machine<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The UUID of the virtual machine to create
+the override for.  Forces a new resource if changed.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>sdrs<wbr>Automation<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Overrides any Storage DRS automation
 levels for this virtual machine. Can be one of `automated` or `manual`. When
@@ -347,7 +357,7 @@ not specified, the datastore cluster's settings are used according to the
             title="Optional">
         <span>sdrs<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Overrides the default Storage DRS setting for
 this virtual machine. When not specified, the datastore cluster setting is
@@ -358,23 +368,13 @@ used.
             title="Optional">
         <span>sdrs<wbr>Intra<wbr>Vm<wbr>Affinity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Overrides the intra-VM affinity setting
 for this virtual machine. When `true`, all disks for this virtual machine
 will be kept on the same datastore. When `false`, Storage DRS may locate
 individual disks on different datastores if it helps satisfy cluster
 requirements. When not specified, the datastore cluster's settings are used.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>virtual<wbr>Machine<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The UUID of the virtual machine to create
-the override for.  Forces a new resource if changed.
 {{% /md %}}</dd>
 
 </dl>
@@ -393,6 +393,16 @@ the override for.  Forces a new resource if changed.
     <dd>{{% md %}}The [managed object reference
 ID][docs-about-morefs] of the datastore cluster to put the override in.
 Forces a new resource if changed.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>virtual_<wbr>machine_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The UUID of the virtual machine to create
+the override for.  Forces a new resource if changed.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -431,286 +441,10 @@ individual disks on different datastores if it helps satisfy cluster
 requirements. When not specified, the datastore cluster's settings are used.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>virtual_<wbr>machine_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The UUID of the virtual machine to create
-the override for.  Forces a new resource if changed.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
-
-
-
-
-
-## StorageDrsVmOverride Output Properties
-
-The following output properties are available:
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Datastore<wbr>Cluster<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The [managed object reference
-ID][docs-about-morefs] of the datastore cluster to put the override in.
-Forces a new resource if changed.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Sdrs<wbr>Automation<wbr>Level</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Overrides any Storage DRS automation
-levels for this virtual machine. Can be one of `automated` or `manual`. When
-not specified, the datastore cluster's settings are used according to the
-[specific SDRS subsystem][tf-vsphere-datastore-cluster-sdrs-levels].
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Sdrs<wbr>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Overrides the default Storage DRS setting for
-this virtual machine. When not specified, the datastore cluster setting is
-used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Sdrs<wbr>Intra<wbr>Vm<wbr>Affinity</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Overrides the intra-VM affinity setting
-for this virtual machine. When `true`, all disks for this virtual machine
-will be kept on the same datastore. When `false`, Storage DRS may locate
-individual disks on different datastores if it helps satisfy cluster
-requirements. When not specified, the datastore cluster's settings are used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Virtual<wbr>Machine<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The UUID of the virtual machine to create
-the override for.  Forces a new resource if changed.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Datastore<wbr>Cluster<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The [managed object reference
-ID][docs-about-morefs] of the datastore cluster to put the override in.
-Forces a new resource if changed.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Sdrs<wbr>Automation<wbr>Level</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Overrides any Storage DRS automation
-levels for this virtual machine. Can be one of `automated` or `manual`. When
-not specified, the datastore cluster's settings are used according to the
-[specific SDRS subsystem][tf-vsphere-datastore-cluster-sdrs-levels].
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Sdrs<wbr>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Overrides the default Storage DRS setting for
-this virtual machine. When not specified, the datastore cluster setting is
-used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Sdrs<wbr>Intra<wbr>Vm<wbr>Affinity</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Overrides the intra-VM affinity setting
-for this virtual machine. When `true`, all disks for this virtual machine
-will be kept on the same datastore. When `false`, Storage DRS may locate
-individual disks on different datastores if it helps satisfy cluster
-requirements. When not specified, the datastore cluster's settings are used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Virtual<wbr>Machine<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The UUID of the virtual machine to create
-the override for.  Forces a new resource if changed.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>datastore<wbr>Cluster<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The [managed object reference
-ID][docs-about-morefs] of the datastore cluster to put the override in.
-Forces a new resource if changed.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>sdrs<wbr>Automation<wbr>Level</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Overrides any Storage DRS automation
-levels for this virtual machine. Can be one of `automated` or `manual`. When
-not specified, the datastore cluster's settings are used according to the
-[specific SDRS subsystem][tf-vsphere-datastore-cluster-sdrs-levels].
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>sdrs<wbr>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Overrides the default Storage DRS setting for
-this virtual machine. When not specified, the datastore cluster setting is
-used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>sdrs<wbr>Intra<wbr>Vm<wbr>Affinity</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Overrides the intra-VM affinity setting
-for this virtual machine. When `true`, all disks for this virtual machine
-will be kept on the same datastore. When `false`, Storage DRS may locate
-individual disks on different datastores if it helps satisfy cluster
-requirements. When not specified, the datastore cluster's settings are used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>virtual<wbr>Machine<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The UUID of the virtual machine to create
-the override for.  Forces a new resource if changed.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>datastore_<wbr>cluster_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The [managed object reference
-ID][docs-about-morefs] of the datastore cluster to put the override in.
-Forces a new resource if changed.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>sdrs_<wbr>automation_<wbr>level</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Overrides any Storage DRS automation
-levels for this virtual machine. Can be one of `automated` or `manual`. When
-not specified, the datastore cluster's settings are used according to the
-[specific SDRS subsystem][tf-vsphere-datastore-cluster-sdrs-levels].
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>sdrs_<wbr>enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Overrides the default Storage DRS setting for
-this virtual machine. When not specified, the datastore cluster setting is
-used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>sdrs_<wbr>intra_<wbr>vm_<wbr>affinity</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Overrides the intra-VM affinity setting
-for this virtual machine. When `true`, all disks for this virtual machine
-will be kept on the same datastore. When `false`, Storage DRS may locate
-individual disks on different datastores if it helps satisfy cluster
-requirements. When not specified, the datastore cluster's settings are used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>virtual_<wbr>machine_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The UUID of the virtual machine to create
-the override for.  Forces a new resource if changed.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
 
 
 
@@ -738,7 +472,7 @@ Get an existing StorageDrsVmOverride resource's state with the given name, ID, a
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.Vsphere..StorageDrsVmOverride.html">StorageDrsVmOverride</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.Vsphere..StorageDrsVmOverrideState.html">StorageDrsVmOverrideState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.Vsphere.StorageDrsVmOverride.html">StorageDrsVmOverride</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.Vsphere..StorageDrsVmOverrideState.html">StorageDrsVmOverrideState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -848,7 +582,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Datastore<wbr>Cluster<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The [managed object reference
 ID][docs-about-morefs] of the datastore cluster to put the override in.
@@ -859,7 +593,7 @@ Forces a new resource if changed.
             title="Optional">
         <span>Sdrs<wbr>Automation<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Overrides any Storage DRS automation
 levels for this virtual machine. Can be one of `automated` or `manual`. When
@@ -871,7 +605,7 @@ not specified, the datastore cluster's settings are used according to the
             title="Optional">
         <span>Sdrs<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Overrides the default Storage DRS setting for
 this virtual machine. When not specified, the datastore cluster setting is
@@ -882,7 +616,7 @@ used.
             title="Optional">
         <span>Sdrs<wbr>Intra<wbr>Vm<wbr>Affinity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Overrides the intra-VM affinity setting
 for this virtual machine. When `true`, all disks for this virtual machine
@@ -895,7 +629,7 @@ requirements. When not specified, the datastore cluster's settings are used.
             title="Optional">
         <span>Virtual<wbr>Machine<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The UUID of the virtual machine to create
 the override for.  Forces a new resource if changed.
@@ -912,7 +646,7 @@ the override for.  Forces a new resource if changed.
             title="Optional">
         <span>Datastore<wbr>Cluster<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The [managed object reference
 ID][docs-about-morefs] of the datastore cluster to put the override in.
@@ -923,7 +657,7 @@ Forces a new resource if changed.
             title="Optional">
         <span>Sdrs<wbr>Automation<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Overrides any Storage DRS automation
 levels for this virtual machine. Can be one of `automated` or `manual`. When
@@ -935,7 +669,7 @@ not specified, the datastore cluster's settings are used according to the
             title="Optional">
         <span>Sdrs<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Overrides the default Storage DRS setting for
 this virtual machine. When not specified, the datastore cluster setting is
@@ -946,7 +680,7 @@ used.
             title="Optional">
         <span>Sdrs<wbr>Intra<wbr>Vm<wbr>Affinity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Overrides the intra-VM affinity setting
 for this virtual machine. When `true`, all disks for this virtual machine
@@ -959,7 +693,7 @@ requirements. When not specified, the datastore cluster's settings are used.
             title="Optional">
         <span>Virtual<wbr>Machine<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The UUID of the virtual machine to create
 the override for.  Forces a new resource if changed.
@@ -976,7 +710,7 @@ the override for.  Forces a new resource if changed.
             title="Optional">
         <span>datastore<wbr>Cluster<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The [managed object reference
 ID][docs-about-morefs] of the datastore cluster to put the override in.
@@ -987,7 +721,7 @@ Forces a new resource if changed.
             title="Optional">
         <span>sdrs<wbr>Automation<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Overrides any Storage DRS automation
 levels for this virtual machine. Can be one of `automated` or `manual`. When
@@ -999,7 +733,7 @@ not specified, the datastore cluster's settings are used according to the
             title="Optional">
         <span>sdrs<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Overrides the default Storage DRS setting for
 this virtual machine. When not specified, the datastore cluster setting is
@@ -1010,7 +744,7 @@ used.
             title="Optional">
         <span>sdrs<wbr>Intra<wbr>Vm<wbr>Affinity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Overrides the intra-VM affinity setting
 for this virtual machine. When `true`, all disks for this virtual machine
@@ -1023,7 +757,7 @@ requirements. When not specified, the datastore cluster's settings are used.
             title="Optional">
         <span>virtual<wbr>Machine<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The UUID of the virtual machine to create
 the override for.  Forces a new resource if changed.

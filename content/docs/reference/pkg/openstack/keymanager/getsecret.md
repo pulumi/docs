@@ -27,13 +27,13 @@ block_external_search_index: true
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupSecret<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/keymanager?tab=doc#LookupSecretArgs">LookupSecretArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/keymanager?tab=doc#LookupSecretResult">LookupSecretResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupSecret<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/keymanager?tab=doc#LookupSecretArgs">LookupSecretArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/keymanager?tab=doc#LookupSecretResult">LookupSecretResult</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetSecret </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.Openstack.Keymanager.GetSecretResult.html">GetSecretResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.Openstack.KeyManager.GetSecretArgs.html">GetSecretArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.Openstack.Keymanager.GetSecretResult.html">GetSecretResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.OpenStack.KeyManager.GetSecretArgs.html">GetSecretArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -50,7 +50,7 @@ The following arguments are supported:
             title="Optional">
         <span>Acl<wbr>Only</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Select the Secret with an ACL that contains the user.
 Project scope is ignored. Defaults to `false`.
@@ -60,7 +60,7 @@ Project scope is ignored. Defaults to `false`.
             title="Optional">
         <span>Algorithm</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Secret algorithm.
 {{% /md %}}</dd>
@@ -69,7 +69,7 @@ Project scope is ignored. Defaults to `false`.
             title="Optional">
         <span>Bit<wbr>Length</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The Secret bit length.
 {{% /md %}}</dd>
@@ -78,7 +78,7 @@ Project scope is ignored. Defaults to `false`.
             title="Optional">
         <span>Created<wbr>At<wbr>Filter</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Date filter to select the Secret with
 created matching the specified criteria. See Date Filters below for more
@@ -89,7 +89,7 @@ detail.
             title="Optional">
         <span>Expiration<wbr>Filter</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Date filter to select the Secret with
 expiration matching the specified criteria. See Date Filters below for more
@@ -100,7 +100,7 @@ detail.
             title="Optional">
         <span>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Secret mode.
 {{% /md %}}</dd>
@@ -109,7 +109,7 @@ detail.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Secret name.
 {{% /md %}}</dd>
@@ -118,7 +118,7 @@ detail.
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V1 KeyManager client.
 A KeyManager client is needed to fetch a secret. If omitted, the `region`
@@ -129,7 +129,7 @@ argument of the provider is used.
             title="Optional">
         <span>Secret<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Secret type. For more information see
 [Secret types](https://docs.openstack.org/barbican/latest/api/reference/secret_types.html).
@@ -139,7 +139,7 @@ argument of the provider is used.
             title="Optional">
         <span>Updated<wbr>At<wbr>Filter</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Date filter to select the Secret with
 updated matching the specified criteria. See Date Filters below for more
@@ -157,7 +157,7 @@ detail.
             title="Optional">
         <span>Acl<wbr>Only</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Select the Secret with an ACL that contains the user.
 Project scope is ignored. Defaults to `false`.
@@ -167,7 +167,7 @@ Project scope is ignored. Defaults to `false`.
             title="Optional">
         <span>Algorithm</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Secret algorithm.
 {{% /md %}}</dd>
@@ -176,7 +176,7 @@ Project scope is ignored. Defaults to `false`.
             title="Optional">
         <span>Bit<wbr>Length</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The Secret bit length.
 {{% /md %}}</dd>
@@ -185,7 +185,7 @@ Project scope is ignored. Defaults to `false`.
             title="Optional">
         <span>Created<wbr>At<wbr>Filter</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Date filter to select the Secret with
 created matching the specified criteria. See Date Filters below for more
@@ -196,7 +196,7 @@ detail.
             title="Optional">
         <span>Expiration<wbr>Filter</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Date filter to select the Secret with
 expiration matching the specified criteria. See Date Filters below for more
@@ -207,7 +207,7 @@ detail.
             title="Optional">
         <span>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Secret mode.
 {{% /md %}}</dd>
@@ -216,7 +216,7 @@ detail.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Secret name.
 {{% /md %}}</dd>
@@ -225,7 +225,7 @@ detail.
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V1 KeyManager client.
 A KeyManager client is needed to fetch a secret. If omitted, the `region`
@@ -236,7 +236,7 @@ argument of the provider is used.
             title="Optional">
         <span>Secret<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Secret type. For more information see
 [Secret types](https://docs.openstack.org/barbican/latest/api/reference/secret_types.html).
@@ -246,7 +246,7 @@ argument of the provider is used.
             title="Optional">
         <span>Updated<wbr>At<wbr>Filter</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Date filter to select the Secret with
 updated matching the specified criteria. See Date Filters below for more
@@ -264,7 +264,7 @@ detail.
             title="Optional">
         <span>acl<wbr>Only</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Select the Secret with an ACL that contains the user.
 Project scope is ignored. Defaults to `false`.
@@ -274,7 +274,7 @@ Project scope is ignored. Defaults to `false`.
             title="Optional">
         <span>algorithm</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Secret algorithm.
 {{% /md %}}</dd>
@@ -283,7 +283,7 @@ Project scope is ignored. Defaults to `false`.
             title="Optional">
         <span>bit<wbr>Length</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The Secret bit length.
 {{% /md %}}</dd>
@@ -292,7 +292,7 @@ Project scope is ignored. Defaults to `false`.
             title="Optional">
         <span>created<wbr>At<wbr>Filter</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Date filter to select the Secret with
 created matching the specified criteria. See Date Filters below for more
@@ -303,7 +303,7 @@ detail.
             title="Optional">
         <span>expiration<wbr>Filter</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Date filter to select the Secret with
 expiration matching the specified criteria. See Date Filters below for more
@@ -314,7 +314,7 @@ detail.
             title="Optional">
         <span>mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Secret mode.
 {{% /md %}}</dd>
@@ -323,7 +323,7 @@ detail.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Secret name.
 {{% /md %}}</dd>
@@ -332,7 +332,7 @@ detail.
             title="Optional">
         <span>region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V1 KeyManager client.
 A KeyManager client is needed to fetch a secret. If omitted, the `region`
@@ -343,7 +343,7 @@ argument of the provider is used.
             title="Optional">
         <span>secret<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Secret type. For more information see
 [Secret types](https://docs.openstack.org/barbican/latest/api/reference/secret_types.html).
@@ -353,7 +353,7 @@ argument of the provider is used.
             title="Optional">
         <span>updated<wbr>At<wbr>Filter</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Date filter to select the Secret with
 updated matching the specified criteria. See Date Filters below for more
@@ -489,45 +489,18 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Acl<wbr>Only</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Acls</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getsecretacl">List&lt;Get<wbr>Secret<wbr>Acl&gt;</a></span>
+        <span class="property-type"><a href="#getsecretacl">List&lt;Pulumi.<wbr>Open<wbr>Stack.<wbr>Key<wbr>Manager.<wbr>Outputs.<wbr>Get<wbr>Secret<wbr>Acl&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of ACLs assigned to a secret. The `read` structure is described below.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>Algorithm</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Bit<wbr>Length</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Content<wbr>Types</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}The map of the content types, assigned on the secret.
 {{% /md %}}</dd>
@@ -539,15 +512,6 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date the secret ACL was created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Created<wbr>At<wbr>Filter</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}See Argument Reference above.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -570,15 +534,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Expiration<wbr>Filter</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -590,28 +545,10 @@ The following output properties are available:
             title="">
         <span>Metadata</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}The map of metadata, assigned on the secret, which has been
 explicitly and implicitly added.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Mode</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}See Argument Reference above.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -643,29 +580,11 @@ explicitly and implicitly added.
 
     <dt class="property-"
             title="">
-        <span>Region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Secret<wbr>Ref</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The secret reference / where to find the secret.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Secret<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}See Argument Reference above.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -688,9 +607,90 @@ explicitly and implicitly added.
 
     <dt class="property-"
             title="">
+        <span>Acl<wbr>Only</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}See Argument Reference above.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Algorithm</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}See Argument Reference above.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Bit<wbr>Length</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}See Argument Reference above.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Created<wbr>At<wbr>Filter</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}See Argument Reference above.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Expiration<wbr>Filter</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}See Argument Reference above.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Mode</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}See Argument Reference above.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}See Argument Reference above.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Region</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}See Argument Reference above.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Secret<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}See Argument Reference above.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Updated<wbr>At<wbr>Filter</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
 {{% /md %}}</dd>
@@ -704,38 +704,11 @@ explicitly and implicitly added.
 
     <dt class="property-"
             title="">
-        <span>Acl<wbr>Only</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Acls</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getsecretacl">[]Get<wbr>Secret<wbr>Acl</a></span>
     </dt>
     <dd>{{% md %}}The list of ACLs assigned to a secret. The `read` structure is described below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Algorithm</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Bit<wbr>Length</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}See Argument Reference above.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -758,15 +731,6 @@ explicitly and implicitly added.
 
     <dt class="property-"
             title="">
-        <span>Created<wbr>At<wbr>Filter</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Creator<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -781,15 +745,6 @@ explicitly and implicitly added.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date the secret will expire.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Expiration<wbr>Filter</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}See Argument Reference above.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -809,24 +764,6 @@ explicitly and implicitly added.
     </dt>
     <dd>{{% md %}}The map of metadata, assigned on the secret, which has been
 explicitly and implicitly added.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Mode</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}See Argument Reference above.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -858,29 +795,11 @@ explicitly and implicitly added.
 
     <dt class="property-"
             title="">
-        <span>Region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Secret<wbr>Ref</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The secret reference / where to find the secret.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Secret<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}See Argument Reference above.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -903,9 +822,90 @@ explicitly and implicitly added.
 
     <dt class="property-"
             title="">
+        <span>Acl<wbr>Only</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}See Argument Reference above.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Algorithm</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}See Argument Reference above.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Bit<wbr>Length</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}See Argument Reference above.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Created<wbr>At<wbr>Filter</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}See Argument Reference above.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Expiration<wbr>Filter</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}See Argument Reference above.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Mode</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}See Argument Reference above.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}See Argument Reference above.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Region</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}See Argument Reference above.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Secret<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}See Argument Reference above.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Updated<wbr>At<wbr>Filter</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
 {{% /md %}}</dd>
@@ -919,38 +919,11 @@ explicitly and implicitly added.
 
     <dt class="property-"
             title="">
-        <span>acl<wbr>Only</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>acls</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getsecretacl">Get<wbr>Secret<wbr>Acl[]</a></span>
     </dt>
     <dd>{{% md %}}The list of ACLs assigned to a secret. The `read` structure is described below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>algorithm</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>bit<wbr>Length</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}See Argument Reference above.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -973,15 +946,6 @@ explicitly and implicitly added.
 
     <dt class="property-"
             title="">
-        <span>created<wbr>At<wbr>Filter</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>creator<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -996,15 +960,6 @@ explicitly and implicitly added.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date the secret will expire.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>expiration<wbr>Filter</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}See Argument Reference above.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1024,24 +979,6 @@ explicitly and implicitly added.
     </dt>
     <dd>{{% md %}}The map of metadata, assigned on the secret, which has been
 explicitly and implicitly added.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>mode</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}See Argument Reference above.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1073,29 +1010,11 @@ explicitly and implicitly added.
 
     <dt class="property-"
             title="">
-        <span>region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>secret<wbr>Ref</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The secret reference / where to find the secret.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>secret<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}See Argument Reference above.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1118,9 +1037,90 @@ explicitly and implicitly added.
 
     <dt class="property-"
             title="">
+        <span>acl<wbr>Only</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}See Argument Reference above.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>algorithm</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}See Argument Reference above.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>bit<wbr>Length</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}See Argument Reference above.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>created<wbr>At<wbr>Filter</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}See Argument Reference above.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>expiration<wbr>Filter</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}See Argument Reference above.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>mode</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}See Argument Reference above.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}See Argument Reference above.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>region</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}See Argument Reference above.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>secret<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}See Argument Reference above.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>updated<wbr>At<wbr>Filter</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
 {{% /md %}}</dd>
@@ -1134,38 +1134,11 @@ explicitly and implicitly added.
 
     <dt class="property-"
             title="">
-        <span>acl_<wbr>only</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>acls</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getsecretacl">List[Get<wbr>Secret<wbr>Acl]</a></span>
     </dt>
     <dd>{{% md %}}The list of ACLs assigned to a secret. The `read` structure is described below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>algorithm</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>bit_<wbr>length</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}See Argument Reference above.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1188,15 +1161,6 @@ explicitly and implicitly added.
 
     <dt class="property-"
             title="">
-        <span>created_<wbr>at_<wbr>filter</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>creator_<wbr>id</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -1211,15 +1175,6 @@ explicitly and implicitly added.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The date the secret will expire.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>expiration_<wbr>filter</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}See Argument Reference above.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1239,24 +1194,6 @@ explicitly and implicitly added.
     </dt>
     <dd>{{% md %}}The map of metadata, assigned on the secret, which has been
 explicitly and implicitly added.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>mode</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}See Argument Reference above.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1288,29 +1225,11 @@ explicitly and implicitly added.
 
     <dt class="property-"
             title="">
-        <span>region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>secret_<wbr>ref</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The secret reference / where to find the secret.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>secret_<wbr>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}See Argument Reference above.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1329,6 +1248,87 @@ explicitly and implicitly added.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The date the secret ACL was last updated.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>acl_<wbr>only</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}See Argument Reference above.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>algorithm</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}See Argument Reference above.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>bit_<wbr>length</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}See Argument Reference above.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>created_<wbr>at_<wbr>filter</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}See Argument Reference above.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>expiration_<wbr>filter</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}See Argument Reference above.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>mode</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}See Argument Reference above.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}See Argument Reference above.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>region</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}See Argument Reference above.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>secret_<wbr>type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}See Argument Reference above.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1371,7 +1371,7 @@ explicitly and implicitly added.
             title="Required">
         <span>Read</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getsecretaclread">Get<wbr>Secret<wbr>Acl<wbr>Read<wbr>Args</a></span>
+        <span class="property-type"><a href="#getsecretaclread">Pulumi.<wbr>Open<wbr>Stack.<wbr>Key<wbr>Manager.<wbr>Inputs.<wbr>Get<wbr>Secret<wbr>Acl<wbr>Read<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1451,15 +1451,6 @@ explicitly and implicitly added.
     <dd>{{% md %}}The date the secret ACL was created.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Project<wbr>Access</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Whether the secret is accessible project wide.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Updated<wbr>At</span>
@@ -1471,9 +1462,18 @@ explicitly and implicitly added.
 
     <dt class="property-optional"
             title="Optional">
+        <span>Project<wbr>Access</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether the secret is accessible project wide.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Users</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The list of user IDs, which are allowed to access the secret, when
 `project_access` is set to `false`.
@@ -1495,15 +1495,6 @@ explicitly and implicitly added.
     <dd>{{% md %}}The date the secret ACL was created.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Project<wbr>Access</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Whether the secret is accessible project wide.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Updated<wbr>At</span>
@@ -1511,6 +1502,15 @@ explicitly and implicitly added.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The date the secret ACL was last updated.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Project<wbr>Access</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether the secret is accessible project wide.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1539,15 +1539,6 @@ explicitly and implicitly added.
     <dd>{{% md %}}The date the secret ACL was created.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>project<wbr>Access</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Whether the secret is accessible project wide.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>updated<wbr>At</span>
@@ -1559,9 +1550,18 @@ explicitly and implicitly added.
 
     <dt class="property-optional"
             title="Optional">
+        <span>project<wbr>Access</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether the secret is accessible project wide.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>users</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The list of user IDs, which are allowed to access the secret, when
 `project_access` is set to `false`.
@@ -1583,15 +1583,6 @@ explicitly and implicitly added.
     <dd>{{% md %}}The date the secret ACL was created.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>project<wbr>Access</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Whether the secret is accessible project wide.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>updated_<wbr>at</span>
@@ -1599,6 +1590,15 @@ explicitly and implicitly added.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The date the secret ACL was last updated.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>project<wbr>Access</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether the secret is accessible project wide.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

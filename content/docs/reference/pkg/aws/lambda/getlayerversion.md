@@ -47,7 +47,7 @@ const existing = pulumi.output(aws.lambda.getLayerVersion({
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupLayerVersion<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/lambda?tab=doc#LookupLayerVersionArgs">LookupLayerVersionArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/lambda?tab=doc#LookupLayerVersionResult">LookupLayerVersionResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupLayerVersion<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/lambda?tab=doc#LookupLayerVersionArgs">LookupLayerVersionArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/lambda?tab=doc#LookupLayerVersionResult">LookupLayerVersionResult</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -66,15 +66,6 @@ The following arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Compatible<wbr>Runtime</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Specific runtime the layer version must support. Conflicts with `version`. If specified, the latest available layer version supporting the provided runtime will be used.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Layer<wbr>Name</span>
@@ -86,9 +77,18 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>Compatible<wbr>Runtime</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specific runtime the layer version must support. Conflicts with `version`. If specified, the latest available layer version supporting the provided runtime will be used.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specific layer version. Conflicts with `compatible_runtime`. If omitted, the latest available layer version will be used.
 {{% /md %}}</dd>
@@ -100,15 +100,6 @@ The following arguments are supported:
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Compatible<wbr>Runtime</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Specific runtime the layer version must support. Conflicts with `version`. If specified, the latest available layer version supporting the provided runtime will be used.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Layer<wbr>Name</span>
@@ -120,9 +111,18 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>Compatible<wbr>Runtime</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specific runtime the layer version must support. Conflicts with `version`. If specified, the latest available layer version supporting the provided runtime will be used.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specific layer version. Conflicts with `compatible_runtime`. If omitted, the latest available layer version will be used.
 {{% /md %}}</dd>
@@ -133,15 +133,6 @@ The following arguments are supported:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>compatible<wbr>Runtime</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Specific runtime the layer version must support. Conflicts with `version`. If specified, the latest available layer version supporting the provided runtime will be used.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -154,9 +145,18 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>compatible<wbr>Runtime</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specific runtime the layer version must support. Conflicts with `version`. If specified, the latest available layer version supporting the provided runtime will be used.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specific layer version. Conflicts with `compatible_runtime`. If omitted, the latest available layer version will be used.
 {{% /md %}}</dd>
@@ -168,15 +168,6 @@ The following arguments are supported:
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>compatible_<wbr>runtime</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Specific runtime the layer version must support. Conflicts with `version`. If specified, the latest available layer version supporting the provided runtime will be used.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>layer_<wbr>name</span>
@@ -184,6 +175,15 @@ The following arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the lambda layer.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>compatible_<wbr>runtime</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specific runtime the layer version must support. Conflicts with `version`. If specified, the latest available layer version supporting the provided runtime will be used.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -226,17 +226,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Compatible<wbr>Runtime</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Compatible<wbr>Runtimes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of [Runtimes][1] the specific Lambda Layer version is compatible with.
 {{% /md %}}</dd>
@@ -321,6 +313,14 @@ The following output properties are available:
     <dd>{{% md %}}This Lamba Layer version.
 {{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span>Compatible<wbr>Runtime</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -336,14 +336,6 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the Lambda Layer with version.
 {{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Compatible<wbr>Runtime</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -434,6 +426,14 @@ The following output properties are available:
     <dd>{{% md %}}This Lamba Layer version.
 {{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span>Compatible<wbr>Runtime</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -449,14 +449,6 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the Lambda Layer with version.
 {{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>compatible<wbr>Runtime</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -547,6 +539,14 @@ The following output properties are available:
     <dd>{{% md %}}This Lamba Layer version.
 {{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span>compatible<wbr>Runtime</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -562,14 +562,6 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the Lambda Layer with version.
 {{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>compatible_<wbr>runtime</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -659,6 +651,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}This Lamba Layer version.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>compatible_<wbr>runtime</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

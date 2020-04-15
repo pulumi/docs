@@ -82,7 +82,7 @@ const privateZone = new aws.route53.Zone("private", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/route53/#Zone">Zone</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/route53/#ZoneArgs">ZoneArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/route53/#Zone">Zone</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/route53/#ZoneArgs">ZoneArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -90,7 +90,7 @@ const privateZone = new aws.route53.Zone("private", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewZone<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/route53?tab=doc#ZoneArgs">ZoneArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/route53?tab=doc#Zone">Zone</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewZone<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/route53?tab=doc#ZoneArgs">ZoneArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/route53?tab=doc#Zone">Zone</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -190,7 +190,7 @@ const privateZone = new aws.route53.Zone("private", {
             title="Optional">
         <span>Comment</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A comment for the hosted zone. Defaults to 'Managed by Pulumi'.
 {{% /md %}}</dd>
@@ -199,7 +199,7 @@ const privateZone = new aws.route53.Zone("private", {
             title="Optional">
         <span>Delegation<wbr>Set<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the reusable delegation set whose NS records you want to assign to the hosted zone. Conflicts with `vpc` as delegation sets can only be used for public zones.
 {{% /md %}}</dd>
@@ -208,7 +208,7 @@ const privateZone = new aws.route53.Zone("private", {
             title="Optional">
         <span>Force<wbr>Destroy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to destroy all records (possibly managed outside of this provider) in the zone when destroying the zone.
 {{% /md %}}</dd>
@@ -217,7 +217,7 @@ const privateZone = new aws.route53.Zone("private", {
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This is the name of the hosted zone.
 {{% /md %}}</dd>
@@ -226,7 +226,7 @@ const privateZone = new aws.route53.Zone("private", {
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the zone.
 {{% /md %}}</dd>
@@ -235,7 +235,7 @@ const privateZone = new aws.route53.Zone("private", {
             title="Optional">
         <span>Vpcs</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#zonevpc">List&lt;Zone<wbr>Vpc<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#zonevpc">List&lt;Zone<wbr>Vpc<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) specifying VPC(s) to associate with a private hosted zone. Conflicts with the `delegation_set_id` argument in this resource and any [`aws.route53.ZoneAssociation` resource](https://www.terraform.io/docs/providers/aws/r/route53_zone_association.html) specifying the same zone ID. Detailed below.
 {{% /md %}}</dd>
@@ -251,7 +251,7 @@ const privateZone = new aws.route53.Zone("private", {
             title="Optional">
         <span>Comment</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A comment for the hosted zone. Defaults to 'Managed by Pulumi'.
 {{% /md %}}</dd>
@@ -260,7 +260,7 @@ const privateZone = new aws.route53.Zone("private", {
             title="Optional">
         <span>Delegation<wbr>Set<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the reusable delegation set whose NS records you want to assign to the hosted zone. Conflicts with `vpc` as delegation sets can only be used for public zones.
 {{% /md %}}</dd>
@@ -269,7 +269,7 @@ const privateZone = new aws.route53.Zone("private", {
             title="Optional">
         <span>Force<wbr>Destroy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to destroy all records (possibly managed outside of this provider) in the zone when destroying the zone.
 {{% /md %}}</dd>
@@ -278,7 +278,7 @@ const privateZone = new aws.route53.Zone("private", {
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This is the name of the hosted zone.
 {{% /md %}}</dd>
@@ -312,7 +312,7 @@ const privateZone = new aws.route53.Zone("private", {
             title="Optional">
         <span>comment</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A comment for the hosted zone. Defaults to 'Managed by Pulumi'.
 {{% /md %}}</dd>
@@ -321,7 +321,7 @@ const privateZone = new aws.route53.Zone("private", {
             title="Optional">
         <span>delegation<wbr>Set<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the reusable delegation set whose NS records you want to assign to the hosted zone. Conflicts with `vpc` as delegation sets can only be used for public zones.
 {{% /md %}}</dd>
@@ -330,7 +330,7 @@ const privateZone = new aws.route53.Zone("private", {
             title="Optional">
         <span>force<wbr>Destroy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to destroy all records (possibly managed outside of this provider) in the zone when destroying the zone.
 {{% /md %}}</dd>
@@ -339,7 +339,7 @@ const privateZone = new aws.route53.Zone("private", {
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This is the name of the hosted zone.
 {{% /md %}}</dd>
@@ -348,7 +348,7 @@ const privateZone = new aws.route53.Zone("private", {
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the zone.
 {{% /md %}}</dd>
@@ -357,7 +357,7 @@ const privateZone = new aws.route53.Zone("private", {
             title="Optional">
         <span>vpcs</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#zonevpc">Zone<wbr>Vpc[]?</a></span>
+        <span class="property-type"><a href="#zonevpc">Zone<wbr>Vpc[]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) specifying VPC(s) to associate with a private hosted zone. Conflicts with the `delegation_set_id` argument in this resource and any [`aws.route53.ZoneAssociation` resource](https://www.terraform.io/docs/providers/aws/r/route53_zone_association.html) specifying the same zone ID. Detailed below.
 {{% /md %}}</dd>
@@ -444,66 +444,12 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Comment</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A comment for the hosted zone. Defaults to 'Managed by Pulumi'.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Delegation<wbr>Set<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The ID of the reusable delegation set whose NS records you want to assign to the hosted zone. Conflicts with `vpc` as delegation sets can only be used for public zones.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Force<wbr>Destroy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Whether to destroy all records (possibly managed outside of this provider) in the zone when destroying the zone.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}This is the name of the hosted zone.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Name<wbr>Servers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of name servers in associated (or default) delegation set.
 Find more about delegation sets in [AWS docs](https://docs.aws.amazon.com/Route53/latest/APIReference/actions-on-reusable-delegation-sets.html).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the zone.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Vpcs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#zonevpc">List&lt;Zone<wbr>Vpc&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}Configuration block(s) specifying VPC(s) to associate with a private hosted zone. Conflicts with the `delegation_set_id` argument in this resource and any [`aws.route53.ZoneAssociation` resource](https://www.terraform.io/docs/providers/aws/r/route53_zone_association.html) specifying the same zone ID. Detailed below.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -524,66 +470,12 @@ Find more about delegation sets in [AWS docs](https://docs.aws.amazon.com/Route5
 
     <dt class="property-"
             title="">
-        <span>Comment</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A comment for the hosted zone. Defaults to 'Managed by Pulumi'.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Delegation<wbr>Set<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the reusable delegation set whose NS records you want to assign to the hosted zone. Conflicts with `vpc` as delegation sets can only be used for public zones.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Force<wbr>Destroy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Whether to destroy all records (possibly managed outside of this provider) in the zone when destroying the zone.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}This is the name of the hosted zone.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Name<wbr>Servers</span>
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of name servers in associated (or default) delegation set.
 Find more about delegation sets in [AWS docs](https://docs.aws.amazon.com/Route53/latest/APIReference/actions-on-reusable-delegation-sets.html).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the zone.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Vpcs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#zonevpc">[]Zone<wbr>Vpc</a></span>
-    </dt>
-    <dd>{{% md %}}Configuration block(s) specifying VPC(s) to associate with a private hosted zone. Conflicts with the `delegation_set_id` argument in this resource and any [`aws.route53.ZoneAssociation` resource](https://www.terraform.io/docs/providers/aws/r/route53_zone_association.html) specifying the same zone ID. Detailed below.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -604,66 +496,12 @@ Find more about delegation sets in [AWS docs](https://docs.aws.amazon.com/Route5
 
     <dt class="property-"
             title="">
-        <span>comment</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A comment for the hosted zone. Defaults to 'Managed by Pulumi'.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>delegation<wbr>Set<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The ID of the reusable delegation set whose NS records you want to assign to the hosted zone. Conflicts with `vpc` as delegation sets can only be used for public zones.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>force<wbr>Destroy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Whether to destroy all records (possibly managed outside of this provider) in the zone when destroying the zone.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}This is the name of the hosted zone.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>name<wbr>Servers</span>
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of name servers in associated (or default) delegation set.
 Find more about delegation sets in [AWS docs](https://docs.aws.amazon.com/Route53/latest/APIReference/actions-on-reusable-delegation-sets.html).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the zone.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>vpcs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#zonevpc">Zone<wbr>Vpc[]?</a></span>
-    </dt>
-    <dd>{{% md %}}Configuration block(s) specifying VPC(s) to associate with a private hosted zone. Conflicts with the `delegation_set_id` argument in this resource and any [`aws.route53.ZoneAssociation` resource](https://www.terraform.io/docs/providers/aws/r/route53_zone_association.html) specifying the same zone ID. Detailed below.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -684,66 +522,12 @@ Find more about delegation sets in [AWS docs](https://docs.aws.amazon.com/Route5
 
     <dt class="property-"
             title="">
-        <span>comment</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}A comment for the hosted zone. Defaults to 'Managed by Pulumi'.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>delegation_<wbr>set_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The ID of the reusable delegation set whose NS records you want to assign to the hosted zone. Conflicts with `vpc` as delegation sets can only be used for public zones.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>force_<wbr>destroy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Whether to destroy all records (possibly managed outside of this provider) in the zone when destroying the zone.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}This is the name of the hosted zone.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>name_<wbr>servers</span>
         <span class="property-indicator"></span>
         <span class="property-type">List[str]</span>
     </dt>
     <dd>{{% md %}}A list of name servers in associated (or default) delegation set.
 Find more about delegation sets in [AWS docs](https://docs.aws.amazon.com/Route53/latest/APIReference/actions-on-reusable-delegation-sets.html).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the zone.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>vpcs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#zonevpc">List[Zone<wbr>Vpc]</a></span>
-    </dt>
-    <dd>{{% md %}}Configuration block(s) specifying VPC(s) to associate with a private hosted zone. Conflicts with the `delegation_set_id` argument in this resource and any [`aws.route53.ZoneAssociation` resource](https://www.terraform.io/docs/providers/aws/r/route53_zone_association.html) specifying the same zone ID. Detailed below.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -894,7 +678,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Comment</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A comment for the hosted zone. Defaults to 'Managed by Pulumi'.
 {{% /md %}}</dd>
@@ -903,7 +687,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Delegation<wbr>Set<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the reusable delegation set whose NS records you want to assign to the hosted zone. Conflicts with `vpc` as delegation sets can only be used for public zones.
 {{% /md %}}</dd>
@@ -912,7 +696,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Force<wbr>Destroy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to destroy all records (possibly managed outside of this provider) in the zone when destroying the zone.
 {{% /md %}}</dd>
@@ -921,7 +705,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This is the name of the hosted zone.
 {{% /md %}}</dd>
@@ -930,7 +714,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name<wbr>Servers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of name servers in associated (or default) delegation set.
 Find more about delegation sets in [AWS docs](https://docs.aws.amazon.com/Route53/latest/APIReference/actions-on-reusable-delegation-sets.html).
@@ -940,7 +724,7 @@ Find more about delegation sets in [AWS docs](https://docs.aws.amazon.com/Route5
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the zone.
 {{% /md %}}</dd>
@@ -949,7 +733,7 @@ Find more about delegation sets in [AWS docs](https://docs.aws.amazon.com/Route5
             title="Optional">
         <span>Vpcs</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#zonevpc">List&lt;Zone<wbr>Vpc<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#zonevpc">List&lt;Zone<wbr>Vpc<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) specifying VPC(s) to associate with a private hosted zone. Conflicts with the `delegation_set_id` argument in this resource and any [`aws.route53.ZoneAssociation` resource](https://www.terraform.io/docs/providers/aws/r/route53_zone_association.html) specifying the same zone ID. Detailed below.
 {{% /md %}}</dd>
@@ -958,7 +742,7 @@ Find more about delegation sets in [AWS docs](https://docs.aws.amazon.com/Route5
             title="Optional">
         <span>Zone<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Hosted Zone ID. This can be referenced by zone records.
 {{% /md %}}</dd>
@@ -974,7 +758,7 @@ Find more about delegation sets in [AWS docs](https://docs.aws.amazon.com/Route5
             title="Optional">
         <span>Comment</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A comment for the hosted zone. Defaults to 'Managed by Pulumi'.
 {{% /md %}}</dd>
@@ -983,7 +767,7 @@ Find more about delegation sets in [AWS docs](https://docs.aws.amazon.com/Route5
             title="Optional">
         <span>Delegation<wbr>Set<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the reusable delegation set whose NS records you want to assign to the hosted zone. Conflicts with `vpc` as delegation sets can only be used for public zones.
 {{% /md %}}</dd>
@@ -992,7 +776,7 @@ Find more about delegation sets in [AWS docs](https://docs.aws.amazon.com/Route5
             title="Optional">
         <span>Force<wbr>Destroy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to destroy all records (possibly managed outside of this provider) in the zone when destroying the zone.
 {{% /md %}}</dd>
@@ -1001,7 +785,7 @@ Find more about delegation sets in [AWS docs](https://docs.aws.amazon.com/Route5
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This is the name of the hosted zone.
 {{% /md %}}</dd>
@@ -1038,7 +822,7 @@ Find more about delegation sets in [AWS docs](https://docs.aws.amazon.com/Route5
             title="Optional">
         <span>Zone<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Hosted Zone ID. This can be referenced by zone records.
 {{% /md %}}</dd>
@@ -1054,7 +838,7 @@ Find more about delegation sets in [AWS docs](https://docs.aws.amazon.com/Route5
             title="Optional">
         <span>comment</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A comment for the hosted zone. Defaults to 'Managed by Pulumi'.
 {{% /md %}}</dd>
@@ -1063,7 +847,7 @@ Find more about delegation sets in [AWS docs](https://docs.aws.amazon.com/Route5
             title="Optional">
         <span>delegation<wbr>Set<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the reusable delegation set whose NS records you want to assign to the hosted zone. Conflicts with `vpc` as delegation sets can only be used for public zones.
 {{% /md %}}</dd>
@@ -1072,7 +856,7 @@ Find more about delegation sets in [AWS docs](https://docs.aws.amazon.com/Route5
             title="Optional">
         <span>force<wbr>Destroy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to destroy all records (possibly managed outside of this provider) in the zone when destroying the zone.
 {{% /md %}}</dd>
@@ -1081,7 +865,7 @@ Find more about delegation sets in [AWS docs](https://docs.aws.amazon.com/Route5
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This is the name of the hosted zone.
 {{% /md %}}</dd>
@@ -1090,7 +874,7 @@ Find more about delegation sets in [AWS docs](https://docs.aws.amazon.com/Route5
             title="Optional">
         <span>name<wbr>Servers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of name servers in associated (or default) delegation set.
 Find more about delegation sets in [AWS docs](https://docs.aws.amazon.com/Route53/latest/APIReference/actions-on-reusable-delegation-sets.html).
@@ -1100,7 +884,7 @@ Find more about delegation sets in [AWS docs](https://docs.aws.amazon.com/Route5
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the zone.
 {{% /md %}}</dd>
@@ -1109,7 +893,7 @@ Find more about delegation sets in [AWS docs](https://docs.aws.amazon.com/Route5
             title="Optional">
         <span>vpcs</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#zonevpc">Zone<wbr>Vpc[]?</a></span>
+        <span class="property-type"><a href="#zonevpc">Zone<wbr>Vpc[]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) specifying VPC(s) to associate with a private hosted zone. Conflicts with the `delegation_set_id` argument in this resource and any [`aws.route53.ZoneAssociation` resource](https://www.terraform.io/docs/providers/aws/r/route53_zone_association.html) specifying the same zone ID. Detailed below.
 {{% /md %}}</dd>
@@ -1118,7 +902,7 @@ Find more about delegation sets in [AWS docs](https://docs.aws.amazon.com/Route5
             title="Optional">
         <span>zone<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Hosted Zone ID. This can be referenced by zone records.
 {{% /md %}}</dd>
@@ -1245,7 +1029,7 @@ Find more about delegation sets in [AWS docs](https://docs.aws.amazon.com/Route5
             title="Optional">
         <span>Vpc<wbr>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Region of the VPC to associate. Defaults to AWS provider region.
 {{% /md %}}</dd>
@@ -1270,7 +1054,7 @@ Find more about delegation sets in [AWS docs](https://docs.aws.amazon.com/Route5
             title="Optional">
         <span>Vpc<wbr>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Region of the VPC to associate. Defaults to AWS provider region.
 {{% /md %}}</dd>
@@ -1295,7 +1079,7 @@ Find more about delegation sets in [AWS docs](https://docs.aws.amazon.com/Route5
             title="Optional">
         <span>vpc<wbr>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Region of the VPC to associate. Defaults to AWS provider region.
 {{% /md %}}</dd>

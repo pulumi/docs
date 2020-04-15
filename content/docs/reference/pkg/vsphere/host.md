@@ -31,7 +31,7 @@ The above would import the host with ID `host-123`.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#Host">Host</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#HostArgs">HostArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#Host">Host</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#HostArgs">HostArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -39,11 +39,11 @@ The above would import the host with ID `host-123`.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewHost<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/go/vsphere/?tab=doc#HostArgs">HostArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/go/vsphere/?tab=doc#Host">Host</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewHost<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/go/vsphere/?tab=doc#HostArgs">HostArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/go/vsphere/?tab=doc#Host">Host</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.Vsphere..Host.html">Host</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.Vsphere.HostArgs.html">HostArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.Vsphere.Host.html">Host</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.VSphere.HostArgs.html">HostArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -135,46 +135,6 @@ The above would import the host with ID `host-123`.
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Cluster</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The ID of the Compute Cluster this host should
-be added to. This should not be set if `datacenter` is set.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Connected</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}If set to false then the host will be disconected.
-Default is `false`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Datacenter</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The ID of the datacenter this host should
-be added to. This should not be set if `cluster` is set.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Force</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}If set to true then it will force the host to be added, even
-if the host is already connected to a different vSphere instance. Default is `false`
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Hostname</span>
@@ -182,35 +142,6 @@ if the host is already connected to a different vSphere instance. Default is `fa
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}FQDN or IP address of the host to be added.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>License</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The license key that will be applied to the host.
-The license key is expected to be present in vSphere.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Lockdown</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Set the lockdown state of the host. Valid options are
-`disabled`, `normal`, and `strict`. Default is `disabled`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Maintenance</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Set the management state of the host. Default is `false`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -223,17 +154,6 @@ The license key is expected to be present in vSphere.
 to the host.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Thumbprint</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Host's certificate SHA-1 thumbprint. If not set the the
-CA that signed the host's certificate should be trusted. If the CA is not trusted
-and no thumbprint is set then the operation will fail.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Username</span>
@@ -242,6 +162,86 @@ and no thumbprint is set then the operation will fail.
     </dt>
     <dd>{{% md %}}Username that will be used by vSphere to authenticate
 to the host.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Cluster</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Compute Cluster this host should
+be added to. This should not be set if `datacenter` is set.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Connected</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If set to false then the host will be disconected.
+Default is `false`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Datacenter</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the datacenter this host should
+be added to. This should not be set if `cluster` is set.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Force</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If set to true then it will force the host to be added, even
+if the host is already connected to a different vSphere instance. Default is `false`
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>License</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The license key that will be applied to the host.
+The license key is expected to be present in vSphere.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Lockdown</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Set the lockdown state of the host. Valid options are
+`disabled`, `normal`, and `strict`. Default is `disabled`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Maintenance</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Set the management state of the host. Default is `false`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Thumbprint</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Host's certificate SHA-1 thumbprint. If not set the the
+CA that signed the host's certificate should be trusted. If the CA is not trusted
+and no thumbprint is set then the operation will fail.
 {{% /md %}}</dd>
 
 </dl>
@@ -251,46 +251,6 @@ to the host.
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Cluster</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the Compute Cluster this host should
-be added to. This should not be set if `datacenter` is set.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Connected</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}If set to false then the host will be disconected.
-Default is `false`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Datacenter</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the datacenter this host should
-be added to. This should not be set if `cluster` is set.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Force</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}If set to true then it will force the host to be added, even
-if the host is already connected to a different vSphere instance. Default is `false`
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Hostname</span>
@@ -298,35 +258,6 @@ if the host is already connected to a different vSphere instance. Default is `fa
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}FQDN or IP address of the host to be added.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>License</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The license key that will be applied to the host.
-The license key is expected to be present in vSphere.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Lockdown</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Set the lockdown state of the host. Valid options are
-`disabled`, `normal`, and `strict`. Default is `disabled`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Maintenance</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Set the management state of the host. Default is `false`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -339,17 +270,6 @@ The license key is expected to be present in vSphere.
 to the host.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Thumbprint</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Host's certificate SHA-1 thumbprint. If not set the the
-CA that signed the host's certificate should be trusted. If the CA is not trusted
-and no thumbprint is set then the operation will fail.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Username</span>
@@ -358,6 +278,86 @@ and no thumbprint is set then the operation will fail.
     </dt>
     <dd>{{% md %}}Username that will be used by vSphere to authenticate
 to the host.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Cluster</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Compute Cluster this host should
+be added to. This should not be set if `datacenter` is set.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Connected</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If set to false then the host will be disconected.
+Default is `false`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Datacenter</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the datacenter this host should
+be added to. This should not be set if `cluster` is set.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Force</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If set to true then it will force the host to be added, even
+if the host is already connected to a different vSphere instance. Default is `false`
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>License</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The license key that will be applied to the host.
+The license key is expected to be present in vSphere.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Lockdown</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Set the lockdown state of the host. Valid options are
+`disabled`, `normal`, and `strict`. Default is `disabled`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Maintenance</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Set the management state of the host. Default is `false`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Thumbprint</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Host's certificate SHA-1 thumbprint. If not set the the
+CA that signed the host's certificate should be trusted. If the CA is not trusted
+and no thumbprint is set then the operation will fail.
 {{% /md %}}</dd>
 
 </dl>
@@ -367,46 +367,6 @@ to the host.
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>cluster</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The ID of the Compute Cluster this host should
-be added to. This should not be set if `datacenter` is set.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>connected</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}If set to false then the host will be disconected.
-Default is `false`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>datacenter</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The ID of the datacenter this host should
-be added to. This should not be set if `cluster` is set.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>force</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}If set to true then it will force the host to be added, even
-if the host is already connected to a different vSphere instance. Default is `false`
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>hostname</span>
@@ -414,35 +374,6 @@ if the host is already connected to a different vSphere instance. Default is `fa
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}FQDN or IP address of the host to be added.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>license</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The license key that will be applied to the host.
-The license key is expected to be present in vSphere.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>lockdown</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Set the lockdown state of the host. Valid options are
-`disabled`, `normal`, and `strict`. Default is `disabled`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>maintenance</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Set the management state of the host. Default is `false`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -455,17 +386,6 @@ The license key is expected to be present in vSphere.
 to the host.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>thumbprint</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Host's certificate SHA-1 thumbprint. If not set the the
-CA that signed the host's certificate should be trusted. If the CA is not trusted
-and no thumbprint is set then the operation will fail.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>username</span>
@@ -474,6 +394,86 @@ and no thumbprint is set then the operation will fail.
     </dt>
     <dd>{{% md %}}Username that will be used by vSphere to authenticate
 to the host.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>cluster</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the Compute Cluster this host should
+be added to. This should not be set if `datacenter` is set.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>connected</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}If set to false then the host will be disconected.
+Default is `false`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>datacenter</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the datacenter this host should
+be added to. This should not be set if `cluster` is set.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>force</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}If set to true then it will force the host to be added, even
+if the host is already connected to a different vSphere instance. Default is `false`
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>license</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The license key that will be applied to the host.
+The license key is expected to be present in vSphere.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>lockdown</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Set the lockdown state of the host. Valid options are
+`disabled`, `normal`, and `strict`. Default is `disabled`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>maintenance</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Set the management state of the host. Default is `false`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>thumbprint</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Host's certificate SHA-1 thumbprint. If not set the the
+CA that signed the host's certificate should be trusted. If the CA is not trusted
+and no thumbprint is set then the operation will fail.
 {{% /md %}}</dd>
 
 </dl>
@@ -483,6 +483,35 @@ to the host.
 {{% choosable language python %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>hostname</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}FQDN or IP address of the host to be added.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>password</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Password that will be used by vSphere to authenticate
+to the host.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>username</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Username that will be used by vSphere to authenticate
+to the host.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>cluster</span>
@@ -523,15 +552,6 @@ be added to. This should not be set if `cluster` is set.
 if the host is already connected to a different vSphere instance. Default is `false`
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>hostname</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}FQDN or IP address of the host to be added.
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>license</span>
@@ -561,16 +581,6 @@ The license key is expected to be present in vSphere.
     <dd>{{% md %}}Set the management state of the host. Default is `false`.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>password</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Password that will be used by vSphere to authenticate
-to the host.
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>thumbprint</span>
@@ -582,494 +592,10 @@ CA that signed the host's certificate should be trusted. If the CA is not truste
 and no thumbprint is set then the operation will fail.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>username</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Username that will be used by vSphere to authenticate
-to the host.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
-
-
-
-
-
-## Host Output Properties
-
-The following output properties are available:
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Cluster</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The ID of the Compute Cluster this host should
-be added to. This should not be set if `datacenter` is set.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Connected</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}If set to false then the host will be disconected.
-Default is `false`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Datacenter</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The ID of the datacenter this host should
-be added to. This should not be set if `cluster` is set.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Force</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}If set to true then it will force the host to be added, even
-if the host is already connected to a different vSphere instance. Default is `false`
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Hostname</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}FQDN or IP address of the host to be added.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>License</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The license key that will be applied to the host.
-The license key is expected to be present in vSphere.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Lockdown</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Set the lockdown state of the host. Valid options are
-`disabled`, `normal`, and `strict`. Default is `disabled`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Maintenance</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Set the management state of the host. Default is `false`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Password</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Password that will be used by vSphere to authenticate
-to the host.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Thumbprint</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Host's certificate SHA-1 thumbprint. If not set the the
-CA that signed the host's certificate should be trusted. If the CA is not trusted
-and no thumbprint is set then the operation will fail.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Username</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Username that will be used by vSphere to authenticate
-to the host.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Cluster</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the Compute Cluster this host should
-be added to. This should not be set if `datacenter` is set.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Connected</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}If set to false then the host will be disconected.
-Default is `false`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Datacenter</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the datacenter this host should
-be added to. This should not be set if `cluster` is set.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Force</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}If set to true then it will force the host to be added, even
-if the host is already connected to a different vSphere instance. Default is `false`
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Hostname</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}FQDN or IP address of the host to be added.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>License</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The license key that will be applied to the host.
-The license key is expected to be present in vSphere.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Lockdown</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Set the lockdown state of the host. Valid options are
-`disabled`, `normal`, and `strict`. Default is `disabled`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Maintenance</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Set the management state of the host. Default is `false`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Password</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Password that will be used by vSphere to authenticate
-to the host.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Thumbprint</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Host's certificate SHA-1 thumbprint. If not set the the
-CA that signed the host's certificate should be trusted. If the CA is not trusted
-and no thumbprint is set then the operation will fail.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Username</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Username that will be used by vSphere to authenticate
-to the host.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>cluster</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The ID of the Compute Cluster this host should
-be added to. This should not be set if `datacenter` is set.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>connected</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}If set to false then the host will be disconected.
-Default is `false`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>datacenter</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The ID of the datacenter this host should
-be added to. This should not be set if `cluster` is set.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>force</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}If set to true then it will force the host to be added, even
-if the host is already connected to a different vSphere instance. Default is `false`
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>hostname</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}FQDN or IP address of the host to be added.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>license</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The license key that will be applied to the host.
-The license key is expected to be present in vSphere.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>lockdown</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Set the lockdown state of the host. Valid options are
-`disabled`, `normal`, and `strict`. Default is `disabled`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>maintenance</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Set the management state of the host. Default is `false`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>password</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Password that will be used by vSphere to authenticate
-to the host.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>thumbprint</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Host's certificate SHA-1 thumbprint. If not set the the
-CA that signed the host's certificate should be trusted. If the CA is not trusted
-and no thumbprint is set then the operation will fail.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>username</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Username that will be used by vSphere to authenticate
-to the host.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>cluster</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The ID of the Compute Cluster this host should
-be added to. This should not be set if `datacenter` is set.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>connected</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}If set to false then the host will be disconected.
-Default is `false`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>datacenter</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The ID of the datacenter this host should
-be added to. This should not be set if `cluster` is set.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>force</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}If set to true then it will force the host to be added, even
-if the host is already connected to a different vSphere instance. Default is `false`
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>hostname</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}FQDN or IP address of the host to be added.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>license</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The license key that will be applied to the host.
-The license key is expected to be present in vSphere.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>lockdown</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Set the lockdown state of the host. Valid options are
-`disabled`, `normal`, and `strict`. Default is `disabled`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>maintenance</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Set the management state of the host. Default is `false`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>password</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Password that will be used by vSphere to authenticate
-to the host.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>thumbprint</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Host's certificate SHA-1 thumbprint. If not set the the
-CA that signed the host's certificate should be trusted. If the CA is not trusted
-and no thumbprint is set then the operation will fail.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>username</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Username that will be used by vSphere to authenticate
-to the host.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
 
 
 
@@ -1097,7 +623,7 @@ Get an existing Host resource's state with the given name, ID, and optional extr
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.Vsphere..Host.html">Host</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.Vsphere..HostState.html">HostState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.Vsphere.Host.html">Host</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.Vsphere..HostState.html">HostState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1207,7 +733,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Cluster</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Compute Cluster this host should
 be added to. This should not be set if `datacenter` is set.
@@ -1217,7 +743,7 @@ be added to. This should not be set if `datacenter` is set.
             title="Optional">
         <span>Connected</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to false then the host will be disconected.
 Default is `false`.
@@ -1227,7 +753,7 @@ Default is `false`.
             title="Optional">
         <span>Datacenter</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the datacenter this host should
 be added to. This should not be set if `cluster` is set.
@@ -1237,7 +763,7 @@ be added to. This should not be set if `cluster` is set.
             title="Optional">
         <span>Force</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to true then it will force the host to be added, even
 if the host is already connected to a different vSphere instance. Default is `false`
@@ -1247,7 +773,7 @@ if the host is already connected to a different vSphere instance. Default is `fa
             title="Optional">
         <span>Hostname</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}FQDN or IP address of the host to be added.
 {{% /md %}}</dd>
@@ -1256,7 +782,7 @@ if the host is already connected to a different vSphere instance. Default is `fa
             title="Optional">
         <span>License</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The license key that will be applied to the host.
 The license key is expected to be present in vSphere.
@@ -1266,7 +792,7 @@ The license key is expected to be present in vSphere.
             title="Optional">
         <span>Lockdown</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Set the lockdown state of the host. Valid options are
 `disabled`, `normal`, and `strict`. Default is `disabled`.
@@ -1276,7 +802,7 @@ The license key is expected to be present in vSphere.
             title="Optional">
         <span>Maintenance</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set the management state of the host. Default is `false`.
 {{% /md %}}</dd>
@@ -1285,7 +811,7 @@ The license key is expected to be present in vSphere.
             title="Optional">
         <span>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password that will be used by vSphere to authenticate
 to the host.
@@ -1295,7 +821,7 @@ to the host.
             title="Optional">
         <span>Thumbprint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Host's certificate SHA-1 thumbprint. If not set the the
 CA that signed the host's certificate should be trusted. If the CA is not trusted
@@ -1306,7 +832,7 @@ and no thumbprint is set then the operation will fail.
             title="Optional">
         <span>Username</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username that will be used by vSphere to authenticate
 to the host.
@@ -1323,7 +849,7 @@ to the host.
             title="Optional">
         <span>Cluster</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Compute Cluster this host should
 be added to. This should not be set if `datacenter` is set.
@@ -1333,7 +859,7 @@ be added to. This should not be set if `datacenter` is set.
             title="Optional">
         <span>Connected</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to false then the host will be disconected.
 Default is `false`.
@@ -1343,7 +869,7 @@ Default is `false`.
             title="Optional">
         <span>Datacenter</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the datacenter this host should
 be added to. This should not be set if `cluster` is set.
@@ -1353,7 +879,7 @@ be added to. This should not be set if `cluster` is set.
             title="Optional">
         <span>Force</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to true then it will force the host to be added, even
 if the host is already connected to a different vSphere instance. Default is `false`
@@ -1363,7 +889,7 @@ if the host is already connected to a different vSphere instance. Default is `fa
             title="Optional">
         <span>Hostname</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}FQDN or IP address of the host to be added.
 {{% /md %}}</dd>
@@ -1372,7 +898,7 @@ if the host is already connected to a different vSphere instance. Default is `fa
             title="Optional">
         <span>License</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The license key that will be applied to the host.
 The license key is expected to be present in vSphere.
@@ -1382,7 +908,7 @@ The license key is expected to be present in vSphere.
             title="Optional">
         <span>Lockdown</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Set the lockdown state of the host. Valid options are
 `disabled`, `normal`, and `strict`. Default is `disabled`.
@@ -1392,7 +918,7 @@ The license key is expected to be present in vSphere.
             title="Optional">
         <span>Maintenance</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set the management state of the host. Default is `false`.
 {{% /md %}}</dd>
@@ -1401,7 +927,7 @@ The license key is expected to be present in vSphere.
             title="Optional">
         <span>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password that will be used by vSphere to authenticate
 to the host.
@@ -1411,7 +937,7 @@ to the host.
             title="Optional">
         <span>Thumbprint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Host's certificate SHA-1 thumbprint. If not set the the
 CA that signed the host's certificate should be trusted. If the CA is not trusted
@@ -1422,7 +948,7 @@ and no thumbprint is set then the operation will fail.
             title="Optional">
         <span>Username</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username that will be used by vSphere to authenticate
 to the host.
@@ -1439,7 +965,7 @@ to the host.
             title="Optional">
         <span>cluster</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Compute Cluster this host should
 be added to. This should not be set if `datacenter` is set.
@@ -1449,7 +975,7 @@ be added to. This should not be set if `datacenter` is set.
             title="Optional">
         <span>connected</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If set to false then the host will be disconected.
 Default is `false`.
@@ -1459,7 +985,7 @@ Default is `false`.
             title="Optional">
         <span>datacenter</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the datacenter this host should
 be added to. This should not be set if `cluster` is set.
@@ -1469,7 +995,7 @@ be added to. This should not be set if `cluster` is set.
             title="Optional">
         <span>force</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If set to true then it will force the host to be added, even
 if the host is already connected to a different vSphere instance. Default is `false`
@@ -1479,7 +1005,7 @@ if the host is already connected to a different vSphere instance. Default is `fa
             title="Optional">
         <span>hostname</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}FQDN or IP address of the host to be added.
 {{% /md %}}</dd>
@@ -1488,7 +1014,7 @@ if the host is already connected to a different vSphere instance. Default is `fa
             title="Optional">
         <span>license</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The license key that will be applied to the host.
 The license key is expected to be present in vSphere.
@@ -1498,7 +1024,7 @@ The license key is expected to be present in vSphere.
             title="Optional">
         <span>lockdown</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Set the lockdown state of the host. Valid options are
 `disabled`, `normal`, and `strict`. Default is `disabled`.
@@ -1508,7 +1034,7 @@ The license key is expected to be present in vSphere.
             title="Optional">
         <span>maintenance</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Set the management state of the host. Default is `false`.
 {{% /md %}}</dd>
@@ -1517,7 +1043,7 @@ The license key is expected to be present in vSphere.
             title="Optional">
         <span>password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password that will be used by vSphere to authenticate
 to the host.
@@ -1527,7 +1053,7 @@ to the host.
             title="Optional">
         <span>thumbprint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Host's certificate SHA-1 thumbprint. If not set the the
 CA that signed the host's certificate should be trusted. If the CA is not trusted
@@ -1538,7 +1064,7 @@ and no thumbprint is set then the operation will fail.
             title="Optional">
         <span>username</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username that will be used by vSphere to authenticate
 to the host.

@@ -41,7 +41,7 @@ const bar = new gitlab.GroupCluster("bar", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gitlab/#GroupCluster">GroupCluster</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gitlab/#GroupClusterArgs">GroupClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gitlab/#GroupCluster">GroupCluster</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gitlab/#GroupClusterArgs">GroupClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -49,11 +49,11 @@ const bar = new gitlab.GroupCluster("bar", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewGroupCluster<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gitlab/sdk/go/gitlab/?tab=doc#GroupClusterArgs">GroupClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gitlab/sdk/go/gitlab/?tab=doc#GroupCluster">GroupCluster</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewGroupCluster<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gitlab/sdk/go/gitlab/?tab=doc#GroupClusterArgs">GroupClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gitlab/sdk/go/gitlab/?tab=doc#GroupCluster">GroupCluster</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gitlab/Pulumi.Gitlab..GroupCluster.html">GroupCluster</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gitlab/Pulumi.Gitlab.GroupClusterArgs.html">GroupClusterArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gitlab/Pulumi.Gitlab.GroupCluster.html">GroupCluster</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gitlab/Pulumi.GitLab.GroupClusterArgs.html">GroupClusterArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -145,33 +145,6 @@ const bar = new gitlab.GroupCluster("bar", {
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Domain</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The base domain of the cluster.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Determines if cluster is active or not. Defaults to `true`. This attribute cannot be read.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Environment<wbr>Scope</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The associated environment to the cluster. Defaults to `*`.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Group</span>
@@ -190,24 +163,6 @@ const bar = new gitlab.GroupCluster("bar", {
     <dd>{{% md %}}The URL to access the Kubernetes API.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Kubernetes<wbr>Authorization<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The cluster authorization type. Valid values are `rbac`, `abac`, `unknown_authorization`. Defaults to `rbac`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Kubernetes<wbr>Ca<wbr>Cert</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}TLS certificate (needed if API is using a self-signed TLS certificate).
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Kubernetes<wbr>Token</span>
@@ -219,9 +174,54 @@ const bar = new gitlab.GroupCluster("bar", {
 
     <dt class="property-optional"
             title="Optional">
+        <span>Domain</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The base domain of the cluster.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Enabled</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Determines if cluster is active or not. Defaults to `true`. This attribute cannot be read.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Environment<wbr>Scope</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The associated environment to the cluster. Defaults to `*`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Kubernetes<wbr>Authorization<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The cluster authorization type. Valid values are `rbac`, `abac`, `unknown_authorization`. Defaults to `rbac`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Kubernetes<wbr>Ca<wbr>Cert</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}TLS certificate (needed if API is using a self-signed TLS certificate).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Managed</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines if cluster is managed by gitlab or not. Defaults to `true`. This attribute cannot be read.
 {{% /md %}}</dd>
@@ -230,7 +230,7 @@ const bar = new gitlab.GroupCluster("bar", {
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of cluster.
 {{% /md %}}</dd>
@@ -242,33 +242,6 @@ const bar = new gitlab.GroupCluster("bar", {
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Domain</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The base domain of the cluster.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Determines if cluster is active or not. Defaults to `true`. This attribute cannot be read.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Environment<wbr>Scope</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The associated environment to the cluster. Defaults to `*`.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Group</span>
@@ -287,24 +260,6 @@ const bar = new gitlab.GroupCluster("bar", {
     <dd>{{% md %}}The URL to access the Kubernetes API.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Kubernetes<wbr>Authorization<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The cluster authorization type. Valid values are `rbac`, `abac`, `unknown_authorization`. Defaults to `rbac`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Kubernetes<wbr>Ca<wbr>Cert</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}TLS certificate (needed if API is using a self-signed TLS certificate).
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Kubernetes<wbr>Token</span>
@@ -316,9 +271,54 @@ const bar = new gitlab.GroupCluster("bar", {
 
     <dt class="property-optional"
             title="Optional">
+        <span>Domain</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The base domain of the cluster.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Enabled</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Determines if cluster is active or not. Defaults to `true`. This attribute cannot be read.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Environment<wbr>Scope</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The associated environment to the cluster. Defaults to `*`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Kubernetes<wbr>Authorization<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The cluster authorization type. Valid values are `rbac`, `abac`, `unknown_authorization`. Defaults to `rbac`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Kubernetes<wbr>Ca<wbr>Cert</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}TLS certificate (needed if API is using a self-signed TLS certificate).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Managed</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines if cluster is managed by gitlab or not. Defaults to `true`. This attribute cannot be read.
 {{% /md %}}</dd>
@@ -327,7 +327,7 @@ const bar = new gitlab.GroupCluster("bar", {
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of cluster.
 {{% /md %}}</dd>
@@ -338,33 +338,6 @@ const bar = new gitlab.GroupCluster("bar", {
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>domain</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The base domain of the cluster.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Determines if cluster is active or not. Defaults to `true`. This attribute cannot be read.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>environment<wbr>Scope</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The associated environment to the cluster. Defaults to `*`.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -384,24 +357,6 @@ const bar = new gitlab.GroupCluster("bar", {
     <dd>{{% md %}}The URL to access the Kubernetes API.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>kubernetes<wbr>Authorization<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The cluster authorization type. Valid values are `rbac`, `abac`, `unknown_authorization`. Defaults to `rbac`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>kubernetes<wbr>Ca<wbr>Cert</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}TLS certificate (needed if API is using a self-signed TLS certificate).
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>kubernetes<wbr>Token</span>
@@ -413,9 +368,54 @@ const bar = new gitlab.GroupCluster("bar", {
 
     <dt class="property-optional"
             title="Optional">
+        <span>domain</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The base domain of the cluster.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>enabled</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Determines if cluster is active or not. Defaults to `true`. This attribute cannot be read.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>environment<wbr>Scope</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The associated environment to the cluster. Defaults to `*`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>kubernetes<wbr>Authorization<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The cluster authorization type. Valid values are `rbac`, `abac`, `unknown_authorization`. Defaults to `rbac`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>kubernetes<wbr>Ca<wbr>Cert</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}TLS certificate (needed if API is using a self-signed TLS certificate).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>managed</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Determines if cluster is managed by gitlab or not. Defaults to `true`. This attribute cannot be read.
 {{% /md %}}</dd>
@@ -424,7 +424,7 @@ const bar = new gitlab.GroupCluster("bar", {
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of cluster.
 {{% /md %}}</dd>
@@ -435,6 +435,33 @@ const bar = new gitlab.GroupCluster("bar", {
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>group</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The id of the group to add the cluster to.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>kubernetes_<wbr>api_<wbr>url</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The URL to access the Kubernetes API.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>kubernetes_<wbr>token</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The token to authenticate against Kubernetes.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -463,24 +490,6 @@ const bar = new gitlab.GroupCluster("bar", {
     <dd>{{% md %}}The associated environment to the cluster. Defaults to `*`.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>group</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The id of the group to add the cluster to.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>kubernetes_<wbr>api_<wbr>url</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The URL to access the Kubernetes API.
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>kubernetes_<wbr>authorization_<wbr>type</span>
@@ -497,15 +506,6 @@ const bar = new gitlab.GroupCluster("bar", {
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}TLS certificate (needed if API is using a self-signed TLS certificate).
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>kubernetes_<wbr>token</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The token to authenticate against Kubernetes.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -563,96 +563,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Domain</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The base domain of the cluster.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Determines if cluster is active or not. Defaults to `true`. This attribute cannot be read.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Environment<wbr>Scope</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The associated environment to the cluster. Defaults to `*`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Group</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The id of the group to add the cluster to.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Kubernetes<wbr>Api<wbr>Url</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The URL to access the Kubernetes API.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Kubernetes<wbr>Authorization<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The cluster authorization type. Valid values are `rbac`, `abac`, `unknown_authorization`. Defaults to `rbac`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Kubernetes<wbr>Ca<wbr>Cert</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}TLS certificate (needed if API is using a self-signed TLS certificate).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Kubernetes<wbr>Token</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The token to authenticate against Kubernetes.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Managed</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Determines if cluster is managed by gitlab or not. Defaults to `true`. This attribute cannot be read.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of cluster.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Platform<wbr>Type</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -689,96 +599,6 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Domain</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The base domain of the cluster.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Determines if cluster is active or not. Defaults to `true`. This attribute cannot be read.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Environment<wbr>Scope</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The associated environment to the cluster. Defaults to `*`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Group</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The id of the group to add the cluster to.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Kubernetes<wbr>Api<wbr>Url</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The URL to access the Kubernetes API.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Kubernetes<wbr>Authorization<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The cluster authorization type. Valid values are `rbac`, `abac`, `unknown_authorization`. Defaults to `rbac`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Kubernetes<wbr>Ca<wbr>Cert</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}TLS certificate (needed if API is using a self-signed TLS certificate).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Kubernetes<wbr>Token</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The token to authenticate against Kubernetes.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Managed</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Determines if cluster is managed by gitlab or not. Defaults to `true`. This attribute cannot be read.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of cluster.
-{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -821,96 +641,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>domain</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The base domain of the cluster.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Determines if cluster is active or not. Defaults to `true`. This attribute cannot be read.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>environment<wbr>Scope</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The associated environment to the cluster. Defaults to `*`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>group</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The id of the group to add the cluster to.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>kubernetes<wbr>Api<wbr>Url</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The URL to access the Kubernetes API.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>kubernetes<wbr>Authorization<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The cluster authorization type. Valid values are `rbac`, `abac`, `unknown_authorization`. Defaults to `rbac`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>kubernetes<wbr>Ca<wbr>Cert</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}TLS certificate (needed if API is using a self-signed TLS certificate).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>kubernetes<wbr>Token</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The token to authenticate against Kubernetes.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>managed</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Determines if cluster is managed by gitlab or not. Defaults to `true`. This attribute cannot be read.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of cluster.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>platform<wbr>Type</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -947,96 +677,6 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>domain</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The base domain of the cluster.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Determines if cluster is active or not. Defaults to `true`. This attribute cannot be read.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>environment_<wbr>scope</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The associated environment to the cluster. Defaults to `*`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>group</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The id of the group to add the cluster to.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>kubernetes_<wbr>api_<wbr>url</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The URL to access the Kubernetes API.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>kubernetes_<wbr>authorization_<wbr>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The cluster authorization type. Valid values are `rbac`, `abac`, `unknown_authorization`. Defaults to `rbac`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>kubernetes_<wbr>ca_<wbr>cert</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}TLS certificate (needed if API is using a self-signed TLS certificate).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>kubernetes_<wbr>token</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The token to authenticate against Kubernetes.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>managed</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Determines if cluster is managed by gitlab or not. Defaults to `true`. This attribute cannot be read.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of cluster.
-{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1083,7 +723,7 @@ Get an existing GroupCluster resource's state with the given name, ID, and optio
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gitlab/Pulumi.Gitlab..GroupCluster.html">GroupCluster</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gitlab/Pulumi.Gitlab..GroupClusterState.html">GroupClusterState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gitlab/Pulumi.Gitlab.GroupCluster.html">GroupCluster</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gitlab/Pulumi.Gitlab..GroupClusterState.html">GroupClusterState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1193,7 +833,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Cluster<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1201,7 +841,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Created<wbr>At</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1209,7 +849,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Domain</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The base domain of the cluster.
 {{% /md %}}</dd>
@@ -1218,7 +858,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines if cluster is active or not. Defaults to `true`. This attribute cannot be read.
 {{% /md %}}</dd>
@@ -1227,7 +867,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Environment<wbr>Scope</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The associated environment to the cluster. Defaults to `*`.
 {{% /md %}}</dd>
@@ -1236,7 +876,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Group</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the group to add the cluster to.
 {{% /md %}}</dd>
@@ -1245,7 +885,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Kubernetes<wbr>Api<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL to access the Kubernetes API.
 {{% /md %}}</dd>
@@ -1254,7 +894,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Kubernetes<wbr>Authorization<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The cluster authorization type. Valid values are `rbac`, `abac`, `unknown_authorization`. Defaults to `rbac`.
 {{% /md %}}</dd>
@@ -1263,7 +903,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Kubernetes<wbr>Ca<wbr>Cert</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}TLS certificate (needed if API is using a self-signed TLS certificate).
 {{% /md %}}</dd>
@@ -1272,7 +912,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Kubernetes<wbr>Token</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The token to authenticate against Kubernetes.
 {{% /md %}}</dd>
@@ -1281,7 +921,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Managed</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines if cluster is managed by gitlab or not. Defaults to `true`. This attribute cannot be read.
 {{% /md %}}</dd>
@@ -1290,7 +930,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of cluster.
 {{% /md %}}</dd>
@@ -1299,7 +939,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Platform<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1307,7 +947,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Provider<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1322,7 +962,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Cluster<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1330,7 +970,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Created<wbr>At</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1338,7 +978,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Domain</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The base domain of the cluster.
 {{% /md %}}</dd>
@@ -1347,7 +987,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines if cluster is active or not. Defaults to `true`. This attribute cannot be read.
 {{% /md %}}</dd>
@@ -1356,7 +996,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Environment<wbr>Scope</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The associated environment to the cluster. Defaults to `*`.
 {{% /md %}}</dd>
@@ -1365,7 +1005,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Group</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the group to add the cluster to.
 {{% /md %}}</dd>
@@ -1374,7 +1014,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Kubernetes<wbr>Api<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL to access the Kubernetes API.
 {{% /md %}}</dd>
@@ -1383,7 +1023,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Kubernetes<wbr>Authorization<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The cluster authorization type. Valid values are `rbac`, `abac`, `unknown_authorization`. Defaults to `rbac`.
 {{% /md %}}</dd>
@@ -1392,7 +1032,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Kubernetes<wbr>Ca<wbr>Cert</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}TLS certificate (needed if API is using a self-signed TLS certificate).
 {{% /md %}}</dd>
@@ -1401,7 +1041,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Kubernetes<wbr>Token</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The token to authenticate against Kubernetes.
 {{% /md %}}</dd>
@@ -1410,7 +1050,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Managed</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Determines if cluster is managed by gitlab or not. Defaults to `true`. This attribute cannot be read.
 {{% /md %}}</dd>
@@ -1419,7 +1059,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of cluster.
 {{% /md %}}</dd>
@@ -1428,7 +1068,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Platform<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1436,7 +1076,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Provider<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1451,7 +1091,7 @@ The following state arguments are supported:
             title="Optional">
         <span>cluster<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1459,7 +1099,7 @@ The following state arguments are supported:
             title="Optional">
         <span>created<wbr>At</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1467,7 +1107,7 @@ The following state arguments are supported:
             title="Optional">
         <span>domain</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The base domain of the cluster.
 {{% /md %}}</dd>
@@ -1476,7 +1116,7 @@ The following state arguments are supported:
             title="Optional">
         <span>enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Determines if cluster is active or not. Defaults to `true`. This attribute cannot be read.
 {{% /md %}}</dd>
@@ -1485,7 +1125,7 @@ The following state arguments are supported:
             title="Optional">
         <span>environment<wbr>Scope</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The associated environment to the cluster. Defaults to `*`.
 {{% /md %}}</dd>
@@ -1494,7 +1134,7 @@ The following state arguments are supported:
             title="Optional">
         <span>group</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the group to add the cluster to.
 {{% /md %}}</dd>
@@ -1503,7 +1143,7 @@ The following state arguments are supported:
             title="Optional">
         <span>kubernetes<wbr>Api<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL to access the Kubernetes API.
 {{% /md %}}</dd>
@@ -1512,7 +1152,7 @@ The following state arguments are supported:
             title="Optional">
         <span>kubernetes<wbr>Authorization<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The cluster authorization type. Valid values are `rbac`, `abac`, `unknown_authorization`. Defaults to `rbac`.
 {{% /md %}}</dd>
@@ -1521,7 +1161,7 @@ The following state arguments are supported:
             title="Optional">
         <span>kubernetes<wbr>Ca<wbr>Cert</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}TLS certificate (needed if API is using a self-signed TLS certificate).
 {{% /md %}}</dd>
@@ -1530,7 +1170,7 @@ The following state arguments are supported:
             title="Optional">
         <span>kubernetes<wbr>Token</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The token to authenticate against Kubernetes.
 {{% /md %}}</dd>
@@ -1539,7 +1179,7 @@ The following state arguments are supported:
             title="Optional">
         <span>managed</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Determines if cluster is managed by gitlab or not. Defaults to `true`. This attribute cannot be read.
 {{% /md %}}</dd>
@@ -1548,7 +1188,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of cluster.
 {{% /md %}}</dd>
@@ -1557,7 +1197,7 @@ The following state arguments are supported:
             title="Optional">
         <span>platform<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1565,7 +1205,7 @@ The following state arguments are supported:
             title="Optional">
         <span>provider<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

@@ -62,7 +62,7 @@ const example = pulumi.output(aws.getAmi({
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupAmi<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/?tab=doc#GetAmiArgs">GetAmiArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/?tab=doc#LookupAmiResult">LookupAmiResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupAmi<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/?tab=doc#GetAmiArgs">GetAmiArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/?tab=doc#LookupAmiResult">LookupAmiResult</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -81,11 +81,20 @@ The following arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Owners</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}List of AMI owners to limit search. At least 1 value must be specified. Valid values: an AWS account ID, `self` (the current account), or an AWS owner alias (e.g. `amazon`, `aws-marketplace`, `microsoft`).
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Executable<wbr>Users</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Limit search to users with *explicit* launch permission on
 the image. Valid items are the numeric account ID or `self`.
@@ -95,7 +104,7 @@ the image. Valid items are the numeric account ID or `self`.
             title="Optional">
         <span>Filters</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getamifilter">List&lt;Get<wbr>Ami<wbr>Filter<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#getamifilter">List&lt;Get<wbr>Ami<wbr>Filter<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more name/value pairs to filter off of. There are
 several valid keys, for a full reference, check out
@@ -106,7 +115,7 @@ several valid keys, for a full reference, check out
             title="Optional">
         <span>Most<wbr>Recent</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If more than one result is returned, use the most
 recent AMI.
@@ -116,7 +125,7 @@ recent AMI.
             title="Optional">
         <span>Name<wbr>Regex</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A regex string to apply to the AMI list returned
 by AWS. This allows more advanced filtering not supported from the AWS API. This
@@ -125,20 +134,11 @@ impact if the result is large. It is recommended to combine this with other
 options to narrow down the list AWS returns.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>Owners</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
-    </dt>
-    <dd>{{% md %}}List of AMI owners to limit search. At least 1 value must be specified. Valid values: an AWS account ID, `self` (the current account), or an AWS owner alias (e.g. `amazon`, `aws-marketplace`, `microsoft`).
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Any tags assigned to the image.
 * `tags.#.key` - The key name of the tag.
@@ -151,6 +151,15 @@ options to narrow down the list AWS returns.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Owners</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}List of AMI owners to limit search. At least 1 value must be specified. Valid values: an AWS account ID, `self` (the current account), or an AWS owner alias (e.g. `amazon`, `aws-marketplace`, `microsoft`).
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -177,7 +186,7 @@ several valid keys, for a full reference, check out
             title="Optional">
         <span>Most<wbr>Recent</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If more than one result is returned, use the most
 recent AMI.
@@ -187,22 +196,13 @@ recent AMI.
             title="Optional">
         <span>Name<wbr>Regex</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A regex string to apply to the AMI list returned
 by AWS. This allows more advanced filtering not supported from the AWS API. This
 filtering is done locally on what AWS returns, and could have a performance
 impact if the result is large. It is recommended to combine this with other
 options to narrow down the list AWS returns.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Owners</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}List of AMI owners to limit search. At least 1 value must be specified. Valid values: an AWS account ID, `self` (the current account), or an AWS owner alias (e.g. `amazon`, `aws-marketplace`, `microsoft`).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -223,50 +223,6 @@ options to narrow down the list AWS returns.
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>executable<wbr>Users</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}Limit search to users with *explicit* launch permission on
-the image. Valid items are the numeric account ID or `self`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>filters</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getamifilter">Get<wbr>Ami<wbr>Filter[]?</a></span>
-    </dt>
-    <dd>{{% md %}}One or more name/value pairs to filter off of. There are
-several valid keys, for a full reference, check out
-[describe-images in the AWS CLI reference][1].
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>most<wbr>Recent</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}If more than one result is returned, use the most
-recent AMI.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>name<wbr>Regex</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}A regex string to apply to the AMI list returned
-by AWS. This allows more advanced filtering not supported from the AWS API. This
-filtering is done locally on what AWS returns, and could have a performance
-impact if the result is large. It is recommended to combine this with other
-options to narrow down the list AWS returns.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>owners</span>
@@ -278,9 +234,53 @@ options to narrow down the list AWS returns.
 
     <dt class="property-optional"
             title="Optional">
+        <span>executable<wbr>Users</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}Limit search to users with *explicit* launch permission on
+the image. Valid items are the numeric account ID or `self`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>filters</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getamifilter">Get<wbr>Ami<wbr>Filter[]</a></span>
+    </dt>
+    <dd>{{% md %}}One or more name/value pairs to filter off of. There are
+several valid keys, for a full reference, check out
+[describe-images in the AWS CLI reference][1].
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>most<wbr>Recent</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}If more than one result is returned, use the most
+recent AMI.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>name<wbr>Regex</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A regex string to apply to the AMI list returned
+by AWS. This allows more advanced filtering not supported from the AWS API. This
+filtering is done locally on what AWS returns, and could have a performance
+impact if the result is large. It is recommended to combine this with other
+options to narrow down the list AWS returns.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Any tags assigned to the image.
 * `tags.#.key` - The key name of the tag.
@@ -293,6 +293,15 @@ options to narrow down the list AWS returns.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>owners</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List[str]</span>
+    </dt>
+    <dd>{{% md %}}List of AMI owners to limit search. At least 1 value must be specified. Valid values: an AWS account ID, `self` (the current account), or an AWS owner alias (e.g. `amazon`, `aws-marketplace`, `microsoft`).
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -336,15 +345,6 @@ by AWS. This allows more advanced filtering not supported from the AWS API. This
 filtering is done locally on what AWS returns, and could have a performance
 impact if the result is large. It is recommended to combine this with other
 options to narrow down the list AWS returns.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>owners</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}List of AMI owners to limit search. At least 1 value must be specified. Valid values: an AWS account ID, `self` (the current account), or an AWS owner alias (e.g. `amazon`, `aws-marketplace`, `microsoft`).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -431,22 +431,6 @@ creation.
 
     <dt class="property-"
             title="">
-        <span>Executable<wbr>Users</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Filters</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getamifilter">List&lt;Get<wbr>Ami<wbr>Filter&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Hypervisor</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -512,28 +496,12 @@ for machine images.
 
     <dt class="property-"
             title="">
-        <span>Most<wbr>Recent</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the AMI that was provided during image creation.
 {{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name<wbr>Regex</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -548,7 +516,7 @@ for machine images.
             title="">
         <span>Owners</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -642,7 +610,7 @@ is successfully registered and can be used to launch an instance.
             title="">
         <span>State<wbr>Reason</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Describes a state change. Fields are `UNSET` if not available.
 * `state_reason.code` - The reason code for the state change.
@@ -653,7 +621,7 @@ is successfully registered and can be used to launch an instance.
             title="">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Any tags assigned to the image.
 * `tags.#.key` - The key name of the tag.
@@ -669,6 +637,38 @@ is successfully registered and can be used to launch an instance.
     <dd>{{% md %}}The type of virtualization of the AMI (ie: `hvm` or
 `paravirtual`).
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Executable<wbr>Users</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Filters</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getamifilter">List&lt;Get<wbr>Ami<wbr>Filter&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Most<wbr>Recent</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Name<wbr>Regex</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -727,22 +727,6 @@ instance stores).
     <dd>{{% md %}}The description of the AMI that was provided during image
 creation.
 {{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Executable<wbr>Users</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Filters</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getamifilter">[]Get<wbr>Ami<wbr>Filter</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -811,28 +795,12 @@ for machine images.
 
     <dt class="property-"
             title="">
-        <span>Most<wbr>Recent</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the AMI that was provided during image creation.
 {{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name<wbr>Regex</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -969,6 +937,38 @@ is successfully registered and can be used to launch an instance.
 `paravirtual`).
 {{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span>Executable<wbr>Users</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Filters</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getamifilter">[]Get<wbr>Ami<wbr>Filter</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Most<wbr>Recent</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Name<wbr>Regex</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -1026,22 +1026,6 @@ instance stores).
     <dd>{{% md %}}The description of the AMI that was provided during image
 creation.
 {{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>executable<wbr>Users</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>filters</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getamifilter">Get<wbr>Ami<wbr>Filter[]?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1110,28 +1094,12 @@ for machine images.
 
     <dt class="property-"
             title="">
-        <span>most<wbr>Recent</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the AMI that was provided during image creation.
 {{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name<wbr>Regex</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1268,6 +1236,38 @@ is successfully registered and can be used to launch an instance.
 `paravirtual`).
 {{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span>executable<wbr>Users</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>filters</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getamifilter">Get<wbr>Ami<wbr>Filter[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>most<wbr>Recent</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>name<wbr>Regex</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -1325,22 +1325,6 @@ instance stores).
     <dd>{{% md %}}The description of the AMI that was provided during image
 creation.
 {{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>executable_<wbr>users</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>filters</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getamifilter">List[Get<wbr>Ami<wbr>Filter]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1409,28 +1393,12 @@ for machine images.
 
     <dt class="property-"
             title="">
-        <span>most_<wbr>recent</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the AMI that was provided during image creation.
 {{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name_<wbr>regex</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1567,6 +1535,38 @@ is successfully registered and can be used to launch an instance.
 `paravirtual`).
 {{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span>executable_<wbr>users</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List[str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>filters</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getamifilter">List[Get<wbr>Ami<wbr>Filter]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>most_<wbr>recent</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>name_<wbr>regex</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -1606,7 +1606,7 @@ is successfully registered and can be used to launch an instance.
             title="Required">
         <span>Ebs</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1778,7 +1778,7 @@ is successfully registered and can be used to launch an instance.
             title="Required">
         <span>Values</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

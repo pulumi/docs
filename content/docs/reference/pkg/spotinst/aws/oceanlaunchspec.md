@@ -27,7 +27,6 @@ const example = new spotinst.aws.OceanLaunchSpec("example", {
         key: "fakeKey",
         value: "fakeValue",
     }],
-    name: "launch spec name test",
     oceanId: "o-123456",
     rootVolumeSize: 30,
     securityGroups: ["sg-987654321"],
@@ -54,7 +53,7 @@ const example = new spotinst.aws.OceanLaunchSpec("example", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/spotinst/aws/#OceanLaunchSpec">OceanLaunchSpec</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/spotinst/aws/#OceanLaunchSpecArgs">OceanLaunchSpecArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/spotinst/aws/#OceanLaunchSpec">OceanLaunchSpec</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/spotinst/aws/#OceanLaunchSpecArgs">OceanLaunchSpecArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -62,11 +61,11 @@ const example = new spotinst.aws.OceanLaunchSpec("example", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewOceanLaunchSpec<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/go/spotinst/aws?tab=doc#OceanLaunchSpecArgs">OceanLaunchSpecArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/go/spotinst/aws?tab=doc#OceanLaunchSpec">OceanLaunchSpec</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewOceanLaunchSpec<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/go/spotinst/aws?tab=doc#OceanLaunchSpecArgs">OceanLaunchSpecArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/go/spotinst/aws?tab=doc#OceanLaunchSpec">OceanLaunchSpec</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.Spotinst.Aws.OceanLaunchSpec.html">OceanLaunchSpec</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.Spotinst.Aws.OceanLaunchSpecArgs.html">OceanLaunchSpecArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.Spotinst.Aws.OceanLaunchSpec.html">OceanLaunchSpec</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Aws.OceanLaunchSpecArgs.html">OceanLaunchSpecArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -158,51 +157,6 @@ const example = new spotinst.aws.OceanLaunchSpec("example", {
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Autoscale<wbr>Headrooms</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanlaunchspecautoscaleheadroom">List&lt;Ocean<wbr>Launch<wbr>Spec<wbr>Autoscale<wbr>Headroom<wbr>Args&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}Set custom headroom per launch spec. provide list of headrooms object.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Iam<wbr>Instance<wbr>Profile</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The ARN or name of an IAM instance profile to associate with launched instances.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Image<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}ID of the image used to launch the instances.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Labels</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanlaunchspeclabel">List&lt;Ocean<wbr>Launch<wbr>Spec<wbr>Label<wbr>Args&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}Optionally adds labels to instances launched in an Ocean cluster.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Set Launch Specification name 
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Ocean<wbr>Id</span>
@@ -214,9 +168,54 @@ const example = new spotinst.aws.OceanLaunchSpec("example", {
 
     <dt class="property-optional"
             title="Optional">
+        <span>Autoscale<wbr>Headrooms</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanlaunchspecautoscaleheadroom">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Ocean<wbr>Launch<wbr>Spec<wbr>Autoscale<wbr>Headroom<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Set custom headroom per launch spec. provide list of headrooms object.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Iam<wbr>Instance<wbr>Profile</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN or name of an IAM instance profile to associate with launched instances.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Image<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ID of the image used to launch the instances.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Labels</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanlaunchspeclabel">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Ocean<wbr>Launch<wbr>Spec<wbr>Label<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Optionally adds labels to instances launched in an Ocean cluster.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Set Launch Specification name 
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Root<wbr>Volume<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Set root volume size (in GB).
 {{% /md %}}</dd>
@@ -225,7 +224,7 @@ const example = new spotinst.aws.OceanLaunchSpec("example", {
             title="Optional">
         <span>Security<wbr>Groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Optionally adds security group IDs.
 {{% /md %}}</dd>
@@ -234,7 +233,7 @@ const example = new spotinst.aws.OceanLaunchSpec("example", {
             title="Optional">
         <span>Subnet<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Set subnets in launchSpec. Each element in array should be subnet ID.
 {{% /md %}}</dd>
@@ -243,7 +242,7 @@ const example = new spotinst.aws.OceanLaunchSpec("example", {
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanlaunchspectag">List&lt;Ocean<wbr>Launch<wbr>Spec<wbr>Tag<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#oceanlaunchspectag">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Ocean<wbr>Launch<wbr>Spec<wbr>Tag<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A key/value mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -252,7 +251,7 @@ const example = new spotinst.aws.OceanLaunchSpec("example", {
             title="Optional">
         <span>Taints</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanlaunchspectaint">List&lt;Ocean<wbr>Launch<wbr>Spec<wbr>Taint<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#oceanlaunchspectaint">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Ocean<wbr>Launch<wbr>Spec<wbr>Taint<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Optionally adds labels to instances launched in an Ocean cluster.
 {{% /md %}}</dd>
@@ -261,7 +260,7 @@ const example = new spotinst.aws.OceanLaunchSpec("example", {
             title="Optional">
         <span>User<wbr>Data</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Base64-encoded MIME user data to make available to the instances.
 {{% /md %}}</dd>
@@ -272,6 +271,15 @@ const example = new spotinst.aws.OceanLaunchSpec("example", {
 
 {{% choosable language go %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Ocean<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ocean cluster you wish to 
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -286,7 +294,7 @@ const example = new spotinst.aws.OceanLaunchSpec("example", {
             title="Optional">
         <span>Iam<wbr>Instance<wbr>Profile</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN or name of an IAM instance profile to associate with launched instances.
 {{% /md %}}</dd>
@@ -295,7 +303,7 @@ const example = new spotinst.aws.OceanLaunchSpec("example", {
             title="Optional">
         <span>Image<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the image used to launch the instances.
 {{% /md %}}</dd>
@@ -313,25 +321,16 @@ const example = new spotinst.aws.OceanLaunchSpec("example", {
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Set Launch Specification name 
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Ocean<wbr>Id</span>
-        <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ocean cluster you wish to 
+    <dd>{{% md %}}Set Launch Specification name 
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Root<wbr>Volume<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Set root volume size (in GB).
 {{% /md %}}</dd>
@@ -376,7 +375,7 @@ const example = new spotinst.aws.OceanLaunchSpec("example", {
             title="Optional">
         <span>User<wbr>Data</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Base64-encoded MIME user data to make available to the instances.
 {{% /md %}}</dd>
@@ -387,51 +386,6 @@ const example = new spotinst.aws.OceanLaunchSpec("example", {
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>autoscale<wbr>Headrooms</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanlaunchspecautoscaleheadroom">Ocean<wbr>Launch<wbr>Spec<wbr>Autoscale<wbr>Headroom[]?</a></span>
-    </dt>
-    <dd>{{% md %}}Set custom headroom per launch spec. provide list of headrooms object.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>iam<wbr>Instance<wbr>Profile</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The ARN or name of an IAM instance profile to associate with launched instances.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>image<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}ID of the image used to launch the instances.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>labels</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanlaunchspeclabel">Ocean<wbr>Launch<wbr>Spec<wbr>Label[]?</a></span>
-    </dt>
-    <dd>{{% md %}}Optionally adds labels to instances launched in an Ocean cluster.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Set Launch Specification name 
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -444,9 +398,54 @@ const example = new spotinst.aws.OceanLaunchSpec("example", {
 
     <dt class="property-optional"
             title="Optional">
+        <span>autoscale<wbr>Headrooms</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanlaunchspecautoscaleheadroom">Ocean<wbr>Launch<wbr>Spec<wbr>Autoscale<wbr>Headroom[]</a></span>
+    </dt>
+    <dd>{{% md %}}Set custom headroom per launch spec. provide list of headrooms object.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>iam<wbr>Instance<wbr>Profile</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARN or name of an IAM instance profile to associate with launched instances.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>image<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ID of the image used to launch the instances.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>labels</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanlaunchspeclabel">Ocean<wbr>Launch<wbr>Spec<wbr>Label[]</a></span>
+    </dt>
+    <dd>{{% md %}}Optionally adds labels to instances launched in an Ocean cluster.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Set Launch Specification name 
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>root<wbr>Volume<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Set root volume size (in GB).
 {{% /md %}}</dd>
@@ -455,7 +454,7 @@ const example = new spotinst.aws.OceanLaunchSpec("example", {
             title="Optional">
         <span>security<wbr>Groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Optionally adds security group IDs.
 {{% /md %}}</dd>
@@ -464,7 +463,7 @@ const example = new spotinst.aws.OceanLaunchSpec("example", {
             title="Optional">
         <span>subnet<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Set subnets in launchSpec. Each element in array should be subnet ID.
 {{% /md %}}</dd>
@@ -473,7 +472,7 @@ const example = new spotinst.aws.OceanLaunchSpec("example", {
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanlaunchspectag">Ocean<wbr>Launch<wbr>Spec<wbr>Tag[]?</a></span>
+        <span class="property-type"><a href="#oceanlaunchspectag">Ocean<wbr>Launch<wbr>Spec<wbr>Tag[]</a></span>
     </dt>
     <dd>{{% md %}}A key/value mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -482,7 +481,7 @@ const example = new spotinst.aws.OceanLaunchSpec("example", {
             title="Optional">
         <span>taints</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanlaunchspectaint">Ocean<wbr>Launch<wbr>Spec<wbr>Taint[]?</a></span>
+        <span class="property-type"><a href="#oceanlaunchspectaint">Ocean<wbr>Launch<wbr>Spec<wbr>Taint[]</a></span>
     </dt>
     <dd>{{% md %}}Optionally adds labels to instances launched in an Ocean cluster.
 {{% /md %}}</dd>
@@ -491,7 +490,7 @@ const example = new spotinst.aws.OceanLaunchSpec("example", {
             title="Optional">
         <span>user<wbr>Data</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Base64-encoded MIME user data to make available to the instances.
 {{% /md %}}</dd>
@@ -502,6 +501,15 @@ const example = new spotinst.aws.OceanLaunchSpec("example", {
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>ocean_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ocean cluster you wish to 
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -546,15 +554,6 @@ const example = new spotinst.aws.OceanLaunchSpec("example", {
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Set Launch Specification name 
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>ocean_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The ocean cluster you wish to 
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -615,476 +614,6 @@ const example = new spotinst.aws.OceanLaunchSpec("example", {
 {{% /choosable %}}
 
 
-
-
-
-
-
-## OceanLaunchSpec Output Properties
-
-The following output properties are available:
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Autoscale<wbr>Headrooms</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanlaunchspecautoscaleheadroom">List&lt;Ocean<wbr>Launch<wbr>Spec<wbr>Autoscale<wbr>Headroom&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}Set custom headroom per launch spec. provide list of headrooms object.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Iam<wbr>Instance<wbr>Profile</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The ARN or name of an IAM instance profile to associate with launched instances.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Image<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}ID of the image used to launch the instances.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Labels</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanlaunchspeclabel">List&lt;Ocean<wbr>Launch<wbr>Spec<wbr>Label&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}Optionally adds labels to instances launched in an Ocean cluster.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Set Launch Specification name 
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Ocean<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ocean cluster you wish to 
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Root<wbr>Volume<wbr>Size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}Set root volume size (in GB).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Security<wbr>Groups</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}Optionally adds security group IDs.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Subnet<wbr>Ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}Set subnets in launchSpec. Each element in array should be subnet ID.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanlaunchspectag">List&lt;Ocean<wbr>Launch<wbr>Spec<wbr>Tag&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}A key/value mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Taints</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanlaunchspectaint">List&lt;Ocean<wbr>Launch<wbr>Spec<wbr>Taint&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}Optionally adds labels to instances launched in an Ocean cluster.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>User<wbr>Data</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Base64-encoded MIME user data to make available to the instances.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Autoscale<wbr>Headrooms</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanlaunchspecautoscaleheadroom">[]Ocean<wbr>Launch<wbr>Spec<wbr>Autoscale<wbr>Headroom</a></span>
-    </dt>
-    <dd>{{% md %}}Set custom headroom per launch spec. provide list of headrooms object.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Iam<wbr>Instance<wbr>Profile</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The ARN or name of an IAM instance profile to associate with launched instances.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Image<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}ID of the image used to launch the instances.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Labels</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanlaunchspeclabel">[]Ocean<wbr>Launch<wbr>Spec<wbr>Label</a></span>
-    </dt>
-    <dd>{{% md %}}Optionally adds labels to instances launched in an Ocean cluster.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Set Launch Specification name 
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Ocean<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ocean cluster you wish to 
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Root<wbr>Volume<wbr>Size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}Set root volume size (in GB).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Security<wbr>Groups</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}Optionally adds security group IDs.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Subnet<wbr>Ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}Set subnets in launchSpec. Each element in array should be subnet ID.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanlaunchspectag">[]Ocean<wbr>Launch<wbr>Spec<wbr>Tag</a></span>
-    </dt>
-    <dd>{{% md %}}A key/value mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Taints</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanlaunchspectaint">[]Ocean<wbr>Launch<wbr>Spec<wbr>Taint</a></span>
-    </dt>
-    <dd>{{% md %}}Optionally adds labels to instances launched in an Ocean cluster.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>User<wbr>Data</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Base64-encoded MIME user data to make available to the instances.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>autoscale<wbr>Headrooms</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanlaunchspecautoscaleheadroom">Ocean<wbr>Launch<wbr>Spec<wbr>Autoscale<wbr>Headroom[]?</a></span>
-    </dt>
-    <dd>{{% md %}}Set custom headroom per launch spec. provide list of headrooms object.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>iam<wbr>Instance<wbr>Profile</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The ARN or name of an IAM instance profile to associate with launched instances.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>image<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}ID of the image used to launch the instances.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>labels</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanlaunchspeclabel">Ocean<wbr>Launch<wbr>Spec<wbr>Label[]?</a></span>
-    </dt>
-    <dd>{{% md %}}Optionally adds labels to instances launched in an Ocean cluster.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Set Launch Specification name 
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>ocean<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ocean cluster you wish to 
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>root<wbr>Volume<wbr>Size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}Set root volume size (in GB).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>security<wbr>Groups</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}Optionally adds security group IDs.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>subnet<wbr>Ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}Set subnets in launchSpec. Each element in array should be subnet ID.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanlaunchspectag">Ocean<wbr>Launch<wbr>Spec<wbr>Tag[]?</a></span>
-    </dt>
-    <dd>{{% md %}}A key/value mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>taints</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanlaunchspectaint">Ocean<wbr>Launch<wbr>Spec<wbr>Taint[]?</a></span>
-    </dt>
-    <dd>{{% md %}}Optionally adds labels to instances launched in an Ocean cluster.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>user<wbr>Data</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Base64-encoded MIME user data to make available to the instances.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>autoscale_<wbr>headrooms</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanlaunchspecautoscaleheadroom">List[Ocean<wbr>Launch<wbr>Spec<wbr>Autoscale<wbr>Headroom]</a></span>
-    </dt>
-    <dd>{{% md %}}Set custom headroom per launch spec. provide list of headrooms object.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>iam_<wbr>instance_<wbr>profile</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The ARN or name of an IAM instance profile to associate with launched instances.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>image_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}ID of the image used to launch the instances.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>labels</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanlaunchspeclabel">List[Ocean<wbr>Launch<wbr>Spec<wbr>Label]</a></span>
-    </dt>
-    <dd>{{% md %}}Optionally adds labels to instances launched in an Ocean cluster.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Set Launch Specification name 
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>ocean_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The ocean cluster you wish to 
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>root_<wbr>volume_<wbr>size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}Set root volume size (in GB).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>security_<wbr>groups</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}Optionally adds security group IDs.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>subnet_<wbr>ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}Set subnets in launchSpec. Each element in array should be subnet ID.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanlaunchspectag">List[Ocean<wbr>Launch<wbr>Spec<wbr>Tag]</a></span>
-    </dt>
-    <dd>{{% md %}}A key/value mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>taints</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanlaunchspectaint">List[Ocean<wbr>Launch<wbr>Spec<wbr>Taint]</a></span>
-    </dt>
-    <dd>{{% md %}}Optionally adds labels to instances launched in an Ocean cluster.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>user_<wbr>data</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Base64-encoded MIME user data to make available to the instances.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
 
 
 
@@ -1222,7 +751,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Autoscale<wbr>Headrooms</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanlaunchspecautoscaleheadroom">List&lt;Ocean<wbr>Launch<wbr>Spec<wbr>Autoscale<wbr>Headroom<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#oceanlaunchspecautoscaleheadroom">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Ocean<wbr>Launch<wbr>Spec<wbr>Autoscale<wbr>Headroom<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Set custom headroom per launch spec. provide list of headrooms object.
 {{% /md %}}</dd>
@@ -1231,7 +760,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Iam<wbr>Instance<wbr>Profile</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN or name of an IAM instance profile to associate with launched instances.
 {{% /md %}}</dd>
@@ -1240,7 +769,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Image<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the image used to launch the instances.
 {{% /md %}}</dd>
@@ -1249,7 +778,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Labels</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanlaunchspeclabel">List&lt;Ocean<wbr>Launch<wbr>Spec<wbr>Label<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#oceanlaunchspeclabel">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Ocean<wbr>Launch<wbr>Spec<wbr>Label<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Optionally adds labels to instances launched in an Ocean cluster.
 {{% /md %}}</dd>
@@ -1258,7 +787,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Set Launch Specification name 
 {{% /md %}}</dd>
@@ -1267,7 +796,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Ocean<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ocean cluster you wish to 
 {{% /md %}}</dd>
@@ -1276,7 +805,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Root<wbr>Volume<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Set root volume size (in GB).
 {{% /md %}}</dd>
@@ -1285,7 +814,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Security<wbr>Groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Optionally adds security group IDs.
 {{% /md %}}</dd>
@@ -1294,7 +823,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Subnet<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Set subnets in launchSpec. Each element in array should be subnet ID.
 {{% /md %}}</dd>
@@ -1303,7 +832,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanlaunchspectag">List&lt;Ocean<wbr>Launch<wbr>Spec<wbr>Tag<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#oceanlaunchspectag">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Ocean<wbr>Launch<wbr>Spec<wbr>Tag<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A key/value mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1312,7 +841,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Taints</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanlaunchspectaint">List&lt;Ocean<wbr>Launch<wbr>Spec<wbr>Taint<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#oceanlaunchspectaint">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Ocean<wbr>Launch<wbr>Spec<wbr>Taint<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Optionally adds labels to instances launched in an Ocean cluster.
 {{% /md %}}</dd>
@@ -1321,7 +850,7 @@ The following state arguments are supported:
             title="Optional">
         <span>User<wbr>Data</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Base64-encoded MIME user data to make available to the instances.
 {{% /md %}}</dd>
@@ -1346,7 +875,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Iam<wbr>Instance<wbr>Profile</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN or name of an IAM instance profile to associate with launched instances.
 {{% /md %}}</dd>
@@ -1355,7 +884,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Image<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the image used to launch the instances.
 {{% /md %}}</dd>
@@ -1373,7 +902,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Set Launch Specification name 
 {{% /md %}}</dd>
@@ -1382,7 +911,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Ocean<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ocean cluster you wish to 
 {{% /md %}}</dd>
@@ -1391,7 +920,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Root<wbr>Volume<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Set root volume size (in GB).
 {{% /md %}}</dd>
@@ -1436,7 +965,7 @@ The following state arguments are supported:
             title="Optional">
         <span>User<wbr>Data</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Base64-encoded MIME user data to make available to the instances.
 {{% /md %}}</dd>
@@ -1452,7 +981,7 @@ The following state arguments are supported:
             title="Optional">
         <span>autoscale<wbr>Headrooms</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanlaunchspecautoscaleheadroom">Ocean<wbr>Launch<wbr>Spec<wbr>Autoscale<wbr>Headroom[]?</a></span>
+        <span class="property-type"><a href="#oceanlaunchspecautoscaleheadroom">Ocean<wbr>Launch<wbr>Spec<wbr>Autoscale<wbr>Headroom[]</a></span>
     </dt>
     <dd>{{% md %}}Set custom headroom per launch spec. provide list of headrooms object.
 {{% /md %}}</dd>
@@ -1461,7 +990,7 @@ The following state arguments are supported:
             title="Optional">
         <span>iam<wbr>Instance<wbr>Profile</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN or name of an IAM instance profile to associate with launched instances.
 {{% /md %}}</dd>
@@ -1470,7 +999,7 @@ The following state arguments are supported:
             title="Optional">
         <span>image<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the image used to launch the instances.
 {{% /md %}}</dd>
@@ -1479,7 +1008,7 @@ The following state arguments are supported:
             title="Optional">
         <span>labels</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanlaunchspeclabel">Ocean<wbr>Launch<wbr>Spec<wbr>Label[]?</a></span>
+        <span class="property-type"><a href="#oceanlaunchspeclabel">Ocean<wbr>Launch<wbr>Spec<wbr>Label[]</a></span>
     </dt>
     <dd>{{% md %}}Optionally adds labels to instances launched in an Ocean cluster.
 {{% /md %}}</dd>
@@ -1488,7 +1017,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Set Launch Specification name 
 {{% /md %}}</dd>
@@ -1497,7 +1026,7 @@ The following state arguments are supported:
             title="Optional">
         <span>ocean<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ocean cluster you wish to 
 {{% /md %}}</dd>
@@ -1506,7 +1035,7 @@ The following state arguments are supported:
             title="Optional">
         <span>root<wbr>Volume<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Set root volume size (in GB).
 {{% /md %}}</dd>
@@ -1515,7 +1044,7 @@ The following state arguments are supported:
             title="Optional">
         <span>security<wbr>Groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Optionally adds security group IDs.
 {{% /md %}}</dd>
@@ -1524,7 +1053,7 @@ The following state arguments are supported:
             title="Optional">
         <span>subnet<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Set subnets in launchSpec. Each element in array should be subnet ID.
 {{% /md %}}</dd>
@@ -1533,7 +1062,7 @@ The following state arguments are supported:
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanlaunchspectag">Ocean<wbr>Launch<wbr>Spec<wbr>Tag[]?</a></span>
+        <span class="property-type"><a href="#oceanlaunchspectag">Ocean<wbr>Launch<wbr>Spec<wbr>Tag[]</a></span>
     </dt>
     <dd>{{% md %}}A key/value mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1542,7 +1071,7 @@ The following state arguments are supported:
             title="Optional">
         <span>taints</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanlaunchspectaint">Ocean<wbr>Launch<wbr>Spec<wbr>Taint[]?</a></span>
+        <span class="property-type"><a href="#oceanlaunchspectaint">Ocean<wbr>Launch<wbr>Spec<wbr>Taint[]</a></span>
     </dt>
     <dd>{{% md %}}Optionally adds labels to instances launched in an Ocean cluster.
 {{% /md %}}</dd>
@@ -1551,7 +1080,7 @@ The following state arguments are supported:
             title="Optional">
         <span>user<wbr>Data</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Base64-encoded MIME user data to make available to the instances.
 {{% /md %}}</dd>
@@ -1700,11 +1229,20 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Num<wbr>Of<wbr>Units</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of units to retain as headroom, where each unit has the defined headroom CPU, memory and GPU.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Cpu<wbr>Per<wbr>Unit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Optionally configure the number of CPUs to allocate for each headroom unit. CPUs are denoted in millicores, where 1000 millicores = 1 vCPU.
 {{% /md %}}</dd>
@@ -1713,7 +1251,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Gpu<wbr>Per<wbr>Unit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Optionally configure the number of GPUS to allocate for each headroom unit.
 {{% /md %}}</dd>
@@ -1722,18 +1260,9 @@ The following state arguments are supported:
             title="Optional">
         <span>Memory<wbr>Per<wbr>Unit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}Optionally configure the amount of memory (MiB) to allocate for each headroom unit.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Num<wbr>Of<wbr>Units</span>
-        <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The number of units to retain as headroom, where each unit has the defined headroom CPU, memory and GPU.
+    <dd>{{% md %}}Optionally configure the amount of memory (MiB) to allocate for each headroom unit.
 {{% /md %}}</dd>
 
 </dl>
@@ -1743,33 +1272,6 @@ The following state arguments are supported:
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Cpu<wbr>Per<wbr>Unit</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}Optionally configure the number of CPUs to allocate for each headroom unit. CPUs are denoted in millicores, where 1000 millicores = 1 vCPU.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Gpu<wbr>Per<wbr>Unit</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}Optionally configure the number of GPUS to allocate for each headroom unit.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Memory<wbr>Per<wbr>Unit</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}Optionally configure the amount of memory (MiB) to allocate for each headroom unit.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Num<wbr>Of<wbr>Units</span>
@@ -1779,39 +1281,39 @@ The following state arguments are supported:
     <dd>{{% md %}}The number of units to retain as headroom, where each unit has the defined headroom CPU, memory and GPU.
 {{% /md %}}</dd>
 
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
-        <span>cpu<wbr>Per<wbr>Unit</span>
+        <span>Cpu<wbr>Per<wbr>Unit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Optionally configure the number of CPUs to allocate for each headroom unit. CPUs are denoted in millicores, where 1000 millicores = 1 vCPU.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>gpu<wbr>Per<wbr>Unit</span>
+        <span>Gpu<wbr>Per<wbr>Unit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Optionally configure the number of GPUS to allocate for each headroom unit.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>memory<wbr>Per<wbr>Unit</span>
+        <span>Memory<wbr>Per<wbr>Unit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Optionally configure the amount of memory (MiB) to allocate for each headroom unit.
 {{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
@@ -1822,12 +1324,48 @@ The following state arguments are supported:
     <dd>{{% md %}}The number of units to retain as headroom, where each unit has the defined headroom CPU, memory and GPU.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>cpu<wbr>Per<wbr>Unit</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Optionally configure the number of CPUs to allocate for each headroom unit. CPUs are denoted in millicores, where 1000 millicores = 1 vCPU.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>gpu<wbr>Per<wbr>Unit</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Optionally configure the number of GPUS to allocate for each headroom unit.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>memory<wbr>Per<wbr>Unit</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Optionally configure the amount of memory (MiB) to allocate for each headroom unit.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>num<wbr>Of<wbr>Units</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}The number of units to retain as headroom, where each unit has the defined headroom CPU, memory and GPU.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1854,15 +1392,6 @@ The following state arguments are supported:
         <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Optionally configure the amount of memory (MiB) to allocate for each headroom unit.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>num<wbr>Of<wbr>Units</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The number of units to retain as headroom, where each unit has the defined headroom CPU, memory and GPU.
 {{% /md %}}</dd>
 
 </dl>

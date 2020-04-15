@@ -22,7 +22,7 @@ Let's Encrypt.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/#Certificate">Certificate</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/#CertificateArgs">CertificateArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/#Certificate">Certificate</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/#CertificateArgs">CertificateArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -30,11 +30,11 @@ Let's Encrypt.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewCertificate<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/go/digitalocean/?tab=doc#CertificateArgs">CertificateArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/go/digitalocean/?tab=doc#Certificate">Certificate</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewCertificate<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/go/digitalocean/?tab=doc#CertificateArgs">CertificateArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/go/digitalocean/?tab=doc#Certificate">Certificate</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.Digitalocean..Certificate.html">Certificate</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.Digitalocean.CertificateArgs.html">CertificateArgs</a></span>? <span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.Digitalocean.Certificate.html">Certificate</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.DigitalOcean.CertificateArgs.html">CertificateArgs</a></span>? <span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -130,7 +130,7 @@ Let's Encrypt.
             title="Optional">
         <span>Certificate<wbr>Chain</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full PEM-formatted trust chain
 between the certificate authority's certificate and your domain's TLS
@@ -141,7 +141,7 @@ certificate. Only valid when type is `custom`.
             title="Optional">
         <span>Domains</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of fully qualified domain names (FQDNs) for
 which the certificate will be issued. The domains must be managed using
@@ -152,7 +152,7 @@ DigitalOcean's DNS. Only valid when type is `lets_encrypt`.
             title="Optional">
         <span>Leaf<wbr>Certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The contents of a PEM-formatted public
 TLS certificate. Only valid when type is `custom`.
@@ -162,7 +162,7 @@ TLS certificate. Only valid when type is `custom`.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the certificate for identification.
 {{% /md %}}</dd>
@@ -171,7 +171,7 @@ TLS certificate. Only valid when type is `custom`.
             title="Optional">
         <span>Private<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The contents of a PEM-formatted private-key
 corresponding to the SSL certificate. Only valid when type is `custom`.
@@ -181,7 +181,7 @@ corresponding to the SSL certificate. Only valid when type is `custom`.
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of certificate to provision. Can be either
 `custom` or `lets_encrypt`. Defaults to `custom`.
@@ -198,7 +198,7 @@ corresponding to the SSL certificate. Only valid when type is `custom`.
             title="Optional">
         <span>Certificate<wbr>Chain</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full PEM-formatted trust chain
 between the certificate authority's certificate and your domain's TLS
@@ -220,7 +220,7 @@ DigitalOcean's DNS. Only valid when type is `lets_encrypt`.
             title="Optional">
         <span>Leaf<wbr>Certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The contents of a PEM-formatted public
 TLS certificate. Only valid when type is `custom`.
@@ -230,7 +230,7 @@ TLS certificate. Only valid when type is `custom`.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the certificate for identification.
 {{% /md %}}</dd>
@@ -239,7 +239,7 @@ TLS certificate. Only valid when type is `custom`.
             title="Optional">
         <span>Private<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The contents of a PEM-formatted private-key
 corresponding to the SSL certificate. Only valid when type is `custom`.
@@ -249,7 +249,7 @@ corresponding to the SSL certificate. Only valid when type is `custom`.
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of certificate to provision. Can be either
 `custom` or `lets_encrypt`. Defaults to `custom`.
@@ -266,7 +266,7 @@ corresponding to the SSL certificate. Only valid when type is `custom`.
             title="Optional">
         <span>certificate<wbr>Chain</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full PEM-formatted trust chain
 between the certificate authority's certificate and your domain's TLS
@@ -277,7 +277,7 @@ certificate. Only valid when type is `custom`.
             title="Optional">
         <span>domains</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of fully qualified domain names (FQDNs) for
 which the certificate will be issued. The domains must be managed using
@@ -288,7 +288,7 @@ DigitalOcean's DNS. Only valid when type is `lets_encrypt`.
             title="Optional">
         <span>leaf<wbr>Certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The contents of a PEM-formatted public
 TLS certificate. Only valid when type is `custom`.
@@ -298,7 +298,7 @@ TLS certificate. Only valid when type is `custom`.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the certificate for identification.
 {{% /md %}}</dd>
@@ -307,7 +307,7 @@ TLS certificate. Only valid when type is `custom`.
             title="Optional">
         <span>private<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The contents of a PEM-formatted private-key
 corresponding to the SSL certificate. Only valid when type is `custom`.
@@ -317,7 +317,7 @@ corresponding to the SSL certificate. Only valid when type is `custom`.
             title="Optional">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">CertificateType?</span>
+        <span class="property-type">Certificate<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The type of certificate to provision. Can be either
 `custom` or `lets_encrypt`. Defaults to `custom`.
@@ -412,62 +412,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Certificate<wbr>Chain</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The full PEM-formatted trust chain
-between the certificate authority's certificate and your domain's TLS
-certificate. Only valid when type is `custom`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Domains</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}List of fully qualified domain names (FQDNs) for
-which the certificate will be issued. The domains must be managed using
-DigitalOcean's DNS. Only valid when type is `lets_encrypt`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Leaf<wbr>Certificate</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The contents of a PEM-formatted public
-TLS certificate. Only valid when type is `custom`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the certificate for identification.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Not<wbr>After</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The expiration date of the certificate
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Private<wbr>Key</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The contents of a PEM-formatted private-key
-corresponding to the SSL certificate. Only valid when type is `custom`.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -486,16 +435,6 @@ corresponding to the SSL certificate. Only valid when type is `custom`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The type of certificate to provision. Can be either
-`custom` or `lets_encrypt`. Defaults to `custom`.
-{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -506,62 +445,11 @@ corresponding to the SSL certificate. Only valid when type is `custom`.
 
     <dt class="property-"
             title="">
-        <span>Certificate<wbr>Chain</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The full PEM-formatted trust chain
-between the certificate authority's certificate and your domain's TLS
-certificate. Only valid when type is `custom`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Domains</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}List of fully qualified domain names (FQDNs) for
-which the certificate will be issued. The domains must be managed using
-DigitalOcean's DNS. Only valid when type is `lets_encrypt`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Leaf<wbr>Certificate</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The contents of a PEM-formatted public
-TLS certificate. Only valid when type is `custom`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the certificate for identification.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Not<wbr>After</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The expiration date of the certificate
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Private<wbr>Key</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The contents of a PEM-formatted private-key
-corresponding to the SSL certificate. Only valid when type is `custom`.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -581,16 +469,6 @@ corresponding to the SSL certificate. Only valid when type is `custom`.
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The type of certificate to provision. Can be either
-`custom` or `lets_encrypt`. Defaults to `custom`.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -600,62 +478,11 @@ corresponding to the SSL certificate. Only valid when type is `custom`.
 
     <dt class="property-"
             title="">
-        <span>certificate<wbr>Chain</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The full PEM-formatted trust chain
-between the certificate authority's certificate and your domain's TLS
-certificate. Only valid when type is `custom`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>domains</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}List of fully qualified domain names (FQDNs) for
-which the certificate will be issued. The domains must be managed using
-DigitalOcean's DNS. Only valid when type is `lets_encrypt`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>leaf<wbr>Certificate</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The contents of a PEM-formatted public
-TLS certificate. Only valid when type is `custom`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the certificate for identification.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>not<wbr>After</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The expiration date of the certificate
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>private<wbr>Key</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The contents of a PEM-formatted private-key
-corresponding to the SSL certificate. Only valid when type is `custom`.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -675,16 +502,6 @@ corresponding to the SSL certificate. Only valid when type is `custom`.
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">CertificateType?</span>
-    </dt>
-    <dd>{{% md %}}The type of certificate to provision. Can be either
-`custom` or `lets_encrypt`. Defaults to `custom`.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -694,62 +511,11 @@ corresponding to the SSL certificate. Only valid when type is `custom`.
 
     <dt class="property-"
             title="">
-        <span>certificate_<wbr>chain</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The full PEM-formatted trust chain
-between the certificate authority's certificate and your domain's TLS
-certificate. Only valid when type is `custom`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>domains</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}List of fully qualified domain names (FQDNs) for
-which the certificate will be issued. The domains must be managed using
-DigitalOcean's DNS. Only valid when type is `lets_encrypt`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>leaf_<wbr>certificate</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The contents of a PEM-formatted public
-TLS certificate. Only valid when type is `custom`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the certificate for identification.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>not_<wbr>after</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The expiration date of the certificate
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>private_<wbr>key</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The contents of a PEM-formatted private-key
-corresponding to the SSL certificate. Only valid when type is `custom`.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -768,16 +534,6 @@ corresponding to the SSL certificate. Only valid when type is `custom`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The type of certificate to provision. Can be either
-`custom` or `lets_encrypt`. Defaults to `custom`.
-{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -808,7 +564,7 @@ Get an existing Certificate resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.Digitalocean..Certificate.html">Certificate</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.Digitalocean..CertificateState.html">CertificateState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.Digitalocean.Certificate.html">Certificate</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.Digitalocean..CertificateState.html">CertificateState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -918,7 +674,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Certificate<wbr>Chain</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full PEM-formatted trust chain
 between the certificate authority's certificate and your domain's TLS
@@ -929,7 +685,7 @@ certificate. Only valid when type is `custom`.
             title="Optional">
         <span>Domains</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of fully qualified domain names (FQDNs) for
 which the certificate will be issued. The domains must be managed using
@@ -940,7 +696,7 @@ DigitalOcean's DNS. Only valid when type is `lets_encrypt`.
             title="Optional">
         <span>Leaf<wbr>Certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The contents of a PEM-formatted public
 TLS certificate. Only valid when type is `custom`.
@@ -950,7 +706,7 @@ TLS certificate. Only valid when type is `custom`.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the certificate for identification.
 {{% /md %}}</dd>
@@ -959,7 +715,7 @@ TLS certificate. Only valid when type is `custom`.
             title="Optional">
         <span>Not<wbr>After</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The expiration date of the certificate
 {{% /md %}}</dd>
@@ -968,7 +724,7 @@ TLS certificate. Only valid when type is `custom`.
             title="Optional">
         <span>Private<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The contents of a PEM-formatted private-key
 corresponding to the SSL certificate. Only valid when type is `custom`.
@@ -978,7 +734,7 @@ corresponding to the SSL certificate. Only valid when type is `custom`.
             title="Optional">
         <span>Sha1Fingerprint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SHA-1 fingerprint of the certificate
 {{% /md %}}</dd>
@@ -987,7 +743,7 @@ corresponding to the SSL certificate. Only valid when type is `custom`.
             title="Optional">
         <span>State</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -995,7 +751,7 @@ corresponding to the SSL certificate. Only valid when type is `custom`.
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of certificate to provision. Can be either
 `custom` or `lets_encrypt`. Defaults to `custom`.
@@ -1012,7 +768,7 @@ corresponding to the SSL certificate. Only valid when type is `custom`.
             title="Optional">
         <span>Certificate<wbr>Chain</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full PEM-formatted trust chain
 between the certificate authority's certificate and your domain's TLS
@@ -1034,7 +790,7 @@ DigitalOcean's DNS. Only valid when type is `lets_encrypt`.
             title="Optional">
         <span>Leaf<wbr>Certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The contents of a PEM-formatted public
 TLS certificate. Only valid when type is `custom`.
@@ -1044,7 +800,7 @@ TLS certificate. Only valid when type is `custom`.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the certificate for identification.
 {{% /md %}}</dd>
@@ -1053,7 +809,7 @@ TLS certificate. Only valid when type is `custom`.
             title="Optional">
         <span>Not<wbr>After</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The expiration date of the certificate
 {{% /md %}}</dd>
@@ -1062,7 +818,7 @@ TLS certificate. Only valid when type is `custom`.
             title="Optional">
         <span>Private<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The contents of a PEM-formatted private-key
 corresponding to the SSL certificate. Only valid when type is `custom`.
@@ -1072,7 +828,7 @@ corresponding to the SSL certificate. Only valid when type is `custom`.
             title="Optional">
         <span>Sha1Fingerprint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SHA-1 fingerprint of the certificate
 {{% /md %}}</dd>
@@ -1081,7 +837,7 @@ corresponding to the SSL certificate. Only valid when type is `custom`.
             title="Optional">
         <span>State</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1089,7 +845,7 @@ corresponding to the SSL certificate. Only valid when type is `custom`.
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of certificate to provision. Can be either
 `custom` or `lets_encrypt`. Defaults to `custom`.
@@ -1106,7 +862,7 @@ corresponding to the SSL certificate. Only valid when type is `custom`.
             title="Optional">
         <span>certificate<wbr>Chain</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full PEM-formatted trust chain
 between the certificate authority's certificate and your domain's TLS
@@ -1117,7 +873,7 @@ certificate. Only valid when type is `custom`.
             title="Optional">
         <span>domains</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of fully qualified domain names (FQDNs) for
 which the certificate will be issued. The domains must be managed using
@@ -1128,7 +884,7 @@ DigitalOcean's DNS. Only valid when type is `lets_encrypt`.
             title="Optional">
         <span>leaf<wbr>Certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The contents of a PEM-formatted public
 TLS certificate. Only valid when type is `custom`.
@@ -1138,7 +894,7 @@ TLS certificate. Only valid when type is `custom`.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the certificate for identification.
 {{% /md %}}</dd>
@@ -1147,7 +903,7 @@ TLS certificate. Only valid when type is `custom`.
             title="Optional">
         <span>not<wbr>After</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The expiration date of the certificate
 {{% /md %}}</dd>
@@ -1156,7 +912,7 @@ TLS certificate. Only valid when type is `custom`.
             title="Optional">
         <span>private<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The contents of a PEM-formatted private-key
 corresponding to the SSL certificate. Only valid when type is `custom`.
@@ -1166,7 +922,7 @@ corresponding to the SSL certificate. Only valid when type is `custom`.
             title="Optional">
         <span>sha1Fingerprint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The SHA-1 fingerprint of the certificate
 {{% /md %}}</dd>
@@ -1175,7 +931,7 @@ corresponding to the SSL certificate. Only valid when type is `custom`.
             title="Optional">
         <span>state</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1183,7 +939,7 @@ corresponding to the SSL certificate. Only valid when type is `custom`.
             title="Optional">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">CertificateType?</span>
+        <span class="property-type">Certificate<wbr>Type</span>
     </dt>
     <dd>{{% md %}}The type of certificate to provision. Can be either
 `custom` or `lets_encrypt`. Defaults to `custom`.

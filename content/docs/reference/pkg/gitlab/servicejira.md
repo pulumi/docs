@@ -35,7 +35,7 @@ const jira = new gitlab.ServiceJira("jira", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gitlab/#ServiceJira">ServiceJira</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gitlab/#ServiceJiraArgs">ServiceJiraArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gitlab/#ServiceJira">ServiceJira</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gitlab/#ServiceJiraArgs">ServiceJiraArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -43,11 +43,11 @@ const jira = new gitlab.ServiceJira("jira", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewServiceJira<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gitlab/sdk/go/gitlab/?tab=doc#ServiceJiraArgs">ServiceJiraArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gitlab/sdk/go/gitlab/?tab=doc#ServiceJira">ServiceJira</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewServiceJira<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gitlab/sdk/go/gitlab/?tab=doc#ServiceJiraArgs">ServiceJiraArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gitlab/sdk/go/gitlab/?tab=doc#ServiceJira">ServiceJira</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gitlab/Pulumi.Gitlab..ServiceJira.html">ServiceJira</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gitlab/Pulumi.Gitlab.ServiceJiraArgs.html">ServiceJiraArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gitlab/Pulumi.Gitlab.ServiceJira.html">ServiceJira</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gitlab/Pulumi.GitLab.ServiceJiraArgs.html">ServiceJiraArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -139,42 +139,6 @@ const jira = new gitlab.ServiceJira("jira", {
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Comment<wbr>On<wbr>Event<wbr>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Enable comments inside Jira issues on each GitLab event (commit / merge request)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Commit<wbr>Events</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Enable notifications for commit events
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Jira<wbr>Issue<wbr>Transition<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The ID of a transition that moves issues to a closed state. You can find this number under the JIRA workflow administration (Administration > Issues > Workflows) by selecting View under Operations of the desired workflow of your project. By default, this ID is set to 2.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Merge<wbr>Requests<wbr>Events</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Enable notifications for merge request events
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Password</span>
@@ -193,15 +157,6 @@ const jira = new gitlab.ServiceJira("jira", {
     <dd>{{% md %}}ID of the project you want to activate integration on.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Project<wbr>Key</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The short identifier for your JIRA project, all uppercase, e.g., PROJ.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Url</span>
@@ -218,6 +173,51 @@ const jira = new gitlab.ServiceJira("jira", {
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The username of the user created to be used with GitLab/JIRA.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Comment<wbr>On<wbr>Event<wbr>Enabled</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable comments inside Jira issues on each GitLab event (commit / merge request)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Commit<wbr>Events</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable notifications for commit events
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Jira<wbr>Issue<wbr>Transition<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of a transition that moves issues to a closed state. You can find this number under the JIRA workflow administration (Administration > Issues > Workflows) by selecting View under Operations of the desired workflow of your project. By default, this ID is set to 2.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Merge<wbr>Requests<wbr>Events</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable notifications for merge request events
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Project<wbr>Key</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The short identifier for your JIRA project, all uppercase, e.g., PROJ.
 {{% /md %}}</dd>
 
 </dl>
@@ -227,42 +227,6 @@ const jira = new gitlab.ServiceJira("jira", {
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Comment<wbr>On<wbr>Event<wbr>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Enable comments inside Jira issues on each GitLab event (commit / merge request)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Commit<wbr>Events</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Enable notifications for commit events
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Jira<wbr>Issue<wbr>Transition<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The ID of a transition that moves issues to a closed state. You can find this number under the JIRA workflow administration (Administration > Issues > Workflows) by selecting View under Operations of the desired workflow of your project. By default, this ID is set to 2.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Merge<wbr>Requests<wbr>Events</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Enable notifications for merge request events
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Password</span>
@@ -279,15 +243,6 @@ const jira = new gitlab.ServiceJira("jira", {
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the project you want to activate integration on.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Project<wbr>Key</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The short identifier for your JIRA project, all uppercase, e.g., PROJ.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -308,48 +263,57 @@ const jira = new gitlab.ServiceJira("jira", {
     <dd>{{% md %}}The username of the user created to be used with GitLab/JIRA.
 {{% /md %}}</dd>
 
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
-        <span>comment<wbr>On<wbr>Event<wbr>Enabled</span>
+        <span>Comment<wbr>On<wbr>Event<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable comments inside Jira issues on each GitLab event (commit / merge request)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>commit<wbr>Events</span>
+        <span>Commit<wbr>Events</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable notifications for commit events
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>jira<wbr>Issue<wbr>Transition<wbr>Id</span>
+        <span>Jira<wbr>Issue<wbr>Transition<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of a transition that moves issues to a closed state. You can find this number under the JIRA workflow administration (Administration > Issues > Workflows) by selecting View under Operations of the desired workflow of your project. By default, this ID is set to 2.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>merge<wbr>Requests<wbr>Events</span>
+        <span>Merge<wbr>Requests<wbr>Events</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable notifications for merge request events
 {{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Project<wbr>Key</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The short identifier for your JIRA project, all uppercase, e.g., PROJ.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
@@ -367,15 +331,6 @@ const jira = new gitlab.ServiceJira("jira", {
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the project you want to activate integration on.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>project<wbr>Key</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The short identifier for your JIRA project, all uppercase, e.g., PROJ.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -396,12 +351,93 @@ const jira = new gitlab.ServiceJira("jira", {
     <dd>{{% md %}}The username of the user created to be used with GitLab/JIRA.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>comment<wbr>On<wbr>Event<wbr>Enabled</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Enable comments inside Jira issues on each GitLab event (commit / merge request)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>commit<wbr>Events</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Enable notifications for commit events
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>jira<wbr>Issue<wbr>Transition<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of a transition that moves issues to a closed state. You can find this number under the JIRA workflow administration (Administration > Issues > Workflows) by selecting View under Operations of the desired workflow of your project. By default, this ID is set to 2.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>merge<wbr>Requests<wbr>Events</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Enable notifications for merge request events
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>project<wbr>Key</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The short identifier for your JIRA project, all uppercase, e.g., PROJ.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>password</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The password of the user created to be used with GitLab/JIRA.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>project</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}ID of the project you want to activate integration on.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>url</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The URL to the JIRA project which is being linked to this GitLab project. For example, https://jira.example.com.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>username</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The username of the user created to be used with GitLab/JIRA.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -439,24 +475,6 @@ const jira = new gitlab.ServiceJira("jira", {
     <dd>{{% md %}}Enable notifications for merge request events
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>password</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The password of the user created to be used with GitLab/JIRA.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>project</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}ID of the project you want to activate integration on.
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>project_<wbr>key</span>
@@ -464,24 +482,6 @@ const jira = new gitlab.ServiceJira("jira", {
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The short identifier for your JIRA project, all uppercase, e.g., PROJ.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>url</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The URL to the JIRA project which is being linked to this GitLab project. For example, https://jira.example.com.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>username</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The username of the user created to be used with GitLab/JIRA.
 {{% /md %}}</dd>
 
 </dl>
@@ -513,74 +513,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Comment<wbr>On<wbr>Event<wbr>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Enable comments inside Jira issues on each GitLab event (commit / merge request)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Commit<wbr>Events</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Enable notifications for commit events
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Created<wbr>At</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Jira<wbr>Issue<wbr>Transition<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The ID of a transition that moves issues to a closed state. You can find this number under the JIRA workflow administration (Administration > Issues > Workflows) by selecting View under Operations of the desired workflow of your project. By default, this ID is set to 2.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Merge<wbr>Requests<wbr>Events</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Enable notifications for merge request events
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Password</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The password of the user created to be used with GitLab/JIRA.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Project</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}ID of the project you want to activate integration on.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Project<wbr>Key</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The short identifier for your JIRA project, all uppercase, e.g., PROJ.
-{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -597,24 +534,6 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Url</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The URL to the JIRA project which is being linked to this GitLab project. For example, https://jira.example.com.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Username</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The username of the user created to be used with GitLab/JIRA.
-{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -633,74 +552,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Comment<wbr>On<wbr>Event<wbr>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Enable comments inside Jira issues on each GitLab event (commit / merge request)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Commit<wbr>Events</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Enable notifications for commit events
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Created<wbr>At</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Jira<wbr>Issue<wbr>Transition<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The ID of a transition that moves issues to a closed state. You can find this number under the JIRA workflow administration (Administration > Issues > Workflows) by selecting View under Operations of the desired workflow of your project. By default, this ID is set to 2.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Merge<wbr>Requests<wbr>Events</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Enable notifications for merge request events
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Password</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The password of the user created to be used with GitLab/JIRA.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Project</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}ID of the project you want to activate integration on.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Project<wbr>Key</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The short identifier for your JIRA project, all uppercase, e.g., PROJ.
-{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -717,24 +573,6 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Url</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The URL to the JIRA project which is being linked to this GitLab project. For example, https://jira.example.com.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Username</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The username of the user created to be used with GitLab/JIRA.
-{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -753,74 +591,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>comment<wbr>On<wbr>Event<wbr>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
-    </dt>
-    <dd>{{% md %}}Enable comments inside Jira issues on each GitLab event (commit / merge request)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>commit<wbr>Events</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
-    </dt>
-    <dd>{{% md %}}Enable notifications for commit events
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>created<wbr>At</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>jira<wbr>Issue<wbr>Transition<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The ID of a transition that moves issues to a closed state. You can find this number under the JIRA workflow administration (Administration > Issues > Workflows) by selecting View under Operations of the desired workflow of your project. By default, this ID is set to 2.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>merge<wbr>Requests<wbr>Events</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
-    </dt>
-    <dd>{{% md %}}Enable notifications for merge request events
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>password</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The password of the user created to be used with GitLab/JIRA.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>project</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}ID of the project you want to activate integration on.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>project<wbr>Key</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The short identifier for your JIRA project, all uppercase, e.g., PROJ.
-{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -837,24 +612,6 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>url</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The URL to the JIRA project which is being linked to this GitLab project. For example, https://jira.example.com.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>username</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The username of the user created to be used with GitLab/JIRA.
-{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -873,74 +630,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>comment_<wbr>on_<wbr>event_<wbr>enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Enable comments inside Jira issues on each GitLab event (commit / merge request)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>commit_<wbr>events</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Enable notifications for commit events
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>created_<wbr>at</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>jira_<wbr>issue_<wbr>transition_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The ID of a transition that moves issues to a closed state. You can find this number under the JIRA workflow administration (Administration > Issues > Workflows) by selecting View under Operations of the desired workflow of your project. By default, this ID is set to 2.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>merge_<wbr>requests_<wbr>events</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Enable notifications for merge request events
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>password</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The password of the user created to be used with GitLab/JIRA.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>project</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}ID of the project you want to activate integration on.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>project_<wbr>key</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The short identifier for your JIRA project, all uppercase, e.g., PROJ.
-{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -957,24 +651,6 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>url</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The URL to the JIRA project which is being linked to this GitLab project. For example, https://jira.example.com.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>username</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The username of the user created to be used with GitLab/JIRA.
-{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1005,7 +681,7 @@ Get an existing ServiceJira resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gitlab/Pulumi.Gitlab..ServiceJira.html">ServiceJira</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gitlab/Pulumi.Gitlab..ServiceJiraState.html">ServiceJiraState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gitlab/Pulumi.Gitlab.ServiceJira.html">ServiceJira</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gitlab/Pulumi.Gitlab..ServiceJiraState.html">ServiceJiraState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1115,7 +791,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Active</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1123,7 +799,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Comment<wbr>On<wbr>Event<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable comments inside Jira issues on each GitLab event (commit / merge request)
 {{% /md %}}</dd>
@@ -1132,7 +808,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Commit<wbr>Events</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable notifications for commit events
 {{% /md %}}</dd>
@@ -1141,7 +817,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Created<wbr>At</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1149,7 +825,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Jira<wbr>Issue<wbr>Transition<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of a transition that moves issues to a closed state. You can find this number under the JIRA workflow administration (Administration > Issues > Workflows) by selecting View under Operations of the desired workflow of your project. By default, this ID is set to 2.
 {{% /md %}}</dd>
@@ -1158,7 +834,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Merge<wbr>Requests<wbr>Events</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable notifications for merge request events
 {{% /md %}}</dd>
@@ -1167,7 +843,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password of the user created to be used with GitLab/JIRA.
 {{% /md %}}</dd>
@@ -1176,7 +852,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the project you want to activate integration on.
 {{% /md %}}</dd>
@@ -1185,7 +861,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Project<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The short identifier for your JIRA project, all uppercase, e.g., PROJ.
 {{% /md %}}</dd>
@@ -1194,7 +870,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Title</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1202,7 +878,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Updated<wbr>At</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1210,7 +886,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL to the JIRA project which is being linked to this GitLab project. For example, https://jira.example.com.
 {{% /md %}}</dd>
@@ -1219,7 +895,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Username</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The username of the user created to be used with GitLab/JIRA.
 {{% /md %}}</dd>
@@ -1235,7 +911,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Active</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1243,7 +919,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Comment<wbr>On<wbr>Event<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable comments inside Jira issues on each GitLab event (commit / merge request)
 {{% /md %}}</dd>
@@ -1252,7 +928,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Commit<wbr>Events</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable notifications for commit events
 {{% /md %}}</dd>
@@ -1261,7 +937,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Created<wbr>At</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1269,7 +945,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Jira<wbr>Issue<wbr>Transition<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of a transition that moves issues to a closed state. You can find this number under the JIRA workflow administration (Administration > Issues > Workflows) by selecting View under Operations of the desired workflow of your project. By default, this ID is set to 2.
 {{% /md %}}</dd>
@@ -1278,7 +954,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Merge<wbr>Requests<wbr>Events</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable notifications for merge request events
 {{% /md %}}</dd>
@@ -1287,7 +963,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password of the user created to be used with GitLab/JIRA.
 {{% /md %}}</dd>
@@ -1296,7 +972,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the project you want to activate integration on.
 {{% /md %}}</dd>
@@ -1305,7 +981,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Project<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The short identifier for your JIRA project, all uppercase, e.g., PROJ.
 {{% /md %}}</dd>
@@ -1314,7 +990,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Title</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1322,7 +998,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Updated<wbr>At</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1330,7 +1006,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL to the JIRA project which is being linked to this GitLab project. For example, https://jira.example.com.
 {{% /md %}}</dd>
@@ -1339,7 +1015,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Username</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The username of the user created to be used with GitLab/JIRA.
 {{% /md %}}</dd>
@@ -1355,7 +1031,7 @@ The following state arguments are supported:
             title="Optional">
         <span>active</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1363,7 +1039,7 @@ The following state arguments are supported:
             title="Optional">
         <span>comment<wbr>On<wbr>Event<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable comments inside Jira issues on each GitLab event (commit / merge request)
 {{% /md %}}</dd>
@@ -1372,7 +1048,7 @@ The following state arguments are supported:
             title="Optional">
         <span>commit<wbr>Events</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable notifications for commit events
 {{% /md %}}</dd>
@@ -1381,7 +1057,7 @@ The following state arguments are supported:
             title="Optional">
         <span>created<wbr>At</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1389,7 +1065,7 @@ The following state arguments are supported:
             title="Optional">
         <span>jira<wbr>Issue<wbr>Transition<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of a transition that moves issues to a closed state. You can find this number under the JIRA workflow administration (Administration > Issues > Workflows) by selecting View under Operations of the desired workflow of your project. By default, this ID is set to 2.
 {{% /md %}}</dd>
@@ -1398,7 +1074,7 @@ The following state arguments are supported:
             title="Optional">
         <span>merge<wbr>Requests<wbr>Events</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable notifications for merge request events
 {{% /md %}}</dd>
@@ -1407,7 +1083,7 @@ The following state arguments are supported:
             title="Optional">
         <span>password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password of the user created to be used with GitLab/JIRA.
 {{% /md %}}</dd>
@@ -1416,7 +1092,7 @@ The following state arguments are supported:
             title="Optional">
         <span>project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the project you want to activate integration on.
 {{% /md %}}</dd>
@@ -1425,7 +1101,7 @@ The following state arguments are supported:
             title="Optional">
         <span>project<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The short identifier for your JIRA project, all uppercase, e.g., PROJ.
 {{% /md %}}</dd>
@@ -1434,7 +1110,7 @@ The following state arguments are supported:
             title="Optional">
         <span>title</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1442,7 +1118,7 @@ The following state arguments are supported:
             title="Optional">
         <span>updated<wbr>At</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1450,7 +1126,7 @@ The following state arguments are supported:
             title="Optional">
         <span>url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL to the JIRA project which is being linked to this GitLab project. For example, https://jira.example.com.
 {{% /md %}}</dd>
@@ -1459,7 +1135,7 @@ The following state arguments are supported:
             title="Optional">
         <span>username</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The username of the user created to be used with GitLab/JIRA.
 {{% /md %}}</dd>

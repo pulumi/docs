@@ -18,7 +18,7 @@ Provides an EC2 launch template resource. Can be used to create instances or aut
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#LaunchTemplate">LaunchTemplate</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#LaunchTemplateArgs">LaunchTemplateArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#LaunchTemplate">LaunchTemplate</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#LaunchTemplateArgs">LaunchTemplateArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -26,7 +26,7 @@ Provides an EC2 launch template resource. Can be used to create instances or aut
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewLaunchTemplate<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2?tab=doc#LaunchTemplateArgs">LaunchTemplateArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2?tab=doc#LaunchTemplate">LaunchTemplate</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewLaunchTemplate<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2?tab=doc#LaunchTemplateArgs">LaunchTemplateArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2?tab=doc#LaunchTemplate">LaunchTemplate</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -126,7 +126,7 @@ Provides an EC2 launch template resource. Can be used to create instances or aut
             title="Optional">
         <span>Block<wbr>Device<wbr>Mappings</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplateblockdevicemapping">List&lt;Launch<wbr>Template<wbr>Block<wbr>Device<wbr>Mapping<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#launchtemplateblockdevicemapping">List&lt;Launch<wbr>Template<wbr>Block<wbr>Device<wbr>Mapping<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specify volumes to attach to the instance besides the volumes specified by the AMI.
 See Block Devices below for details.
@@ -136,7 +136,7 @@ See Block Devices below for details.
             title="Optional">
         <span>Capacity<wbr>Reservation<wbr>Specification</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatecapacityreservationspecification">Launch<wbr>Template<wbr>Capacity<wbr>Reservation<wbr>Specification<wbr>Args?</a></span>
+        <span class="property-type"><a href="#launchtemplatecapacityreservationspecification">Launch<wbr>Template<wbr>Capacity<wbr>Reservation<wbr>Specification<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Targeting for EC2 capacity reservations. See Capacity Reservation Specification below for more details.
 {{% /md %}}</dd>
@@ -145,7 +145,7 @@ See Block Devices below for details.
             title="Optional">
         <span>Cpu<wbr>Options</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatecpuoptions">Launch<wbr>Template<wbr>Cpu<wbr>Options<wbr>Args?</a></span>
+        <span class="property-type"><a href="#launchtemplatecpuoptions">Launch<wbr>Template<wbr>Cpu<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The CPU options for the instance. See CPU Options below for more details.
 {{% /md %}}</dd>
@@ -154,7 +154,7 @@ See Block Devices below for details.
             title="Optional">
         <span>Credit<wbr>Specification</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatecreditspecification">Launch<wbr>Template<wbr>Credit<wbr>Specification<wbr>Args?</a></span>
+        <span class="property-type"><a href="#launchtemplatecreditspecification">Launch<wbr>Template<wbr>Credit<wbr>Specification<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Customize the credit specification of the instance. See Credit
 Specification below for more details.
@@ -164,7 +164,7 @@ Specification below for more details.
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the launch template.
 {{% /md %}}</dd>
@@ -173,7 +173,7 @@ Specification below for more details.
             title="Optional">
         <span>Disable<wbr>Api<wbr>Termination</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If `true`, enables [EC2 Instance
 Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingDisableAPITermination)
@@ -183,7 +183,7 @@ Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/term
             title="Optional">
         <span>Ebs<wbr>Optimized</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If `true`, the launched EC2 instance will be EBS-optimized.
 {{% /md %}}</dd>
@@ -192,7 +192,7 @@ Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/term
             title="Optional">
         <span>Elastic<wbr>Gpu<wbr>Specifications</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplateelasticgpuspecification">List&lt;Launch<wbr>Template<wbr>Elastic<wbr>Gpu<wbr>Specification<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#launchtemplateelasticgpuspecification">List&lt;Launch<wbr>Template<wbr>Elastic<wbr>Gpu<wbr>Specification<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The elastic GPU to attach to the instance. See Elastic GPU
 below for more details.
@@ -202,7 +202,7 @@ below for more details.
             title="Optional">
         <span>Elastic<wbr>Inference<wbr>Accelerator</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplateelasticinferenceaccelerator">Launch<wbr>Template<wbr>Elastic<wbr>Inference<wbr>Accelerator<wbr>Args?</a></span>
+        <span class="property-type"><a href="#launchtemplateelasticinferenceaccelerator">Launch<wbr>Template<wbr>Elastic<wbr>Inference<wbr>Accelerator<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block containing an Elastic Inference Accelerator to attach to the instance. See Elastic Inference Accelerator below for more details.
 {{% /md %}}</dd>
@@ -211,7 +211,7 @@ below for more details.
             title="Optional">
         <span>Hibernation<wbr>Options</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatehibernationoptions">Launch<wbr>Template<wbr>Hibernation<wbr>Options<wbr>Args?</a></span>
+        <span class="property-type"><a href="#launchtemplatehibernationoptions">Launch<wbr>Template<wbr>Hibernation<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The hibernation options for the instance. See Hibernation Options below for more details.
 {{% /md %}}</dd>
@@ -220,7 +220,7 @@ below for more details.
             title="Optional">
         <span>Iam<wbr>Instance<wbr>Profile</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplateiaminstanceprofile">Launch<wbr>Template<wbr>Iam<wbr>Instance<wbr>Profile<wbr>Args?</a></span>
+        <span class="property-type"><a href="#launchtemplateiaminstanceprofile">Launch<wbr>Template<wbr>Iam<wbr>Instance<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The IAM Instance Profile to launch the instance with. See Instance Profile
 below for more details.
@@ -230,7 +230,7 @@ below for more details.
             title="Optional">
         <span>Image<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AMI from which to launch the instance.
 {{% /md %}}</dd>
@@ -239,7 +239,7 @@ below for more details.
             title="Optional">
         <span>Instance<wbr>Initiated<wbr>Shutdown<wbr>Behavior</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Shutdown behavior for the instance. Can be `stop` or `terminate`.
 (Default: `stop`).
@@ -249,7 +249,7 @@ below for more details.
             title="Optional">
         <span>Instance<wbr>Market<wbr>Options</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplateinstancemarketoptions">Launch<wbr>Template<wbr>Instance<wbr>Market<wbr>Options<wbr>Args?</a></span>
+        <span class="property-type"><a href="#launchtemplateinstancemarketoptions">Launch<wbr>Template<wbr>Instance<wbr>Market<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The market (purchasing) option for the instance. See Market Options
 below for details.
@@ -259,7 +259,7 @@ below for details.
             title="Optional">
         <span>Instance<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the instance.
 {{% /md %}}</dd>
@@ -268,7 +268,7 @@ below for details.
             title="Optional">
         <span>Kernel<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The kernel ID.
 {{% /md %}}</dd>
@@ -277,7 +277,7 @@ below for details.
             title="Optional">
         <span>Key<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The key name to use for the instance.
 {{% /md %}}</dd>
@@ -286,7 +286,7 @@ below for details.
             title="Optional">
         <span>License<wbr>Specifications</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatelicensespecification">List&lt;Launch<wbr>Template<wbr>License<wbr>Specification<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#launchtemplatelicensespecification">List&lt;Launch<wbr>Template<wbr>License<wbr>Specification<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of license specifications to associate with. See License Specification below for more details.
 {{% /md %}}</dd>
@@ -295,7 +295,7 @@ below for details.
             title="Optional">
         <span>Metadata<wbr>Options</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatemetadataoptions">Launch<wbr>Template<wbr>Metadata<wbr>Options<wbr>Args?</a></span>
+        <span class="property-type"><a href="#launchtemplatemetadataoptions">Launch<wbr>Template<wbr>Metadata<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Customize the metadata options for the instance. See Metadata Options below for more details.
 {{% /md %}}</dd>
@@ -304,7 +304,7 @@ below for details.
             title="Optional">
         <span>Monitoring</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatemonitoring">Launch<wbr>Template<wbr>Monitoring<wbr>Args?</a></span>
+        <span class="property-type"><a href="#launchtemplatemonitoring">Launch<wbr>Template<wbr>Monitoring<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The monitoring option for the instance. See Monitoring below for more details.
 {{% /md %}}</dd>
@@ -313,7 +313,7 @@ below for details.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the launch template. If you leave this blank, this provider will auto-generate a unique name.
 {{% /md %}}</dd>
@@ -322,7 +322,7 @@ below for details.
             title="Optional">
         <span>Name<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creates a unique name beginning with the specified prefix. Conflicts with `name`.
 {{% /md %}}</dd>
@@ -331,7 +331,7 @@ below for details.
             title="Optional">
         <span>Network<wbr>Interfaces</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatenetworkinterface">List&lt;Launch<wbr>Template<wbr>Network<wbr>Interface<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#launchtemplatenetworkinterface">List&lt;Launch<wbr>Template<wbr>Network<wbr>Interface<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Customize network interfaces to be attached at instance boot time. See Network
 Interfaces below for more details.
@@ -341,7 +341,7 @@ Interfaces below for more details.
             title="Optional">
         <span>Placement</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplateplacement">Launch<wbr>Template<wbr>Placement<wbr>Args?</a></span>
+        <span class="property-type"><a href="#launchtemplateplacement">Launch<wbr>Template<wbr>Placement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The placement of the instance. See Placement below for more details.
 {{% /md %}}</dd>
@@ -350,7 +350,7 @@ Interfaces below for more details.
             title="Optional">
         <span>Ram<wbr>Disk<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the RAM disk.
 {{% /md %}}</dd>
@@ -359,7 +359,7 @@ Interfaces below for more details.
             title="Optional">
         <span>Security<wbr>Group<wbr>Names</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of security group names to associate with. If you are creating Instances in a VPC, use
 `vpc_security_group_ids` instead.
@@ -369,7 +369,7 @@ Interfaces below for more details.
             title="Optional">
         <span>Tag<wbr>Specifications</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatetagspecification">List&lt;Launch<wbr>Template<wbr>Tag<wbr>Specification<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#launchtemplatetagspecification">List&lt;Launch<wbr>Template<wbr>Tag<wbr>Specification<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The tags to apply to the resources during launch. See Tag Specifications below for more details.
 {{% /md %}}</dd>
@@ -378,7 +378,7 @@ Interfaces below for more details.
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the launch template.
 {{% /md %}}</dd>
@@ -387,7 +387,7 @@ Interfaces below for more details.
             title="Optional">
         <span>User<wbr>Data</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Base64-encoded user data to provide when launching the instance.
 {{% /md %}}</dd>
@@ -396,7 +396,7 @@ Interfaces below for more details.
             title="Optional">
         <span>Vpc<wbr>Security<wbr>Group<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of security group IDs to associate with.
 {{% /md %}}</dd>
@@ -422,7 +422,7 @@ See Block Devices below for details.
             title="Optional">
         <span>Capacity<wbr>Reservation<wbr>Specification</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatecapacityreservationspecification">*Launch<wbr>Template<wbr>Capacity<wbr>Reservation<wbr>Specification</a></span>
+        <span class="property-type"><a href="#launchtemplatecapacityreservationspecification">Launch<wbr>Template<wbr>Capacity<wbr>Reservation<wbr>Specification</a></span>
     </dt>
     <dd>{{% md %}}Targeting for EC2 capacity reservations. See Capacity Reservation Specification below for more details.
 {{% /md %}}</dd>
@@ -431,7 +431,7 @@ See Block Devices below for details.
             title="Optional">
         <span>Cpu<wbr>Options</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatecpuoptions">*Launch<wbr>Template<wbr>Cpu<wbr>Options</a></span>
+        <span class="property-type"><a href="#launchtemplatecpuoptions">Launch<wbr>Template<wbr>Cpu<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}The CPU options for the instance. See CPU Options below for more details.
 {{% /md %}}</dd>
@@ -440,7 +440,7 @@ See Block Devices below for details.
             title="Optional">
         <span>Credit<wbr>Specification</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatecreditspecification">*Launch<wbr>Template<wbr>Credit<wbr>Specification</a></span>
+        <span class="property-type"><a href="#launchtemplatecreditspecification">Launch<wbr>Template<wbr>Credit<wbr>Specification</a></span>
     </dt>
     <dd>{{% md %}}Customize the credit specification of the instance. See Credit
 Specification below for more details.
@@ -450,7 +450,7 @@ Specification below for more details.
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the launch template.
 {{% /md %}}</dd>
@@ -459,7 +459,7 @@ Specification below for more details.
             title="Optional">
         <span>Disable<wbr>Api<wbr>Termination</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If `true`, enables [EC2 Instance
 Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingDisableAPITermination)
@@ -469,7 +469,7 @@ Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/term
             title="Optional">
         <span>Ebs<wbr>Optimized</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If `true`, the launched EC2 instance will be EBS-optimized.
 {{% /md %}}</dd>
@@ -488,7 +488,7 @@ below for more details.
             title="Optional">
         <span>Elastic<wbr>Inference<wbr>Accelerator</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplateelasticinferenceaccelerator">*Launch<wbr>Template<wbr>Elastic<wbr>Inference<wbr>Accelerator</a></span>
+        <span class="property-type"><a href="#launchtemplateelasticinferenceaccelerator">Launch<wbr>Template<wbr>Elastic<wbr>Inference<wbr>Accelerator</a></span>
     </dt>
     <dd>{{% md %}}Configuration block containing an Elastic Inference Accelerator to attach to the instance. See Elastic Inference Accelerator below for more details.
 {{% /md %}}</dd>
@@ -497,7 +497,7 @@ below for more details.
             title="Optional">
         <span>Hibernation<wbr>Options</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatehibernationoptions">*Launch<wbr>Template<wbr>Hibernation<wbr>Options</a></span>
+        <span class="property-type"><a href="#launchtemplatehibernationoptions">Launch<wbr>Template<wbr>Hibernation<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}The hibernation options for the instance. See Hibernation Options below for more details.
 {{% /md %}}</dd>
@@ -506,7 +506,7 @@ below for more details.
             title="Optional">
         <span>Iam<wbr>Instance<wbr>Profile</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplateiaminstanceprofile">*Launch<wbr>Template<wbr>Iam<wbr>Instance<wbr>Profile</a></span>
+        <span class="property-type"><a href="#launchtemplateiaminstanceprofile">Launch<wbr>Template<wbr>Iam<wbr>Instance<wbr>Profile</a></span>
     </dt>
     <dd>{{% md %}}The IAM Instance Profile to launch the instance with. See Instance Profile
 below for more details.
@@ -516,7 +516,7 @@ below for more details.
             title="Optional">
         <span>Image<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AMI from which to launch the instance.
 {{% /md %}}</dd>
@@ -525,7 +525,7 @@ below for more details.
             title="Optional">
         <span>Instance<wbr>Initiated<wbr>Shutdown<wbr>Behavior</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Shutdown behavior for the instance. Can be `stop` or `terminate`.
 (Default: `stop`).
@@ -535,7 +535,7 @@ below for more details.
             title="Optional">
         <span>Instance<wbr>Market<wbr>Options</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplateinstancemarketoptions">*Launch<wbr>Template<wbr>Instance<wbr>Market<wbr>Options</a></span>
+        <span class="property-type"><a href="#launchtemplateinstancemarketoptions">Launch<wbr>Template<wbr>Instance<wbr>Market<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}The market (purchasing) option for the instance. See Market Options
 below for details.
@@ -545,7 +545,7 @@ below for details.
             title="Optional">
         <span>Instance<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the instance.
 {{% /md %}}</dd>
@@ -554,7 +554,7 @@ below for details.
             title="Optional">
         <span>Kernel<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The kernel ID.
 {{% /md %}}</dd>
@@ -563,7 +563,7 @@ below for details.
             title="Optional">
         <span>Key<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The key name to use for the instance.
 {{% /md %}}</dd>
@@ -581,7 +581,7 @@ below for details.
             title="Optional">
         <span>Metadata<wbr>Options</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatemetadataoptions">*Launch<wbr>Template<wbr>Metadata<wbr>Options</a></span>
+        <span class="property-type"><a href="#launchtemplatemetadataoptions">Launch<wbr>Template<wbr>Metadata<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}Customize the metadata options for the instance. See Metadata Options below for more details.
 {{% /md %}}</dd>
@@ -590,7 +590,7 @@ below for details.
             title="Optional">
         <span>Monitoring</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatemonitoring">*Launch<wbr>Template<wbr>Monitoring</a></span>
+        <span class="property-type"><a href="#launchtemplatemonitoring">Launch<wbr>Template<wbr>Monitoring</a></span>
     </dt>
     <dd>{{% md %}}The monitoring option for the instance. See Monitoring below for more details.
 {{% /md %}}</dd>
@@ -599,7 +599,7 @@ below for details.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the launch template. If you leave this blank, this provider will auto-generate a unique name.
 {{% /md %}}</dd>
@@ -608,7 +608,7 @@ below for details.
             title="Optional">
         <span>Name<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creates a unique name beginning with the specified prefix. Conflicts with `name`.
 {{% /md %}}</dd>
@@ -627,7 +627,7 @@ Interfaces below for more details.
             title="Optional">
         <span>Placement</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplateplacement">*Launch<wbr>Template<wbr>Placement</a></span>
+        <span class="property-type"><a href="#launchtemplateplacement">Launch<wbr>Template<wbr>Placement</a></span>
     </dt>
     <dd>{{% md %}}The placement of the instance. See Placement below for more details.
 {{% /md %}}</dd>
@@ -636,7 +636,7 @@ Interfaces below for more details.
             title="Optional">
         <span>Ram<wbr>Disk<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the RAM disk.
 {{% /md %}}</dd>
@@ -673,7 +673,7 @@ Interfaces below for more details.
             title="Optional">
         <span>User<wbr>Data</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Base64-encoded user data to provide when launching the instance.
 {{% /md %}}</dd>
@@ -698,7 +698,7 @@ Interfaces below for more details.
             title="Optional">
         <span>block<wbr>Device<wbr>Mappings</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplateblockdevicemapping">Launch<wbr>Template<wbr>Block<wbr>Device<wbr>Mapping[]?</a></span>
+        <span class="property-type"><a href="#launchtemplateblockdevicemapping">Launch<wbr>Template<wbr>Block<wbr>Device<wbr>Mapping[]</a></span>
     </dt>
     <dd>{{% md %}}Specify volumes to attach to the instance besides the volumes specified by the AMI.
 See Block Devices below for details.
@@ -708,7 +708,7 @@ See Block Devices below for details.
             title="Optional">
         <span>capacity<wbr>Reservation<wbr>Specification</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatecapacityreservationspecification">Launch<wbr>Template<wbr>Capacity<wbr>Reservation<wbr>Specification?</a></span>
+        <span class="property-type"><a href="#launchtemplatecapacityreservationspecification">Launch<wbr>Template<wbr>Capacity<wbr>Reservation<wbr>Specification</a></span>
     </dt>
     <dd>{{% md %}}Targeting for EC2 capacity reservations. See Capacity Reservation Specification below for more details.
 {{% /md %}}</dd>
@@ -717,7 +717,7 @@ See Block Devices below for details.
             title="Optional">
         <span>cpu<wbr>Options</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatecpuoptions">Launch<wbr>Template<wbr>Cpu<wbr>Options?</a></span>
+        <span class="property-type"><a href="#launchtemplatecpuoptions">Launch<wbr>Template<wbr>Cpu<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}The CPU options for the instance. See CPU Options below for more details.
 {{% /md %}}</dd>
@@ -726,7 +726,7 @@ See Block Devices below for details.
             title="Optional">
         <span>credit<wbr>Specification</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatecreditspecification">Launch<wbr>Template<wbr>Credit<wbr>Specification?</a></span>
+        <span class="property-type"><a href="#launchtemplatecreditspecification">Launch<wbr>Template<wbr>Credit<wbr>Specification</a></span>
     </dt>
     <dd>{{% md %}}Customize the credit specification of the instance. See Credit
 Specification below for more details.
@@ -736,7 +736,7 @@ Specification below for more details.
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the launch template.
 {{% /md %}}</dd>
@@ -745,7 +745,7 @@ Specification below for more details.
             title="Optional">
         <span>disable<wbr>Api<wbr>Termination</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If `true`, enables [EC2 Instance
 Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingDisableAPITermination)
@@ -755,7 +755,7 @@ Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/term
             title="Optional">
         <span>ebs<wbr>Optimized</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If `true`, the launched EC2 instance will be EBS-optimized.
 {{% /md %}}</dd>
@@ -764,7 +764,7 @@ Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/term
             title="Optional">
         <span>elastic<wbr>Gpu<wbr>Specifications</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplateelasticgpuspecification">Launch<wbr>Template<wbr>Elastic<wbr>Gpu<wbr>Specification[]?</a></span>
+        <span class="property-type"><a href="#launchtemplateelasticgpuspecification">Launch<wbr>Template<wbr>Elastic<wbr>Gpu<wbr>Specification[]</a></span>
     </dt>
     <dd>{{% md %}}The elastic GPU to attach to the instance. See Elastic GPU
 below for more details.
@@ -774,7 +774,7 @@ below for more details.
             title="Optional">
         <span>elastic<wbr>Inference<wbr>Accelerator</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplateelasticinferenceaccelerator">Launch<wbr>Template<wbr>Elastic<wbr>Inference<wbr>Accelerator?</a></span>
+        <span class="property-type"><a href="#launchtemplateelasticinferenceaccelerator">Launch<wbr>Template<wbr>Elastic<wbr>Inference<wbr>Accelerator</a></span>
     </dt>
     <dd>{{% md %}}Configuration block containing an Elastic Inference Accelerator to attach to the instance. See Elastic Inference Accelerator below for more details.
 {{% /md %}}</dd>
@@ -783,7 +783,7 @@ below for more details.
             title="Optional">
         <span>hibernation<wbr>Options</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatehibernationoptions">Launch<wbr>Template<wbr>Hibernation<wbr>Options?</a></span>
+        <span class="property-type"><a href="#launchtemplatehibernationoptions">Launch<wbr>Template<wbr>Hibernation<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}The hibernation options for the instance. See Hibernation Options below for more details.
 {{% /md %}}</dd>
@@ -792,7 +792,7 @@ below for more details.
             title="Optional">
         <span>iam<wbr>Instance<wbr>Profile</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplateiaminstanceprofile">Launch<wbr>Template<wbr>Iam<wbr>Instance<wbr>Profile?</a></span>
+        <span class="property-type"><a href="#launchtemplateiaminstanceprofile">Launch<wbr>Template<wbr>Iam<wbr>Instance<wbr>Profile</a></span>
     </dt>
     <dd>{{% md %}}The IAM Instance Profile to launch the instance with. See Instance Profile
 below for more details.
@@ -802,7 +802,7 @@ below for more details.
             title="Optional">
         <span>image<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AMI from which to launch the instance.
 {{% /md %}}</dd>
@@ -811,7 +811,7 @@ below for more details.
             title="Optional">
         <span>instance<wbr>Initiated<wbr>Shutdown<wbr>Behavior</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Shutdown behavior for the instance. Can be `stop` or `terminate`.
 (Default: `stop`).
@@ -821,7 +821,7 @@ below for more details.
             title="Optional">
         <span>instance<wbr>Market<wbr>Options</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplateinstancemarketoptions">Launch<wbr>Template<wbr>Instance<wbr>Market<wbr>Options?</a></span>
+        <span class="property-type"><a href="#launchtemplateinstancemarketoptions">Launch<wbr>Template<wbr>Instance<wbr>Market<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}The market (purchasing) option for the instance. See Market Options
 below for details.
@@ -831,7 +831,7 @@ below for details.
             title="Optional">
         <span>instance<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the instance.
 {{% /md %}}</dd>
@@ -840,7 +840,7 @@ below for details.
             title="Optional">
         <span>kernel<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The kernel ID.
 {{% /md %}}</dd>
@@ -849,7 +849,7 @@ below for details.
             title="Optional">
         <span>key<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The key name to use for the instance.
 {{% /md %}}</dd>
@@ -858,7 +858,7 @@ below for details.
             title="Optional">
         <span>license<wbr>Specifications</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatelicensespecification">Launch<wbr>Template<wbr>License<wbr>Specification[]?</a></span>
+        <span class="property-type"><a href="#launchtemplatelicensespecification">Launch<wbr>Template<wbr>License<wbr>Specification[]</a></span>
     </dt>
     <dd>{{% md %}}A list of license specifications to associate with. See License Specification below for more details.
 {{% /md %}}</dd>
@@ -867,7 +867,7 @@ below for details.
             title="Optional">
         <span>metadata<wbr>Options</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatemetadataoptions">Launch<wbr>Template<wbr>Metadata<wbr>Options?</a></span>
+        <span class="property-type"><a href="#launchtemplatemetadataoptions">Launch<wbr>Template<wbr>Metadata<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}Customize the metadata options for the instance. See Metadata Options below for more details.
 {{% /md %}}</dd>
@@ -876,7 +876,7 @@ below for details.
             title="Optional">
         <span>monitoring</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatemonitoring">Launch<wbr>Template<wbr>Monitoring?</a></span>
+        <span class="property-type"><a href="#launchtemplatemonitoring">Launch<wbr>Template<wbr>Monitoring</a></span>
     </dt>
     <dd>{{% md %}}The monitoring option for the instance. See Monitoring below for more details.
 {{% /md %}}</dd>
@@ -885,7 +885,7 @@ below for details.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the launch template. If you leave this blank, this provider will auto-generate a unique name.
 {{% /md %}}</dd>
@@ -894,7 +894,7 @@ below for details.
             title="Optional">
         <span>name<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creates a unique name beginning with the specified prefix. Conflicts with `name`.
 {{% /md %}}</dd>
@@ -903,7 +903,7 @@ below for details.
             title="Optional">
         <span>network<wbr>Interfaces</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatenetworkinterface">Launch<wbr>Template<wbr>Network<wbr>Interface[]?</a></span>
+        <span class="property-type"><a href="#launchtemplatenetworkinterface">Launch<wbr>Template<wbr>Network<wbr>Interface[]</a></span>
     </dt>
     <dd>{{% md %}}Customize network interfaces to be attached at instance boot time. See Network
 Interfaces below for more details.
@@ -913,7 +913,7 @@ Interfaces below for more details.
             title="Optional">
         <span>placement</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplateplacement">Launch<wbr>Template<wbr>Placement?</a></span>
+        <span class="property-type"><a href="#launchtemplateplacement">Launch<wbr>Template<wbr>Placement</a></span>
     </dt>
     <dd>{{% md %}}The placement of the instance. See Placement below for more details.
 {{% /md %}}</dd>
@@ -922,7 +922,7 @@ Interfaces below for more details.
             title="Optional">
         <span>ram<wbr>Disk<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the RAM disk.
 {{% /md %}}</dd>
@@ -931,7 +931,7 @@ Interfaces below for more details.
             title="Optional">
         <span>security<wbr>Group<wbr>Names</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of security group names to associate with. If you are creating Instances in a VPC, use
 `vpc_security_group_ids` instead.
@@ -941,7 +941,7 @@ Interfaces below for more details.
             title="Optional">
         <span>tag<wbr>Specifications</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatetagspecification">Launch<wbr>Template<wbr>Tag<wbr>Specification[]?</a></span>
+        <span class="property-type"><a href="#launchtemplatetagspecification">Launch<wbr>Template<wbr>Tag<wbr>Specification[]</a></span>
     </dt>
     <dd>{{% md %}}The tags to apply to the resources during launch. See Tag Specifications below for more details.
 {{% /md %}}</dd>
@@ -950,7 +950,7 @@ Interfaces below for more details.
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the launch template.
 {{% /md %}}</dd>
@@ -959,7 +959,7 @@ Interfaces below for more details.
             title="Optional">
         <span>user<wbr>Data</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Base64-encoded user data to provide when launching the instance.
 {{% /md %}}</dd>
@@ -968,7 +968,7 @@ Interfaces below for more details.
             title="Optional">
         <span>vpc<wbr>Security<wbr>Group<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of security group IDs to associate with.
 {{% /md %}}</dd>
@@ -1289,44 +1289,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Block<wbr>Device<wbr>Mappings</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplateblockdevicemapping">List&lt;Launch<wbr>Template<wbr>Block<wbr>Device<wbr>Mapping&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}Specify volumes to attach to the instance besides the volumes specified by the AMI.
-See Block Devices below for details.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Capacity<wbr>Reservation<wbr>Specification</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatecapacityreservationspecification">Launch<wbr>Template<wbr>Capacity<wbr>Reservation<wbr>Specification?</a></span>
-    </dt>
-    <dd>{{% md %}}Targeting for EC2 capacity reservations. See Capacity Reservation Specification below for more details.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Cpu<wbr>Options</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatecpuoptions">Launch<wbr>Template<wbr>Cpu<wbr>Options?</a></span>
-    </dt>
-    <dd>{{% md %}}The CPU options for the instance. See CPU Options below for more details.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Credit<wbr>Specification</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatecreditspecification">Launch<wbr>Template<wbr>Credit<wbr>Specification?</a></span>
-    </dt>
-    <dd>{{% md %}}Customize the credit specification of the instance. See Credit
-Specification below for more details.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Default<wbr>Version</span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
@@ -1336,252 +1298,11 @@ Specification below for more details.
 
     <dt class="property-"
             title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Description of the launch template.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Disable<wbr>Api<wbr>Termination</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}If `true`, enables [EC2 Instance
-Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingDisableAPITermination)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Ebs<wbr>Optimized</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}If `true`, the launched EC2 instance will be EBS-optimized.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Elastic<wbr>Gpu<wbr>Specifications</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplateelasticgpuspecification">List&lt;Launch<wbr>Template<wbr>Elastic<wbr>Gpu<wbr>Specification&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}The elastic GPU to attach to the instance. See Elastic GPU
-below for more details.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Elastic<wbr>Inference<wbr>Accelerator</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplateelasticinferenceaccelerator">Launch<wbr>Template<wbr>Elastic<wbr>Inference<wbr>Accelerator?</a></span>
-    </dt>
-    <dd>{{% md %}}Configuration block containing an Elastic Inference Accelerator to attach to the instance. See Elastic Inference Accelerator below for more details.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Hibernation<wbr>Options</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatehibernationoptions">Launch<wbr>Template<wbr>Hibernation<wbr>Options?</a></span>
-    </dt>
-    <dd>{{% md %}}The hibernation options for the instance. See Hibernation Options below for more details.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Iam<wbr>Instance<wbr>Profile</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplateiaminstanceprofile">Launch<wbr>Template<wbr>Iam<wbr>Instance<wbr>Profile?</a></span>
-    </dt>
-    <dd>{{% md %}}The IAM Instance Profile to launch the instance with. See Instance Profile
-below for more details.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Image<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The AMI from which to launch the instance.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Instance<wbr>Initiated<wbr>Shutdown<wbr>Behavior</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Shutdown behavior for the instance. Can be `stop` or `terminate`.
-(Default: `stop`).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Instance<wbr>Market<wbr>Options</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplateinstancemarketoptions">Launch<wbr>Template<wbr>Instance<wbr>Market<wbr>Options?</a></span>
-    </dt>
-    <dd>{{% md %}}The market (purchasing) option for the instance. See Market Options
-below for details.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Instance<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The type of the instance.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Kernel<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The kernel ID.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Key<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The key name to use for the instance.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Latest<wbr>Version</span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The latest version of the launch template.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>License<wbr>Specifications</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatelicensespecification">List&lt;Launch<wbr>Template<wbr>License<wbr>Specification&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}A list of license specifications to associate with. See License Specification below for more details.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Metadata<wbr>Options</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatemetadataoptions">Launch<wbr>Template<wbr>Metadata<wbr>Options</a></span>
-    </dt>
-    <dd>{{% md %}}Customize the metadata options for the instance. See Metadata Options below for more details.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Monitoring</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatemonitoring">Launch<wbr>Template<wbr>Monitoring?</a></span>
-    </dt>
-    <dd>{{% md %}}The monitoring option for the instance. See Monitoring below for more details.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the launch template. If you leave this blank, this provider will auto-generate a unique name.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name<wbr>Prefix</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Creates a unique name beginning with the specified prefix. Conflicts with `name`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Network<wbr>Interfaces</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatenetworkinterface">List&lt;Launch<wbr>Template<wbr>Network<wbr>Interface&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}Customize network interfaces to be attached at instance boot time. See Network
-Interfaces below for more details.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Placement</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplateplacement">Launch<wbr>Template<wbr>Placement?</a></span>
-    </dt>
-    <dd>{{% md %}}The placement of the instance. See Placement below for more details.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Ram<wbr>Disk<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The ID of the RAM disk.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Security<wbr>Group<wbr>Names</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}A list of security group names to associate with. If you are creating Instances in a VPC, use
-`vpc_security_group_ids` instead.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tag<wbr>Specifications</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatetagspecification">List&lt;Launch<wbr>Template<wbr>Tag<wbr>Specification&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}The tags to apply to the resources during launch. See Tag Specifications below for more details.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the launch template.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>User<wbr>Data</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The Base64-encoded user data to provide when launching the instance.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Vpc<wbr>Security<wbr>Group<wbr>Ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}A list of security group IDs to associate with.
 {{% /md %}}</dd>
 
 </dl>
@@ -1602,44 +1323,6 @@ Interfaces below for more details.
 
     <dt class="property-"
             title="">
-        <span>Block<wbr>Device<wbr>Mappings</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplateblockdevicemapping">[]Launch<wbr>Template<wbr>Block<wbr>Device<wbr>Mapping</a></span>
-    </dt>
-    <dd>{{% md %}}Specify volumes to attach to the instance besides the volumes specified by the AMI.
-See Block Devices below for details.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Capacity<wbr>Reservation<wbr>Specification</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatecapacityreservationspecification">*Launch<wbr>Template<wbr>Capacity<wbr>Reservation<wbr>Specification</a></span>
-    </dt>
-    <dd>{{% md %}}Targeting for EC2 capacity reservations. See Capacity Reservation Specification below for more details.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Cpu<wbr>Options</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatecpuoptions">*Launch<wbr>Template<wbr>Cpu<wbr>Options</a></span>
-    </dt>
-    <dd>{{% md %}}The CPU options for the instance. See CPU Options below for more details.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Credit<wbr>Specification</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatecreditspecification">*Launch<wbr>Template<wbr>Credit<wbr>Specification</a></span>
-    </dt>
-    <dd>{{% md %}}Customize the credit specification of the instance. See Credit
-Specification below for more details.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Default<wbr>Version</span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
@@ -1649,252 +1332,11 @@ Specification below for more details.
 
     <dt class="property-"
             title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Description of the launch template.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Disable<wbr>Api<wbr>Termination</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}If `true`, enables [EC2 Instance
-Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingDisableAPITermination)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Ebs<wbr>Optimized</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}If `true`, the launched EC2 instance will be EBS-optimized.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Elastic<wbr>Gpu<wbr>Specifications</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplateelasticgpuspecification">[]Launch<wbr>Template<wbr>Elastic<wbr>Gpu<wbr>Specification</a></span>
-    </dt>
-    <dd>{{% md %}}The elastic GPU to attach to the instance. See Elastic GPU
-below for more details.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Elastic<wbr>Inference<wbr>Accelerator</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplateelasticinferenceaccelerator">*Launch<wbr>Template<wbr>Elastic<wbr>Inference<wbr>Accelerator</a></span>
-    </dt>
-    <dd>{{% md %}}Configuration block containing an Elastic Inference Accelerator to attach to the instance. See Elastic Inference Accelerator below for more details.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Hibernation<wbr>Options</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatehibernationoptions">*Launch<wbr>Template<wbr>Hibernation<wbr>Options</a></span>
-    </dt>
-    <dd>{{% md %}}The hibernation options for the instance. See Hibernation Options below for more details.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Iam<wbr>Instance<wbr>Profile</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplateiaminstanceprofile">*Launch<wbr>Template<wbr>Iam<wbr>Instance<wbr>Profile</a></span>
-    </dt>
-    <dd>{{% md %}}The IAM Instance Profile to launch the instance with. See Instance Profile
-below for more details.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Image<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The AMI from which to launch the instance.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Instance<wbr>Initiated<wbr>Shutdown<wbr>Behavior</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Shutdown behavior for the instance. Can be `stop` or `terminate`.
-(Default: `stop`).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Instance<wbr>Market<wbr>Options</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplateinstancemarketoptions">*Launch<wbr>Template<wbr>Instance<wbr>Market<wbr>Options</a></span>
-    </dt>
-    <dd>{{% md %}}The market (purchasing) option for the instance. See Market Options
-below for details.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Instance<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The type of the instance.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Kernel<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The kernel ID.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Key<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The key name to use for the instance.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Latest<wbr>Version</span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The latest version of the launch template.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>License<wbr>Specifications</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatelicensespecification">[]Launch<wbr>Template<wbr>License<wbr>Specification</a></span>
-    </dt>
-    <dd>{{% md %}}A list of license specifications to associate with. See License Specification below for more details.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Metadata<wbr>Options</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatemetadataoptions">Launch<wbr>Template<wbr>Metadata<wbr>Options</a></span>
-    </dt>
-    <dd>{{% md %}}Customize the metadata options for the instance. See Metadata Options below for more details.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Monitoring</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatemonitoring">*Launch<wbr>Template<wbr>Monitoring</a></span>
-    </dt>
-    <dd>{{% md %}}The monitoring option for the instance. See Monitoring below for more details.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the launch template. If you leave this blank, this provider will auto-generate a unique name.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name<wbr>Prefix</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Creates a unique name beginning with the specified prefix. Conflicts with `name`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Network<wbr>Interfaces</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatenetworkinterface">[]Launch<wbr>Template<wbr>Network<wbr>Interface</a></span>
-    </dt>
-    <dd>{{% md %}}Customize network interfaces to be attached at instance boot time. See Network
-Interfaces below for more details.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Placement</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplateplacement">*Launch<wbr>Template<wbr>Placement</a></span>
-    </dt>
-    <dd>{{% md %}}The placement of the instance. See Placement below for more details.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Ram<wbr>Disk<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the RAM disk.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Security<wbr>Group<wbr>Names</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}A list of security group names to associate with. If you are creating Instances in a VPC, use
-`vpc_security_group_ids` instead.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tag<wbr>Specifications</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatetagspecification">[]Launch<wbr>Template<wbr>Tag<wbr>Specification</a></span>
-    </dt>
-    <dd>{{% md %}}The tags to apply to the resources during launch. See Tag Specifications below for more details.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the launch template.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>User<wbr>Data</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The Base64-encoded user data to provide when launching the instance.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Vpc<wbr>Security<wbr>Group<wbr>Ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}A list of security group IDs to associate with.
 {{% /md %}}</dd>
 
 </dl>
@@ -1915,44 +1357,6 @@ Interfaces below for more details.
 
     <dt class="property-"
             title="">
-        <span>block<wbr>Device<wbr>Mappings</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplateblockdevicemapping">Launch<wbr>Template<wbr>Block<wbr>Device<wbr>Mapping[]?</a></span>
-    </dt>
-    <dd>{{% md %}}Specify volumes to attach to the instance besides the volumes specified by the AMI.
-See Block Devices below for details.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>capacity<wbr>Reservation<wbr>Specification</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatecapacityreservationspecification">Launch<wbr>Template<wbr>Capacity<wbr>Reservation<wbr>Specification?</a></span>
-    </dt>
-    <dd>{{% md %}}Targeting for EC2 capacity reservations. See Capacity Reservation Specification below for more details.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>cpu<wbr>Options</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatecpuoptions">Launch<wbr>Template<wbr>Cpu<wbr>Options?</a></span>
-    </dt>
-    <dd>{{% md %}}The CPU options for the instance. See CPU Options below for more details.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>credit<wbr>Specification</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatecreditspecification">Launch<wbr>Template<wbr>Credit<wbr>Specification?</a></span>
-    </dt>
-    <dd>{{% md %}}Customize the credit specification of the instance. See Credit
-Specification below for more details.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>default<wbr>Version</span>
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
@@ -1962,252 +1366,11 @@ Specification below for more details.
 
     <dt class="property-"
             title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Description of the launch template.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>disable<wbr>Api<wbr>Termination</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}If `true`, enables [EC2 Instance
-Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingDisableAPITermination)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>ebs<wbr>Optimized</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}If `true`, the launched EC2 instance will be EBS-optimized.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>elastic<wbr>Gpu<wbr>Specifications</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplateelasticgpuspecification">Launch<wbr>Template<wbr>Elastic<wbr>Gpu<wbr>Specification[]?</a></span>
-    </dt>
-    <dd>{{% md %}}The elastic GPU to attach to the instance. See Elastic GPU
-below for more details.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>elastic<wbr>Inference<wbr>Accelerator</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplateelasticinferenceaccelerator">Launch<wbr>Template<wbr>Elastic<wbr>Inference<wbr>Accelerator?</a></span>
-    </dt>
-    <dd>{{% md %}}Configuration block containing an Elastic Inference Accelerator to attach to the instance. See Elastic Inference Accelerator below for more details.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>hibernation<wbr>Options</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatehibernationoptions">Launch<wbr>Template<wbr>Hibernation<wbr>Options?</a></span>
-    </dt>
-    <dd>{{% md %}}The hibernation options for the instance. See Hibernation Options below for more details.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>iam<wbr>Instance<wbr>Profile</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplateiaminstanceprofile">Launch<wbr>Template<wbr>Iam<wbr>Instance<wbr>Profile?</a></span>
-    </dt>
-    <dd>{{% md %}}The IAM Instance Profile to launch the instance with. See Instance Profile
-below for more details.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>image<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The AMI from which to launch the instance.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>instance<wbr>Initiated<wbr>Shutdown<wbr>Behavior</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Shutdown behavior for the instance. Can be `stop` or `terminate`.
-(Default: `stop`).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>instance<wbr>Market<wbr>Options</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplateinstancemarketoptions">Launch<wbr>Template<wbr>Instance<wbr>Market<wbr>Options?</a></span>
-    </dt>
-    <dd>{{% md %}}The market (purchasing) option for the instance. See Market Options
-below for details.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>instance<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The type of the instance.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>kernel<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The kernel ID.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>key<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The key name to use for the instance.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>latest<wbr>Version</span>
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The latest version of the launch template.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>license<wbr>Specifications</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatelicensespecification">Launch<wbr>Template<wbr>License<wbr>Specification[]?</a></span>
-    </dt>
-    <dd>{{% md %}}A list of license specifications to associate with. See License Specification below for more details.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>metadata<wbr>Options</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatemetadataoptions">Launch<wbr>Template<wbr>Metadata<wbr>Options</a></span>
-    </dt>
-    <dd>{{% md %}}Customize the metadata options for the instance. See Metadata Options below for more details.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>monitoring</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatemonitoring">Launch<wbr>Template<wbr>Monitoring?</a></span>
-    </dt>
-    <dd>{{% md %}}The monitoring option for the instance. See Monitoring below for more details.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the launch template. If you leave this blank, this provider will auto-generate a unique name.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name<wbr>Prefix</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Creates a unique name beginning with the specified prefix. Conflicts with `name`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>network<wbr>Interfaces</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatenetworkinterface">Launch<wbr>Template<wbr>Network<wbr>Interface[]?</a></span>
-    </dt>
-    <dd>{{% md %}}Customize network interfaces to be attached at instance boot time. See Network
-Interfaces below for more details.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>placement</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplateplacement">Launch<wbr>Template<wbr>Placement?</a></span>
-    </dt>
-    <dd>{{% md %}}The placement of the instance. See Placement below for more details.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>ram<wbr>Disk<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The ID of the RAM disk.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>security<wbr>Group<wbr>Names</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}A list of security group names to associate with. If you are creating Instances in a VPC, use
-`vpc_security_group_ids` instead.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tag<wbr>Specifications</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatetagspecification">Launch<wbr>Template<wbr>Tag<wbr>Specification[]?</a></span>
-    </dt>
-    <dd>{{% md %}}The tags to apply to the resources during launch. See Tag Specifications below for more details.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the launch template.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>user<wbr>Data</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The Base64-encoded user data to provide when launching the instance.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>vpc<wbr>Security<wbr>Group<wbr>Ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}A list of security group IDs to associate with.
 {{% /md %}}</dd>
 
 </dl>
@@ -2228,44 +1391,6 @@ Interfaces below for more details.
 
     <dt class="property-"
             title="">
-        <span>block_<wbr>device_<wbr>mappings</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplateblockdevicemapping">List[Launch<wbr>Template<wbr>Block<wbr>Device<wbr>Mapping]</a></span>
-    </dt>
-    <dd>{{% md %}}Specify volumes to attach to the instance besides the volumes specified by the AMI.
-See Block Devices below for details.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>capacity_<wbr>reservation_<wbr>specification</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatecapacityreservationspecification">Dict[Launch<wbr>Template<wbr>Capacity<wbr>Reservation<wbr>Specification]</a></span>
-    </dt>
-    <dd>{{% md %}}Targeting for EC2 capacity reservations. See Capacity Reservation Specification below for more details.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>cpu_<wbr>options</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatecpuoptions">Dict[Launch<wbr>Template<wbr>Cpu<wbr>Options]</a></span>
-    </dt>
-    <dd>{{% md %}}The CPU options for the instance. See CPU Options below for more details.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>credit_<wbr>specification</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatecreditspecification">Dict[Launch<wbr>Template<wbr>Credit<wbr>Specification]</a></span>
-    </dt>
-    <dd>{{% md %}}Customize the credit specification of the instance. See Credit
-Specification below for more details.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>default_<wbr>version</span>
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
@@ -2275,252 +1400,11 @@ Specification below for more details.
 
     <dt class="property-"
             title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Description of the launch template.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>disable_<wbr>api_<wbr>termination</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}If `true`, enables [EC2 Instance
-Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingDisableAPITermination)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>ebs_<wbr>optimized</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}If `true`, the launched EC2 instance will be EBS-optimized.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>elastic_<wbr>gpu_<wbr>specifications</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplateelasticgpuspecification">List[Launch<wbr>Template<wbr>Elastic<wbr>Gpu<wbr>Specification]</a></span>
-    </dt>
-    <dd>{{% md %}}The elastic GPU to attach to the instance. See Elastic GPU
-below for more details.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>elastic_<wbr>inference_<wbr>accelerator</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplateelasticinferenceaccelerator">Dict[Launch<wbr>Template<wbr>Elastic<wbr>Inference<wbr>Accelerator]</a></span>
-    </dt>
-    <dd>{{% md %}}Configuration block containing an Elastic Inference Accelerator to attach to the instance. See Elastic Inference Accelerator below for more details.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>hibernation_<wbr>options</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatehibernationoptions">Dict[Launch<wbr>Template<wbr>Hibernation<wbr>Options]</a></span>
-    </dt>
-    <dd>{{% md %}}The hibernation options for the instance. See Hibernation Options below for more details.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>iam_<wbr>instance_<wbr>profile</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplateiaminstanceprofile">Dict[Launch<wbr>Template<wbr>Iam<wbr>Instance<wbr>Profile]</a></span>
-    </dt>
-    <dd>{{% md %}}The IAM Instance Profile to launch the instance with. See Instance Profile
-below for more details.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>image_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The AMI from which to launch the instance.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>instance_<wbr>initiated_<wbr>shutdown_<wbr>behavior</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Shutdown behavior for the instance. Can be `stop` or `terminate`.
-(Default: `stop`).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>instance_<wbr>market_<wbr>options</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplateinstancemarketoptions">Dict[Launch<wbr>Template<wbr>Instance<wbr>Market<wbr>Options]</a></span>
-    </dt>
-    <dd>{{% md %}}The market (purchasing) option for the instance. See Market Options
-below for details.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>instance_<wbr>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The type of the instance.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>kernel_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The kernel ID.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>key_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The key name to use for the instance.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>latest_<wbr>version</span>
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The latest version of the launch template.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>license_<wbr>specifications</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatelicensespecification">List[Launch<wbr>Template<wbr>License<wbr>Specification]</a></span>
-    </dt>
-    <dd>{{% md %}}A list of license specifications to associate with. See License Specification below for more details.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>metadata_<wbr>options</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatemetadataoptions">Dict[Launch<wbr>Template<wbr>Metadata<wbr>Options]</a></span>
-    </dt>
-    <dd>{{% md %}}Customize the metadata options for the instance. See Metadata Options below for more details.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>monitoring</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatemonitoring">Dict[Launch<wbr>Template<wbr>Monitoring]</a></span>
-    </dt>
-    <dd>{{% md %}}The monitoring option for the instance. See Monitoring below for more details.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the launch template. If you leave this blank, this provider will auto-generate a unique name.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name_<wbr>prefix</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Creates a unique name beginning with the specified prefix. Conflicts with `name`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>network_<wbr>interfaces</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatenetworkinterface">List[Launch<wbr>Template<wbr>Network<wbr>Interface]</a></span>
-    </dt>
-    <dd>{{% md %}}Customize network interfaces to be attached at instance boot time. See Network
-Interfaces below for more details.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>placement</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplateplacement">Dict[Launch<wbr>Template<wbr>Placement]</a></span>
-    </dt>
-    <dd>{{% md %}}The placement of the instance. See Placement below for more details.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>ram_<wbr>disk_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The ID of the RAM disk.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>security_<wbr>group_<wbr>names</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}A list of security group names to associate with. If you are creating Instances in a VPC, use
-`vpc_security_group_ids` instead.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tag_<wbr>specifications</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatetagspecification">List[Launch<wbr>Template<wbr>Tag<wbr>Specification]</a></span>
-    </dt>
-    <dd>{{% md %}}The tags to apply to the resources during launch. See Tag Specifications below for more details.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the launch template.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>user_<wbr>data</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The Base64-encoded user data to provide when launching the instance.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>vpc_<wbr>security_<wbr>group_<wbr>ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}A list of security group IDs to associate with.
 {{% /md %}}</dd>
 
 </dl>
@@ -2662,7 +1546,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the instance profile.
 {{% /md %}}</dd>
@@ -2671,7 +1555,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Block<wbr>Device<wbr>Mappings</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplateblockdevicemapping">List&lt;Launch<wbr>Template<wbr>Block<wbr>Device<wbr>Mapping<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#launchtemplateblockdevicemapping">List&lt;Launch<wbr>Template<wbr>Block<wbr>Device<wbr>Mapping<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specify volumes to attach to the instance besides the volumes specified by the AMI.
 See Block Devices below for details.
@@ -2681,7 +1565,7 @@ See Block Devices below for details.
             title="Optional">
         <span>Capacity<wbr>Reservation<wbr>Specification</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatecapacityreservationspecification">Launch<wbr>Template<wbr>Capacity<wbr>Reservation<wbr>Specification<wbr>Args?</a></span>
+        <span class="property-type"><a href="#launchtemplatecapacityreservationspecification">Launch<wbr>Template<wbr>Capacity<wbr>Reservation<wbr>Specification<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Targeting for EC2 capacity reservations. See Capacity Reservation Specification below for more details.
 {{% /md %}}</dd>
@@ -2690,7 +1574,7 @@ See Block Devices below for details.
             title="Optional">
         <span>Cpu<wbr>Options</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatecpuoptions">Launch<wbr>Template<wbr>Cpu<wbr>Options<wbr>Args?</a></span>
+        <span class="property-type"><a href="#launchtemplatecpuoptions">Launch<wbr>Template<wbr>Cpu<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The CPU options for the instance. See CPU Options below for more details.
 {{% /md %}}</dd>
@@ -2699,7 +1583,7 @@ See Block Devices below for details.
             title="Optional">
         <span>Credit<wbr>Specification</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatecreditspecification">Launch<wbr>Template<wbr>Credit<wbr>Specification<wbr>Args?</a></span>
+        <span class="property-type"><a href="#launchtemplatecreditspecification">Launch<wbr>Template<wbr>Credit<wbr>Specification<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Customize the credit specification of the instance. See Credit
 Specification below for more details.
@@ -2709,7 +1593,7 @@ Specification below for more details.
             title="Optional">
         <span>Default<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The default version of the launch template.
 {{% /md %}}</dd>
@@ -2718,7 +1602,7 @@ Specification below for more details.
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the launch template.
 {{% /md %}}</dd>
@@ -2727,7 +1611,7 @@ Specification below for more details.
             title="Optional">
         <span>Disable<wbr>Api<wbr>Termination</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If `true`, enables [EC2 Instance
 Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingDisableAPITermination)
@@ -2737,7 +1621,7 @@ Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/term
             title="Optional">
         <span>Ebs<wbr>Optimized</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If `true`, the launched EC2 instance will be EBS-optimized.
 {{% /md %}}</dd>
@@ -2746,7 +1630,7 @@ Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/term
             title="Optional">
         <span>Elastic<wbr>Gpu<wbr>Specifications</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplateelasticgpuspecification">List&lt;Launch<wbr>Template<wbr>Elastic<wbr>Gpu<wbr>Specification<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#launchtemplateelasticgpuspecification">List&lt;Launch<wbr>Template<wbr>Elastic<wbr>Gpu<wbr>Specification<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The elastic GPU to attach to the instance. See Elastic GPU
 below for more details.
@@ -2756,7 +1640,7 @@ below for more details.
             title="Optional">
         <span>Elastic<wbr>Inference<wbr>Accelerator</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplateelasticinferenceaccelerator">Launch<wbr>Template<wbr>Elastic<wbr>Inference<wbr>Accelerator<wbr>Args?</a></span>
+        <span class="property-type"><a href="#launchtemplateelasticinferenceaccelerator">Launch<wbr>Template<wbr>Elastic<wbr>Inference<wbr>Accelerator<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block containing an Elastic Inference Accelerator to attach to the instance. See Elastic Inference Accelerator below for more details.
 {{% /md %}}</dd>
@@ -2765,7 +1649,7 @@ below for more details.
             title="Optional">
         <span>Hibernation<wbr>Options</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatehibernationoptions">Launch<wbr>Template<wbr>Hibernation<wbr>Options<wbr>Args?</a></span>
+        <span class="property-type"><a href="#launchtemplatehibernationoptions">Launch<wbr>Template<wbr>Hibernation<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The hibernation options for the instance. See Hibernation Options below for more details.
 {{% /md %}}</dd>
@@ -2774,7 +1658,7 @@ below for more details.
             title="Optional">
         <span>Iam<wbr>Instance<wbr>Profile</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplateiaminstanceprofile">Launch<wbr>Template<wbr>Iam<wbr>Instance<wbr>Profile<wbr>Args?</a></span>
+        <span class="property-type"><a href="#launchtemplateiaminstanceprofile">Launch<wbr>Template<wbr>Iam<wbr>Instance<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The IAM Instance Profile to launch the instance with. See Instance Profile
 below for more details.
@@ -2784,7 +1668,7 @@ below for more details.
             title="Optional">
         <span>Image<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AMI from which to launch the instance.
 {{% /md %}}</dd>
@@ -2793,7 +1677,7 @@ below for more details.
             title="Optional">
         <span>Instance<wbr>Initiated<wbr>Shutdown<wbr>Behavior</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Shutdown behavior for the instance. Can be `stop` or `terminate`.
 (Default: `stop`).
@@ -2803,7 +1687,7 @@ below for more details.
             title="Optional">
         <span>Instance<wbr>Market<wbr>Options</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplateinstancemarketoptions">Launch<wbr>Template<wbr>Instance<wbr>Market<wbr>Options<wbr>Args?</a></span>
+        <span class="property-type"><a href="#launchtemplateinstancemarketoptions">Launch<wbr>Template<wbr>Instance<wbr>Market<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The market (purchasing) option for the instance. See Market Options
 below for details.
@@ -2813,7 +1697,7 @@ below for details.
             title="Optional">
         <span>Instance<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the instance.
 {{% /md %}}</dd>
@@ -2822,7 +1706,7 @@ below for details.
             title="Optional">
         <span>Kernel<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The kernel ID.
 {{% /md %}}</dd>
@@ -2831,7 +1715,7 @@ below for details.
             title="Optional">
         <span>Key<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The key name to use for the instance.
 {{% /md %}}</dd>
@@ -2840,7 +1724,7 @@ below for details.
             title="Optional">
         <span>Latest<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The latest version of the launch template.
 {{% /md %}}</dd>
@@ -2849,7 +1733,7 @@ below for details.
             title="Optional">
         <span>License<wbr>Specifications</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatelicensespecification">List&lt;Launch<wbr>Template<wbr>License<wbr>Specification<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#launchtemplatelicensespecification">List&lt;Launch<wbr>Template<wbr>License<wbr>Specification<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of license specifications to associate with. See License Specification below for more details.
 {{% /md %}}</dd>
@@ -2858,7 +1742,7 @@ below for details.
             title="Optional">
         <span>Metadata<wbr>Options</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatemetadataoptions">Launch<wbr>Template<wbr>Metadata<wbr>Options<wbr>Args?</a></span>
+        <span class="property-type"><a href="#launchtemplatemetadataoptions">Launch<wbr>Template<wbr>Metadata<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Customize the metadata options for the instance. See Metadata Options below for more details.
 {{% /md %}}</dd>
@@ -2867,7 +1751,7 @@ below for details.
             title="Optional">
         <span>Monitoring</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatemonitoring">Launch<wbr>Template<wbr>Monitoring<wbr>Args?</a></span>
+        <span class="property-type"><a href="#launchtemplatemonitoring">Launch<wbr>Template<wbr>Monitoring<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The monitoring option for the instance. See Monitoring below for more details.
 {{% /md %}}</dd>
@@ -2876,7 +1760,7 @@ below for details.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the launch template. If you leave this blank, this provider will auto-generate a unique name.
 {{% /md %}}</dd>
@@ -2885,7 +1769,7 @@ below for details.
             title="Optional">
         <span>Name<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creates a unique name beginning with the specified prefix. Conflicts with `name`.
 {{% /md %}}</dd>
@@ -2894,7 +1778,7 @@ below for details.
             title="Optional">
         <span>Network<wbr>Interfaces</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatenetworkinterface">List&lt;Launch<wbr>Template<wbr>Network<wbr>Interface<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#launchtemplatenetworkinterface">List&lt;Launch<wbr>Template<wbr>Network<wbr>Interface<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Customize network interfaces to be attached at instance boot time. See Network
 Interfaces below for more details.
@@ -2904,7 +1788,7 @@ Interfaces below for more details.
             title="Optional">
         <span>Placement</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplateplacement">Launch<wbr>Template<wbr>Placement<wbr>Args?</a></span>
+        <span class="property-type"><a href="#launchtemplateplacement">Launch<wbr>Template<wbr>Placement<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The placement of the instance. See Placement below for more details.
 {{% /md %}}</dd>
@@ -2913,7 +1797,7 @@ Interfaces below for more details.
             title="Optional">
         <span>Ram<wbr>Disk<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the RAM disk.
 {{% /md %}}</dd>
@@ -2922,7 +1806,7 @@ Interfaces below for more details.
             title="Optional">
         <span>Security<wbr>Group<wbr>Names</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of security group names to associate with. If you are creating Instances in a VPC, use
 `vpc_security_group_ids` instead.
@@ -2932,7 +1816,7 @@ Interfaces below for more details.
             title="Optional">
         <span>Tag<wbr>Specifications</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatetagspecification">List&lt;Launch<wbr>Template<wbr>Tag<wbr>Specification<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#launchtemplatetagspecification">List&lt;Launch<wbr>Template<wbr>Tag<wbr>Specification<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The tags to apply to the resources during launch. See Tag Specifications below for more details.
 {{% /md %}}</dd>
@@ -2941,7 +1825,7 @@ Interfaces below for more details.
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the launch template.
 {{% /md %}}</dd>
@@ -2950,7 +1834,7 @@ Interfaces below for more details.
             title="Optional">
         <span>User<wbr>Data</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Base64-encoded user data to provide when launching the instance.
 {{% /md %}}</dd>
@@ -2959,7 +1843,7 @@ Interfaces below for more details.
             title="Optional">
         <span>Vpc<wbr>Security<wbr>Group<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of security group IDs to associate with.
 {{% /md %}}</dd>
@@ -2975,7 +1859,7 @@ Interfaces below for more details.
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the instance profile.
 {{% /md %}}</dd>
@@ -2994,7 +1878,7 @@ See Block Devices below for details.
             title="Optional">
         <span>Capacity<wbr>Reservation<wbr>Specification</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatecapacityreservationspecification">*Launch<wbr>Template<wbr>Capacity<wbr>Reservation<wbr>Specification</a></span>
+        <span class="property-type"><a href="#launchtemplatecapacityreservationspecification">Launch<wbr>Template<wbr>Capacity<wbr>Reservation<wbr>Specification</a></span>
     </dt>
     <dd>{{% md %}}Targeting for EC2 capacity reservations. See Capacity Reservation Specification below for more details.
 {{% /md %}}</dd>
@@ -3003,7 +1887,7 @@ See Block Devices below for details.
             title="Optional">
         <span>Cpu<wbr>Options</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatecpuoptions">*Launch<wbr>Template<wbr>Cpu<wbr>Options</a></span>
+        <span class="property-type"><a href="#launchtemplatecpuoptions">Launch<wbr>Template<wbr>Cpu<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}The CPU options for the instance. See CPU Options below for more details.
 {{% /md %}}</dd>
@@ -3012,7 +1896,7 @@ See Block Devices below for details.
             title="Optional">
         <span>Credit<wbr>Specification</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatecreditspecification">*Launch<wbr>Template<wbr>Credit<wbr>Specification</a></span>
+        <span class="property-type"><a href="#launchtemplatecreditspecification">Launch<wbr>Template<wbr>Credit<wbr>Specification</a></span>
     </dt>
     <dd>{{% md %}}Customize the credit specification of the instance. See Credit
 Specification below for more details.
@@ -3022,7 +1906,7 @@ Specification below for more details.
             title="Optional">
         <span>Default<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The default version of the launch template.
 {{% /md %}}</dd>
@@ -3031,7 +1915,7 @@ Specification below for more details.
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the launch template.
 {{% /md %}}</dd>
@@ -3040,7 +1924,7 @@ Specification below for more details.
             title="Optional">
         <span>Disable<wbr>Api<wbr>Termination</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If `true`, enables [EC2 Instance
 Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingDisableAPITermination)
@@ -3050,7 +1934,7 @@ Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/term
             title="Optional">
         <span>Ebs<wbr>Optimized</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If `true`, the launched EC2 instance will be EBS-optimized.
 {{% /md %}}</dd>
@@ -3069,7 +1953,7 @@ below for more details.
             title="Optional">
         <span>Elastic<wbr>Inference<wbr>Accelerator</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplateelasticinferenceaccelerator">*Launch<wbr>Template<wbr>Elastic<wbr>Inference<wbr>Accelerator</a></span>
+        <span class="property-type"><a href="#launchtemplateelasticinferenceaccelerator">Launch<wbr>Template<wbr>Elastic<wbr>Inference<wbr>Accelerator</a></span>
     </dt>
     <dd>{{% md %}}Configuration block containing an Elastic Inference Accelerator to attach to the instance. See Elastic Inference Accelerator below for more details.
 {{% /md %}}</dd>
@@ -3078,7 +1962,7 @@ below for more details.
             title="Optional">
         <span>Hibernation<wbr>Options</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatehibernationoptions">*Launch<wbr>Template<wbr>Hibernation<wbr>Options</a></span>
+        <span class="property-type"><a href="#launchtemplatehibernationoptions">Launch<wbr>Template<wbr>Hibernation<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}The hibernation options for the instance. See Hibernation Options below for more details.
 {{% /md %}}</dd>
@@ -3087,7 +1971,7 @@ below for more details.
             title="Optional">
         <span>Iam<wbr>Instance<wbr>Profile</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplateiaminstanceprofile">*Launch<wbr>Template<wbr>Iam<wbr>Instance<wbr>Profile</a></span>
+        <span class="property-type"><a href="#launchtemplateiaminstanceprofile">Launch<wbr>Template<wbr>Iam<wbr>Instance<wbr>Profile</a></span>
     </dt>
     <dd>{{% md %}}The IAM Instance Profile to launch the instance with. See Instance Profile
 below for more details.
@@ -3097,7 +1981,7 @@ below for more details.
             title="Optional">
         <span>Image<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AMI from which to launch the instance.
 {{% /md %}}</dd>
@@ -3106,7 +1990,7 @@ below for more details.
             title="Optional">
         <span>Instance<wbr>Initiated<wbr>Shutdown<wbr>Behavior</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Shutdown behavior for the instance. Can be `stop` or `terminate`.
 (Default: `stop`).
@@ -3116,7 +2000,7 @@ below for more details.
             title="Optional">
         <span>Instance<wbr>Market<wbr>Options</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplateinstancemarketoptions">*Launch<wbr>Template<wbr>Instance<wbr>Market<wbr>Options</a></span>
+        <span class="property-type"><a href="#launchtemplateinstancemarketoptions">Launch<wbr>Template<wbr>Instance<wbr>Market<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}The market (purchasing) option for the instance. See Market Options
 below for details.
@@ -3126,7 +2010,7 @@ below for details.
             title="Optional">
         <span>Instance<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the instance.
 {{% /md %}}</dd>
@@ -3135,7 +2019,7 @@ below for details.
             title="Optional">
         <span>Kernel<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The kernel ID.
 {{% /md %}}</dd>
@@ -3144,7 +2028,7 @@ below for details.
             title="Optional">
         <span>Key<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The key name to use for the instance.
 {{% /md %}}</dd>
@@ -3153,7 +2037,7 @@ below for details.
             title="Optional">
         <span>Latest<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The latest version of the launch template.
 {{% /md %}}</dd>
@@ -3171,7 +2055,7 @@ below for details.
             title="Optional">
         <span>Metadata<wbr>Options</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatemetadataoptions">*Launch<wbr>Template<wbr>Metadata<wbr>Options</a></span>
+        <span class="property-type"><a href="#launchtemplatemetadataoptions">Launch<wbr>Template<wbr>Metadata<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}Customize the metadata options for the instance. See Metadata Options below for more details.
 {{% /md %}}</dd>
@@ -3180,7 +2064,7 @@ below for details.
             title="Optional">
         <span>Monitoring</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatemonitoring">*Launch<wbr>Template<wbr>Monitoring</a></span>
+        <span class="property-type"><a href="#launchtemplatemonitoring">Launch<wbr>Template<wbr>Monitoring</a></span>
     </dt>
     <dd>{{% md %}}The monitoring option for the instance. See Monitoring below for more details.
 {{% /md %}}</dd>
@@ -3189,7 +2073,7 @@ below for details.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the launch template. If you leave this blank, this provider will auto-generate a unique name.
 {{% /md %}}</dd>
@@ -3198,7 +2082,7 @@ below for details.
             title="Optional">
         <span>Name<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creates a unique name beginning with the specified prefix. Conflicts with `name`.
 {{% /md %}}</dd>
@@ -3217,7 +2101,7 @@ Interfaces below for more details.
             title="Optional">
         <span>Placement</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplateplacement">*Launch<wbr>Template<wbr>Placement</a></span>
+        <span class="property-type"><a href="#launchtemplateplacement">Launch<wbr>Template<wbr>Placement</a></span>
     </dt>
     <dd>{{% md %}}The placement of the instance. See Placement below for more details.
 {{% /md %}}</dd>
@@ -3226,7 +2110,7 @@ Interfaces below for more details.
             title="Optional">
         <span>Ram<wbr>Disk<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the RAM disk.
 {{% /md %}}</dd>
@@ -3263,7 +2147,7 @@ Interfaces below for more details.
             title="Optional">
         <span>User<wbr>Data</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Base64-encoded user data to provide when launching the instance.
 {{% /md %}}</dd>
@@ -3288,7 +2172,7 @@ Interfaces below for more details.
             title="Optional">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the instance profile.
 {{% /md %}}</dd>
@@ -3297,7 +2181,7 @@ Interfaces below for more details.
             title="Optional">
         <span>block<wbr>Device<wbr>Mappings</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplateblockdevicemapping">Launch<wbr>Template<wbr>Block<wbr>Device<wbr>Mapping[]?</a></span>
+        <span class="property-type"><a href="#launchtemplateblockdevicemapping">Launch<wbr>Template<wbr>Block<wbr>Device<wbr>Mapping[]</a></span>
     </dt>
     <dd>{{% md %}}Specify volumes to attach to the instance besides the volumes specified by the AMI.
 See Block Devices below for details.
@@ -3307,7 +2191,7 @@ See Block Devices below for details.
             title="Optional">
         <span>capacity<wbr>Reservation<wbr>Specification</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatecapacityreservationspecification">Launch<wbr>Template<wbr>Capacity<wbr>Reservation<wbr>Specification?</a></span>
+        <span class="property-type"><a href="#launchtemplatecapacityreservationspecification">Launch<wbr>Template<wbr>Capacity<wbr>Reservation<wbr>Specification</a></span>
     </dt>
     <dd>{{% md %}}Targeting for EC2 capacity reservations. See Capacity Reservation Specification below for more details.
 {{% /md %}}</dd>
@@ -3316,7 +2200,7 @@ See Block Devices below for details.
             title="Optional">
         <span>cpu<wbr>Options</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatecpuoptions">Launch<wbr>Template<wbr>Cpu<wbr>Options?</a></span>
+        <span class="property-type"><a href="#launchtemplatecpuoptions">Launch<wbr>Template<wbr>Cpu<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}The CPU options for the instance. See CPU Options below for more details.
 {{% /md %}}</dd>
@@ -3325,7 +2209,7 @@ See Block Devices below for details.
             title="Optional">
         <span>credit<wbr>Specification</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatecreditspecification">Launch<wbr>Template<wbr>Credit<wbr>Specification?</a></span>
+        <span class="property-type"><a href="#launchtemplatecreditspecification">Launch<wbr>Template<wbr>Credit<wbr>Specification</a></span>
     </dt>
     <dd>{{% md %}}Customize the credit specification of the instance. See Credit
 Specification below for more details.
@@ -3335,7 +2219,7 @@ Specification below for more details.
             title="Optional">
         <span>default<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The default version of the launch template.
 {{% /md %}}</dd>
@@ -3344,7 +2228,7 @@ Specification below for more details.
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the launch template.
 {{% /md %}}</dd>
@@ -3353,7 +2237,7 @@ Specification below for more details.
             title="Optional">
         <span>disable<wbr>Api<wbr>Termination</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If `true`, enables [EC2 Instance
 Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingDisableAPITermination)
@@ -3363,7 +2247,7 @@ Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/term
             title="Optional">
         <span>ebs<wbr>Optimized</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If `true`, the launched EC2 instance will be EBS-optimized.
 {{% /md %}}</dd>
@@ -3372,7 +2256,7 @@ Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/term
             title="Optional">
         <span>elastic<wbr>Gpu<wbr>Specifications</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplateelasticgpuspecification">Launch<wbr>Template<wbr>Elastic<wbr>Gpu<wbr>Specification[]?</a></span>
+        <span class="property-type"><a href="#launchtemplateelasticgpuspecification">Launch<wbr>Template<wbr>Elastic<wbr>Gpu<wbr>Specification[]</a></span>
     </dt>
     <dd>{{% md %}}The elastic GPU to attach to the instance. See Elastic GPU
 below for more details.
@@ -3382,7 +2266,7 @@ below for more details.
             title="Optional">
         <span>elastic<wbr>Inference<wbr>Accelerator</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplateelasticinferenceaccelerator">Launch<wbr>Template<wbr>Elastic<wbr>Inference<wbr>Accelerator?</a></span>
+        <span class="property-type"><a href="#launchtemplateelasticinferenceaccelerator">Launch<wbr>Template<wbr>Elastic<wbr>Inference<wbr>Accelerator</a></span>
     </dt>
     <dd>{{% md %}}Configuration block containing an Elastic Inference Accelerator to attach to the instance. See Elastic Inference Accelerator below for more details.
 {{% /md %}}</dd>
@@ -3391,7 +2275,7 @@ below for more details.
             title="Optional">
         <span>hibernation<wbr>Options</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatehibernationoptions">Launch<wbr>Template<wbr>Hibernation<wbr>Options?</a></span>
+        <span class="property-type"><a href="#launchtemplatehibernationoptions">Launch<wbr>Template<wbr>Hibernation<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}The hibernation options for the instance. See Hibernation Options below for more details.
 {{% /md %}}</dd>
@@ -3400,7 +2284,7 @@ below for more details.
             title="Optional">
         <span>iam<wbr>Instance<wbr>Profile</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplateiaminstanceprofile">Launch<wbr>Template<wbr>Iam<wbr>Instance<wbr>Profile?</a></span>
+        <span class="property-type"><a href="#launchtemplateiaminstanceprofile">Launch<wbr>Template<wbr>Iam<wbr>Instance<wbr>Profile</a></span>
     </dt>
     <dd>{{% md %}}The IAM Instance Profile to launch the instance with. See Instance Profile
 below for more details.
@@ -3410,7 +2294,7 @@ below for more details.
             title="Optional">
         <span>image<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AMI from which to launch the instance.
 {{% /md %}}</dd>
@@ -3419,7 +2303,7 @@ below for more details.
             title="Optional">
         <span>instance<wbr>Initiated<wbr>Shutdown<wbr>Behavior</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Shutdown behavior for the instance. Can be `stop` or `terminate`.
 (Default: `stop`).
@@ -3429,7 +2313,7 @@ below for more details.
             title="Optional">
         <span>instance<wbr>Market<wbr>Options</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplateinstancemarketoptions">Launch<wbr>Template<wbr>Instance<wbr>Market<wbr>Options?</a></span>
+        <span class="property-type"><a href="#launchtemplateinstancemarketoptions">Launch<wbr>Template<wbr>Instance<wbr>Market<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}The market (purchasing) option for the instance. See Market Options
 below for details.
@@ -3439,7 +2323,7 @@ below for details.
             title="Optional">
         <span>instance<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the instance.
 {{% /md %}}</dd>
@@ -3448,7 +2332,7 @@ below for details.
             title="Optional">
         <span>kernel<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The kernel ID.
 {{% /md %}}</dd>
@@ -3457,7 +2341,7 @@ below for details.
             title="Optional">
         <span>key<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The key name to use for the instance.
 {{% /md %}}</dd>
@@ -3466,7 +2350,7 @@ below for details.
             title="Optional">
         <span>latest<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The latest version of the launch template.
 {{% /md %}}</dd>
@@ -3475,7 +2359,7 @@ below for details.
             title="Optional">
         <span>license<wbr>Specifications</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatelicensespecification">Launch<wbr>Template<wbr>License<wbr>Specification[]?</a></span>
+        <span class="property-type"><a href="#launchtemplatelicensespecification">Launch<wbr>Template<wbr>License<wbr>Specification[]</a></span>
     </dt>
     <dd>{{% md %}}A list of license specifications to associate with. See License Specification below for more details.
 {{% /md %}}</dd>
@@ -3484,7 +2368,7 @@ below for details.
             title="Optional">
         <span>metadata<wbr>Options</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatemetadataoptions">Launch<wbr>Template<wbr>Metadata<wbr>Options?</a></span>
+        <span class="property-type"><a href="#launchtemplatemetadataoptions">Launch<wbr>Template<wbr>Metadata<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}Customize the metadata options for the instance. See Metadata Options below for more details.
 {{% /md %}}</dd>
@@ -3493,7 +2377,7 @@ below for details.
             title="Optional">
         <span>monitoring</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatemonitoring">Launch<wbr>Template<wbr>Monitoring?</a></span>
+        <span class="property-type"><a href="#launchtemplatemonitoring">Launch<wbr>Template<wbr>Monitoring</a></span>
     </dt>
     <dd>{{% md %}}The monitoring option for the instance. See Monitoring below for more details.
 {{% /md %}}</dd>
@@ -3502,7 +2386,7 @@ below for details.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the launch template. If you leave this blank, this provider will auto-generate a unique name.
 {{% /md %}}</dd>
@@ -3511,7 +2395,7 @@ below for details.
             title="Optional">
         <span>name<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creates a unique name beginning with the specified prefix. Conflicts with `name`.
 {{% /md %}}</dd>
@@ -3520,7 +2404,7 @@ below for details.
             title="Optional">
         <span>network<wbr>Interfaces</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatenetworkinterface">Launch<wbr>Template<wbr>Network<wbr>Interface[]?</a></span>
+        <span class="property-type"><a href="#launchtemplatenetworkinterface">Launch<wbr>Template<wbr>Network<wbr>Interface[]</a></span>
     </dt>
     <dd>{{% md %}}Customize network interfaces to be attached at instance boot time. See Network
 Interfaces below for more details.
@@ -3530,7 +2414,7 @@ Interfaces below for more details.
             title="Optional">
         <span>placement</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplateplacement">Launch<wbr>Template<wbr>Placement?</a></span>
+        <span class="property-type"><a href="#launchtemplateplacement">Launch<wbr>Template<wbr>Placement</a></span>
     </dt>
     <dd>{{% md %}}The placement of the instance. See Placement below for more details.
 {{% /md %}}</dd>
@@ -3539,7 +2423,7 @@ Interfaces below for more details.
             title="Optional">
         <span>ram<wbr>Disk<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the RAM disk.
 {{% /md %}}</dd>
@@ -3548,7 +2432,7 @@ Interfaces below for more details.
             title="Optional">
         <span>security<wbr>Group<wbr>Names</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of security group names to associate with. If you are creating Instances in a VPC, use
 `vpc_security_group_ids` instead.
@@ -3558,7 +2442,7 @@ Interfaces below for more details.
             title="Optional">
         <span>tag<wbr>Specifications</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatetagspecification">Launch<wbr>Template<wbr>Tag<wbr>Specification[]?</a></span>
+        <span class="property-type"><a href="#launchtemplatetagspecification">Launch<wbr>Template<wbr>Tag<wbr>Specification[]</a></span>
     </dt>
     <dd>{{% md %}}The tags to apply to the resources during launch. See Tag Specifications below for more details.
 {{% /md %}}</dd>
@@ -3567,7 +2451,7 @@ Interfaces below for more details.
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the launch template.
 {{% /md %}}</dd>
@@ -3576,7 +2460,7 @@ Interfaces below for more details.
             title="Optional">
         <span>user<wbr>Data</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Base64-encoded user data to provide when launching the instance.
 {{% /md %}}</dd>
@@ -3585,7 +2469,7 @@ Interfaces below for more details.
             title="Optional">
         <span>vpc<wbr>Security<wbr>Group<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of security group IDs to associate with.
 {{% /md %}}</dd>
@@ -3936,7 +2820,7 @@ Interfaces below for more details.
             title="Optional">
         <span>Device<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the device to mount.
 {{% /md %}}</dd>
@@ -3945,7 +2829,7 @@ Interfaces below for more details.
             title="Optional">
         <span>Ebs</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplateblockdevicemappingebs">Launch<wbr>Template<wbr>Block<wbr>Device<wbr>Mapping<wbr>Ebs<wbr>Args?</a></span>
+        <span class="property-type"><a href="#launchtemplateblockdevicemappingebs">Launch<wbr>Template<wbr>Block<wbr>Device<wbr>Mapping<wbr>Ebs<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configure EBS volume properties.
 {{% /md %}}</dd>
@@ -3954,7 +2838,7 @@ Interfaces below for more details.
             title="Optional">
         <span>No<wbr>Device</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Suppresses the specified device included in the AMI's block device mapping.
 {{% /md %}}</dd>
@@ -3963,7 +2847,7 @@ Interfaces below for more details.
             title="Optional">
         <span>Virtual<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The [Instance Store Device
 Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#InstanceStoreDeviceNames)
@@ -3981,7 +2865,7 @@ Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#I
             title="Optional">
         <span>Device<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the device to mount.
 {{% /md %}}</dd>
@@ -3990,7 +2874,7 @@ Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#I
             title="Optional">
         <span>Ebs</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplateblockdevicemappingebs">*Launch<wbr>Template<wbr>Block<wbr>Device<wbr>Mapping<wbr>Ebs</a></span>
+        <span class="property-type"><a href="#launchtemplateblockdevicemappingebs">Launch<wbr>Template<wbr>Block<wbr>Device<wbr>Mapping<wbr>Ebs</a></span>
     </dt>
     <dd>{{% md %}}Configure EBS volume properties.
 {{% /md %}}</dd>
@@ -3999,7 +2883,7 @@ Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#I
             title="Optional">
         <span>No<wbr>Device</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Suppresses the specified device included in the AMI's block device mapping.
 {{% /md %}}</dd>
@@ -4008,7 +2892,7 @@ Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#I
             title="Optional">
         <span>Virtual<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The [Instance Store Device
 Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#InstanceStoreDeviceNames)
@@ -4026,7 +2910,7 @@ Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#I
             title="Optional">
         <span>device<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the device to mount.
 {{% /md %}}</dd>
@@ -4035,7 +2919,7 @@ Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#I
             title="Optional">
         <span>ebs</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplateblockdevicemappingebs">Launch<wbr>Template<wbr>Block<wbr>Device<wbr>Mapping<wbr>Ebs?</a></span>
+        <span class="property-type"><a href="#launchtemplateblockdevicemappingebs">Launch<wbr>Template<wbr>Block<wbr>Device<wbr>Mapping<wbr>Ebs</a></span>
     </dt>
     <dd>{{% md %}}Configure EBS volume properties.
 {{% /md %}}</dd>
@@ -4044,7 +2928,7 @@ Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#I
             title="Optional">
         <span>no<wbr>Device</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Suppresses the specified device included in the AMI's block device mapping.
 {{% /md %}}</dd>
@@ -4053,7 +2937,7 @@ Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#I
             title="Optional">
         <span>virtual<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The [Instance Store Device
 Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#InstanceStoreDeviceNames)
@@ -4131,7 +3015,7 @@ Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#I
             title="Optional">
         <span>Delete<wbr>On<wbr>Termination</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether the volume should be destroyed on instance termination (Default: `false`). See [Preserving Amazon EBS Volumes on Instance Termination](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#preserving-volumes-on-termination) for more information.
 {{% /md %}}</dd>
@@ -4140,7 +3024,7 @@ Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#I
             title="Optional">
         <span>Encrypted</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enables [EBS encryption](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html)
 on the volume (Default: `false`). Cannot be used with `snapshot_id`.
@@ -4150,7 +3034,7 @@ on the volume (Default: `false`). Cannot be used with `snapshot_id`.
             title="Optional">
         <span>Iops</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of provisioned
 [IOPS](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-io-characteristics.html).
@@ -4161,9 +3045,9 @@ This must be set with a `volume_type` of `"io1"`.
             title="Optional">
         <span>Kms<wbr>Key<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}AWS Key Management Service (AWS KMS) customer master key (CMK) to use when creating the encrypted volume.
+    <dd>{{% md %}}The ARN of the AWS Key Management Service (AWS KMS) customer master key (CMK) to use when creating the encrypted volume.
 `encrypted` must be set to `true` when this is set.
 {{% /md %}}</dd>
 
@@ -4171,7 +3055,7 @@ This must be set with a `volume_type` of `"io1"`.
             title="Optional">
         <span>Snapshot<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Snapshot ID to mount.
 {{% /md %}}</dd>
@@ -4180,7 +3064,7 @@ This must be set with a `volume_type` of `"io1"`.
             title="Optional">
         <span>Volume<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of the volume in gigabytes.
 {{% /md %}}</dd>
@@ -4189,7 +3073,7 @@ This must be set with a `volume_type` of `"io1"`.
             title="Optional">
         <span>Volume<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of volume. Can be `"standard"`, `"gp2"`, or `"io1"`. (Default: `"standard"`).
 {{% /md %}}</dd>
@@ -4205,7 +3089,7 @@ This must be set with a `volume_type` of `"io1"`.
             title="Optional">
         <span>Delete<wbr>On<wbr>Termination</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether the volume should be destroyed on instance termination (Default: `false`). See [Preserving Amazon EBS Volumes on Instance Termination](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#preserving-volumes-on-termination) for more information.
 {{% /md %}}</dd>
@@ -4214,7 +3098,7 @@ This must be set with a `volume_type` of `"io1"`.
             title="Optional">
         <span>Encrypted</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enables [EBS encryption](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html)
 on the volume (Default: `false`). Cannot be used with `snapshot_id`.
@@ -4224,7 +3108,7 @@ on the volume (Default: `false`). Cannot be used with `snapshot_id`.
             title="Optional">
         <span>Iops</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of provisioned
 [IOPS](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-io-characteristics.html).
@@ -4235,9 +3119,9 @@ This must be set with a `volume_type` of `"io1"`.
             title="Optional">
         <span>Kms<wbr>Key<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}AWS Key Management Service (AWS KMS) customer master key (CMK) to use when creating the encrypted volume.
+    <dd>{{% md %}}The ARN of the AWS Key Management Service (AWS KMS) customer master key (CMK) to use when creating the encrypted volume.
 `encrypted` must be set to `true` when this is set.
 {{% /md %}}</dd>
 
@@ -4245,7 +3129,7 @@ This must be set with a `volume_type` of `"io1"`.
             title="Optional">
         <span>Snapshot<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Snapshot ID to mount.
 {{% /md %}}</dd>
@@ -4254,7 +3138,7 @@ This must be set with a `volume_type` of `"io1"`.
             title="Optional">
         <span>Volume<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of the volume in gigabytes.
 {{% /md %}}</dd>
@@ -4263,7 +3147,7 @@ This must be set with a `volume_type` of `"io1"`.
             title="Optional">
         <span>Volume<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of volume. Can be `"standard"`, `"gp2"`, or `"io1"`. (Default: `"standard"`).
 {{% /md %}}</dd>
@@ -4279,7 +3163,7 @@ This must be set with a `volume_type` of `"io1"`.
             title="Optional">
         <span>delete<wbr>On<wbr>Termination</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether the volume should be destroyed on instance termination (Default: `false`). See [Preserving Amazon EBS Volumes on Instance Termination](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#preserving-volumes-on-termination) for more information.
 {{% /md %}}</dd>
@@ -4288,7 +3172,7 @@ This must be set with a `volume_type` of `"io1"`.
             title="Optional">
         <span>encrypted</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Enables [EBS encryption](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html)
 on the volume (Default: `false`). Cannot be used with `snapshot_id`.
@@ -4298,7 +3182,7 @@ on the volume (Default: `false`). Cannot be used with `snapshot_id`.
             title="Optional">
         <span>iops</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The amount of provisioned
 [IOPS](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-io-characteristics.html).
@@ -4309,9 +3193,9 @@ This must be set with a `volume_type` of `"io1"`.
             title="Optional">
         <span>kms<wbr>Key<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}AWS Key Management Service (AWS KMS) customer master key (CMK) to use when creating the encrypted volume.
+    <dd>{{% md %}}The ARN of the AWS Key Management Service (AWS KMS) customer master key (CMK) to use when creating the encrypted volume.
 `encrypted` must be set to `true` when this is set.
 {{% /md %}}</dd>
 
@@ -4319,7 +3203,7 @@ This must be set with a `volume_type` of `"io1"`.
             title="Optional">
         <span>snapshot<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Snapshot ID to mount.
 {{% /md %}}</dd>
@@ -4328,7 +3212,7 @@ This must be set with a `volume_type` of `"io1"`.
             title="Optional">
         <span>volume<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The size of the volume in gigabytes.
 {{% /md %}}</dd>
@@ -4337,7 +3221,7 @@ This must be set with a `volume_type` of `"io1"`.
             title="Optional">
         <span>volume<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of volume. Can be `"standard"`, `"gp2"`, or `"io1"`. (Default: `"standard"`).
 {{% /md %}}</dd>
@@ -4385,7 +3269,7 @@ This must be set with a `volume_type` of `"io1"`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}AWS Key Management Service (AWS KMS) customer master key (CMK) to use when creating the encrypted volume.
+    <dd>{{% md %}}The ARN of the AWS Key Management Service (AWS KMS) customer master key (CMK) to use when creating the encrypted volume.
 `encrypted` must be set to `true` when this is set.
 {{% /md %}}</dd>
 
@@ -4442,7 +3326,7 @@ This must be set with a `volume_type` of `"io1"`.
             title="Optional">
         <span>Capacity<wbr>Reservation<wbr>Preference</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates the instance's Capacity Reservation preferences. Can be `open` or `none`. (Default `none`).
 {{% /md %}}</dd>
@@ -4451,7 +3335,7 @@ This must be set with a `volume_type` of `"io1"`.
             title="Optional">
         <span>Capacity<wbr>Reservation<wbr>Target</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatecapacityreservationspecificationcapacityreservationtarget">Launch<wbr>Template<wbr>Capacity<wbr>Reservation<wbr>Specification<wbr>Capacity<wbr>Reservation<wbr>Target<wbr>Args?</a></span>
+        <span class="property-type"><a href="#launchtemplatecapacityreservationspecificationcapacityreservationtarget">Launch<wbr>Template<wbr>Capacity<wbr>Reservation<wbr>Specification<wbr>Capacity<wbr>Reservation<wbr>Target<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Used to target a specific Capacity Reservation:
 {{% /md %}}</dd>
@@ -4467,7 +3351,7 @@ This must be set with a `volume_type` of `"io1"`.
             title="Optional">
         <span>Capacity<wbr>Reservation<wbr>Preference</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates the instance's Capacity Reservation preferences. Can be `open` or `none`. (Default `none`).
 {{% /md %}}</dd>
@@ -4476,7 +3360,7 @@ This must be set with a `volume_type` of `"io1"`.
             title="Optional">
         <span>Capacity<wbr>Reservation<wbr>Target</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatecapacityreservationspecificationcapacityreservationtarget">*Launch<wbr>Template<wbr>Capacity<wbr>Reservation<wbr>Specification<wbr>Capacity<wbr>Reservation<wbr>Target</a></span>
+        <span class="property-type"><a href="#launchtemplatecapacityreservationspecificationcapacityreservationtarget">Launch<wbr>Template<wbr>Capacity<wbr>Reservation<wbr>Specification<wbr>Capacity<wbr>Reservation<wbr>Target</a></span>
     </dt>
     <dd>{{% md %}}Used to target a specific Capacity Reservation:
 {{% /md %}}</dd>
@@ -4492,7 +3376,7 @@ This must be set with a `volume_type` of `"io1"`.
             title="Optional">
         <span>capacity<wbr>Reservation<wbr>Preference</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates the instance's Capacity Reservation preferences. Can be `open` or `none`. (Default `none`).
 {{% /md %}}</dd>
@@ -4501,7 +3385,7 @@ This must be set with a `volume_type` of `"io1"`.
             title="Optional">
         <span>capacity<wbr>Reservation<wbr>Target</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplatecapacityreservationspecificationcapacityreservationtarget">Launch<wbr>Template<wbr>Capacity<wbr>Reservation<wbr>Specification<wbr>Capacity<wbr>Reservation<wbr>Target?</a></span>
+        <span class="property-type"><a href="#launchtemplatecapacityreservationspecificationcapacityreservationtarget">Launch<wbr>Template<wbr>Capacity<wbr>Reservation<wbr>Specification<wbr>Capacity<wbr>Reservation<wbr>Target</a></span>
     </dt>
     <dd>{{% md %}}Used to target a specific Capacity Reservation:
 {{% /md %}}</dd>
@@ -4557,7 +3441,7 @@ This must be set with a `volume_type` of `"io1"`.
             title="Optional">
         <span>Capacity<wbr>Reservation<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Capacity Reservation to target.
 {{% /md %}}</dd>
@@ -4573,7 +3457,7 @@ This must be set with a `volume_type` of `"io1"`.
             title="Optional">
         <span>Capacity<wbr>Reservation<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Capacity Reservation to target.
 {{% /md %}}</dd>
@@ -4589,7 +3473,7 @@ This must be set with a `volume_type` of `"io1"`.
             title="Optional">
         <span>capacity<wbr>Reservation<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Capacity Reservation to target.
 {{% /md %}}</dd>
@@ -4636,7 +3520,7 @@ This must be set with a `volume_type` of `"io1"`.
             title="Optional">
         <span>Core<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of CPU cores for the instance.
 {{% /md %}}</dd>
@@ -4645,7 +3529,7 @@ This must be set with a `volume_type` of `"io1"`.
             title="Optional">
         <span>Threads<wbr>Per<wbr>Core</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of threads per CPU core. To disable Intel Hyper-Threading Technology for the instance, specify a value of 1.
 Otherwise, specify the default value of 2.
@@ -4662,7 +3546,7 @@ Otherwise, specify the default value of 2.
             title="Optional">
         <span>Core<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of CPU cores for the instance.
 {{% /md %}}</dd>
@@ -4671,7 +3555,7 @@ Otherwise, specify the default value of 2.
             title="Optional">
         <span>Threads<wbr>Per<wbr>Core</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of threads per CPU core. To disable Intel Hyper-Threading Technology for the instance, specify a value of 1.
 Otherwise, specify the default value of 2.
@@ -4688,7 +3572,7 @@ Otherwise, specify the default value of 2.
             title="Optional">
         <span>core<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of CPU cores for the instance.
 {{% /md %}}</dd>
@@ -4697,7 +3581,7 @@ Otherwise, specify the default value of 2.
             title="Optional">
         <span>threads<wbr>Per<wbr>Core</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of threads per CPU core. To disable Intel Hyper-Threading Technology for the instance, specify a value of 1.
 Otherwise, specify the default value of 2.
@@ -4755,7 +3639,7 @@ Otherwise, specify the default value of 2.
             title="Optional">
         <span>Cpu<wbr>Credits</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The credit option for CPU usage. Can be `"standard"` or `"unlimited"`. T3 instances are launched as unlimited by default. T2 instances are launched as standard by default.
 {{% /md %}}</dd>
@@ -4771,7 +3655,7 @@ Otherwise, specify the default value of 2.
             title="Optional">
         <span>Cpu<wbr>Credits</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The credit option for CPU usage. Can be `"standard"` or `"unlimited"`. T3 instances are launched as unlimited by default. T2 instances are launched as standard by default.
 {{% /md %}}</dd>
@@ -4787,7 +3671,7 @@ Otherwise, specify the default value of 2.
             title="Optional">
         <span>cpu<wbr>Credits</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The credit option for CPU usage. Can be `"standard"` or `"unlimited"`. T3 instances are launched as unlimited by default. T2 instances are launched as standard by default.
 {{% /md %}}</dd>
@@ -5071,7 +3955,7 @@ Otherwise, specify the default value of 2.
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the instance profile.
 {{% /md %}}</dd>
@@ -5080,7 +3964,7 @@ Otherwise, specify the default value of 2.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the instance profile.
 {{% /md %}}</dd>
@@ -5096,7 +3980,7 @@ Otherwise, specify the default value of 2.
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the instance profile.
 {{% /md %}}</dd>
@@ -5105,7 +3989,7 @@ Otherwise, specify the default value of 2.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the instance profile.
 {{% /md %}}</dd>
@@ -5121,7 +4005,7 @@ Otherwise, specify the default value of 2.
             title="Optional">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the instance profile.
 {{% /md %}}</dd>
@@ -5130,7 +4014,7 @@ Otherwise, specify the default value of 2.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the instance profile.
 {{% /md %}}</dd>
@@ -5186,7 +4070,7 @@ Otherwise, specify the default value of 2.
             title="Optional">
         <span>Market<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The market type. Can be `spot`.
 {{% /md %}}</dd>
@@ -5195,7 +4079,7 @@ Otherwise, specify the default value of 2.
             title="Optional">
         <span>Spot<wbr>Options</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplateinstancemarketoptionsspotoptions">Launch<wbr>Template<wbr>Instance<wbr>Market<wbr>Options<wbr>Spot<wbr>Options<wbr>Args?</a></span>
+        <span class="property-type"><a href="#launchtemplateinstancemarketoptionsspotoptions">Launch<wbr>Template<wbr>Instance<wbr>Market<wbr>Options<wbr>Spot<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The options for [Spot Instance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-spot-instances.html)
 {{% /md %}}</dd>
@@ -5211,7 +4095,7 @@ Otherwise, specify the default value of 2.
             title="Optional">
         <span>Market<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The market type. Can be `spot`.
 {{% /md %}}</dd>
@@ -5220,7 +4104,7 @@ Otherwise, specify the default value of 2.
             title="Optional">
         <span>Spot<wbr>Options</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplateinstancemarketoptionsspotoptions">*Launch<wbr>Template<wbr>Instance<wbr>Market<wbr>Options<wbr>Spot<wbr>Options</a></span>
+        <span class="property-type"><a href="#launchtemplateinstancemarketoptionsspotoptions">Launch<wbr>Template<wbr>Instance<wbr>Market<wbr>Options<wbr>Spot<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}The options for [Spot Instance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-spot-instances.html)
 {{% /md %}}</dd>
@@ -5236,7 +4120,7 @@ Otherwise, specify the default value of 2.
             title="Optional">
         <span>market<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The market type. Can be `spot`.
 {{% /md %}}</dd>
@@ -5245,7 +4129,7 @@ Otherwise, specify the default value of 2.
             title="Optional">
         <span>spot<wbr>Options</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#launchtemplateinstancemarketoptionsspotoptions">Launch<wbr>Template<wbr>Instance<wbr>Market<wbr>Options<wbr>Spot<wbr>Options?</a></span>
+        <span class="property-type"><a href="#launchtemplateinstancemarketoptionsspotoptions">Launch<wbr>Template<wbr>Instance<wbr>Market<wbr>Options<wbr>Spot<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}The options for [Spot Instance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-spot-instances.html)
 {{% /md %}}</dd>
@@ -5301,7 +4185,7 @@ Otherwise, specify the default value of 2.
             title="Optional">
         <span>Block<wbr>Duration<wbr>Minutes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The required duration in minutes. This value must be a multiple of 60.
 {{% /md %}}</dd>
@@ -5310,7 +4194,7 @@ Otherwise, specify the default value of 2.
             title="Optional">
         <span>Instance<wbr>Interruption<wbr>Behavior</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The behavior when a Spot Instance is interrupted. Can be `hibernate`,
 `stop`, or `terminate`. (Default: `terminate`).
@@ -5320,7 +4204,7 @@ Otherwise, specify the default value of 2.
             title="Optional">
         <span>Max<wbr>Price</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum hourly price you're willing to pay for the Spot Instances.
 {{% /md %}}</dd>
@@ -5329,7 +4213,7 @@ Otherwise, specify the default value of 2.
             title="Optional">
         <span>Spot<wbr>Instance<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Spot Instance request type. Can be `one-time`, or `persistent`.
 {{% /md %}}</dd>
@@ -5338,7 +4222,7 @@ Otherwise, specify the default value of 2.
             title="Optional">
         <span>Valid<wbr>Until</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The end date of the request.
 {{% /md %}}</dd>
@@ -5354,7 +4238,7 @@ Otherwise, specify the default value of 2.
             title="Optional">
         <span>Block<wbr>Duration<wbr>Minutes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The required duration in minutes. This value must be a multiple of 60.
 {{% /md %}}</dd>
@@ -5363,7 +4247,7 @@ Otherwise, specify the default value of 2.
             title="Optional">
         <span>Instance<wbr>Interruption<wbr>Behavior</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The behavior when a Spot Instance is interrupted. Can be `hibernate`,
 `stop`, or `terminate`. (Default: `terminate`).
@@ -5373,7 +4257,7 @@ Otherwise, specify the default value of 2.
             title="Optional">
         <span>Max<wbr>Price</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum hourly price you're willing to pay for the Spot Instances.
 {{% /md %}}</dd>
@@ -5382,7 +4266,7 @@ Otherwise, specify the default value of 2.
             title="Optional">
         <span>Spot<wbr>Instance<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Spot Instance request type. Can be `one-time`, or `persistent`.
 {{% /md %}}</dd>
@@ -5391,7 +4275,7 @@ Otherwise, specify the default value of 2.
             title="Optional">
         <span>Valid<wbr>Until</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The end date of the request.
 {{% /md %}}</dd>
@@ -5407,7 +4291,7 @@ Otherwise, specify the default value of 2.
             title="Optional">
         <span>block<wbr>Duration<wbr>Minutes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The required duration in minutes. This value must be a multiple of 60.
 {{% /md %}}</dd>
@@ -5416,7 +4300,7 @@ Otherwise, specify the default value of 2.
             title="Optional">
         <span>instance<wbr>Interruption<wbr>Behavior</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The behavior when a Spot Instance is interrupted. Can be `hibernate`,
 `stop`, or `terminate`. (Default: `terminate`).
@@ -5426,7 +4310,7 @@ Otherwise, specify the default value of 2.
             title="Optional">
         <span>max<wbr>Price</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum hourly price you're willing to pay for the Spot Instances.
 {{% /md %}}</dd>
@@ -5435,7 +4319,7 @@ Otherwise, specify the default value of 2.
             title="Optional">
         <span>spot<wbr>Instance<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Spot Instance request type. Can be `one-time`, or `persistent`.
 {{% /md %}}</dd>
@@ -5444,7 +4328,7 @@ Otherwise, specify the default value of 2.
             title="Optional">
         <span>valid<wbr>Until</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The end date of the request.
 {{% /md %}}</dd>
@@ -5607,7 +4491,7 @@ Otherwise, specify the default value of 2.
             title="Optional">
         <span>Http<wbr>Endpoint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether the metadata service is available. Can be `"enabled"` or `"disabled"`. (Default: `"enabled"`).
 {{% /md %}}</dd>
@@ -5616,7 +4500,7 @@ Otherwise, specify the default value of 2.
             title="Optional">
         <span>Http<wbr>Put<wbr>Response<wbr>Hop<wbr>Limit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The desired HTTP PUT response hop limit for instance metadata requests. The larger the number, the further instance metadata requests can travel. Can be an integer from `1` to `64`. (Default: `1`).
 {{% /md %}}</dd>
@@ -5625,7 +4509,7 @@ Otherwise, specify the default value of 2.
             title="Optional">
         <span>Http<wbr>Tokens</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether or not the metadata service requires session tokens, also referred to as _Instance Metadata Service Version 2_. Can be `"optional"` or `"required"`. (Default: `"optional"`).
 {{% /md %}}</dd>
@@ -5641,7 +4525,7 @@ Otherwise, specify the default value of 2.
             title="Optional">
         <span>Http<wbr>Endpoint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether the metadata service is available. Can be `"enabled"` or `"disabled"`. (Default: `"enabled"`).
 {{% /md %}}</dd>
@@ -5650,7 +4534,7 @@ Otherwise, specify the default value of 2.
             title="Optional">
         <span>Http<wbr>Put<wbr>Response<wbr>Hop<wbr>Limit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The desired HTTP PUT response hop limit for instance metadata requests. The larger the number, the further instance metadata requests can travel. Can be an integer from `1` to `64`. (Default: `1`).
 {{% /md %}}</dd>
@@ -5659,7 +4543,7 @@ Otherwise, specify the default value of 2.
             title="Optional">
         <span>Http<wbr>Tokens</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether or not the metadata service requires session tokens, also referred to as _Instance Metadata Service Version 2_. Can be `"optional"` or `"required"`. (Default: `"optional"`).
 {{% /md %}}</dd>
@@ -5675,7 +4559,7 @@ Otherwise, specify the default value of 2.
             title="Optional">
         <span>http<wbr>Endpoint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether the metadata service is available. Can be `"enabled"` or `"disabled"`. (Default: `"enabled"`).
 {{% /md %}}</dd>
@@ -5684,7 +4568,7 @@ Otherwise, specify the default value of 2.
             title="Optional">
         <span>http<wbr>Put<wbr>Response<wbr>Hop<wbr>Limit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The desired HTTP PUT response hop limit for instance metadata requests. The larger the number, the further instance metadata requests can travel. Can be an integer from `1` to `64`. (Default: `1`).
 {{% /md %}}</dd>
@@ -5693,7 +4577,7 @@ Otherwise, specify the default value of 2.
             title="Optional">
         <span>http<wbr>Tokens</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether or not the metadata service requires session tokens, also referred to as _Instance Metadata Service Version 2_. Can be `"optional"` or `"required"`. (Default: `"optional"`).
 {{% /md %}}</dd>
@@ -5758,7 +4642,7 @@ Otherwise, specify the default value of 2.
             title="Optional">
         <span>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If `true`, the launched EC2 instance will have detailed monitoring enabled.
 {{% /md %}}</dd>
@@ -5774,7 +4658,7 @@ Otherwise, specify the default value of 2.
             title="Optional">
         <span>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If `true`, the launched EC2 instance will have detailed monitoring enabled.
 {{% /md %}}</dd>
@@ -5790,7 +4674,7 @@ Otherwise, specify the default value of 2.
             title="Optional">
         <span>enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If `true`, the launched EC2 instance will have detailed monitoring enabled.
 {{% /md %}}</dd>
@@ -5837,7 +4721,7 @@ Otherwise, specify the default value of 2.
             title="Optional">
         <span>Associate<wbr>Public<wbr>Ip<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Associate a public ip address with the network interface.  Boolean value.
 {{% /md %}}</dd>
@@ -5846,7 +4730,7 @@ Otherwise, specify the default value of 2.
             title="Optional">
         <span>Delete<wbr>On<wbr>Termination</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the network interface should be destroyed on instance termination.
 {{% /md %}}</dd>
@@ -5855,7 +4739,7 @@ Otherwise, specify the default value of 2.
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the network interface.
 {{% /md %}}</dd>
@@ -5864,7 +4748,7 @@ Otherwise, specify the default value of 2.
             title="Optional">
         <span>Device<wbr>Index</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The integer index of the network interface attachment.
 {{% /md %}}</dd>
@@ -5873,7 +4757,7 @@ Otherwise, specify the default value of 2.
             title="Optional">
         <span>Ipv4Address<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of secondary private IPv4 addresses to assign to a network interface. Conflicts with `ipv4_addresses`
 {{% /md %}}</dd>
@@ -5882,7 +4766,7 @@ Otherwise, specify the default value of 2.
             title="Optional">
         <span>Ipv4Addresses</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}One or more private IPv4 addresses to associate. Conflicts with `ipv4_address_count`
 {{% /md %}}</dd>
@@ -5891,7 +4775,7 @@ Otherwise, specify the default value of 2.
             title="Optional">
         <span>Ipv6Address<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of IPv6 addresses to assign to a network interface. Conflicts with `ipv6_addresses`
 {{% /md %}}</dd>
@@ -5900,7 +4784,7 @@ Otherwise, specify the default value of 2.
             title="Optional">
         <span>Ipv6Addresses</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}One or more specific IPv6 addresses from the IPv6 CIDR block range of your subnet. Conflicts with `ipv6_address_count`
 {{% /md %}}</dd>
@@ -5909,7 +4793,7 @@ Otherwise, specify the default value of 2.
             title="Optional">
         <span>Network<wbr>Interface<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the network interface to attach.
 {{% /md %}}</dd>
@@ -5918,7 +4802,7 @@ Otherwise, specify the default value of 2.
             title="Optional">
         <span>Private<wbr>Ip<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The primary private IPv4 address.
 {{% /md %}}</dd>
@@ -5927,7 +4811,7 @@ Otherwise, specify the default value of 2.
             title="Optional">
         <span>Security<wbr>Groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of security group IDs to associate.
 {{% /md %}}</dd>
@@ -5936,7 +4820,7 @@ Otherwise, specify the default value of 2.
             title="Optional">
         <span>Subnet<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The VPC Subnet ID to associate.
 {{% /md %}}</dd>
@@ -5952,7 +4836,7 @@ Otherwise, specify the default value of 2.
             title="Optional">
         <span>Associate<wbr>Public<wbr>Ip<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Associate a public ip address with the network interface.  Boolean value.
 {{% /md %}}</dd>
@@ -5961,7 +4845,7 @@ Otherwise, specify the default value of 2.
             title="Optional">
         <span>Delete<wbr>On<wbr>Termination</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the network interface should be destroyed on instance termination.
 {{% /md %}}</dd>
@@ -5970,7 +4854,7 @@ Otherwise, specify the default value of 2.
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the network interface.
 {{% /md %}}</dd>
@@ -5979,7 +4863,7 @@ Otherwise, specify the default value of 2.
             title="Optional">
         <span>Device<wbr>Index</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The integer index of the network interface attachment.
 {{% /md %}}</dd>
@@ -5988,7 +4872,7 @@ Otherwise, specify the default value of 2.
             title="Optional">
         <span>Ipv4Address<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of secondary private IPv4 addresses to assign to a network interface. Conflicts with `ipv4_addresses`
 {{% /md %}}</dd>
@@ -6006,7 +4890,7 @@ Otherwise, specify the default value of 2.
             title="Optional">
         <span>Ipv6Address<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of IPv6 addresses to assign to a network interface. Conflicts with `ipv6_addresses`
 {{% /md %}}</dd>
@@ -6024,7 +4908,7 @@ Otherwise, specify the default value of 2.
             title="Optional">
         <span>Network<wbr>Interface<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the network interface to attach.
 {{% /md %}}</dd>
@@ -6033,7 +4917,7 @@ Otherwise, specify the default value of 2.
             title="Optional">
         <span>Private<wbr>Ip<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The primary private IPv4 address.
 {{% /md %}}</dd>
@@ -6051,7 +4935,7 @@ Otherwise, specify the default value of 2.
             title="Optional">
         <span>Subnet<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The VPC Subnet ID to associate.
 {{% /md %}}</dd>
@@ -6067,7 +4951,7 @@ Otherwise, specify the default value of 2.
             title="Optional">
         <span>associate<wbr>Public<wbr>Ip<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Associate a public ip address with the network interface.  Boolean value.
 {{% /md %}}</dd>
@@ -6076,7 +4960,7 @@ Otherwise, specify the default value of 2.
             title="Optional">
         <span>delete<wbr>On<wbr>Termination</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the network interface should be destroyed on instance termination.
 {{% /md %}}</dd>
@@ -6085,7 +4969,7 @@ Otherwise, specify the default value of 2.
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the network interface.
 {{% /md %}}</dd>
@@ -6094,7 +4978,7 @@ Otherwise, specify the default value of 2.
             title="Optional">
         <span>device<wbr>Index</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The integer index of the network interface attachment.
 {{% /md %}}</dd>
@@ -6103,7 +4987,7 @@ Otherwise, specify the default value of 2.
             title="Optional">
         <span>ipv4Address<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of secondary private IPv4 addresses to assign to a network interface. Conflicts with `ipv4_addresses`
 {{% /md %}}</dd>
@@ -6112,7 +4996,7 @@ Otherwise, specify the default value of 2.
             title="Optional">
         <span>ipv4Addresses</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}One or more private IPv4 addresses to associate. Conflicts with `ipv4_address_count`
 {{% /md %}}</dd>
@@ -6121,7 +5005,7 @@ Otherwise, specify the default value of 2.
             title="Optional">
         <span>ipv6Address<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of IPv6 addresses to assign to a network interface. Conflicts with `ipv6_addresses`
 {{% /md %}}</dd>
@@ -6130,7 +5014,7 @@ Otherwise, specify the default value of 2.
             title="Optional">
         <span>ipv6Addresses</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}One or more specific IPv6 addresses from the IPv6 CIDR block range of your subnet. Conflicts with `ipv6_address_count`
 {{% /md %}}</dd>
@@ -6139,7 +5023,7 @@ Otherwise, specify the default value of 2.
             title="Optional">
         <span>network<wbr>Interface<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the network interface to attach.
 {{% /md %}}</dd>
@@ -6148,7 +5032,7 @@ Otherwise, specify the default value of 2.
             title="Optional">
         <span>private<wbr>Ip<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The primary private IPv4 address.
 {{% /md %}}</dd>
@@ -6157,7 +5041,7 @@ Otherwise, specify the default value of 2.
             title="Optional">
         <span>security<wbr>Groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of security group IDs to associate.
 {{% /md %}}</dd>
@@ -6166,7 +5050,7 @@ Otherwise, specify the default value of 2.
             title="Optional">
         <span>subnet<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The VPC Subnet ID to associate.
 {{% /md %}}</dd>
@@ -6312,7 +5196,7 @@ Otherwise, specify the default value of 2.
             title="Optional">
         <span>Affinity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The affinity setting for an instance on a Dedicated Host.
 {{% /md %}}</dd>
@@ -6321,7 +5205,7 @@ Otherwise, specify the default value of 2.
             title="Optional">
         <span>Availability<wbr>Zone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Availability Zone for the instance.
 {{% /md %}}</dd>
@@ -6330,7 +5214,7 @@ Otherwise, specify the default value of 2.
             title="Optional">
         <span>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the placement group for the instance.
 {{% /md %}}</dd>
@@ -6339,7 +5223,7 @@ Otherwise, specify the default value of 2.
             title="Optional">
         <span>Host<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Dedicated Host for the instance.
 {{% /md %}}</dd>
@@ -6348,7 +5232,7 @@ Otherwise, specify the default value of 2.
             title="Optional">
         <span>Spread<wbr>Domain</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Reserved for future use.
 {{% /md %}}</dd>
@@ -6357,7 +5241,7 @@ Otherwise, specify the default value of 2.
             title="Optional">
         <span>Tenancy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The tenancy of the instance (if the instance is running in a VPC). Can be `default`, `dedicated`, or `host`.
 {{% /md %}}</dd>
@@ -6373,7 +5257,7 @@ Otherwise, specify the default value of 2.
             title="Optional">
         <span>Affinity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The affinity setting for an instance on a Dedicated Host.
 {{% /md %}}</dd>
@@ -6382,7 +5266,7 @@ Otherwise, specify the default value of 2.
             title="Optional">
         <span>Availability<wbr>Zone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Availability Zone for the instance.
 {{% /md %}}</dd>
@@ -6391,7 +5275,7 @@ Otherwise, specify the default value of 2.
             title="Optional">
         <span>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the placement group for the instance.
 {{% /md %}}</dd>
@@ -6400,7 +5284,7 @@ Otherwise, specify the default value of 2.
             title="Optional">
         <span>Host<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Dedicated Host for the instance.
 {{% /md %}}</dd>
@@ -6409,7 +5293,7 @@ Otherwise, specify the default value of 2.
             title="Optional">
         <span>Spread<wbr>Domain</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Reserved for future use.
 {{% /md %}}</dd>
@@ -6418,7 +5302,7 @@ Otherwise, specify the default value of 2.
             title="Optional">
         <span>Tenancy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The tenancy of the instance (if the instance is running in a VPC). Can be `default`, `dedicated`, or `host`.
 {{% /md %}}</dd>
@@ -6434,7 +5318,7 @@ Otherwise, specify the default value of 2.
             title="Optional">
         <span>affinity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The affinity setting for an instance on a Dedicated Host.
 {{% /md %}}</dd>
@@ -6443,7 +5327,7 @@ Otherwise, specify the default value of 2.
             title="Optional">
         <span>availability<wbr>Zone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Availability Zone for the instance.
 {{% /md %}}</dd>
@@ -6452,7 +5336,7 @@ Otherwise, specify the default value of 2.
             title="Optional">
         <span>group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the placement group for the instance.
 {{% /md %}}</dd>
@@ -6461,7 +5345,7 @@ Otherwise, specify the default value of 2.
             title="Optional">
         <span>host<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Dedicated Host for the instance.
 {{% /md %}}</dd>
@@ -6470,7 +5354,7 @@ Otherwise, specify the default value of 2.
             title="Optional">
         <span>spread<wbr>Domain</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Reserved for future use.
 {{% /md %}}</dd>
@@ -6479,7 +5363,7 @@ Otherwise, specify the default value of 2.
             title="Optional">
         <span>tenancy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The tenancy of the instance (if the instance is running in a VPC). Can be `default`, `dedicated`, or `host`.
 {{% /md %}}</dd>
@@ -6571,7 +5455,7 @@ Otherwise, specify the default value of 2.
             title="Optional">
         <span>Resource<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of resource to tag. Valid values are `instance` and `volume`.
 {{% /md %}}</dd>
@@ -6580,7 +5464,7 @@ Otherwise, specify the default value of 2.
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -6596,7 +5480,7 @@ Otherwise, specify the default value of 2.
             title="Optional">
         <span>Resource<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of resource to tag. Valid values are `instance` and `volume`.
 {{% /md %}}</dd>
@@ -6621,7 +5505,7 @@ Otherwise, specify the default value of 2.
             title="Optional">
         <span>resource<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of resource to tag. Valid values are `instance` and `volume`.
 {{% /md %}}</dd>
@@ -6630,7 +5514,7 @@ Otherwise, specify the default value of 2.
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>

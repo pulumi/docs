@@ -36,7 +36,7 @@ const foo = new alicloud.cen.BandwidthPackage("foo", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/cen/#BandwidthPackage">BandwidthPackage</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/cen/#BandwidthPackageArgs">BandwidthPackageArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/cen/#BandwidthPackage">BandwidthPackage</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/cen/#BandwidthPackageArgs">BandwidthPackageArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -44,11 +44,11 @@ const foo = new alicloud.cen.BandwidthPackage("foo", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewBandwidthPackage<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/cen?tab=doc#BandwidthPackageArgs">BandwidthPackageArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/cen?tab=doc#BandwidthPackage">BandwidthPackage</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewBandwidthPackage<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/cen?tab=doc#BandwidthPackageArgs">BandwidthPackageArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/cen?tab=doc#BandwidthPackage">BandwidthPackage</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.Cen.BandwidthPackage.html">BandwidthPackage</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.Cen.BandwidthPackageArgs.html">BandwidthPackageArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.Cen.BandwidthPackage.html">BandwidthPackage</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.AliCloud.Cen.BandwidthPackageArgs.html">BandwidthPackageArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -149,11 +149,20 @@ const foo = new alicloud.cen.BandwidthPackage("foo", {
     <dd>{{% md %}}The bandwidth in Mbps of the bandwidth package. Cannot be less than 2Mbps.
 {{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>Geographic<wbr>Region<wbr>Ids</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}List of the two areas to connect. Valid value: China | North-America | Asia-Pacific | Europe | Middle-East.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Charge<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The billing method. Valid value: PostPaid | PrePaid. Default to PostPaid. If set to PrePaid, the bandwidth package can't be deleted before expired time.
 {{% /md %}}</dd>
@@ -162,25 +171,16 @@ const foo = new alicloud.cen.BandwidthPackage("foo", {
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the bandwidth package. Default to null.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Geographic<wbr>Region<wbr>Ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
-    </dt>
-    <dd>{{% md %}}List of the two areas to connect. Valid value: China | North-America | Asia-Pacific | Europe | Middle-East.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the bandwidth package. Defaults to null.
 {{% /md %}}</dd>
@@ -189,7 +189,7 @@ const foo = new alicloud.cen.BandwidthPackage("foo", {
             title="Optional">
         <span>Period</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The purchase period in month. Valid value: 1, 2, 3, 6, 12. Default to 1.
 {{% /md %}}</dd>
@@ -210,24 +210,6 @@ const foo = new alicloud.cen.BandwidthPackage("foo", {
     <dd>{{% md %}}The bandwidth in Mbps of the bandwidth package. Cannot be less than 2Mbps.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Charge<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The billing method. Valid value: PostPaid | PrePaid. Default to PostPaid. If set to PrePaid, the bandwidth package can't be deleted before expired time.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The description of the bandwidth package. Default to null.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Geographic<wbr>Region<wbr>Ids</span>
@@ -239,9 +221,27 @@ const foo = new alicloud.cen.BandwidthPackage("foo", {
 
     <dt class="property-optional"
             title="Optional">
+        <span>Charge<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The billing method. Valid value: PostPaid | PrePaid. Default to PostPaid. If set to PrePaid, the bandwidth package can't be deleted before expired time.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The description of the bandwidth package. Default to null.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the bandwidth package. Defaults to null.
 {{% /md %}}</dd>
@@ -250,7 +250,7 @@ const foo = new alicloud.cen.BandwidthPackage("foo", {
             title="Optional">
         <span>Period</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The purchase period in month. Valid value: 1, 2, 3, 6, 12. Default to 1.
 {{% /md %}}</dd>
@@ -271,24 +271,6 @@ const foo = new alicloud.cen.BandwidthPackage("foo", {
     <dd>{{% md %}}The bandwidth in Mbps of the bandwidth package. Cannot be less than 2Mbps.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>charge<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The billing method. Valid value: PostPaid | PrePaid. Default to PostPaid. If set to PrePaid, the bandwidth package can't be deleted before expired time.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The description of the bandwidth package. Default to null.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>geographic<wbr>Region<wbr>Ids</span>
@@ -300,9 +282,27 @@ const foo = new alicloud.cen.BandwidthPackage("foo", {
 
     <dt class="property-optional"
             title="Optional">
+        <span>charge<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The billing method. Valid value: PostPaid | PrePaid. Default to PostPaid. If set to PrePaid, the bandwidth package can't be deleted before expired time.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The description of the bandwidth package. Default to null.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the bandwidth package. Defaults to null.
 {{% /md %}}</dd>
@@ -311,7 +311,7 @@ const foo = new alicloud.cen.BandwidthPackage("foo", {
             title="Optional">
         <span>period</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The purchase period in month. Valid value: 1, 2, 3, 6, 12. Default to 1.
 {{% /md %}}</dd>
@@ -332,6 +332,15 @@ const foo = new alicloud.cen.BandwidthPackage("foo", {
     <dd>{{% md %}}The bandwidth in Mbps of the bandwidth package. Cannot be less than 2Mbps.
 {{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>geographic_<wbr>region_<wbr>ids</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List[str]</span>
+    </dt>
+    <dd>{{% md %}}List of the two areas to connect. Valid value: China | North-America | Asia-Pacific | Europe | Middle-East.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>charge_<wbr>type</span>
@@ -348,15 +357,6 @@ const foo = new alicloud.cen.BandwidthPackage("foo", {
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The description of the bandwidth package. Default to null.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>geographic_<wbr>region_<wbr>ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}List of the two areas to connect. Valid value: China | North-America | Asia-Pacific | Europe | Middle-East.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -398,65 +398,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Bandwidth</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The bandwidth in Mbps of the bandwidth package. Cannot be less than 2Mbps.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Charge<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The billing method. Valid value: PostPaid | PrePaid. Default to PostPaid. If set to PrePaid, the bandwidth package can't be deleted before expired time.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The description of the bandwidth package. Default to null.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Expired<wbr>Time</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time of the bandwidth package to expire.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Geographic<wbr>Region<wbr>Ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
-    </dt>
-    <dd>{{% md %}}List of the two areas to connect. Valid value: China | North-America | Asia-Pacific | Europe | Middle-East.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the bandwidth package. Defaults to null.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Period</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}The purchase period in month. Valid value: 1, 2, 3, 6, 12. Default to 1.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -477,65 +423,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Bandwidth</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The bandwidth in Mbps of the bandwidth package. Cannot be less than 2Mbps.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Charge<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The billing method. Valid value: PostPaid | PrePaid. Default to PostPaid. If set to PrePaid, the bandwidth package can't be deleted before expired time.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The description of the bandwidth package. Default to null.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Expired<wbr>Time</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time of the bandwidth package to expire.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Geographic<wbr>Region<wbr>Ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}List of the two areas to connect. Valid value: China | North-America | Asia-Pacific | Europe | Middle-East.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the bandwidth package. Defaults to null.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Period</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}The purchase period in month. Valid value: 1, 2, 3, 6, 12. Default to 1.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -556,65 +448,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>bandwidth</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}The bandwidth in Mbps of the bandwidth package. Cannot be less than 2Mbps.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>charge<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The billing method. Valid value: PostPaid | PrePaid. Default to PostPaid. If set to PrePaid, the bandwidth package can't be deleted before expired time.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The description of the bandwidth package. Default to null.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>expired<wbr>Time</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time of the bandwidth package to expire.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>geographic<wbr>Region<wbr>Ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
-    </dt>
-    <dd>{{% md %}}List of the two areas to connect. Valid value: China | North-America | Asia-Pacific | Europe | Middle-East.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the bandwidth package. Defaults to null.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>period</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}The purchase period in month. Valid value: 1, 2, 3, 6, 12. Default to 1.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -635,65 +473,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>bandwidth</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The bandwidth in Mbps of the bandwidth package. Cannot be less than 2Mbps.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>charge_<wbr>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The billing method. Valid value: PostPaid | PrePaid. Default to PostPaid. If set to PrePaid, the bandwidth package can't be deleted before expired time.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The description of the bandwidth package. Default to null.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>expired_<wbr>time</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time of the bandwidth package to expire.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>geographic_<wbr>region_<wbr>ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}List of the two areas to connect. Valid value: China | North-America | Asia-Pacific | Europe | Middle-East.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the bandwidth package. Defaults to null.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>period</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The purchase period in month. Valid value: 1, 2, 3, 6, 12. Default to 1.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -844,7 +628,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Bandwidth</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The bandwidth in Mbps of the bandwidth package. Cannot be less than 2Mbps.
 {{% /md %}}</dd>
@@ -853,7 +637,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Charge<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The billing method. Valid value: PostPaid | PrePaid. Default to PostPaid. If set to PrePaid, the bandwidth package can't be deleted before expired time.
 {{% /md %}}</dd>
@@ -862,7 +646,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the bandwidth package. Default to null.
 {{% /md %}}</dd>
@@ -871,7 +655,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Expired<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time of the bandwidth package to expire.
 {{% /md %}}</dd>
@@ -880,7 +664,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Geographic<wbr>Region<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of the two areas to connect. Valid value: China | North-America | Asia-Pacific | Europe | Middle-East.
 {{% /md %}}</dd>
@@ -889,7 +673,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the bandwidth package. Defaults to null.
 {{% /md %}}</dd>
@@ -898,7 +682,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Period</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The purchase period in month. Valid value: 1, 2, 3, 6, 12. Default to 1.
 {{% /md %}}</dd>
@@ -907,7 +691,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the bandwidth, including "InUse" and "Idle".
 {{% /md %}}</dd>
@@ -923,7 +707,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Bandwidth</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The bandwidth in Mbps of the bandwidth package. Cannot be less than 2Mbps.
 {{% /md %}}</dd>
@@ -932,7 +716,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Charge<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The billing method. Valid value: PostPaid | PrePaid. Default to PostPaid. If set to PrePaid, the bandwidth package can't be deleted before expired time.
 {{% /md %}}</dd>
@@ -941,7 +725,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the bandwidth package. Default to null.
 {{% /md %}}</dd>
@@ -950,7 +734,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Expired<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time of the bandwidth package to expire.
 {{% /md %}}</dd>
@@ -968,7 +752,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the bandwidth package. Defaults to null.
 {{% /md %}}</dd>
@@ -977,7 +761,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Period</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The purchase period in month. Valid value: 1, 2, 3, 6, 12. Default to 1.
 {{% /md %}}</dd>
@@ -986,7 +770,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the bandwidth, including "InUse" and "Idle".
 {{% /md %}}</dd>
@@ -1002,7 +786,7 @@ The following state arguments are supported:
             title="Optional">
         <span>bandwidth</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The bandwidth in Mbps of the bandwidth package. Cannot be less than 2Mbps.
 {{% /md %}}</dd>
@@ -1011,7 +795,7 @@ The following state arguments are supported:
             title="Optional">
         <span>charge<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The billing method. Valid value: PostPaid | PrePaid. Default to PostPaid. If set to PrePaid, the bandwidth package can't be deleted before expired time.
 {{% /md %}}</dd>
@@ -1020,7 +804,7 @@ The following state arguments are supported:
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the bandwidth package. Default to null.
 {{% /md %}}</dd>
@@ -1029,7 +813,7 @@ The following state arguments are supported:
             title="Optional">
         <span>expired<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time of the bandwidth package to expire.
 {{% /md %}}</dd>
@@ -1038,7 +822,7 @@ The following state arguments are supported:
             title="Optional">
         <span>geographic<wbr>Region<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of the two areas to connect. Valid value: China | North-America | Asia-Pacific | Europe | Middle-East.
 {{% /md %}}</dd>
@@ -1047,7 +831,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the bandwidth package. Defaults to null.
 {{% /md %}}</dd>
@@ -1056,7 +840,7 @@ The following state arguments are supported:
             title="Optional">
         <span>period</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The purchase period in month. Valid value: 1, 2, 3, 6, 12. Default to 1.
 {{% /md %}}</dd>
@@ -1065,7 +849,7 @@ The following state arguments are supported:
             title="Optional">
         <span>status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the bandwidth, including "InUse" and "Idle".
 {{% /md %}}</dd>

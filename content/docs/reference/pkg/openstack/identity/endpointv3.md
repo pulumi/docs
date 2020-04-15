@@ -35,7 +35,7 @@ const endpoint1 = new openstack.identity.EndpointV3("endpoint_1", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/openstack/identity/#EndpointV3">EndpointV3</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/openstack/identity/#EndpointV3Args">EndpointV3Args</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/openstack/identity/#EndpointV3">EndpointV3</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/openstack/identity/#EndpointV3Args">EndpointV3Args</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -43,11 +43,11 @@ const endpoint1 = new openstack.identity.EndpointV3("endpoint_1", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewEndpointV3<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/identity?tab=doc#EndpointV3Args">EndpointV3Args</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/identity?tab=doc#EndpointV3">EndpointV3</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewEndpointV3<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/identity?tab=doc#EndpointV3Args">EndpointV3Args</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/identity?tab=doc#EndpointV3">EndpointV3</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.Openstack.Identity.EndpointV3.html">EndpointV3</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.Openstack.Identity.EndpointV3Args.html">EndpointV3Args</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.Openstack.Identity.EndpointV3.html">EndpointV3</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.OpenStack.Identity.EndpointV3Args.html">EndpointV3Args</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -149,35 +149,6 @@ const endpoint1 = new openstack.identity.EndpointV3("endpoint_1", {
 `endpoint_region` can be different.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Interface</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The endpoint interface. Valid values are `public`,
-`internal` and `admin`. Default value is `public`
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The endpoint name.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The region in which to obtain the V3 Keystone client.
-If omitted, the `region` argument of the provider is used.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Service<wbr>Id</span>
@@ -194,6 +165,35 @@ If omitted, the `region` argument of the provider is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint url.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Interface</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The endpoint interface. Valid values are `public`,
+`internal` and `admin`. Default value is `public`
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The endpoint name.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Region</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The region in which to obtain the V3 Keystone client.
+If omitted, the `region` argument of the provider is used.
 {{% /md %}}</dd>
 
 </dl>
@@ -213,35 +213,6 @@ If omitted, the `region` argument of the provider is used.
 `endpoint_region` can be different.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Interface</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The endpoint interface. Valid values are `public`,
-`internal` and `admin`. Default value is `public`
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The endpoint name.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The region in which to obtain the V3 Keystone client.
-If omitted, the `region` argument of the provider is used.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Service<wbr>Id</span>
@@ -260,6 +231,35 @@ If omitted, the `region` argument of the provider is used.
     <dd>{{% md %}}The endpoint url.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>Interface</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The endpoint interface. Valid values are `public`,
+`internal` and `admin`. Default value is `public`
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The endpoint name.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Region</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The region in which to obtain the V3 Keystone client.
+If omitted, the `region` argument of the provider is used.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -275,35 +275,6 @@ If omitted, the `region` argument of the provider is used.
     </dt>
     <dd>{{% md %}}The endpoint region. The `region` and
 `endpoint_region` can be different.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>interface</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The endpoint interface. Valid values are `public`,
-`internal` and `admin`. Default value is `public`
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The endpoint name.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The region in which to obtain the V3 Keystone client.
-If omitted, the `region` argument of the provider is used.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -324,6 +295,35 @@ If omitted, the `region` argument of the provider is used.
     <dd>{{% md %}}The endpoint url.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>interface</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The endpoint interface. Valid values are `public`,
+`internal` and `admin`. Default value is `public`
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The endpoint name.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>region</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The region in which to obtain the V3 Keystone client.
+If omitted, the `region` argument of the provider is used.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -339,6 +339,24 @@ If omitted, the `region` argument of the provider is used.
     </dt>
     <dd>{{% md %}}The endpoint region. The `region` and
 `endpoint_region` can be different.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>service_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The endpoint service ID.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>url</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The endpoint url.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -368,24 +386,6 @@ If omitted, the `region` argument of the provider is used.
     </dt>
     <dd>{{% md %}}The region in which to obtain the V3 Keystone client.
 If omitted, the `region` argument of the provider is used.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>service_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The endpoint service ID.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>url</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The endpoint url.
 {{% /md %}}</dd>
 
 </dl>
@@ -409,54 +409,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Endpoint<wbr>Region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The endpoint region. The `region` and
-`endpoint_region` can be different.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Interface</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The endpoint interface. Valid values are `public`,
-`internal` and `admin`. Default value is `public`
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The endpoint name.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The region in which to obtain the V3 Keystone client.
-If omitted, the `region` argument of the provider is used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Service<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The endpoint service ID.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Service<wbr>Name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -471,15 +423,6 @@ If omitted, the `region` argument of the provider is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service type of the endpoint.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Url</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The endpoint url.
 {{% /md %}}</dd>
 
 </dl>
@@ -491,54 +434,6 @@ If omitted, the `region` argument of the provider is used.
 
     <dt class="property-"
             title="">
-        <span>Endpoint<wbr>Region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The endpoint region. The `region` and
-`endpoint_region` can be different.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Interface</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The endpoint interface. Valid values are `public`,
-`internal` and `admin`. Default value is `public`
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The endpoint name.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The region in which to obtain the V3 Keystone client.
-If omitted, the `region` argument of the provider is used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Service<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The endpoint service ID.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Service<wbr>Name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -555,69 +450,12 @@ If omitted, the `region` argument of the provider is used.
     <dd>{{% md %}}The service type of the endpoint.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span>Url</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The endpoint url.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>endpoint<wbr>Region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The endpoint region. The `region` and
-`endpoint_region` can be different.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>interface</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The endpoint interface. Valid values are `public`,
-`internal` and `admin`. Default value is `public`
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The endpoint name.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The region in which to obtain the V3 Keystone client.
-If omitted, the `region` argument of the provider is used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>service<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The endpoint service ID.
-{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -637,69 +475,12 @@ If omitted, the `region` argument of the provider is used.
     <dd>{{% md %}}The service type of the endpoint.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span>url</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The endpoint url.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>endpoint_<wbr>region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The endpoint region. The `region` and
-`endpoint_region` can be different.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>interface</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The endpoint interface. Valid values are `public`,
-`internal` and `admin`. Default value is `public`
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The endpoint name.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The region in which to obtain the V3 Keystone client.
-If omitted, the `region` argument of the provider is used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>service_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The endpoint service ID.
-{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -717,15 +498,6 @@ If omitted, the `region` argument of the provider is used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The service type of the endpoint.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>url</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The endpoint url.
 {{% /md %}}</dd>
 
 </dl>
@@ -867,7 +639,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Endpoint<wbr>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint region. The `region` and
 `endpoint_region` can be different.
@@ -877,7 +649,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Interface</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint interface. Valid values are `public`,
 `internal` and `admin`. Default value is `public`
@@ -887,7 +659,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint name.
 {{% /md %}}</dd>
@@ -896,7 +668,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V3 Keystone client.
 If omitted, the `region` argument of the provider is used.
@@ -906,7 +678,7 @@ If omitted, the `region` argument of the provider is used.
             title="Optional">
         <span>Service<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint service ID.
 {{% /md %}}</dd>
@@ -915,7 +687,7 @@ If omitted, the `region` argument of the provider is used.
             title="Optional">
         <span>Service<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service name of the endpoint.
 {{% /md %}}</dd>
@@ -924,7 +696,7 @@ If omitted, the `region` argument of the provider is used.
             title="Optional">
         <span>Service<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service type of the endpoint.
 {{% /md %}}</dd>
@@ -933,7 +705,7 @@ If omitted, the `region` argument of the provider is used.
             title="Optional">
         <span>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint url.
 {{% /md %}}</dd>
@@ -949,7 +721,7 @@ If omitted, the `region` argument of the provider is used.
             title="Optional">
         <span>Endpoint<wbr>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint region. The `region` and
 `endpoint_region` can be different.
@@ -959,7 +731,7 @@ If omitted, the `region` argument of the provider is used.
             title="Optional">
         <span>Interface</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint interface. Valid values are `public`,
 `internal` and `admin`. Default value is `public`
@@ -969,7 +741,7 @@ If omitted, the `region` argument of the provider is used.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint name.
 {{% /md %}}</dd>
@@ -978,7 +750,7 @@ If omitted, the `region` argument of the provider is used.
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V3 Keystone client.
 If omitted, the `region` argument of the provider is used.
@@ -988,7 +760,7 @@ If omitted, the `region` argument of the provider is used.
             title="Optional">
         <span>Service<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint service ID.
 {{% /md %}}</dd>
@@ -997,7 +769,7 @@ If omitted, the `region` argument of the provider is used.
             title="Optional">
         <span>Service<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service name of the endpoint.
 {{% /md %}}</dd>
@@ -1006,7 +778,7 @@ If omitted, the `region` argument of the provider is used.
             title="Optional">
         <span>Service<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service type of the endpoint.
 {{% /md %}}</dd>
@@ -1015,7 +787,7 @@ If omitted, the `region` argument of the provider is used.
             title="Optional">
         <span>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint url.
 {{% /md %}}</dd>
@@ -1031,7 +803,7 @@ If omitted, the `region` argument of the provider is used.
             title="Optional">
         <span>endpoint<wbr>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint region. The `region` and
 `endpoint_region` can be different.
@@ -1041,7 +813,7 @@ If omitted, the `region` argument of the provider is used.
             title="Optional">
         <span>interface</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint interface. Valid values are `public`,
 `internal` and `admin`. Default value is `public`
@@ -1051,7 +823,7 @@ If omitted, the `region` argument of the provider is used.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint name.
 {{% /md %}}</dd>
@@ -1060,7 +832,7 @@ If omitted, the `region` argument of the provider is used.
             title="Optional">
         <span>region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V3 Keystone client.
 If omitted, the `region` argument of the provider is used.
@@ -1070,7 +842,7 @@ If omitted, the `region` argument of the provider is used.
             title="Optional">
         <span>service<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint service ID.
 {{% /md %}}</dd>
@@ -1079,7 +851,7 @@ If omitted, the `region` argument of the provider is used.
             title="Optional">
         <span>service<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service name of the endpoint.
 {{% /md %}}</dd>
@@ -1088,7 +860,7 @@ If omitted, the `region` argument of the provider is used.
             title="Optional">
         <span>service<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service type of the endpoint.
 {{% /md %}}</dd>
@@ -1097,7 +869,7 @@ If omitted, the `region` argument of the provider is used.
             title="Optional">
         <span>url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The endpoint url.
 {{% /md %}}</dd>

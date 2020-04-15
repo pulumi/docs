@@ -44,7 +44,7 @@ const example = aws_directory_service_directory_main.id.apply(id => aws.director
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupDirectory<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/directoryservice?tab=doc#LookupDirectoryArgs">LookupDirectoryArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/directoryservice?tab=doc#LookupDirectoryResult">LookupDirectoryResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupDirectory<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/directoryservice?tab=doc#LookupDirectoryArgs">LookupDirectoryArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/directoryservice?tab=doc#LookupDirectoryResult">LookupDirectoryResult</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -76,7 +76,7 @@ The following arguments are supported:
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags assigned to the directory/connector.
 {{% /md %}}</dd>
@@ -126,7 +126,7 @@ The following arguments are supported:
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags assigned to the directory/connector.
 {{% /md %}}</dd>
@@ -223,7 +223,7 @@ The following output properties are available:
             title="">
         <span>Dns<wbr>Ip<wbr>Addresses</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of IP addresses of the DNS servers for the directory/connector.
 {{% /md %}}</dd>
@@ -293,15 +293,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags assigned to the directory/connector.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Type</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -316,6 +307,15 @@ The following output properties are available:
         <span class="property-type"><a href="#getdirectoryvpcsetting">List&lt;Get<wbr>Directory<wbr>Vpc<wbr>Setting&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+    </dt>
+    <dd>{{% md %}}A mapping of tags assigned to the directory/connector.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -441,15 +441,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags assigned to the directory/connector.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Type</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -464,6 +455,15 @@ The following output properties are available:
         <span class="property-type"><a href="#getdirectoryvpcsetting">[]Get<wbr>Directory<wbr>Vpc<wbr>Setting</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}A mapping of tags assigned to the directory/connector.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -589,15 +589,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags assigned to the directory/connector.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>type</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -612,6 +603,15 @@ The following output properties are available:
         <span class="property-type"><a href="#getdirectoryvpcsetting">Get<wbr>Directory<wbr>Vpc<wbr>Setting[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}</span>
+    </dt>
+    <dd>{{% md %}}A mapping of tags assigned to the directory/connector.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -737,15 +737,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags assigned to the directory/connector.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>type</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -760,6 +751,15 @@ The following output properties are available:
         <span class="property-type"><a href="#getdirectoryvpcsetting">List[Get<wbr>Directory<wbr>Vpc<wbr>Setting]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}A mapping of tags assigned to the directory/connector.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -792,7 +792,7 @@ The following output properties are available:
             title="Required">
         <span>Customer<wbr>Dns<wbr>Ips</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The DNS IP addresses of the domain to connect to.
 {{% /md %}}</dd>
@@ -810,7 +810,7 @@ The following output properties are available:
             title="Required">
         <span>Subnet<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The identifiers of the subnets for the connector servers (2 subnets in 2 different AZs).
 {{% /md %}}</dd>
@@ -979,7 +979,7 @@ The following output properties are available:
             title="Required">
         <span>Subnet<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The identifiers of the subnets for the connector servers (2 subnets in 2 different AZs).
 {{% /md %}}</dd>

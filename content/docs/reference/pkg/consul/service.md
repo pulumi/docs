@@ -86,7 +86,7 @@ const redis = new consul.Service("redis", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/consul/#Service">Service</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/consul/#ServiceArgs">ServiceArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/consul/#Service">Service</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/consul/#ServiceArgs">ServiceArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -94,11 +94,11 @@ const redis = new consul.Service("redis", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewService<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-consul/sdk/go/consul/?tab=doc#ServiceArgs">ServiceArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-consul/sdk/go/consul/?tab=doc#Service">Service</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewService<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-consul/sdk/go/consul/?tab=doc#ServiceArgs">ServiceArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-consul/sdk/go/consul/?tab=doc#Service">Service</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Consul/Pulumi.Consul..Service.html">Service</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Consul/Pulumi.Consul.ServiceArgs.html">ServiceArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Consul/Pulumi.Consul.Service.html">Service</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Consul/Pulumi.Consul.ServiceArgs.html">ServiceArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -190,70 +190,6 @@ const redis = new consul.Service("redis", {
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Address</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The address of the service. Defaults to the
-address of the node.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Checks</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecheck">List&lt;Service<wbr>Check<wbr>Args&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Datacenter</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The datacenter to use. This overrides the
-agent's default datacenter and the datacenter in the provider setup.
-{{% /md %}}</dd>
-
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span>External</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The external field has been deprecated and does nothing.{{% /md %}}</p></dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Meta</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string>?</span>
-    </dt>
-    <dd>{{% md %}}A map of arbitrary KV metadata linked to the service
-instance.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The name of the health-check.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Namespace</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The namespace to create the service within.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Node</span>
@@ -265,9 +201,73 @@ instance.
 
     <dt class="property-optional"
             title="Optional">
+        <span>Address</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The address of the service. Defaults to the
+address of the node.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Checks</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicecheck">List&lt;Service<wbr>Check<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Datacenter</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The datacenter to use. This overrides the
+agent's default datacenter and the datacenter in the provider setup.
+{{% /md %}}</dd>
+
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span>External</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The external field has been deprecated and does nothing.{{% /md %}}</p></dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Meta</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A map of arbitrary KV metadata linked to the service
+instance.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the health-check.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Namespace</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The namespace to create the service within.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port of the service.
 {{% /md %}}</dd>
@@ -276,7 +276,7 @@ instance.
             title="Optional">
         <span>Service<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the service.
 {{% /md %}}</dd>
@@ -285,7 +285,7 @@ instance.
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of values that are opaque to Consul,
 but can be used to distinguish between services or nodes.
@@ -298,11 +298,20 @@ but can be used to distinguish between services or nodes.
 {{% choosable language go %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Node</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the node the to register the service on.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The address of the service. Defaults to the
 address of the node.
@@ -320,7 +329,7 @@ address of the node.
             title="Optional">
         <span>Datacenter</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The datacenter to use. This overrides the
 agent's default datacenter and the datacenter in the provider setup.
@@ -330,7 +339,7 @@ agent's default datacenter and the datacenter in the provider setup.
             title="Optional, Deprecated">
         <span>External</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The external field has been deprecated and does nothing.{{% /md %}}</p></dd>
 
@@ -348,7 +357,7 @@ instance.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the health-check.
 {{% /md %}}</dd>
@@ -357,25 +366,16 @@ instance.
             title="Optional">
         <span>Namespace</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The namespace to create the service within.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Node</span>
-        <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the node the to register the service on.
+    <dd>{{% md %}}The namespace to create the service within.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port of the service.
 {{% /md %}}</dd>
@@ -384,7 +384,7 @@ instance.
             title="Optional">
         <span>Service<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the service.
 {{% /md %}}</dd>
@@ -406,70 +406,6 @@ but can be used to distinguish between services or nodes.
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>address</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The address of the service. Defaults to the
-address of the node.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>checks</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecheck">Service<wbr>Check[]?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>datacenter</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The datacenter to use. This overrides the
-agent's default datacenter and the datacenter in the provider setup.
-{{% /md %}}</dd>
-
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span>external</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The external field has been deprecated and does nothing.{{% /md %}}</p></dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>meta</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}?</span>
-    </dt>
-    <dd>{{% md %}}A map of arbitrary KV metadata linked to the service
-instance.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The name of the health-check.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>namespace</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The namespace to create the service within.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>node</span>
@@ -481,9 +417,73 @@ instance.
 
     <dt class="property-optional"
             title="Optional">
+        <span>address</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The address of the service. Defaults to the
+address of the node.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>checks</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicecheck">Service<wbr>Check[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>datacenter</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The datacenter to use. This overrides the
+agent's default datacenter and the datacenter in the provider setup.
+{{% /md %}}</dd>
+
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span>external</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The external field has been deprecated and does nothing.{{% /md %}}</p></dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>meta</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}A map of arbitrary KV metadata linked to the service
+instance.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the health-check.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>namespace</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The namespace to create the service within.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The port of the service.
 {{% /md %}}</dd>
@@ -492,7 +492,7 @@ instance.
             title="Optional">
         <span>service<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the service.
 {{% /md %}}</dd>
@@ -501,7 +501,7 @@ instance.
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of values that are opaque to Consul,
 but can be used to distinguish between services or nodes.
@@ -513,6 +513,15 @@ but can be used to distinguish between services or nodes.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>node</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the node the to register the service on.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -578,15 +587,6 @@ instance.
     <dd>{{% md %}}The namespace to create the service within.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>node</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the node the to register the service on.
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>port</span>
@@ -619,448 +619,6 @@ but can be used to distinguish between services or nodes.
 {{% /choosable %}}
 
 
-
-
-
-
-
-## Service Output Properties
-
-The following output properties are available:
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Address</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The address of the service. Defaults to the
-address of the node.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Checks</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecheck">List&lt;Service<wbr>Check&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Datacenter</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The datacenter to use. This overrides the
-agent's default datacenter and the datacenter in the provider setup.
-{{% /md %}}</dd>
-
-    <dt class="property- property-deprecated"
-            title=", Deprecated">
-        <span>External</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The external field has been deprecated and does nothing.{{% /md %}}</p></dd>
-
-    <dt class="property-"
-            title="">
-        <span>Meta</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string>?</span>
-    </dt>
-    <dd>{{% md %}}A map of arbitrary KV metadata linked to the service
-instance.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the health-check.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Namespace</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The namespace to create the service within.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Node</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the node the to register the service on.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Port</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}The port of the service.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Service<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the service.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}A list of values that are opaque to Consul,
-but can be used to distinguish between services or nodes.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Address</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The address of the service. Defaults to the
-address of the node.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Checks</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecheck">[]Service<wbr>Check</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Datacenter</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The datacenter to use. This overrides the
-agent's default datacenter and the datacenter in the provider setup.
-{{% /md %}}</dd>
-
-    <dt class="property- property-deprecated"
-            title=", Deprecated">
-        <span>External</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The external field has been deprecated and does nothing.{{% /md %}}</p></dd>
-
-    <dt class="property-"
-            title="">
-        <span>Meta</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]string</span>
-    </dt>
-    <dd>{{% md %}}A map of arbitrary KV metadata linked to the service
-instance.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the health-check.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Namespace</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The namespace to create the service within.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Node</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the node the to register the service on.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Port</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}The port of the service.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Service<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the service.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}A list of values that are opaque to Consul,
-but can be used to distinguish between services or nodes.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>address</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The address of the service. Defaults to the
-address of the node.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>checks</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecheck">Service<wbr>Check[]?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>datacenter</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The datacenter to use. This overrides the
-agent's default datacenter and the datacenter in the provider setup.
-{{% /md %}}</dd>
-
-    <dt class="property- property-deprecated"
-            title=", Deprecated">
-        <span>external</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The external field has been deprecated and does nothing.{{% /md %}}</p></dd>
-
-    <dt class="property-"
-            title="">
-        <span>meta</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}?</span>
-    </dt>
-    <dd>{{% md %}}A map of arbitrary KV metadata linked to the service
-instance.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the health-check.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>namespace</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The namespace to create the service within.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>node</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the node the to register the service on.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>port</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}The port of the service.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>service<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the service.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}A list of values that are opaque to Consul,
-but can be used to distinguish between services or nodes.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>address</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The address of the service. Defaults to the
-address of the node.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>checks</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecheck">List[Service<wbr>Check]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>datacenter</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The datacenter to use. This overrides the
-agent's default datacenter and the datacenter in the provider setup.
-{{% /md %}}</dd>
-
-    <dt class="property- property-deprecated"
-            title=", Deprecated">
-        <span>external</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The external field has been deprecated and does nothing.{{% /md %}}</p></dd>
-
-    <dt class="property-"
-            title="">
-        <span>meta</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
-    </dt>
-    <dd>{{% md %}}A map of arbitrary KV metadata linked to the service
-instance.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the health-check.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>namespace</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The namespace to create the service within.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>node</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the node the to register the service on.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>port</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The port of the service.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>service_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The ID of the service.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}A list of values that are opaque to Consul,
-but can be used to distinguish between services or nodes.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
 
 
 
@@ -1088,7 +646,7 @@ Get an existing Service resource's state with the given name, ID, and optional e
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Consul/Pulumi.Consul..Service.html">Service</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Consul/Pulumi.Consul..ServiceState.html">ServiceState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Consul/Pulumi.Consul.Service.html">Service</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Consul/Pulumi.Consul..ServiceState.html">ServiceState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1198,7 +756,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The address of the service. Defaults to the
 address of the node.
@@ -1208,7 +766,7 @@ address of the node.
             title="Optional">
         <span>Checks</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecheck">List&lt;Service<wbr>Check<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#servicecheck">List&lt;Service<wbr>Check<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1216,7 +774,7 @@ address of the node.
             title="Optional">
         <span>Datacenter</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The datacenter to use. This overrides the
 agent's default datacenter and the datacenter in the provider setup.
@@ -1226,7 +784,7 @@ agent's default datacenter and the datacenter in the provider setup.
             title="Optional, Deprecated">
         <span>External</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The external field has been deprecated and does nothing.{{% /md %}}</p></dd>
 
@@ -1234,7 +792,7 @@ agent's default datacenter and the datacenter in the provider setup.
             title="Optional">
         <span>Meta</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string>?</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of arbitrary KV metadata linked to the service
 instance.
@@ -1244,7 +802,7 @@ instance.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the health-check.
 {{% /md %}}</dd>
@@ -1253,7 +811,7 @@ instance.
             title="Optional">
         <span>Namespace</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The namespace to create the service within.
 {{% /md %}}</dd>
@@ -1262,7 +820,7 @@ instance.
             title="Optional">
         <span>Node</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the node the to register the service on.
 {{% /md %}}</dd>
@@ -1271,7 +829,7 @@ instance.
             title="Optional">
         <span>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port of the service.
 {{% /md %}}</dd>
@@ -1280,7 +838,7 @@ instance.
             title="Optional">
         <span>Service<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the service.
 {{% /md %}}</dd>
@@ -1289,7 +847,7 @@ instance.
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of values that are opaque to Consul,
 but can be used to distinguish between services or nodes.
@@ -1306,7 +864,7 @@ but can be used to distinguish between services or nodes.
             title="Optional">
         <span>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The address of the service. Defaults to the
 address of the node.
@@ -1324,7 +882,7 @@ address of the node.
             title="Optional">
         <span>Datacenter</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The datacenter to use. This overrides the
 agent's default datacenter and the datacenter in the provider setup.
@@ -1334,7 +892,7 @@ agent's default datacenter and the datacenter in the provider setup.
             title="Optional, Deprecated">
         <span>External</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The external field has been deprecated and does nothing.{{% /md %}}</p></dd>
 
@@ -1352,7 +910,7 @@ instance.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the health-check.
 {{% /md %}}</dd>
@@ -1361,7 +919,7 @@ instance.
             title="Optional">
         <span>Namespace</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The namespace to create the service within.
 {{% /md %}}</dd>
@@ -1370,7 +928,7 @@ instance.
             title="Optional">
         <span>Node</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the node the to register the service on.
 {{% /md %}}</dd>
@@ -1379,7 +937,7 @@ instance.
             title="Optional">
         <span>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port of the service.
 {{% /md %}}</dd>
@@ -1388,7 +946,7 @@ instance.
             title="Optional">
         <span>Service<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the service.
 {{% /md %}}</dd>
@@ -1414,7 +972,7 @@ but can be used to distinguish between services or nodes.
             title="Optional">
         <span>address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The address of the service. Defaults to the
 address of the node.
@@ -1424,7 +982,7 @@ address of the node.
             title="Optional">
         <span>checks</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecheck">Service<wbr>Check[]?</a></span>
+        <span class="property-type"><a href="#servicecheck">Service<wbr>Check[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1432,7 +990,7 @@ address of the node.
             title="Optional">
         <span>datacenter</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The datacenter to use. This overrides the
 agent's default datacenter and the datacenter in the provider setup.
@@ -1442,7 +1000,7 @@ agent's default datacenter and the datacenter in the provider setup.
             title="Optional, Deprecated">
         <span>external</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}The external field has been deprecated and does nothing.{{% /md %}}</p></dd>
 
@@ -1450,7 +1008,7 @@ agent's default datacenter and the datacenter in the provider setup.
             title="Optional">
         <span>meta</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}?</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of arbitrary KV metadata linked to the service
 instance.
@@ -1460,7 +1018,7 @@ instance.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the health-check.
 {{% /md %}}</dd>
@@ -1469,7 +1027,7 @@ instance.
             title="Optional">
         <span>namespace</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The namespace to create the service within.
 {{% /md %}}</dd>
@@ -1478,7 +1036,7 @@ instance.
             title="Optional">
         <span>node</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the node the to register the service on.
 {{% /md %}}</dd>
@@ -1487,7 +1045,7 @@ instance.
             title="Optional">
         <span>port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The port of the service.
 {{% /md %}}</dd>
@@ -1496,7 +1054,7 @@ instance.
             title="Optional">
         <span>service<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the service.
 {{% /md %}}</dd>
@@ -1505,7 +1063,7 @@ instance.
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of values that are opaque to Consul,
 but can be used to distinguish between services or nodes.
@@ -1658,36 +1216,6 @@ but can be used to distinguish between services or nodes.
 if not set.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Deregister<wbr>Critical<wbr>Service<wbr>After</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The time after which
-the service is automatically deregistered when in the `critical` state.
-Defaults to `30s`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Headers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecheckheader">List&lt;Service<wbr>Check<wbr>Header<wbr>Args&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}The headers to send for an HTTP check.
-The attributes of each header is given below.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Http</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The HTTP endpoint to call for an HTTP check.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Interval</span>
@@ -1698,16 +1226,6 @@ The attributes of each header is given below.
 invocation.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Method</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The method to use for HTTP health-checks. Defaults
-to `GET`.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Name</span>
@@ -1715,33 +1233,6 @@ to `GET`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the health-check.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Notes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}An opaque field meant to hold human readable text.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Status</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The initial health-check status.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Tcp</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The TCP address and port to connect to for a TCP check.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1755,9 +1246,76 @@ to `GET`.
 
     <dt class="property-optional"
             title="Optional">
+        <span>Deregister<wbr>Critical<wbr>Service<wbr>After</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The time after which
+the service is automatically deregistered when in the `critical` state.
+Defaults to `30s`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Headers</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicecheckheader">List&lt;Service<wbr>Check<wbr>Header<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The headers to send for an HTTP check.
+The attributes of each header is given below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Http</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The HTTP endpoint to call for an HTTP check.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Method</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The method to use for HTTP health-checks. Defaults
+to `GET`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Notes</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An opaque field meant to hold human readable text.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Status</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The initial health-check status.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Tcp</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The TCP address and port to connect to for a TCP check.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Tls<wbr>Skip<wbr>Verify</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to deactivate certificate
 verification for HTTP health-checks. Defaults to `false`.
@@ -1780,11 +1338,39 @@ verification for HTTP health-checks. Defaults to `false`.
 if not set.
 {{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>Interval</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The interval to wait between each health-check
+invocation.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the health-check.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Timeout</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The timeout value for HTTP checks.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Deregister<wbr>Critical<wbr>Service<wbr>After</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time after which
 the service is automatically deregistered when in the `critical` state.
@@ -1805,45 +1391,26 @@ The attributes of each header is given below.
             title="Optional">
         <span>Http</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The HTTP endpoint to call for an HTTP check.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Interval</span>
-        <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The interval to wait between each health-check
-invocation.
+    <dd>{{% md %}}The HTTP endpoint to call for an HTTP check.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Method</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The method to use for HTTP health-checks. Defaults
 to `GET`.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the health-check.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Notes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An opaque field meant to hold human readable text.
 {{% /md %}}</dd>
@@ -1852,7 +1419,7 @@ to `GET`.
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The initial health-check status.
 {{% /md %}}</dd>
@@ -1861,25 +1428,16 @@ to `GET`.
             title="Optional">
         <span>Tcp</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The TCP address and port to connect to for a TCP check.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Timeout</span>
-        <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The timeout value for HTTP checks.
+    <dd>{{% md %}}The TCP address and port to connect to for a TCP check.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Tls<wbr>Skip<wbr>Verify</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to deactivate certificate
 verification for HTTP health-checks. Defaults to `false`.
@@ -1902,36 +1460,6 @@ verification for HTTP health-checks. Defaults to `false`.
 if not set.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>deregister<wbr>Critical<wbr>Service<wbr>After</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The time after which
-the service is automatically deregistered when in the `critical` state.
-Defaults to `30s`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>headers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecheckheader">Service<wbr>Check<wbr>Header[]?</a></span>
-    </dt>
-    <dd>{{% md %}}The headers to send for an HTTP check.
-The attributes of each header is given below.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>http</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The HTTP endpoint to call for an HTTP check.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>interval</span>
@@ -1942,16 +1470,6 @@ The attributes of each header is given below.
 invocation.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>method</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The method to use for HTTP health-checks. Defaults
-to `GET`.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>name</span>
@@ -1959,33 +1477,6 @@ to `GET`.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the health-check.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>notes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}An opaque field meant to hold human readable text.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>status</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The initial health-check status.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>tcp</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The TCP address and port to connect to for a TCP check.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1999,9 +1490,76 @@ to `GET`.
 
     <dt class="property-optional"
             title="Optional">
+        <span>deregister<wbr>Critical<wbr>Service<wbr>After</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The time after which
+the service is automatically deregistered when in the `critical` state.
+Defaults to `30s`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>headers</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicecheckheader">Service<wbr>Check<wbr>Header[]</a></span>
+    </dt>
+    <dd>{{% md %}}The headers to send for an HTTP check.
+The attributes of each header is given below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>http</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The HTTP endpoint to call for an HTTP check.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>method</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The method to use for HTTP health-checks. Defaults
+to `GET`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>notes</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An opaque field meant to hold human readable text.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>status</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The initial health-check status.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>tcp</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The TCP address and port to connect to for a TCP check.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>tls<wbr>Skip<wbr>Verify</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to deactivate certificate
 verification for HTTP health-checks. Defaults to `false`.
@@ -2022,6 +1580,34 @@ verification for HTTP health-checks. Defaults to `false`.
     </dt>
     <dd>{{% md %}}An ID, *unique per agent*. Will default to *name*
 if not set.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>interval</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The interval to wait between each health-check
+invocation.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the health-check.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>timeout</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The timeout value for HTTP checks.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2054,16 +1640,6 @@ The attributes of each header is given below.
     <dd>{{% md %}}The HTTP endpoint to call for an HTTP check.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>interval</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The interval to wait between each health-check
-invocation.
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>method</span>
@@ -2072,15 +1648,6 @@ invocation.
     </dt>
     <dd>{{% md %}}The method to use for HTTP health-checks. Defaults
 to `GET`.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the health-check.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2108,15 +1675,6 @@ to `GET`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The TCP address and port to connect to for a TCP check.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>timeout</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The timeout value for HTTP checks.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2164,7 +1722,7 @@ verification for HTTP health-checks. Defaults to `false`.
             title="Required">
         <span>Values</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The header's list of values.
 {{% /md %}}</dd>

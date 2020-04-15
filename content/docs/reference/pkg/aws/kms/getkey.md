@@ -47,7 +47,7 @@ const foo = pulumi.output(aws.kms.getKey({
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupKey<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/kms?tab=doc#LookupKeyArgs">LookupKeyArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/kms?tab=doc#LookupKeyResult">LookupKeyResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupKey<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/kms?tab=doc#LookupKeyArgs">LookupKeyArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/kms?tab=doc#LookupKeyResult">LookupKeyResult</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -66,15 +66,6 @@ The following arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Grant<wbr>Tokens</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}List of grant tokens
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Key<wbr>Id</span>
@@ -88,12 +79,34 @@ The following arguments are supported:
 * Alias ARN: E.g.: `arn:aws:kms:us-east-1:111122223333:alias/my-key`
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>Grant<wbr>Tokens</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}List of grant tokens
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Key<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Key identifier which can be one of the following format:
+* Key ID. E.g: `1234abcd-12ab-34cd-56ef-1234567890ab`
+* Key ARN. E.g.: `arn:aws:kms:us-east-1:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab`
+* Alias name. E.g.: `alias/my-key`
+* Alias ARN: E.g.: `arn:aws:kms:us-east-1:111122223333:alias/my-key`
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -104,34 +117,12 @@ The following arguments are supported:
     <dd>{{% md %}}List of grant tokens
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>Key<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Key identifier which can be one of the following format:
-* Key ID. E.g: `1234abcd-12ab-34cd-56ef-1234567890ab`
-* Key ARN. E.g.: `arn:aws:kms:us-east-1:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab`
-* Alias name. E.g.: `alias/my-key`
-* Alias ARN: E.g.: `arn:aws:kms:us-east-1:111122223333:alias/my-key`
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>grant<wbr>Tokens</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}List of grant tokens
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -146,21 +137,21 @@ The following arguments are supported:
 * Alias ARN: E.g.: `arn:aws:kms:us-east-1:111122223333:alias/my-key`
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>grant<wbr>Tokens</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}List of grant tokens
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>grant_<wbr>tokens</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}List of grant tokens
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -173,6 +164,15 @@ The following arguments are supported:
 * Key ARN. E.g.: `arn:aws:kms:us-east-1:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab`
 * Alias name. E.g.: `alias/my-key`
 * Alias ARN: E.g.: `arn:aws:kms:us-east-1:111122223333:alias/my-key`
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>grant_<wbr>tokens</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List[str]</span>
+    </dt>
+    <dd>{{% md %}}List of grant tokens
 {{% /md %}}</dd>
 
 </dl>
@@ -261,14 +261,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Grant<wbr>Tokens</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -321,6 +313,14 @@ The following output properties are available:
         <span>Valid<wbr>To</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Grant<wbr>Tokens</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -397,14 +397,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Grant<wbr>Tokens</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -457,6 +449,14 @@ The following output properties are available:
         <span>Valid<wbr>To</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Grant<wbr>Tokens</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -533,14 +533,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>grant<wbr>Tokens</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>id</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -593,6 +585,14 @@ The following output properties are available:
         <span>valid<wbr>To</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>grant<wbr>Tokens</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -669,14 +669,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>grant_<wbr>tokens</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>id</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -729,6 +721,14 @@ The following output properties are available:
         <span>valid_<wbr>to</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>grant_<wbr>tokens</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

@@ -8,7 +8,7 @@ block_external_search_index: true
 
 Provides a Rancher v2 Cloud Credential resource. This can be used to create Cloud Credential for Rancher v2.2.x and retrieve their information.
 
-amazonec2, azure, digitalocean, openstack and vsphere credentials config are supported for Cloud Credential.
+amazonec2, azure, digitalocean, linode, openstack and vsphere credentials config are supported for Cloud Credential.
 
 ## Example Usage
 
@@ -35,19 +35,19 @@ const foo = new rancher2.CloudCredential("foo", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/rancher2/#CloudCredential">CloudCredential</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/rancher2/#CloudCredentialArgs">CloudCredentialArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/rancher2/#CloudCredential">CloudCredential</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/rancher2/#CloudCredentialArgs">CloudCredentialArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">CloudCredential</span><span class="p">(resource_name, opts=None, </span>amazonec2_credential_config=None<span class="p">, </span>annotations=None<span class="p">, </span>azure_credential_config=None<span class="p">, </span>description=None<span class="p">, </span>digitalocean_credential_config=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>openstack_credential_config=None<span class="p">, </span>vsphere_credential_config=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">CloudCredential</span><span class="p">(resource_name, opts=None, </span>amazonec2_credential_config=None<span class="p">, </span>annotations=None<span class="p">, </span>azure_credential_config=None<span class="p">, </span>description=None<span class="p">, </span>digitalocean_credential_config=None<span class="p">, </span>labels=None<span class="p">, </span>linode_credential_config=None<span class="p">, </span>name=None<span class="p">, </span>openstack_credential_config=None<span class="p">, </span>vsphere_credential_config=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewCloudCredential<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/go/rancher2/?tab=doc#CloudCredentialArgs">CloudCredentialArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/go/rancher2/?tab=doc#CloudCredential">CloudCredential</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewCloudCredential<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/go/rancher2/?tab=doc#CloudCredentialArgs">CloudCredentialArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/go/rancher2/?tab=doc#CloudCredential">CloudCredential</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2..CloudCredential.html">CloudCredential</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.CloudCredentialArgs.html">CloudCredentialArgs</a></span>? <span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.CloudCredential.html">CloudCredential</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.CloudCredentialArgs.html">CloudCredentialArgs</a></span>? <span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -143,7 +143,7 @@ const foo = new rancher2.CloudCredential("foo", {
             title="Optional">
         <span>Amazonec2Credential<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudcredentialamazonec2credentialconfig">Cloud<wbr>Credential<wbr>Amazonec2Credential<wbr>Config<wbr>Args?</a></span>
+        <span class="property-type"><a href="#cloudcredentialamazonec2credentialconfig">Cloud<wbr>Credential<wbr>Amazonec2Credential<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}AWS config for the Cloud Credential (list maxitems:1)
 {{% /md %}}</dd>
@@ -152,7 +152,7 @@ const foo = new rancher2.CloudCredential("foo", {
             title="Optional">
         <span>Annotations</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Annotations for Cloud Credential object (map)
 {{% /md %}}</dd>
@@ -161,7 +161,7 @@ const foo = new rancher2.CloudCredential("foo", {
             title="Optional">
         <span>Azure<wbr>Credential<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudcredentialazurecredentialconfig">Cloud<wbr>Credential<wbr>Azure<wbr>Credential<wbr>Config<wbr>Args?</a></span>
+        <span class="property-type"><a href="#cloudcredentialazurecredentialconfig">Cloud<wbr>Credential<wbr>Azure<wbr>Credential<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Azure config for the Cloud Credential (list maxitems:1)
 {{% /md %}}</dd>
@@ -170,7 +170,7 @@ const foo = new rancher2.CloudCredential("foo", {
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description for the Cloud Credential (string)
 {{% /md %}}</dd>
@@ -179,7 +179,7 @@ const foo = new rancher2.CloudCredential("foo", {
             title="Optional">
         <span>Digitalocean<wbr>Credential<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudcredentialdigitaloceancredentialconfig">Cloud<wbr>Credential<wbr>Digitalocean<wbr>Credential<wbr>Config<wbr>Args?</a></span>
+        <span class="property-type"><a href="#cloudcredentialdigitaloceancredentialconfig">Cloud<wbr>Credential<wbr>Digitalocean<wbr>Credential<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}DigitalOcean config for the Cloud Credential (list maxitems:1)
 {{% /md %}}</dd>
@@ -188,16 +188,25 @@ const foo = new rancher2.CloudCredential("foo", {
             title="Optional">
         <span>Labels</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Labels for Cloud Credential object (map)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
+        <span>Linode<wbr>Credential<wbr>Config</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#cloudcredentiallinodecredentialconfig">Cloud<wbr>Credential<wbr>Linode<wbr>Credential<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Linode config for the Cloud Credential (list maxitems:1)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Cloud Credential (string)
 {{% /md %}}</dd>
@@ -206,7 +215,7 @@ const foo = new rancher2.CloudCredential("foo", {
             title="Optional">
         <span>Openstack<wbr>Credential<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudcredentialopenstackcredentialconfig">Cloud<wbr>Credential<wbr>Openstack<wbr>Credential<wbr>Config<wbr>Args?</a></span>
+        <span class="property-type"><a href="#cloudcredentialopenstackcredentialconfig">Cloud<wbr>Credential<wbr>Openstack<wbr>Credential<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}OpenStack config for the Cloud Credential (list maxitems:1)
 {{% /md %}}</dd>
@@ -215,7 +224,7 @@ const foo = new rancher2.CloudCredential("foo", {
             title="Optional">
         <span>Vsphere<wbr>Credential<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudcredentialvspherecredentialconfig">Cloud<wbr>Credential<wbr>Vsphere<wbr>Credential<wbr>Config<wbr>Args?</a></span>
+        <span class="property-type"><a href="#cloudcredentialvspherecredentialconfig">Cloud<wbr>Credential<wbr>Vsphere<wbr>Credential<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}vSphere config for the Cloud Credential (list maxitems:1)
 {{% /md %}}</dd>
@@ -231,7 +240,7 @@ const foo = new rancher2.CloudCredential("foo", {
             title="Optional">
         <span>Amazonec2Credential<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudcredentialamazonec2credentialconfig">*Cloud<wbr>Credential<wbr>Amazonec2Credential<wbr>Config</a></span>
+        <span class="property-type"><a href="#cloudcredentialamazonec2credentialconfig">Cloud<wbr>Credential<wbr>Amazonec2Credential<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}AWS config for the Cloud Credential (list maxitems:1)
 {{% /md %}}</dd>
@@ -249,7 +258,7 @@ const foo = new rancher2.CloudCredential("foo", {
             title="Optional">
         <span>Azure<wbr>Credential<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudcredentialazurecredentialconfig">*Cloud<wbr>Credential<wbr>Azure<wbr>Credential<wbr>Config</a></span>
+        <span class="property-type"><a href="#cloudcredentialazurecredentialconfig">Cloud<wbr>Credential<wbr>Azure<wbr>Credential<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Azure config for the Cloud Credential (list maxitems:1)
 {{% /md %}}</dd>
@@ -258,7 +267,7 @@ const foo = new rancher2.CloudCredential("foo", {
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description for the Cloud Credential (string)
 {{% /md %}}</dd>
@@ -267,7 +276,7 @@ const foo = new rancher2.CloudCredential("foo", {
             title="Optional">
         <span>Digitalocean<wbr>Credential<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudcredentialdigitaloceancredentialconfig">*Cloud<wbr>Credential<wbr>Digitalocean<wbr>Credential<wbr>Config</a></span>
+        <span class="property-type"><a href="#cloudcredentialdigitaloceancredentialconfig">Cloud<wbr>Credential<wbr>Digitalocean<wbr>Credential<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}DigitalOcean config for the Cloud Credential (list maxitems:1)
 {{% /md %}}</dd>
@@ -283,9 +292,18 @@ const foo = new rancher2.CloudCredential("foo", {
 
     <dt class="property-optional"
             title="Optional">
+        <span>Linode<wbr>Credential<wbr>Config</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#cloudcredentiallinodecredentialconfig">Cloud<wbr>Credential<wbr>Linode<wbr>Credential<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Linode config for the Cloud Credential (list maxitems:1)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Cloud Credential (string)
 {{% /md %}}</dd>
@@ -294,7 +312,7 @@ const foo = new rancher2.CloudCredential("foo", {
             title="Optional">
         <span>Openstack<wbr>Credential<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudcredentialopenstackcredentialconfig">*Cloud<wbr>Credential<wbr>Openstack<wbr>Credential<wbr>Config</a></span>
+        <span class="property-type"><a href="#cloudcredentialopenstackcredentialconfig">Cloud<wbr>Credential<wbr>Openstack<wbr>Credential<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}OpenStack config for the Cloud Credential (list maxitems:1)
 {{% /md %}}</dd>
@@ -303,7 +321,7 @@ const foo = new rancher2.CloudCredential("foo", {
             title="Optional">
         <span>Vsphere<wbr>Credential<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudcredentialvspherecredentialconfig">*Cloud<wbr>Credential<wbr>Vsphere<wbr>Credential<wbr>Config</a></span>
+        <span class="property-type"><a href="#cloudcredentialvspherecredentialconfig">Cloud<wbr>Credential<wbr>Vsphere<wbr>Credential<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}vSphere config for the Cloud Credential (list maxitems:1)
 {{% /md %}}</dd>
@@ -319,7 +337,7 @@ const foo = new rancher2.CloudCredential("foo", {
             title="Optional">
         <span>amazonec2Credential<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudcredentialamazonec2credentialconfig">Cloud<wbr>Credential<wbr>Amazonec2Credential<wbr>Config?</a></span>
+        <span class="property-type"><a href="#cloudcredentialamazonec2credentialconfig">Cloud<wbr>Credential<wbr>Amazonec2Credential<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}AWS config for the Cloud Credential (list maxitems:1)
 {{% /md %}}</dd>
@@ -328,7 +346,7 @@ const foo = new rancher2.CloudCredential("foo", {
             title="Optional">
         <span>annotations</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Annotations for Cloud Credential object (map)
 {{% /md %}}</dd>
@@ -337,7 +355,7 @@ const foo = new rancher2.CloudCredential("foo", {
             title="Optional">
         <span>azure<wbr>Credential<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudcredentialazurecredentialconfig">Cloud<wbr>Credential<wbr>Azure<wbr>Credential<wbr>Config?</a></span>
+        <span class="property-type"><a href="#cloudcredentialazurecredentialconfig">Cloud<wbr>Credential<wbr>Azure<wbr>Credential<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Azure config for the Cloud Credential (list maxitems:1)
 {{% /md %}}</dd>
@@ -346,7 +364,7 @@ const foo = new rancher2.CloudCredential("foo", {
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description for the Cloud Credential (string)
 {{% /md %}}</dd>
@@ -355,7 +373,7 @@ const foo = new rancher2.CloudCredential("foo", {
             title="Optional">
         <span>digitalocean<wbr>Credential<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudcredentialdigitaloceancredentialconfig">Cloud<wbr>Credential<wbr>Digitalocean<wbr>Credential<wbr>Config?</a></span>
+        <span class="property-type"><a href="#cloudcredentialdigitaloceancredentialconfig">Cloud<wbr>Credential<wbr>Digitalocean<wbr>Credential<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}DigitalOcean config for the Cloud Credential (list maxitems:1)
 {{% /md %}}</dd>
@@ -364,16 +382,25 @@ const foo = new rancher2.CloudCredential("foo", {
             title="Optional">
         <span>labels</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Labels for Cloud Credential object (map)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
+        <span>linode<wbr>Credential<wbr>Config</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#cloudcredentiallinodecredentialconfig">Cloud<wbr>Credential<wbr>Linode<wbr>Credential<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Linode config for the Cloud Credential (list maxitems:1)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Cloud Credential (string)
 {{% /md %}}</dd>
@@ -382,7 +409,7 @@ const foo = new rancher2.CloudCredential("foo", {
             title="Optional">
         <span>openstack<wbr>Credential<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudcredentialopenstackcredentialconfig">Cloud<wbr>Credential<wbr>Openstack<wbr>Credential<wbr>Config?</a></span>
+        <span class="property-type"><a href="#cloudcredentialopenstackcredentialconfig">Cloud<wbr>Credential<wbr>Openstack<wbr>Credential<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}OpenStack config for the Cloud Credential (list maxitems:1)
 {{% /md %}}</dd>
@@ -391,7 +418,7 @@ const foo = new rancher2.CloudCredential("foo", {
             title="Optional">
         <span>vsphere<wbr>Credential<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudcredentialvspherecredentialconfig">Cloud<wbr>Credential<wbr>Vsphere<wbr>Credential<wbr>Config?</a></span>
+        <span class="property-type"><a href="#cloudcredentialvspherecredentialconfig">Cloud<wbr>Credential<wbr>Vsphere<wbr>Credential<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}vSphere config for the Cloud Credential (list maxitems:1)
 {{% /md %}}</dd>
@@ -455,6 +482,15 @@ const foo = new rancher2.CloudCredential("foo", {
         <span class="property-type">Dict[str, Any]</span>
     </dt>
     <dd>{{% md %}}Labels for Cloud Credential object (map)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>linode_<wbr>credential_<wbr>config</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#cloudcredentiallinodecredentialconfig">Dict[Cloud<wbr>Credential<wbr>Linode<wbr>Credential<wbr>Config]</a></span>
+    </dt>
+    <dd>{{% md %}}Linode config for the Cloud Credential (list maxitems:1)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -505,92 +541,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Amazonec2Credential<wbr>Config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudcredentialamazonec2credentialconfig">Cloud<wbr>Credential<wbr>Amazonec2Credential<wbr>Config?</a></span>
-    </dt>
-    <dd>{{% md %}}AWS config for the Cloud Credential (list maxitems:1)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Annotations</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
-    </dt>
-    <dd>{{% md %}}Annotations for Cloud Credential object (map)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Azure<wbr>Credential<wbr>Config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudcredentialazurecredentialconfig">Cloud<wbr>Credential<wbr>Azure<wbr>Credential<wbr>Config?</a></span>
-    </dt>
-    <dd>{{% md %}}Azure config for the Cloud Credential (list maxitems:1)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Description for the Cloud Credential (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Digitalocean<wbr>Credential<wbr>Config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudcredentialdigitaloceancredentialconfig">Cloud<wbr>Credential<wbr>Digitalocean<wbr>Credential<wbr>Config?</a></span>
-    </dt>
-    <dd>{{% md %}}DigitalOcean config for the Cloud Credential (list maxitems:1)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Driver</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) The driver of the Cloud Credential (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Labels</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object></span>
-    </dt>
-    <dd>{{% md %}}Labels for Cloud Credential object (map)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the Cloud Credential (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Openstack<wbr>Credential<wbr>Config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudcredentialopenstackcredentialconfig">Cloud<wbr>Credential<wbr>Openstack<wbr>Credential<wbr>Config?</a></span>
-    </dt>
-    <dd>{{% md %}}OpenStack config for the Cloud Credential (list maxitems:1)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Vsphere<wbr>Credential<wbr>Config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudcredentialvspherecredentialconfig">Cloud<wbr>Credential<wbr>Vsphere<wbr>Credential<wbr>Config?</a></span>
-    </dt>
-    <dd>{{% md %}}vSphere config for the Cloud Credential (list maxitems:1)
 {{% /md %}}</dd>
 
 </dl>
@@ -602,92 +557,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Amazonec2Credential<wbr>Config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudcredentialamazonec2credentialconfig">*Cloud<wbr>Credential<wbr>Amazonec2Credential<wbr>Config</a></span>
-    </dt>
-    <dd>{{% md %}}AWS config for the Cloud Credential (list maxitems:1)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Annotations</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
-    </dt>
-    <dd>{{% md %}}Annotations for Cloud Credential object (map)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Azure<wbr>Credential<wbr>Config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudcredentialazurecredentialconfig">*Cloud<wbr>Credential<wbr>Azure<wbr>Credential<wbr>Config</a></span>
-    </dt>
-    <dd>{{% md %}}Azure config for the Cloud Credential (list maxitems:1)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Description for the Cloud Credential (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Digitalocean<wbr>Credential<wbr>Config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudcredentialdigitaloceancredentialconfig">*Cloud<wbr>Credential<wbr>Digitalocean<wbr>Credential<wbr>Config</a></span>
-    </dt>
-    <dd>{{% md %}}DigitalOcean config for the Cloud Credential (list maxitems:1)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Driver</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) The driver of the Cloud Credential (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Labels</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
-    </dt>
-    <dd>{{% md %}}Labels for Cloud Credential object (map)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the Cloud Credential (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Openstack<wbr>Credential<wbr>Config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudcredentialopenstackcredentialconfig">*Cloud<wbr>Credential<wbr>Openstack<wbr>Credential<wbr>Config</a></span>
-    </dt>
-    <dd>{{% md %}}OpenStack config for the Cloud Credential (list maxitems:1)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Vsphere<wbr>Credential<wbr>Config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudcredentialvspherecredentialconfig">*Cloud<wbr>Credential<wbr>Vsphere<wbr>Credential<wbr>Config</a></span>
-    </dt>
-    <dd>{{% md %}}vSphere config for the Cloud Credential (list maxitems:1)
 {{% /md %}}</dd>
 
 </dl>
@@ -699,92 +573,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>amazonec2Credential<wbr>Config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudcredentialamazonec2credentialconfig">Cloud<wbr>Credential<wbr>Amazonec2Credential<wbr>Config?</a></span>
-    </dt>
-    <dd>{{% md %}}AWS config for the Cloud Credential (list maxitems:1)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>annotations</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
-    </dt>
-    <dd>{{% md %}}Annotations for Cloud Credential object (map)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>azure<wbr>Credential<wbr>Config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudcredentialazurecredentialconfig">Cloud<wbr>Credential<wbr>Azure<wbr>Credential<wbr>Config?</a></span>
-    </dt>
-    <dd>{{% md %}}Azure config for the Cloud Credential (list maxitems:1)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Description for the Cloud Credential (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>digitalocean<wbr>Credential<wbr>Config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudcredentialdigitaloceancredentialconfig">Cloud<wbr>Credential<wbr>Digitalocean<wbr>Credential<wbr>Config?</a></span>
-    </dt>
-    <dd>{{% md %}}DigitalOcean config for the Cloud Credential (list maxitems:1)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>driver</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) The driver of the Cloud Credential (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>labels</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
-    </dt>
-    <dd>{{% md %}}Labels for Cloud Credential object (map)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the Cloud Credential (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>openstack<wbr>Credential<wbr>Config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudcredentialopenstackcredentialconfig">Cloud<wbr>Credential<wbr>Openstack<wbr>Credential<wbr>Config?</a></span>
-    </dt>
-    <dd>{{% md %}}OpenStack config for the Cloud Credential (list maxitems:1)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>vsphere<wbr>Credential<wbr>Config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudcredentialvspherecredentialconfig">Cloud<wbr>Credential<wbr>Vsphere<wbr>Credential<wbr>Config?</a></span>
-    </dt>
-    <dd>{{% md %}}vSphere config for the Cloud Credential (list maxitems:1)
 {{% /md %}}</dd>
 
 </dl>
@@ -796,92 +589,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>amazonec2_<wbr>credential_<wbr>config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudcredentialamazonec2credentialconfig">Dict[Cloud<wbr>Credential<wbr>Amazonec2Credential<wbr>Config]</a></span>
-    </dt>
-    <dd>{{% md %}}AWS config for the Cloud Credential (list maxitems:1)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>annotations</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
-    </dt>
-    <dd>{{% md %}}Annotations for Cloud Credential object (map)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>azure_<wbr>credential_<wbr>config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudcredentialazurecredentialconfig">Dict[Cloud<wbr>Credential<wbr>Azure<wbr>Credential<wbr>Config]</a></span>
-    </dt>
-    <dd>{{% md %}}Azure config for the Cloud Credential (list maxitems:1)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Description for the Cloud Credential (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>digitalocean_<wbr>credential_<wbr>config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudcredentialdigitaloceancredentialconfig">Dict[Cloud<wbr>Credential<wbr>Digitalocean<wbr>Credential<wbr>Config]</a></span>
-    </dt>
-    <dd>{{% md %}}DigitalOcean config for the Cloud Credential (list maxitems:1)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>driver</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Computed) The driver of the Cloud Credential (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>labels</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
-    </dt>
-    <dd>{{% md %}}Labels for Cloud Credential object (map)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the Cloud Credential (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>openstack_<wbr>credential_<wbr>config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudcredentialopenstackcredentialconfig">Dict[Cloud<wbr>Credential<wbr>Openstack<wbr>Credential<wbr>Config]</a></span>
-    </dt>
-    <dd>{{% md %}}OpenStack config for the Cloud Credential (list maxitems:1)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>vsphere_<wbr>credential_<wbr>config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudcredentialvspherecredentialconfig">Dict[Cloud<wbr>Credential<wbr>Vsphere<wbr>Credential<wbr>Config]</a></span>
-    </dt>
-    <dd>{{% md %}}vSphere config for the Cloud Credential (list maxitems:1)
 {{% /md %}}</dd>
 
 </dl>
@@ -905,7 +617,7 @@ Get an existing CloudCredential resource's state with the given name, ID, and op
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>amazonec2_credential_config=None<span class="p">, </span>annotations=None<span class="p">, </span>azure_credential_config=None<span class="p">, </span>description=None<span class="p">, </span>digitalocean_credential_config=None<span class="p">, </span>driver=None<span class="p">, </span>labels=None<span class="p">, </span>name=None<span class="p">, </span>openstack_credential_config=None<span class="p">, </span>vsphere_credential_config=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>amazonec2_credential_config=None<span class="p">, </span>annotations=None<span class="p">, </span>azure_credential_config=None<span class="p">, </span>description=None<span class="p">, </span>digitalocean_credential_config=None<span class="p">, </span>driver=None<span class="p">, </span>labels=None<span class="p">, </span>linode_credential_config=None<span class="p">, </span>name=None<span class="p">, </span>openstack_credential_config=None<span class="p">, </span>vsphere_credential_config=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -913,7 +625,7 @@ Get an existing CloudCredential resource's state with the given name, ID, and op
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2..CloudCredential.html">CloudCredential</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2..CloudCredentialState.html">CloudCredentialState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.CloudCredential.html">CloudCredential</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2..CloudCredentialState.html">CloudCredentialState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1023,7 +735,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Amazonec2Credential<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudcredentialamazonec2credentialconfig">Cloud<wbr>Credential<wbr>Amazonec2Credential<wbr>Config<wbr>Args?</a></span>
+        <span class="property-type"><a href="#cloudcredentialamazonec2credentialconfig">Cloud<wbr>Credential<wbr>Amazonec2Credential<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}AWS config for the Cloud Credential (list maxitems:1)
 {{% /md %}}</dd>
@@ -1032,7 +744,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Annotations</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Annotations for Cloud Credential object (map)
 {{% /md %}}</dd>
@@ -1041,7 +753,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Azure<wbr>Credential<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudcredentialazurecredentialconfig">Cloud<wbr>Credential<wbr>Azure<wbr>Credential<wbr>Config<wbr>Args?</a></span>
+        <span class="property-type"><a href="#cloudcredentialazurecredentialconfig">Cloud<wbr>Credential<wbr>Azure<wbr>Credential<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Azure config for the Cloud Credential (list maxitems:1)
 {{% /md %}}</dd>
@@ -1050,7 +762,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description for the Cloud Credential (string)
 {{% /md %}}</dd>
@@ -1059,7 +771,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Digitalocean<wbr>Credential<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudcredentialdigitaloceancredentialconfig">Cloud<wbr>Credential<wbr>Digitalocean<wbr>Credential<wbr>Config<wbr>Args?</a></span>
+        <span class="property-type"><a href="#cloudcredentialdigitaloceancredentialconfig">Cloud<wbr>Credential<wbr>Digitalocean<wbr>Credential<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}DigitalOcean config for the Cloud Credential (list maxitems:1)
 {{% /md %}}</dd>
@@ -1068,7 +780,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Driver</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) The driver of the Cloud Credential (string)
 {{% /md %}}</dd>
@@ -1077,16 +789,25 @@ The following state arguments are supported:
             title="Optional">
         <span>Labels</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Labels for Cloud Credential object (map)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
+        <span>Linode<wbr>Credential<wbr>Config</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#cloudcredentiallinodecredentialconfig">Cloud<wbr>Credential<wbr>Linode<wbr>Credential<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Linode config for the Cloud Credential (list maxitems:1)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Cloud Credential (string)
 {{% /md %}}</dd>
@@ -1095,7 +816,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Openstack<wbr>Credential<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudcredentialopenstackcredentialconfig">Cloud<wbr>Credential<wbr>Openstack<wbr>Credential<wbr>Config<wbr>Args?</a></span>
+        <span class="property-type"><a href="#cloudcredentialopenstackcredentialconfig">Cloud<wbr>Credential<wbr>Openstack<wbr>Credential<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}OpenStack config for the Cloud Credential (list maxitems:1)
 {{% /md %}}</dd>
@@ -1104,7 +825,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Vsphere<wbr>Credential<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudcredentialvspherecredentialconfig">Cloud<wbr>Credential<wbr>Vsphere<wbr>Credential<wbr>Config<wbr>Args?</a></span>
+        <span class="property-type"><a href="#cloudcredentialvspherecredentialconfig">Cloud<wbr>Credential<wbr>Vsphere<wbr>Credential<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}vSphere config for the Cloud Credential (list maxitems:1)
 {{% /md %}}</dd>
@@ -1120,7 +841,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Amazonec2Credential<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudcredentialamazonec2credentialconfig">*Cloud<wbr>Credential<wbr>Amazonec2Credential<wbr>Config</a></span>
+        <span class="property-type"><a href="#cloudcredentialamazonec2credentialconfig">Cloud<wbr>Credential<wbr>Amazonec2Credential<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}AWS config for the Cloud Credential (list maxitems:1)
 {{% /md %}}</dd>
@@ -1138,7 +859,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Azure<wbr>Credential<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudcredentialazurecredentialconfig">*Cloud<wbr>Credential<wbr>Azure<wbr>Credential<wbr>Config</a></span>
+        <span class="property-type"><a href="#cloudcredentialazurecredentialconfig">Cloud<wbr>Credential<wbr>Azure<wbr>Credential<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Azure config for the Cloud Credential (list maxitems:1)
 {{% /md %}}</dd>
@@ -1147,7 +868,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description for the Cloud Credential (string)
 {{% /md %}}</dd>
@@ -1156,7 +877,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Digitalocean<wbr>Credential<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudcredentialdigitaloceancredentialconfig">*Cloud<wbr>Credential<wbr>Digitalocean<wbr>Credential<wbr>Config</a></span>
+        <span class="property-type"><a href="#cloudcredentialdigitaloceancredentialconfig">Cloud<wbr>Credential<wbr>Digitalocean<wbr>Credential<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}DigitalOcean config for the Cloud Credential (list maxitems:1)
 {{% /md %}}</dd>
@@ -1165,7 +886,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Driver</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) The driver of the Cloud Credential (string)
 {{% /md %}}</dd>
@@ -1181,9 +902,18 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>Linode<wbr>Credential<wbr>Config</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#cloudcredentiallinodecredentialconfig">Cloud<wbr>Credential<wbr>Linode<wbr>Credential<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Linode config for the Cloud Credential (list maxitems:1)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Cloud Credential (string)
 {{% /md %}}</dd>
@@ -1192,7 +922,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Openstack<wbr>Credential<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudcredentialopenstackcredentialconfig">*Cloud<wbr>Credential<wbr>Openstack<wbr>Credential<wbr>Config</a></span>
+        <span class="property-type"><a href="#cloudcredentialopenstackcredentialconfig">Cloud<wbr>Credential<wbr>Openstack<wbr>Credential<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}OpenStack config for the Cloud Credential (list maxitems:1)
 {{% /md %}}</dd>
@@ -1201,7 +931,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Vsphere<wbr>Credential<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudcredentialvspherecredentialconfig">*Cloud<wbr>Credential<wbr>Vsphere<wbr>Credential<wbr>Config</a></span>
+        <span class="property-type"><a href="#cloudcredentialvspherecredentialconfig">Cloud<wbr>Credential<wbr>Vsphere<wbr>Credential<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}vSphere config for the Cloud Credential (list maxitems:1)
 {{% /md %}}</dd>
@@ -1217,7 +947,7 @@ The following state arguments are supported:
             title="Optional">
         <span>amazonec2Credential<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudcredentialamazonec2credentialconfig">Cloud<wbr>Credential<wbr>Amazonec2Credential<wbr>Config?</a></span>
+        <span class="property-type"><a href="#cloudcredentialamazonec2credentialconfig">Cloud<wbr>Credential<wbr>Amazonec2Credential<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}AWS config for the Cloud Credential (list maxitems:1)
 {{% /md %}}</dd>
@@ -1226,7 +956,7 @@ The following state arguments are supported:
             title="Optional">
         <span>annotations</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Annotations for Cloud Credential object (map)
 {{% /md %}}</dd>
@@ -1235,7 +965,7 @@ The following state arguments are supported:
             title="Optional">
         <span>azure<wbr>Credential<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudcredentialazurecredentialconfig">Cloud<wbr>Credential<wbr>Azure<wbr>Credential<wbr>Config?</a></span>
+        <span class="property-type"><a href="#cloudcredentialazurecredentialconfig">Cloud<wbr>Credential<wbr>Azure<wbr>Credential<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Azure config for the Cloud Credential (list maxitems:1)
 {{% /md %}}</dd>
@@ -1244,7 +974,7 @@ The following state arguments are supported:
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description for the Cloud Credential (string)
 {{% /md %}}</dd>
@@ -1253,7 +983,7 @@ The following state arguments are supported:
             title="Optional">
         <span>digitalocean<wbr>Credential<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudcredentialdigitaloceancredentialconfig">Cloud<wbr>Credential<wbr>Digitalocean<wbr>Credential<wbr>Config?</a></span>
+        <span class="property-type"><a href="#cloudcredentialdigitaloceancredentialconfig">Cloud<wbr>Credential<wbr>Digitalocean<wbr>Credential<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}DigitalOcean config for the Cloud Credential (list maxitems:1)
 {{% /md %}}</dd>
@@ -1262,7 +992,7 @@ The following state arguments are supported:
             title="Optional">
         <span>driver</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) The driver of the Cloud Credential (string)
 {{% /md %}}</dd>
@@ -1271,16 +1001,25 @@ The following state arguments are supported:
             title="Optional">
         <span>labels</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Labels for Cloud Credential object (map)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
+        <span>linode<wbr>Credential<wbr>Config</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#cloudcredentiallinodecredentialconfig">Cloud<wbr>Credential<wbr>Linode<wbr>Credential<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Linode config for the Cloud Credential (list maxitems:1)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Cloud Credential (string)
 {{% /md %}}</dd>
@@ -1289,7 +1028,7 @@ The following state arguments are supported:
             title="Optional">
         <span>openstack<wbr>Credential<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudcredentialopenstackcredentialconfig">Cloud<wbr>Credential<wbr>Openstack<wbr>Credential<wbr>Config?</a></span>
+        <span class="property-type"><a href="#cloudcredentialopenstackcredentialconfig">Cloud<wbr>Credential<wbr>Openstack<wbr>Credential<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}OpenStack config for the Cloud Credential (list maxitems:1)
 {{% /md %}}</dd>
@@ -1298,7 +1037,7 @@ The following state arguments are supported:
             title="Optional">
         <span>vsphere<wbr>Credential<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#cloudcredentialvspherecredentialconfig">Cloud<wbr>Credential<wbr>Vsphere<wbr>Credential<wbr>Config?</a></span>
+        <span class="property-type"><a href="#cloudcredentialvspherecredentialconfig">Cloud<wbr>Credential<wbr>Vsphere<wbr>Credential<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}vSphere config for the Cloud Credential (list maxitems:1)
 {{% /md %}}</dd>
@@ -1371,6 +1110,15 @@ The following state arguments are supported:
         <span class="property-type">Dict[str, Any]</span>
     </dt>
     <dd>{{% md %}}Labels for Cloud Credential object (map)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>linode_<wbr>credential_<wbr>config</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#cloudcredentiallinodecredentialconfig">Dict[Cloud<wbr>Credential<wbr>Linode<wbr>Credential<wbr>Config]</a></span>
+    </dt>
+    <dd>{{% md %}}Linode config for the Cloud Credential (list maxitems:1)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1759,6 +1507,85 @@ The following state arguments are supported:
 
 
 
+<h4>Cloud<wbr>Credential<wbr>Linode<wbr>Credential<wbr>Config</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#CloudCredentialLinodeCredentialConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#CloudCredentialLinodeCredentialConfig">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/go/rancher2/?tab=doc#CloudCredentialLinodeCredentialConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/go/rancher2/?tab=doc#CloudCredentialLinodeCredentialConfigOutput">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Token</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Linode API token (string)
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Token</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Linode API token (string)
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>token</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Linode API token (string)
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>token</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Linode API token (string)
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4>Cloud<wbr>Credential<wbr>Openstack<wbr>Credential<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#CloudCredentialOpenstackCredentialConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#CloudCredentialOpenstackCredentialConfig">output</a> API doc for this type.
@@ -1884,7 +1711,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Vcenter<wbr>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}vSphere Port for vCenter. Default `443` (string)
 {{% /md %}}</dd>
@@ -1927,7 +1754,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Vcenter<wbr>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}vSphere Port for vCenter. Default `443` (string)
 {{% /md %}}</dd>
@@ -1970,7 +1797,7 @@ The following state arguments are supported:
             title="Optional">
         <span>vcenter<wbr>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}vSphere Port for vCenter. Default `443` (string)
 {{% /md %}}</dd>

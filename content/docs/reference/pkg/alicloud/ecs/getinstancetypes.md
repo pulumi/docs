@@ -50,13 +50,13 @@ const instance = new alicloud.ecs.Instance("instance", {
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupInstanceTypes<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/ecs?tab=doc#LookupInstanceTypesArgs">LookupInstanceTypesArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/ecs?tab=doc#LookupInstanceTypesResult">LookupInstanceTypesResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupInstanceTypes<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/ecs?tab=doc#LookupInstanceTypesArgs">LookupInstanceTypesArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/ecs?tab=doc#LookupInstanceTypesResult">LookupInstanceTypesResult</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetInstanceTypes </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.Ecs.GetInstanceTypesResult.html">GetInstanceTypesResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.Ecs.GetInstanceTypesArgs.html">GetInstanceTypesArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.Ecs.GetInstanceTypesResult.html">GetInstanceTypesResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.AliCloud.Ecs.GetInstanceTypesArgs.html">GetInstanceTypesArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -73,7 +73,7 @@ The following arguments are supported:
             title="Optional">
         <span>Availability<wbr>Zone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The zone where instance types are supported.
 {{% /md %}}</dd>
@@ -82,7 +82,7 @@ The following arguments are supported:
             title="Optional">
         <span>Cpu<wbr>Core<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Filter the results to a specific number of cpu cores.
 {{% /md %}}</dd>
@@ -91,7 +91,7 @@ The following arguments are supported:
             title="Optional">
         <span>Eni<wbr>Amount</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Filter the result whose network interface number is no more than `eni_amount`.
 {{% /md %}}</dd>
@@ -100,7 +100,7 @@ The following arguments are supported:
             title="Optional">
         <span>Gpu<wbr>Amount</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The GPU amount of an instance type.
 {{% /md %}}</dd>
@@ -109,7 +109,7 @@ The following arguments are supported:
             title="Optional">
         <span>Gpu<wbr>Spec</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The GPU spec of an instance type.
 {{% /md %}}</dd>
@@ -118,7 +118,7 @@ The following arguments are supported:
             title="Optional">
         <span>Instance<wbr>Charge<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Filter the results by charge type. Valid values: `PrePaid` and `PostPaid`. Default to `PostPaid`.
 {{% /md %}}</dd>
@@ -127,7 +127,7 @@ The following arguments are supported:
             title="Optional">
         <span>Instance<wbr>Type<wbr>Family</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Filter the results based on their family name. For example: 'ecs.n4'.
 {{% /md %}}</dd>
@@ -136,7 +136,7 @@ The following arguments are supported:
             title="Optional">
         <span>Is<wbr>Outdated</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, outdated instance types are included in the results. Default to false.
 {{% /md %}}</dd>
@@ -145,7 +145,7 @@ The following arguments are supported:
             title="Optional">
         <span>Kubernetes<wbr>Node<wbr>Role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -153,7 +153,7 @@ The following arguments are supported:
             title="Optional">
         <span>Memory<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">double?</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Filter the results to a specific memory size in GB.
 {{% /md %}}</dd>
@@ -162,7 +162,7 @@ The following arguments are supported:
             title="Optional">
         <span>Network<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Filter the results by network type. Valid values: `Classic` and `Vpc`.
 {{% /md %}}</dd>
@@ -171,7 +171,7 @@ The following arguments are supported:
             title="Optional">
         <span>Output<wbr>File</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -179,7 +179,7 @@ The following arguments are supported:
             title="Optional">
         <span>Sorted<wbr>By</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -187,7 +187,7 @@ The following arguments are supported:
             title="Optional">
         <span>Spot<wbr>Strategy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Filter the results by ECS spot type. Valid values: `NoSpot`, `SpotWithPriceLimit` and `SpotAsPriceGo`. Default to `NoSpot`.
 {{% /md %}}</dd>
@@ -203,7 +203,7 @@ The following arguments are supported:
             title="Optional">
         <span>Availability<wbr>Zone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The zone where instance types are supported.
 {{% /md %}}</dd>
@@ -212,7 +212,7 @@ The following arguments are supported:
             title="Optional">
         <span>Cpu<wbr>Core<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Filter the results to a specific number of cpu cores.
 {{% /md %}}</dd>
@@ -221,7 +221,7 @@ The following arguments are supported:
             title="Optional">
         <span>Eni<wbr>Amount</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Filter the result whose network interface number is no more than `eni_amount`.
 {{% /md %}}</dd>
@@ -230,7 +230,7 @@ The following arguments are supported:
             title="Optional">
         <span>Gpu<wbr>Amount</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The GPU amount of an instance type.
 {{% /md %}}</dd>
@@ -239,7 +239,7 @@ The following arguments are supported:
             title="Optional">
         <span>Gpu<wbr>Spec</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The GPU spec of an instance type.
 {{% /md %}}</dd>
@@ -248,7 +248,7 @@ The following arguments are supported:
             title="Optional">
         <span>Instance<wbr>Charge<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Filter the results by charge type. Valid values: `PrePaid` and `PostPaid`. Default to `PostPaid`.
 {{% /md %}}</dd>
@@ -257,7 +257,7 @@ The following arguments are supported:
             title="Optional">
         <span>Instance<wbr>Type<wbr>Family</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Filter the results based on their family name. For example: 'ecs.n4'.
 {{% /md %}}</dd>
@@ -266,7 +266,7 @@ The following arguments are supported:
             title="Optional">
         <span>Is<wbr>Outdated</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, outdated instance types are included in the results. Default to false.
 {{% /md %}}</dd>
@@ -275,7 +275,7 @@ The following arguments are supported:
             title="Optional">
         <span>Kubernetes<wbr>Node<wbr>Role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -283,7 +283,7 @@ The following arguments are supported:
             title="Optional">
         <span>Memory<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*float64</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Filter the results to a specific memory size in GB.
 {{% /md %}}</dd>
@@ -292,7 +292,7 @@ The following arguments are supported:
             title="Optional">
         <span>Network<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Filter the results by network type. Valid values: `Classic` and `Vpc`.
 {{% /md %}}</dd>
@@ -301,7 +301,7 @@ The following arguments are supported:
             title="Optional">
         <span>Output<wbr>File</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -309,7 +309,7 @@ The following arguments are supported:
             title="Optional">
         <span>Sorted<wbr>By</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -317,7 +317,7 @@ The following arguments are supported:
             title="Optional">
         <span>Spot<wbr>Strategy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Filter the results by ECS spot type. Valid values: `NoSpot`, `SpotWithPriceLimit` and `SpotAsPriceGo`. Default to `NoSpot`.
 {{% /md %}}</dd>
@@ -333,7 +333,7 @@ The following arguments are supported:
             title="Optional">
         <span>availability<wbr>Zone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The zone where instance types are supported.
 {{% /md %}}</dd>
@@ -342,7 +342,7 @@ The following arguments are supported:
             title="Optional">
         <span>cpu<wbr>Core<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Filter the results to a specific number of cpu cores.
 {{% /md %}}</dd>
@@ -351,7 +351,7 @@ The following arguments are supported:
             title="Optional">
         <span>eni<wbr>Amount</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Filter the result whose network interface number is no more than `eni_amount`.
 {{% /md %}}</dd>
@@ -360,7 +360,7 @@ The following arguments are supported:
             title="Optional">
         <span>gpu<wbr>Amount</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The GPU amount of an instance type.
 {{% /md %}}</dd>
@@ -369,7 +369,7 @@ The following arguments are supported:
             title="Optional">
         <span>gpu<wbr>Spec</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The GPU spec of an instance type.
 {{% /md %}}</dd>
@@ -378,7 +378,7 @@ The following arguments are supported:
             title="Optional">
         <span>instance<wbr>Charge<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Filter the results by charge type. Valid values: `PrePaid` and `PostPaid`. Default to `PostPaid`.
 {{% /md %}}</dd>
@@ -387,7 +387,7 @@ The following arguments are supported:
             title="Optional">
         <span>instance<wbr>Type<wbr>Family</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Filter the results based on their family name. For example: 'ecs.n4'.
 {{% /md %}}</dd>
@@ -396,7 +396,7 @@ The following arguments are supported:
             title="Optional">
         <span>is<wbr>Outdated</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, outdated instance types are included in the results. Default to false.
 {{% /md %}}</dd>
@@ -405,7 +405,7 @@ The following arguments are supported:
             title="Optional">
         <span>kubernetes<wbr>Node<wbr>Role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -413,7 +413,7 @@ The following arguments are supported:
             title="Optional">
         <span>memory<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Filter the results to a specific memory size in GB.
 {{% /md %}}</dd>
@@ -422,7 +422,7 @@ The following arguments are supported:
             title="Optional">
         <span>network<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Filter the results by network type. Valid values: `Classic` and `Vpc`.
 {{% /md %}}</dd>
@@ -431,7 +431,7 @@ The following arguments are supported:
             title="Optional">
         <span>output<wbr>File</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -439,7 +439,7 @@ The following arguments are supported:
             title="Optional">
         <span>sorted<wbr>By</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -447,7 +447,7 @@ The following arguments are supported:
             title="Optional">
         <span>spot<wbr>Strategy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Filter the results by ECS spot type. Valid values: `NoSpot`, `SpotWithPriceLimit` and `SpotAsPriceGo`. Default to `NoSpot`.
 {{% /md %}}</dd>
@@ -604,48 +604,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Availability<wbr>Zone</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Cpu<wbr>Core<wbr>Count</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}Number of CPU cores.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Eni<wbr>Amount</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}The maximum number of network interfaces that an instance type can be attached to.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Gpu<wbr>Amount</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Gpu<wbr>Spec</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -657,16 +615,67 @@ The following output properties are available:
             title="">
         <span>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of instance type IDs.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
+        <span>Instance<wbr>Types</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getinstancetypesinstancetype">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Ecs.<wbr>Outputs.<wbr>Get<wbr>Instance<wbr>Types<wbr>Instance<wbr>Type&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A list of image types. Each element contains the following attributes:
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Availability<wbr>Zone</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Cpu<wbr>Core<wbr>Count</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Number of CPU cores.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Eni<wbr>Amount</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The maximum number of network interfaces that an instance type can be attached to.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Gpu<wbr>Amount</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Gpu<wbr>Spec</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Instance<wbr>Charge<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -674,24 +683,15 @@ The following output properties are available:
             title="">
         <span>Instance<wbr>Type<wbr>Family</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>Instance<wbr>Types</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getinstancetypesinstancetype">List&lt;Get<wbr>Instance<wbr>Types<wbr>Instance<wbr>Type&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}A list of image types. Each element contains the following attributes:
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Is<wbr>Outdated</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -699,7 +699,7 @@ The following output properties are available:
             title="">
         <span>Kubernetes<wbr>Node<wbr>Role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -707,7 +707,7 @@ The following output properties are available:
             title="">
         <span>Memory<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">double?</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Size of memory, measured in GB.
 {{% /md %}}</dd>
@@ -716,7 +716,7 @@ The following output properties are available:
             title="">
         <span>Network<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -724,7 +724,7 @@ The following output properties are available:
             title="">
         <span>Output<wbr>File</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -732,7 +732,7 @@ The following output properties are available:
             title="">
         <span>Sorted<wbr>By</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -740,7 +740,7 @@ The following output properties are available:
             title="">
         <span>Spot<wbr>Strategy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -750,48 +750,6 @@ The following output properties are available:
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Availability<wbr>Zone</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Cpu<wbr>Core<wbr>Count</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}Number of CPU cores.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Eni<wbr>Amount</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}The maximum number of network interfaces that an instance type can be attached to.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Gpu<wbr>Amount</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Gpu<wbr>Spec</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -813,22 +771,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Instance<wbr>Charge<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Instance<wbr>Type<wbr>Family</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Instance<wbr>Types</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getinstancetypesinstancetype">[]Get<wbr>Instance<wbr>Types<wbr>Instance<wbr>Type</a></span>
@@ -838,9 +780,67 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>Availability<wbr>Zone</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Cpu<wbr>Core<wbr>Count</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Number of CPU cores.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Eni<wbr>Amount</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The maximum number of network interfaces that an instance type can be attached to.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Gpu<wbr>Amount</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Gpu<wbr>Spec</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Instance<wbr>Charge<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Instance<wbr>Type<wbr>Family</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Is<wbr>Outdated</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -848,7 +848,7 @@ The following output properties are available:
             title="">
         <span>Kubernetes<wbr>Node<wbr>Role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -856,7 +856,7 @@ The following output properties are available:
             title="">
         <span>Memory<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*float64</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Size of memory, measured in GB.
 {{% /md %}}</dd>
@@ -865,7 +865,7 @@ The following output properties are available:
             title="">
         <span>Network<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -873,7 +873,7 @@ The following output properties are available:
             title="">
         <span>Output<wbr>File</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -881,7 +881,7 @@ The following output properties are available:
             title="">
         <span>Sorted<wbr>By</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -889,7 +889,7 @@ The following output properties are available:
             title="">
         <span>Spot<wbr>Strategy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -899,48 +899,6 @@ The following output properties are available:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>availability<wbr>Zone</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>cpu<wbr>Core<wbr>Count</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}Number of CPU cores.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>eni<wbr>Amount</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}The maximum number of network interfaces that an instance type can be attached to.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>gpu<wbr>Amount</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>gpu<wbr>Spec</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -962,22 +920,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>instance<wbr>Charge<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>instance<wbr>Type<wbr>Family</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>instance<wbr>Types</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getinstancetypesinstancetype">Get<wbr>Instance<wbr>Types<wbr>Instance<wbr>Type[]</a></span>
@@ -987,9 +929,67 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>availability<wbr>Zone</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>cpu<wbr>Core<wbr>Count</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Number of CPU cores.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>eni<wbr>Amount</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The maximum number of network interfaces that an instance type can be attached to.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>gpu<wbr>Amount</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>gpu<wbr>Spec</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>instance<wbr>Charge<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>instance<wbr>Type<wbr>Family</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>is<wbr>Outdated</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -997,7 +997,7 @@ The following output properties are available:
             title="">
         <span>kubernetes<wbr>Node<wbr>Role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1005,7 +1005,7 @@ The following output properties are available:
             title="">
         <span>memory<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Size of memory, measured in GB.
 {{% /md %}}</dd>
@@ -1014,7 +1014,7 @@ The following output properties are available:
             title="">
         <span>network<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1022,7 +1022,7 @@ The following output properties are available:
             title="">
         <span>output<wbr>File</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1030,7 +1030,7 @@ The following output properties are available:
             title="">
         <span>sorted<wbr>By</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1038,7 +1038,7 @@ The following output properties are available:
             title="">
         <span>spot<wbr>Strategy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1048,6 +1048,33 @@ The following output properties are available:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>ids</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of instance type IDs.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>instance_<wbr>types</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getinstancetypesinstancetype">List[Get<wbr>Instance<wbr>Types<wbr>Instance<wbr>Type]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of image types. Each element contains the following attributes:
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1093,24 +1120,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}A list of instance type IDs.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>instance_<wbr>charge_<wbr>type</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -1124,15 +1133,6 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>instance_<wbr>types</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getinstancetypesinstancetype">List[Get<wbr>Instance<wbr>Types<wbr>Instance<wbr>Type]</a></span>
-    </dt>
-    <dd>{{% md %}}A list of image types. Each element contains the following attributes:
-{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1222,7 +1222,7 @@ The following output properties are available:
             title="Required">
         <span>Availability<wbr>Zones</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of availability zones that support the instance type.
 {{% /md %}}</dd>
@@ -1231,7 +1231,7 @@ The following output properties are available:
             title="Required">
         <span>Burstable<wbr>Instance</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getinstancetypesinstancetypeburstableinstance">Get<wbr>Instance<wbr>Types<wbr>Instance<wbr>Type<wbr>Burstable<wbr>Instance<wbr>Args</a></span>
+        <span class="property-type"><a href="#getinstancetypesinstancetypeburstableinstance">Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Ecs.<wbr>Inputs.<wbr>Get<wbr>Instance<wbr>Types<wbr>Instance<wbr>Type<wbr>Burstable<wbr>Instance<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The burstable instance attribution:
 {{% /md %}}</dd>
@@ -1267,7 +1267,7 @@ The following output properties are available:
             title="Required">
         <span>Gpu</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getinstancetypesinstancetypegpu">Get<wbr>Instance<wbr>Types<wbr>Instance<wbr>Type<wbr>Gpu<wbr>Args</a></span>
+        <span class="property-type"><a href="#getinstancetypesinstancetypegpu">Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Ecs.<wbr>Inputs.<wbr>Get<wbr>Instance<wbr>Types<wbr>Instance<wbr>Type<wbr>Gpu<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The GPU attribution of an instance type:
 {{% /md %}}</dd>
@@ -1285,7 +1285,7 @@ The following output properties are available:
             title="Required">
         <span>Local<wbr>Storage</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getinstancetypesinstancetypelocalstorage">Get<wbr>Instance<wbr>Types<wbr>Instance<wbr>Type<wbr>Local<wbr>Storage<wbr>Args</a></span>
+        <span class="property-type"><a href="#getinstancetypesinstancetypelocalstorage">Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Ecs.<wbr>Inputs.<wbr>Get<wbr>Instance<wbr>Types<wbr>Instance<wbr>Type<wbr>Local<wbr>Storage<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Local storage of an instance type:
 {{% /md %}}</dd>

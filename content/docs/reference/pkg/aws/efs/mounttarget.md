@@ -40,7 +40,7 @@ const alphaMountTarget = new aws.efs.MountTarget("alpha", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/efs/#MountTarget">MountTarget</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/efs/#MountTargetArgs">MountTargetArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/efs/#MountTarget">MountTarget</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/efs/#MountTargetArgs">MountTargetArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -48,7 +48,7 @@ const alphaMountTarget = new aws.efs.MountTarget("alpha", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewMountTarget<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/efs?tab=doc#MountTargetArgs">MountTargetArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/efs?tab=doc#MountTarget">MountTarget</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewMountTarget<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/efs?tab=doc#MountTargetArgs">MountTargetArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/efs?tab=doc#MountTarget">MountTarget</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -153,11 +153,20 @@ const alphaMountTarget = new aws.efs.MountTarget("alpha", {
     <dd>{{% md %}}The ID of the file system for which the mount target is intended.
 {{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>Subnet<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the subnet to add the mount target in.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Ip<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The address (within the address range of the specified subnet) at
 which the file system may be mounted via the mount target.
@@ -167,19 +176,10 @@ which the file system may be mounted via the mount target.
             title="Optional">
         <span>Security<wbr>Groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of up to 5 VPC security group IDs (that must
 be for the same VPC as subnet specified) in effect for the mount target.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Subnet<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the subnet to add the mount target in.
 {{% /md %}}</dd>
 
 </dl>
@@ -198,11 +198,20 @@ be for the same VPC as subnet specified) in effect for the mount target.
     <dd>{{% md %}}The ID of the file system for which the mount target is intended.
 {{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>Subnet<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the subnet to add the mount target in.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Ip<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The address (within the address range of the specified subnet) at
 which the file system may be mounted via the mount target.
@@ -216,15 +225,6 @@ which the file system may be mounted via the mount target.
     </dt>
     <dd>{{% md %}}A list of up to 5 VPC security group IDs (that must
 be for the same VPC as subnet specified) in effect for the mount target.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Subnet<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the subnet to add the mount target in.
 {{% /md %}}</dd>
 
 </dl>
@@ -243,11 +243,20 @@ be for the same VPC as subnet specified) in effect for the mount target.
     <dd>{{% md %}}The ID of the file system for which the mount target is intended.
 {{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>subnet<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the subnet to add the mount target in.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>ip<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The address (within the address range of the specified subnet) at
 which the file system may be mounted via the mount target.
@@ -257,19 +266,10 @@ which the file system may be mounted via the mount target.
             title="Optional">
         <span>security<wbr>Groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of up to 5 VPC security group IDs (that must
 be for the same VPC as subnet specified) in effect for the mount target.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>subnet<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the subnet to add the mount target in.
 {{% /md %}}</dd>
 
 </dl>
@@ -286,6 +286,15 @@ be for the same VPC as subnet specified) in effect for the mount target.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the file system for which the mount target is intended.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>subnet_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ID of the subnet to add the mount target in.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -306,15 +315,6 @@ which the file system may be mounted via the mount target.
     </dt>
     <dd>{{% md %}}A list of up to 5 VPC security group IDs (that must
 be for the same VPC as subnet specified) in effect for the mount target.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>subnet_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The ID of the subnet to add the mount target in.
 {{% /md %}}</dd>
 
 </dl>
@@ -356,49 +356,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>File<wbr>System<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the file system for which the mount target is intended.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Ip<wbr>Address</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The address (within the address range of the specified subnet) at
-which the file system may be mounted via the mount target.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Network<wbr>Interface<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the network interface that Amazon EFS created when it created the mount target.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Security<wbr>Groups</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
-    </dt>
-    <dd>{{% md %}}A list of up to 5 VPC security group IDs (that must
-be for the same VPC as subnet specified) in effect for the mount target.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Subnet<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the subnet to add the mount target in.
 {{% /md %}}</dd>
 
 </dl>
@@ -428,49 +390,11 @@ be for the same VPC as subnet specified) in effect for the mount target.
 
     <dt class="property-"
             title="">
-        <span>File<wbr>System<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the file system for which the mount target is intended.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Ip<wbr>Address</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The address (within the address range of the specified subnet) at
-which the file system may be mounted via the mount target.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Network<wbr>Interface<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the network interface that Amazon EFS created when it created the mount target.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Security<wbr>Groups</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}A list of up to 5 VPC security group IDs (that must
-be for the same VPC as subnet specified) in effect for the mount target.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Subnet<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the subnet to add the mount target in.
 {{% /md %}}</dd>
 
 </dl>
@@ -500,49 +424,11 @@ be for the same VPC as subnet specified) in effect for the mount target.
 
     <dt class="property-"
             title="">
-        <span>file<wbr>System<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the file system for which the mount target is intended.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>ip<wbr>Address</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The address (within the address range of the specified subnet) at
-which the file system may be mounted via the mount target.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>network<wbr>Interface<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the network interface that Amazon EFS created when it created the mount target.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>security<wbr>Groups</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
-    </dt>
-    <dd>{{% md %}}A list of up to 5 VPC security group IDs (that must
-be for the same VPC as subnet specified) in effect for the mount target.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>subnet<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the subnet to add the mount target in.
 {{% /md %}}</dd>
 
 </dl>
@@ -572,49 +458,11 @@ be for the same VPC as subnet specified) in effect for the mount target.
 
     <dt class="property-"
             title="">
-        <span>file_<wbr>system_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The ID of the file system for which the mount target is intended.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>ip_<wbr>address</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The address (within the address range of the specified subnet) at
-which the file system may be mounted via the mount target.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>network_<wbr>interface_<wbr>id</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the network interface that Amazon EFS created when it created the mount target.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>security_<wbr>groups</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}A list of up to 5 VPC security group IDs (that must
-be for the same VPC as subnet specified) in effect for the mount target.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>subnet_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The ID of the subnet to add the mount target in.
 {{% /md %}}</dd>
 
 </dl>
@@ -756,7 +604,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Dns<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS name for the given subnet/AZ per [documented convention](http://docs.aws.amazon.com/efs/latest/ug/mounting-fs-mount-cmd-dns-name.html).
 {{% /md %}}</dd>
@@ -765,7 +613,7 @@ The following state arguments are supported:
             title="Optional">
         <span>File<wbr>System<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name of the file system.
 {{% /md %}}</dd>
@@ -774,7 +622,7 @@ The following state arguments are supported:
             title="Optional">
         <span>File<wbr>System<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the file system for which the mount target is intended.
 {{% /md %}}</dd>
@@ -783,7 +631,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Ip<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The address (within the address range of the specified subnet) at
 which the file system may be mounted via the mount target.
@@ -793,7 +641,7 @@ which the file system may be mounted via the mount target.
             title="Optional">
         <span>Network<wbr>Interface<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the network interface that Amazon EFS created when it created the mount target.
 {{% /md %}}</dd>
@@ -802,7 +650,7 @@ which the file system may be mounted via the mount target.
             title="Optional">
         <span>Security<wbr>Groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of up to 5 VPC security group IDs (that must
 be for the same VPC as subnet specified) in effect for the mount target.
@@ -812,7 +660,7 @@ be for the same VPC as subnet specified) in effect for the mount target.
             title="Optional">
         <span>Subnet<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the subnet to add the mount target in.
 {{% /md %}}</dd>
@@ -828,7 +676,7 @@ be for the same VPC as subnet specified) in effect for the mount target.
             title="Optional">
         <span>Dns<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS name for the given subnet/AZ per [documented convention](http://docs.aws.amazon.com/efs/latest/ug/mounting-fs-mount-cmd-dns-name.html).
 {{% /md %}}</dd>
@@ -837,7 +685,7 @@ be for the same VPC as subnet specified) in effect for the mount target.
             title="Optional">
         <span>File<wbr>System<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name of the file system.
 {{% /md %}}</dd>
@@ -846,7 +694,7 @@ be for the same VPC as subnet specified) in effect for the mount target.
             title="Optional">
         <span>File<wbr>System<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the file system for which the mount target is intended.
 {{% /md %}}</dd>
@@ -855,7 +703,7 @@ be for the same VPC as subnet specified) in effect for the mount target.
             title="Optional">
         <span>Ip<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The address (within the address range of the specified subnet) at
 which the file system may be mounted via the mount target.
@@ -865,7 +713,7 @@ which the file system may be mounted via the mount target.
             title="Optional">
         <span>Network<wbr>Interface<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the network interface that Amazon EFS created when it created the mount target.
 {{% /md %}}</dd>
@@ -884,7 +732,7 @@ be for the same VPC as subnet specified) in effect for the mount target.
             title="Optional">
         <span>Subnet<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the subnet to add the mount target in.
 {{% /md %}}</dd>
@@ -900,7 +748,7 @@ be for the same VPC as subnet specified) in effect for the mount target.
             title="Optional">
         <span>dns<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DNS name for the given subnet/AZ per [documented convention](http://docs.aws.amazon.com/efs/latest/ug/mounting-fs-mount-cmd-dns-name.html).
 {{% /md %}}</dd>
@@ -909,7 +757,7 @@ be for the same VPC as subnet specified) in effect for the mount target.
             title="Optional">
         <span>file<wbr>System<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name of the file system.
 {{% /md %}}</dd>
@@ -918,7 +766,7 @@ be for the same VPC as subnet specified) in effect for the mount target.
             title="Optional">
         <span>file<wbr>System<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the file system for which the mount target is intended.
 {{% /md %}}</dd>
@@ -927,7 +775,7 @@ be for the same VPC as subnet specified) in effect for the mount target.
             title="Optional">
         <span>ip<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The address (within the address range of the specified subnet) at
 which the file system may be mounted via the mount target.
@@ -937,7 +785,7 @@ which the file system may be mounted via the mount target.
             title="Optional">
         <span>network<wbr>Interface<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the network interface that Amazon EFS created when it created the mount target.
 {{% /md %}}</dd>
@@ -946,7 +794,7 @@ which the file system may be mounted via the mount target.
             title="Optional">
         <span>security<wbr>Groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of up to 5 VPC security group IDs (that must
 be for the same VPC as subnet specified) in effect for the mount target.
@@ -956,7 +804,7 @@ be for the same VPC as subnet specified) in effect for the mount target.
             title="Optional">
         <span>subnet<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the subnet to add the mount target in.
 {{% /md %}}</dd>

@@ -80,7 +80,7 @@ const dpmHostOverride = new vsphere.DpmHostOverride("dpm_host_override", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#DpmHostOverride">DpmHostOverride</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#DpmHostOverrideArgs">DpmHostOverrideArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#DpmHostOverride">DpmHostOverride</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#DpmHostOverrideArgs">DpmHostOverrideArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -88,11 +88,11 @@ const dpmHostOverride = new vsphere.DpmHostOverride("dpm_host_override", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewDpmHostOverride<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/go/vsphere/?tab=doc#DpmHostOverrideArgs">DpmHostOverrideArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/go/vsphere/?tab=doc#DpmHostOverride">DpmHostOverride</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewDpmHostOverride<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/go/vsphere/?tab=doc#DpmHostOverrideArgs">DpmHostOverrideArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/go/vsphere/?tab=doc#DpmHostOverride">DpmHostOverride</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.Vsphere..DpmHostOverride.html">DpmHostOverride</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.Vsphere.DpmHostOverrideArgs.html">DpmHostOverrideArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.Vsphere.DpmHostOverride.html">DpmHostOverride</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.VSphere.DpmHostOverrideArgs.html">DpmHostOverrideArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -195,11 +195,20 @@ ID][docs-about-morefs] of the cluster to put the override in.  Forces a new
 resource if changed.
 {{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>Host<wbr>System<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The managed object ID of the host.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Dpm<wbr>Automation<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The automation level for host power
 operations on this host. Can be one of `manual` or `automated`. Default:
@@ -210,19 +219,10 @@ operations on this host. Can be one of `manual` or `automated`. Default:
             title="Optional">
         <span>Dpm<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable DPM support for this host. Default:
 `false`.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Host<wbr>System<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The managed object ID of the host.
 {{% /md %}}</dd>
 
 </dl>
@@ -243,11 +243,20 @@ ID][docs-about-morefs] of the cluster to put the override in.  Forces a new
 resource if changed.
 {{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>Host<wbr>System<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The managed object ID of the host.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Dpm<wbr>Automation<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The automation level for host power
 operations on this host. Can be one of `manual` or `automated`. Default:
@@ -258,19 +267,10 @@ operations on this host. Can be one of `manual` or `automated`. Default:
             title="Optional">
         <span>Dpm<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable DPM support for this host. Default:
 `false`.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Host<wbr>System<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The managed object ID of the host.
 {{% /md %}}</dd>
 
 </dl>
@@ -291,11 +291,20 @@ ID][docs-about-morefs] of the cluster to put the override in.  Forces a new
 resource if changed.
 {{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>host<wbr>System<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The managed object ID of the host.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>dpm<wbr>Automation<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The automation level for host power
 operations on this host. Can be one of `manual` or `automated`. Default:
@@ -306,19 +315,10 @@ operations on this host. Can be one of `manual` or `automated`. Default:
             title="Optional">
         <span>dpm<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable DPM support for this host. Default:
 `false`.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>host<wbr>System<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The managed object ID of the host.
 {{% /md %}}</dd>
 
 </dl>
@@ -337,6 +337,15 @@ operations on this host. Can be one of `manual` or `automated`. Default:
     <dd>{{% md %}}The [managed object reference
 ID][docs-about-morefs] of the cluster to put the override in.  Forces a new
 resource if changed.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>host_<wbr>system_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The managed object ID of the host.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -360,221 +369,10 @@ operations on this host. Can be one of `manual` or `automated`. Default:
 `false`.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>host_<wbr>system_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The managed object ID of the host.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
-
-
-
-
-
-## DpmHostOverride Output Properties
-
-The following output properties are available:
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Compute<wbr>Cluster<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The [managed object reference
-ID][docs-about-morefs] of the cluster to put the override in.  Forces a new
-resource if changed.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Dpm<wbr>Automation<wbr>Level</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The automation level for host power
-operations on this host. Can be one of `manual` or `automated`. Default:
-`manual`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Dpm<wbr>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Enable DPM support for this host. Default:
-`false`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Host<wbr>System<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The managed object ID of the host.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Compute<wbr>Cluster<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The [managed object reference
-ID][docs-about-morefs] of the cluster to put the override in.  Forces a new
-resource if changed.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Dpm<wbr>Automation<wbr>Level</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The automation level for host power
-operations on this host. Can be one of `manual` or `automated`. Default:
-`manual`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Dpm<wbr>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Enable DPM support for this host. Default:
-`false`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Host<wbr>System<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The managed object ID of the host.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>compute<wbr>Cluster<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The [managed object reference
-ID][docs-about-morefs] of the cluster to put the override in.  Forces a new
-resource if changed.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>dpm<wbr>Automation<wbr>Level</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The automation level for host power
-operations on this host. Can be one of `manual` or `automated`. Default:
-`manual`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>dpm<wbr>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Enable DPM support for this host. Default:
-`false`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>host<wbr>System<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The managed object ID of the host.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>compute_<wbr>cluster_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The [managed object reference
-ID][docs-about-morefs] of the cluster to put the override in.  Forces a new
-resource if changed.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>dpm_<wbr>automation_<wbr>level</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The automation level for host power
-operations on this host. Can be one of `manual` or `automated`. Default:
-`manual`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>dpm_<wbr>enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Enable DPM support for this host. Default:
-`false`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>host_<wbr>system_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The managed object ID of the host.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
 
 
 
@@ -602,7 +400,7 @@ Get an existing DpmHostOverride resource's state with the given name, ID, and op
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.Vsphere..DpmHostOverride.html">DpmHostOverride</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.Vsphere..DpmHostOverrideState.html">DpmHostOverrideState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.Vsphere.DpmHostOverride.html">DpmHostOverride</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.Vsphere..DpmHostOverrideState.html">DpmHostOverrideState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -712,7 +510,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Compute<wbr>Cluster<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The [managed object reference
 ID][docs-about-morefs] of the cluster to put the override in.  Forces a new
@@ -723,7 +521,7 @@ resource if changed.
             title="Optional">
         <span>Dpm<wbr>Automation<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The automation level for host power
 operations on this host. Can be one of `manual` or `automated`. Default:
@@ -734,7 +532,7 @@ operations on this host. Can be one of `manual` or `automated`. Default:
             title="Optional">
         <span>Dpm<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable DPM support for this host. Default:
 `false`.
@@ -744,7 +542,7 @@ operations on this host. Can be one of `manual` or `automated`. Default:
             title="Optional">
         <span>Host<wbr>System<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The managed object ID of the host.
 {{% /md %}}</dd>
@@ -760,7 +558,7 @@ operations on this host. Can be one of `manual` or `automated`. Default:
             title="Optional">
         <span>Compute<wbr>Cluster<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The [managed object reference
 ID][docs-about-morefs] of the cluster to put the override in.  Forces a new
@@ -771,7 +569,7 @@ resource if changed.
             title="Optional">
         <span>Dpm<wbr>Automation<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The automation level for host power
 operations on this host. Can be one of `manual` or `automated`. Default:
@@ -782,7 +580,7 @@ operations on this host. Can be one of `manual` or `automated`. Default:
             title="Optional">
         <span>Dpm<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable DPM support for this host. Default:
 `false`.
@@ -792,7 +590,7 @@ operations on this host. Can be one of `manual` or `automated`. Default:
             title="Optional">
         <span>Host<wbr>System<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The managed object ID of the host.
 {{% /md %}}</dd>
@@ -808,7 +606,7 @@ operations on this host. Can be one of `manual` or `automated`. Default:
             title="Optional">
         <span>compute<wbr>Cluster<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The [managed object reference
 ID][docs-about-morefs] of the cluster to put the override in.  Forces a new
@@ -819,7 +617,7 @@ resource if changed.
             title="Optional">
         <span>dpm<wbr>Automation<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The automation level for host power
 operations on this host. Can be one of `manual` or `automated`. Default:
@@ -830,7 +628,7 @@ operations on this host. Can be one of `manual` or `automated`. Default:
             title="Optional">
         <span>dpm<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable DPM support for this host. Default:
 `false`.
@@ -840,7 +638,7 @@ operations on this host. Can be one of `manual` or `automated`. Default:
             title="Optional">
         <span>host<wbr>System<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The managed object ID of the host.
 {{% /md %}}</dd>

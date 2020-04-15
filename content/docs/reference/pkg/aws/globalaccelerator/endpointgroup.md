@@ -35,7 +35,7 @@ const example = new aws.globalaccelerator.EndpointGroup("example", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/globalaccelerator/#EndpointGroup">EndpointGroup</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/globalaccelerator/#EndpointGroupArgs">EndpointGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/globalaccelerator/#EndpointGroup">EndpointGroup</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/globalaccelerator/#EndpointGroupArgs">EndpointGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -43,11 +43,11 @@ const example = new aws.globalaccelerator.EndpointGroup("example", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewEndpointGroup<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/globalaccelerator?tab=doc#EndpointGroupArgs">EndpointGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/globalaccelerator?tab=doc#EndpointGroup">EndpointGroup</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewEndpointGroup<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/globalaccelerator?tab=doc#EndpointGroupArgs">EndpointGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/globalaccelerator?tab=doc#EndpointGroup">EndpointGroup</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Globalaccelerator.EndpointGroup.html">EndpointGroup</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.GlobalAccelerator.EndpointGroupArgs.html">EndpointGroupArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.GlobalAccelerator.EndpointGroup.html">EndpointGroup</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.GlobalAccelerator.EndpointGroupArgs.html">EndpointGroupArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -139,60 +139,6 @@ const example = new aws.globalaccelerator.EndpointGroup("example", {
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Endpoint<wbr>Configurations</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointgroupendpointconfiguration">List&lt;Endpoint<wbr>Group<wbr>Endpoint<wbr>Configuration<wbr>Args&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}The list of endpoint objects. Fields documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Endpoint<wbr>Group<wbr>Region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The name of the AWS Region where the endpoint group is located.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Health<wbr>Check<wbr>Interval<wbr>Seconds</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}The time—10 seconds or 30 seconds—between each health check for an endpoint. The default value is 30.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Health<wbr>Check<wbr>Path</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}If the protocol is HTTP/S, then this specifies the path that is the destination for health check targets. The default value is slash (/).
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Health<wbr>Check<wbr>Port</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}The port that AWS Global Accelerator uses to check the health of endpoints that are part of this endpoint group. The default port is the listener port that this endpoint group is associated with. If listener port is a list of ports, Global Accelerator uses the first port in the list.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Health<wbr>Check<wbr>Protocol</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The protocol that AWS Global Accelerator uses to check the health of endpoints that are part of this endpoint group. The default value is TCP.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Listener<wbr>Arn</span>
@@ -204,9 +150,63 @@ const example = new aws.globalaccelerator.EndpointGroup("example", {
 
     <dt class="property-optional"
             title="Optional">
+        <span>Endpoint<wbr>Configurations</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#endpointgroupendpointconfiguration">List&lt;Endpoint<wbr>Group<wbr>Endpoint<wbr>Configuration<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The list of endpoint objects. Fields documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Endpoint<wbr>Group<wbr>Region</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the AWS Region where the endpoint group is located.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Health<wbr>Check<wbr>Interval<wbr>Seconds</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The time—10 seconds or 30 seconds—between each health check for an endpoint. The default value is 30.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Health<wbr>Check<wbr>Path</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}If the protocol is HTTP/S, then this specifies the path that is the destination for health check targets. The default value is slash (/).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Health<wbr>Check<wbr>Port</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The port that AWS Global Accelerator uses to check the health of endpoints that are part of this endpoint group. The default port is the listener port that this endpoint group is associated with. If listener port is a list of ports, Global Accelerator uses the first port in the list.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Health<wbr>Check<wbr>Protocol</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The protocol that AWS Global Accelerator uses to check the health of endpoints that are part of this endpoint group. The default value is TCP.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Threshold<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of consecutive health checks required to set the state of a healthy endpoint to unhealthy, or to set an unhealthy endpoint to healthy. The default value is 3.
 {{% /md %}}</dd>
@@ -215,7 +215,7 @@ const example = new aws.globalaccelerator.EndpointGroup("example", {
             title="Optional">
         <span>Traffic<wbr>Dial<wbr>Percentage</span>
         <span class="property-indicator"></span>
-        <span class="property-type">double?</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The percentage of traffic to send to an AWS Region. Additional traffic is distributed to other endpoint groups for this listener. The default value is 100.
 {{% /md %}}</dd>
@@ -226,6 +226,15 @@ const example = new aws.globalaccelerator.EndpointGroup("example", {
 
 {{% choosable language go %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Listener<wbr>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the listener.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -240,7 +249,7 @@ const example = new aws.globalaccelerator.EndpointGroup("example", {
             title="Optional">
         <span>Endpoint<wbr>Group<wbr>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the AWS Region where the endpoint group is located.
 {{% /md %}}</dd>
@@ -249,7 +258,7 @@ const example = new aws.globalaccelerator.EndpointGroup("example", {
             title="Optional">
         <span>Health<wbr>Check<wbr>Interval<wbr>Seconds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time—10 seconds or 30 seconds—between each health check for an endpoint. The default value is 30.
 {{% /md %}}</dd>
@@ -258,7 +267,7 @@ const example = new aws.globalaccelerator.EndpointGroup("example", {
             title="Optional">
         <span>Health<wbr>Check<wbr>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If the protocol is HTTP/S, then this specifies the path that is the destination for health check targets. The default value is slash (/).
 {{% /md %}}</dd>
@@ -267,7 +276,7 @@ const example = new aws.globalaccelerator.EndpointGroup("example", {
             title="Optional">
         <span>Health<wbr>Check<wbr>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port that AWS Global Accelerator uses to check the health of endpoints that are part of this endpoint group. The default port is the listener port that this endpoint group is associated with. If listener port is a list of ports, Global Accelerator uses the first port in the list.
 {{% /md %}}</dd>
@@ -276,25 +285,16 @@ const example = new aws.globalaccelerator.EndpointGroup("example", {
             title="Optional">
         <span>Health<wbr>Check<wbr>Protocol</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The protocol that AWS Global Accelerator uses to check the health of endpoints that are part of this endpoint group. The default value is TCP.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Listener<wbr>Arn</span>
-        <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) of the listener.
+    <dd>{{% md %}}The protocol that AWS Global Accelerator uses to check the health of endpoints that are part of this endpoint group. The default value is TCP.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Threshold<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of consecutive health checks required to set the state of a healthy endpoint to unhealthy, or to set an unhealthy endpoint to healthy. The default value is 3.
 {{% /md %}}</dd>
@@ -303,7 +303,7 @@ const example = new aws.globalaccelerator.EndpointGroup("example", {
             title="Optional">
         <span>Traffic<wbr>Dial<wbr>Percentage</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*float64</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The percentage of traffic to send to an AWS Region. Additional traffic is distributed to other endpoint groups for this listener. The default value is 100.
 {{% /md %}}</dd>
@@ -314,60 +314,6 @@ const example = new aws.globalaccelerator.EndpointGroup("example", {
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>endpoint<wbr>Configurations</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointgroupendpointconfiguration">Endpoint<wbr>Group<wbr>Endpoint<wbr>Configuration[]?</a></span>
-    </dt>
-    <dd>{{% md %}}The list of endpoint objects. Fields documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>endpoint<wbr>Group<wbr>Region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The name of the AWS Region where the endpoint group is located.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>health<wbr>Check<wbr>Interval<wbr>Seconds</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}The time—10 seconds or 30 seconds—between each health check for an endpoint. The default value is 30.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>health<wbr>Check<wbr>Path</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}If the protocol is HTTP/S, then this specifies the path that is the destination for health check targets. The default value is slash (/).
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>health<wbr>Check<wbr>Port</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}The port that AWS Global Accelerator uses to check the health of endpoints that are part of this endpoint group. The default port is the listener port that this endpoint group is associated with. If listener port is a list of ports, Global Accelerator uses the first port in the list.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>health<wbr>Check<wbr>Protocol</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The protocol that AWS Global Accelerator uses to check the health of endpoints that are part of this endpoint group. The default value is TCP.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -380,9 +326,63 @@ const example = new aws.globalaccelerator.EndpointGroup("example", {
 
     <dt class="property-optional"
             title="Optional">
+        <span>endpoint<wbr>Configurations</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#endpointgroupendpointconfiguration">Endpoint<wbr>Group<wbr>Endpoint<wbr>Configuration[]</a></span>
+    </dt>
+    <dd>{{% md %}}The list of endpoint objects. Fields documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>endpoint<wbr>Group<wbr>Region</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the AWS Region where the endpoint group is located.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>health<wbr>Check<wbr>Interval<wbr>Seconds</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The time—10 seconds or 30 seconds—between each health check for an endpoint. The default value is 30.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>health<wbr>Check<wbr>Path</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}If the protocol is HTTP/S, then this specifies the path that is the destination for health check targets. The default value is slash (/).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>health<wbr>Check<wbr>Port</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The port that AWS Global Accelerator uses to check the health of endpoints that are part of this endpoint group. The default port is the listener port that this endpoint group is associated with. If listener port is a list of ports, Global Accelerator uses the first port in the list.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>health<wbr>Check<wbr>Protocol</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The protocol that AWS Global Accelerator uses to check the health of endpoints that are part of this endpoint group. The default value is TCP.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>threshold<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of consecutive health checks required to set the state of a healthy endpoint to unhealthy, or to set an unhealthy endpoint to healthy. The default value is 3.
 {{% /md %}}</dd>
@@ -391,7 +391,7 @@ const example = new aws.globalaccelerator.EndpointGroup("example", {
             title="Optional">
         <span>traffic<wbr>Dial<wbr>Percentage</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The percentage of traffic to send to an AWS Region. Additional traffic is distributed to other endpoint groups for this listener. The default value is 100.
 {{% /md %}}</dd>
@@ -402,6 +402,15 @@ const example = new aws.globalaccelerator.EndpointGroup("example", {
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>listener_<wbr>arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the listener.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -457,15 +466,6 @@ const example = new aws.globalaccelerator.EndpointGroup("example", {
     <dd>{{% md %}}The protocol that AWS Global Accelerator uses to check the health of endpoints that are part of this endpoint group. The default value is TCP.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>listener_<wbr>arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) of the listener.
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>threshold_<wbr>count</span>
@@ -488,368 +488,6 @@ const example = new aws.globalaccelerator.EndpointGroup("example", {
 {{% /choosable %}}
 
 
-
-
-
-
-
-## EndpointGroup Output Properties
-
-The following output properties are available:
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Endpoint<wbr>Configurations</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointgroupendpointconfiguration">List&lt;Endpoint<wbr>Group<wbr>Endpoint<wbr>Configuration&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}The list of endpoint objects. Fields documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Endpoint<wbr>Group<wbr>Region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the AWS Region where the endpoint group is located.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Health<wbr>Check<wbr>Interval<wbr>Seconds</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}The time—10 seconds or 30 seconds—between each health check for an endpoint. The default value is 30.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Health<wbr>Check<wbr>Path</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}If the protocol is HTTP/S, then this specifies the path that is the destination for health check targets. The default value is slash (/).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Health<wbr>Check<wbr>Port</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}The port that AWS Global Accelerator uses to check the health of endpoints that are part of this endpoint group. The default port is the listener port that this endpoint group is associated with. If listener port is a list of ports, Global Accelerator uses the first port in the list.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Health<wbr>Check<wbr>Protocol</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The protocol that AWS Global Accelerator uses to check the health of endpoints that are part of this endpoint group. The default value is TCP.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Listener<wbr>Arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) of the listener.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Threshold<wbr>Count</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}The number of consecutive health checks required to set the state of a healthy endpoint to unhealthy, or to set an unhealthy endpoint to healthy. The default value is 3.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Traffic<wbr>Dial<wbr>Percentage</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">double?</span>
-    </dt>
-    <dd>{{% md %}}The percentage of traffic to send to an AWS Region. Additional traffic is distributed to other endpoint groups for this listener. The default value is 100.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Endpoint<wbr>Configurations</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointgroupendpointconfiguration">[]Endpoint<wbr>Group<wbr>Endpoint<wbr>Configuration</a></span>
-    </dt>
-    <dd>{{% md %}}The list of endpoint objects. Fields documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Endpoint<wbr>Group<wbr>Region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the AWS Region where the endpoint group is located.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Health<wbr>Check<wbr>Interval<wbr>Seconds</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}The time—10 seconds or 30 seconds—between each health check for an endpoint. The default value is 30.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Health<wbr>Check<wbr>Path</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}If the protocol is HTTP/S, then this specifies the path that is the destination for health check targets. The default value is slash (/).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Health<wbr>Check<wbr>Port</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}The port that AWS Global Accelerator uses to check the health of endpoints that are part of this endpoint group. The default port is the listener port that this endpoint group is associated with. If listener port is a list of ports, Global Accelerator uses the first port in the list.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Health<wbr>Check<wbr>Protocol</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The protocol that AWS Global Accelerator uses to check the health of endpoints that are part of this endpoint group. The default value is TCP.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Listener<wbr>Arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) of the listener.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Threshold<wbr>Count</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}The number of consecutive health checks required to set the state of a healthy endpoint to unhealthy, or to set an unhealthy endpoint to healthy. The default value is 3.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Traffic<wbr>Dial<wbr>Percentage</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*float64</span>
-    </dt>
-    <dd>{{% md %}}The percentage of traffic to send to an AWS Region. Additional traffic is distributed to other endpoint groups for this listener. The default value is 100.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>endpoint<wbr>Configurations</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointgroupendpointconfiguration">Endpoint<wbr>Group<wbr>Endpoint<wbr>Configuration[]?</a></span>
-    </dt>
-    <dd>{{% md %}}The list of endpoint objects. Fields documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>endpoint<wbr>Group<wbr>Region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the AWS Region where the endpoint group is located.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>health<wbr>Check<wbr>Interval<wbr>Seconds</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}The time—10 seconds or 30 seconds—between each health check for an endpoint. The default value is 30.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>health<wbr>Check<wbr>Path</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}If the protocol is HTTP/S, then this specifies the path that is the destination for health check targets. The default value is slash (/).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>health<wbr>Check<wbr>Port</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}The port that AWS Global Accelerator uses to check the health of endpoints that are part of this endpoint group. The default port is the listener port that this endpoint group is associated with. If listener port is a list of ports, Global Accelerator uses the first port in the list.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>health<wbr>Check<wbr>Protocol</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The protocol that AWS Global Accelerator uses to check the health of endpoints that are part of this endpoint group. The default value is TCP.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>listener<wbr>Arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) of the listener.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>threshold<wbr>Count</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}The number of consecutive health checks required to set the state of a healthy endpoint to unhealthy, or to set an unhealthy endpoint to healthy. The default value is 3.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>traffic<wbr>Dial<wbr>Percentage</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}The percentage of traffic to send to an AWS Region. Additional traffic is distributed to other endpoint groups for this listener. The default value is 100.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>endpoint_<wbr>configurations</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointgroupendpointconfiguration">List[Endpoint<wbr>Group<wbr>Endpoint<wbr>Configuration]</a></span>
-    </dt>
-    <dd>{{% md %}}The list of endpoint objects. Fields documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>endpoint_<wbr>group_<wbr>region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the AWS Region where the endpoint group is located.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>health_<wbr>check_<wbr>interval_<wbr>seconds</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The time—10 seconds or 30 seconds—between each health check for an endpoint. The default value is 30.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>health_<wbr>check_<wbr>path</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}If the protocol is HTTP/S, then this specifies the path that is the destination for health check targets. The default value is slash (/).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>health_<wbr>check_<wbr>port</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The port that AWS Global Accelerator uses to check the health of endpoints that are part of this endpoint group. The default port is the listener port that this endpoint group is associated with. If listener port is a list of ports, Global Accelerator uses the first port in the list.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>health_<wbr>check_<wbr>protocol</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The protocol that AWS Global Accelerator uses to check the health of endpoints that are part of this endpoint group. The default value is TCP.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>listener_<wbr>arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) of the listener.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>threshold_<wbr>count</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The number of consecutive health checks required to set the state of a healthy endpoint to unhealthy, or to set an unhealthy endpoint to healthy. The default value is 3.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>traffic_<wbr>dial_<wbr>percentage</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The percentage of traffic to send to an AWS Region. Additional traffic is distributed to other endpoint groups for this listener. The default value is 100.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
 
 
 
@@ -877,7 +515,7 @@ Get an existing EndpointGroup resource's state with the given name, ID, and opti
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Globalaccelerator.EndpointGroup.html">EndpointGroup</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Globalaccelerator.EndpointGroupState.html">EndpointGroupState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.GlobalAccelerator.EndpointGroup.html">EndpointGroup</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.GlobalAccelerator.EndpointGroupState.html">EndpointGroupState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -987,7 +625,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Endpoint<wbr>Configurations</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointgroupendpointconfiguration">List&lt;Endpoint<wbr>Group<wbr>Endpoint<wbr>Configuration<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#endpointgroupendpointconfiguration">List&lt;Endpoint<wbr>Group<wbr>Endpoint<wbr>Configuration<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of endpoint objects. Fields documented below.
 {{% /md %}}</dd>
@@ -996,7 +634,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Endpoint<wbr>Group<wbr>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the AWS Region where the endpoint group is located.
 {{% /md %}}</dd>
@@ -1005,7 +643,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Health<wbr>Check<wbr>Interval<wbr>Seconds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time—10 seconds or 30 seconds—between each health check for an endpoint. The default value is 30.
 {{% /md %}}</dd>
@@ -1014,7 +652,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Health<wbr>Check<wbr>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If the protocol is HTTP/S, then this specifies the path that is the destination for health check targets. The default value is slash (/).
 {{% /md %}}</dd>
@@ -1023,7 +661,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Health<wbr>Check<wbr>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port that AWS Global Accelerator uses to check the health of endpoints that are part of this endpoint group. The default port is the listener port that this endpoint group is associated with. If listener port is a list of ports, Global Accelerator uses the first port in the list.
 {{% /md %}}</dd>
@@ -1032,7 +670,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Health<wbr>Check<wbr>Protocol</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The protocol that AWS Global Accelerator uses to check the health of endpoints that are part of this endpoint group. The default value is TCP.
 {{% /md %}}</dd>
@@ -1041,7 +679,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Listener<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the listener.
 {{% /md %}}</dd>
@@ -1050,7 +688,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Threshold<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of consecutive health checks required to set the state of a healthy endpoint to unhealthy, or to set an unhealthy endpoint to healthy. The default value is 3.
 {{% /md %}}</dd>
@@ -1059,7 +697,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Traffic<wbr>Dial<wbr>Percentage</span>
         <span class="property-indicator"></span>
-        <span class="property-type">double?</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The percentage of traffic to send to an AWS Region. Additional traffic is distributed to other endpoint groups for this listener. The default value is 100.
 {{% /md %}}</dd>
@@ -1084,7 +722,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Endpoint<wbr>Group<wbr>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the AWS Region where the endpoint group is located.
 {{% /md %}}</dd>
@@ -1093,7 +731,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Health<wbr>Check<wbr>Interval<wbr>Seconds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time—10 seconds or 30 seconds—between each health check for an endpoint. The default value is 30.
 {{% /md %}}</dd>
@@ -1102,7 +740,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Health<wbr>Check<wbr>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If the protocol is HTTP/S, then this specifies the path that is the destination for health check targets. The default value is slash (/).
 {{% /md %}}</dd>
@@ -1111,7 +749,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Health<wbr>Check<wbr>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port that AWS Global Accelerator uses to check the health of endpoints that are part of this endpoint group. The default port is the listener port that this endpoint group is associated with. If listener port is a list of ports, Global Accelerator uses the first port in the list.
 {{% /md %}}</dd>
@@ -1120,7 +758,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Health<wbr>Check<wbr>Protocol</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The protocol that AWS Global Accelerator uses to check the health of endpoints that are part of this endpoint group. The default value is TCP.
 {{% /md %}}</dd>
@@ -1129,7 +767,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Listener<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the listener.
 {{% /md %}}</dd>
@@ -1138,7 +776,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Threshold<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of consecutive health checks required to set the state of a healthy endpoint to unhealthy, or to set an unhealthy endpoint to healthy. The default value is 3.
 {{% /md %}}</dd>
@@ -1147,7 +785,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Traffic<wbr>Dial<wbr>Percentage</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*float64</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The percentage of traffic to send to an AWS Region. Additional traffic is distributed to other endpoint groups for this listener. The default value is 100.
 {{% /md %}}</dd>
@@ -1163,7 +801,7 @@ The following state arguments are supported:
             title="Optional">
         <span>endpoint<wbr>Configurations</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#endpointgroupendpointconfiguration">Endpoint<wbr>Group<wbr>Endpoint<wbr>Configuration[]?</a></span>
+        <span class="property-type"><a href="#endpointgroupendpointconfiguration">Endpoint<wbr>Group<wbr>Endpoint<wbr>Configuration[]</a></span>
     </dt>
     <dd>{{% md %}}The list of endpoint objects. Fields documented below.
 {{% /md %}}</dd>
@@ -1172,7 +810,7 @@ The following state arguments are supported:
             title="Optional">
         <span>endpoint<wbr>Group<wbr>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the AWS Region where the endpoint group is located.
 {{% /md %}}</dd>
@@ -1181,7 +819,7 @@ The following state arguments are supported:
             title="Optional">
         <span>health<wbr>Check<wbr>Interval<wbr>Seconds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The time—10 seconds or 30 seconds—between each health check for an endpoint. The default value is 30.
 {{% /md %}}</dd>
@@ -1190,7 +828,7 @@ The following state arguments are supported:
             title="Optional">
         <span>health<wbr>Check<wbr>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If the protocol is HTTP/S, then this specifies the path that is the destination for health check targets. The default value is slash (/).
 {{% /md %}}</dd>
@@ -1199,7 +837,7 @@ The following state arguments are supported:
             title="Optional">
         <span>health<wbr>Check<wbr>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The port that AWS Global Accelerator uses to check the health of endpoints that are part of this endpoint group. The default port is the listener port that this endpoint group is associated with. If listener port is a list of ports, Global Accelerator uses the first port in the list.
 {{% /md %}}</dd>
@@ -1208,7 +846,7 @@ The following state arguments are supported:
             title="Optional">
         <span>health<wbr>Check<wbr>Protocol</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The protocol that AWS Global Accelerator uses to check the health of endpoints that are part of this endpoint group. The default value is TCP.
 {{% /md %}}</dd>
@@ -1217,7 +855,7 @@ The following state arguments are supported:
             title="Optional">
         <span>listener<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) of the listener.
 {{% /md %}}</dd>
@@ -1226,7 +864,7 @@ The following state arguments are supported:
             title="Optional">
         <span>threshold<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of consecutive health checks required to set the state of a healthy endpoint to unhealthy, or to set an unhealthy endpoint to healthy. The default value is 3.
 {{% /md %}}</dd>
@@ -1235,7 +873,7 @@ The following state arguments are supported:
             title="Optional">
         <span>traffic<wbr>Dial<wbr>Percentage</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The percentage of traffic to send to an AWS Region. Additional traffic is distributed to other endpoint groups for this listener. The default value is 100.
 {{% /md %}}</dd>
@@ -1361,7 +999,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Endpoint<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An ID for the endpoint. If the endpoint is a Network Load Balancer or Application Load Balancer, this is the Amazon Resource Name (ARN) of the resource. If the endpoint is an Elastic IP address, this is the Elastic IP address allocation ID.
 {{% /md %}}</dd>
@@ -1370,7 +1008,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Weight</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The weight associated with the endpoint. When you add weights to endpoints, you configure AWS Global Accelerator to route traffic based on proportions that you specify. 
 {{% /md %}}</dd>
@@ -1386,7 +1024,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Endpoint<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An ID for the endpoint. If the endpoint is a Network Load Balancer or Application Load Balancer, this is the Amazon Resource Name (ARN) of the resource. If the endpoint is an Elastic IP address, this is the Elastic IP address allocation ID.
 {{% /md %}}</dd>
@@ -1395,7 +1033,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Weight</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The weight associated with the endpoint. When you add weights to endpoints, you configure AWS Global Accelerator to route traffic based on proportions that you specify. 
 {{% /md %}}</dd>
@@ -1411,7 +1049,7 @@ The following state arguments are supported:
             title="Optional">
         <span>endpoint<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An ID for the endpoint. If the endpoint is a Network Load Balancer or Application Load Balancer, this is the Amazon Resource Name (ARN) of the resource. If the endpoint is an Elastic IP address, this is the Elastic IP address allocation ID.
 {{% /md %}}</dd>
@@ -1420,7 +1058,7 @@ The following state arguments are supported:
             title="Optional">
         <span>weight</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The weight associated with the endpoint. When you add weights to endpoints, you configure AWS Global Accelerator to route traffic based on proportions that you specify. 
 {{% /md %}}</dd>

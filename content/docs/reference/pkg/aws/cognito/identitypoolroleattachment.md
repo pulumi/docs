@@ -95,7 +95,7 @@ const mainIdentityPoolRoleAttachment = new aws.cognito.IdentityPoolRoleAttachmen
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/cognito/#IdentityPoolRoleAttachment">IdentityPoolRoleAttachment</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/cognito/#IdentityPoolRoleAttachmentArgs">IdentityPoolRoleAttachmentArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/cognito/#IdentityPoolRoleAttachment">IdentityPoolRoleAttachment</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/cognito/#IdentityPoolRoleAttachmentArgs">IdentityPoolRoleAttachmentArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -103,7 +103,7 @@ const mainIdentityPoolRoleAttachment = new aws.cognito.IdentityPoolRoleAttachmen
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewIdentityPoolRoleAttachment<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cognito?tab=doc#IdentityPoolRoleAttachmentArgs">IdentityPoolRoleAttachmentArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cognito?tab=doc#IdentityPoolRoleAttachment">IdentityPoolRoleAttachment</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewIdentityPoolRoleAttachment<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cognito?tab=doc#IdentityPoolRoleAttachmentArgs">IdentityPoolRoleAttachmentArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cognito?tab=doc#IdentityPoolRoleAttachment">IdentityPoolRoleAttachment</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -208,15 +208,6 @@ const mainIdentityPoolRoleAttachment = new aws.cognito.IdentityPoolRoleAttachmen
     <dd>{{% md %}}An identity pool ID in the format REGION:GUID.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Role<wbr>Mappings</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identitypoolroleattachmentrolemapping">List&lt;Identity<wbr>Pool<wbr>Role<wbr>Attachment<wbr>Role<wbr>Mapping<wbr>Args&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}A List of Role Mapping.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Roles</span>
@@ -226,6 +217,15 @@ const mainIdentityPoolRoleAttachment = new aws.cognito.IdentityPoolRoleAttachmen
     <dd>{{% md %}}The map of roles associated with this pool. For a given role, the key will be either "authenticated" or "unauthenticated" and the value will be the Role ARN.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>Role<wbr>Mappings</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#identitypoolroleattachmentrolemapping">List&lt;Identity<wbr>Pool<wbr>Role<wbr>Attachment<wbr>Role<wbr>Mapping<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A List of Role Mapping.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -242,15 +242,6 @@ const mainIdentityPoolRoleAttachment = new aws.cognito.IdentityPoolRoleAttachmen
     <dd>{{% md %}}An identity pool ID in the format REGION:GUID.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Role<wbr>Mappings</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identitypoolroleattachmentrolemapping">[]Identity<wbr>Pool<wbr>Role<wbr>Attachment<wbr>Role<wbr>Mapping</a></span>
-    </dt>
-    <dd>{{% md %}}A List of Role Mapping.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Roles</span>
@@ -258,6 +249,15 @@ const mainIdentityPoolRoleAttachment = new aws.cognito.IdentityPoolRoleAttachmen
         <span class="property-type"><a href="#identitypoolroleattachmentroles">Identity<wbr>Pool<wbr>Role<wbr>Attachment<wbr>Roles</a></span>
     </dt>
     <dd>{{% md %}}The map of roles associated with this pool. For a given role, the key will be either "authenticated" or "unauthenticated" and the value will be the Role ARN.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Role<wbr>Mappings</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#identitypoolroleattachmentrolemapping">[]Identity<wbr>Pool<wbr>Role<wbr>Attachment<wbr>Role<wbr>Mapping</a></span>
+    </dt>
+    <dd>{{% md %}}A List of Role Mapping.
 {{% /md %}}</dd>
 
 </dl>
@@ -276,15 +276,6 @@ const mainIdentityPoolRoleAttachment = new aws.cognito.IdentityPoolRoleAttachmen
     <dd>{{% md %}}An identity pool ID in the format REGION:GUID.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>role<wbr>Mappings</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identitypoolroleattachmentrolemapping">Identity<wbr>Pool<wbr>Role<wbr>Attachment<wbr>Role<wbr>Mapping[]?</a></span>
-    </dt>
-    <dd>{{% md %}}A List of Role Mapping.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>roles</span>
@@ -292,6 +283,15 @@ const mainIdentityPoolRoleAttachment = new aws.cognito.IdentityPoolRoleAttachmen
         <span class="property-type"><a href="#identitypoolroleattachmentroles">Identity<wbr>Pool<wbr>Role<wbr>Attachment<wbr>Roles</a></span>
     </dt>
     <dd>{{% md %}}The map of roles associated with this pool. For a given role, the key will be either "authenticated" or "unauthenticated" and the value will be the Role ARN.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>role<wbr>Mappings</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#identitypoolroleattachmentrolemapping">Identity<wbr>Pool<wbr>Role<wbr>Attachment<wbr>Role<wbr>Mapping[]</a></span>
+    </dt>
+    <dd>{{% md %}}A List of Role Mapping.
 {{% /md %}}</dd>
 
 </dl>
@@ -310,15 +310,6 @@ const mainIdentityPoolRoleAttachment = new aws.cognito.IdentityPoolRoleAttachmen
     <dd>{{% md %}}An identity pool ID in the format REGION:GUID.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>role_<wbr>mappings</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identitypoolroleattachmentrolemapping">List[Identity<wbr>Pool<wbr>Role<wbr>Attachment<wbr>Role<wbr>Mapping]</a></span>
-    </dt>
-    <dd>{{% md %}}A List of Role Mapping.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>roles</span>
@@ -328,138 +319,8 @@ const mainIdentityPoolRoleAttachment = new aws.cognito.IdentityPoolRoleAttachmen
     <dd>{{% md %}}The map of roles associated with this pool. For a given role, the key will be either "authenticated" or "unauthenticated" and the value will be the Role ARN.
 {{% /md %}}</dd>
 
-</dl>
-{{% /choosable %}}
-
-
-
-
-
-
-
-## IdentityPoolRoleAttachment Output Properties
-
-The following output properties are available:
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Identity<wbr>Pool<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}An identity pool ID in the format REGION:GUID.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Role<wbr>Mappings</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identitypoolroleattachmentrolemapping">List&lt;Identity<wbr>Pool<wbr>Role<wbr>Attachment<wbr>Role<wbr>Mapping&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}A List of Role Mapping.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Roles</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identitypoolroleattachmentroles">Identity<wbr>Pool<wbr>Role<wbr>Attachment<wbr>Roles</a></span>
-    </dt>
-    <dd>{{% md %}}The map of roles associated with this pool. For a given role, the key will be either "authenticated" or "unauthenticated" and the value will be the Role ARN.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Identity<wbr>Pool<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}An identity pool ID in the format REGION:GUID.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Role<wbr>Mappings</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identitypoolroleattachmentrolemapping">[]Identity<wbr>Pool<wbr>Role<wbr>Attachment<wbr>Role<wbr>Mapping</a></span>
-    </dt>
-    <dd>{{% md %}}A List of Role Mapping.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Roles</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identitypoolroleattachmentroles">Identity<wbr>Pool<wbr>Role<wbr>Attachment<wbr>Roles</a></span>
-    </dt>
-    <dd>{{% md %}}The map of roles associated with this pool. For a given role, the key will be either "authenticated" or "unauthenticated" and the value will be the Role ARN.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>identity<wbr>Pool<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}An identity pool ID in the format REGION:GUID.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>role<wbr>Mappings</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identitypoolroleattachmentrolemapping">Identity<wbr>Pool<wbr>Role<wbr>Attachment<wbr>Role<wbr>Mapping[]?</a></span>
-    </dt>
-    <dd>{{% md %}}A List of Role Mapping.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>roles</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identitypoolroleattachmentroles">Identity<wbr>Pool<wbr>Role<wbr>Attachment<wbr>Roles</a></span>
-    </dt>
-    <dd>{{% md %}}The map of roles associated with this pool. For a given role, the key will be either "authenticated" or "unauthenticated" and the value will be the Role ARN.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>identity_<wbr>pool_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}An identity pool ID in the format REGION:GUID.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>role_<wbr>mappings</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#identitypoolroleattachmentrolemapping">List[Identity<wbr>Pool<wbr>Role<wbr>Attachment<wbr>Role<wbr>Mapping]</a></span>
@@ -467,17 +328,10 @@ The following output properties are available:
     <dd>{{% md %}}A List of Role Mapping.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span>roles</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identitypoolroleattachmentroles">Dict[Identity<wbr>Pool<wbr>Role<wbr>Attachment<wbr>Roles]</a></span>
-    </dt>
-    <dd>{{% md %}}The map of roles associated with this pool. For a given role, the key will be either "authenticated" or "unauthenticated" and the value will be the Role ARN.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
+
+
 
 
 
@@ -615,7 +469,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Identity<wbr>Pool<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An identity pool ID in the format REGION:GUID.
 {{% /md %}}</dd>
@@ -624,7 +478,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Role<wbr>Mappings</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identitypoolroleattachmentrolemapping">List&lt;Identity<wbr>Pool<wbr>Role<wbr>Attachment<wbr>Role<wbr>Mapping<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#identitypoolroleattachmentrolemapping">List&lt;Identity<wbr>Pool<wbr>Role<wbr>Attachment<wbr>Role<wbr>Mapping<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A List of Role Mapping.
 {{% /md %}}</dd>
@@ -633,7 +487,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Roles</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identitypoolroleattachmentroles">Identity<wbr>Pool<wbr>Role<wbr>Attachment<wbr>Roles<wbr>Args?</a></span>
+        <span class="property-type"><a href="#identitypoolroleattachmentroles">Identity<wbr>Pool<wbr>Role<wbr>Attachment<wbr>Roles<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The map of roles associated with this pool. For a given role, the key will be either "authenticated" or "unauthenticated" and the value will be the Role ARN.
 {{% /md %}}</dd>
@@ -649,7 +503,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Identity<wbr>Pool<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An identity pool ID in the format REGION:GUID.
 {{% /md %}}</dd>
@@ -667,7 +521,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Roles</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identitypoolroleattachmentroles">*Identity<wbr>Pool<wbr>Role<wbr>Attachment<wbr>Roles</a></span>
+        <span class="property-type"><a href="#identitypoolroleattachmentroles">Identity<wbr>Pool<wbr>Role<wbr>Attachment<wbr>Roles</a></span>
     </dt>
     <dd>{{% md %}}The map of roles associated with this pool. For a given role, the key will be either "authenticated" or "unauthenticated" and the value will be the Role ARN.
 {{% /md %}}</dd>
@@ -683,7 +537,7 @@ The following state arguments are supported:
             title="Optional">
         <span>identity<wbr>Pool<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An identity pool ID in the format REGION:GUID.
 {{% /md %}}</dd>
@@ -692,7 +546,7 @@ The following state arguments are supported:
             title="Optional">
         <span>role<wbr>Mappings</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identitypoolroleattachmentrolemapping">Identity<wbr>Pool<wbr>Role<wbr>Attachment<wbr>Role<wbr>Mapping[]?</a></span>
+        <span class="property-type"><a href="#identitypoolroleattachmentrolemapping">Identity<wbr>Pool<wbr>Role<wbr>Attachment<wbr>Role<wbr>Mapping[]</a></span>
     </dt>
     <dd>{{% md %}}A List of Role Mapping.
 {{% /md %}}</dd>
@@ -701,7 +555,7 @@ The following state arguments are supported:
             title="Optional">
         <span>roles</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identitypoolroleattachmentroles">Identity<wbr>Pool<wbr>Role<wbr>Attachment<wbr>Roles?</a></span>
+        <span class="property-type"><a href="#identitypoolroleattachmentroles">Identity<wbr>Pool<wbr>Role<wbr>Attachment<wbr>Roles</a></span>
     </dt>
     <dd>{{% md %}}The map of roles associated with this pool. For a given role, the key will be either "authenticated" or "unauthenticated" and the value will be the Role ARN.
 {{% /md %}}</dd>
@@ -769,15 +623,6 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Ambiguous<wbr>Role<wbr>Resolution</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Specifies the action to be taken if either no rules match the claim value for the Rules type, or there is no cognito:preferred_role claim and there are multiple cognito:roles matches for the Token type. `Required` if you specify Token or Rules as the Type.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Identity<wbr>Provider</span>
@@ -785,15 +630,6 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A string identifying the identity provider, for example, "graph.facebook.com" or "cognito-idp.us-east-1.amazonaws.com/us-east-1_abcdefghi:app_client_id".
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Mapping<wbr>Rules</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identitypoolroleattachmentrolemappingmappingrule">List&lt;Identity<wbr>Pool<wbr>Role<wbr>Attachment<wbr>Role<wbr>Mapping<wbr>Mapping<wbr>Rule<wbr>Args&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}The Rules Configuration to be used for mapping users to roles. You can specify up to 25 rules per identity provider. Rules are evaluated in order. The first one to match specifies the role.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -805,21 +641,30 @@ The following state arguments are supported:
     <dd>{{% md %}}The role mapping type.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>Ambiguous<wbr>Role<wbr>Resolution</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the action to be taken if either no rules match the claim value for the Rules type, or there is no cognito:preferred_role claim and there are multiple cognito:roles matches for the Token type. `Required` if you specify Token or Rules as the Type.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Mapping<wbr>Rules</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#identitypoolroleattachmentrolemappingmappingrule">List&lt;Identity<wbr>Pool<wbr>Role<wbr>Attachment<wbr>Role<wbr>Mapping<wbr>Mapping<wbr>Rule<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The Rules Configuration to be used for mapping users to roles. You can specify up to 25 rules per identity provider. Rules are evaluated in order. The first one to match specifies the role.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Ambiguous<wbr>Role<wbr>Resolution</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the action to be taken if either no rules match the claim value for the Rules type, or there is no cognito:preferred_role claim and there are multiple cognito:roles matches for the Token type. `Required` if you specify Token or Rules as the Type.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -828,6 +673,24 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A string identifying the identity provider, for example, "graph.facebook.com" or "cognito-idp.us-east-1.amazonaws.com/us-east-1_abcdefghi:app_client_id".
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The role mapping type.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Ambiguous<wbr>Role<wbr>Resolution</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the action to be taken if either no rules match the claim value for the Rules type, or there is no cognito:preferred_role claim and there are multiple cognito:roles matches for the Token type. `Required` if you specify Token or Rules as the Type.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -839,30 +702,12 @@ The following state arguments are supported:
     <dd>{{% md %}}The Rules Configuration to be used for mapping users to roles. You can specify up to 25 rules per identity provider. Rules are evaluated in order. The first one to match specifies the role.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The role mapping type.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>ambiguous<wbr>Role<wbr>Resolution</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Specifies the action to be taken if either no rules match the claim value for the Rules type, or there is no cognito:preferred_role claim and there are multiple cognito:roles matches for the Token type. `Required` if you specify Token or Rules as the Type.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -873,15 +718,6 @@ The following state arguments are supported:
     <dd>{{% md %}}A string identifying the identity provider, for example, "graph.facebook.com" or "cognito-idp.us-east-1.amazonaws.com/us-east-1_abcdefghi:app_client_id".
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>mapping<wbr>Rules</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identitypoolroleattachmentrolemappingmappingrule">Identity<wbr>Pool<wbr>Role<wbr>Attachment<wbr>Role<wbr>Mapping<wbr>Mapping<wbr>Rule[]?</a></span>
-    </dt>
-    <dd>{{% md %}}The Rules Configuration to be used for mapping users to roles. You can specify up to 25 rules per identity provider. Rules are evaluated in order. The first one to match specifies the role.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>type</span>
@@ -891,21 +727,30 @@ The following state arguments are supported:
     <dd>{{% md %}}The role mapping type.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>ambiguous<wbr>Role<wbr>Resolution</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the action to be taken if either no rules match the claim value for the Rules type, or there is no cognito:preferred_role claim and there are multiple cognito:roles matches for the Token type. `Required` if you specify Token or Rules as the Type.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>mapping<wbr>Rules</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#identitypoolroleattachmentrolemappingmappingrule">Identity<wbr>Pool<wbr>Role<wbr>Attachment<wbr>Role<wbr>Mapping<wbr>Mapping<wbr>Rule[]</a></span>
+    </dt>
+    <dd>{{% md %}}The Rules Configuration to be used for mapping users to roles. You can specify up to 25 rules per identity provider. Rules are evaluated in order. The first one to match specifies the role.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>ambiguous<wbr>Role<wbr>Resolution</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Specifies the action to be taken if either no rules match the claim value for the Rules type, or there is no cognito:preferred_role claim and there are multiple cognito:roles matches for the Token type. `Required` if you specify Token or Rules as the Type.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -916,15 +761,6 @@ The following state arguments are supported:
     <dd>{{% md %}}A string identifying the identity provider, for example, "graph.facebook.com" or "cognito-idp.us-east-1.amazonaws.com/us-east-1_abcdefghi:app_client_id".
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>mapping<wbr>Rules</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#identitypoolroleattachmentrolemappingmappingrule">List[Identity<wbr>Pool<wbr>Role<wbr>Attachment<wbr>Role<wbr>Mapping<wbr>Mapping<wbr>Rule]</a></span>
-    </dt>
-    <dd>{{% md %}}The Rules Configuration to be used for mapping users to roles. You can specify up to 25 rules per identity provider. Rules are evaluated in order. The first one to match specifies the role.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>type</span>
@@ -932,6 +768,24 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The role mapping type.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>ambiguous<wbr>Role<wbr>Resolution</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies the action to be taken if either no rules match the claim value for the Rules type, or there is no cognito:preferred_role claim and there are multiple cognito:roles matches for the Token type. `Required` if you specify Token or Rules as the Type.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>mapping<wbr>Rules</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#identitypoolroleattachmentrolemappingmappingrule">List[Identity<wbr>Pool<wbr>Role<wbr>Attachment<wbr>Role<wbr>Mapping<wbr>Mapping<wbr>Rule]</a></span>
+    </dt>
+    <dd>{{% md %}}The Rules Configuration to be used for mapping users to roles. You can specify up to 25 rules per identity provider. Rules are evaluated in order. The first one to match specifies the role.
 {{% /md %}}</dd>
 
 </dl>
@@ -1147,7 +1001,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Authenticated</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1155,7 +1009,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Unauthenticated</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1170,7 +1024,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Authenticated</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1178,7 +1032,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Unauthenticated</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1193,7 +1047,7 @@ The following state arguments are supported:
             title="Optional">
         <span>authenticated</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1201,7 +1055,7 @@ The following state arguments are supported:
             title="Optional">
         <span>unauthenticated</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

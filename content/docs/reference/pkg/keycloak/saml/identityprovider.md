@@ -76,7 +76,7 @@ The following arguments are supported:
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/keycloak/saml/#IdentityProvider">IdentityProvider</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/keycloak/saml/#IdentityProviderArgs">IdentityProviderArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/keycloak/saml/#IdentityProvider">IdentityProvider</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/keycloak/saml/#IdentityProviderArgs">IdentityProviderArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -84,7 +84,7 @@ The following arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewIdentityProvider<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-keycloak/sdk/go/keycloak/saml?tab=doc#IdentityProviderArgs">IdentityProviderArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-keycloak/sdk/go/keycloak/saml?tab=doc#IdentityProvider">IdentityProvider</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewIdentityProvider<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-keycloak/sdk/go/keycloak/saml?tab=doc#IdentityProviderArgs">IdentityProviderArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-keycloak/sdk/go/keycloak/saml?tab=doc#IdentityProvider">IdentityProvider</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -180,15 +180,6 @@ The following arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Add<wbr>Read<wbr>Token<wbr>Role<wbr>On<wbr>Create</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Enable/disable if new users can read any stored tokens. This assigns the broker.read-token role.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Alias</span>
@@ -198,128 +189,6 @@ The following arguments are supported:
     <dd>{{% md %}}The alias uniquely identifies an identity provider and it is also used to build the redirect uri.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Authenticate<wbr>By<wbr>Default</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Enable/disable authenticate users by default.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Backchannel<wbr>Supported</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Does the external IDP support backchannel logout?
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Display<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Friendly name for Identity Providers.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Enable/disable this identity provider.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>First<wbr>Broker<wbr>Login<wbr>Flow<wbr>Alias</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Alias of authentication flow, which is triggered after first login with this identity provider. Term 'First Login' means
-that there is not yet existing Keycloak account linked with the authenticated identity provider account.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Force<wbr>Authn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Require Force Authn.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Hide<wbr>On<wbr>Login<wbr>Page</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Hide On Login Page.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Link<wbr>Only</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}If true, users cannot log in through this provider. They can only link to this provider. This is useful if you don't
-want to allow login from the provider, but want to integrate with a provider
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Name<wbr>Id<wbr>Policy<wbr>Format</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Name ID Policy Format.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Post<wbr>Binding<wbr>Authn<wbr>Request</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Post Binding Authn Request.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Post<wbr>Binding<wbr>Logout</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Post Binding Logout.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Post<wbr>Binding<wbr>Response</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Post Binding Response.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Post<wbr>Broker<wbr>Login<wbr>Flow<wbr>Alias</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Alias of authentication flow, which is triggered after each login with this identity provider. Useful if you want
-additional verification of each user authenticated with this identity provider (for example OTP). Leave this empty if
-you don't want any additional authenticators to be triggered after login with this identity provider. Also note, that
-authenticator implementations must assume that user is already set in ClientSession as identity provider already set it.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Realm</span>
@@ -327,33 +196,6 @@ authenticator implementations must assume that user is already set in ClientSess
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Realm Name
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Signature<wbr>Algorithm</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Signing Algorithm.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Signing<wbr>Certificate</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Signing Certificate.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Single<wbr>Logout<wbr>Service<wbr>Url</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Logout URL.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -367,9 +209,167 @@ authenticator implementations must assume that user is already set in ClientSess
 
     <dt class="property-optional"
             title="Optional">
+        <span>Add<wbr>Read<wbr>Token<wbr>Role<wbr>On<wbr>Create</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable/disable if new users can read any stored tokens. This assigns the broker.read-token role.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Authenticate<wbr>By<wbr>Default</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable/disable authenticate users by default.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Backchannel<wbr>Supported</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Does the external IDP support backchannel logout?
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Display<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Friendly name for Identity Providers.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Enabled</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable/disable this identity provider.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>First<wbr>Broker<wbr>Login<wbr>Flow<wbr>Alias</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Alias of authentication flow, which is triggered after first login with this identity provider. Term 'First Login' means
+that there is not yet existing Keycloak account linked with the authenticated identity provider account.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Force<wbr>Authn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Require Force Authn.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Hide<wbr>On<wbr>Login<wbr>Page</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Hide On Login Page.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Link<wbr>Only</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If true, users cannot log in through this provider. They can only link to this provider. This is useful if you don't
+want to allow login from the provider, but want to integrate with a provider
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name<wbr>Id<wbr>Policy<wbr>Format</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name ID Policy Format.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Post<wbr>Binding<wbr>Authn<wbr>Request</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Post Binding Authn Request.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Post<wbr>Binding<wbr>Logout</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Post Binding Logout.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Post<wbr>Binding<wbr>Response</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Post Binding Response.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Post<wbr>Broker<wbr>Login<wbr>Flow<wbr>Alias</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Alias of authentication flow, which is triggered after each login with this identity provider. Useful if you want
+additional verification of each user authenticated with this identity provider (for example OTP). Leave this empty if
+you don't want any additional authenticators to be triggered after login with this identity provider. Also note, that
+authenticator implementations must assume that user is already set in ClientSession as identity provider already set it.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Signature<wbr>Algorithm</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Signing Algorithm.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Signing<wbr>Certificate</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Signing Certificate.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Single<wbr>Logout<wbr>Service<wbr>Url</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Logout URL.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Store<wbr>Token</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable/disable if tokens must be stored after authenticating users.
 {{% /md %}}</dd>
@@ -378,7 +378,7 @@ authenticator implementations must assume that user is already set in ClientSess
             title="Optional">
         <span>Trust<wbr>Email</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If enabled then email provided by this provider is not verified even if verification is enabled for the realm.
 {{% /md %}}</dd>
@@ -387,7 +387,7 @@ authenticator implementations must assume that user is already set in ClientSess
             title="Optional">
         <span>Validate<wbr>Signature</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable/disable signature validation of SAML responses.
 {{% /md %}}</dd>
@@ -396,7 +396,7 @@ authenticator implementations must assume that user is already set in ClientSess
             title="Optional">
         <span>Want<wbr>Assertions<wbr>Encrypted</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Want Assertions Encrypted.
 {{% /md %}}</dd>
@@ -405,7 +405,7 @@ authenticator implementations must assume that user is already set in ClientSess
             title="Optional">
         <span>Want<wbr>Assertions<wbr>Signed</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Want Assertions Signed.
 {{% /md %}}</dd>
@@ -414,7 +414,7 @@ authenticator implementations must assume that user is already set in ClientSess
             title="Optional">
         <span>Xml<wbr>Sign<wbr>Key<wbr>Info<wbr>Key<wbr>Name<wbr>Transformer</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sign Key Transformer.
 {{% /md %}}</dd>
@@ -426,15 +426,6 @@ authenticator implementations must assume that user is already set in ClientSess
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Add<wbr>Read<wbr>Token<wbr>Role<wbr>On<wbr>Create</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Enable/disable if new users can read any stored tokens. This assigns the broker.read-token role.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Alias</span>
@@ -444,128 +435,6 @@ authenticator implementations must assume that user is already set in ClientSess
     <dd>{{% md %}}The alias uniquely identifies an identity provider and it is also used to build the redirect uri.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Authenticate<wbr>By<wbr>Default</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Enable/disable authenticate users by default.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Backchannel<wbr>Supported</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Does the external IDP support backchannel logout?
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Display<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Friendly name for Identity Providers.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Enable/disable this identity provider.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>First<wbr>Broker<wbr>Login<wbr>Flow<wbr>Alias</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Alias of authentication flow, which is triggered after first login with this identity provider. Term 'First Login' means
-that there is not yet existing Keycloak account linked with the authenticated identity provider account.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Force<wbr>Authn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Require Force Authn.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Hide<wbr>On<wbr>Login<wbr>Page</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Hide On Login Page.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Link<wbr>Only</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}If true, users cannot log in through this provider. They can only link to this provider. This is useful if you don't
-want to allow login from the provider, but want to integrate with a provider
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Name<wbr>Id<wbr>Policy<wbr>Format</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Name ID Policy Format.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Post<wbr>Binding<wbr>Authn<wbr>Request</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Post Binding Authn Request.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Post<wbr>Binding<wbr>Logout</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Post Binding Logout.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Post<wbr>Binding<wbr>Response</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Post Binding Response.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Post<wbr>Broker<wbr>Login<wbr>Flow<wbr>Alias</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Alias of authentication flow, which is triggered after each login with this identity provider. Useful if you want
-additional verification of each user authenticated with this identity provider (for example OTP). Leave this empty if
-you don't want any additional authenticators to be triggered after login with this identity provider. Also note, that
-authenticator implementations must assume that user is already set in ClientSession as identity provider already set it.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Realm</span>
@@ -573,33 +442,6 @@ authenticator implementations must assume that user is already set in ClientSess
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Realm Name
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Signature<wbr>Algorithm</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Signing Algorithm.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Signing<wbr>Certificate</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Signing Certificate.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Single<wbr>Logout<wbr>Service<wbr>Url</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Logout URL.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -613,9 +455,167 @@ authenticator implementations must assume that user is already set in ClientSess
 
     <dt class="property-optional"
             title="Optional">
+        <span>Add<wbr>Read<wbr>Token<wbr>Role<wbr>On<wbr>Create</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable/disable if new users can read any stored tokens. This assigns the broker.read-token role.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Authenticate<wbr>By<wbr>Default</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable/disable authenticate users by default.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Backchannel<wbr>Supported</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Does the external IDP support backchannel logout?
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Display<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Friendly name for Identity Providers.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Enabled</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable/disable this identity provider.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>First<wbr>Broker<wbr>Login<wbr>Flow<wbr>Alias</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Alias of authentication flow, which is triggered after first login with this identity provider. Term 'First Login' means
+that there is not yet existing Keycloak account linked with the authenticated identity provider account.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Force<wbr>Authn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Require Force Authn.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Hide<wbr>On<wbr>Login<wbr>Page</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Hide On Login Page.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Link<wbr>Only</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If true, users cannot log in through this provider. They can only link to this provider. This is useful if you don't
+want to allow login from the provider, but want to integrate with a provider
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name<wbr>Id<wbr>Policy<wbr>Format</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name ID Policy Format.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Post<wbr>Binding<wbr>Authn<wbr>Request</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Post Binding Authn Request.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Post<wbr>Binding<wbr>Logout</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Post Binding Logout.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Post<wbr>Binding<wbr>Response</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Post Binding Response.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Post<wbr>Broker<wbr>Login<wbr>Flow<wbr>Alias</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Alias of authentication flow, which is triggered after each login with this identity provider. Useful if you want
+additional verification of each user authenticated with this identity provider (for example OTP). Leave this empty if
+you don't want any additional authenticators to be triggered after login with this identity provider. Also note, that
+authenticator implementations must assume that user is already set in ClientSession as identity provider already set it.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Signature<wbr>Algorithm</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Signing Algorithm.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Signing<wbr>Certificate</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Signing Certificate.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Single<wbr>Logout<wbr>Service<wbr>Url</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Logout URL.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Store<wbr>Token</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable/disable if tokens must be stored after authenticating users.
 {{% /md %}}</dd>
@@ -624,7 +624,7 @@ authenticator implementations must assume that user is already set in ClientSess
             title="Optional">
         <span>Trust<wbr>Email</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If enabled then email provided by this provider is not verified even if verification is enabled for the realm.
 {{% /md %}}</dd>
@@ -633,7 +633,7 @@ authenticator implementations must assume that user is already set in ClientSess
             title="Optional">
         <span>Validate<wbr>Signature</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable/disable signature validation of SAML responses.
 {{% /md %}}</dd>
@@ -642,7 +642,7 @@ authenticator implementations must assume that user is already set in ClientSess
             title="Optional">
         <span>Want<wbr>Assertions<wbr>Encrypted</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Want Assertions Encrypted.
 {{% /md %}}</dd>
@@ -651,7 +651,7 @@ authenticator implementations must assume that user is already set in ClientSess
             title="Optional">
         <span>Want<wbr>Assertions<wbr>Signed</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Want Assertions Signed.
 {{% /md %}}</dd>
@@ -660,7 +660,7 @@ authenticator implementations must assume that user is already set in ClientSess
             title="Optional">
         <span>Xml<wbr>Sign<wbr>Key<wbr>Info<wbr>Key<wbr>Name<wbr>Transformer</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sign Key Transformer.
 {{% /md %}}</dd>
@@ -672,15 +672,6 @@ authenticator implementations must assume that user is already set in ClientSess
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>add<wbr>Read<wbr>Token<wbr>Role<wbr>On<wbr>Create</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Enable/disable if new users can read any stored tokens. This assigns the broker.read-token role.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>alias</span>
@@ -690,128 +681,6 @@ authenticator implementations must assume that user is already set in ClientSess
     <dd>{{% md %}}The alias uniquely identifies an identity provider and it is also used to build the redirect uri.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>authenticate<wbr>By<wbr>Default</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Enable/disable authenticate users by default.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>backchannel<wbr>Supported</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Does the external IDP support backchannel logout?
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>display<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Friendly name for Identity Providers.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Enable/disable this identity provider.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>first<wbr>Broker<wbr>Login<wbr>Flow<wbr>Alias</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Alias of authentication flow, which is triggered after first login with this identity provider. Term 'First Login' means
-that there is not yet existing Keycloak account linked with the authenticated identity provider account.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>force<wbr>Authn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Require Force Authn.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>hide<wbr>On<wbr>Login<wbr>Page</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Hide On Login Page.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>link<wbr>Only</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}If true, users cannot log in through this provider. They can only link to this provider. This is useful if you don't
-want to allow login from the provider, but want to integrate with a provider
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>name<wbr>Id<wbr>Policy<wbr>Format</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Name ID Policy Format.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>post<wbr>Binding<wbr>Authn<wbr>Request</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Post Binding Authn Request.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>post<wbr>Binding<wbr>Logout</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Post Binding Logout.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>post<wbr>Binding<wbr>Response</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Post Binding Response.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>post<wbr>Broker<wbr>Login<wbr>Flow<wbr>Alias</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Alias of authentication flow, which is triggered after each login with this identity provider. Useful if you want
-additional verification of each user authenticated with this identity provider (for example OTP). Leave this empty if
-you don't want any additional authenticators to be triggered after login with this identity provider. Also note, that
-authenticator implementations must assume that user is already set in ClientSession as identity provider already set it.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>realm</span>
@@ -819,33 +688,6 @@ authenticator implementations must assume that user is already set in ClientSess
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Realm Name
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>signature<wbr>Algorithm</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Signing Algorithm.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>signing<wbr>Certificate</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Signing Certificate.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>single<wbr>Logout<wbr>Service<wbr>Url</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Logout URL.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -859,9 +701,167 @@ authenticator implementations must assume that user is already set in ClientSess
 
     <dt class="property-optional"
             title="Optional">
+        <span>add<wbr>Read<wbr>Token<wbr>Role<wbr>On<wbr>Create</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Enable/disable if new users can read any stored tokens. This assigns the broker.read-token role.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>authenticate<wbr>By<wbr>Default</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Enable/disable authenticate users by default.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>backchannel<wbr>Supported</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Does the external IDP support backchannel logout?
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>display<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Friendly name for Identity Providers.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>enabled</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Enable/disable this identity provider.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>first<wbr>Broker<wbr>Login<wbr>Flow<wbr>Alias</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Alias of authentication flow, which is triggered after first login with this identity provider. Term 'First Login' means
+that there is not yet existing Keycloak account linked with the authenticated identity provider account.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>force<wbr>Authn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Require Force Authn.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>hide<wbr>On<wbr>Login<wbr>Page</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Hide On Login Page.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>link<wbr>Only</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}If true, users cannot log in through this provider. They can only link to this provider. This is useful if you don't
+want to allow login from the provider, but want to integrate with a provider
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>name<wbr>Id<wbr>Policy<wbr>Format</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name ID Policy Format.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>post<wbr>Binding<wbr>Authn<wbr>Request</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Post Binding Authn Request.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>post<wbr>Binding<wbr>Logout</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Post Binding Logout.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>post<wbr>Binding<wbr>Response</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Post Binding Response.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>post<wbr>Broker<wbr>Login<wbr>Flow<wbr>Alias</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Alias of authentication flow, which is triggered after each login with this identity provider. Useful if you want
+additional verification of each user authenticated with this identity provider (for example OTP). Leave this empty if
+you don't want any additional authenticators to be triggered after login with this identity provider. Also note, that
+authenticator implementations must assume that user is already set in ClientSession as identity provider already set it.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>signature<wbr>Algorithm</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Signing Algorithm.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>signing<wbr>Certificate</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Signing Certificate.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>single<wbr>Logout<wbr>Service<wbr>Url</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Logout URL.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>store<wbr>Token</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable/disable if tokens must be stored after authenticating users.
 {{% /md %}}</dd>
@@ -870,7 +870,7 @@ authenticator implementations must assume that user is already set in ClientSess
             title="Optional">
         <span>trust<wbr>Email</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If enabled then email provided by this provider is not verified even if verification is enabled for the realm.
 {{% /md %}}</dd>
@@ -879,7 +879,7 @@ authenticator implementations must assume that user is already set in ClientSess
             title="Optional">
         <span>validate<wbr>Signature</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable/disable signature validation of SAML responses.
 {{% /md %}}</dd>
@@ -888,7 +888,7 @@ authenticator implementations must assume that user is already set in ClientSess
             title="Optional">
         <span>want<wbr>Assertions<wbr>Encrypted</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Want Assertions Encrypted.
 {{% /md %}}</dd>
@@ -897,7 +897,7 @@ authenticator implementations must assume that user is already set in ClientSess
             title="Optional">
         <span>want<wbr>Assertions<wbr>Signed</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Want Assertions Signed.
 {{% /md %}}</dd>
@@ -906,7 +906,7 @@ authenticator implementations must assume that user is already set in ClientSess
             title="Optional">
         <span>xml<wbr>Sign<wbr>Key<wbr>Info<wbr>Key<wbr>Name<wbr>Transformer</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sign Key Transformer.
 {{% /md %}}</dd>
@@ -918,15 +918,6 @@ authenticator implementations must assume that user is already set in ClientSess
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>add_<wbr>read_<wbr>token_<wbr>role_<wbr>on_<wbr>create</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Enable/disable if new users can read any stored tokens. This assigns the broker.read-token role.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>alias</span>
@@ -934,6 +925,33 @@ authenticator implementations must assume that user is already set in ClientSess
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The alias uniquely identifies an identity provider and it is also used to build the redirect uri.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>realm</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Realm Name
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>single_<wbr>sign_<wbr>on_<wbr>service_<wbr>url</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}SSO Logout URL.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>add_<wbr>read_<wbr>token_<wbr>role_<wbr>on_<wbr>create</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable/disable if new users can read any stored tokens. This assigns the broker.read-token role.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1058,15 +1076,6 @@ you don't want any additional authenticators to be triggered after login with th
 authenticator implementations must assume that user is already set in ClientSession as identity provider already set it.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>realm</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Realm Name
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>signature_<wbr>algorithm</span>
@@ -1092,15 +1101,6 @@ authenticator implementations must assume that user is already set in ClientSess
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Logout URL.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>single_<wbr>sign_<wbr>on_<wbr>service_<wbr>url</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}SSO Logout URL.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1178,250 +1178,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Add<wbr>Read<wbr>Token<wbr>Role<wbr>On<wbr>Create</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Enable/disable if new users can read any stored tokens. This assigns the broker.read-token role.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Alias</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The alias uniquely identifies an identity provider and it is also used to build the redirect uri.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Authenticate<wbr>By<wbr>Default</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Enable/disable authenticate users by default.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Backchannel<wbr>Supported</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Does the external IDP support backchannel logout?
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Display<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Friendly name for Identity Providers.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Enable/disable this identity provider.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>First<wbr>Broker<wbr>Login<wbr>Flow<wbr>Alias</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Alias of authentication flow, which is triggered after first login with this identity provider. Term 'First Login' means
-that there is not yet existing Keycloak account linked with the authenticated identity provider account.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Force<wbr>Authn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Require Force Authn.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Hide<wbr>On<wbr>Login<wbr>Page</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Hide On Login Page.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Internal<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Internal Identity Provider Id
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Link<wbr>Only</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}If true, users cannot log in through this provider. They can only link to this provider. This is useful if you don't
-want to allow login from the provider, but want to integrate with a provider
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name<wbr>Id<wbr>Policy<wbr>Format</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Name ID Policy Format.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Post<wbr>Binding<wbr>Authn<wbr>Request</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Post Binding Authn Request.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Post<wbr>Binding<wbr>Logout</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Post Binding Logout.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Post<wbr>Binding<wbr>Response</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Post Binding Response.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Post<wbr>Broker<wbr>Login<wbr>Flow<wbr>Alias</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Alias of authentication flow, which is triggered after each login with this identity provider. Useful if you want
-additional verification of each user authenticated with this identity provider (for example OTP). Leave this empty if
-you don't want any additional authenticators to be triggered after login with this identity provider. Also note, that
-authenticator implementations must assume that user is already set in ClientSession as identity provider already set it.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Realm</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Realm Name
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Signature<wbr>Algorithm</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Signing Algorithm.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Signing<wbr>Certificate</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Signing Certificate.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Single<wbr>Logout<wbr>Service<wbr>Url</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Logout URL.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Single<wbr>Sign<wbr>On<wbr>Service<wbr>Url</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}SSO Logout URL.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Store<wbr>Token</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Enable/disable if tokens must be stored after authenticating users.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Trust<wbr>Email</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}If enabled then email provided by this provider is not verified even if verification is enabled for the realm.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Validate<wbr>Signature</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Enable/disable signature validation of SAML responses.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Want<wbr>Assertions<wbr>Encrypted</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Want Assertions Encrypted.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Want<wbr>Assertions<wbr>Signed</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Want Assertions Signed.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Xml<wbr>Sign<wbr>Key<wbr>Info<wbr>Key<wbr>Name<wbr>Transformer</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Sign Key Transformer.
 {{% /md %}}</dd>
 
 </dl>
@@ -1433,250 +1194,11 @@ authenticator implementations must assume that user is already set in ClientSess
 
     <dt class="property-"
             title="">
-        <span>Add<wbr>Read<wbr>Token<wbr>Role<wbr>On<wbr>Create</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Enable/disable if new users can read any stored tokens. This assigns the broker.read-token role.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Alias</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The alias uniquely identifies an identity provider and it is also used to build the redirect uri.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Authenticate<wbr>By<wbr>Default</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Enable/disable authenticate users by default.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Backchannel<wbr>Supported</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Does the external IDP support backchannel logout?
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Display<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Friendly name for Identity Providers.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Enable/disable this identity provider.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>First<wbr>Broker<wbr>Login<wbr>Flow<wbr>Alias</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Alias of authentication flow, which is triggered after first login with this identity provider. Term 'First Login' means
-that there is not yet existing Keycloak account linked with the authenticated identity provider account.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Force<wbr>Authn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Require Force Authn.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Hide<wbr>On<wbr>Login<wbr>Page</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Hide On Login Page.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Internal<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Internal Identity Provider Id
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Link<wbr>Only</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}If true, users cannot log in through this provider. They can only link to this provider. This is useful if you don't
-want to allow login from the provider, but want to integrate with a provider
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name<wbr>Id<wbr>Policy<wbr>Format</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Name ID Policy Format.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Post<wbr>Binding<wbr>Authn<wbr>Request</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Post Binding Authn Request.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Post<wbr>Binding<wbr>Logout</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Post Binding Logout.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Post<wbr>Binding<wbr>Response</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Post Binding Response.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Post<wbr>Broker<wbr>Login<wbr>Flow<wbr>Alias</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Alias of authentication flow, which is triggered after each login with this identity provider. Useful if you want
-additional verification of each user authenticated with this identity provider (for example OTP). Leave this empty if
-you don't want any additional authenticators to be triggered after login with this identity provider. Also note, that
-authenticator implementations must assume that user is already set in ClientSession as identity provider already set it.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Realm</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Realm Name
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Signature<wbr>Algorithm</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Signing Algorithm.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Signing<wbr>Certificate</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Signing Certificate.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Single<wbr>Logout<wbr>Service<wbr>Url</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Logout URL.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Single<wbr>Sign<wbr>On<wbr>Service<wbr>Url</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}SSO Logout URL.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Store<wbr>Token</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Enable/disable if tokens must be stored after authenticating users.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Trust<wbr>Email</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}If enabled then email provided by this provider is not verified even if verification is enabled for the realm.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Validate<wbr>Signature</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Enable/disable signature validation of SAML responses.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Want<wbr>Assertions<wbr>Encrypted</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Want Assertions Encrypted.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Want<wbr>Assertions<wbr>Signed</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Want Assertions Signed.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Xml<wbr>Sign<wbr>Key<wbr>Info<wbr>Key<wbr>Name<wbr>Transformer</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Sign Key Transformer.
 {{% /md %}}</dd>
 
 </dl>
@@ -1688,250 +1210,11 @@ authenticator implementations must assume that user is already set in ClientSess
 
     <dt class="property-"
             title="">
-        <span>add<wbr>Read<wbr>Token<wbr>Role<wbr>On<wbr>Create</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Enable/disable if new users can read any stored tokens. This assigns the broker.read-token role.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>alias</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The alias uniquely identifies an identity provider and it is also used to build the redirect uri.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>authenticate<wbr>By<wbr>Default</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Enable/disable authenticate users by default.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>backchannel<wbr>Supported</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Does the external IDP support backchannel logout?
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>display<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Friendly name for Identity Providers.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Enable/disable this identity provider.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>first<wbr>Broker<wbr>Login<wbr>Flow<wbr>Alias</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Alias of authentication flow, which is triggered after first login with this identity provider. Term 'First Login' means
-that there is not yet existing Keycloak account linked with the authenticated identity provider account.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>force<wbr>Authn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Require Force Authn.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>hide<wbr>On<wbr>Login<wbr>Page</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Hide On Login Page.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>internal<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Internal Identity Provider Id
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>link<wbr>Only</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}If true, users cannot log in through this provider. They can only link to this provider. This is useful if you don't
-want to allow login from the provider, but want to integrate with a provider
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name<wbr>Id<wbr>Policy<wbr>Format</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Name ID Policy Format.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>post<wbr>Binding<wbr>Authn<wbr>Request</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Post Binding Authn Request.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>post<wbr>Binding<wbr>Logout</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Post Binding Logout.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>post<wbr>Binding<wbr>Response</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Post Binding Response.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>post<wbr>Broker<wbr>Login<wbr>Flow<wbr>Alias</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Alias of authentication flow, which is triggered after each login with this identity provider. Useful if you want
-additional verification of each user authenticated with this identity provider (for example OTP). Leave this empty if
-you don't want any additional authenticators to be triggered after login with this identity provider. Also note, that
-authenticator implementations must assume that user is already set in ClientSession as identity provider already set it.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>realm</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Realm Name
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>signature<wbr>Algorithm</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Signing Algorithm.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>signing<wbr>Certificate</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Signing Certificate.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>single<wbr>Logout<wbr>Service<wbr>Url</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Logout URL.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>single<wbr>Sign<wbr>On<wbr>Service<wbr>Url</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}SSO Logout URL.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>store<wbr>Token</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Enable/disable if tokens must be stored after authenticating users.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>trust<wbr>Email</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}If enabled then email provided by this provider is not verified even if verification is enabled for the realm.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>validate<wbr>Signature</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Enable/disable signature validation of SAML responses.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>want<wbr>Assertions<wbr>Encrypted</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Want Assertions Encrypted.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>want<wbr>Assertions<wbr>Signed</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Want Assertions Signed.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>xml<wbr>Sign<wbr>Key<wbr>Info<wbr>Key<wbr>Name<wbr>Transformer</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Sign Key Transformer.
 {{% /md %}}</dd>
 
 </dl>
@@ -1943,250 +1226,11 @@ authenticator implementations must assume that user is already set in ClientSess
 
     <dt class="property-"
             title="">
-        <span>add_<wbr>read_<wbr>token_<wbr>role_<wbr>on_<wbr>create</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Enable/disable if new users can read any stored tokens. This assigns the broker.read-token role.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>alias</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The alias uniquely identifies an identity provider and it is also used to build the redirect uri.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>authenticate_<wbr>by_<wbr>default</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Enable/disable authenticate users by default.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>backchannel_<wbr>supported</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Does the external IDP support backchannel logout?
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>display_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Friendly name for Identity Providers.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Enable/disable this identity provider.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>first_<wbr>broker_<wbr>login_<wbr>flow_<wbr>alias</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Alias of authentication flow, which is triggered after first login with this identity provider. Term 'First Login' means
-that there is not yet existing Keycloak account linked with the authenticated identity provider account.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>force_<wbr>authn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Require Force Authn.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>hide_<wbr>on_<wbr>login_<wbr>page</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Hide On Login Page.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>internal_<wbr>id</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Internal Identity Provider Id
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>link_<wbr>only</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}If true, users cannot log in through this provider. They can only link to this provider. This is useful if you don't
-want to allow login from the provider, but want to integrate with a provider
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name_<wbr>id_<wbr>policy_<wbr>format</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Name ID Policy Format.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>post_<wbr>binding_<wbr>authn_<wbr>request</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Post Binding Authn Request.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>post_<wbr>binding_<wbr>logout</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Post Binding Logout.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>post_<wbr>binding_<wbr>response</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Post Binding Response.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>post_<wbr>broker_<wbr>login_<wbr>flow_<wbr>alias</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Alias of authentication flow, which is triggered after each login with this identity provider. Useful if you want
-additional verification of each user authenticated with this identity provider (for example OTP). Leave this empty if
-you don't want any additional authenticators to be triggered after login with this identity provider. Also note, that
-authenticator implementations must assume that user is already set in ClientSession as identity provider already set it.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>realm</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Realm Name
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>signature_<wbr>algorithm</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Signing Algorithm.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>signing_<wbr>certificate</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Signing Certificate.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>single_<wbr>logout_<wbr>service_<wbr>url</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Logout URL.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>single_<wbr>sign_<wbr>on_<wbr>service_<wbr>url</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}SSO Logout URL.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>store_<wbr>token</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Enable/disable if tokens must be stored after authenticating users.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>trust_<wbr>email</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}If enabled then email provided by this provider is not verified even if verification is enabled for the realm.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>validate_<wbr>signature</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Enable/disable signature validation of SAML responses.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>want_<wbr>assertions_<wbr>encrypted</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Want Assertions Encrypted.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>want_<wbr>assertions_<wbr>signed</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Want Assertions Signed.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>xml_<wbr>sign_<wbr>key_<wbr>info_<wbr>key_<wbr>name_<wbr>transformer</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Sign Key Transformer.
 {{% /md %}}</dd>
 
 </dl>
@@ -2328,7 +1372,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Add<wbr>Read<wbr>Token<wbr>Role<wbr>On<wbr>Create</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable/disable if new users can read any stored tokens. This assigns the broker.read-token role.
 {{% /md %}}</dd>
@@ -2337,7 +1381,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Alias</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The alias uniquely identifies an identity provider and it is also used to build the redirect uri.
 {{% /md %}}</dd>
@@ -2346,7 +1390,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Authenticate<wbr>By<wbr>Default</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable/disable authenticate users by default.
 {{% /md %}}</dd>
@@ -2355,7 +1399,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Backchannel<wbr>Supported</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Does the external IDP support backchannel logout?
 {{% /md %}}</dd>
@@ -2364,7 +1408,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Display<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Friendly name for Identity Providers.
 {{% /md %}}</dd>
@@ -2373,7 +1417,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable/disable this identity provider.
 {{% /md %}}</dd>
@@ -2382,7 +1426,7 @@ The following state arguments are supported:
             title="Optional">
         <span>First<wbr>Broker<wbr>Login<wbr>Flow<wbr>Alias</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Alias of authentication flow, which is triggered after first login with this identity provider. Term 'First Login' means
 that there is not yet existing Keycloak account linked with the authenticated identity provider account.
@@ -2392,7 +1436,7 @@ that there is not yet existing Keycloak account linked with the authenticated id
             title="Optional">
         <span>Force<wbr>Authn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Require Force Authn.
 {{% /md %}}</dd>
@@ -2401,7 +1445,7 @@ that there is not yet existing Keycloak account linked with the authenticated id
             title="Optional">
         <span>Hide<wbr>On<wbr>Login<wbr>Page</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Hide On Login Page.
 {{% /md %}}</dd>
@@ -2410,7 +1454,7 @@ that there is not yet existing Keycloak account linked with the authenticated id
             title="Optional">
         <span>Internal<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Internal Identity Provider Id
 {{% /md %}}</dd>
@@ -2419,7 +1463,7 @@ that there is not yet existing Keycloak account linked with the authenticated id
             title="Optional">
         <span>Link<wbr>Only</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, users cannot log in through this provider. They can only link to this provider. This is useful if you don't
 want to allow login from the provider, but want to integrate with a provider
@@ -2429,7 +1473,7 @@ want to allow login from the provider, but want to integrate with a provider
             title="Optional">
         <span>Name<wbr>Id<wbr>Policy<wbr>Format</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name ID Policy Format.
 {{% /md %}}</dd>
@@ -2438,7 +1482,7 @@ want to allow login from the provider, but want to integrate with a provider
             title="Optional">
         <span>Post<wbr>Binding<wbr>Authn<wbr>Request</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Post Binding Authn Request.
 {{% /md %}}</dd>
@@ -2447,7 +1491,7 @@ want to allow login from the provider, but want to integrate with a provider
             title="Optional">
         <span>Post<wbr>Binding<wbr>Logout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Post Binding Logout.
 {{% /md %}}</dd>
@@ -2456,7 +1500,7 @@ want to allow login from the provider, but want to integrate with a provider
             title="Optional">
         <span>Post<wbr>Binding<wbr>Response</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Post Binding Response.
 {{% /md %}}</dd>
@@ -2465,7 +1509,7 @@ want to allow login from the provider, but want to integrate with a provider
             title="Optional">
         <span>Post<wbr>Broker<wbr>Login<wbr>Flow<wbr>Alias</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Alias of authentication flow, which is triggered after each login with this identity provider. Useful if you want
 additional verification of each user authenticated with this identity provider (for example OTP). Leave this empty if
@@ -2477,7 +1521,7 @@ authenticator implementations must assume that user is already set in ClientSess
             title="Optional">
         <span>Realm</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Realm Name
 {{% /md %}}</dd>
@@ -2486,7 +1530,7 @@ authenticator implementations must assume that user is already set in ClientSess
             title="Optional">
         <span>Signature<wbr>Algorithm</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Signing Algorithm.
 {{% /md %}}</dd>
@@ -2495,7 +1539,7 @@ authenticator implementations must assume that user is already set in ClientSess
             title="Optional">
         <span>Signing<wbr>Certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Signing Certificate.
 {{% /md %}}</dd>
@@ -2504,7 +1548,7 @@ authenticator implementations must assume that user is already set in ClientSess
             title="Optional">
         <span>Single<wbr>Logout<wbr>Service<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Logout URL.
 {{% /md %}}</dd>
@@ -2513,7 +1557,7 @@ authenticator implementations must assume that user is already set in ClientSess
             title="Optional">
         <span>Single<wbr>Sign<wbr>On<wbr>Service<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SSO Logout URL.
 {{% /md %}}</dd>
@@ -2522,7 +1566,7 @@ authenticator implementations must assume that user is already set in ClientSess
             title="Optional">
         <span>Store<wbr>Token</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable/disable if tokens must be stored after authenticating users.
 {{% /md %}}</dd>
@@ -2531,7 +1575,7 @@ authenticator implementations must assume that user is already set in ClientSess
             title="Optional">
         <span>Trust<wbr>Email</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If enabled then email provided by this provider is not verified even if verification is enabled for the realm.
 {{% /md %}}</dd>
@@ -2540,7 +1584,7 @@ authenticator implementations must assume that user is already set in ClientSess
             title="Optional">
         <span>Validate<wbr>Signature</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable/disable signature validation of SAML responses.
 {{% /md %}}</dd>
@@ -2549,7 +1593,7 @@ authenticator implementations must assume that user is already set in ClientSess
             title="Optional">
         <span>Want<wbr>Assertions<wbr>Encrypted</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Want Assertions Encrypted.
 {{% /md %}}</dd>
@@ -2558,7 +1602,7 @@ authenticator implementations must assume that user is already set in ClientSess
             title="Optional">
         <span>Want<wbr>Assertions<wbr>Signed</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Want Assertions Signed.
 {{% /md %}}</dd>
@@ -2567,7 +1611,7 @@ authenticator implementations must assume that user is already set in ClientSess
             title="Optional">
         <span>Xml<wbr>Sign<wbr>Key<wbr>Info<wbr>Key<wbr>Name<wbr>Transformer</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sign Key Transformer.
 {{% /md %}}</dd>
@@ -2583,7 +1627,7 @@ authenticator implementations must assume that user is already set in ClientSess
             title="Optional">
         <span>Add<wbr>Read<wbr>Token<wbr>Role<wbr>On<wbr>Create</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable/disable if new users can read any stored tokens. This assigns the broker.read-token role.
 {{% /md %}}</dd>
@@ -2592,7 +1636,7 @@ authenticator implementations must assume that user is already set in ClientSess
             title="Optional">
         <span>Alias</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The alias uniquely identifies an identity provider and it is also used to build the redirect uri.
 {{% /md %}}</dd>
@@ -2601,7 +1645,7 @@ authenticator implementations must assume that user is already set in ClientSess
             title="Optional">
         <span>Authenticate<wbr>By<wbr>Default</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable/disable authenticate users by default.
 {{% /md %}}</dd>
@@ -2610,7 +1654,7 @@ authenticator implementations must assume that user is already set in ClientSess
             title="Optional">
         <span>Backchannel<wbr>Supported</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Does the external IDP support backchannel logout?
 {{% /md %}}</dd>
@@ -2619,7 +1663,7 @@ authenticator implementations must assume that user is already set in ClientSess
             title="Optional">
         <span>Display<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Friendly name for Identity Providers.
 {{% /md %}}</dd>
@@ -2628,7 +1672,7 @@ authenticator implementations must assume that user is already set in ClientSess
             title="Optional">
         <span>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable/disable this identity provider.
 {{% /md %}}</dd>
@@ -2637,7 +1681,7 @@ authenticator implementations must assume that user is already set in ClientSess
             title="Optional">
         <span>First<wbr>Broker<wbr>Login<wbr>Flow<wbr>Alias</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Alias of authentication flow, which is triggered after first login with this identity provider. Term 'First Login' means
 that there is not yet existing Keycloak account linked with the authenticated identity provider account.
@@ -2647,7 +1691,7 @@ that there is not yet existing Keycloak account linked with the authenticated id
             title="Optional">
         <span>Force<wbr>Authn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Require Force Authn.
 {{% /md %}}</dd>
@@ -2656,7 +1700,7 @@ that there is not yet existing Keycloak account linked with the authenticated id
             title="Optional">
         <span>Hide<wbr>On<wbr>Login<wbr>Page</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Hide On Login Page.
 {{% /md %}}</dd>
@@ -2665,7 +1709,7 @@ that there is not yet existing Keycloak account linked with the authenticated id
             title="Optional">
         <span>Internal<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Internal Identity Provider Id
 {{% /md %}}</dd>
@@ -2674,7 +1718,7 @@ that there is not yet existing Keycloak account linked with the authenticated id
             title="Optional">
         <span>Link<wbr>Only</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, users cannot log in through this provider. They can only link to this provider. This is useful if you don't
 want to allow login from the provider, but want to integrate with a provider
@@ -2684,7 +1728,7 @@ want to allow login from the provider, but want to integrate with a provider
             title="Optional">
         <span>Name<wbr>Id<wbr>Policy<wbr>Format</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name ID Policy Format.
 {{% /md %}}</dd>
@@ -2693,7 +1737,7 @@ want to allow login from the provider, but want to integrate with a provider
             title="Optional">
         <span>Post<wbr>Binding<wbr>Authn<wbr>Request</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Post Binding Authn Request.
 {{% /md %}}</dd>
@@ -2702,7 +1746,7 @@ want to allow login from the provider, but want to integrate with a provider
             title="Optional">
         <span>Post<wbr>Binding<wbr>Logout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Post Binding Logout.
 {{% /md %}}</dd>
@@ -2711,7 +1755,7 @@ want to allow login from the provider, but want to integrate with a provider
             title="Optional">
         <span>Post<wbr>Binding<wbr>Response</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Post Binding Response.
 {{% /md %}}</dd>
@@ -2720,7 +1764,7 @@ want to allow login from the provider, but want to integrate with a provider
             title="Optional">
         <span>Post<wbr>Broker<wbr>Login<wbr>Flow<wbr>Alias</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Alias of authentication flow, which is triggered after each login with this identity provider. Useful if you want
 additional verification of each user authenticated with this identity provider (for example OTP). Leave this empty if
@@ -2732,7 +1776,7 @@ authenticator implementations must assume that user is already set in ClientSess
             title="Optional">
         <span>Realm</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Realm Name
 {{% /md %}}</dd>
@@ -2741,7 +1785,7 @@ authenticator implementations must assume that user is already set in ClientSess
             title="Optional">
         <span>Signature<wbr>Algorithm</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Signing Algorithm.
 {{% /md %}}</dd>
@@ -2750,7 +1794,7 @@ authenticator implementations must assume that user is already set in ClientSess
             title="Optional">
         <span>Signing<wbr>Certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Signing Certificate.
 {{% /md %}}</dd>
@@ -2759,7 +1803,7 @@ authenticator implementations must assume that user is already set in ClientSess
             title="Optional">
         <span>Single<wbr>Logout<wbr>Service<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Logout URL.
 {{% /md %}}</dd>
@@ -2768,7 +1812,7 @@ authenticator implementations must assume that user is already set in ClientSess
             title="Optional">
         <span>Single<wbr>Sign<wbr>On<wbr>Service<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SSO Logout URL.
 {{% /md %}}</dd>
@@ -2777,7 +1821,7 @@ authenticator implementations must assume that user is already set in ClientSess
             title="Optional">
         <span>Store<wbr>Token</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable/disable if tokens must be stored after authenticating users.
 {{% /md %}}</dd>
@@ -2786,7 +1830,7 @@ authenticator implementations must assume that user is already set in ClientSess
             title="Optional">
         <span>Trust<wbr>Email</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If enabled then email provided by this provider is not verified even if verification is enabled for the realm.
 {{% /md %}}</dd>
@@ -2795,7 +1839,7 @@ authenticator implementations must assume that user is already set in ClientSess
             title="Optional">
         <span>Validate<wbr>Signature</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable/disable signature validation of SAML responses.
 {{% /md %}}</dd>
@@ -2804,7 +1848,7 @@ authenticator implementations must assume that user is already set in ClientSess
             title="Optional">
         <span>Want<wbr>Assertions<wbr>Encrypted</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Want Assertions Encrypted.
 {{% /md %}}</dd>
@@ -2813,7 +1857,7 @@ authenticator implementations must assume that user is already set in ClientSess
             title="Optional">
         <span>Want<wbr>Assertions<wbr>Signed</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Want Assertions Signed.
 {{% /md %}}</dd>
@@ -2822,7 +1866,7 @@ authenticator implementations must assume that user is already set in ClientSess
             title="Optional">
         <span>Xml<wbr>Sign<wbr>Key<wbr>Info<wbr>Key<wbr>Name<wbr>Transformer</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sign Key Transformer.
 {{% /md %}}</dd>
@@ -2838,7 +1882,7 @@ authenticator implementations must assume that user is already set in ClientSess
             title="Optional">
         <span>add<wbr>Read<wbr>Token<wbr>Role<wbr>On<wbr>Create</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable/disable if new users can read any stored tokens. This assigns the broker.read-token role.
 {{% /md %}}</dd>
@@ -2847,7 +1891,7 @@ authenticator implementations must assume that user is already set in ClientSess
             title="Optional">
         <span>alias</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The alias uniquely identifies an identity provider and it is also used to build the redirect uri.
 {{% /md %}}</dd>
@@ -2856,7 +1900,7 @@ authenticator implementations must assume that user is already set in ClientSess
             title="Optional">
         <span>authenticate<wbr>By<wbr>Default</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable/disable authenticate users by default.
 {{% /md %}}</dd>
@@ -2865,7 +1909,7 @@ authenticator implementations must assume that user is already set in ClientSess
             title="Optional">
         <span>backchannel<wbr>Supported</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Does the external IDP support backchannel logout?
 {{% /md %}}</dd>
@@ -2874,7 +1918,7 @@ authenticator implementations must assume that user is already set in ClientSess
             title="Optional">
         <span>display<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Friendly name for Identity Providers.
 {{% /md %}}</dd>
@@ -2883,7 +1927,7 @@ authenticator implementations must assume that user is already set in ClientSess
             title="Optional">
         <span>enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable/disable this identity provider.
 {{% /md %}}</dd>
@@ -2892,7 +1936,7 @@ authenticator implementations must assume that user is already set in ClientSess
             title="Optional">
         <span>first<wbr>Broker<wbr>Login<wbr>Flow<wbr>Alias</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Alias of authentication flow, which is triggered after first login with this identity provider. Term 'First Login' means
 that there is not yet existing Keycloak account linked with the authenticated identity provider account.
@@ -2902,7 +1946,7 @@ that there is not yet existing Keycloak account linked with the authenticated id
             title="Optional">
         <span>force<wbr>Authn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Require Force Authn.
 {{% /md %}}</dd>
@@ -2911,7 +1955,7 @@ that there is not yet existing Keycloak account linked with the authenticated id
             title="Optional">
         <span>hide<wbr>On<wbr>Login<wbr>Page</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Hide On Login Page.
 {{% /md %}}</dd>
@@ -2920,7 +1964,7 @@ that there is not yet existing Keycloak account linked with the authenticated id
             title="Optional">
         <span>internal<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Internal Identity Provider Id
 {{% /md %}}</dd>
@@ -2929,7 +1973,7 @@ that there is not yet existing Keycloak account linked with the authenticated id
             title="Optional">
         <span>link<wbr>Only</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, users cannot log in through this provider. They can only link to this provider. This is useful if you don't
 want to allow login from the provider, but want to integrate with a provider
@@ -2939,7 +1983,7 @@ want to allow login from the provider, but want to integrate with a provider
             title="Optional">
         <span>name<wbr>Id<wbr>Policy<wbr>Format</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name ID Policy Format.
 {{% /md %}}</dd>
@@ -2948,7 +1992,7 @@ want to allow login from the provider, but want to integrate with a provider
             title="Optional">
         <span>post<wbr>Binding<wbr>Authn<wbr>Request</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Post Binding Authn Request.
 {{% /md %}}</dd>
@@ -2957,7 +2001,7 @@ want to allow login from the provider, but want to integrate with a provider
             title="Optional">
         <span>post<wbr>Binding<wbr>Logout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Post Binding Logout.
 {{% /md %}}</dd>
@@ -2966,7 +2010,7 @@ want to allow login from the provider, but want to integrate with a provider
             title="Optional">
         <span>post<wbr>Binding<wbr>Response</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Post Binding Response.
 {{% /md %}}</dd>
@@ -2975,7 +2019,7 @@ want to allow login from the provider, but want to integrate with a provider
             title="Optional">
         <span>post<wbr>Broker<wbr>Login<wbr>Flow<wbr>Alias</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Alias of authentication flow, which is triggered after each login with this identity provider. Useful if you want
 additional verification of each user authenticated with this identity provider (for example OTP). Leave this empty if
@@ -2987,7 +2031,7 @@ authenticator implementations must assume that user is already set in ClientSess
             title="Optional">
         <span>realm</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Realm Name
 {{% /md %}}</dd>
@@ -2996,7 +2040,7 @@ authenticator implementations must assume that user is already set in ClientSess
             title="Optional">
         <span>signature<wbr>Algorithm</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Signing Algorithm.
 {{% /md %}}</dd>
@@ -3005,7 +2049,7 @@ authenticator implementations must assume that user is already set in ClientSess
             title="Optional">
         <span>signing<wbr>Certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Signing Certificate.
 {{% /md %}}</dd>
@@ -3014,7 +2058,7 @@ authenticator implementations must assume that user is already set in ClientSess
             title="Optional">
         <span>single<wbr>Logout<wbr>Service<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Logout URL.
 {{% /md %}}</dd>
@@ -3023,7 +2067,7 @@ authenticator implementations must assume that user is already set in ClientSess
             title="Optional">
         <span>single<wbr>Sign<wbr>On<wbr>Service<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SSO Logout URL.
 {{% /md %}}</dd>
@@ -3032,7 +2076,7 @@ authenticator implementations must assume that user is already set in ClientSess
             title="Optional">
         <span>store<wbr>Token</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable/disable if tokens must be stored after authenticating users.
 {{% /md %}}</dd>
@@ -3041,7 +2085,7 @@ authenticator implementations must assume that user is already set in ClientSess
             title="Optional">
         <span>trust<wbr>Email</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If enabled then email provided by this provider is not verified even if verification is enabled for the realm.
 {{% /md %}}</dd>
@@ -3050,7 +2094,7 @@ authenticator implementations must assume that user is already set in ClientSess
             title="Optional">
         <span>validate<wbr>Signature</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable/disable signature validation of SAML responses.
 {{% /md %}}</dd>
@@ -3059,7 +2103,7 @@ authenticator implementations must assume that user is already set in ClientSess
             title="Optional">
         <span>want<wbr>Assertions<wbr>Encrypted</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Want Assertions Encrypted.
 {{% /md %}}</dd>
@@ -3068,7 +2112,7 @@ authenticator implementations must assume that user is already set in ClientSess
             title="Optional">
         <span>want<wbr>Assertions<wbr>Signed</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Want Assertions Signed.
 {{% /md %}}</dd>
@@ -3077,7 +2121,7 @@ authenticator implementations must assume that user is already set in ClientSess
             title="Optional">
         <span>xml<wbr>Sign<wbr>Key<wbr>Info<wbr>Key<wbr>Name<wbr>Transformer</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sign Key Transformer.
 {{% /md %}}</dd>

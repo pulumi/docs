@@ -48,13 +48,13 @@ export const alicloudNasAccessRulesId = foo.rules[0].id;
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupAccessRules<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/nas?tab=doc#LookupAccessRulesArgs">LookupAccessRulesArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/nas?tab=doc#LookupAccessRulesResult">LookupAccessRulesResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupAccessRules<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/nas?tab=doc#LookupAccessRulesArgs">LookupAccessRulesArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/nas?tab=doc#LookupAccessRulesResult">LookupAccessRulesResult</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetAccessRules </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.Nas.GetAccessRulesResult.html">GetAccessRulesResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.Nas.GetAccessRulesArgs.html">GetAccessRulesArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.Nas.GetAccessRulesResult.html">GetAccessRulesResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.AliCloud.Nas.GetAccessRulesArgs.html">GetAccessRulesArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -80,7 +80,7 @@ The following arguments are supported:
             title="Optional">
         <span>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of rule IDs.
 {{% /md %}}</dd>
@@ -89,7 +89,7 @@ The following arguments are supported:
             title="Optional">
         <span>Output<wbr>File</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -97,7 +97,7 @@ The following arguments are supported:
             title="Optional">
         <span>Rw<wbr>Access</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Filter results by a specific RWAccess. 
 {{% /md %}}</dd>
@@ -106,7 +106,7 @@ The following arguments are supported:
             title="Optional">
         <span>Source<wbr>Cidr<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Filter results by a specific SourceCidrIp. 
 {{% /md %}}</dd>
@@ -115,7 +115,7 @@ The following arguments are supported:
             title="Optional">
         <span>User<wbr>Access</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Filter results by a specific UserAccess. 
 {{% /md %}}</dd>
@@ -149,7 +149,7 @@ The following arguments are supported:
             title="Optional">
         <span>Output<wbr>File</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -157,7 +157,7 @@ The following arguments are supported:
             title="Optional">
         <span>Rw<wbr>Access</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Filter results by a specific RWAccess. 
 {{% /md %}}</dd>
@@ -166,7 +166,7 @@ The following arguments are supported:
             title="Optional">
         <span>Source<wbr>Cidr<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Filter results by a specific SourceCidrIp. 
 {{% /md %}}</dd>
@@ -175,7 +175,7 @@ The following arguments are supported:
             title="Optional">
         <span>User<wbr>Access</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Filter results by a specific UserAccess. 
 {{% /md %}}</dd>
@@ -200,7 +200,7 @@ The following arguments are supported:
             title="Optional">
         <span>ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of rule IDs.
 {{% /md %}}</dd>
@@ -209,7 +209,7 @@ The following arguments are supported:
             title="Optional">
         <span>output<wbr>File</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -217,7 +217,7 @@ The following arguments are supported:
             title="Optional">
         <span>rw<wbr>Access</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Filter results by a specific RWAccess. 
 {{% /md %}}</dd>
@@ -226,7 +226,7 @@ The following arguments are supported:
             title="Optional">
         <span>source<wbr>Cidr<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Filter results by a specific SourceCidrIp. 
 {{% /md %}}</dd>
@@ -235,7 +235,7 @@ The following arguments are supported:
             title="Optional">
         <span>user<wbr>Access</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Filter results by a specific UserAccess. 
 {{% /md %}}</dd>
@@ -341,33 +341,33 @@ The following output properties are available:
             title="">
         <span>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of rule IDs, Each element set to `access_rule_id` (Each element formats as `<access_group_name>:<access rule id>` before 1.53.0).
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>Output<wbr>File</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Rules</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getaccessrulesrule">List&lt;Get<wbr>Access<wbr>Rules<wbr>Rule&gt;</a></span>
+        <span class="property-type"><a href="#getaccessrulesrule">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Nas.<wbr>Outputs.<wbr>Get<wbr>Access<wbr>Rules<wbr>Rule&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of AccessRules. Each element contains the following attributes:
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
+        <span>Output<wbr>File</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Rw<wbr>Access</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}RWAccess of the AccessRule.
 {{% /md %}}</dd>
@@ -376,7 +376,7 @@ The following output properties are available:
             title="">
         <span>Source<wbr>Cidr<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SourceCidrIp of the AccessRule.
 {{% /md %}}</dd>
@@ -385,7 +385,7 @@ The following output properties are available:
             title="">
         <span>User<wbr>Access</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}UserAccess of the AccessRule
 {{% /md %}}</dd>
@@ -425,14 +425,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Output<wbr>File</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Rules</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getaccessrulesrule">[]Get<wbr>Access<wbr>Rules<wbr>Rule</a></span>
@@ -442,9 +434,17 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>Output<wbr>File</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Rw<wbr>Access</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}RWAccess of the AccessRule.
 {{% /md %}}</dd>
@@ -453,7 +453,7 @@ The following output properties are available:
             title="">
         <span>Source<wbr>Cidr<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SourceCidrIp of the AccessRule.
 {{% /md %}}</dd>
@@ -462,7 +462,7 @@ The following output properties are available:
             title="">
         <span>User<wbr>Access</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}UserAccess of the AccessRule
 {{% /md %}}</dd>
@@ -502,14 +502,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>output<wbr>File</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>rules</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getaccessrulesrule">Get<wbr>Access<wbr>Rules<wbr>Rule[]</a></span>
@@ -519,9 +511,17 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>output<wbr>File</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>rw<wbr>Access</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}RWAccess of the AccessRule.
 {{% /md %}}</dd>
@@ -530,7 +530,7 @@ The following output properties are available:
             title="">
         <span>source<wbr>Cidr<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SourceCidrIp of the AccessRule.
 {{% /md %}}</dd>
@@ -539,7 +539,7 @@ The following output properties are available:
             title="">
         <span>user<wbr>Access</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}UserAccess of the AccessRule
 {{% /md %}}</dd>
@@ -579,20 +579,20 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>output_<wbr>file</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>rules</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getaccessrulesrule">List[Get<wbr>Access<wbr>Rules<wbr>Rule]</a></span>
     </dt>
     <dd>{{% md %}}A list of AccessRules. Each element contains the following attributes:
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>output_<wbr>file</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">

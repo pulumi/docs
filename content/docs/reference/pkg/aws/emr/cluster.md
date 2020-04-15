@@ -305,7 +305,7 @@ Attributes for Hadoop job step configuration
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/emr/#Cluster">Cluster</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/emr/#ClusterArgs">ClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/emr/#Cluster">Cluster</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/emr/#ClusterArgs">ClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -313,7 +313,7 @@ Attributes for Hadoop job step configuration
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewCluster<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/emr?tab=doc#ClusterArgs">ClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/emr?tab=doc#Cluster">Cluster</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewCluster<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/emr?tab=doc#ClusterArgs">ClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/emr?tab=doc#Cluster">Cluster</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -409,177 +409,6 @@ Attributes for Hadoop job step configuration
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Additional<wbr>Info</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}A JSON string for selecting additional features such as adding proxy information. Note: Currently there is no API to retrieve the value of this argument after EMR cluster creation from provider, therefore this provider cannot detect drift from the actual EMR cluster if its value is changed outside this provider.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Applications</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}A list of applications for the cluster. Valid values are: `Flink`, `Hadoop`, `Hive`, `Mahout`, `Pig`, `Spark`, and `JupyterHub` (as of EMR 5.14.0). Case insensitive
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Autoscaling<wbr>Role</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}An IAM role for automatic scaling policies. The IAM role provides permissions that the automatic scaling feature requires to launch and terminate EC2 instances in an instance group.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Bootstrap<wbr>Actions</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterbootstrapaction">List&lt;Cluster<wbr>Bootstrap<wbr>Action<wbr>Args&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}Ordered list of bootstrap actions that will be run before Hadoop is started on the cluster nodes. Defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Configurations</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}List of configurations supplied for the EMR cluster you are creating
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Configurations<wbr>Json</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}A JSON string for supplying list of configurations for the EMR cluster.
-{{% /md %}}</dd>
-
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span>Core<wbr>Instance<wbr>Count</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}Use the `core_instance_group` configuration block `instance_count` argument instead. Number of Amazon EC2 instances used to execute the job flow. EMR will use one node as the cluster's master node and use the remainder of the nodes (`core_instance_count`-1) as core nodes. Cannot be specified if `core_instance_group` or `instance_group` configuration blocks are set. Default `1`
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `core_instance_group` configuration block `instance_count` argument instead{{% /md %}}</p></dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Core<wbr>Instance<wbr>Group</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustercoreinstancegroup">Cluster<wbr>Core<wbr>Instance<wbr>Group<wbr>Args?</a></span>
-    </dt>
-    <dd>{{% md %}}Configuration block to use an [Instance Group](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-group-configuration.html#emr-plan-instance-groups) for the [core node type](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-master-core-task-nodes.html#emr-plan-core). Cannot be specified if `core_instance_count` argument, `core_instance_type` argument, or `instance_group` configuration blocks are set. Detailed below.
-{{% /md %}}</dd>
-
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span>Core<wbr>Instance<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Use the `core_instance_group` configuration block `instance_type` argument instead. The EC2 instance type of the slave nodes. Cannot be specified if `core_instance_group` or `instance_group` configuration blocks are set.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `core_instance_group` configuration block `instance_type` argument instead{{% /md %}}</p></dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Custom<wbr>Ami<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}A custom Amazon Linux AMI for the cluster (instead of an EMR-owned AMI). Available in Amazon EMR version 5.7.0 and later.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Ebs<wbr>Root<wbr>Volume<wbr>Size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}Size in GiB of the EBS root device volume of the Linux AMI that is used for each EC2 instance. Available in Amazon EMR version 4.x and later.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Ec2Attributes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterec2attributes">Cluster<wbr>Ec2Attributes<wbr>Args?</a></span>
-    </dt>
-    <dd>{{% md %}}Attributes for the EC2 instances running the job flow. Defined below
-{{% /md %}}</dd>
-
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span>Instance<wbr>Groups</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterinstancegroup">List&lt;Cluster<wbr>Instance<wbr>Group<wbr>Args&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}Use the `master_instance_group` configuration block, `core_instance_group` configuration block and [`aws.emr.InstanceGroup` resource(s)](https://www.terraform.io/docs/providers/aws/r/emr_instance_group.html) instead. A list of `instance_group` objects for each instance group in the cluster. Exactly one of `master_instance_type` and `instance_group` must be specified. If `instance_group` is set, then it must contain a configuration block for at least the `MASTER` instance group type (as well as any additional instance groups). Cannot be specified if `master_instance_group` or `core_instance_group` configuration blocks are set. Defined below
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `master_instance_group` configuration block, `core_instance_group` configuration block, and `aws_emr_instance_group` resource(s) instead{{% /md %}}</p></dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Keep<wbr>Job<wbr>Flow<wbr>Alive<wbr>When<wbr>No<wbr>Steps</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Switch on/off run cluster with no steps or when all steps are complete (default is on)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Kerberos<wbr>Attributes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterkerberosattributes">Cluster<wbr>Kerberos<wbr>Attributes<wbr>Args?</a></span>
-    </dt>
-    <dd>{{% md %}}Kerberos configuration for the cluster. Defined below
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Log<wbr>Uri</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}S3 bucket to write the log files of the job flow. If a value is not provided, logs are not created
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Master<wbr>Instance<wbr>Group</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustermasterinstancegroup">Cluster<wbr>Master<wbr>Instance<wbr>Group<wbr>Args?</a></span>
-    </dt>
-    <dd>{{% md %}}Configuration block to use an [Instance Group](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-group-configuration.html#emr-plan-instance-groups) for the [master node type](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-master-core-task-nodes.html#emr-plan-master). Cannot be specified if `master_instance_type` argument or `instance_group` configuration blocks are set. Detailed below.
-{{% /md %}}</dd>
-
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span>Master<wbr>Instance<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Use the `master_instance_group` configuration block `instance_type` argument instead. The EC2 instance type of the master node. Cannot be specified if `master_instance_group` or `instance_group` configuration blocks are set.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `master_instance_group` configuration block `instance_type` argument instead{{% /md %}}</p></dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The name of the job flow
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Release<wbr>Label</span>
@@ -587,24 +416,6 @@ Attributes for Hadoop job step configuration
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The release label for the Amazon EMR release
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Scale<wbr>Down<wbr>Behavior</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The way that individual Amazon EC2 instances terminate when an automatic scale-in activity occurs or an `instance group` is resized.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Security<wbr>Configuration</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The security configuration name to attach to the EMR cluster. Only valid for EMR clusters with `release_label` 4.8.0 or greater
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -618,9 +429,198 @@ Attributes for Hadoop job step configuration
 
     <dt class="property-optional"
             title="Optional">
+        <span>Additional<wbr>Info</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A JSON string for selecting additional features such as adding proxy information. Note: Currently there is no API to retrieve the value of this argument after EMR cluster creation from provider, therefore this provider cannot detect drift from the actual EMR cluster if its value is changed outside this provider.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Applications</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of applications for the cluster. Valid values are: `Flink`, `Hadoop`, `Hive`, `Mahout`, `Pig`, `Spark`, and `JupyterHub` (as of EMR 5.14.0). Case insensitive
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Autoscaling<wbr>Role</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An IAM role for automatic scaling policies. The IAM role provides permissions that the automatic scaling feature requires to launch and terminate EC2 instances in an instance group.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Bootstrap<wbr>Actions</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterbootstrapaction">List&lt;Cluster<wbr>Bootstrap<wbr>Action<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Ordered list of bootstrap actions that will be run before Hadoop is started on the cluster nodes. Defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Configurations</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}List of configurations supplied for the EMR cluster you are creating
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Configurations<wbr>Json</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A JSON string for supplying list of configurations for the EMR cluster.
+{{% /md %}}</dd>
+
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span>Core<wbr>Instance<wbr>Count</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Use the `core_instance_group` configuration block `instance_count` argument instead. Number of Amazon EC2 instances used to execute the job flow. EMR will use one node as the cluster's master node and use the remainder of the nodes (`core_instance_count`-1) as core nodes. Cannot be specified if `core_instance_group` or `instance_group` configuration blocks are set. Default `1`
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `core_instance_group` configuration block `instance_count` argument instead{{% /md %}}</p></dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Core<wbr>Instance<wbr>Group</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustercoreinstancegroup">Cluster<wbr>Core<wbr>Instance<wbr>Group<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block to use an [Instance Group](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-group-configuration.html#emr-plan-instance-groups) for the [core node type](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-master-core-task-nodes.html#emr-plan-core). Cannot be specified if `core_instance_count` argument, `core_instance_type` argument, or `instance_group` configuration blocks are set. Detailed below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span>Core<wbr>Instance<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Use the `core_instance_group` configuration block `instance_type` argument instead. The EC2 instance type of the slave nodes. Cannot be specified if `core_instance_group` or `instance_group` configuration blocks are set.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `core_instance_group` configuration block `instance_type` argument instead{{% /md %}}</p></dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Custom<wbr>Ami<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A custom Amazon Linux AMI for the cluster (instead of an EMR-owned AMI). Available in Amazon EMR version 5.7.0 and later.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Ebs<wbr>Root<wbr>Volume<wbr>Size</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Size in GiB of the EBS root device volume of the Linux AMI that is used for each EC2 instance. Available in Amazon EMR version 4.x and later.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Ec2Attributes</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterec2attributes">Cluster<wbr>Ec2Attributes<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Attributes for the EC2 instances running the job flow. Defined below
+{{% /md %}}</dd>
+
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span>Instance<wbr>Groups</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterinstancegroup">List&lt;Cluster<wbr>Instance<wbr>Group<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Use the `master_instance_group` configuration block, `core_instance_group` configuration block and [`aws.emr.InstanceGroup` resource(s)](https://www.terraform.io/docs/providers/aws/r/emr_instance_group.html) instead. A list of `instance_group` objects for each instance group in the cluster. Exactly one of `master_instance_type` and `instance_group` must be specified. If `instance_group` is set, then it must contain a configuration block for at least the `MASTER` instance group type (as well as any additional instance groups). Cannot be specified if `master_instance_group` or `core_instance_group` configuration blocks are set. Defined below
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `master_instance_group` configuration block, `core_instance_group` configuration block, and `aws_emr_instance_group` resource(s) instead{{% /md %}}</p></dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Keep<wbr>Job<wbr>Flow<wbr>Alive<wbr>When<wbr>No<wbr>Steps</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Switch on/off run cluster with no steps or when all steps are complete (default is on)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Kerberos<wbr>Attributes</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterkerberosattributes">Cluster<wbr>Kerberos<wbr>Attributes<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Kerberos configuration for the cluster. Defined below
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Log<wbr>Uri</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}S3 bucket to write the log files of the job flow. If a value is not provided, logs are not created
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Master<wbr>Instance<wbr>Group</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustermasterinstancegroup">Cluster<wbr>Master<wbr>Instance<wbr>Group<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block to use an [Instance Group](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-group-configuration.html#emr-plan-instance-groups) for the [master node type](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-master-core-task-nodes.html#emr-plan-master). Cannot be specified if `master_instance_type` argument or `instance_group` configuration blocks are set. Detailed below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span>Master<wbr>Instance<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Use the `master_instance_group` configuration block `instance_type` argument instead. The EC2 instance type of the master node. Cannot be specified if `master_instance_group` or `instance_group` configuration blocks are set.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `master_instance_group` configuration block `instance_type` argument instead{{% /md %}}</p></dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the job flow
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Scale<wbr>Down<wbr>Behavior</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The way that individual Amazon EC2 instances terminate when an automatic scale-in activity occurs or an `instance group` is resized.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Security<wbr>Configuration</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The security configuration name to attach to the EMR cluster. Only valid for EMR clusters with `release_label` 4.8.0 or greater
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Step<wbr>Concurrency<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of steps that can be executed concurrently. You can specify a maximum of 256 steps. Only valid for EMR clusters with `release_label` 5.28.0 or greater. (default is 1)
 {{% /md %}}</dd>
@@ -629,7 +629,7 @@ Attributes for Hadoop job step configuration
             title="Optional">
         <span>Steps</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterstep">List&lt;Cluster<wbr>Step<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#clusterstep">List&lt;Cluster<wbr>Step<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of steps to run when creating the cluster. Defined below. It is highly recommended to utilize [`ignoreChanges`](https://www.pulumi.com/docs/intro/concepts/programming-model/#ignorechanges) if other steps are being managed outside of this provider.
 {{% /md %}}</dd>
@@ -638,7 +638,7 @@ Attributes for Hadoop job step configuration
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}list of tags to apply to the EMR Cluster
 {{% /md %}}</dd>
@@ -647,7 +647,7 @@ Attributes for Hadoop job step configuration
             title="Optional">
         <span>Termination<wbr>Protection</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Switch on/off termination protection (default is `false`, except when using multiple master nodes). Before attempting to destroy the resource when termination protection is enabled, this configuration must be applied with its value set to `false`.
 {{% /md %}}</dd>
@@ -656,7 +656,7 @@ Attributes for Hadoop job step configuration
             title="Optional">
         <span>Visible<wbr>To<wbr>All<wbr>Users</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the job flow is visible to all IAM users of the AWS account associated with the job flow. Default `true`
 {{% /md %}}</dd>
@@ -668,11 +668,29 @@ Attributes for Hadoop job step configuration
 {{% choosable language go %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Release<wbr>Label</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The release label for the Amazon EMR release
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Service<wbr>Role</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}IAM role that will be assumed by the Amazon EMR service to access AWS resources
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Additional<wbr>Info</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A JSON string for selecting additional features such as adding proxy information. Note: Currently there is no API to retrieve the value of this argument after EMR cluster creation from provider, therefore this provider cannot detect drift from the actual EMR cluster if its value is changed outside this provider.
 {{% /md %}}</dd>
@@ -690,7 +708,7 @@ Attributes for Hadoop job step configuration
             title="Optional">
         <span>Autoscaling<wbr>Role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An IAM role for automatic scaling policies. The IAM role provides permissions that the automatic scaling feature requires to launch and terminate EC2 instances in an instance group.
 {{% /md %}}</dd>
@@ -708,7 +726,7 @@ Attributes for Hadoop job step configuration
             title="Optional">
         <span>Configurations</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}List of configurations supplied for the EMR cluster you are creating
 {{% /md %}}</dd>
@@ -717,7 +735,7 @@ Attributes for Hadoop job step configuration
             title="Optional">
         <span>Configurations<wbr>Json</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A JSON string for supplying list of configurations for the EMR cluster.
 {{% /md %}}</dd>
@@ -726,7 +744,7 @@ Attributes for Hadoop job step configuration
             title="Optional, Deprecated">
         <span>Core<wbr>Instance<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Use the `core_instance_group` configuration block `instance_count` argument instead. Number of Amazon EC2 instances used to execute the job flow. EMR will use one node as the cluster's master node and use the remainder of the nodes (`core_instance_count`-1) as core nodes. Cannot be specified if `core_instance_group` or `instance_group` configuration blocks are set. Default `1`
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `core_instance_group` configuration block `instance_count` argument instead{{% /md %}}</p></dd>
@@ -735,7 +753,7 @@ Attributes for Hadoop job step configuration
             title="Optional">
         <span>Core<wbr>Instance<wbr>Group</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustercoreinstancegroup">*Cluster<wbr>Core<wbr>Instance<wbr>Group</a></span>
+        <span class="property-type"><a href="#clustercoreinstancegroup">Cluster<wbr>Core<wbr>Instance<wbr>Group</a></span>
     </dt>
     <dd>{{% md %}}Configuration block to use an [Instance Group](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-group-configuration.html#emr-plan-instance-groups) for the [core node type](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-master-core-task-nodes.html#emr-plan-core). Cannot be specified if `core_instance_count` argument, `core_instance_type` argument, or `instance_group` configuration blocks are set. Detailed below.
 {{% /md %}}</dd>
@@ -744,7 +762,7 @@ Attributes for Hadoop job step configuration
             title="Optional, Deprecated">
         <span>Core<wbr>Instance<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Use the `core_instance_group` configuration block `instance_type` argument instead. The EC2 instance type of the slave nodes. Cannot be specified if `core_instance_group` or `instance_group` configuration blocks are set.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `core_instance_group` configuration block `instance_type` argument instead{{% /md %}}</p></dd>
@@ -753,7 +771,7 @@ Attributes for Hadoop job step configuration
             title="Optional">
         <span>Custom<wbr>Ami<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A custom Amazon Linux AMI for the cluster (instead of an EMR-owned AMI). Available in Amazon EMR version 5.7.0 and later.
 {{% /md %}}</dd>
@@ -762,7 +780,7 @@ Attributes for Hadoop job step configuration
             title="Optional">
         <span>Ebs<wbr>Root<wbr>Volume<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Size in GiB of the EBS root device volume of the Linux AMI that is used for each EC2 instance. Available in Amazon EMR version 4.x and later.
 {{% /md %}}</dd>
@@ -771,7 +789,7 @@ Attributes for Hadoop job step configuration
             title="Optional">
         <span>Ec2Attributes</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterec2attributes">*Cluster<wbr>Ec2Attributes</a></span>
+        <span class="property-type"><a href="#clusterec2attributes">Cluster<wbr>Ec2Attributes</a></span>
     </dt>
     <dd>{{% md %}}Attributes for the EC2 instances running the job flow. Defined below
 {{% /md %}}</dd>
@@ -789,7 +807,7 @@ Attributes for Hadoop job step configuration
             title="Optional">
         <span>Keep<wbr>Job<wbr>Flow<wbr>Alive<wbr>When<wbr>No<wbr>Steps</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Switch on/off run cluster with no steps or when all steps are complete (default is on)
 {{% /md %}}</dd>
@@ -798,7 +816,7 @@ Attributes for Hadoop job step configuration
             title="Optional">
         <span>Kerberos<wbr>Attributes</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterkerberosattributes">*Cluster<wbr>Kerberos<wbr>Attributes</a></span>
+        <span class="property-type"><a href="#clusterkerberosattributes">Cluster<wbr>Kerberos<wbr>Attributes</a></span>
     </dt>
     <dd>{{% md %}}Kerberos configuration for the cluster. Defined below
 {{% /md %}}</dd>
@@ -807,7 +825,7 @@ Attributes for Hadoop job step configuration
             title="Optional">
         <span>Log<wbr>Uri</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}S3 bucket to write the log files of the job flow. If a value is not provided, logs are not created
 {{% /md %}}</dd>
@@ -816,7 +834,7 @@ Attributes for Hadoop job step configuration
             title="Optional">
         <span>Master<wbr>Instance<wbr>Group</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustermasterinstancegroup">*Cluster<wbr>Master<wbr>Instance<wbr>Group</a></span>
+        <span class="property-type"><a href="#clustermasterinstancegroup">Cluster<wbr>Master<wbr>Instance<wbr>Group</a></span>
     </dt>
     <dd>{{% md %}}Configuration block to use an [Instance Group](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-group-configuration.html#emr-plan-instance-groups) for the [master node type](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-master-core-task-nodes.html#emr-plan-master). Cannot be specified if `master_instance_type` argument or `instance_group` configuration blocks are set. Detailed below.
 {{% /md %}}</dd>
@@ -825,7 +843,7 @@ Attributes for Hadoop job step configuration
             title="Optional, Deprecated">
         <span>Master<wbr>Instance<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Use the `master_instance_group` configuration block `instance_type` argument instead. The EC2 instance type of the master node. Cannot be specified if `master_instance_group` or `instance_group` configuration blocks are set.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `master_instance_group` configuration block `instance_type` argument instead{{% /md %}}</p></dd>
@@ -834,25 +852,16 @@ Attributes for Hadoop job step configuration
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The name of the job flow
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Release<wbr>Label</span>
-        <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The release label for the Amazon EMR release
+    <dd>{{% md %}}The name of the job flow
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Scale<wbr>Down<wbr>Behavior</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The way that individual Amazon EC2 instances terminate when an automatic scale-in activity occurs or an `instance group` is resized.
 {{% /md %}}</dd>
@@ -861,25 +870,16 @@ Attributes for Hadoop job step configuration
             title="Optional">
         <span>Security<wbr>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The security configuration name to attach to the EMR cluster. Only valid for EMR clusters with `release_label` 4.8.0 or greater
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Service<wbr>Role</span>
-        <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}IAM role that will be assumed by the Amazon EMR service to access AWS resources
+    <dd>{{% md %}}The security configuration name to attach to the EMR cluster. Only valid for EMR clusters with `release_label` 4.8.0 or greater
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Step<wbr>Concurrency<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of steps that can be executed concurrently. You can specify a maximum of 256 steps. Only valid for EMR clusters with `release_label` 5.28.0 or greater. (default is 1)
 {{% /md %}}</dd>
@@ -906,7 +906,7 @@ Attributes for Hadoop job step configuration
             title="Optional">
         <span>Termination<wbr>Protection</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Switch on/off termination protection (default is `false`, except when using multiple master nodes). Before attempting to destroy the resource when termination protection is enabled, this configuration must be applied with its value set to `false`.
 {{% /md %}}</dd>
@@ -915,7 +915,7 @@ Attributes for Hadoop job step configuration
             title="Optional">
         <span>Visible<wbr>To<wbr>All<wbr>Users</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the job flow is visible to all IAM users of the AWS account associated with the job flow. Default `true`
 {{% /md %}}</dd>
@@ -927,177 +927,6 @@ Attributes for Hadoop job step configuration
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>additional<wbr>Info</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}A JSON string for selecting additional features such as adding proxy information. Note: Currently there is no API to retrieve the value of this argument after EMR cluster creation from provider, therefore this provider cannot detect drift from the actual EMR cluster if its value is changed outside this provider.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>applications</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}A list of applications for the cluster. Valid values are: `Flink`, `Hadoop`, `Hive`, `Mahout`, `Pig`, `Spark`, and `JupyterHub` (as of EMR 5.14.0). Case insensitive
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>autoscaling<wbr>Role</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}An IAM role for automatic scaling policies. The IAM role provides permissions that the automatic scaling feature requires to launch and terminate EC2 instances in an instance group.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>bootstrap<wbr>Actions</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterbootstrapaction">Cluster<wbr>Bootstrap<wbr>Action[]?</a></span>
-    </dt>
-    <dd>{{% md %}}Ordered list of bootstrap actions that will be run before Hadoop is started on the cluster nodes. Defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>configurations</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}List of configurations supplied for the EMR cluster you are creating
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>configurations<wbr>Json</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}A JSON string for supplying list of configurations for the EMR cluster.
-{{% /md %}}</dd>
-
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span>core<wbr>Instance<wbr>Count</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}Use the `core_instance_group` configuration block `instance_count` argument instead. Number of Amazon EC2 instances used to execute the job flow. EMR will use one node as the cluster's master node and use the remainder of the nodes (`core_instance_count`-1) as core nodes. Cannot be specified if `core_instance_group` or `instance_group` configuration blocks are set. Default `1`
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `core_instance_group` configuration block `instance_count` argument instead{{% /md %}}</p></dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>core<wbr>Instance<wbr>Group</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustercoreinstancegroup">Cluster<wbr>Core<wbr>Instance<wbr>Group?</a></span>
-    </dt>
-    <dd>{{% md %}}Configuration block to use an [Instance Group](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-group-configuration.html#emr-plan-instance-groups) for the [core node type](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-master-core-task-nodes.html#emr-plan-core). Cannot be specified if `core_instance_count` argument, `core_instance_type` argument, or `instance_group` configuration blocks are set. Detailed below.
-{{% /md %}}</dd>
-
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span>core<wbr>Instance<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Use the `core_instance_group` configuration block `instance_type` argument instead. The EC2 instance type of the slave nodes. Cannot be specified if `core_instance_group` or `instance_group` configuration blocks are set.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `core_instance_group` configuration block `instance_type` argument instead{{% /md %}}</p></dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>custom<wbr>Ami<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}A custom Amazon Linux AMI for the cluster (instead of an EMR-owned AMI). Available in Amazon EMR version 5.7.0 and later.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>ebs<wbr>Root<wbr>Volume<wbr>Size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}Size in GiB of the EBS root device volume of the Linux AMI that is used for each EC2 instance. Available in Amazon EMR version 4.x and later.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>ec2Attributes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterec2attributes">Cluster<wbr>Ec2Attributes?</a></span>
-    </dt>
-    <dd>{{% md %}}Attributes for the EC2 instances running the job flow. Defined below
-{{% /md %}}</dd>
-
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span>instance<wbr>Groups</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterinstancegroup">Cluster<wbr>Instance<wbr>Group[]?</a></span>
-    </dt>
-    <dd>{{% md %}}Use the `master_instance_group` configuration block, `core_instance_group` configuration block and [`aws.emr.InstanceGroup` resource(s)](https://www.terraform.io/docs/providers/aws/r/emr_instance_group.html) instead. A list of `instance_group` objects for each instance group in the cluster. Exactly one of `master_instance_type` and `instance_group` must be specified. If `instance_group` is set, then it must contain a configuration block for at least the `MASTER` instance group type (as well as any additional instance groups). Cannot be specified if `master_instance_group` or `core_instance_group` configuration blocks are set. Defined below
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `master_instance_group` configuration block, `core_instance_group` configuration block, and `aws_emr_instance_group` resource(s) instead{{% /md %}}</p></dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>keep<wbr>Job<wbr>Flow<wbr>Alive<wbr>When<wbr>No<wbr>Steps</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Switch on/off run cluster with no steps or when all steps are complete (default is on)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>kerberos<wbr>Attributes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterkerberosattributes">Cluster<wbr>Kerberos<wbr>Attributes?</a></span>
-    </dt>
-    <dd>{{% md %}}Kerberos configuration for the cluster. Defined below
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>log<wbr>Uri</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}S3 bucket to write the log files of the job flow. If a value is not provided, logs are not created
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>master<wbr>Instance<wbr>Group</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustermasterinstancegroup">Cluster<wbr>Master<wbr>Instance<wbr>Group?</a></span>
-    </dt>
-    <dd>{{% md %}}Configuration block to use an [Instance Group](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-group-configuration.html#emr-plan-instance-groups) for the [master node type](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-master-core-task-nodes.html#emr-plan-master). Cannot be specified if `master_instance_type` argument or `instance_group` configuration blocks are set. Detailed below.
-{{% /md %}}</dd>
-
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span>master<wbr>Instance<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Use the `master_instance_group` configuration block `instance_type` argument instead. The EC2 instance type of the master node. Cannot be specified if `master_instance_group` or `instance_group` configuration blocks are set.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `master_instance_group` configuration block `instance_type` argument instead{{% /md %}}</p></dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The name of the job flow
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>release<wbr>Label</span>
@@ -1105,24 +934,6 @@ Attributes for Hadoop job step configuration
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The release label for the Amazon EMR release
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>scale<wbr>Down<wbr>Behavior</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The way that individual Amazon EC2 instances terminate when an automatic scale-in activity occurs or an `instance group` is resized.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>security<wbr>Configuration</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The security configuration name to attach to the EMR cluster. Only valid for EMR clusters with `release_label` 4.8.0 or greater
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1136,9 +947,198 @@ Attributes for Hadoop job step configuration
 
     <dt class="property-optional"
             title="Optional">
+        <span>additional<wbr>Info</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A JSON string for selecting additional features such as adding proxy information. Note: Currently there is no API to retrieve the value of this argument after EMR cluster creation from provider, therefore this provider cannot detect drift from the actual EMR cluster if its value is changed outside this provider.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>applications</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list of applications for the cluster. Valid values are: `Flink`, `Hadoop`, `Hive`, `Mahout`, `Pig`, `Spark`, and `JupyterHub` (as of EMR 5.14.0). Case insensitive
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>autoscaling<wbr>Role</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An IAM role for automatic scaling policies. The IAM role provides permissions that the automatic scaling feature requires to launch and terminate EC2 instances in an instance group.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>bootstrap<wbr>Actions</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterbootstrapaction">Cluster<wbr>Bootstrap<wbr>Action[]</a></span>
+    </dt>
+    <dd>{{% md %}}Ordered list of bootstrap actions that will be run before Hadoop is started on the cluster nodes. Defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>configurations</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}List of configurations supplied for the EMR cluster you are creating
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>configurations<wbr>Json</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A JSON string for supplying list of configurations for the EMR cluster.
+{{% /md %}}</dd>
+
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span>core<wbr>Instance<wbr>Count</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Use the `core_instance_group` configuration block `instance_count` argument instead. Number of Amazon EC2 instances used to execute the job flow. EMR will use one node as the cluster's master node and use the remainder of the nodes (`core_instance_count`-1) as core nodes. Cannot be specified if `core_instance_group` or `instance_group` configuration blocks are set. Default `1`
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `core_instance_group` configuration block `instance_count` argument instead{{% /md %}}</p></dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>core<wbr>Instance<wbr>Group</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustercoreinstancegroup">Cluster<wbr>Core<wbr>Instance<wbr>Group</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block to use an [Instance Group](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-group-configuration.html#emr-plan-instance-groups) for the [core node type](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-master-core-task-nodes.html#emr-plan-core). Cannot be specified if `core_instance_count` argument, `core_instance_type` argument, or `instance_group` configuration blocks are set. Detailed below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span>core<wbr>Instance<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Use the `core_instance_group` configuration block `instance_type` argument instead. The EC2 instance type of the slave nodes. Cannot be specified if `core_instance_group` or `instance_group` configuration blocks are set.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `core_instance_group` configuration block `instance_type` argument instead{{% /md %}}</p></dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>custom<wbr>Ami<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A custom Amazon Linux AMI for the cluster (instead of an EMR-owned AMI). Available in Amazon EMR version 5.7.0 and later.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>ebs<wbr>Root<wbr>Volume<wbr>Size</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Size in GiB of the EBS root device volume of the Linux AMI that is used for each EC2 instance. Available in Amazon EMR version 4.x and later.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>ec2Attributes</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterec2attributes">Cluster<wbr>Ec2Attributes</a></span>
+    </dt>
+    <dd>{{% md %}}Attributes for the EC2 instances running the job flow. Defined below
+{{% /md %}}</dd>
+
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span>instance<wbr>Groups</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterinstancegroup">Cluster<wbr>Instance<wbr>Group[]</a></span>
+    </dt>
+    <dd>{{% md %}}Use the `master_instance_group` configuration block, `core_instance_group` configuration block and [`aws.emr.InstanceGroup` resource(s)](https://www.terraform.io/docs/providers/aws/r/emr_instance_group.html) instead. A list of `instance_group` objects for each instance group in the cluster. Exactly one of `master_instance_type` and `instance_group` must be specified. If `instance_group` is set, then it must contain a configuration block for at least the `MASTER` instance group type (as well as any additional instance groups). Cannot be specified if `master_instance_group` or `core_instance_group` configuration blocks are set. Defined below
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `master_instance_group` configuration block, `core_instance_group` configuration block, and `aws_emr_instance_group` resource(s) instead{{% /md %}}</p></dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>keep<wbr>Job<wbr>Flow<wbr>Alive<wbr>When<wbr>No<wbr>Steps</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Switch on/off run cluster with no steps or when all steps are complete (default is on)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>kerberos<wbr>Attributes</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterkerberosattributes">Cluster<wbr>Kerberos<wbr>Attributes</a></span>
+    </dt>
+    <dd>{{% md %}}Kerberos configuration for the cluster. Defined below
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>log<wbr>Uri</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}S3 bucket to write the log files of the job flow. If a value is not provided, logs are not created
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>master<wbr>Instance<wbr>Group</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustermasterinstancegroup">Cluster<wbr>Master<wbr>Instance<wbr>Group</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block to use an [Instance Group](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-group-configuration.html#emr-plan-instance-groups) for the [master node type](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-master-core-task-nodes.html#emr-plan-master). Cannot be specified if `master_instance_type` argument or `instance_group` configuration blocks are set. Detailed below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span>master<wbr>Instance<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Use the `master_instance_group` configuration block `instance_type` argument instead. The EC2 instance type of the master node. Cannot be specified if `master_instance_group` or `instance_group` configuration blocks are set.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `master_instance_group` configuration block `instance_type` argument instead{{% /md %}}</p></dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the job flow
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>scale<wbr>Down<wbr>Behavior</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The way that individual Amazon EC2 instances terminate when an automatic scale-in activity occurs or an `instance group` is resized.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>security<wbr>Configuration</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The security configuration name to attach to the EMR cluster. Only valid for EMR clusters with `release_label` 4.8.0 or greater
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>step<wbr>Concurrency<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of steps that can be executed concurrently. You can specify a maximum of 256 steps. Only valid for EMR clusters with `release_label` 5.28.0 or greater. (default is 1)
 {{% /md %}}</dd>
@@ -1147,7 +1147,7 @@ Attributes for Hadoop job step configuration
             title="Optional">
         <span>steps</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterstep">Cluster<wbr>Step[]?</a></span>
+        <span class="property-type"><a href="#clusterstep">Cluster<wbr>Step[]</a></span>
     </dt>
     <dd>{{% md %}}List of steps to run when creating the cluster. Defined below. It is highly recommended to utilize [`ignoreChanges`](https://www.pulumi.com/docs/intro/concepts/programming-model/#ignorechanges) if other steps are being managed outside of this provider.
 {{% /md %}}</dd>
@@ -1156,7 +1156,7 @@ Attributes for Hadoop job step configuration
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}list of tags to apply to the EMR Cluster
 {{% /md %}}</dd>
@@ -1165,7 +1165,7 @@ Attributes for Hadoop job step configuration
             title="Optional">
         <span>termination<wbr>Protection</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Switch on/off termination protection (default is `false`, except when using multiple master nodes). Before attempting to destroy the resource when termination protection is enabled, this configuration must be applied with its value set to `false`.
 {{% /md %}}</dd>
@@ -1174,7 +1174,7 @@ Attributes for Hadoop job step configuration
             title="Optional">
         <span>visible<wbr>To<wbr>All<wbr>Users</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the job flow is visible to all IAM users of the AWS account associated with the job flow. Default `true`
 {{% /md %}}</dd>
@@ -1185,6 +1185,24 @@ Attributes for Hadoop job step configuration
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>release_<wbr>label</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The release label for the Amazon EMR release
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>service_<wbr>role</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}IAM role that will be assumed by the Amazon EMR service to access AWS resources
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1357,15 +1375,6 @@ Attributes for Hadoop job step configuration
     <dd>{{% md %}}The name of the job flow
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>release_<wbr>label</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The release label for the Amazon EMR release
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>scale_<wbr>down_<wbr>behavior</span>
@@ -1382,15 +1391,6 @@ Attributes for Hadoop job step configuration
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The security configuration name to attach to the EMR cluster. Only valid for EMR clusters with `release_label` 4.8.0 or greater
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>service_<wbr>role</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}IAM role that will be assumed by the Amazon EMR service to access AWS resources
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1459,47 +1459,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Additional<wbr>Info</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}A JSON string for selecting additional features such as adding proxy information. Note: Currently there is no API to retrieve the value of this argument after EMR cluster creation from provider, therefore this provider cannot detect drift from the actual EMR cluster if its value is changed outside this provider.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Applications</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}A list of applications for the cluster. Valid values are: `Flink`, `Hadoop`, `Hive`, `Mahout`, `Pig`, `Spark`, and `JupyterHub` (as of EMR 5.14.0). Case insensitive
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Arn</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Autoscaling<wbr>Role</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}An IAM role for automatic scaling policies. The IAM role provides permissions that the automatic scaling feature requires to launch and terminate EC2 instances in an instance group.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Bootstrap<wbr>Actions</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterbootstrapaction">List&lt;Cluster<wbr>Bootstrap<wbr>Action&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}Ordered list of bootstrap actions that will be run before Hadoop is started on the cluster nodes. Defined below.
-{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1511,228 +1475,12 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Configurations</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}List of configurations supplied for the EMR cluster you are creating
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Configurations<wbr>Json</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}A JSON string for supplying list of configurations for the EMR cluster.
-{{% /md %}}</dd>
-
-    <dt class="property- property-deprecated"
-            title=", Deprecated">
-        <span>Core<wbr>Instance<wbr>Count</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Use the `core_instance_group` configuration block `instance_count` argument instead. Number of Amazon EC2 instances used to execute the job flow. EMR will use one node as the cluster's master node and use the remainder of the nodes (`core_instance_count`-1) as core nodes. Cannot be specified if `core_instance_group` or `instance_group` configuration blocks are set. Default `1`
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `core_instance_group` configuration block `instance_count` argument instead{{% /md %}}</p></dd>
-
-    <dt class="property-"
-            title="">
-        <span>Core<wbr>Instance<wbr>Group</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustercoreinstancegroup">Cluster<wbr>Core<wbr>Instance<wbr>Group</a></span>
-    </dt>
-    <dd>{{% md %}}Configuration block to use an [Instance Group](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-group-configuration.html#emr-plan-instance-groups) for the [core node type](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-master-core-task-nodes.html#emr-plan-core). Cannot be specified if `core_instance_count` argument, `core_instance_type` argument, or `instance_group` configuration blocks are set. Detailed below.
-{{% /md %}}</dd>
-
-    <dt class="property- property-deprecated"
-            title=", Deprecated">
-        <span>Core<wbr>Instance<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Use the `core_instance_group` configuration block `instance_type` argument instead. The EC2 instance type of the slave nodes. Cannot be specified if `core_instance_group` or `instance_group` configuration blocks are set.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `core_instance_group` configuration block `instance_type` argument instead{{% /md %}}</p></dd>
-
-    <dt class="property-"
-            title="">
-        <span>Custom<wbr>Ami<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}A custom Amazon Linux AMI for the cluster (instead of an EMR-owned AMI). Available in Amazon EMR version 5.7.0 and later.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Ebs<wbr>Root<wbr>Volume<wbr>Size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}Size in GiB of the EBS root device volume of the Linux AMI that is used for each EC2 instance. Available in Amazon EMR version 4.x and later.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Ec2Attributes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterec2attributes">Cluster<wbr>Ec2Attributes?</a></span>
-    </dt>
-    <dd>{{% md %}}Attributes for the EC2 instances running the job flow. Defined below
-{{% /md %}}</dd>
-
-    <dt class="property- property-deprecated"
-            title=", Deprecated">
-        <span>Instance<wbr>Groups</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterinstancegroup">List&lt;Cluster<wbr>Instance<wbr>Group&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}Use the `master_instance_group` configuration block, `core_instance_group` configuration block and [`aws.emr.InstanceGroup` resource(s)](https://www.terraform.io/docs/providers/aws/r/emr_instance_group.html) instead. A list of `instance_group` objects for each instance group in the cluster. Exactly one of `master_instance_type` and `instance_group` must be specified. If `instance_group` is set, then it must contain a configuration block for at least the `MASTER` instance group type (as well as any additional instance groups). Cannot be specified if `master_instance_group` or `core_instance_group` configuration blocks are set. Defined below
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `master_instance_group` configuration block, `core_instance_group` configuration block, and `aws_emr_instance_group` resource(s) instead{{% /md %}}</p></dd>
-
-    <dt class="property-"
-            title="">
-        <span>Keep<wbr>Job<wbr>Flow<wbr>Alive<wbr>When<wbr>No<wbr>Steps</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Switch on/off run cluster with no steps or when all steps are complete (default is on)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Kerberos<wbr>Attributes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterkerberosattributes">Cluster<wbr>Kerberos<wbr>Attributes?</a></span>
-    </dt>
-    <dd>{{% md %}}Kerberos configuration for the cluster. Defined below
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Log<wbr>Uri</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}S3 bucket to write the log files of the job flow. If a value is not provided, logs are not created
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Master<wbr>Instance<wbr>Group</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustermasterinstancegroup">Cluster<wbr>Master<wbr>Instance<wbr>Group</a></span>
-    </dt>
-    <dd>{{% md %}}Configuration block to use an [Instance Group](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-group-configuration.html#emr-plan-instance-groups) for the [master node type](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-master-core-task-nodes.html#emr-plan-master). Cannot be specified if `master_instance_type` argument or `instance_group` configuration blocks are set. Detailed below.
-{{% /md %}}</dd>
-
-    <dt class="property- property-deprecated"
-            title=", Deprecated">
-        <span>Master<wbr>Instance<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Use the `master_instance_group` configuration block `instance_type` argument instead. The EC2 instance type of the master node. Cannot be specified if `master_instance_group` or `instance_group` configuration blocks are set.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `master_instance_group` configuration block `instance_type` argument instead{{% /md %}}</p></dd>
-
-    <dt class="property-"
-            title="">
         <span>Master<wbr>Public<wbr>Dns</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The public DNS name of the master EC2 instance.
 * `core_instance_group.0.id` - Core node type Instance Group ID, if using Instance Group for this node type.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the job flow
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Release<wbr>Label</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The release label for the Amazon EMR release
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Scale<wbr>Down<wbr>Behavior</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The way that individual Amazon EC2 instances terminate when an automatic scale-in activity occurs or an `instance group` is resized.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Security<wbr>Configuration</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The security configuration name to attach to the EMR cluster. Only valid for EMR clusters with `release_label` 4.8.0 or greater
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Service<wbr>Role</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}IAM role that will be assumed by the Amazon EMR service to access AWS resources
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Step<wbr>Concurrency<wbr>Level</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}The number of steps that can be executed concurrently. You can specify a maximum of 256 steps. Only valid for EMR clusters with `release_label` 5.28.0 or greater. (default is 1)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Steps</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterstep">List&lt;Cluster<wbr>Step&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}List of steps to run when creating the cluster. Defined below. It is highly recommended to utilize [`ignoreChanges`](https://www.pulumi.com/docs/intro/concepts/programming-model/#ignorechanges) if other steps are being managed outside of this provider.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
-    </dt>
-    <dd>{{% md %}}list of tags to apply to the EMR Cluster
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Termination<wbr>Protection</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Switch on/off termination protection (default is `false`, except when using multiple master nodes). Before attempting to destroy the resource when termination protection is enabled, this configuration must be applied with its value set to `false`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Visible<wbr>To<wbr>All<wbr>Users</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Whether the job flow is visible to all IAM users of the AWS account associated with the job flow. Default `true`
 {{% /md %}}</dd>
 
 </dl>
@@ -1744,47 +1492,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Additional<wbr>Info</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}A JSON string for selecting additional features such as adding proxy information. Note: Currently there is no API to retrieve the value of this argument after EMR cluster creation from provider, therefore this provider cannot detect drift from the actual EMR cluster if its value is changed outside this provider.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Applications</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}A list of applications for the cluster. Valid values are: `Flink`, `Hadoop`, `Hive`, `Mahout`, `Pig`, `Spark`, and `JupyterHub` (as of EMR 5.14.0). Case insensitive
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Arn</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Autoscaling<wbr>Role</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}An IAM role for automatic scaling policies. The IAM role provides permissions that the automatic scaling feature requires to launch and terminate EC2 instances in an instance group.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Bootstrap<wbr>Actions</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterbootstrapaction">[]Cluster<wbr>Bootstrap<wbr>Action</a></span>
-    </dt>
-    <dd>{{% md %}}Ordered list of bootstrap actions that will be run before Hadoop is started on the cluster nodes. Defined below.
-{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1796,228 +1508,12 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Configurations</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}List of configurations supplied for the EMR cluster you are creating
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Configurations<wbr>Json</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}A JSON string for supplying list of configurations for the EMR cluster.
-{{% /md %}}</dd>
-
-    <dt class="property- property-deprecated"
-            title=", Deprecated">
-        <span>Core<wbr>Instance<wbr>Count</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Use the `core_instance_group` configuration block `instance_count` argument instead. Number of Amazon EC2 instances used to execute the job flow. EMR will use one node as the cluster's master node and use the remainder of the nodes (`core_instance_count`-1) as core nodes. Cannot be specified if `core_instance_group` or `instance_group` configuration blocks are set. Default `1`
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `core_instance_group` configuration block `instance_count` argument instead{{% /md %}}</p></dd>
-
-    <dt class="property-"
-            title="">
-        <span>Core<wbr>Instance<wbr>Group</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustercoreinstancegroup">Cluster<wbr>Core<wbr>Instance<wbr>Group</a></span>
-    </dt>
-    <dd>{{% md %}}Configuration block to use an [Instance Group](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-group-configuration.html#emr-plan-instance-groups) for the [core node type](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-master-core-task-nodes.html#emr-plan-core). Cannot be specified if `core_instance_count` argument, `core_instance_type` argument, or `instance_group` configuration blocks are set. Detailed below.
-{{% /md %}}</dd>
-
-    <dt class="property- property-deprecated"
-            title=", Deprecated">
-        <span>Core<wbr>Instance<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Use the `core_instance_group` configuration block `instance_type` argument instead. The EC2 instance type of the slave nodes. Cannot be specified if `core_instance_group` or `instance_group` configuration blocks are set.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `core_instance_group` configuration block `instance_type` argument instead{{% /md %}}</p></dd>
-
-    <dt class="property-"
-            title="">
-        <span>Custom<wbr>Ami<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}A custom Amazon Linux AMI for the cluster (instead of an EMR-owned AMI). Available in Amazon EMR version 5.7.0 and later.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Ebs<wbr>Root<wbr>Volume<wbr>Size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}Size in GiB of the EBS root device volume of the Linux AMI that is used for each EC2 instance. Available in Amazon EMR version 4.x and later.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Ec2Attributes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterec2attributes">*Cluster<wbr>Ec2Attributes</a></span>
-    </dt>
-    <dd>{{% md %}}Attributes for the EC2 instances running the job flow. Defined below
-{{% /md %}}</dd>
-
-    <dt class="property- property-deprecated"
-            title=", Deprecated">
-        <span>Instance<wbr>Groups</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterinstancegroup">[]Cluster<wbr>Instance<wbr>Group</a></span>
-    </dt>
-    <dd>{{% md %}}Use the `master_instance_group` configuration block, `core_instance_group` configuration block and [`aws.emr.InstanceGroup` resource(s)](https://www.terraform.io/docs/providers/aws/r/emr_instance_group.html) instead. A list of `instance_group` objects for each instance group in the cluster. Exactly one of `master_instance_type` and `instance_group` must be specified. If `instance_group` is set, then it must contain a configuration block for at least the `MASTER` instance group type (as well as any additional instance groups). Cannot be specified if `master_instance_group` or `core_instance_group` configuration blocks are set. Defined below
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `master_instance_group` configuration block, `core_instance_group` configuration block, and `aws_emr_instance_group` resource(s) instead{{% /md %}}</p></dd>
-
-    <dt class="property-"
-            title="">
-        <span>Keep<wbr>Job<wbr>Flow<wbr>Alive<wbr>When<wbr>No<wbr>Steps</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Switch on/off run cluster with no steps or when all steps are complete (default is on)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Kerberos<wbr>Attributes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterkerberosattributes">*Cluster<wbr>Kerberos<wbr>Attributes</a></span>
-    </dt>
-    <dd>{{% md %}}Kerberos configuration for the cluster. Defined below
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Log<wbr>Uri</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}S3 bucket to write the log files of the job flow. If a value is not provided, logs are not created
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Master<wbr>Instance<wbr>Group</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustermasterinstancegroup">Cluster<wbr>Master<wbr>Instance<wbr>Group</a></span>
-    </dt>
-    <dd>{{% md %}}Configuration block to use an [Instance Group](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-group-configuration.html#emr-plan-instance-groups) for the [master node type](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-master-core-task-nodes.html#emr-plan-master). Cannot be specified if `master_instance_type` argument or `instance_group` configuration blocks are set. Detailed below.
-{{% /md %}}</dd>
-
-    <dt class="property- property-deprecated"
-            title=", Deprecated">
-        <span>Master<wbr>Instance<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Use the `master_instance_group` configuration block `instance_type` argument instead. The EC2 instance type of the master node. Cannot be specified if `master_instance_group` or `instance_group` configuration blocks are set.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `master_instance_group` configuration block `instance_type` argument instead{{% /md %}}</p></dd>
-
-    <dt class="property-"
-            title="">
         <span>Master<wbr>Public<wbr>Dns</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The public DNS name of the master EC2 instance.
 * `core_instance_group.0.id` - Core node type Instance Group ID, if using Instance Group for this node type.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the job flow
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Release<wbr>Label</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The release label for the Amazon EMR release
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Scale<wbr>Down<wbr>Behavior</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The way that individual Amazon EC2 instances terminate when an automatic scale-in activity occurs or an `instance group` is resized.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Security<wbr>Configuration</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The security configuration name to attach to the EMR cluster. Only valid for EMR clusters with `release_label` 4.8.0 or greater
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Service<wbr>Role</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}IAM role that will be assumed by the Amazon EMR service to access AWS resources
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Step<wbr>Concurrency<wbr>Level</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}The number of steps that can be executed concurrently. You can specify a maximum of 256 steps. Only valid for EMR clusters with `release_label` 5.28.0 or greater. (default is 1)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Steps</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterstep">[]Cluster<wbr>Step</a></span>
-    </dt>
-    <dd>{{% md %}}List of steps to run when creating the cluster. Defined below. It is highly recommended to utilize [`ignoreChanges`](https://www.pulumi.com/docs/intro/concepts/programming-model/#ignorechanges) if other steps are being managed outside of this provider.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
-    </dt>
-    <dd>{{% md %}}list of tags to apply to the EMR Cluster
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Termination<wbr>Protection</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Switch on/off termination protection (default is `false`, except when using multiple master nodes). Before attempting to destroy the resource when termination protection is enabled, this configuration must be applied with its value set to `false`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Visible<wbr>To<wbr>All<wbr>Users</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Whether the job flow is visible to all IAM users of the AWS account associated with the job flow. Default `true`
 {{% /md %}}</dd>
 
 </dl>
@@ -2029,47 +1525,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>additional<wbr>Info</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}A JSON string for selecting additional features such as adding proxy information. Note: Currently there is no API to retrieve the value of this argument after EMR cluster creation from provider, therefore this provider cannot detect drift from the actual EMR cluster if its value is changed outside this provider.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>applications</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}A list of applications for the cluster. Valid values are: `Flink`, `Hadoop`, `Hive`, `Mahout`, `Pig`, `Spark`, and `JupyterHub` (as of EMR 5.14.0). Case insensitive
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>arn</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>autoscaling<wbr>Role</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}An IAM role for automatic scaling policies. The IAM role provides permissions that the automatic scaling feature requires to launch and terminate EC2 instances in an instance group.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>bootstrap<wbr>Actions</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterbootstrapaction">Cluster<wbr>Bootstrap<wbr>Action[]?</a></span>
-    </dt>
-    <dd>{{% md %}}Ordered list of bootstrap actions that will be run before Hadoop is started on the cluster nodes. Defined below.
-{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -2081,228 +1541,12 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>configurations</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}List of configurations supplied for the EMR cluster you are creating
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>configurations<wbr>Json</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}A JSON string for supplying list of configurations for the EMR cluster.
-{{% /md %}}</dd>
-
-    <dt class="property- property-deprecated"
-            title=", Deprecated">
-        <span>core<wbr>Instance<wbr>Count</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}Use the `core_instance_group` configuration block `instance_count` argument instead. Number of Amazon EC2 instances used to execute the job flow. EMR will use one node as the cluster's master node and use the remainder of the nodes (`core_instance_count`-1) as core nodes. Cannot be specified if `core_instance_group` or `instance_group` configuration blocks are set. Default `1`
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `core_instance_group` configuration block `instance_count` argument instead{{% /md %}}</p></dd>
-
-    <dt class="property-"
-            title="">
-        <span>core<wbr>Instance<wbr>Group</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustercoreinstancegroup">Cluster<wbr>Core<wbr>Instance<wbr>Group</a></span>
-    </dt>
-    <dd>{{% md %}}Configuration block to use an [Instance Group](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-group-configuration.html#emr-plan-instance-groups) for the [core node type](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-master-core-task-nodes.html#emr-plan-core). Cannot be specified if `core_instance_count` argument, `core_instance_type` argument, or `instance_group` configuration blocks are set. Detailed below.
-{{% /md %}}</dd>
-
-    <dt class="property- property-deprecated"
-            title=", Deprecated">
-        <span>core<wbr>Instance<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Use the `core_instance_group` configuration block `instance_type` argument instead. The EC2 instance type of the slave nodes. Cannot be specified if `core_instance_group` or `instance_group` configuration blocks are set.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `core_instance_group` configuration block `instance_type` argument instead{{% /md %}}</p></dd>
-
-    <dt class="property-"
-            title="">
-        <span>custom<wbr>Ami<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}A custom Amazon Linux AMI for the cluster (instead of an EMR-owned AMI). Available in Amazon EMR version 5.7.0 and later.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>ebs<wbr>Root<wbr>Volume<wbr>Size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}Size in GiB of the EBS root device volume of the Linux AMI that is used for each EC2 instance. Available in Amazon EMR version 4.x and later.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>ec2Attributes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterec2attributes">Cluster<wbr>Ec2Attributes?</a></span>
-    </dt>
-    <dd>{{% md %}}Attributes for the EC2 instances running the job flow. Defined below
-{{% /md %}}</dd>
-
-    <dt class="property- property-deprecated"
-            title=", Deprecated">
-        <span>instance<wbr>Groups</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterinstancegroup">Cluster<wbr>Instance<wbr>Group[]</a></span>
-    </dt>
-    <dd>{{% md %}}Use the `master_instance_group` configuration block, `core_instance_group` configuration block and [`aws.emr.InstanceGroup` resource(s)](https://www.terraform.io/docs/providers/aws/r/emr_instance_group.html) instead. A list of `instance_group` objects for each instance group in the cluster. Exactly one of `master_instance_type` and `instance_group` must be specified. If `instance_group` is set, then it must contain a configuration block for at least the `MASTER` instance group type (as well as any additional instance groups). Cannot be specified if `master_instance_group` or `core_instance_group` configuration blocks are set. Defined below
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `master_instance_group` configuration block, `core_instance_group` configuration block, and `aws_emr_instance_group` resource(s) instead{{% /md %}}</p></dd>
-
-    <dt class="property-"
-            title="">
-        <span>keep<wbr>Job<wbr>Flow<wbr>Alive<wbr>When<wbr>No<wbr>Steps</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
-    </dt>
-    <dd>{{% md %}}Switch on/off run cluster with no steps or when all steps are complete (default is on)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>kerberos<wbr>Attributes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterkerberosattributes">Cluster<wbr>Kerberos<wbr>Attributes?</a></span>
-    </dt>
-    <dd>{{% md %}}Kerberos configuration for the cluster. Defined below
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>log<wbr>Uri</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}S3 bucket to write the log files of the job flow. If a value is not provided, logs are not created
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>master<wbr>Instance<wbr>Group</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustermasterinstancegroup">Cluster<wbr>Master<wbr>Instance<wbr>Group</a></span>
-    </dt>
-    <dd>{{% md %}}Configuration block to use an [Instance Group](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-group-configuration.html#emr-plan-instance-groups) for the [master node type](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-master-core-task-nodes.html#emr-plan-master). Cannot be specified if `master_instance_type` argument or `instance_group` configuration blocks are set. Detailed below.
-{{% /md %}}</dd>
-
-    <dt class="property- property-deprecated"
-            title=", Deprecated">
-        <span>master<wbr>Instance<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Use the `master_instance_group` configuration block `instance_type` argument instead. The EC2 instance type of the master node. Cannot be specified if `master_instance_group` or `instance_group` configuration blocks are set.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `master_instance_group` configuration block `instance_type` argument instead{{% /md %}}</p></dd>
-
-    <dt class="property-"
-            title="">
         <span>master<wbr>Public<wbr>Dns</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The public DNS name of the master EC2 instance.
 * `core_instance_group.0.id` - Core node type Instance Group ID, if using Instance Group for this node type.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the job flow
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>release<wbr>Label</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The release label for the Amazon EMR release
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>scale<wbr>Down<wbr>Behavior</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The way that individual Amazon EC2 instances terminate when an automatic scale-in activity occurs or an `instance group` is resized.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>security<wbr>Configuration</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The security configuration name to attach to the EMR cluster. Only valid for EMR clusters with `release_label` 4.8.0 or greater
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>service<wbr>Role</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}IAM role that will be assumed by the Amazon EMR service to access AWS resources
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>step<wbr>Concurrency<wbr>Level</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}The number of steps that can be executed concurrently. You can specify a maximum of 256 steps. Only valid for EMR clusters with `release_label` 5.28.0 or greater. (default is 1)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>steps</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterstep">Cluster<wbr>Step[]</a></span>
-    </dt>
-    <dd>{{% md %}}List of steps to run when creating the cluster. Defined below. It is highly recommended to utilize [`ignoreChanges`](https://www.pulumi.com/docs/intro/concepts/programming-model/#ignorechanges) if other steps are being managed outside of this provider.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
-    </dt>
-    <dd>{{% md %}}list of tags to apply to the EMR Cluster
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>termination<wbr>Protection</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
-    </dt>
-    <dd>{{% md %}}Switch on/off termination protection (default is `false`, except when using multiple master nodes). Before attempting to destroy the resource when termination protection is enabled, this configuration must be applied with its value set to `false`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>visible<wbr>To<wbr>All<wbr>Users</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Whether the job flow is visible to all IAM users of the AWS account associated with the job flow. Default `true`
 {{% /md %}}</dd>
 
 </dl>
@@ -2314,47 +1558,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>additional_<wbr>info</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}A JSON string for selecting additional features such as adding proxy information. Note: Currently there is no API to retrieve the value of this argument after EMR cluster creation from provider, therefore this provider cannot detect drift from the actual EMR cluster if its value is changed outside this provider.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>applications</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}A list of applications for the cluster. Valid values are: `Flink`, `Hadoop`, `Hive`, `Mahout`, `Pig`, `Spark`, and `JupyterHub` (as of EMR 5.14.0). Case insensitive
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>arn</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>autoscaling_<wbr>role</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}An IAM role for automatic scaling policies. The IAM role provides permissions that the automatic scaling feature requires to launch and terminate EC2 instances in an instance group.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>bootstrap_<wbr>actions</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterbootstrapaction">List[Cluster<wbr>Bootstrap<wbr>Action]</a></span>
-    </dt>
-    <dd>{{% md %}}Ordered list of bootstrap actions that will be run before Hadoop is started on the cluster nodes. Defined below.
-{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -2366,228 +1574,12 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>configurations</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}List of configurations supplied for the EMR cluster you are creating
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>configurations_<wbr>json</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}A JSON string for supplying list of configurations for the EMR cluster.
-{{% /md %}}</dd>
-
-    <dt class="property- property-deprecated"
-            title=", Deprecated">
-        <span>core_<wbr>instance_<wbr>count</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}Use the `core_instance_group` configuration block `instance_count` argument instead. Number of Amazon EC2 instances used to execute the job flow. EMR will use one node as the cluster's master node and use the remainder of the nodes (`core_instance_count`-1) as core nodes. Cannot be specified if `core_instance_group` or `instance_group` configuration blocks are set. Default `1`
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `core_instance_group` configuration block `instance_count` argument instead{{% /md %}}</p></dd>
-
-    <dt class="property-"
-            title="">
-        <span>core_<wbr>instance_<wbr>group</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustercoreinstancegroup">Dict[Cluster<wbr>Core<wbr>Instance<wbr>Group]</a></span>
-    </dt>
-    <dd>{{% md %}}Configuration block to use an [Instance Group](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-group-configuration.html#emr-plan-instance-groups) for the [core node type](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-master-core-task-nodes.html#emr-plan-core). Cannot be specified if `core_instance_count` argument, `core_instance_type` argument, or `instance_group` configuration blocks are set. Detailed below.
-{{% /md %}}</dd>
-
-    <dt class="property- property-deprecated"
-            title=", Deprecated">
-        <span>core_<wbr>instance_<wbr>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Use the `core_instance_group` configuration block `instance_type` argument instead. The EC2 instance type of the slave nodes. Cannot be specified if `core_instance_group` or `instance_group` configuration blocks are set.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `core_instance_group` configuration block `instance_type` argument instead{{% /md %}}</p></dd>
-
-    <dt class="property-"
-            title="">
-        <span>custom_<wbr>ami_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}A custom Amazon Linux AMI for the cluster (instead of an EMR-owned AMI). Available in Amazon EMR version 5.7.0 and later.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>ebs_<wbr>root_<wbr>volume_<wbr>size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}Size in GiB of the EBS root device volume of the Linux AMI that is used for each EC2 instance. Available in Amazon EMR version 4.x and later.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>ec2_<wbr>attributes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterec2attributes">Dict[Cluster<wbr>Ec2Attributes]</a></span>
-    </dt>
-    <dd>{{% md %}}Attributes for the EC2 instances running the job flow. Defined below
-{{% /md %}}</dd>
-
-    <dt class="property- property-deprecated"
-            title=", Deprecated">
-        <span>instance_<wbr>groups</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterinstancegroup">List[Cluster<wbr>Instance<wbr>Group]</a></span>
-    </dt>
-    <dd>{{% md %}}Use the `master_instance_group` configuration block, `core_instance_group` configuration block and [`aws.emr.InstanceGroup` resource(s)](https://www.terraform.io/docs/providers/aws/r/emr_instance_group.html) instead. A list of `instance_group` objects for each instance group in the cluster. Exactly one of `master_instance_type` and `instance_group` must be specified. If `instance_group` is set, then it must contain a configuration block for at least the `MASTER` instance group type (as well as any additional instance groups). Cannot be specified if `master_instance_group` or `core_instance_group` configuration blocks are set. Defined below
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `master_instance_group` configuration block, `core_instance_group` configuration block, and `aws_emr_instance_group` resource(s) instead{{% /md %}}</p></dd>
-
-    <dt class="property-"
-            title="">
-        <span>keep_<wbr>job_<wbr>flow_<wbr>alive_<wbr>when_<wbr>no_<wbr>steps</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Switch on/off run cluster with no steps or when all steps are complete (default is on)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>kerberos_<wbr>attributes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterkerberosattributes">Dict[Cluster<wbr>Kerberos<wbr>Attributes]</a></span>
-    </dt>
-    <dd>{{% md %}}Kerberos configuration for the cluster. Defined below
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>log_<wbr>uri</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}S3 bucket to write the log files of the job flow. If a value is not provided, logs are not created
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>master_<wbr>instance_<wbr>group</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustermasterinstancegroup">Dict[Cluster<wbr>Master<wbr>Instance<wbr>Group]</a></span>
-    </dt>
-    <dd>{{% md %}}Configuration block to use an [Instance Group](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-group-configuration.html#emr-plan-instance-groups) for the [master node type](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-master-core-task-nodes.html#emr-plan-master). Cannot be specified if `master_instance_type` argument or `instance_group` configuration blocks are set. Detailed below.
-{{% /md %}}</dd>
-
-    <dt class="property- property-deprecated"
-            title=", Deprecated">
-        <span>master_<wbr>instance_<wbr>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Use the `master_instance_group` configuration block `instance_type` argument instead. The EC2 instance type of the master node. Cannot be specified if `master_instance_group` or `instance_group` configuration blocks are set.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `master_instance_group` configuration block `instance_type` argument instead{{% /md %}}</p></dd>
-
-    <dt class="property-"
-            title="">
         <span>master_<wbr>public_<wbr>dns</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The public DNS name of the master EC2 instance.
 * `core_instance_group.0.id` - Core node type Instance Group ID, if using Instance Group for this node type.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the job flow
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>release_<wbr>label</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The release label for the Amazon EMR release
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>scale_<wbr>down_<wbr>behavior</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The way that individual Amazon EC2 instances terminate when an automatic scale-in activity occurs or an `instance group` is resized.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>security_<wbr>configuration</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The security configuration name to attach to the EMR cluster. Only valid for EMR clusters with `release_label` 4.8.0 or greater
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>service_<wbr>role</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}IAM role that will be assumed by the Amazon EMR service to access AWS resources
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>step_<wbr>concurrency_<wbr>level</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The number of steps that can be executed concurrently. You can specify a maximum of 256 steps. Only valid for EMR clusters with `release_label` 5.28.0 or greater. (default is 1)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>steps</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterstep">List[Cluster<wbr>Step]</a></span>
-    </dt>
-    <dd>{{% md %}}List of steps to run when creating the cluster. Defined below. It is highly recommended to utilize [`ignoreChanges`](https://www.pulumi.com/docs/intro/concepts/programming-model/#ignorechanges) if other steps are being managed outside of this provider.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
-    </dt>
-    <dd>{{% md %}}list of tags to apply to the EMR Cluster
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>termination_<wbr>protection</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Switch on/off termination protection (default is `false`, except when using multiple master nodes). Before attempting to destroy the resource when termination protection is enabled, this configuration must be applied with its value set to `false`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>visible_<wbr>to_<wbr>all_<wbr>users</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Whether the job flow is visible to all IAM users of the AWS account associated with the job flow. Default `true`
 {{% /md %}}</dd>
 
 </dl>
@@ -2729,7 +1721,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Additional<wbr>Info</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A JSON string for selecting additional features such as adding proxy information. Note: Currently there is no API to retrieve the value of this argument after EMR cluster creation from provider, therefore this provider cannot detect drift from the actual EMR cluster if its value is changed outside this provider.
 {{% /md %}}</dd>
@@ -2738,7 +1730,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Applications</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of applications for the cluster. Valid values are: `Flink`, `Hadoop`, `Hive`, `Mahout`, `Pig`, `Spark`, and `JupyterHub` (as of EMR 5.14.0). Case insensitive
 {{% /md %}}</dd>
@@ -2747,7 +1739,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2755,7 +1747,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Autoscaling<wbr>Role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An IAM role for automatic scaling policies. The IAM role provides permissions that the automatic scaling feature requires to launch and terminate EC2 instances in an instance group.
 {{% /md %}}</dd>
@@ -2764,7 +1756,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Bootstrap<wbr>Actions</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterbootstrapaction">List&lt;Cluster<wbr>Bootstrap<wbr>Action<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#clusterbootstrapaction">List&lt;Cluster<wbr>Bootstrap<wbr>Action<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Ordered list of bootstrap actions that will be run before Hadoop is started on the cluster nodes. Defined below.
 {{% /md %}}</dd>
@@ -2773,7 +1765,7 @@ The following state arguments are supported:
             title="Optional">
         <span>State</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2781,7 +1773,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Configurations</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}List of configurations supplied for the EMR cluster you are creating
 {{% /md %}}</dd>
@@ -2790,7 +1782,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Configurations<wbr>Json</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A JSON string for supplying list of configurations for the EMR cluster.
 {{% /md %}}</dd>
@@ -2799,7 +1791,7 @@ The following state arguments are supported:
             title="Optional, Deprecated">
         <span>Core<wbr>Instance<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Use the `core_instance_group` configuration block `instance_count` argument instead. Number of Amazon EC2 instances used to execute the job flow. EMR will use one node as the cluster's master node and use the remainder of the nodes (`core_instance_count`-1) as core nodes. Cannot be specified if `core_instance_group` or `instance_group` configuration blocks are set. Default `1`
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `core_instance_group` configuration block `instance_count` argument instead{{% /md %}}</p></dd>
@@ -2808,7 +1800,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Core<wbr>Instance<wbr>Group</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustercoreinstancegroup">Cluster<wbr>Core<wbr>Instance<wbr>Group<wbr>Args?</a></span>
+        <span class="property-type"><a href="#clustercoreinstancegroup">Cluster<wbr>Core<wbr>Instance<wbr>Group<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block to use an [Instance Group](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-group-configuration.html#emr-plan-instance-groups) for the [core node type](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-master-core-task-nodes.html#emr-plan-core). Cannot be specified if `core_instance_count` argument, `core_instance_type` argument, or `instance_group` configuration blocks are set. Detailed below.
 {{% /md %}}</dd>
@@ -2817,7 +1809,7 @@ The following state arguments are supported:
             title="Optional, Deprecated">
         <span>Core<wbr>Instance<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Use the `core_instance_group` configuration block `instance_type` argument instead. The EC2 instance type of the slave nodes. Cannot be specified if `core_instance_group` or `instance_group` configuration blocks are set.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `core_instance_group` configuration block `instance_type` argument instead{{% /md %}}</p></dd>
@@ -2826,7 +1818,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Custom<wbr>Ami<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A custom Amazon Linux AMI for the cluster (instead of an EMR-owned AMI). Available in Amazon EMR version 5.7.0 and later.
 {{% /md %}}</dd>
@@ -2835,7 +1827,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Ebs<wbr>Root<wbr>Volume<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Size in GiB of the EBS root device volume of the Linux AMI that is used for each EC2 instance. Available in Amazon EMR version 4.x and later.
 {{% /md %}}</dd>
@@ -2844,7 +1836,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Ec2Attributes</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterec2attributes">Cluster<wbr>Ec2Attributes<wbr>Args?</a></span>
+        <span class="property-type"><a href="#clusterec2attributes">Cluster<wbr>Ec2Attributes<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Attributes for the EC2 instances running the job flow. Defined below
 {{% /md %}}</dd>
@@ -2853,7 +1845,7 @@ The following state arguments are supported:
             title="Optional, Deprecated">
         <span>Instance<wbr>Groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterinstancegroup">List&lt;Cluster<wbr>Instance<wbr>Group<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#clusterinstancegroup">List&lt;Cluster<wbr>Instance<wbr>Group<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Use the `master_instance_group` configuration block, `core_instance_group` configuration block and [`aws.emr.InstanceGroup` resource(s)](https://www.terraform.io/docs/providers/aws/r/emr_instance_group.html) instead. A list of `instance_group` objects for each instance group in the cluster. Exactly one of `master_instance_type` and `instance_group` must be specified. If `instance_group` is set, then it must contain a configuration block for at least the `MASTER` instance group type (as well as any additional instance groups). Cannot be specified if `master_instance_group` or `core_instance_group` configuration blocks are set. Defined below
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `master_instance_group` configuration block, `core_instance_group` configuration block, and `aws_emr_instance_group` resource(s) instead{{% /md %}}</p></dd>
@@ -2862,7 +1854,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Keep<wbr>Job<wbr>Flow<wbr>Alive<wbr>When<wbr>No<wbr>Steps</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Switch on/off run cluster with no steps or when all steps are complete (default is on)
 {{% /md %}}</dd>
@@ -2871,7 +1863,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Kerberos<wbr>Attributes</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterkerberosattributes">Cluster<wbr>Kerberos<wbr>Attributes<wbr>Args?</a></span>
+        <span class="property-type"><a href="#clusterkerberosattributes">Cluster<wbr>Kerberos<wbr>Attributes<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Kerberos configuration for the cluster. Defined below
 {{% /md %}}</dd>
@@ -2880,7 +1872,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Log<wbr>Uri</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}S3 bucket to write the log files of the job flow. If a value is not provided, logs are not created
 {{% /md %}}</dd>
@@ -2889,7 +1881,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Master<wbr>Instance<wbr>Group</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustermasterinstancegroup">Cluster<wbr>Master<wbr>Instance<wbr>Group<wbr>Args?</a></span>
+        <span class="property-type"><a href="#clustermasterinstancegroup">Cluster<wbr>Master<wbr>Instance<wbr>Group<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block to use an [Instance Group](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-group-configuration.html#emr-plan-instance-groups) for the [master node type](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-master-core-task-nodes.html#emr-plan-master). Cannot be specified if `master_instance_type` argument or `instance_group` configuration blocks are set. Detailed below.
 {{% /md %}}</dd>
@@ -2898,7 +1890,7 @@ The following state arguments are supported:
             title="Optional, Deprecated">
         <span>Master<wbr>Instance<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Use the `master_instance_group` configuration block `instance_type` argument instead. The EC2 instance type of the master node. Cannot be specified if `master_instance_group` or `instance_group` configuration blocks are set.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `master_instance_group` configuration block `instance_type` argument instead{{% /md %}}</p></dd>
@@ -2907,7 +1899,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Master<wbr>Public<wbr>Dns</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The public DNS name of the master EC2 instance.
 * `core_instance_group.0.id` - Core node type Instance Group ID, if using Instance Group for this node type.
@@ -2917,7 +1909,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the job flow
 {{% /md %}}</dd>
@@ -2926,7 +1918,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Release<wbr>Label</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The release label for the Amazon EMR release
 {{% /md %}}</dd>
@@ -2935,7 +1927,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Scale<wbr>Down<wbr>Behavior</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The way that individual Amazon EC2 instances terminate when an automatic scale-in activity occurs or an `instance group` is resized.
 {{% /md %}}</dd>
@@ -2944,7 +1936,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Security<wbr>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The security configuration name to attach to the EMR cluster. Only valid for EMR clusters with `release_label` 4.8.0 or greater
 {{% /md %}}</dd>
@@ -2953,7 +1945,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Service<wbr>Role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IAM role that will be assumed by the Amazon EMR service to access AWS resources
 {{% /md %}}</dd>
@@ -2962,7 +1954,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Step<wbr>Concurrency<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of steps that can be executed concurrently. You can specify a maximum of 256 steps. Only valid for EMR clusters with `release_label` 5.28.0 or greater. (default is 1)
 {{% /md %}}</dd>
@@ -2971,7 +1963,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Steps</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterstep">List&lt;Cluster<wbr>Step<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#clusterstep">List&lt;Cluster<wbr>Step<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of steps to run when creating the cluster. Defined below. It is highly recommended to utilize [`ignoreChanges`](https://www.pulumi.com/docs/intro/concepts/programming-model/#ignorechanges) if other steps are being managed outside of this provider.
 {{% /md %}}</dd>
@@ -2980,7 +1972,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}list of tags to apply to the EMR Cluster
 {{% /md %}}</dd>
@@ -2989,7 +1981,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Termination<wbr>Protection</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Switch on/off termination protection (default is `false`, except when using multiple master nodes). Before attempting to destroy the resource when termination protection is enabled, this configuration must be applied with its value set to `false`.
 {{% /md %}}</dd>
@@ -2998,7 +1990,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Visible<wbr>To<wbr>All<wbr>Users</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the job flow is visible to all IAM users of the AWS account associated with the job flow. Default `true`
 {{% /md %}}</dd>
@@ -3014,7 +2006,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Additional<wbr>Info</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A JSON string for selecting additional features such as adding proxy information. Note: Currently there is no API to retrieve the value of this argument after EMR cluster creation from provider, therefore this provider cannot detect drift from the actual EMR cluster if its value is changed outside this provider.
 {{% /md %}}</dd>
@@ -3032,7 +2024,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3040,7 +2032,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Autoscaling<wbr>Role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An IAM role for automatic scaling policies. The IAM role provides permissions that the automatic scaling feature requires to launch and terminate EC2 instances in an instance group.
 {{% /md %}}</dd>
@@ -3058,7 +2050,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Cluster<wbr>State</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3066,7 +2058,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Configurations</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}List of configurations supplied for the EMR cluster you are creating
 {{% /md %}}</dd>
@@ -3075,7 +2067,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Configurations<wbr>Json</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A JSON string for supplying list of configurations for the EMR cluster.
 {{% /md %}}</dd>
@@ -3084,7 +2076,7 @@ The following state arguments are supported:
             title="Optional, Deprecated">
         <span>Core<wbr>Instance<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Use the `core_instance_group` configuration block `instance_count` argument instead. Number of Amazon EC2 instances used to execute the job flow. EMR will use one node as the cluster's master node and use the remainder of the nodes (`core_instance_count`-1) as core nodes. Cannot be specified if `core_instance_group` or `instance_group` configuration blocks are set. Default `1`
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `core_instance_group` configuration block `instance_count` argument instead{{% /md %}}</p></dd>
@@ -3093,7 +2085,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Core<wbr>Instance<wbr>Group</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustercoreinstancegroup">*Cluster<wbr>Core<wbr>Instance<wbr>Group</a></span>
+        <span class="property-type"><a href="#clustercoreinstancegroup">Cluster<wbr>Core<wbr>Instance<wbr>Group</a></span>
     </dt>
     <dd>{{% md %}}Configuration block to use an [Instance Group](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-group-configuration.html#emr-plan-instance-groups) for the [core node type](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-master-core-task-nodes.html#emr-plan-core). Cannot be specified if `core_instance_count` argument, `core_instance_type` argument, or `instance_group` configuration blocks are set. Detailed below.
 {{% /md %}}</dd>
@@ -3102,7 +2094,7 @@ The following state arguments are supported:
             title="Optional, Deprecated">
         <span>Core<wbr>Instance<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Use the `core_instance_group` configuration block `instance_type` argument instead. The EC2 instance type of the slave nodes. Cannot be specified if `core_instance_group` or `instance_group` configuration blocks are set.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `core_instance_group` configuration block `instance_type` argument instead{{% /md %}}</p></dd>
@@ -3111,7 +2103,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Custom<wbr>Ami<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A custom Amazon Linux AMI for the cluster (instead of an EMR-owned AMI). Available in Amazon EMR version 5.7.0 and later.
 {{% /md %}}</dd>
@@ -3120,7 +2112,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Ebs<wbr>Root<wbr>Volume<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Size in GiB of the EBS root device volume of the Linux AMI that is used for each EC2 instance. Available in Amazon EMR version 4.x and later.
 {{% /md %}}</dd>
@@ -3129,7 +2121,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Ec2Attributes</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterec2attributes">*Cluster<wbr>Ec2Attributes</a></span>
+        <span class="property-type"><a href="#clusterec2attributes">Cluster<wbr>Ec2Attributes</a></span>
     </dt>
     <dd>{{% md %}}Attributes for the EC2 instances running the job flow. Defined below
 {{% /md %}}</dd>
@@ -3147,7 +2139,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Keep<wbr>Job<wbr>Flow<wbr>Alive<wbr>When<wbr>No<wbr>Steps</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Switch on/off run cluster with no steps or when all steps are complete (default is on)
 {{% /md %}}</dd>
@@ -3156,7 +2148,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Kerberos<wbr>Attributes</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterkerberosattributes">*Cluster<wbr>Kerberos<wbr>Attributes</a></span>
+        <span class="property-type"><a href="#clusterkerberosattributes">Cluster<wbr>Kerberos<wbr>Attributes</a></span>
     </dt>
     <dd>{{% md %}}Kerberos configuration for the cluster. Defined below
 {{% /md %}}</dd>
@@ -3165,7 +2157,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Log<wbr>Uri</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}S3 bucket to write the log files of the job flow. If a value is not provided, logs are not created
 {{% /md %}}</dd>
@@ -3174,7 +2166,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Master<wbr>Instance<wbr>Group</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustermasterinstancegroup">*Cluster<wbr>Master<wbr>Instance<wbr>Group</a></span>
+        <span class="property-type"><a href="#clustermasterinstancegroup">Cluster<wbr>Master<wbr>Instance<wbr>Group</a></span>
     </dt>
     <dd>{{% md %}}Configuration block to use an [Instance Group](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-group-configuration.html#emr-plan-instance-groups) for the [master node type](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-master-core-task-nodes.html#emr-plan-master). Cannot be specified if `master_instance_type` argument or `instance_group` configuration blocks are set. Detailed below.
 {{% /md %}}</dd>
@@ -3183,7 +2175,7 @@ The following state arguments are supported:
             title="Optional, Deprecated">
         <span>Master<wbr>Instance<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Use the `master_instance_group` configuration block `instance_type` argument instead. The EC2 instance type of the master node. Cannot be specified if `master_instance_group` or `instance_group` configuration blocks are set.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `master_instance_group` configuration block `instance_type` argument instead{{% /md %}}</p></dd>
@@ -3192,7 +2184,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Master<wbr>Public<wbr>Dns</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The public DNS name of the master EC2 instance.
 * `core_instance_group.0.id` - Core node type Instance Group ID, if using Instance Group for this node type.
@@ -3202,7 +2194,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the job flow
 {{% /md %}}</dd>
@@ -3211,7 +2203,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Release<wbr>Label</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The release label for the Amazon EMR release
 {{% /md %}}</dd>
@@ -3220,7 +2212,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Scale<wbr>Down<wbr>Behavior</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The way that individual Amazon EC2 instances terminate when an automatic scale-in activity occurs or an `instance group` is resized.
 {{% /md %}}</dd>
@@ -3229,7 +2221,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Security<wbr>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The security configuration name to attach to the EMR cluster. Only valid for EMR clusters with `release_label` 4.8.0 or greater
 {{% /md %}}</dd>
@@ -3238,7 +2230,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Service<wbr>Role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IAM role that will be assumed by the Amazon EMR service to access AWS resources
 {{% /md %}}</dd>
@@ -3247,7 +2239,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Step<wbr>Concurrency<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of steps that can be executed concurrently. You can specify a maximum of 256 steps. Only valid for EMR clusters with `release_label` 5.28.0 or greater. (default is 1)
 {{% /md %}}</dd>
@@ -3274,7 +2266,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Termination<wbr>Protection</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Switch on/off termination protection (default is `false`, except when using multiple master nodes). Before attempting to destroy the resource when termination protection is enabled, this configuration must be applied with its value set to `false`.
 {{% /md %}}</dd>
@@ -3283,7 +2275,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Visible<wbr>To<wbr>All<wbr>Users</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the job flow is visible to all IAM users of the AWS account associated with the job flow. Default `true`
 {{% /md %}}</dd>
@@ -3299,7 +2291,7 @@ The following state arguments are supported:
             title="Optional">
         <span>additional<wbr>Info</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A JSON string for selecting additional features such as adding proxy information. Note: Currently there is no API to retrieve the value of this argument after EMR cluster creation from provider, therefore this provider cannot detect drift from the actual EMR cluster if its value is changed outside this provider.
 {{% /md %}}</dd>
@@ -3308,7 +2300,7 @@ The following state arguments are supported:
             title="Optional">
         <span>applications</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of applications for the cluster. Valid values are: `Flink`, `Hadoop`, `Hive`, `Mahout`, `Pig`, `Spark`, and `JupyterHub` (as of EMR 5.14.0). Case insensitive
 {{% /md %}}</dd>
@@ -3317,7 +2309,7 @@ The following state arguments are supported:
             title="Optional">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3325,7 +2317,7 @@ The following state arguments are supported:
             title="Optional">
         <span>autoscaling<wbr>Role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An IAM role for automatic scaling policies. The IAM role provides permissions that the automatic scaling feature requires to launch and terminate EC2 instances in an instance group.
 {{% /md %}}</dd>
@@ -3334,7 +2326,7 @@ The following state arguments are supported:
             title="Optional">
         <span>bootstrap<wbr>Actions</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterbootstrapaction">Cluster<wbr>Bootstrap<wbr>Action[]?</a></span>
+        <span class="property-type"><a href="#clusterbootstrapaction">Cluster<wbr>Bootstrap<wbr>Action[]</a></span>
     </dt>
     <dd>{{% md %}}Ordered list of bootstrap actions that will be run before Hadoop is started on the cluster nodes. Defined below.
 {{% /md %}}</dd>
@@ -3343,7 +2335,7 @@ The following state arguments are supported:
             title="Optional">
         <span>cluster<wbr>State</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3351,7 +2343,7 @@ The following state arguments are supported:
             title="Optional">
         <span>configurations</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}List of configurations supplied for the EMR cluster you are creating
 {{% /md %}}</dd>
@@ -3360,7 +2352,7 @@ The following state arguments are supported:
             title="Optional">
         <span>configurations<wbr>Json</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A JSON string for supplying list of configurations for the EMR cluster.
 {{% /md %}}</dd>
@@ -3369,7 +2361,7 @@ The following state arguments are supported:
             title="Optional, Deprecated">
         <span>core<wbr>Instance<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Use the `core_instance_group` configuration block `instance_count` argument instead. Number of Amazon EC2 instances used to execute the job flow. EMR will use one node as the cluster's master node and use the remainder of the nodes (`core_instance_count`-1) as core nodes. Cannot be specified if `core_instance_group` or `instance_group` configuration blocks are set. Default `1`
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `core_instance_group` configuration block `instance_count` argument instead{{% /md %}}</p></dd>
@@ -3378,7 +2370,7 @@ The following state arguments are supported:
             title="Optional">
         <span>core<wbr>Instance<wbr>Group</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustercoreinstancegroup">Cluster<wbr>Core<wbr>Instance<wbr>Group?</a></span>
+        <span class="property-type"><a href="#clustercoreinstancegroup">Cluster<wbr>Core<wbr>Instance<wbr>Group</a></span>
     </dt>
     <dd>{{% md %}}Configuration block to use an [Instance Group](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-group-configuration.html#emr-plan-instance-groups) for the [core node type](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-master-core-task-nodes.html#emr-plan-core). Cannot be specified if `core_instance_count` argument, `core_instance_type` argument, or `instance_group` configuration blocks are set. Detailed below.
 {{% /md %}}</dd>
@@ -3387,7 +2379,7 @@ The following state arguments are supported:
             title="Optional, Deprecated">
         <span>core<wbr>Instance<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Use the `core_instance_group` configuration block `instance_type` argument instead. The EC2 instance type of the slave nodes. Cannot be specified if `core_instance_group` or `instance_group` configuration blocks are set.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `core_instance_group` configuration block `instance_type` argument instead{{% /md %}}</p></dd>
@@ -3396,7 +2388,7 @@ The following state arguments are supported:
             title="Optional">
         <span>custom<wbr>Ami<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A custom Amazon Linux AMI for the cluster (instead of an EMR-owned AMI). Available in Amazon EMR version 5.7.0 and later.
 {{% /md %}}</dd>
@@ -3405,7 +2397,7 @@ The following state arguments are supported:
             title="Optional">
         <span>ebs<wbr>Root<wbr>Volume<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Size in GiB of the EBS root device volume of the Linux AMI that is used for each EC2 instance. Available in Amazon EMR version 4.x and later.
 {{% /md %}}</dd>
@@ -3414,7 +2406,7 @@ The following state arguments are supported:
             title="Optional">
         <span>ec2Attributes</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterec2attributes">Cluster<wbr>Ec2Attributes?</a></span>
+        <span class="property-type"><a href="#clusterec2attributes">Cluster<wbr>Ec2Attributes</a></span>
     </dt>
     <dd>{{% md %}}Attributes for the EC2 instances running the job flow. Defined below
 {{% /md %}}</dd>
@@ -3423,7 +2415,7 @@ The following state arguments are supported:
             title="Optional, Deprecated">
         <span>instance<wbr>Groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterinstancegroup">Cluster<wbr>Instance<wbr>Group[]?</a></span>
+        <span class="property-type"><a href="#clusterinstancegroup">Cluster<wbr>Instance<wbr>Group[]</a></span>
     </dt>
     <dd>{{% md %}}Use the `master_instance_group` configuration block, `core_instance_group` configuration block and [`aws.emr.InstanceGroup` resource(s)](https://www.terraform.io/docs/providers/aws/r/emr_instance_group.html) instead. A list of `instance_group` objects for each instance group in the cluster. Exactly one of `master_instance_type` and `instance_group` must be specified. If `instance_group` is set, then it must contain a configuration block for at least the `MASTER` instance group type (as well as any additional instance groups). Cannot be specified if `master_instance_group` or `core_instance_group` configuration blocks are set. Defined below
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `master_instance_group` configuration block, `core_instance_group` configuration block, and `aws_emr_instance_group` resource(s) instead{{% /md %}}</p></dd>
@@ -3432,7 +2424,7 @@ The following state arguments are supported:
             title="Optional">
         <span>keep<wbr>Job<wbr>Flow<wbr>Alive<wbr>When<wbr>No<wbr>Steps</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Switch on/off run cluster with no steps or when all steps are complete (default is on)
 {{% /md %}}</dd>
@@ -3441,7 +2433,7 @@ The following state arguments are supported:
             title="Optional">
         <span>kerberos<wbr>Attributes</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterkerberosattributes">Cluster<wbr>Kerberos<wbr>Attributes?</a></span>
+        <span class="property-type"><a href="#clusterkerberosattributes">Cluster<wbr>Kerberos<wbr>Attributes</a></span>
     </dt>
     <dd>{{% md %}}Kerberos configuration for the cluster. Defined below
 {{% /md %}}</dd>
@@ -3450,7 +2442,7 @@ The following state arguments are supported:
             title="Optional">
         <span>log<wbr>Uri</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}S3 bucket to write the log files of the job flow. If a value is not provided, logs are not created
 {{% /md %}}</dd>
@@ -3459,7 +2451,7 @@ The following state arguments are supported:
             title="Optional">
         <span>master<wbr>Instance<wbr>Group</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustermasterinstancegroup">Cluster<wbr>Master<wbr>Instance<wbr>Group?</a></span>
+        <span class="property-type"><a href="#clustermasterinstancegroup">Cluster<wbr>Master<wbr>Instance<wbr>Group</a></span>
     </dt>
     <dd>{{% md %}}Configuration block to use an [Instance Group](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-instance-group-configuration.html#emr-plan-instance-groups) for the [master node type](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-master-core-task-nodes.html#emr-plan-master). Cannot be specified if `master_instance_type` argument or `instance_group` configuration blocks are set. Detailed below.
 {{% /md %}}</dd>
@@ -3468,7 +2460,7 @@ The following state arguments are supported:
             title="Optional, Deprecated">
         <span>master<wbr>Instance<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Use the `master_instance_group` configuration block `instance_type` argument instead. The EC2 instance type of the master node. Cannot be specified if `master_instance_group` or `instance_group` configuration blocks are set.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `master_instance_group` configuration block `instance_type` argument instead{{% /md %}}</p></dd>
@@ -3477,7 +2469,7 @@ The following state arguments are supported:
             title="Optional">
         <span>master<wbr>Public<wbr>Dns</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The public DNS name of the master EC2 instance.
 * `core_instance_group.0.id` - Core node type Instance Group ID, if using Instance Group for this node type.
@@ -3487,7 +2479,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the job flow
 {{% /md %}}</dd>
@@ -3496,7 +2488,7 @@ The following state arguments are supported:
             title="Optional">
         <span>release<wbr>Label</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The release label for the Amazon EMR release
 {{% /md %}}</dd>
@@ -3505,7 +2497,7 @@ The following state arguments are supported:
             title="Optional">
         <span>scale<wbr>Down<wbr>Behavior</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The way that individual Amazon EC2 instances terminate when an automatic scale-in activity occurs or an `instance group` is resized.
 {{% /md %}}</dd>
@@ -3514,7 +2506,7 @@ The following state arguments are supported:
             title="Optional">
         <span>security<wbr>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The security configuration name to attach to the EMR cluster. Only valid for EMR clusters with `release_label` 4.8.0 or greater
 {{% /md %}}</dd>
@@ -3523,7 +2515,7 @@ The following state arguments are supported:
             title="Optional">
         <span>service<wbr>Role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IAM role that will be assumed by the Amazon EMR service to access AWS resources
 {{% /md %}}</dd>
@@ -3532,7 +2524,7 @@ The following state arguments are supported:
             title="Optional">
         <span>step<wbr>Concurrency<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of steps that can be executed concurrently. You can specify a maximum of 256 steps. Only valid for EMR clusters with `release_label` 5.28.0 or greater. (default is 1)
 {{% /md %}}</dd>
@@ -3541,7 +2533,7 @@ The following state arguments are supported:
             title="Optional">
         <span>steps</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterstep">Cluster<wbr>Step[]?</a></span>
+        <span class="property-type"><a href="#clusterstep">Cluster<wbr>Step[]</a></span>
     </dt>
     <dd>{{% md %}}List of steps to run when creating the cluster. Defined below. It is highly recommended to utilize [`ignoreChanges`](https://www.pulumi.com/docs/intro/concepts/programming-model/#ignorechanges) if other steps are being managed outside of this provider.
 {{% /md %}}</dd>
@@ -3550,7 +2542,7 @@ The following state arguments are supported:
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}list of tags to apply to the EMR Cluster
 {{% /md %}}</dd>
@@ -3559,7 +2551,7 @@ The following state arguments are supported:
             title="Optional">
         <span>termination<wbr>Protection</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Switch on/off termination protection (default is `false`, except when using multiple master nodes). Before attempting to destroy the resource when termination protection is enabled, this configuration must be applied with its value set to `false`.
 {{% /md %}}</dd>
@@ -3568,7 +2560,7 @@ The following state arguments are supported:
             title="Optional">
         <span>visible<wbr>To<wbr>All<wbr>Users</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the job flow is visible to all IAM users of the AWS account associated with the job flow. Default `true`
 {{% /md %}}</dd>
@@ -3887,14 +2879,6 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Name</span>
@@ -3909,6 +2893,14 @@ The following state arguments are supported:
         <span>Path</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3919,14 +2911,6 @@ The following state arguments are supported:
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Name</span>
@@ -3944,20 +2928,20 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>Args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -3973,6 +2957,14 @@ The following state arguments are supported:
         <span>path</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3983,14 +2975,6 @@ The following state arguments are supported:
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>name</span>
@@ -4005,6 +2989,14 @@ The following state arguments are supported:
         <span>path</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4030,47 +3022,6 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Autoscaling<wbr>Policy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Bid<wbr>Price</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Ebs<wbr>Configs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustercoreinstancegroupebsconfig">List&lt;Cluster<wbr>Core<wbr>Instance<wbr>Group<wbr>Ebs<wbr>Config<wbr>Args&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The ID of the EMR Cluster
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Instance<wbr>Count</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Instance<wbr>Type</span>
@@ -4081,9 +3032,50 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>Autoscaling<wbr>Policy</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Bid<wbr>Price</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Ebs<wbr>Configs</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustercoreinstancegroupebsconfig">List&lt;Cluster<wbr>Core<wbr>Instance<wbr>Group<wbr>Ebs<wbr>Config<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the EMR Cluster
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Instance<wbr>Count</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the job flow
 {{% /md %}}</dd>
@@ -4095,11 +3087,19 @@ The following state arguments are supported:
 {{% choosable language go %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Instance<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Autoscaling<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4107,7 +3107,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Bid<wbr>Price</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4123,7 +3123,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the EMR Cluster
 {{% /md %}}</dd>
@@ -4132,15 +3132,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Instance<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Instance<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4148,7 +3140,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the job flow
 {{% /md %}}</dd>
@@ -4160,47 +3152,6 @@ The following state arguments are supported:
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>autoscaling<wbr>Policy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>bid<wbr>Price</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>ebs<wbr>Configs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustercoreinstancegroupebsconfig">Cluster<wbr>Core<wbr>Instance<wbr>Group<wbr>Ebs<wbr>Config[]?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The ID of the EMR Cluster
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>instance<wbr>Count</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>instance<wbr>Type</span>
@@ -4211,9 +3162,50 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>autoscaling<wbr>Policy</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>bid<wbr>Price</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>ebs<wbr>Configs</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustercoreinstancegroupebsconfig">Cluster<wbr>Core<wbr>Instance<wbr>Group<wbr>Ebs<wbr>Config[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the EMR Cluster
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>instance<wbr>Count</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the job flow
 {{% /md %}}</dd>
@@ -4224,6 +3216,14 @@ The following state arguments are supported:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>instance_<wbr>type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4266,14 +3266,6 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>instance_<wbr>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>name</span>
@@ -4305,14 +3297,6 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Iops</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Size</span>
@@ -4331,9 +3315,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>Iops</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Volumes<wbr>Per<wbr>Instance</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4344,14 +3336,6 @@ The following state arguments are supported:
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Iops</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Size</span>
@@ -4370,9 +3354,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>Iops</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Volumes<wbr>Per<wbr>Instance</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4382,14 +3374,6 @@ The following state arguments are supported:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>iops</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -4409,9 +3393,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>iops</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>volumes<wbr>Per<wbr>Instance</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4421,14 +3413,6 @@ The following state arguments are supported:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>iops</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -4443,6 +3427,14 @@ The following state arguments are supported:
         <span>type</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>iops</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4476,38 +3468,6 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Additional<wbr>Master<wbr>Security<wbr>Groups</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Additional<wbr>Slave<wbr>Security<wbr>Groups</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Emr<wbr>Managed<wbr>Master<wbr>Security<wbr>Group</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Emr<wbr>Managed<wbr>Slave<wbr>Security<wbr>Group</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Instance<wbr>Profile</span>
@@ -4518,9 +3478,41 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>Additional<wbr>Master<wbr>Security<wbr>Groups</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Additional<wbr>Slave<wbr>Security<wbr>Groups</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Emr<wbr>Managed<wbr>Master<wbr>Security<wbr>Group</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Emr<wbr>Managed<wbr>Slave<wbr>Security<wbr>Group</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Key<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4528,7 +3520,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Service<wbr>Access<wbr>Security<wbr>Group</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4536,7 +3528,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Subnet<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4547,38 +3539,6 @@ The following state arguments are supported:
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Additional<wbr>Master<wbr>Security<wbr>Groups</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Additional<wbr>Slave<wbr>Security<wbr>Groups</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Emr<wbr>Managed<wbr>Master<wbr>Security<wbr>Group</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Emr<wbr>Managed<wbr>Slave<wbr>Security<wbr>Group</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Instance<wbr>Profile</span>
@@ -4589,9 +3549,41 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>Additional<wbr>Master<wbr>Security<wbr>Groups</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Additional<wbr>Slave<wbr>Security<wbr>Groups</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Emr<wbr>Managed<wbr>Master<wbr>Security<wbr>Group</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Emr<wbr>Managed<wbr>Slave<wbr>Security<wbr>Group</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Key<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4599,7 +3591,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Service<wbr>Access<wbr>Security<wbr>Group</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4607,7 +3599,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Subnet<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4617,38 +3609,6 @@ The following state arguments are supported:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>additional<wbr>Master<wbr>Security<wbr>Groups</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>additional<wbr>Slave<wbr>Security<wbr>Groups</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>emr<wbr>Managed<wbr>Master<wbr>Security<wbr>Group</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>emr<wbr>Managed<wbr>Slave<wbr>Security<wbr>Group</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -4660,9 +3620,41 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>additional<wbr>Master<wbr>Security<wbr>Groups</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>additional<wbr>Slave<wbr>Security<wbr>Groups</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>emr<wbr>Managed<wbr>Master<wbr>Security<wbr>Group</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>emr<wbr>Managed<wbr>Slave<wbr>Security<wbr>Group</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>key<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4670,7 +3662,7 @@ The following state arguments are supported:
             title="Optional">
         <span>service<wbr>Access<wbr>Security<wbr>Group</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4678,7 +3670,7 @@ The following state arguments are supported:
             title="Optional">
         <span>subnet<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4688,6 +3680,14 @@ The following state arguments are supported:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>instance<wbr>Profile</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -4716,14 +3716,6 @@ The following state arguments are supported:
     <dt class="property-optional"
             title="Optional">
         <span>emr<wbr>Managed<wbr>Slave<wbr>Security<wbr>Group</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>instance<wbr>Profile</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -4775,11 +3767,27 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Instance<wbr>Role</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Instance<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Autoscaling<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4787,7 +3795,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Bid<wbr>Price</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4795,7 +3803,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Ebs<wbr>Configs</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterinstancegroupebsconfig">List&lt;Cluster<wbr>Instance<wbr>Group<wbr>Ebs<wbr>Config<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#clusterinstancegroupebsconfig">List&lt;Cluster<wbr>Instance<wbr>Group<wbr>Ebs<wbr>Config<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4803,7 +3811,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the EMR Cluster
 {{% /md %}}</dd>
@@ -4812,9 +3820,25 @@ The following state arguments are supported:
             title="Optional">
         <span>Instance<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the job flow
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
@@ -4834,25 +3858,9 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The name of the job flow
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
         <span>Autoscaling<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4860,7 +3868,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Bid<wbr>Price</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4876,7 +3884,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the EMR Cluster
 {{% /md %}}</dd>
@@ -4885,23 +3893,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Instance<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Instance<wbr>Role</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Instance<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4909,7 +3901,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the job flow
 {{% /md %}}</dd>
@@ -4920,47 +3912,6 @@ The following state arguments are supported:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>autoscaling<wbr>Policy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>bid<wbr>Price</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>ebs<wbr>Configs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterinstancegroupebsconfig">Cluster<wbr>Instance<wbr>Group<wbr>Ebs<wbr>Config[]?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The ID of the EMR Cluster
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>instance<wbr>Count</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -4980,9 +3931,50 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>autoscaling<wbr>Policy</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>bid<wbr>Price</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>ebs<wbr>Configs</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterinstancegroupebsconfig">Cluster<wbr>Instance<wbr>Group<wbr>Ebs<wbr>Config[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the EMR Cluster
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>instance<wbr>Count</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the job flow
 {{% /md %}}</dd>
@@ -4993,6 +3985,22 @@ The following state arguments are supported:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>instance<wbr>Role</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>instance_<wbr>type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5035,22 +4043,6 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>instance<wbr>Role</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>instance_<wbr>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>name</span>
@@ -5082,14 +4074,6 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Iops</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Size</span>
@@ -5108,9 +4092,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>Iops</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Volumes<wbr>Per<wbr>Instance</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5121,14 +4113,6 @@ The following state arguments are supported:
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Iops</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Size</span>
@@ -5147,9 +4131,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>Iops</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Volumes<wbr>Per<wbr>Instance</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5159,14 +4151,6 @@ The following state arguments are supported:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>iops</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -5186,9 +4170,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>iops</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>volumes<wbr>Per<wbr>Instance</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5198,14 +4190,6 @@ The following state arguments are supported:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>iops</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -5220,6 +4204,14 @@ The following state arguments are supported:
         <span>type</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>iops</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5253,30 +4245,6 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Ad<wbr>Domain<wbr>Join<wbr>Password</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Ad<wbr>Domain<wbr>Join<wbr>User</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Cross<wbr>Realm<wbr>Trust<wbr>Principal<wbr>Password</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Kdc<wbr>Admin<wbr>Password</span>
@@ -5288,6 +4256,30 @@ The following state arguments are supported:
     <dt class="property-required"
             title="Required">
         <span>Realm</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Ad<wbr>Domain<wbr>Join<wbr>Password</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Ad<wbr>Domain<wbr>Join<wbr>User</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Cross<wbr>Realm<wbr>Trust<wbr>Principal<wbr>Password</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
@@ -5300,30 +4292,6 @@ The following state arguments are supported:
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Ad<wbr>Domain<wbr>Join<wbr>Password</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Ad<wbr>Domain<wbr>Join<wbr>User</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Cross<wbr>Realm<wbr>Trust<wbr>Principal<wbr>Password</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Kdc<wbr>Admin<wbr>Password</span>
@@ -5340,36 +4308,36 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>Ad<wbr>Domain<wbr>Join<wbr>Password</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Ad<wbr>Domain<wbr>Join<wbr>User</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Cross<wbr>Realm<wbr>Trust<wbr>Principal<wbr>Password</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>ad<wbr>Domain<wbr>Join<wbr>Password</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>ad<wbr>Domain<wbr>Join<wbr>User</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>cross<wbr>Realm<wbr>Trust<wbr>Principal<wbr>Password</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -5382,6 +4350,30 @@ The following state arguments are supported:
     <dt class="property-required"
             title="Required">
         <span>realm</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>ad<wbr>Domain<wbr>Join<wbr>Password</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>ad<wbr>Domain<wbr>Join<wbr>User</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>cross<wbr>Realm<wbr>Trust<wbr>Principal<wbr>Password</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
@@ -5394,6 +4386,22 @@ The following state arguments are supported:
 {{% choosable language python %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>kdc<wbr>Admin<wbr>Password</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>realm</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>ad<wbr>Domain<wbr>Join<wbr>Password</span>
@@ -5413,22 +4421,6 @@ The following state arguments are supported:
     <dt class="property-optional"
             title="Optional">
         <span>cross<wbr>Realm<wbr>Trust<wbr>Principal<wbr>Password</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>kdc<wbr>Admin<wbr>Password</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>realm</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -5456,39 +4448,6 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Bid<wbr>Price</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Ebs<wbr>Configs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustermasterinstancegroupebsconfig">List&lt;Cluster<wbr>Master<wbr>Instance<wbr>Group<wbr>Ebs<wbr>Config<wbr>Args&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The ID of the EMR Cluster
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Instance<wbr>Count</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Instance<wbr>Type</span>
@@ -5499,9 +4458,42 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>Bid<wbr>Price</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Ebs<wbr>Configs</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustermasterinstancegroupebsconfig">List&lt;Cluster<wbr>Master<wbr>Instance<wbr>Group<wbr>Ebs<wbr>Config<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the EMR Cluster
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Instance<wbr>Count</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the job flow
 {{% /md %}}</dd>
@@ -5513,11 +4505,19 @@ The following state arguments are supported:
 {{% choosable language go %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Instance<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Bid<wbr>Price</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5533,7 +4533,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the EMR Cluster
 {{% /md %}}</dd>
@@ -5542,15 +4542,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Instance<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Instance<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5558,7 +4550,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the job flow
 {{% /md %}}</dd>
@@ -5570,39 +4562,6 @@ The following state arguments are supported:
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>bid<wbr>Price</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>ebs<wbr>Configs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustermasterinstancegroupebsconfig">Cluster<wbr>Master<wbr>Instance<wbr>Group<wbr>Ebs<wbr>Config[]?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The ID of the EMR Cluster
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>instance<wbr>Count</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>instance<wbr>Type</span>
@@ -5613,9 +4572,42 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>bid<wbr>Price</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>ebs<wbr>Configs</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustermasterinstancegroupebsconfig">Cluster<wbr>Master<wbr>Instance<wbr>Group<wbr>Ebs<wbr>Config[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the EMR Cluster
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>instance<wbr>Count</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the job flow
 {{% /md %}}</dd>
@@ -5626,6 +4618,14 @@ The following state arguments are supported:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>instance_<wbr>type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5660,14 +4660,6 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>instance_<wbr>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>name</span>
@@ -5699,14 +4691,6 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Iops</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Size</span>
@@ -5725,9 +4709,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>Iops</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Volumes<wbr>Per<wbr>Instance</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5738,14 +4730,6 @@ The following state arguments are supported:
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Iops</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Size</span>
@@ -5764,9 +4748,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>Iops</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Volumes<wbr>Per<wbr>Instance</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5776,14 +4768,6 @@ The following state arguments are supported:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>iops</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -5803,9 +4787,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>iops</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>volumes<wbr>Per<wbr>Instance</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5815,14 +4807,6 @@ The following state arguments are supported:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>iops</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -5837,6 +4821,14 @@ The following state arguments are supported:
         <span>type</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>iops</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6013,14 +5005,6 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Jar</span>
@@ -6031,9 +5015,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>Args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Main<wbr>Class</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6041,7 +5033,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Properties</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6052,14 +5044,6 @@ The following state arguments are supported:
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Jar</span>
@@ -6070,9 +5054,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>Args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Main<wbr>Class</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6091,14 +5083,6 @@ The following state arguments are supported:
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>jar</span>
@@ -6109,9 +5093,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>main<wbr>Class</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6119,7 +5111,7 @@ The following state arguments are supported:
             title="Optional">
         <span>properties</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6130,19 +5122,19 @@ The following state arguments are supported:
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>args</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>jar</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>args</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

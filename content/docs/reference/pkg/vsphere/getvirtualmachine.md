@@ -51,13 +51,13 @@ const template = datacenter.apply(datacenter => vsphere.getVirtualMachine({
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupVirtualMachine<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/go/vsphere/?tab=doc#GetVirtualMachineArgs">GetVirtualMachineArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/go/vsphere/?tab=doc#LookupVirtualMachineResult">LookupVirtualMachineResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupVirtualMachine<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/go/vsphere/?tab=doc#GetVirtualMachineArgs">GetVirtualMachineArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/go/vsphere/?tab=doc#LookupVirtualMachineResult">LookupVirtualMachineResult</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetVirtualMachine </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.Vsphere.GetVirtualMachineResult.html">GetVirtualMachineResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.Vsphere.GetVirtualMachineArgs.html">GetVirtualMachineArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.Vsphere.GetVirtualMachineResult.html">GetVirtualMachineResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.VSphere.GetVirtualMachineArgs.html">GetVirtualMachineArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -70,19 +70,6 @@ The following arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Datacenter<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The [managed object reference
-ID][docs-about-morefs] of the datacenter the virtual machine is located in.
-This can be omitted if the search path used in `name` is an absolute path.
-For default datacenters, use the `id` attribute from an empty
-`vsphere..Datacenter` data source.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Name</span>
@@ -95,9 +82,22 @@ path.
 
     <dt class="property-optional"
             title="Optional">
+        <span>Datacenter<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The [managed object reference
+ID][docs-about-morefs] of the datacenter the virtual machine is located in.
+This can be omitted if the search path used in `name` is an absolute path.
+For default datacenters, use the `id` attribute from an empty
+`vsphere..Datacenter` data source.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Scsi<wbr>Controller<wbr>Scan<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of SCSI controllers to
 scan for disk attributes and controller types on. Default: `1`.
@@ -110,19 +110,6 @@ scan for disk attributes and controller types on. Default: `1`.
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Datacenter<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The [managed object reference
-ID][docs-about-morefs] of the datacenter the virtual machine is located in.
-This can be omitted if the search path used in `name` is an absolute path.
-For default datacenters, use the `id` attribute from an empty
-`vsphere..Datacenter` data source.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Name</span>
@@ -135,9 +122,22 @@ path.
 
     <dt class="property-optional"
             title="Optional">
+        <span>Datacenter<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The [managed object reference
+ID][docs-about-morefs] of the datacenter the virtual machine is located in.
+This can be omitted if the search path used in `name` is an absolute path.
+For default datacenters, use the `id` attribute from an empty
+`vsphere..Datacenter` data source.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Scsi<wbr>Controller<wbr>Scan<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of SCSI controllers to
 scan for disk attributes and controller types on. Default: `1`.
@@ -149,19 +149,6 @@ scan for disk attributes and controller types on. Default: `1`.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>datacenter<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The [managed object reference
-ID][docs-about-morefs] of the datacenter the virtual machine is located in.
-This can be omitted if the search path used in `name` is an absolute path.
-For default datacenters, use the `id` attribute from an empty
-`vsphere..Datacenter` data source.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -175,9 +162,22 @@ path.
 
     <dt class="property-optional"
             title="Optional">
+        <span>datacenter<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The [managed object reference
+ID][docs-about-morefs] of the datacenter the virtual machine is located in.
+This can be omitted if the search path used in `name` is an absolute path.
+For default datacenters, use the `id` attribute from an empty
+`vsphere..Datacenter` data source.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>scsi<wbr>Controller<wbr>Scan<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of SCSI controllers to
 scan for disk attributes and controller types on. Default: `1`.
@@ -190,6 +190,16 @@ scan for disk attributes and controller types on. Default: `1`.
 {{% choosable language python %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the virtual machine. This can be a name or
+path.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>datacenter_<wbr>id</span>
@@ -201,16 +211,6 @@ ID][docs-about-morefs] of the datacenter the virtual machine is located in.
 This can be omitted if the search path used in `name` is an absolute path.
 For default datacenters, use the `id` attribute from an empty
 `vsphere..Datacenter` data source.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the virtual machine. This can be a name or
-path.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -255,17 +255,9 @@ guest_id is a non-specific operating system, like `otherGuest`.
 
     <dt class="property-"
             title="">
-        <span>Datacenter<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Disks</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getvirtualmachinedisk">List&lt;Get<wbr>Virtual<wbr>Machine<wbr>Disk&gt;</a></span>
+        <span class="property-type"><a href="#getvirtualmachinedisk">List&lt;Pulumi.<wbr>VSphere.<wbr>Outputs.<wbr>Get<wbr>Virtual<wbr>Machine<wbr>Disk&gt;</a></span>
     </dt>
     <dd>{{% md %}}Information about each of the disks on this virtual machine or
 template. These are sorted by bus and unit number so that they can be applied
@@ -299,7 +291,7 @@ are scanned for disks. The sub-attributes are:
             title="">
         <span>Guest<wbr>Ip<wbr>Addresses</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of IP addresses as reported by VMWare tools.
 {{% /md %}}</dd>
@@ -325,7 +317,7 @@ are scanned for disks. The sub-attributes are:
             title="">
         <span>Network<wbr>Interface<wbr>Types</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The network interface types for each network
 interface found on the virtual machine, in device bus order. Will be one of
@@ -345,14 +337,6 @@ controllers defined by `scsi_controller_scan_count` are scanned.
 
     <dt class="property-"
             title="">
-        <span>Scsi<wbr>Controller<wbr>Scan<wbr>Count</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Scsi<wbr>Type</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -363,6 +347,22 @@ SAS), `pvscsi` (VMware Paravirtual), `buslogic` (BusLogic), or `mixed` when
 there are multiple controller types. Only the first number of controllers
 defined by `scsi_controller_scan_count` are scanned.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Datacenter<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Scsi<wbr>Controller<wbr>Scan<wbr>Count</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -380,14 +380,6 @@ defined by `scsi_controller_scan_count` are scanned.
     <dd>{{% md %}}The alternate guest name of the virtual machine when
 guest_id is a non-specific operating system, like `otherGuest`.
 {{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Datacenter<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -473,14 +465,6 @@ controllers defined by `scsi_controller_scan_count` are scanned.
 
     <dt class="property-"
             title="">
-        <span>Scsi<wbr>Controller<wbr>Scan<wbr>Count</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Scsi<wbr>Type</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -491,6 +475,22 @@ SAS), `pvscsi` (VMware Paravirtual), `buslogic` (BusLogic), or `mixed` when
 there are multiple controller types. Only the first number of controllers
 defined by `scsi_controller_scan_count` are scanned.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Datacenter<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Scsi<wbr>Controller<wbr>Scan<wbr>Count</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -508,14 +508,6 @@ defined by `scsi_controller_scan_count` are scanned.
     <dd>{{% md %}}The alternate guest name of the virtual machine when
 guest_id is a non-specific operating system, like `otherGuest`.
 {{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>datacenter<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -601,14 +593,6 @@ controllers defined by `scsi_controller_scan_count` are scanned.
 
     <dt class="property-"
             title="">
-        <span>scsi<wbr>Controller<wbr>Scan<wbr>Count</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>scsi<wbr>Type</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -619,6 +603,22 @@ SAS), `pvscsi` (VMware Paravirtual), `buslogic` (BusLogic), or `mixed` when
 there are multiple controller types. Only the first number of controllers
 defined by `scsi_controller_scan_count` are scanned.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>datacenter<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>scsi<wbr>Controller<wbr>Scan<wbr>Count</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -636,14 +636,6 @@ defined by `scsi_controller_scan_count` are scanned.
     <dd>{{% md %}}The alternate guest name of the virtual machine when
 guest_id is a non-specific operating system, like `otherGuest`.
 {{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>datacenter_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -729,14 +721,6 @@ controllers defined by `scsi_controller_scan_count` are scanned.
 
     <dt class="property-"
             title="">
-        <span>scsi_<wbr>controller_<wbr>scan_<wbr>count</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>scsi_<wbr>type</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -747,6 +731,22 @@ SAS), `pvscsi` (VMware Paravirtual), `buslogic` (BusLogic), or `mixed` when
 there are multiple controller types. Only the first number of controllers
 defined by `scsi_controller_scan_count` are scanned.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>datacenter_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>scsi_<wbr>controller_<wbr>scan_<wbr>count</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

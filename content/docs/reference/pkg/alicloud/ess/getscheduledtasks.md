@@ -46,13 +46,13 @@ export const firstScheduledTask = ds.tasks[0].id;
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupScheduledTasks<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/ess?tab=doc#LookupScheduledTasksArgs">LookupScheduledTasksArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/ess?tab=doc#LookupScheduledTasksResult">LookupScheduledTasksResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupScheduledTasks<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/ess?tab=doc#LookupScheduledTasksArgs">LookupScheduledTasksArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/ess?tab=doc#LookupScheduledTasksResult">LookupScheduledTasksResult</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetScheduledTasks </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.Ess.GetScheduledTasksResult.html">GetScheduledTasksResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.Ess.GetScheduledTasksArgs.html">GetScheduledTasksArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.Ess.GetScheduledTasksResult.html">GetScheduledTasksResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.AliCloud.Ess.GetScheduledTasksArgs.html">GetScheduledTasksArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -69,7 +69,7 @@ The following arguments are supported:
             title="Optional">
         <span>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of scheduled task IDs.
 {{% /md %}}</dd>
@@ -78,7 +78,7 @@ The following arguments are supported:
             title="Optional">
         <span>Name<wbr>Regex</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A regex string to filter resulting scheduled tasks by name.
 {{% /md %}}</dd>
@@ -87,7 +87,7 @@ The following arguments are supported:
             title="Optional">
         <span>Output<wbr>File</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -95,7 +95,7 @@ The following arguments are supported:
             title="Optional">
         <span>Scheduled<wbr>Action</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The operation to be performed when a scheduled task is triggered.
 {{% /md %}}</dd>
@@ -104,7 +104,7 @@ The following arguments are supported:
             title="Optional">
         <span>Scheduled<wbr>Task<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the scheduled task.
 {{% /md %}}</dd>
@@ -129,7 +129,7 @@ The following arguments are supported:
             title="Optional">
         <span>Name<wbr>Regex</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A regex string to filter resulting scheduled tasks by name.
 {{% /md %}}</dd>
@@ -138,7 +138,7 @@ The following arguments are supported:
             title="Optional">
         <span>Output<wbr>File</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -146,7 +146,7 @@ The following arguments are supported:
             title="Optional">
         <span>Scheduled<wbr>Action</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The operation to be performed when a scheduled task is triggered.
 {{% /md %}}</dd>
@@ -155,7 +155,7 @@ The following arguments are supported:
             title="Optional">
         <span>Scheduled<wbr>Task<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the scheduled task.
 {{% /md %}}</dd>
@@ -171,7 +171,7 @@ The following arguments are supported:
             title="Optional">
         <span>ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of scheduled task IDs.
 {{% /md %}}</dd>
@@ -180,7 +180,7 @@ The following arguments are supported:
             title="Optional">
         <span>name<wbr>Regex</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A regex string to filter resulting scheduled tasks by name.
 {{% /md %}}</dd>
@@ -189,7 +189,7 @@ The following arguments are supported:
             title="Optional">
         <span>output<wbr>File</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -197,7 +197,7 @@ The following arguments are supported:
             title="Optional">
         <span>scheduled<wbr>Action</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The operation to be performed when a scheduled task is triggered.
 {{% /md %}}</dd>
@@ -206,7 +206,7 @@ The following arguments are supported:
             title="Optional">
         <span>scheduled<wbr>Task<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the scheduled task.
 {{% /md %}}</dd>
@@ -295,33 +295,42 @@ The following output properties are available:
             title="">
         <span>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of scheduled task ids.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>Name<wbr>Regex</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Names</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of scheduled task names.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
+        <span>Tasks</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getscheduledtaskstask">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Ess.<wbr>Outputs.<wbr>Get<wbr>Scheduled<wbr>Tasks<wbr>Task&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A list of scheduled tasks. Each element contains the following attributes:
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Name<wbr>Regex</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Output<wbr>File</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -329,7 +338,7 @@ The following output properties are available:
             title="">
         <span>Scheduled<wbr>Action</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The operation to be performed when a scheduled task is triggered.
 {{% /md %}}</dd>
@@ -338,18 +347,9 @@ The following output properties are available:
             title="">
         <span>Scheduled<wbr>Task<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tasks</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getscheduledtaskstask">List&lt;Get<wbr>Scheduled<wbr>Tasks<wbr>Task&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}A list of scheduled tasks. Each element contains the following attributes:
-{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -378,14 +378,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Name<wbr>Regex</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Names</span>
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
@@ -395,9 +387,26 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>Tasks</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getscheduledtaskstask">[]Get<wbr>Scheduled<wbr>Tasks<wbr>Task</a></span>
+    </dt>
+    <dd>{{% md %}}A list of scheduled tasks. Each element contains the following attributes:
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Name<wbr>Regex</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Output<wbr>File</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -405,7 +414,7 @@ The following output properties are available:
             title="">
         <span>Scheduled<wbr>Action</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The operation to be performed when a scheduled task is triggered.
 {{% /md %}}</dd>
@@ -414,18 +423,9 @@ The following output properties are available:
             title="">
         <span>Scheduled<wbr>Task<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tasks</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getscheduledtaskstask">[]Get<wbr>Scheduled<wbr>Tasks<wbr>Task</a></span>
-    </dt>
-    <dd>{{% md %}}A list of scheduled tasks. Each element contains the following attributes:
-{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -454,14 +454,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>name<wbr>Regex</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>names</span>
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
@@ -471,9 +463,26 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>tasks</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getscheduledtaskstask">Get<wbr>Scheduled<wbr>Tasks<wbr>Task[]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of scheduled tasks. Each element contains the following attributes:
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>name<wbr>Regex</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>output<wbr>File</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -481,7 +490,7 @@ The following output properties are available:
             title="">
         <span>scheduled<wbr>Action</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The operation to be performed when a scheduled task is triggered.
 {{% /md %}}</dd>
@@ -490,18 +499,9 @@ The following output properties are available:
             title="">
         <span>scheduled<wbr>Task<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tasks</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getscheduledtaskstask">Get<wbr>Scheduled<wbr>Tasks<wbr>Task[]</a></span>
-    </dt>
-    <dd>{{% md %}}A list of scheduled tasks. Each element contains the following attributes:
-{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -530,20 +530,29 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>name_<wbr>regex</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>names</span>
         <span class="property-indicator"></span>
         <span class="property-type">List[str]</span>
     </dt>
     <dd>{{% md %}}A list of scheduled task names.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>tasks</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getscheduledtaskstask">List[Get<wbr>Scheduled<wbr>Tasks<wbr>Task]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of scheduled tasks. Each element contains the following attributes:
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>name_<wbr>regex</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -569,15 +578,6 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tasks</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getscheduledtaskstask">List[Get<wbr>Scheduled<wbr>Tasks<wbr>Task]</a></span>
-    </dt>
-    <dd>{{% md %}}A list of scheduled tasks. Each element contains the following attributes:
-{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

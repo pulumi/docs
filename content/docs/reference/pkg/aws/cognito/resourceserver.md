@@ -54,7 +54,7 @@ const resource = new aws.cognito.ResourceServer("resource", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/cognito/#ResourceServer">ResourceServer</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/cognito/#ResourceServerArgs">ResourceServerArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/cognito/#ResourceServer">ResourceServer</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/cognito/#ResourceServerArgs">ResourceServerArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -62,7 +62,7 @@ const resource = new aws.cognito.ResourceServer("resource", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewResourceServer<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cognito?tab=doc#ResourceServerArgs">ResourceServerArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cognito?tab=doc#ResourceServer">ResourceServer</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewResourceServer<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cognito?tab=doc#ResourceServerArgs">ResourceServerArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cognito?tab=doc#ResourceServer">ResourceServer</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -167,11 +167,19 @@ const resource = new aws.cognito.ResourceServer("resource", {
     <dd>{{% md %}}An identifier for the resource server.
 {{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>User<wbr>Pool<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A name for the resource server.
 {{% /md %}}</dd>
@@ -180,18 +188,10 @@ const resource = new aws.cognito.ResourceServer("resource", {
             title="Optional">
         <span>Scopes</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceserverscope">List&lt;Resource<wbr>Server<wbr>Scope<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#resourceserverscope">List&lt;Resource<wbr>Server<wbr>Scope<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of Authorization Scope.
 {{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>User<wbr>Pool<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -209,11 +209,19 @@ const resource = new aws.cognito.ResourceServer("resource", {
     <dd>{{% md %}}An identifier for the resource server.
 {{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>User<wbr>Pool<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A name for the resource server.
 {{% /md %}}</dd>
@@ -226,14 +234,6 @@ const resource = new aws.cognito.ResourceServer("resource", {
     </dt>
     <dd>{{% md %}}A list of Authorization Scope.
 {{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>User<wbr>Pool<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -251,11 +251,19 @@ const resource = new aws.cognito.ResourceServer("resource", {
     <dd>{{% md %}}An identifier for the resource server.
 {{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>user<wbr>Pool<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A name for the resource server.
 {{% /md %}}</dd>
@@ -264,18 +272,10 @@ const resource = new aws.cognito.ResourceServer("resource", {
             title="Optional">
         <span>scopes</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceserverscope">Resource<wbr>Server<wbr>Scope[]?</a></span>
+        <span class="property-type"><a href="#resourceserverscope">Resource<wbr>Server<wbr>Scope[]</a></span>
     </dt>
     <dd>{{% md %}}A list of Authorization Scope.
 {{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>user<wbr>Pool<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -292,6 +292,14 @@ const resource = new aws.cognito.ResourceServer("resource", {
     </dt>
     <dd>{{% md %}}An identifier for the resource server.
 {{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>user_<wbr>pool_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -310,14 +318,6 @@ const resource = new aws.cognito.ResourceServer("resource", {
     </dt>
     <dd>{{% md %}}A list of Authorization Scope.
 {{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>user_<wbr>pool_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -340,47 +340,12 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Identifier</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}An identifier for the resource server.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A name for the resource server.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Scope<wbr>Identifiers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of all scopes configured for this resource server in the format identifier/scope_name.
 {{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Scopes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceserverscope">List&lt;Resource<wbr>Server<wbr>Scope&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}A list of Authorization Scope.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>User<wbr>Pool<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -391,47 +356,12 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Identifier</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}An identifier for the resource server.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A name for the resource server.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Scope<wbr>Identifiers</span>
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of all scopes configured for this resource server in the format identifier/scope_name.
 {{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Scopes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceserverscope">[]Resource<wbr>Server<wbr>Scope</a></span>
-    </dt>
-    <dd>{{% md %}}A list of Authorization Scope.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>User<wbr>Pool<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -442,47 +372,12 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>identifier</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}An identifier for the resource server.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A name for the resource server.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>scope<wbr>Identifiers</span>
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of all scopes configured for this resource server in the format identifier/scope_name.
 {{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>scopes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceserverscope">Resource<wbr>Server<wbr>Scope[]?</a></span>
-    </dt>
-    <dd>{{% md %}}A list of Authorization Scope.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>user<wbr>Pool<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -493,47 +388,12 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>identifier</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}An identifier for the resource server.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}A name for the resource server.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>scope_<wbr>identifiers</span>
         <span class="property-indicator"></span>
         <span class="property-type">List[str]</span>
     </dt>
     <dd>{{% md %}}A list of all scopes configured for this resource server in the format identifier/scope_name.
 {{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>scopes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceserverscope">List[Resource<wbr>Server<wbr>Scope]</a></span>
-    </dt>
-    <dd>{{% md %}}A list of Authorization Scope.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>user_<wbr>pool_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -674,7 +534,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Identifier</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An identifier for the resource server.
 {{% /md %}}</dd>
@@ -683,7 +543,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A name for the resource server.
 {{% /md %}}</dd>
@@ -692,7 +552,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Scope<wbr>Identifiers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of all scopes configured for this resource server in the format identifier/scope_name.
 {{% /md %}}</dd>
@@ -701,7 +561,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Scopes</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceserverscope">List&lt;Resource<wbr>Server<wbr>Scope<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#resourceserverscope">List&lt;Resource<wbr>Server<wbr>Scope<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of Authorization Scope.
 {{% /md %}}</dd>
@@ -710,7 +570,7 @@ The following state arguments are supported:
             title="Optional">
         <span>User<wbr>Pool<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -725,7 +585,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Identifier</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An identifier for the resource server.
 {{% /md %}}</dd>
@@ -734,7 +594,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A name for the resource server.
 {{% /md %}}</dd>
@@ -761,7 +621,7 @@ The following state arguments are supported:
             title="Optional">
         <span>User<wbr>Pool<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -776,7 +636,7 @@ The following state arguments are supported:
             title="Optional">
         <span>identifier</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An identifier for the resource server.
 {{% /md %}}</dd>
@@ -785,7 +645,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A name for the resource server.
 {{% /md %}}</dd>
@@ -794,7 +654,7 @@ The following state arguments are supported:
             title="Optional">
         <span>scope<wbr>Identifiers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of all scopes configured for this resource server in the format identifier/scope_name.
 {{% /md %}}</dd>
@@ -803,7 +663,7 @@ The following state arguments are supported:
             title="Optional">
         <span>scopes</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resourceserverscope">Resource<wbr>Server<wbr>Scope[]?</a></span>
+        <span class="property-type"><a href="#resourceserverscope">Resource<wbr>Server<wbr>Scope[]</a></span>
     </dt>
     <dd>{{% md %}}A list of Authorization Scope.
 {{% /md %}}</dd>
@@ -812,7 +672,7 @@ The following state arguments are supported:
             title="Optional">
         <span>user<wbr>Pool<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

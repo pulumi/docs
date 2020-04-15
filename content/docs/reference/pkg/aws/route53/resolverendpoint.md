@@ -47,7 +47,7 @@ const foo = new aws.route53.ResolverEndpoint("foo", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/route53/#ResolverEndpoint">ResolverEndpoint</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/route53/#ResolverEndpointArgs">ResolverEndpointArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/route53/#ResolverEndpoint">ResolverEndpoint</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/route53/#ResolverEndpointArgs">ResolverEndpointArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -55,7 +55,7 @@ const foo = new aws.route53.ResolverEndpoint("foo", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewResolverEndpoint<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/route53?tab=doc#ResolverEndpointArgs">ResolverEndpointArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/route53?tab=doc#ResolverEndpoint">ResolverEndpoint</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewResolverEndpoint<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/route53?tab=doc#ResolverEndpointArgs">ResolverEndpointArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/route53?tab=doc#ResolverEndpoint">ResolverEndpoint</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -172,29 +172,29 @@ or `OUTBOUND` (resolver forwards DNS queries from the DNS service for a VPC to y
 to your network (for outbound endpoints) or on the way from your network to your VPCs (for inbound endpoints). Described below.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The friendly name of the Route 53 Resolver endpoint.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Security<wbr>Group<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The ID of one or more security groups that you want to use to control access to this VPC.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The friendly name of the Route 53 Resolver endpoint.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -227,15 +227,6 @@ or `OUTBOUND` (resolver forwards DNS queries from the DNS service for a VPC to y
 to your network (for outbound endpoints) or on the way from your network to your VPCs (for inbound endpoints). Described below.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The friendly name of the Route 53 Resolver endpoint.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Security<wbr>Group<wbr>Ids</span>
@@ -243,6 +234,15 @@ to your network (for outbound endpoints) or on the way from your network to your
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The ID of one or more security groups that you want to use to control access to this VPC.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The friendly name of the Route 53 Resolver endpoint.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -282,15 +282,6 @@ or `OUTBOUND` (resolver forwards DNS queries from the DNS service for a VPC to y
 to your network (for outbound endpoints) or on the way from your network to your VPCs (for inbound endpoints). Described below.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The friendly name of the Route 53 Resolver endpoint.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>security<wbr>Group<wbr>Ids</span>
@@ -302,9 +293,18 @@ to your network (for outbound endpoints) or on the way from your network to your
 
     <dt class="property-optional"
             title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The friendly name of the Route 53 Resolver endpoint.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -337,15 +337,6 @@ or `OUTBOUND` (resolver forwards DNS queries from the DNS service for a VPC to y
 to your network (for outbound endpoints) or on the way from your network to your VPCs (for inbound endpoints). Described below.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The friendly name of the Route 53 Resolver endpoint.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>security_<wbr>group_<wbr>ids</span>
@@ -353,6 +344,15 @@ to your network (for outbound endpoints) or on the way from your network to your
         <span class="property-type">List[str]</span>
     </dt>
     <dd>{{% md %}}The ID of one or more security groups that you want to use to control access to this VPC.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The friendly name of the Route 53 Resolver endpoint.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -394,59 +394,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Direction</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The direction of DNS queries to or from the Route 53 Resolver endpoint.
-Valid values are `INBOUND` (resolver forwards DNS queries to the DNS service for a VPC from your network or another VPC)
-or `OUTBOUND` (resolver forwards DNS queries from the DNS service for a VPC to your network or another VPC).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Host<wbr>Vpc<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the VPC that you want to create the resolver endpoint in.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Ip<wbr>Addresses</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resolverendpointipaddress">List&lt;Resolver<wbr>Endpoint<wbr>Ip<wbr>Address&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}The subnets and IP addresses in your VPC that you want DNS queries to pass through on the way from your VPCs
-to your network (for outbound endpoints) or on the way from your network to your VPCs (for inbound endpoints). Described below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The friendly name of the Route 53 Resolver endpoint.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Security<wbr>Group<wbr>Ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
-    </dt>
-    <dd>{{% md %}}The ID of one or more security groups that you want to use to control access to this VPC.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
 
 </dl>
@@ -467,59 +419,11 @@ to your network (for outbound endpoints) or on the way from your network to your
 
     <dt class="property-"
             title="">
-        <span>Direction</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The direction of DNS queries to or from the Route 53 Resolver endpoint.
-Valid values are `INBOUND` (resolver forwards DNS queries to the DNS service for a VPC from your network or another VPC)
-or `OUTBOUND` (resolver forwards DNS queries from the DNS service for a VPC to your network or another VPC).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Host<wbr>Vpc<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the VPC that you want to create the resolver endpoint in.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Ip<wbr>Addresses</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resolverendpointipaddress">[]Resolver<wbr>Endpoint<wbr>Ip<wbr>Address</a></span>
-    </dt>
-    <dd>{{% md %}}The subnets and IP addresses in your VPC that you want DNS queries to pass through on the way from your VPCs
-to your network (for outbound endpoints) or on the way from your network to your VPCs (for inbound endpoints). Described below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The friendly name of the Route 53 Resolver endpoint.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Security<wbr>Group<wbr>Ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}The ID of one or more security groups that you want to use to control access to this VPC.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
 
 </dl>
@@ -540,59 +444,11 @@ to your network (for outbound endpoints) or on the way from your network to your
 
     <dt class="property-"
             title="">
-        <span>direction</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The direction of DNS queries to or from the Route 53 Resolver endpoint.
-Valid values are `INBOUND` (resolver forwards DNS queries to the DNS service for a VPC from your network or another VPC)
-or `OUTBOUND` (resolver forwards DNS queries from the DNS service for a VPC to your network or another VPC).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>host<wbr>Vpc<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the VPC that you want to create the resolver endpoint in.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>ip<wbr>Addresses</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resolverendpointipaddress">Resolver<wbr>Endpoint<wbr>Ip<wbr>Address[]</a></span>
-    </dt>
-    <dd>{{% md %}}The subnets and IP addresses in your VPC that you want DNS queries to pass through on the way from your VPCs
-to your network (for outbound endpoints) or on the way from your network to your VPCs (for inbound endpoints). Described below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The friendly name of the Route 53 Resolver endpoint.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>security<wbr>Group<wbr>Ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
-    </dt>
-    <dd>{{% md %}}The ID of one or more security groups that you want to use to control access to this VPC.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
 
 </dl>
@@ -613,59 +469,11 @@ to your network (for outbound endpoints) or on the way from your network to your
 
     <dt class="property-"
             title="">
-        <span>direction</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The direction of DNS queries to or from the Route 53 Resolver endpoint.
-Valid values are `INBOUND` (resolver forwards DNS queries to the DNS service for a VPC from your network or another VPC)
-or `OUTBOUND` (resolver forwards DNS queries from the DNS service for a VPC to your network or another VPC).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>host_<wbr>vpc_<wbr>id</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the VPC that you want to create the resolver endpoint in.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>ip_<wbr>addresses</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resolverendpointipaddress">List[Resolver<wbr>Endpoint<wbr>Ip<wbr>Address]</a></span>
-    </dt>
-    <dd>{{% md %}}The subnets and IP addresses in your VPC that you want DNS queries to pass through on the way from your VPCs
-to your network (for outbound endpoints) or on the way from your network to your VPCs (for inbound endpoints). Described below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The friendly name of the Route 53 Resolver endpoint.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>security_<wbr>group_<wbr>ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}The ID of one or more security groups that you want to use to control access to this VPC.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
 
 </dl>
@@ -807,7 +615,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the Route 53 Resolver endpoint.
 {{% /md %}}</dd>
@@ -816,7 +624,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Direction</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The direction of DNS queries to or from the Route 53 Resolver endpoint.
 Valid values are `INBOUND` (resolver forwards DNS queries to the DNS service for a VPC from your network or another VPC)
@@ -827,7 +635,7 @@ or `OUTBOUND` (resolver forwards DNS queries from the DNS service for a VPC to y
             title="Optional">
         <span>Host<wbr>Vpc<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the VPC that you want to create the resolver endpoint in.
 {{% /md %}}</dd>
@@ -836,7 +644,7 @@ or `OUTBOUND` (resolver forwards DNS queries from the DNS service for a VPC to y
             title="Optional">
         <span>Ip<wbr>Addresses</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resolverendpointipaddress">List&lt;Resolver<wbr>Endpoint<wbr>Ip<wbr>Address<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#resolverendpointipaddress">List&lt;Resolver<wbr>Endpoint<wbr>Ip<wbr>Address<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The subnets and IP addresses in your VPC that you want DNS queries to pass through on the way from your VPCs
 to your network (for outbound endpoints) or on the way from your network to your VPCs (for inbound endpoints). Described below.
@@ -846,7 +654,7 @@ to your network (for outbound endpoints) or on the way from your network to your
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The friendly name of the Route 53 Resolver endpoint.
 {{% /md %}}</dd>
@@ -855,7 +663,7 @@ to your network (for outbound endpoints) or on the way from your network to your
             title="Optional">
         <span>Security<wbr>Group<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The ID of one or more security groups that you want to use to control access to this VPC.
 {{% /md %}}</dd>
@@ -864,7 +672,7 @@ to your network (for outbound endpoints) or on the way from your network to your
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -880,7 +688,7 @@ to your network (for outbound endpoints) or on the way from your network to your
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the Route 53 Resolver endpoint.
 {{% /md %}}</dd>
@@ -889,7 +697,7 @@ to your network (for outbound endpoints) or on the way from your network to your
             title="Optional">
         <span>Direction</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The direction of DNS queries to or from the Route 53 Resolver endpoint.
 Valid values are `INBOUND` (resolver forwards DNS queries to the DNS service for a VPC from your network or another VPC)
@@ -900,7 +708,7 @@ or `OUTBOUND` (resolver forwards DNS queries from the DNS service for a VPC to y
             title="Optional">
         <span>Host<wbr>Vpc<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the VPC that you want to create the resolver endpoint in.
 {{% /md %}}</dd>
@@ -919,7 +727,7 @@ to your network (for outbound endpoints) or on the way from your network to your
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The friendly name of the Route 53 Resolver endpoint.
 {{% /md %}}</dd>
@@ -953,7 +761,7 @@ to your network (for outbound endpoints) or on the way from your network to your
             title="Optional">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the Route 53 Resolver endpoint.
 {{% /md %}}</dd>
@@ -962,7 +770,7 @@ to your network (for outbound endpoints) or on the way from your network to your
             title="Optional">
         <span>direction</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The direction of DNS queries to or from the Route 53 Resolver endpoint.
 Valid values are `INBOUND` (resolver forwards DNS queries to the DNS service for a VPC from your network or another VPC)
@@ -973,7 +781,7 @@ or `OUTBOUND` (resolver forwards DNS queries from the DNS service for a VPC to y
             title="Optional">
         <span>host<wbr>Vpc<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the VPC that you want to create the resolver endpoint in.
 {{% /md %}}</dd>
@@ -982,7 +790,7 @@ or `OUTBOUND` (resolver forwards DNS queries from the DNS service for a VPC to y
             title="Optional">
         <span>ip<wbr>Addresses</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#resolverendpointipaddress">Resolver<wbr>Endpoint<wbr>Ip<wbr>Address[]?</a></span>
+        <span class="property-type"><a href="#resolverendpointipaddress">Resolver<wbr>Endpoint<wbr>Ip<wbr>Address[]</a></span>
     </dt>
     <dd>{{% md %}}The subnets and IP addresses in your VPC that you want DNS queries to pass through on the way from your VPCs
 to your network (for outbound endpoints) or on the way from your network to your VPCs (for inbound endpoints). Described below.
@@ -992,7 +800,7 @@ to your network (for outbound endpoints) or on the way from your network to your
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The friendly name of the Route 53 Resolver endpoint.
 {{% /md %}}</dd>
@@ -1001,7 +809,7 @@ to your network (for outbound endpoints) or on the way from your network to your
             title="Optional">
         <span>security<wbr>Group<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The ID of one or more security groups that you want to use to control access to this VPC.
 {{% /md %}}</dd>
@@ -1010,7 +818,7 @@ to your network (for outbound endpoints) or on the way from your network to your
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1117,23 +925,6 @@ to your network (for outbound endpoints) or on the way from your network to your
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Ip</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The IP address in the subnet that you want to use for DNS queries.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Ip<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Subnet<wbr>Id</span>
@@ -1142,6 +933,23 @@ to your network (for outbound endpoints) or on the way from your network to your
     </dt>
     <dd>{{% md %}}The ID of the subnet that contains the IP address.
 {{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Ip</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The IP address in the subnet that you want to use for DNS queries.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Ip<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1150,23 +958,6 @@ to your network (for outbound endpoints) or on the way from your network to your
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Ip</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The IP address in the subnet that you want to use for DNS queries.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Ip<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Subnet<wbr>Id</span>
@@ -1176,29 +967,29 @@ to your network (for outbound endpoints) or on the way from your network to your
     <dd>{{% md %}}The ID of the subnet that contains the IP address.
 {{% /md %}}</dd>
 
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
-        <span>ip</span>
+        <span>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP address in the subnet that you want to use for DNS queries.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>ip<wbr>Id</span>
+        <span>Ip<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
@@ -1209,12 +1000,38 @@ to your network (for outbound endpoints) or on the way from your network to your
     <dd>{{% md %}}The ID of the subnet that contains the IP address.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>ip</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The IP address in the subnet that you want to use for DNS queries.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>ip<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>subnet_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ID of the subnet that contains the IP address.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1232,15 +1049,6 @@ to your network (for outbound endpoints) or on the way from your network to your
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>subnet_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The ID of the subnet that contains the IP address.
-{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

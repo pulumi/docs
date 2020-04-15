@@ -14,7 +14,7 @@ block_external_search_index: true
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/okta/deprecated/#SwaApp">SwaApp</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/okta/deprecated/#SwaAppArgs">SwaAppArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/okta/deprecated/#SwaApp">SwaApp</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/okta/deprecated/#SwaAppArgs">SwaAppArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -22,7 +22,7 @@ block_external_search_index: true
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewSwaApp<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/go/okta/deprecated?tab=doc#SwaAppArgs">SwaAppArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/go/okta/deprecated?tab=doc#SwaApp">SwaApp</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewSwaApp<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/go/okta/deprecated?tab=doc#SwaAppArgs">SwaAppArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/go/okta/deprecated?tab=doc#SwaApp">SwaApp</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -118,11 +118,20 @@ block_external_search_index: true
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Label</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Pretty name of app.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Accessibility<wbr>Error<wbr>Redirect<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Custom error page URL
 {{% /md %}}</dd>
@@ -131,7 +140,7 @@ block_external_search_index: true
             title="Optional">
         <span>Accessibility<wbr>Self<wbr>Service</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable self service
 {{% /md %}}</dd>
@@ -140,7 +149,7 @@ block_external_search_index: true
             title="Optional">
         <span>Auto<wbr>Submit<wbr>Toolbar</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Display auto submit toolbar
 {{% /md %}}</dd>
@@ -149,7 +158,7 @@ block_external_search_index: true
             title="Optional">
         <span>Button<wbr>Field</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Login button field
 {{% /md %}}</dd>
@@ -158,7 +167,7 @@ block_external_search_index: true
             title="Optional">
         <span>Groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Groups associated with the application
 {{% /md %}}</dd>
@@ -167,7 +176,7 @@ block_external_search_index: true
             title="Optional">
         <span>Hide<wbr>Ios</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Do not display application icon on mobile app
 {{% /md %}}</dd>
@@ -176,10 +185,80 @@ block_external_search_index: true
             title="Optional">
         <span>Hide<wbr>Web</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Do not display application icon to users
 {{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Password<wbr>Field</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Login password field
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Preconfigured<wbr>App</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Preconfigured app name
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Status</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Status of application.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Url</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Login URL
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Url<wbr>Regex</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A regex that further restricts URL to the specified regex
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Username<wbr>Field</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Login username field
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Users</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#swaappuser">List&lt;Swa<wbr>App<wbr>User<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Users associated with the application
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
@@ -192,79 +271,9 @@ block_external_search_index: true
 
     <dt class="property-optional"
             title="Optional">
-        <span>Password<wbr>Field</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Login password field
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Preconfigured<wbr>App</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Preconfigured app name
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Status</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Status of application.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Url</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Login URL
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Url<wbr>Regex</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}A regex that further restricts URL to the specified regex
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Username<wbr>Field</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Login username field
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Users</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#swaappuser">List&lt;Swa<wbr>App<wbr>User<wbr>Args&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}Users associated with the application
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
         <span>Accessibility<wbr>Error<wbr>Redirect<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Custom error page URL
 {{% /md %}}</dd>
@@ -273,7 +282,7 @@ block_external_search_index: true
             title="Optional">
         <span>Accessibility<wbr>Self<wbr>Service</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable self service
 {{% /md %}}</dd>
@@ -282,7 +291,7 @@ block_external_search_index: true
             title="Optional">
         <span>Auto<wbr>Submit<wbr>Toolbar</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Display auto submit toolbar
 {{% /md %}}</dd>
@@ -291,7 +300,7 @@ block_external_search_index: true
             title="Optional">
         <span>Button<wbr>Field</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Login button field
 {{% /md %}}</dd>
@@ -309,7 +318,7 @@ block_external_search_index: true
             title="Optional">
         <span>Hide<wbr>Ios</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Do not display application icon on mobile app
 {{% /md %}}</dd>
@@ -318,25 +327,16 @@ block_external_search_index: true
             title="Optional">
         <span>Hide<wbr>Web</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Do not display application icon to users
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Label</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Pretty name of app.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Password<wbr>Field</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Login password field
 {{% /md %}}</dd>
@@ -345,7 +345,7 @@ block_external_search_index: true
             title="Optional">
         <span>Preconfigured<wbr>App</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Preconfigured app name
 {{% /md %}}</dd>
@@ -354,7 +354,7 @@ block_external_search_index: true
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Status of application.
 {{% /md %}}</dd>
@@ -363,7 +363,7 @@ block_external_search_index: true
             title="Optional">
         <span>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Login URL
 {{% /md %}}</dd>
@@ -372,7 +372,7 @@ block_external_search_index: true
             title="Optional">
         <span>Url<wbr>Regex</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A regex that further restricts URL to the specified regex
 {{% /md %}}</dd>
@@ -381,7 +381,7 @@ block_external_search_index: true
             title="Optional">
         <span>Username<wbr>Field</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Login username field
 {{% /md %}}</dd>
@@ -402,69 +402,6 @@ block_external_search_index: true
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>accessibility<wbr>Error<wbr>Redirect<wbr>Url</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Custom error page URL
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>accessibility<wbr>Self<wbr>Service</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Enable self service
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>auto<wbr>Submit<wbr>Toolbar</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Display auto submit toolbar
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>button<wbr>Field</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Login button field
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>groups</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}Groups associated with the application
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>hide<wbr>Ios</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Do not display application icon on mobile app
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>hide<wbr>Web</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Do not display application icon to users
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>label</span>
@@ -476,9 +413,72 @@ block_external_search_index: true
 
     <dt class="property-optional"
             title="Optional">
+        <span>accessibility<wbr>Error<wbr>Redirect<wbr>Url</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Custom error page URL
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>accessibility<wbr>Self<wbr>Service</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Enable self service
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>auto<wbr>Submit<wbr>Toolbar</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Display auto submit toolbar
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>button<wbr>Field</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Login button field
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>groups</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}Groups associated with the application
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>hide<wbr>Ios</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Do not display application icon on mobile app
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>hide<wbr>Web</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Do not display application icon to users
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>password<wbr>Field</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Login password field
 {{% /md %}}</dd>
@@ -487,7 +487,7 @@ block_external_search_index: true
             title="Optional">
         <span>preconfigured<wbr>App</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Preconfigured app name
 {{% /md %}}</dd>
@@ -496,7 +496,7 @@ block_external_search_index: true
             title="Optional">
         <span>status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Status of application.
 {{% /md %}}</dd>
@@ -505,7 +505,7 @@ block_external_search_index: true
             title="Optional">
         <span>url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Login URL
 {{% /md %}}</dd>
@@ -514,7 +514,7 @@ block_external_search_index: true
             title="Optional">
         <span>url<wbr>Regex</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A regex that further restricts URL to the specified regex
 {{% /md %}}</dd>
@@ -523,7 +523,7 @@ block_external_search_index: true
             title="Optional">
         <span>username<wbr>Field</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Login username field
 {{% /md %}}</dd>
@@ -532,7 +532,7 @@ block_external_search_index: true
             title="Optional">
         <span>users</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#swaappuser">Swa<wbr>App<wbr>User[]?</a></span>
+        <span class="property-type"><a href="#swaappuser">Swa<wbr>App<wbr>User[]</a></span>
     </dt>
     <dd>{{% md %}}Users associated with the application
 {{% /md %}}</dd>
@@ -543,6 +543,15 @@ block_external_search_index: true
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>label</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Pretty name of app.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -605,15 +614,6 @@ block_external_search_index: true
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Do not display application icon to users
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>label</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Pretty name of app.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -700,78 +700,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Accessibility<wbr>Error<wbr>Redirect<wbr>Url</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Custom error page URL
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Accessibility<wbr>Self<wbr>Service</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Enable self service
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Auto<wbr>Submit<wbr>Toolbar</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Display auto submit toolbar
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Button<wbr>Field</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Login button field
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Groups</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}Groups associated with the application
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Hide<wbr>Ios</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Do not display application icon on mobile app
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Hide<wbr>Web</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Do not display application icon to users
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Label</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Pretty name of app.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -781,56 +709,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Password<wbr>Field</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Login password field
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Preconfigured<wbr>App</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Preconfigured app name
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Sign<wbr>On<wbr>Mode</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sign on mode of application.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Status</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Status of application.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Url</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Login URL
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Url<wbr>Regex</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}A regex that further restricts URL to the specified regex
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -849,24 +732,6 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username template type
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Username<wbr>Field</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Login username field
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Users</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#swaappuser">List&lt;Swa<wbr>App<wbr>User&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}Users associated with the application
 {{% /md %}}</dd>
 
 </dl>
@@ -878,78 +743,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Accessibility<wbr>Error<wbr>Redirect<wbr>Url</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Custom error page URL
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Accessibility<wbr>Self<wbr>Service</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Enable self service
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Auto<wbr>Submit<wbr>Toolbar</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Display auto submit toolbar
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Button<wbr>Field</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Login button field
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Groups</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}Groups associated with the application
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Hide<wbr>Ios</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Do not display application icon on mobile app
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Hide<wbr>Web</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Do not display application icon to users
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Label</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Pretty name of app.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -959,56 +752,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Password<wbr>Field</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Login password field
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Preconfigured<wbr>App</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Preconfigured app name
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Sign<wbr>On<wbr>Mode</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sign on mode of application.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Status</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Status of application.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Url</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Login URL
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Url<wbr>Regex</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}A regex that further restricts URL to the specified regex
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1029,102 +777,12 @@ The following output properties are available:
     <dd>{{% md %}}Username template type
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span>Username<wbr>Field</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Login username field
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Users</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#swaappuser">[]Swa<wbr>App<wbr>User</a></span>
-    </dt>
-    <dd>{{% md %}}Users associated with the application
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>accessibility<wbr>Error<wbr>Redirect<wbr>Url</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Custom error page URL
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>accessibility<wbr>Self<wbr>Service</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Enable self service
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>auto<wbr>Submit<wbr>Toolbar</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Display auto submit toolbar
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>button<wbr>Field</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Login button field
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>groups</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}Groups associated with the application
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>hide<wbr>Ios</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Do not display application icon on mobile app
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>hide<wbr>Web</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Do not display application icon to users
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>label</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Pretty name of app.
-{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1137,56 +795,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>password<wbr>Field</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Login password field
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>preconfigured<wbr>App</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Preconfigured app name
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>sign<wbr>On<wbr>Mode</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sign on mode of application.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>status</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Status of application.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>url</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Login URL
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>url<wbr>Regex</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}A regex that further restricts URL to the specified regex
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1207,102 +820,12 @@ The following output properties are available:
     <dd>{{% md %}}Username template type
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span>username<wbr>Field</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Login username field
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>users</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#swaappuser">Swa<wbr>App<wbr>User[]?</a></span>
-    </dt>
-    <dd>{{% md %}}Users associated with the application
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>accessibility_<wbr>error_<wbr>redirect_<wbr>url</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Custom error page URL
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>accessibility_<wbr>self_<wbr>service</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Enable self service
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>auto_<wbr>submit_<wbr>toolbar</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Display auto submit toolbar
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>button_<wbr>field</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Login button field
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>groups</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}Groups associated with the application
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>hide_<wbr>ios</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Do not display application icon on mobile app
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>hide_<wbr>web</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Do not display application icon to users
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>label</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Pretty name of app.
-{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1315,56 +838,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>password_<wbr>field</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Login password field
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>preconfigured_<wbr>app</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Preconfigured app name
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>sign_<wbr>on_<wbr>mode</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Sign on mode of application.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>status</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Status of application.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>url</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Login URL
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>url_<wbr>regex</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}A regex that further restricts URL to the specified regex
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1383,24 +861,6 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Username template type
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>username_<wbr>field</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Login username field
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>users</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#swaappuser">List[Swa<wbr>App<wbr>User]</a></span>
-    </dt>
-    <dd>{{% md %}}Users associated with the application
 {{% /md %}}</dd>
 
 </dl>
@@ -1542,7 +1002,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Accessibility<wbr>Error<wbr>Redirect<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Custom error page URL
 {{% /md %}}</dd>
@@ -1551,7 +1011,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Accessibility<wbr>Self<wbr>Service</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable self service
 {{% /md %}}</dd>
@@ -1560,7 +1020,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Auto<wbr>Submit<wbr>Toolbar</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Display auto submit toolbar
 {{% /md %}}</dd>
@@ -1569,7 +1029,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Button<wbr>Field</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Login button field
 {{% /md %}}</dd>
@@ -1578,7 +1038,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Groups associated with the application
 {{% /md %}}</dd>
@@ -1587,7 +1047,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Hide<wbr>Ios</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Do not display application icon on mobile app
 {{% /md %}}</dd>
@@ -1596,7 +1056,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Hide<wbr>Web</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Do not display application icon to users
 {{% /md %}}</dd>
@@ -1605,7 +1065,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Label</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Pretty name of app.
 {{% /md %}}</dd>
@@ -1614,7 +1074,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}name of app.
 {{% /md %}}</dd>
@@ -1623,7 +1083,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Password<wbr>Field</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Login password field
 {{% /md %}}</dd>
@@ -1632,7 +1092,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Preconfigured<wbr>App</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Preconfigured app name
 {{% /md %}}</dd>
@@ -1641,7 +1101,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Sign<wbr>On<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sign on mode of application.
 {{% /md %}}</dd>
@@ -1650,7 +1110,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Status of application.
 {{% /md %}}</dd>
@@ -1659,7 +1119,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Login URL
 {{% /md %}}</dd>
@@ -1668,7 +1128,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Url<wbr>Regex</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A regex that further restricts URL to the specified regex
 {{% /md %}}</dd>
@@ -1677,7 +1137,7 @@ The following state arguments are supported:
             title="Optional">
         <span>User<wbr>Name<wbr>Template</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username template
 {{% /md %}}</dd>
@@ -1686,7 +1146,7 @@ The following state arguments are supported:
             title="Optional">
         <span>User<wbr>Name<wbr>Template<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username template type
 {{% /md %}}</dd>
@@ -1695,7 +1155,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Username<wbr>Field</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Login username field
 {{% /md %}}</dd>
@@ -1704,7 +1164,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Users</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#swaappuser">List&lt;Swa<wbr>App<wbr>User<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#swaappuser">List&lt;Swa<wbr>App<wbr>User<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Users associated with the application
 {{% /md %}}</dd>
@@ -1720,7 +1180,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Accessibility<wbr>Error<wbr>Redirect<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Custom error page URL
 {{% /md %}}</dd>
@@ -1729,7 +1189,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Accessibility<wbr>Self<wbr>Service</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable self service
 {{% /md %}}</dd>
@@ -1738,7 +1198,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Auto<wbr>Submit<wbr>Toolbar</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Display auto submit toolbar
 {{% /md %}}</dd>
@@ -1747,7 +1207,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Button<wbr>Field</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Login button field
 {{% /md %}}</dd>
@@ -1765,7 +1225,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Hide<wbr>Ios</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Do not display application icon on mobile app
 {{% /md %}}</dd>
@@ -1774,7 +1234,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Hide<wbr>Web</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Do not display application icon to users
 {{% /md %}}</dd>
@@ -1783,7 +1243,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Label</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Pretty name of app.
 {{% /md %}}</dd>
@@ -1792,7 +1252,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}name of app.
 {{% /md %}}</dd>
@@ -1801,7 +1261,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Password<wbr>Field</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Login password field
 {{% /md %}}</dd>
@@ -1810,7 +1270,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Preconfigured<wbr>App</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Preconfigured app name
 {{% /md %}}</dd>
@@ -1819,7 +1279,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Sign<wbr>On<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sign on mode of application.
 {{% /md %}}</dd>
@@ -1828,7 +1288,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Status of application.
 {{% /md %}}</dd>
@@ -1837,7 +1297,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Login URL
 {{% /md %}}</dd>
@@ -1846,7 +1306,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Url<wbr>Regex</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A regex that further restricts URL to the specified regex
 {{% /md %}}</dd>
@@ -1855,7 +1315,7 @@ The following state arguments are supported:
             title="Optional">
         <span>User<wbr>Name<wbr>Template</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username template
 {{% /md %}}</dd>
@@ -1864,7 +1324,7 @@ The following state arguments are supported:
             title="Optional">
         <span>User<wbr>Name<wbr>Template<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username template type
 {{% /md %}}</dd>
@@ -1873,7 +1333,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Username<wbr>Field</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Login username field
 {{% /md %}}</dd>
@@ -1898,7 +1358,7 @@ The following state arguments are supported:
             title="Optional">
         <span>accessibility<wbr>Error<wbr>Redirect<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Custom error page URL
 {{% /md %}}</dd>
@@ -1907,7 +1367,7 @@ The following state arguments are supported:
             title="Optional">
         <span>accessibility<wbr>Self<wbr>Service</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable self service
 {{% /md %}}</dd>
@@ -1916,7 +1376,7 @@ The following state arguments are supported:
             title="Optional">
         <span>auto<wbr>Submit<wbr>Toolbar</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Display auto submit toolbar
 {{% /md %}}</dd>
@@ -1925,7 +1385,7 @@ The following state arguments are supported:
             title="Optional">
         <span>button<wbr>Field</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Login button field
 {{% /md %}}</dd>
@@ -1934,7 +1394,7 @@ The following state arguments are supported:
             title="Optional">
         <span>groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Groups associated with the application
 {{% /md %}}</dd>
@@ -1943,7 +1403,7 @@ The following state arguments are supported:
             title="Optional">
         <span>hide<wbr>Ios</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Do not display application icon on mobile app
 {{% /md %}}</dd>
@@ -1952,7 +1412,7 @@ The following state arguments are supported:
             title="Optional">
         <span>hide<wbr>Web</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Do not display application icon to users
 {{% /md %}}</dd>
@@ -1961,7 +1421,7 @@ The following state arguments are supported:
             title="Optional">
         <span>label</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Pretty name of app.
 {{% /md %}}</dd>
@@ -1970,7 +1430,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}name of app.
 {{% /md %}}</dd>
@@ -1979,7 +1439,7 @@ The following state arguments are supported:
             title="Optional">
         <span>password<wbr>Field</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Login password field
 {{% /md %}}</dd>
@@ -1988,7 +1448,7 @@ The following state arguments are supported:
             title="Optional">
         <span>preconfigured<wbr>App</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Preconfigured app name
 {{% /md %}}</dd>
@@ -1997,7 +1457,7 @@ The following state arguments are supported:
             title="Optional">
         <span>sign<wbr>On<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sign on mode of application.
 {{% /md %}}</dd>
@@ -2006,7 +1466,7 @@ The following state arguments are supported:
             title="Optional">
         <span>status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Status of application.
 {{% /md %}}</dd>
@@ -2015,7 +1475,7 @@ The following state arguments are supported:
             title="Optional">
         <span>url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Login URL
 {{% /md %}}</dd>
@@ -2024,7 +1484,7 @@ The following state arguments are supported:
             title="Optional">
         <span>url<wbr>Regex</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A regex that further restricts URL to the specified regex
 {{% /md %}}</dd>
@@ -2033,7 +1493,7 @@ The following state arguments are supported:
             title="Optional">
         <span>user<wbr>Name<wbr>Template</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username template
 {{% /md %}}</dd>
@@ -2042,7 +1502,7 @@ The following state arguments are supported:
             title="Optional">
         <span>user<wbr>Name<wbr>Template<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username template type
 {{% /md %}}</dd>
@@ -2051,7 +1511,7 @@ The following state arguments are supported:
             title="Optional">
         <span>username<wbr>Field</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Login username field
 {{% /md %}}</dd>
@@ -2060,7 +1520,7 @@ The following state arguments are supported:
             title="Optional">
         <span>users</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#swaappuser">Swa<wbr>App<wbr>User[]?</a></span>
+        <span class="property-type"><a href="#swaappuser">Swa<wbr>App<wbr>User[]</a></span>
     </dt>
     <dd>{{% md %}}Users associated with the application
 {{% /md %}}</dd>
@@ -2276,7 +1736,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2284,7 +1744,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2292,7 +1752,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Scope</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2300,7 +1760,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Username</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2315,7 +1775,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2323,7 +1783,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2331,7 +1791,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Scope</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2339,7 +1799,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Username</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2354,7 +1814,7 @@ The following state arguments are supported:
             title="Optional">
         <span>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2362,7 +1822,7 @@ The following state arguments are supported:
             title="Optional">
         <span>password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2370,7 +1830,7 @@ The following state arguments are supported:
             title="Optional">
         <span>scope</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2378,7 +1838,7 @@ The following state arguments are supported:
             title="Optional">
         <span>username</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

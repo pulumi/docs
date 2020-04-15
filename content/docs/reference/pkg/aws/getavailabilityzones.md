@@ -76,7 +76,7 @@ const example = pulumi.output(aws.getAvailabilityZones({
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupAvailabilityZones<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/?tab=doc#GetAvailabilityZonesArgs">GetAvailabilityZonesArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/?tab=doc#LookupAvailabilityZonesResult">LookupAvailabilityZonesResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupAvailabilityZones<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/?tab=doc#GetAvailabilityZonesArgs">GetAvailabilityZonesArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/?tab=doc#LookupAvailabilityZonesResult">LookupAvailabilityZonesResult</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -99,7 +99,7 @@ The following arguments are supported:
             title="Optional">
         <span>All<wbr>Availability<wbr>Zones</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set to `true` to include all Availability Zones and Local Zones regardless of your opt in status.
 {{% /md %}}</dd>
@@ -108,7 +108,7 @@ The following arguments are supported:
             title="Optional">
         <span>Blacklisted<wbr>Names</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of blacklisted Availability Zone names.
 {{% /md %}}</dd>
@@ -117,7 +117,7 @@ The following arguments are supported:
             title="Optional">
         <span>Blacklisted<wbr>Zone<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of blacklisted Availability Zone IDs.
 {{% /md %}}</dd>
@@ -126,7 +126,7 @@ The following arguments are supported:
             title="Optional">
         <span>Filters</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getavailabilityzonesfilter">List&lt;Get<wbr>Availability<wbr>Zones<wbr>Filter<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#getavailabilityzonesfilter">List&lt;Get<wbr>Availability<wbr>Zones<wbr>Filter<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) for filtering. Detailed below.
 {{% /md %}}</dd>
@@ -135,7 +135,7 @@ The following arguments are supported:
             title="Optional">
         <span>Group<wbr>Names</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -143,7 +143,7 @@ The following arguments are supported:
             title="Optional">
         <span>State</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Allows to filter list of Availability Zones based on their
 current state. Can be either `"available"`, `"information"`, `"impaired"` or
@@ -162,7 +162,7 @@ to which the underlying AWS account has access, regardless of their state.
             title="Optional">
         <span>All<wbr>Availability<wbr>Zones</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set to `true` to include all Availability Zones and Local Zones regardless of your opt in status.
 {{% /md %}}</dd>
@@ -206,7 +206,7 @@ to which the underlying AWS account has access, regardless of their state.
             title="Optional">
         <span>State</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Allows to filter list of Availability Zones based on their
 current state. Can be either `"available"`, `"information"`, `"impaired"` or
@@ -225,7 +225,7 @@ to which the underlying AWS account has access, regardless of their state.
             title="Optional">
         <span>all<wbr>Availability<wbr>Zones</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Set to `true` to include all Availability Zones and Local Zones regardless of your opt in status.
 {{% /md %}}</dd>
@@ -234,7 +234,7 @@ to which the underlying AWS account has access, regardless of their state.
             title="Optional">
         <span>blacklisted<wbr>Names</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of blacklisted Availability Zone names.
 {{% /md %}}</dd>
@@ -243,7 +243,7 @@ to which the underlying AWS account has access, regardless of their state.
             title="Optional">
         <span>blacklisted<wbr>Zone<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of blacklisted Availability Zone IDs.
 {{% /md %}}</dd>
@@ -252,7 +252,7 @@ to which the underlying AWS account has access, regardless of their state.
             title="Optional">
         <span>filters</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getavailabilityzonesfilter">Get<wbr>Availability<wbr>Zones<wbr>Filter[]?</a></span>
+        <span class="property-type"><a href="#getavailabilityzonesfilter">Get<wbr>Availability<wbr>Zones<wbr>Filter[]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) for filtering. Detailed below.
 {{% /md %}}</dd>
@@ -261,7 +261,7 @@ to which the underlying AWS account has access, regardless of their state.
             title="Optional">
         <span>group<wbr>Names</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -269,7 +269,7 @@ to which the underlying AWS account has access, regardless of their state.
             title="Optional">
         <span>state</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Allows to filter list of Availability Zones based on their
 current state. Can be either `"available"`, `"information"`, `"impaired"` or
@@ -362,9 +362,36 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Names</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of the Availability Zone names available to the account.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Zone<wbr>Ids</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of the Availability Zone IDs available to the account.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>All<wbr>Availability<wbr>Zones</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -372,7 +399,7 @@ The following output properties are available:
             title="">
         <span>Blacklisted<wbr>Names</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -380,7 +407,7 @@ The following output properties are available:
             title="">
         <span>Blacklisted<wbr>Zone<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -388,7 +415,7 @@ The following output properties are available:
             title="">
         <span>Filters</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getavailabilityzonesfilter">List&lt;Get<wbr>Availability<wbr>Zones<wbr>Filter&gt;?</a></span>
+        <span class="property-type"><a href="#getavailabilityzonesfilter">List&lt;Get<wbr>Availability<wbr>Zones<wbr>Filter&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -396,9 +423,24 @@ The following output properties are available:
             title="">
         <span>Group<wbr>Names</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>State</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
 
     <dt class="property-"
             title="">
@@ -413,40 +455,25 @@ The following output properties are available:
             title="">
         <span>Names</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of the Availability Zone names available to the account.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>State</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Zone<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}A list of the Availability Zone IDs available to the account.
 {{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
 
     <dt class="property-"
             title="">
         <span>All<wbr>Availability<wbr>Zones</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -484,38 +511,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Id</span>
+        <span>State</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Names</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}A list of the Availability Zone names available to the account.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>State</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Zone<wbr>Ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}A list of the Availability Zone IDs available to the account.
-{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -523,46 +523,6 @@ The following output properties are available:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>all<wbr>Availability<wbr>Zones</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>blacklisted<wbr>Names</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>blacklisted<wbr>Zone<wbr>Ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>filters</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getavailabilityzonesfilter">Get<wbr>Availability<wbr>Zones<wbr>Filter[]?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>group<wbr>Names</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -584,14 +544,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>state</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>zone<wbr>Ids</span>
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
@@ -599,12 +551,87 @@ The following output properties are available:
     <dd>{{% md %}}A list of the Availability Zone IDs available to the account.
 {{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span>all<wbr>Availability<wbr>Zones</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>blacklisted<wbr>Names</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>blacklisted<wbr>Zone<wbr>Ids</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>filters</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getavailabilityzonesfilter">Get<wbr>Availability<wbr>Zones<wbr>Filter[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>group<wbr>Names</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>state</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>names</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of the Availability Zone names available to the account.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>zone_<wbr>ids</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of the Availability Zone IDs available to the account.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -648,38 +675,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>names</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}A list of the Availability Zone names available to the account.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>state</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>zone_<wbr>ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}A list of the Availability Zone IDs available to the account.
-{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -721,7 +721,7 @@ The following output properties are available:
             title="Required">
         <span>Values</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Set of values that are accepted for the given filter field. Results will be selected if any given value matches.
 {{% /md %}}</dd>

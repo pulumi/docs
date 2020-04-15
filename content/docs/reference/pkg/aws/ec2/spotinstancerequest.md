@@ -59,7 +59,7 @@ const cheapWorker = new aws.ec2.SpotInstanceRequest("cheap_worker", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#SpotInstanceRequest">SpotInstanceRequest</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#SpotInstanceRequestArgs">SpotInstanceRequestArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#SpotInstanceRequest">SpotInstanceRequest</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#SpotInstanceRequestArgs">SpotInstanceRequestArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -67,7 +67,7 @@ const cheapWorker = new aws.ec2.SpotInstanceRequest("cheap_worker", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewSpotInstanceRequest<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2?tab=doc#SpotInstanceRequestArgs">SpotInstanceRequestArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2?tab=doc#SpotInstanceRequest">SpotInstanceRequest</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewSpotInstanceRequest<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2?tab=doc#SpotInstanceRequestArgs">SpotInstanceRequestArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2?tab=doc#SpotInstanceRequest">SpotInstanceRequest</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -172,11 +172,20 @@ const cheapWorker = new aws.ec2.SpotInstanceRequest("cheap_worker", {
     <dd>{{% md %}}The AMI to use for the instance.
 {{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>Instance<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of instance to start. Updates to this field will trigger a stop/start of the EC2 instance.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Associate<wbr>Public<wbr>Ip<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Associate a public ip address with an instance in a VPC.  Boolean value.
 {{% /md %}}</dd>
@@ -185,7 +194,7 @@ const cheapWorker = new aws.ec2.SpotInstanceRequest("cheap_worker", {
             title="Optional">
         <span>Availability<wbr>Zone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AZ to start the instance in.
 {{% /md %}}</dd>
@@ -194,7 +203,7 @@ const cheapWorker = new aws.ec2.SpotInstanceRequest("cheap_worker", {
             title="Optional">
         <span>Block<wbr>Duration<wbr>Minutes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The required duration for the Spot instances, in minutes. This value must be a multiple of 60 (60, 120, 180, 240, 300, or 360).
 The duration period starts as soon as your Spot instance receives its instance ID. At the end of the duration period, Amazon EC2 marks the Spot instance for termination and provides a Spot instance termination notice, which gives the instance a two-minute warning before it terminates.
@@ -205,7 +214,7 @@ Note that you can't specify an Availability Zone group or a launch group if you 
             title="Optional">
         <span>Cpu<wbr>Core<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Sets the number of CPU cores for an instance. This option is
 only supported on creation of instance type that support CPU Options
@@ -216,7 +225,7 @@ only supported on creation of instance type that support CPU Options
             title="Optional">
         <span>Cpu<wbr>Threads<wbr>Per<wbr>Core</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}If set to to 1, hyperthreading is disabled on the launched instance. Defaults to 2 if not set. See [Optimizing CPU Options](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html) for more information.
 {{% /md %}}</dd>
@@ -225,7 +234,7 @@ only supported on creation of instance type that support CPU Options
             title="Optional">
         <span>Credit<wbr>Specification</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotinstancerequestcreditspecification">Spot<wbr>Instance<wbr>Request<wbr>Credit<wbr>Specification<wbr>Args?</a></span>
+        <span class="property-type"><a href="#spotinstancerequestcreditspecification">Spot<wbr>Instance<wbr>Request<wbr>Credit<wbr>Specification<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Customize the credit specification of the instance. See Credit Specification below for more details.
 {{% /md %}}</dd>
@@ -234,7 +243,7 @@ only supported on creation of instance type that support CPU Options
             title="Optional">
         <span>Disable<wbr>Api<wbr>Termination</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, enables [EC2 Instance
 Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingDisableAPITermination)
@@ -244,7 +253,7 @@ Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/term
             title="Optional">
         <span>Ebs<wbr>Block<wbr>Devices</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotinstancerequestebsblockdevice">List&lt;Spot<wbr>Instance<wbr>Request<wbr>Ebs<wbr>Block<wbr>Device<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#spotinstancerequestebsblockdevice">List&lt;Spot<wbr>Instance<wbr>Request<wbr>Ebs<wbr>Block<wbr>Device<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Additional EBS block devices to attach to the
 instance.  Block device configurations only apply on resource creation. See Block Devices below for details on attributes and drift detection.
@@ -254,7 +263,7 @@ instance.  Block device configurations only apply on resource creation. See Bloc
             title="Optional">
         <span>Ebs<wbr>Optimized</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, the launched EC2 instance will be EBS-optimized.
 Note that if this is not set on an instance type that is optimized by default then
@@ -267,7 +276,7 @@ See the [EBS Optimized section](https://docs.aws.amazon.com/AWSEC2/latest/UserGu
             title="Optional">
         <span>Ephemeral<wbr>Block<wbr>Devices</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotinstancerequestephemeralblockdevice">List&lt;Spot<wbr>Instance<wbr>Request<wbr>Ephemeral<wbr>Block<wbr>Device<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#spotinstancerequestephemeralblockdevice">List&lt;Spot<wbr>Instance<wbr>Request<wbr>Ephemeral<wbr>Block<wbr>Device<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Customize Ephemeral (also known as
 "Instance Store") volumes on the instance. See Block Devices below for details.
@@ -277,7 +286,7 @@ See the [EBS Optimized section](https://docs.aws.amazon.com/AWSEC2/latest/UserGu
             title="Optional">
         <span>Get<wbr>Password<wbr>Data</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, wait for password data to become available and retrieve it. Useful for getting the administrator password for instances running Microsoft Windows. The password data is exported to the `password_data` attribute. See [GetPasswordData](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetPasswordData.html) for more information.
 {{% /md %}}</dd>
@@ -286,7 +295,7 @@ See the [EBS Optimized section](https://docs.aws.amazon.com/AWSEC2/latest/UserGu
             title="Optional">
         <span>Hibernation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, the launched EC2 instance will support hibernation.
 {{% /md %}}</dd>
@@ -295,7 +304,7 @@ See the [EBS Optimized section](https://docs.aws.amazon.com/AWSEC2/latest/UserGu
             title="Optional">
         <span>Host<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Id of a dedicated host that the instance will be assigned to. Use when an instance is to be launched on a specific dedicated host.
 {{% /md %}}</dd>
@@ -304,7 +313,7 @@ See the [EBS Optimized section](https://docs.aws.amazon.com/AWSEC2/latest/UserGu
             title="Optional">
         <span>Iam<wbr>Instance<wbr>Profile</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IAM Instance Profile to
 launch the instance with. Specified as the name of the Instance Profile. Ensure your credentials have the correct permission to assign the instance profile according to the [EC2 documentation](http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-ec2.html#roles-usingrole-ec2instance-permissions), notably `iam:PassRole`.
@@ -315,7 +324,7 @@ launch the instance with. Specified as the name of the Instance Profile. Ensure 
             title="Optional">
         <span>Instance<wbr>Initiated<wbr>Shutdown<wbr>Behavior</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Shutdown behavior for the
 instance. Amazon defaults this to `stop` for EBS-backed instances and
@@ -327,25 +336,16 @@ instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/Use
             title="Optional">
         <span>Instance<wbr>Interruption<wbr>Behaviour</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Indicates whether a Spot instance stops or terminates when it is interrupted. Default is `terminate` as this is the current AWS behaviour.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Instance<wbr>Type</span>
-        <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of instance to start. Updates to this field will trigger a stop/start of the EC2 instance.
+    <dd>{{% md %}}Indicates whether a Spot instance stops or terminates when it is interrupted. Default is `terminate` as this is the current AWS behaviour.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Ipv6Address<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -353,7 +353,7 @@ instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/Use
             title="Optional">
         <span>Ipv6Addresses</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Specify one or more IPv6 addresses from the range of the subnet to associate with the primary network interface
 {{% /md %}}</dd>
@@ -362,7 +362,7 @@ instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/Use
             title="Optional">
         <span>Key<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The key name of the Key Pair to use for the instance; which can be managed using the `aws.ec2.KeyPair` resource.
 {{% /md %}}</dd>
@@ -371,7 +371,7 @@ instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/Use
             title="Optional">
         <span>Launch<wbr>Group</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A launch group is a group of spot instances that launch together and terminate together.
 If left empty instances are launched and terminated individually.
@@ -381,7 +381,7 @@ If left empty instances are launched and terminated individually.
             title="Optional">
         <span>Metadata<wbr>Options</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotinstancerequestmetadataoptions">Spot<wbr>Instance<wbr>Request<wbr>Metadata<wbr>Options<wbr>Args?</a></span>
+        <span class="property-type"><a href="#spotinstancerequestmetadataoptions">Spot<wbr>Instance<wbr>Request<wbr>Metadata<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Customize the metadata options of the instance. See Metadata Options below for more details.
 {{% /md %}}</dd>
@@ -390,7 +390,7 @@ If left empty instances are launched and terminated individually.
             title="Optional">
         <span>Monitoring</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, the launched EC2 instance will have detailed monitoring enabled. (Available since v0.6.0)
 {{% /md %}}</dd>
@@ -399,7 +399,7 @@ If left empty instances are launched and terminated individually.
             title="Optional">
         <span>Network<wbr>Interfaces</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotinstancerequestnetworkinterface">List&lt;Spot<wbr>Instance<wbr>Request<wbr>Network<wbr>Interface<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#spotinstancerequestnetworkinterface">List&lt;Spot<wbr>Instance<wbr>Request<wbr>Network<wbr>Interface<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Customize network interfaces to be attached at instance boot time. See Network Interfaces below for more details.
 {{% /md %}}</dd>
@@ -408,7 +408,7 @@ If left empty instances are launched and terminated individually.
             title="Optional">
         <span>Placement<wbr>Group</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Placement Group to start the instance in.
 {{% /md %}}</dd>
@@ -417,7 +417,7 @@ If left empty instances are launched and terminated individually.
             title="Optional">
         <span>Private<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Private IP address to associate with the
 instance in a VPC.
@@ -427,7 +427,7 @@ instance in a VPC.
             title="Optional">
         <span>Root<wbr>Block<wbr>Device</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotinstancerequestrootblockdevice">Spot<wbr>Instance<wbr>Request<wbr>Root<wbr>Block<wbr>Device<wbr>Args?</a></span>
+        <span class="property-type"><a href="#spotinstancerequestrootblockdevice">Spot<wbr>Instance<wbr>Request<wbr>Root<wbr>Block<wbr>Device<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Customize details about the root block
 device of the instance. See Block Devices below for details.
@@ -437,7 +437,7 @@ device of the instance. See Block Devices below for details.
             title="Optional">
         <span>Security<wbr>Groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of security group names (EC2-Classic) or IDs (default VPC) to associate with.
 {{% /md %}}</dd>
@@ -446,7 +446,7 @@ device of the instance. See Block Devices below for details.
             title="Optional">
         <span>Source<wbr>Dest<wbr>Check</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Controls if traffic is routed to the instance when
 the destination address does not match the instance. Used for NAT or VPNs. Defaults true.
@@ -456,7 +456,7 @@ the destination address does not match the instance. Used for NAT or VPNs. Defau
             title="Optional">
         <span>Spot<wbr>Price</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum price to request on the spot market.
 {{% /md %}}</dd>
@@ -465,7 +465,7 @@ the destination address does not match the instance. Used for NAT or VPNs. Defau
             title="Optional">
         <span>Spot<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If set to `one-time`, after
 the instance is terminated, the spot request will be closed.
@@ -475,7 +475,7 @@ the instance is terminated, the spot request will be closed.
             title="Optional">
         <span>Subnet<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The VPC Subnet ID to launch in.
 {{% /md %}}</dd>
@@ -484,7 +484,7 @@ the instance is terminated, the spot request will be closed.
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -493,7 +493,7 @@ the instance is terminated, the spot request will be closed.
             title="Optional">
         <span>Tenancy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The tenancy of the instance (if the instance is running in a VPC). An instance with a tenancy of dedicated runs on single-tenant hardware. The host tenancy is not supported for the import-instance command.
 {{% /md %}}</dd>
@@ -502,7 +502,7 @@ the instance is terminated, the spot request will be closed.
             title="Optional">
         <span>User<wbr>Data</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user data to provide when launching the instance. Do not pass gzip-compressed data via this argument; see `user_data_base64` instead.
 {{% /md %}}</dd>
@@ -511,7 +511,7 @@ the instance is terminated, the spot request will be closed.
             title="Optional">
         <span>User<wbr>Data<wbr>Base64</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Can be used instead of `user_data` to pass base64-encoded binary data directly. Use this instead of `user_data` whenever the value is not a valid UTF-8 string. For example, gzip-encoded user data must be base64-encoded and passed via this argument to avoid corruption.
 {{% /md %}}</dd>
@@ -520,7 +520,7 @@ the instance is terminated, the spot request will be closed.
             title="Optional">
         <span>Valid<wbr>From</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The start date and time of the request, in UTC [RFC3339](https://tools.ietf.org/html/rfc3339#section-5.8) format(for example, YYYY-MM-DDTHH:MM:SSZ). The default is to start fulfilling the request immediately.
 {{% /md %}}</dd>
@@ -529,7 +529,7 @@ the instance is terminated, the spot request will be closed.
             title="Optional">
         <span>Valid<wbr>Until</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The end date and time of the request, in UTC [RFC3339](https://tools.ietf.org/html/rfc3339#section-5.8) format(for example, YYYY-MM-DDTHH:MM:SSZ). At this point, no new Spot instance requests are placed or enabled to fulfill the request. The default end date is 7 days from the current date.
 {{% /md %}}</dd>
@@ -538,7 +538,7 @@ the instance is terminated, the spot request will be closed.
             title="Optional">
         <span>Volume<wbr>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the devices created by the instance at launch time.
 {{% /md %}}</dd>
@@ -547,7 +547,7 @@ the instance is terminated, the spot request will be closed.
             title="Optional">
         <span>Vpc<wbr>Security<wbr>Group<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of security group IDs to associate with.
 {{% /md %}}</dd>
@@ -556,7 +556,7 @@ the instance is terminated, the spot request will be closed.
             title="Optional">
         <span>Wait<wbr>For<wbr>Fulfillment</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set, this provider will
 wait for the Spot Request to be fulfilled, and will throw an error if the
@@ -579,11 +579,20 @@ timeout of 10m is reached.
     <dd>{{% md %}}The AMI to use for the instance.
 {{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>Instance<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of instance to start. Updates to this field will trigger a stop/start of the EC2 instance.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Associate<wbr>Public<wbr>Ip<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Associate a public ip address with an instance in a VPC.  Boolean value.
 {{% /md %}}</dd>
@@ -592,7 +601,7 @@ timeout of 10m is reached.
             title="Optional">
         <span>Availability<wbr>Zone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AZ to start the instance in.
 {{% /md %}}</dd>
@@ -601,7 +610,7 @@ timeout of 10m is reached.
             title="Optional">
         <span>Block<wbr>Duration<wbr>Minutes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The required duration for the Spot instances, in minutes. This value must be a multiple of 60 (60, 120, 180, 240, 300, or 360).
 The duration period starts as soon as your Spot instance receives its instance ID. At the end of the duration period, Amazon EC2 marks the Spot instance for termination and provides a Spot instance termination notice, which gives the instance a two-minute warning before it terminates.
@@ -612,7 +621,7 @@ Note that you can't specify an Availability Zone group or a launch group if you 
             title="Optional">
         <span>Cpu<wbr>Core<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Sets the number of CPU cores for an instance. This option is
 only supported on creation of instance type that support CPU Options
@@ -623,7 +632,7 @@ only supported on creation of instance type that support CPU Options
             title="Optional">
         <span>Cpu<wbr>Threads<wbr>Per<wbr>Core</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}If set to to 1, hyperthreading is disabled on the launched instance. Defaults to 2 if not set. See [Optimizing CPU Options](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html) for more information.
 {{% /md %}}</dd>
@@ -632,7 +641,7 @@ only supported on creation of instance type that support CPU Options
             title="Optional">
         <span>Credit<wbr>Specification</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotinstancerequestcreditspecification">*Spot<wbr>Instance<wbr>Request<wbr>Credit<wbr>Specification</a></span>
+        <span class="property-type"><a href="#spotinstancerequestcreditspecification">Spot<wbr>Instance<wbr>Request<wbr>Credit<wbr>Specification</a></span>
     </dt>
     <dd>{{% md %}}Customize the credit specification of the instance. See Credit Specification below for more details.
 {{% /md %}}</dd>
@@ -641,7 +650,7 @@ only supported on creation of instance type that support CPU Options
             title="Optional">
         <span>Disable<wbr>Api<wbr>Termination</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, enables [EC2 Instance
 Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingDisableAPITermination)
@@ -661,7 +670,7 @@ instance.  Block device configurations only apply on resource creation. See Bloc
             title="Optional">
         <span>Ebs<wbr>Optimized</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, the launched EC2 instance will be EBS-optimized.
 Note that if this is not set on an instance type that is optimized by default then
@@ -684,7 +693,7 @@ See the [EBS Optimized section](https://docs.aws.amazon.com/AWSEC2/latest/UserGu
             title="Optional">
         <span>Get<wbr>Password<wbr>Data</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, wait for password data to become available and retrieve it. Useful for getting the administrator password for instances running Microsoft Windows. The password data is exported to the `password_data` attribute. See [GetPasswordData](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetPasswordData.html) for more information.
 {{% /md %}}</dd>
@@ -693,7 +702,7 @@ See the [EBS Optimized section](https://docs.aws.amazon.com/AWSEC2/latest/UserGu
             title="Optional">
         <span>Hibernation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, the launched EC2 instance will support hibernation.
 {{% /md %}}</dd>
@@ -702,7 +711,7 @@ See the [EBS Optimized section](https://docs.aws.amazon.com/AWSEC2/latest/UserGu
             title="Optional">
         <span>Host<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Id of a dedicated host that the instance will be assigned to. Use when an instance is to be launched on a specific dedicated host.
 {{% /md %}}</dd>
@@ -711,7 +720,7 @@ See the [EBS Optimized section](https://docs.aws.amazon.com/AWSEC2/latest/UserGu
             title="Optional">
         <span>Iam<wbr>Instance<wbr>Profile</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IAM Instance Profile to
 launch the instance with. Specified as the name of the Instance Profile. Ensure your credentials have the correct permission to assign the instance profile according to the [EC2 documentation](http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-ec2.html#roles-usingrole-ec2instance-permissions), notably `iam:PassRole`.
@@ -722,7 +731,7 @@ launch the instance with. Specified as the name of the Instance Profile. Ensure 
             title="Optional">
         <span>Instance<wbr>Initiated<wbr>Shutdown<wbr>Behavior</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Shutdown behavior for the
 instance. Amazon defaults this to `stop` for EBS-backed instances and
@@ -734,25 +743,16 @@ instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/Use
             title="Optional">
         <span>Instance<wbr>Interruption<wbr>Behaviour</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Indicates whether a Spot instance stops or terminates when it is interrupted. Default is `terminate` as this is the current AWS behaviour.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Instance<wbr>Type</span>
-        <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of instance to start. Updates to this field will trigger a stop/start of the EC2 instance.
+    <dd>{{% md %}}Indicates whether a Spot instance stops or terminates when it is interrupted. Default is `terminate` as this is the current AWS behaviour.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Ipv6Address<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -769,7 +769,7 @@ instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/Use
             title="Optional">
         <span>Key<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The key name of the Key Pair to use for the instance; which can be managed using the `aws.ec2.KeyPair` resource.
 {{% /md %}}</dd>
@@ -778,7 +778,7 @@ instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/Use
             title="Optional">
         <span>Launch<wbr>Group</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A launch group is a group of spot instances that launch together and terminate together.
 If left empty instances are launched and terminated individually.
@@ -788,7 +788,7 @@ If left empty instances are launched and terminated individually.
             title="Optional">
         <span>Metadata<wbr>Options</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotinstancerequestmetadataoptions">*Spot<wbr>Instance<wbr>Request<wbr>Metadata<wbr>Options</a></span>
+        <span class="property-type"><a href="#spotinstancerequestmetadataoptions">Spot<wbr>Instance<wbr>Request<wbr>Metadata<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}Customize the metadata options of the instance. See Metadata Options below for more details.
 {{% /md %}}</dd>
@@ -797,7 +797,7 @@ If left empty instances are launched and terminated individually.
             title="Optional">
         <span>Monitoring</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, the launched EC2 instance will have detailed monitoring enabled. (Available since v0.6.0)
 {{% /md %}}</dd>
@@ -815,7 +815,7 @@ If left empty instances are launched and terminated individually.
             title="Optional">
         <span>Placement<wbr>Group</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Placement Group to start the instance in.
 {{% /md %}}</dd>
@@ -824,7 +824,7 @@ If left empty instances are launched and terminated individually.
             title="Optional">
         <span>Private<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Private IP address to associate with the
 instance in a VPC.
@@ -834,7 +834,7 @@ instance in a VPC.
             title="Optional">
         <span>Root<wbr>Block<wbr>Device</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotinstancerequestrootblockdevice">*Spot<wbr>Instance<wbr>Request<wbr>Root<wbr>Block<wbr>Device</a></span>
+        <span class="property-type"><a href="#spotinstancerequestrootblockdevice">Spot<wbr>Instance<wbr>Request<wbr>Root<wbr>Block<wbr>Device</a></span>
     </dt>
     <dd>{{% md %}}Customize details about the root block
 device of the instance. See Block Devices below for details.
@@ -853,7 +853,7 @@ device of the instance. See Block Devices below for details.
             title="Optional">
         <span>Source<wbr>Dest<wbr>Check</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Controls if traffic is routed to the instance when
 the destination address does not match the instance. Used for NAT or VPNs. Defaults true.
@@ -863,7 +863,7 @@ the destination address does not match the instance. Used for NAT or VPNs. Defau
             title="Optional">
         <span>Spot<wbr>Price</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum price to request on the spot market.
 {{% /md %}}</dd>
@@ -872,7 +872,7 @@ the destination address does not match the instance. Used for NAT or VPNs. Defau
             title="Optional">
         <span>Spot<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If set to `one-time`, after
 the instance is terminated, the spot request will be closed.
@@ -882,7 +882,7 @@ the instance is terminated, the spot request will be closed.
             title="Optional">
         <span>Subnet<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The VPC Subnet ID to launch in.
 {{% /md %}}</dd>
@@ -900,7 +900,7 @@ the instance is terminated, the spot request will be closed.
             title="Optional">
         <span>Tenancy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The tenancy of the instance (if the instance is running in a VPC). An instance with a tenancy of dedicated runs on single-tenant hardware. The host tenancy is not supported for the import-instance command.
 {{% /md %}}</dd>
@@ -909,7 +909,7 @@ the instance is terminated, the spot request will be closed.
             title="Optional">
         <span>User<wbr>Data</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user data to provide when launching the instance. Do not pass gzip-compressed data via this argument; see `user_data_base64` instead.
 {{% /md %}}</dd>
@@ -918,7 +918,7 @@ the instance is terminated, the spot request will be closed.
             title="Optional">
         <span>User<wbr>Data<wbr>Base64</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Can be used instead of `user_data` to pass base64-encoded binary data directly. Use this instead of `user_data` whenever the value is not a valid UTF-8 string. For example, gzip-encoded user data must be base64-encoded and passed via this argument to avoid corruption.
 {{% /md %}}</dd>
@@ -927,7 +927,7 @@ the instance is terminated, the spot request will be closed.
             title="Optional">
         <span>Valid<wbr>From</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The start date and time of the request, in UTC [RFC3339](https://tools.ietf.org/html/rfc3339#section-5.8) format(for example, YYYY-MM-DDTHH:MM:SSZ). The default is to start fulfilling the request immediately.
 {{% /md %}}</dd>
@@ -936,7 +936,7 @@ the instance is terminated, the spot request will be closed.
             title="Optional">
         <span>Valid<wbr>Until</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The end date and time of the request, in UTC [RFC3339](https://tools.ietf.org/html/rfc3339#section-5.8) format(for example, YYYY-MM-DDTHH:MM:SSZ). At this point, no new Spot instance requests are placed or enabled to fulfill the request. The default end date is 7 days from the current date.
 {{% /md %}}</dd>
@@ -963,7 +963,7 @@ the instance is terminated, the spot request will be closed.
             title="Optional">
         <span>Wait<wbr>For<wbr>Fulfillment</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set, this provider will
 wait for the Spot Request to be fulfilled, and will throw an error if the
@@ -986,11 +986,20 @@ timeout of 10m is reached.
     <dd>{{% md %}}The AMI to use for the instance.
 {{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>instance<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of instance to start. Updates to this field will trigger a stop/start of the EC2 instance.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>associate<wbr>Public<wbr>Ip<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Associate a public ip address with an instance in a VPC.  Boolean value.
 {{% /md %}}</dd>
@@ -999,7 +1008,7 @@ timeout of 10m is reached.
             title="Optional">
         <span>availability<wbr>Zone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AZ to start the instance in.
 {{% /md %}}</dd>
@@ -1008,7 +1017,7 @@ timeout of 10m is reached.
             title="Optional">
         <span>block<wbr>Duration<wbr>Minutes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The required duration for the Spot instances, in minutes. This value must be a multiple of 60 (60, 120, 180, 240, 300, or 360).
 The duration period starts as soon as your Spot instance receives its instance ID. At the end of the duration period, Amazon EC2 marks the Spot instance for termination and provides a Spot instance termination notice, which gives the instance a two-minute warning before it terminates.
@@ -1019,7 +1028,7 @@ Note that you can't specify an Availability Zone group or a launch group if you 
             title="Optional">
         <span>cpu<wbr>Core<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Sets the number of CPU cores for an instance. This option is
 only supported on creation of instance type that support CPU Options
@@ -1030,7 +1039,7 @@ only supported on creation of instance type that support CPU Options
             title="Optional">
         <span>cpu<wbr>Threads<wbr>Per<wbr>Core</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}If set to to 1, hyperthreading is disabled on the launched instance. Defaults to 2 if not set. See [Optimizing CPU Options](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html) for more information.
 {{% /md %}}</dd>
@@ -1039,7 +1048,7 @@ only supported on creation of instance type that support CPU Options
             title="Optional">
         <span>credit<wbr>Specification</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotinstancerequestcreditspecification">Spot<wbr>Instance<wbr>Request<wbr>Credit<wbr>Specification?</a></span>
+        <span class="property-type"><a href="#spotinstancerequestcreditspecification">Spot<wbr>Instance<wbr>Request<wbr>Credit<wbr>Specification</a></span>
     </dt>
     <dd>{{% md %}}Customize the credit specification of the instance. See Credit Specification below for more details.
 {{% /md %}}</dd>
@@ -1048,7 +1057,7 @@ only supported on creation of instance type that support CPU Options
             title="Optional">
         <span>disable<wbr>Api<wbr>Termination</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, enables [EC2 Instance
 Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingDisableAPITermination)
@@ -1058,7 +1067,7 @@ Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/term
             title="Optional">
         <span>ebs<wbr>Block<wbr>Devices</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotinstancerequestebsblockdevice">Spot<wbr>Instance<wbr>Request<wbr>Ebs<wbr>Block<wbr>Device[]?</a></span>
+        <span class="property-type"><a href="#spotinstancerequestebsblockdevice">Spot<wbr>Instance<wbr>Request<wbr>Ebs<wbr>Block<wbr>Device[]</a></span>
     </dt>
     <dd>{{% md %}}Additional EBS block devices to attach to the
 instance.  Block device configurations only apply on resource creation. See Block Devices below for details on attributes and drift detection.
@@ -1068,7 +1077,7 @@ instance.  Block device configurations only apply on resource creation. See Bloc
             title="Optional">
         <span>ebs<wbr>Optimized</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, the launched EC2 instance will be EBS-optimized.
 Note that if this is not set on an instance type that is optimized by default then
@@ -1081,7 +1090,7 @@ See the [EBS Optimized section](https://docs.aws.amazon.com/AWSEC2/latest/UserGu
             title="Optional">
         <span>ephemeral<wbr>Block<wbr>Devices</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotinstancerequestephemeralblockdevice">Spot<wbr>Instance<wbr>Request<wbr>Ephemeral<wbr>Block<wbr>Device[]?</a></span>
+        <span class="property-type"><a href="#spotinstancerequestephemeralblockdevice">Spot<wbr>Instance<wbr>Request<wbr>Ephemeral<wbr>Block<wbr>Device[]</a></span>
     </dt>
     <dd>{{% md %}}Customize Ephemeral (also known as
 "Instance Store") volumes on the instance. See Block Devices below for details.
@@ -1091,7 +1100,7 @@ See the [EBS Optimized section](https://docs.aws.amazon.com/AWSEC2/latest/UserGu
             title="Optional">
         <span>get<wbr>Password<wbr>Data</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, wait for password data to become available and retrieve it. Useful for getting the administrator password for instances running Microsoft Windows. The password data is exported to the `password_data` attribute. See [GetPasswordData](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetPasswordData.html) for more information.
 {{% /md %}}</dd>
@@ -1100,7 +1109,7 @@ See the [EBS Optimized section](https://docs.aws.amazon.com/AWSEC2/latest/UserGu
             title="Optional">
         <span>hibernation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, the launched EC2 instance will support hibernation.
 {{% /md %}}</dd>
@@ -1109,7 +1118,7 @@ See the [EBS Optimized section](https://docs.aws.amazon.com/AWSEC2/latest/UserGu
             title="Optional">
         <span>host<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Id of a dedicated host that the instance will be assigned to. Use when an instance is to be launched on a specific dedicated host.
 {{% /md %}}</dd>
@@ -1118,7 +1127,7 @@ See the [EBS Optimized section](https://docs.aws.amazon.com/AWSEC2/latest/UserGu
             title="Optional">
         <span>iam<wbr>Instance<wbr>Profile</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IAM Instance Profile to
 launch the instance with. Specified as the name of the Instance Profile. Ensure your credentials have the correct permission to assign the instance profile according to the [EC2 documentation](http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-ec2.html#roles-usingrole-ec2instance-permissions), notably `iam:PassRole`.
@@ -1129,7 +1138,7 @@ launch the instance with. Specified as the name of the Instance Profile. Ensure 
             title="Optional">
         <span>instance<wbr>Initiated<wbr>Shutdown<wbr>Behavior</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Shutdown behavior for the
 instance. Amazon defaults this to `stop` for EBS-backed instances and
@@ -1141,25 +1150,16 @@ instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/Use
             title="Optional">
         <span>instance<wbr>Interruption<wbr>Behaviour</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Indicates whether a Spot instance stops or terminates when it is interrupted. Default is `terminate` as this is the current AWS behaviour.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>instance<wbr>Type</span>
-        <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of instance to start. Updates to this field will trigger a stop/start of the EC2 instance.
+    <dd>{{% md %}}Indicates whether a Spot instance stops or terminates when it is interrupted. Default is `terminate` as this is the current AWS behaviour.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>ipv6Address<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1167,7 +1167,7 @@ instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/Use
             title="Optional">
         <span>ipv6Addresses</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specify one or more IPv6 addresses from the range of the subnet to associate with the primary network interface
 {{% /md %}}</dd>
@@ -1176,7 +1176,7 @@ instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/Use
             title="Optional">
         <span>key<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The key name of the Key Pair to use for the instance; which can be managed using the `aws.ec2.KeyPair` resource.
 {{% /md %}}</dd>
@@ -1185,7 +1185,7 @@ instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/Use
             title="Optional">
         <span>launch<wbr>Group</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A launch group is a group of spot instances that launch together and terminate together.
 If left empty instances are launched and terminated individually.
@@ -1195,7 +1195,7 @@ If left empty instances are launched and terminated individually.
             title="Optional">
         <span>metadata<wbr>Options</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotinstancerequestmetadataoptions">Spot<wbr>Instance<wbr>Request<wbr>Metadata<wbr>Options?</a></span>
+        <span class="property-type"><a href="#spotinstancerequestmetadataoptions">Spot<wbr>Instance<wbr>Request<wbr>Metadata<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}Customize the metadata options of the instance. See Metadata Options below for more details.
 {{% /md %}}</dd>
@@ -1204,7 +1204,7 @@ If left empty instances are launched and terminated individually.
             title="Optional">
         <span>monitoring</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, the launched EC2 instance will have detailed monitoring enabled. (Available since v0.6.0)
 {{% /md %}}</dd>
@@ -1213,7 +1213,7 @@ If left empty instances are launched and terminated individually.
             title="Optional">
         <span>network<wbr>Interfaces</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotinstancerequestnetworkinterface">Spot<wbr>Instance<wbr>Request<wbr>Network<wbr>Interface[]?</a></span>
+        <span class="property-type"><a href="#spotinstancerequestnetworkinterface">Spot<wbr>Instance<wbr>Request<wbr>Network<wbr>Interface[]</a></span>
     </dt>
     <dd>{{% md %}}Customize network interfaces to be attached at instance boot time. See Network Interfaces below for more details.
 {{% /md %}}</dd>
@@ -1222,7 +1222,7 @@ If left empty instances are launched and terminated individually.
             title="Optional">
         <span>placement<wbr>Group</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Placement Group to start the instance in.
 {{% /md %}}</dd>
@@ -1231,7 +1231,7 @@ If left empty instances are launched and terminated individually.
             title="Optional">
         <span>private<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Private IP address to associate with the
 instance in a VPC.
@@ -1241,7 +1241,7 @@ instance in a VPC.
             title="Optional">
         <span>root<wbr>Block<wbr>Device</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotinstancerequestrootblockdevice">Spot<wbr>Instance<wbr>Request<wbr>Root<wbr>Block<wbr>Device?</a></span>
+        <span class="property-type"><a href="#spotinstancerequestrootblockdevice">Spot<wbr>Instance<wbr>Request<wbr>Root<wbr>Block<wbr>Device</a></span>
     </dt>
     <dd>{{% md %}}Customize details about the root block
 device of the instance. See Block Devices below for details.
@@ -1251,7 +1251,7 @@ device of the instance. See Block Devices below for details.
             title="Optional">
         <span>security<wbr>Groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of security group names (EC2-Classic) or IDs (default VPC) to associate with.
 {{% /md %}}</dd>
@@ -1260,7 +1260,7 @@ device of the instance. See Block Devices below for details.
             title="Optional">
         <span>source<wbr>Dest<wbr>Check</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Controls if traffic is routed to the instance when
 the destination address does not match the instance. Used for NAT or VPNs. Defaults true.
@@ -1270,7 +1270,7 @@ the destination address does not match the instance. Used for NAT or VPNs. Defau
             title="Optional">
         <span>spot<wbr>Price</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum price to request on the spot market.
 {{% /md %}}</dd>
@@ -1279,7 +1279,7 @@ the destination address does not match the instance. Used for NAT or VPNs. Defau
             title="Optional">
         <span>spot<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If set to `one-time`, after
 the instance is terminated, the spot request will be closed.
@@ -1289,7 +1289,7 @@ the instance is terminated, the spot request will be closed.
             title="Optional">
         <span>subnet<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The VPC Subnet ID to launch in.
 {{% /md %}}</dd>
@@ -1298,7 +1298,7 @@ the instance is terminated, the spot request will be closed.
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1307,7 +1307,7 @@ the instance is terminated, the spot request will be closed.
             title="Optional">
         <span>tenancy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The tenancy of the instance (if the instance is running in a VPC). An instance with a tenancy of dedicated runs on single-tenant hardware. The host tenancy is not supported for the import-instance command.
 {{% /md %}}</dd>
@@ -1316,7 +1316,7 @@ the instance is terminated, the spot request will be closed.
             title="Optional">
         <span>user<wbr>Data</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user data to provide when launching the instance. Do not pass gzip-compressed data via this argument; see `user_data_base64` instead.
 {{% /md %}}</dd>
@@ -1325,7 +1325,7 @@ the instance is terminated, the spot request will be closed.
             title="Optional">
         <span>user<wbr>Data<wbr>Base64</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Can be used instead of `user_data` to pass base64-encoded binary data directly. Use this instead of `user_data` whenever the value is not a valid UTF-8 string. For example, gzip-encoded user data must be base64-encoded and passed via this argument to avoid corruption.
 {{% /md %}}</dd>
@@ -1334,7 +1334,7 @@ the instance is terminated, the spot request will be closed.
             title="Optional">
         <span>valid<wbr>From</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The start date and time of the request, in UTC [RFC3339](https://tools.ietf.org/html/rfc3339#section-5.8) format(for example, YYYY-MM-DDTHH:MM:SSZ). The default is to start fulfilling the request immediately.
 {{% /md %}}</dd>
@@ -1343,7 +1343,7 @@ the instance is terminated, the spot request will be closed.
             title="Optional">
         <span>valid<wbr>Until</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The end date and time of the request, in UTC [RFC3339](https://tools.ietf.org/html/rfc3339#section-5.8) format(for example, YYYY-MM-DDTHH:MM:SSZ). At this point, no new Spot instance requests are placed or enabled to fulfill the request. The default end date is 7 days from the current date.
 {{% /md %}}</dd>
@@ -1352,7 +1352,7 @@ the instance is terminated, the spot request will be closed.
             title="Optional">
         <span>volume<wbr>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the devices created by the instance at launch time.
 {{% /md %}}</dd>
@@ -1361,7 +1361,7 @@ the instance is terminated, the spot request will be closed.
             title="Optional">
         <span>vpc<wbr>Security<wbr>Group<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of security group IDs to associate with.
 {{% /md %}}</dd>
@@ -1370,7 +1370,7 @@ the instance is terminated, the spot request will be closed.
             title="Optional">
         <span>wait<wbr>For<wbr>Fulfillment</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If set, this provider will
 wait for the Spot Request to be fulfilled, and will throw an error if the
@@ -1391,6 +1391,15 @@ timeout of 10m is reached.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The AMI to use for the instance.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>instance_<wbr>type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The type of instance to start. Updates to this field will trigger a stop/start of the EC2 instance.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1551,15 +1560,6 @@ instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/Use
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Indicates whether a Spot instance stops or terminates when it is interrupted. Default is `terminate` as this is the current AWS behaviour.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>instance_<wbr>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The type of instance to start. Updates to this field will trigger a stop/start of the EC2 instance.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1805,180 +1805,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Ami</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The AMI to use for the instance.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Arn</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Associate<wbr>Public<wbr>Ip<wbr>Address</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Associate a public ip address with an instance in a VPC.  Boolean value.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Availability<wbr>Zone</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The AZ to start the instance in.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Block<wbr>Duration<wbr>Minutes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}The required duration for the Spot instances, in minutes. This value must be a multiple of 60 (60, 120, 180, 240, 300, or 360).
-The duration period starts as soon as your Spot instance receives its instance ID. At the end of the duration period, Amazon EC2 marks the Spot instance for termination and provides a Spot instance termination notice, which gives the instance a two-minute warning before it terminates.
-Note that you can't specify an Availability Zone group or a launch group if you specify a duration.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Cpu<wbr>Core<wbr>Count</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Sets the number of CPU cores for an instance. This option is
-only supported on creation of instance type that support CPU Options
-[CPU Cores and Threads Per CPU Core Per Instance Type](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html#cpu-options-supported-instances-values) - specifying this option for unsupported instance types will return an error from the EC2 API.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Cpu<wbr>Threads<wbr>Per<wbr>Core</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}If set to to 1, hyperthreading is disabled on the launched instance. Defaults to 2 if not set. See [Optimizing CPU Options](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html) for more information.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Credit<wbr>Specification</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotinstancerequestcreditspecification">Spot<wbr>Instance<wbr>Request<wbr>Credit<wbr>Specification?</a></span>
-    </dt>
-    <dd>{{% md %}}Customize the credit specification of the instance. See Credit Specification below for more details.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Disable<wbr>Api<wbr>Termination</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}If true, enables [EC2 Instance
-Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingDisableAPITermination)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Ebs<wbr>Block<wbr>Devices</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotinstancerequestebsblockdevice">List&lt;Spot<wbr>Instance<wbr>Request<wbr>Ebs<wbr>Block<wbr>Device&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}Additional EBS block devices to attach to the
-instance.  Block device configurations only apply on resource creation. See Block Devices below for details on attributes and drift detection.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Ebs<wbr>Optimized</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}If true, the launched EC2 instance will be EBS-optimized.
-Note that if this is not set on an instance type that is optimized by default then
-this will show as disabled but if the instance type is optimized by default then
-there is no need to set this and there is no effect to disabling it.
-See the [EBS Optimized section](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSOptimized.html) of the AWS User Guide for more information.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Ephemeral<wbr>Block<wbr>Devices</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotinstancerequestephemeralblockdevice">List&lt;Spot<wbr>Instance<wbr>Request<wbr>Ephemeral<wbr>Block<wbr>Device&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}Customize Ephemeral (also known as
-"Instance Store") volumes on the instance. See Block Devices below for details.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Get<wbr>Password<wbr>Data</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}If true, wait for password data to become available and retrieve it. Useful for getting the administrator password for instances running Microsoft Windows. The password data is exported to the `password_data` attribute. See [GetPasswordData](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetPasswordData.html) for more information.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Hibernation</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}If true, the launched EC2 instance will support hibernation.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Host<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Id of a dedicated host that the instance will be assigned to. Use when an instance is to be launched on a specific dedicated host.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Iam<wbr>Instance<wbr>Profile</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The IAM Instance Profile to
-launch the instance with. Specified as the name of the Instance Profile. Ensure your credentials have the correct permission to assign the instance profile according to the [EC2 documentation](http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-ec2.html#roles-usingrole-ec2instance-permissions), notably `iam:PassRole`.
-* `ipv6_address_count`- (Optional) A number of IPv6 addresses to associate with the primary network interface. Amazon EC2 chooses the IPv6 addresses from the range of your subnet.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Instance<wbr>Initiated<wbr>Shutdown<wbr>Behavior</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Shutdown behavior for the
-instance. Amazon defaults this to `stop` for EBS-backed instances and
-`terminate` for instance-store instances. Cannot be set on instance-store
-instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingInstanceInitiatedShutdownBehavior) for more information.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Instance<wbr>Interruption<wbr>Behaviour</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Indicates whether a Spot instance stops or terminates when it is interrupted. Default is `terminate` as this is the current AWS behaviour.
-{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1990,92 +1821,11 @@ instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/Use
 
     <dt class="property-"
             title="">
-        <span>Instance<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The type of instance to start. Updates to this field will trigger a stop/start of the EC2 instance.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Ipv6Address<wbr>Count</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Ipv6Addresses</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
-    </dt>
-    <dd>{{% md %}}Specify one or more IPv6 addresses from the range of the subnet to associate with the primary network interface
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Key<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The key name of the Key Pair to use for the instance; which can be managed using the `aws.ec2.KeyPair` resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Launch<wbr>Group</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}A launch group is a group of spot instances that launch together and terminate together.
-If left empty instances are launched and terminated individually.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Metadata<wbr>Options</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotinstancerequestmetadataoptions">Spot<wbr>Instance<wbr>Request<wbr>Metadata<wbr>Options</a></span>
-    </dt>
-    <dd>{{% md %}}Customize the metadata options of the instance. See Metadata Options below for more details.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Monitoring</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}If true, the launched EC2 instance will have detailed monitoring enabled. (Available since v0.6.0)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Network<wbr>Interfaces</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotinstancerequestnetworkinterface">List&lt;Spot<wbr>Instance<wbr>Request<wbr>Network<wbr>Interface&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}Customize network interfaces to be attached at instance boot time. See Network Interfaces below for more details.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Password<wbr>Data</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Placement<wbr>Group</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Placement Group to start the instance in.
-{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -2098,16 +1848,6 @@ for your VPC
 
     <dt class="property-"
             title="">
-        <span>Private<wbr>Ip</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Private IP address to associate with the
-instance in a VPC.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Public<wbr>Dns</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -2123,35 +1863,6 @@ is only available if you've enabled DNS hostnames for your VPC
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The public IP address assigned to the instance, if applicable.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Root<wbr>Block<wbr>Device</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotinstancerequestrootblockdevice">Spot<wbr>Instance<wbr>Request<wbr>Root<wbr>Block<wbr>Device</a></span>
-    </dt>
-    <dd>{{% md %}}Customize details about the root block
-device of the instance. See Block Devices below for details.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Security<wbr>Groups</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
-    </dt>
-    <dd>{{% md %}}A list of security group names (EC2-Classic) or IDs (default VPC) to associate with.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Source<wbr>Dest<wbr>Check</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Controls if traffic is routed to the instance when
-the destination address does not match the instance. Used for NAT or VPNs. Defaults true.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -2180,122 +1891,11 @@ the Spot Instance request.
 
     <dt class="property-"
             title="">
-        <span>Spot<wbr>Price</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The maximum price to request on the spot market.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Spot<wbr>Request<wbr>State</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Spot<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}If set to `one-time`, after
-the instance is terminated, the spot request will be closed.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Subnet<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The VPC Subnet ID to launch in.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tenancy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The tenancy of the instance (if the instance is running in a VPC). An instance with a tenancy of dedicated runs on single-tenant hardware. The host tenancy is not supported for the import-instance command.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>User<wbr>Data</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The user data to provide when launching the instance. Do not pass gzip-compressed data via this argument; see `user_data_base64` instead.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>User<wbr>Data<wbr>Base64</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Can be used instead of `user_data` to pass base64-encoded binary data directly. Use this instead of `user_data` whenever the value is not a valid UTF-8 string. For example, gzip-encoded user data must be base64-encoded and passed via this argument to avoid corruption.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Valid<wbr>From</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The start date and time of the request, in UTC [RFC3339](https://tools.ietf.org/html/rfc3339#section-5.8) format(for example, YYYY-MM-DDTHH:MM:SSZ). The default is to start fulfilling the request immediately.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Valid<wbr>Until</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The end date and time of the request, in UTC [RFC3339](https://tools.ietf.org/html/rfc3339#section-5.8) format(for example, YYYY-MM-DDTHH:MM:SSZ). At this point, no new Spot instance requests are placed or enabled to fulfill the request. The default end date is 7 days from the current date.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Volume<wbr>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the devices created by the instance at launch time.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Vpc<wbr>Security<wbr>Group<wbr>Ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
-    </dt>
-    <dd>{{% md %}}A list of security group IDs to associate with.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Wait<wbr>For<wbr>Fulfillment</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}If set, this provider will
-wait for the Spot Request to be fulfilled, and will throw an error if the
-timeout of 10m is reached.
-{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2306,180 +1906,11 @@ timeout of 10m is reached.
 
     <dt class="property-"
             title="">
-        <span>Ami</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The AMI to use for the instance.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Arn</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Associate<wbr>Public<wbr>Ip<wbr>Address</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Associate a public ip address with an instance in a VPC.  Boolean value.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Availability<wbr>Zone</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The AZ to start the instance in.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Block<wbr>Duration<wbr>Minutes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}The required duration for the Spot instances, in minutes. This value must be a multiple of 60 (60, 120, 180, 240, 300, or 360).
-The duration period starts as soon as your Spot instance receives its instance ID. At the end of the duration period, Amazon EC2 marks the Spot instance for termination and provides a Spot instance termination notice, which gives the instance a two-minute warning before it terminates.
-Note that you can't specify an Availability Zone group or a launch group if you specify a duration.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Cpu<wbr>Core<wbr>Count</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Sets the number of CPU cores for an instance. This option is
-only supported on creation of instance type that support CPU Options
-[CPU Cores and Threads Per CPU Core Per Instance Type](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html#cpu-options-supported-instances-values) - specifying this option for unsupported instance types will return an error from the EC2 API.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Cpu<wbr>Threads<wbr>Per<wbr>Core</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}If set to to 1, hyperthreading is disabled on the launched instance. Defaults to 2 if not set. See [Optimizing CPU Options](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html) for more information.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Credit<wbr>Specification</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotinstancerequestcreditspecification">*Spot<wbr>Instance<wbr>Request<wbr>Credit<wbr>Specification</a></span>
-    </dt>
-    <dd>{{% md %}}Customize the credit specification of the instance. See Credit Specification below for more details.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Disable<wbr>Api<wbr>Termination</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}If true, enables [EC2 Instance
-Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingDisableAPITermination)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Ebs<wbr>Block<wbr>Devices</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotinstancerequestebsblockdevice">[]Spot<wbr>Instance<wbr>Request<wbr>Ebs<wbr>Block<wbr>Device</a></span>
-    </dt>
-    <dd>{{% md %}}Additional EBS block devices to attach to the
-instance.  Block device configurations only apply on resource creation. See Block Devices below for details on attributes and drift detection.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Ebs<wbr>Optimized</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}If true, the launched EC2 instance will be EBS-optimized.
-Note that if this is not set on an instance type that is optimized by default then
-this will show as disabled but if the instance type is optimized by default then
-there is no need to set this and there is no effect to disabling it.
-See the [EBS Optimized section](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSOptimized.html) of the AWS User Guide for more information.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Ephemeral<wbr>Block<wbr>Devices</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotinstancerequestephemeralblockdevice">[]Spot<wbr>Instance<wbr>Request<wbr>Ephemeral<wbr>Block<wbr>Device</a></span>
-    </dt>
-    <dd>{{% md %}}Customize Ephemeral (also known as
-"Instance Store") volumes on the instance. See Block Devices below for details.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Get<wbr>Password<wbr>Data</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}If true, wait for password data to become available and retrieve it. Useful for getting the administrator password for instances running Microsoft Windows. The password data is exported to the `password_data` attribute. See [GetPasswordData](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetPasswordData.html) for more information.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Hibernation</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}If true, the launched EC2 instance will support hibernation.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Host<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Id of a dedicated host that the instance will be assigned to. Use when an instance is to be launched on a specific dedicated host.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Iam<wbr>Instance<wbr>Profile</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The IAM Instance Profile to
-launch the instance with. Specified as the name of the Instance Profile. Ensure your credentials have the correct permission to assign the instance profile according to the [EC2 documentation](http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-ec2.html#roles-usingrole-ec2instance-permissions), notably `iam:PassRole`.
-* `ipv6_address_count`- (Optional) A number of IPv6 addresses to associate with the primary network interface. Amazon EC2 chooses the IPv6 addresses from the range of your subnet.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Instance<wbr>Initiated<wbr>Shutdown<wbr>Behavior</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Shutdown behavior for the
-instance. Amazon defaults this to `stop` for EBS-backed instances and
-`terminate` for instance-store instances. Cannot be set on instance-store
-instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingInstanceInitiatedShutdownBehavior) for more information.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Instance<wbr>Interruption<wbr>Behaviour</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Indicates whether a Spot instance stops or terminates when it is interrupted. Default is `terminate` as this is the current AWS behaviour.
-{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -2491,92 +1922,11 @@ instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/Use
 
     <dt class="property-"
             title="">
-        <span>Instance<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The type of instance to start. Updates to this field will trigger a stop/start of the EC2 instance.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Ipv6Address<wbr>Count</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Ipv6Addresses</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}Specify one or more IPv6 addresses from the range of the subnet to associate with the primary network interface
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Key<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The key name of the Key Pair to use for the instance; which can be managed using the `aws.ec2.KeyPair` resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Launch<wbr>Group</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}A launch group is a group of spot instances that launch together and terminate together.
-If left empty instances are launched and terminated individually.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Metadata<wbr>Options</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotinstancerequestmetadataoptions">Spot<wbr>Instance<wbr>Request<wbr>Metadata<wbr>Options</a></span>
-    </dt>
-    <dd>{{% md %}}Customize the metadata options of the instance. See Metadata Options below for more details.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Monitoring</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}If true, the launched EC2 instance will have detailed monitoring enabled. (Available since v0.6.0)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Network<wbr>Interfaces</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotinstancerequestnetworkinterface">[]Spot<wbr>Instance<wbr>Request<wbr>Network<wbr>Interface</a></span>
-    </dt>
-    <dd>{{% md %}}Customize network interfaces to be attached at instance boot time. See Network Interfaces below for more details.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Password<wbr>Data</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Placement<wbr>Group</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Placement Group to start the instance in.
-{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -2599,16 +1949,6 @@ for your VPC
 
     <dt class="property-"
             title="">
-        <span>Private<wbr>Ip</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Private IP address to associate with the
-instance in a VPC.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Public<wbr>Dns</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -2624,35 +1964,6 @@ is only available if you've enabled DNS hostnames for your VPC
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The public IP address assigned to the instance, if applicable.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Root<wbr>Block<wbr>Device</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotinstancerequestrootblockdevice">Spot<wbr>Instance<wbr>Request<wbr>Root<wbr>Block<wbr>Device</a></span>
-    </dt>
-    <dd>{{% md %}}Customize details about the root block
-device of the instance. See Block Devices below for details.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Security<wbr>Groups</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}A list of security group names (EC2-Classic) or IDs (default VPC) to associate with.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Source<wbr>Dest<wbr>Check</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Controls if traffic is routed to the instance when
-the destination address does not match the instance. Used for NAT or VPNs. Defaults true.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -2681,122 +1992,11 @@ the Spot Instance request.
 
     <dt class="property-"
             title="">
-        <span>Spot<wbr>Price</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The maximum price to request on the spot market.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Spot<wbr>Request<wbr>State</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Spot<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}If set to `one-time`, after
-the instance is terminated, the spot request will be closed.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Subnet<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The VPC Subnet ID to launch in.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tenancy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The tenancy of the instance (if the instance is running in a VPC). An instance with a tenancy of dedicated runs on single-tenant hardware. The host tenancy is not supported for the import-instance command.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>User<wbr>Data</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The user data to provide when launching the instance. Do not pass gzip-compressed data via this argument; see `user_data_base64` instead.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>User<wbr>Data<wbr>Base64</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Can be used instead of `user_data` to pass base64-encoded binary data directly. Use this instead of `user_data` whenever the value is not a valid UTF-8 string. For example, gzip-encoded user data must be base64-encoded and passed via this argument to avoid corruption.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Valid<wbr>From</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The start date and time of the request, in UTC [RFC3339](https://tools.ietf.org/html/rfc3339#section-5.8) format(for example, YYYY-MM-DDTHH:MM:SSZ). The default is to start fulfilling the request immediately.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Valid<wbr>Until</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The end date and time of the request, in UTC [RFC3339](https://tools.ietf.org/html/rfc3339#section-5.8) format(for example, YYYY-MM-DDTHH:MM:SSZ). At this point, no new Spot instance requests are placed or enabled to fulfill the request. The default end date is 7 days from the current date.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Volume<wbr>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the devices created by the instance at launch time.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Vpc<wbr>Security<wbr>Group<wbr>Ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}A list of security group IDs to associate with.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Wait<wbr>For<wbr>Fulfillment</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}If set, this provider will
-wait for the Spot Request to be fulfilled, and will throw an error if the
-timeout of 10m is reached.
-{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2804,15 +2004,6 @@ timeout of 10m is reached.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>ami</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The AMI to use for the instance.
-{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -2824,166 +2015,6 @@ timeout of 10m is reached.
 
     <dt class="property-"
             title="">
-        <span>associate<wbr>Public<wbr>Ip<wbr>Address</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
-    </dt>
-    <dd>{{% md %}}Associate a public ip address with an instance in a VPC.  Boolean value.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>availability<wbr>Zone</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The AZ to start the instance in.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>block<wbr>Duration<wbr>Minutes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}The required duration for the Spot instances, in minutes. This value must be a multiple of 60 (60, 120, 180, 240, 300, or 360).
-The duration period starts as soon as your Spot instance receives its instance ID. At the end of the duration period, Amazon EC2 marks the Spot instance for termination and provides a Spot instance termination notice, which gives the instance a two-minute warning before it terminates.
-Note that you can't specify an Availability Zone group or a launch group if you specify a duration.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>cpu<wbr>Core<wbr>Count</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}Sets the number of CPU cores for an instance. This option is
-only supported on creation of instance type that support CPU Options
-[CPU Cores and Threads Per CPU Core Per Instance Type](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html#cpu-options-supported-instances-values) - specifying this option for unsupported instance types will return an error from the EC2 API.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>cpu<wbr>Threads<wbr>Per<wbr>Core</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}If set to to 1, hyperthreading is disabled on the launched instance. Defaults to 2 if not set. See [Optimizing CPU Options](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html) for more information.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>credit<wbr>Specification</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotinstancerequestcreditspecification">Spot<wbr>Instance<wbr>Request<wbr>Credit<wbr>Specification?</a></span>
-    </dt>
-    <dd>{{% md %}}Customize the credit specification of the instance. See Credit Specification below for more details.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>disable<wbr>Api<wbr>Termination</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}If true, enables [EC2 Instance
-Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingDisableAPITermination)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>ebs<wbr>Block<wbr>Devices</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotinstancerequestebsblockdevice">Spot<wbr>Instance<wbr>Request<wbr>Ebs<wbr>Block<wbr>Device[]</a></span>
-    </dt>
-    <dd>{{% md %}}Additional EBS block devices to attach to the
-instance.  Block device configurations only apply on resource creation. See Block Devices below for details on attributes and drift detection.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>ebs<wbr>Optimized</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}If true, the launched EC2 instance will be EBS-optimized.
-Note that if this is not set on an instance type that is optimized by default then
-this will show as disabled but if the instance type is optimized by default then
-there is no need to set this and there is no effect to disabling it.
-See the [EBS Optimized section](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSOptimized.html) of the AWS User Guide for more information.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>ephemeral<wbr>Block<wbr>Devices</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotinstancerequestephemeralblockdevice">Spot<wbr>Instance<wbr>Request<wbr>Ephemeral<wbr>Block<wbr>Device[]</a></span>
-    </dt>
-    <dd>{{% md %}}Customize Ephemeral (also known as
-"Instance Store") volumes on the instance. See Block Devices below for details.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>get<wbr>Password<wbr>Data</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}If true, wait for password data to become available and retrieve it. Useful for getting the administrator password for instances running Microsoft Windows. The password data is exported to the `password_data` attribute. See [GetPasswordData](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetPasswordData.html) for more information.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>hibernation</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}If true, the launched EC2 instance will support hibernation.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>host<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Id of a dedicated host that the instance will be assigned to. Use when an instance is to be launched on a specific dedicated host.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>iam<wbr>Instance<wbr>Profile</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The IAM Instance Profile to
-launch the instance with. Specified as the name of the Instance Profile. Ensure your credentials have the correct permission to assign the instance profile according to the [EC2 documentation](http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-ec2.html#roles-usingrole-ec2instance-permissions), notably `iam:PassRole`.
-* `ipv6_address_count`- (Optional) A number of IPv6 addresses to associate with the primary network interface. Amazon EC2 chooses the IPv6 addresses from the range of your subnet.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>instance<wbr>Initiated<wbr>Shutdown<wbr>Behavior</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Shutdown behavior for the
-instance. Amazon defaults this to `stop` for EBS-backed instances and
-`terminate` for instance-store instances. Cannot be set on instance-store
-instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingInstanceInitiatedShutdownBehavior) for more information.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>instance<wbr>Interruption<wbr>Behaviour</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Indicates whether a Spot instance stops or terminates when it is interrupted. Default is `terminate` as this is the current AWS behaviour.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>instance<wbr>State</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -2992,92 +2023,11 @@ instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/Use
 
     <dt class="property-"
             title="">
-        <span>instance<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The type of instance to start. Updates to this field will trigger a stop/start of the EC2 instance.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>ipv6Address<wbr>Count</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>ipv6Addresses</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
-    </dt>
-    <dd>{{% md %}}Specify one or more IPv6 addresses from the range of the subnet to associate with the primary network interface
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>key<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The key name of the Key Pair to use for the instance; which can be managed using the `aws.ec2.KeyPair` resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>launch<wbr>Group</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}A launch group is a group of spot instances that launch together and terminate together.
-If left empty instances are launched and terminated individually.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>metadata<wbr>Options</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotinstancerequestmetadataoptions">Spot<wbr>Instance<wbr>Request<wbr>Metadata<wbr>Options</a></span>
-    </dt>
-    <dd>{{% md %}}Customize the metadata options of the instance. See Metadata Options below for more details.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>monitoring</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}If true, the launched EC2 instance will have detailed monitoring enabled. (Available since v0.6.0)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>network<wbr>Interfaces</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotinstancerequestnetworkinterface">Spot<wbr>Instance<wbr>Request<wbr>Network<wbr>Interface[]</a></span>
-    </dt>
-    <dd>{{% md %}}Customize network interfaces to be attached at instance boot time. See Network Interfaces below for more details.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>password<wbr>Data</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>placement<wbr>Group</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Placement Group to start the instance in.
-{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -3100,16 +2050,6 @@ for your VPC
 
     <dt class="property-"
             title="">
-        <span>private<wbr>Ip</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Private IP address to associate with the
-instance in a VPC.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>public<wbr>Dns</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -3125,35 +2065,6 @@ is only available if you've enabled DNS hostnames for your VPC
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The public IP address assigned to the instance, if applicable.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>root<wbr>Block<wbr>Device</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotinstancerequestrootblockdevice">Spot<wbr>Instance<wbr>Request<wbr>Root<wbr>Block<wbr>Device</a></span>
-    </dt>
-    <dd>{{% md %}}Customize details about the root block
-device of the instance. See Block Devices below for details.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>security<wbr>Groups</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
-    </dt>
-    <dd>{{% md %}}A list of security group names (EC2-Classic) or IDs (default VPC) to associate with.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>source<wbr>Dest<wbr>Check</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Controls if traffic is routed to the instance when
-the destination address does not match the instance. Used for NAT or VPNs. Defaults true.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -3182,122 +2093,11 @@ the Spot Instance request.
 
     <dt class="property-"
             title="">
-        <span>spot<wbr>Price</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The maximum price to request on the spot market.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>spot<wbr>Request<wbr>State</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>spot<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}If set to `one-time`, after
-the instance is terminated, the spot request will be closed.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>subnet<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The VPC Subnet ID to launch in.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tenancy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The tenancy of the instance (if the instance is running in a VPC). An instance with a tenancy of dedicated runs on single-tenant hardware. The host tenancy is not supported for the import-instance command.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>user<wbr>Data</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The user data to provide when launching the instance. Do not pass gzip-compressed data via this argument; see `user_data_base64` instead.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>user<wbr>Data<wbr>Base64</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Can be used instead of `user_data` to pass base64-encoded binary data directly. Use this instead of `user_data` whenever the value is not a valid UTF-8 string. For example, gzip-encoded user data must be base64-encoded and passed via this argument to avoid corruption.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>valid<wbr>From</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The start date and time of the request, in UTC [RFC3339](https://tools.ietf.org/html/rfc3339#section-5.8) format(for example, YYYY-MM-DDTHH:MM:SSZ). The default is to start fulfilling the request immediately.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>valid<wbr>Until</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The end date and time of the request, in UTC [RFC3339](https://tools.ietf.org/html/rfc3339#section-5.8) format(for example, YYYY-MM-DDTHH:MM:SSZ). At this point, no new Spot instance requests are placed or enabled to fulfill the request. The default end date is 7 days from the current date.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>volume<wbr>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the devices created by the instance at launch time.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>vpc<wbr>Security<wbr>Group<wbr>Ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
-    </dt>
-    <dd>{{% md %}}A list of security group IDs to associate with.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>wait<wbr>For<wbr>Fulfillment</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}If set, this provider will
-wait for the Spot Request to be fulfilled, and will throw an error if the
-timeout of 10m is reached.
-{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -3305,15 +2105,6 @@ timeout of 10m is reached.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>ami</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The AMI to use for the instance.
-{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -3325,166 +2116,6 @@ timeout of 10m is reached.
 
     <dt class="property-"
             title="">
-        <span>associate_<wbr>public_<wbr>ip_<wbr>address</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Associate a public ip address with an instance in a VPC.  Boolean value.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>availability_<wbr>zone</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The AZ to start the instance in.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>block_<wbr>duration_<wbr>minutes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The required duration for the Spot instances, in minutes. This value must be a multiple of 60 (60, 120, 180, 240, 300, or 360).
-The duration period starts as soon as your Spot instance receives its instance ID. At the end of the duration period, Amazon EC2 marks the Spot instance for termination and provides a Spot instance termination notice, which gives the instance a two-minute warning before it terminates.
-Note that you can't specify an Availability Zone group or a launch group if you specify a duration.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>cpu_<wbr>core_<wbr>count</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}Sets the number of CPU cores for an instance. This option is
-only supported on creation of instance type that support CPU Options
-[CPU Cores and Threads Per CPU Core Per Instance Type](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html#cpu-options-supported-instances-values) - specifying this option for unsupported instance types will return an error from the EC2 API.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>cpu_<wbr>threads_<wbr>per_<wbr>core</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}If set to to 1, hyperthreading is disabled on the launched instance. Defaults to 2 if not set. See [Optimizing CPU Options](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html) for more information.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>credit_<wbr>specification</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotinstancerequestcreditspecification">Dict[Spot<wbr>Instance<wbr>Request<wbr>Credit<wbr>Specification]</a></span>
-    </dt>
-    <dd>{{% md %}}Customize the credit specification of the instance. See Credit Specification below for more details.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>disable_<wbr>api_<wbr>termination</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}If true, enables [EC2 Instance
-Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingDisableAPITermination)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>ebs_<wbr>block_<wbr>devices</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotinstancerequestebsblockdevice">List[Spot<wbr>Instance<wbr>Request<wbr>Ebs<wbr>Block<wbr>Device]</a></span>
-    </dt>
-    <dd>{{% md %}}Additional EBS block devices to attach to the
-instance.  Block device configurations only apply on resource creation. See Block Devices below for details on attributes and drift detection.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>ebs_<wbr>optimized</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}If true, the launched EC2 instance will be EBS-optimized.
-Note that if this is not set on an instance type that is optimized by default then
-this will show as disabled but if the instance type is optimized by default then
-there is no need to set this and there is no effect to disabling it.
-See the [EBS Optimized section](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSOptimized.html) of the AWS User Guide for more information.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>ephemeral_<wbr>block_<wbr>devices</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotinstancerequestephemeralblockdevice">List[Spot<wbr>Instance<wbr>Request<wbr>Ephemeral<wbr>Block<wbr>Device]</a></span>
-    </dt>
-    <dd>{{% md %}}Customize Ephemeral (also known as
-"Instance Store") volumes on the instance. See Block Devices below for details.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>get_<wbr>password_<wbr>data</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}If true, wait for password data to become available and retrieve it. Useful for getting the administrator password for instances running Microsoft Windows. The password data is exported to the `password_data` attribute. See [GetPasswordData](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetPasswordData.html) for more information.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>hibernation</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}If true, the launched EC2 instance will support hibernation.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>host_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The Id of a dedicated host that the instance will be assigned to. Use when an instance is to be launched on a specific dedicated host.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>iam_<wbr>instance_<wbr>profile</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The IAM Instance Profile to
-launch the instance with. Specified as the name of the Instance Profile. Ensure your credentials have the correct permission to assign the instance profile according to the [EC2 documentation](http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-ec2.html#roles-usingrole-ec2instance-permissions), notably `iam:PassRole`.
-* `ipv6_address_count`- (Optional) A number of IPv6 addresses to associate with the primary network interface. Amazon EC2 chooses the IPv6 addresses from the range of your subnet.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>instance_<wbr>initiated_<wbr>shutdown_<wbr>behavior</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Shutdown behavior for the
-instance. Amazon defaults this to `stop` for EBS-backed instances and
-`terminate` for instance-store instances. Cannot be set on instance-store
-instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingInstanceInitiatedShutdownBehavior) for more information.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>instance_<wbr>interruption_<wbr>behaviour</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Indicates whether a Spot instance stops or terminates when it is interrupted. Default is `terminate` as this is the current AWS behaviour.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>instance_<wbr>state</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -3493,92 +2124,11 @@ instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/Use
 
     <dt class="property-"
             title="">
-        <span>instance_<wbr>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The type of instance to start. Updates to this field will trigger a stop/start of the EC2 instance.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>ipv6_<wbr>address_<wbr>count</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>ipv6_<wbr>addresses</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}Specify one or more IPv6 addresses from the range of the subnet to associate with the primary network interface
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>key_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The key name of the Key Pair to use for the instance; which can be managed using the `aws.ec2.KeyPair` resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>launch_<wbr>group</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}A launch group is a group of spot instances that launch together and terminate together.
-If left empty instances are launched and terminated individually.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>metadata_<wbr>options</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotinstancerequestmetadataoptions">Dict[Spot<wbr>Instance<wbr>Request<wbr>Metadata<wbr>Options]</a></span>
-    </dt>
-    <dd>{{% md %}}Customize the metadata options of the instance. See Metadata Options below for more details.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>monitoring</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}If true, the launched EC2 instance will have detailed monitoring enabled. (Available since v0.6.0)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>network_<wbr>interfaces</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotinstancerequestnetworkinterface">List[Spot<wbr>Instance<wbr>Request<wbr>Network<wbr>Interface]</a></span>
-    </dt>
-    <dd>{{% md %}}Customize network interfaces to be attached at instance boot time. See Network Interfaces below for more details.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>password_<wbr>data</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>placement_<wbr>group</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The Placement Group to start the instance in.
-{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -3601,16 +2151,6 @@ for your VPC
 
     <dt class="property-"
             title="">
-        <span>private_<wbr>ip</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Private IP address to associate with the
-instance in a VPC.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>public_<wbr>dns</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -3626,35 +2166,6 @@ is only available if you've enabled DNS hostnames for your VPC
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The public IP address assigned to the instance, if applicable.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>root_<wbr>block_<wbr>device</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotinstancerequestrootblockdevice">Dict[Spot<wbr>Instance<wbr>Request<wbr>Root<wbr>Block<wbr>Device]</a></span>
-    </dt>
-    <dd>{{% md %}}Customize details about the root block
-device of the instance. See Block Devices below for details.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>security_<wbr>groups</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}A list of security group names (EC2-Classic) or IDs (default VPC) to associate with.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>source_<wbr>dest_<wbr>check</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Controls if traffic is routed to the instance when
-the destination address does not match the instance. Used for NAT or VPNs. Defaults true.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -3683,122 +2194,11 @@ the Spot Instance request.
 
     <dt class="property-"
             title="">
-        <span>spot_<wbr>price</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The maximum price to request on the spot market.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>spot_<wbr>request_<wbr>state</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>spot_<wbr>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}If set to `one-time`, after
-the instance is terminated, the spot request will be closed.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>subnet_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The VPC Subnet ID to launch in.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tenancy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The tenancy of the instance (if the instance is running in a VPC). An instance with a tenancy of dedicated runs on single-tenant hardware. The host tenancy is not supported for the import-instance command.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>user_<wbr>data</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The user data to provide when launching the instance. Do not pass gzip-compressed data via this argument; see `user_data_base64` instead.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>user_<wbr>data_<wbr>base64</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Can be used instead of `user_data` to pass base64-encoded binary data directly. Use this instead of `user_data` whenever the value is not a valid UTF-8 string. For example, gzip-encoded user data must be base64-encoded and passed via this argument to avoid corruption.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>valid_<wbr>from</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The start date and time of the request, in UTC [RFC3339](https://tools.ietf.org/html/rfc3339#section-5.8) format(for example, YYYY-MM-DDTHH:MM:SSZ). The default is to start fulfilling the request immediately.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>valid_<wbr>until</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The end date and time of the request, in UTC [RFC3339](https://tools.ietf.org/html/rfc3339#section-5.8) format(for example, YYYY-MM-DDTHH:MM:SSZ). At this point, no new Spot instance requests are placed or enabled to fulfill the request. The default end date is 7 days from the current date.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>volume_<wbr>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the devices created by the instance at launch time.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>vpc_<wbr>security_<wbr>group_<wbr>ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}A list of security group IDs to associate with.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>wait_<wbr>for_<wbr>fulfillment</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}If set, this provider will
-wait for the Spot Request to be fulfilled, and will throw an error if the
-timeout of 10m is reached.
-{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -3939,7 +2339,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Ami</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AMI to use for the instance.
 {{% /md %}}</dd>
@@ -3948,7 +2348,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3956,7 +2356,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Associate<wbr>Public<wbr>Ip<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Associate a public ip address with an instance in a VPC.  Boolean value.
 {{% /md %}}</dd>
@@ -3965,7 +2365,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Availability<wbr>Zone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AZ to start the instance in.
 {{% /md %}}</dd>
@@ -3974,7 +2374,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Block<wbr>Duration<wbr>Minutes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The required duration for the Spot instances, in minutes. This value must be a multiple of 60 (60, 120, 180, 240, 300, or 360).
 The duration period starts as soon as your Spot instance receives its instance ID. At the end of the duration period, Amazon EC2 marks the Spot instance for termination and provides a Spot instance termination notice, which gives the instance a two-minute warning before it terminates.
@@ -3985,7 +2385,7 @@ Note that you can't specify an Availability Zone group or a launch group if you 
             title="Optional">
         <span>Cpu<wbr>Core<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Sets the number of CPU cores for an instance. This option is
 only supported on creation of instance type that support CPU Options
@@ -3996,7 +2396,7 @@ only supported on creation of instance type that support CPU Options
             title="Optional">
         <span>Cpu<wbr>Threads<wbr>Per<wbr>Core</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}If set to to 1, hyperthreading is disabled on the launched instance. Defaults to 2 if not set. See [Optimizing CPU Options](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html) for more information.
 {{% /md %}}</dd>
@@ -4005,7 +2405,7 @@ only supported on creation of instance type that support CPU Options
             title="Optional">
         <span>Credit<wbr>Specification</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotinstancerequestcreditspecification">Spot<wbr>Instance<wbr>Request<wbr>Credit<wbr>Specification<wbr>Args?</a></span>
+        <span class="property-type"><a href="#spotinstancerequestcreditspecification">Spot<wbr>Instance<wbr>Request<wbr>Credit<wbr>Specification<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Customize the credit specification of the instance. See Credit Specification below for more details.
 {{% /md %}}</dd>
@@ -4014,7 +2414,7 @@ only supported on creation of instance type that support CPU Options
             title="Optional">
         <span>Disable<wbr>Api<wbr>Termination</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, enables [EC2 Instance
 Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingDisableAPITermination)
@@ -4024,7 +2424,7 @@ Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/term
             title="Optional">
         <span>Ebs<wbr>Block<wbr>Devices</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotinstancerequestebsblockdevice">List&lt;Spot<wbr>Instance<wbr>Request<wbr>Ebs<wbr>Block<wbr>Device<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#spotinstancerequestebsblockdevice">List&lt;Spot<wbr>Instance<wbr>Request<wbr>Ebs<wbr>Block<wbr>Device<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Additional EBS block devices to attach to the
 instance.  Block device configurations only apply on resource creation. See Block Devices below for details on attributes and drift detection.
@@ -4034,7 +2434,7 @@ instance.  Block device configurations only apply on resource creation. See Bloc
             title="Optional">
         <span>Ebs<wbr>Optimized</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, the launched EC2 instance will be EBS-optimized.
 Note that if this is not set on an instance type that is optimized by default then
@@ -4047,7 +2447,7 @@ See the [EBS Optimized section](https://docs.aws.amazon.com/AWSEC2/latest/UserGu
             title="Optional">
         <span>Ephemeral<wbr>Block<wbr>Devices</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotinstancerequestephemeralblockdevice">List&lt;Spot<wbr>Instance<wbr>Request<wbr>Ephemeral<wbr>Block<wbr>Device<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#spotinstancerequestephemeralblockdevice">List&lt;Spot<wbr>Instance<wbr>Request<wbr>Ephemeral<wbr>Block<wbr>Device<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Customize Ephemeral (also known as
 "Instance Store") volumes on the instance. See Block Devices below for details.
@@ -4057,7 +2457,7 @@ See the [EBS Optimized section](https://docs.aws.amazon.com/AWSEC2/latest/UserGu
             title="Optional">
         <span>Get<wbr>Password<wbr>Data</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, wait for password data to become available and retrieve it. Useful for getting the administrator password for instances running Microsoft Windows. The password data is exported to the `password_data` attribute. See [GetPasswordData](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetPasswordData.html) for more information.
 {{% /md %}}</dd>
@@ -4066,7 +2466,7 @@ See the [EBS Optimized section](https://docs.aws.amazon.com/AWSEC2/latest/UserGu
             title="Optional">
         <span>Hibernation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, the launched EC2 instance will support hibernation.
 {{% /md %}}</dd>
@@ -4075,7 +2475,7 @@ See the [EBS Optimized section](https://docs.aws.amazon.com/AWSEC2/latest/UserGu
             title="Optional">
         <span>Host<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Id of a dedicated host that the instance will be assigned to. Use when an instance is to be launched on a specific dedicated host.
 {{% /md %}}</dd>
@@ -4084,7 +2484,7 @@ See the [EBS Optimized section](https://docs.aws.amazon.com/AWSEC2/latest/UserGu
             title="Optional">
         <span>Iam<wbr>Instance<wbr>Profile</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IAM Instance Profile to
 launch the instance with. Specified as the name of the Instance Profile. Ensure your credentials have the correct permission to assign the instance profile according to the [EC2 documentation](http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-ec2.html#roles-usingrole-ec2instance-permissions), notably `iam:PassRole`.
@@ -4095,7 +2495,7 @@ launch the instance with. Specified as the name of the Instance Profile. Ensure 
             title="Optional">
         <span>Instance<wbr>Initiated<wbr>Shutdown<wbr>Behavior</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Shutdown behavior for the
 instance. Amazon defaults this to `stop` for EBS-backed instances and
@@ -4107,7 +2507,7 @@ instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/Use
             title="Optional">
         <span>Instance<wbr>Interruption<wbr>Behaviour</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether a Spot instance stops or terminates when it is interrupted. Default is `terminate` as this is the current AWS behaviour.
 {{% /md %}}</dd>
@@ -4116,7 +2516,7 @@ instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/Use
             title="Optional">
         <span>Instance<wbr>State</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4124,7 +2524,7 @@ instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/Use
             title="Optional">
         <span>Instance<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of instance to start. Updates to this field will trigger a stop/start of the EC2 instance.
 {{% /md %}}</dd>
@@ -4133,7 +2533,7 @@ instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/Use
             title="Optional">
         <span>Ipv6Address<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4141,7 +2541,7 @@ instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/Use
             title="Optional">
         <span>Ipv6Addresses</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Specify one or more IPv6 addresses from the range of the subnet to associate with the primary network interface
 {{% /md %}}</dd>
@@ -4150,7 +2550,7 @@ instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/Use
             title="Optional">
         <span>Key<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The key name of the Key Pair to use for the instance; which can be managed using the `aws.ec2.KeyPair` resource.
 {{% /md %}}</dd>
@@ -4159,7 +2559,7 @@ instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/Use
             title="Optional">
         <span>Launch<wbr>Group</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A launch group is a group of spot instances that launch together and terminate together.
 If left empty instances are launched and terminated individually.
@@ -4169,7 +2569,7 @@ If left empty instances are launched and terminated individually.
             title="Optional">
         <span>Metadata<wbr>Options</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotinstancerequestmetadataoptions">Spot<wbr>Instance<wbr>Request<wbr>Metadata<wbr>Options<wbr>Args?</a></span>
+        <span class="property-type"><a href="#spotinstancerequestmetadataoptions">Spot<wbr>Instance<wbr>Request<wbr>Metadata<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Customize the metadata options of the instance. See Metadata Options below for more details.
 {{% /md %}}</dd>
@@ -4178,7 +2578,7 @@ If left empty instances are launched and terminated individually.
             title="Optional">
         <span>Monitoring</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, the launched EC2 instance will have detailed monitoring enabled. (Available since v0.6.0)
 {{% /md %}}</dd>
@@ -4187,7 +2587,7 @@ If left empty instances are launched and terminated individually.
             title="Optional">
         <span>Network<wbr>Interfaces</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotinstancerequestnetworkinterface">List&lt;Spot<wbr>Instance<wbr>Request<wbr>Network<wbr>Interface<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#spotinstancerequestnetworkinterface">List&lt;Spot<wbr>Instance<wbr>Request<wbr>Network<wbr>Interface<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Customize network interfaces to be attached at instance boot time. See Network Interfaces below for more details.
 {{% /md %}}</dd>
@@ -4196,7 +2596,7 @@ If left empty instances are launched and terminated individually.
             title="Optional">
         <span>Password<wbr>Data</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4204,7 +2604,7 @@ If left empty instances are launched and terminated individually.
             title="Optional">
         <span>Placement<wbr>Group</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Placement Group to start the instance in.
 {{% /md %}}</dd>
@@ -4213,7 +2613,7 @@ If left empty instances are launched and terminated individually.
             title="Optional">
         <span>Primary<wbr>Network<wbr>Interface<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4221,7 +2621,7 @@ If left empty instances are launched and terminated individually.
             title="Optional">
         <span>Private<wbr>Dns</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The private DNS name assigned to the instance. Can only be
 used inside the Amazon EC2, and only available if you've enabled DNS hostnames
@@ -4232,7 +2632,7 @@ for your VPC
             title="Optional">
         <span>Private<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Private IP address to associate with the
 instance in a VPC.
@@ -4242,7 +2642,7 @@ instance in a VPC.
             title="Optional">
         <span>Public<wbr>Dns</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The public DNS name assigned to the instance. For EC2-VPC, this
 is only available if you've enabled DNS hostnames for your VPC
@@ -4252,7 +2652,7 @@ is only available if you've enabled DNS hostnames for your VPC
             title="Optional">
         <span>Public<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The public IP address assigned to the instance, if applicable.
 {{% /md %}}</dd>
@@ -4261,7 +2661,7 @@ is only available if you've enabled DNS hostnames for your VPC
             title="Optional">
         <span>Root<wbr>Block<wbr>Device</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotinstancerequestrootblockdevice">Spot<wbr>Instance<wbr>Request<wbr>Root<wbr>Block<wbr>Device<wbr>Args?</a></span>
+        <span class="property-type"><a href="#spotinstancerequestrootblockdevice">Spot<wbr>Instance<wbr>Request<wbr>Root<wbr>Block<wbr>Device<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Customize details about the root block
 device of the instance. See Block Devices below for details.
@@ -4271,7 +2671,7 @@ device of the instance. See Block Devices below for details.
             title="Optional">
         <span>Security<wbr>Groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of security group names (EC2-Classic) or IDs (default VPC) to associate with.
 {{% /md %}}</dd>
@@ -4280,7 +2680,7 @@ device of the instance. See Block Devices below for details.
             title="Optional">
         <span>Source<wbr>Dest<wbr>Check</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Controls if traffic is routed to the instance when
 the destination address does not match the instance. Used for NAT or VPNs. Defaults true.
@@ -4290,7 +2690,7 @@ the destination address does not match the instance. Used for NAT or VPNs. Defau
             title="Optional">
         <span>Spot<wbr>Bid<wbr>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current [bid
 status](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-bid-status.html)
@@ -4304,7 +2704,7 @@ of the Spot Instance Request.
             title="Optional">
         <span>Spot<wbr>Instance<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Instance ID (if any) that is currently fulfilling
 the Spot Instance request.
@@ -4314,7 +2714,7 @@ the Spot Instance request.
             title="Optional">
         <span>Spot<wbr>Price</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum price to request on the spot market.
 {{% /md %}}</dd>
@@ -4323,7 +2723,7 @@ the Spot Instance request.
             title="Optional">
         <span>Spot<wbr>Request<wbr>State</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4331,7 +2731,7 @@ the Spot Instance request.
             title="Optional">
         <span>Spot<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If set to `one-time`, after
 the instance is terminated, the spot request will be closed.
@@ -4341,7 +2741,7 @@ the instance is terminated, the spot request will be closed.
             title="Optional">
         <span>Subnet<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The VPC Subnet ID to launch in.
 {{% /md %}}</dd>
@@ -4350,7 +2750,7 @@ the instance is terminated, the spot request will be closed.
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -4359,7 +2759,7 @@ the instance is terminated, the spot request will be closed.
             title="Optional">
         <span>Tenancy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The tenancy of the instance (if the instance is running in a VPC). An instance with a tenancy of dedicated runs on single-tenant hardware. The host tenancy is not supported for the import-instance command.
 {{% /md %}}</dd>
@@ -4368,7 +2768,7 @@ the instance is terminated, the spot request will be closed.
             title="Optional">
         <span>User<wbr>Data</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user data to provide when launching the instance. Do not pass gzip-compressed data via this argument; see `user_data_base64` instead.
 {{% /md %}}</dd>
@@ -4377,7 +2777,7 @@ the instance is terminated, the spot request will be closed.
             title="Optional">
         <span>User<wbr>Data<wbr>Base64</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Can be used instead of `user_data` to pass base64-encoded binary data directly. Use this instead of `user_data` whenever the value is not a valid UTF-8 string. For example, gzip-encoded user data must be base64-encoded and passed via this argument to avoid corruption.
 {{% /md %}}</dd>
@@ -4386,7 +2786,7 @@ the instance is terminated, the spot request will be closed.
             title="Optional">
         <span>Valid<wbr>From</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The start date and time of the request, in UTC [RFC3339](https://tools.ietf.org/html/rfc3339#section-5.8) format(for example, YYYY-MM-DDTHH:MM:SSZ). The default is to start fulfilling the request immediately.
 {{% /md %}}</dd>
@@ -4395,7 +2795,7 @@ the instance is terminated, the spot request will be closed.
             title="Optional">
         <span>Valid<wbr>Until</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The end date and time of the request, in UTC [RFC3339](https://tools.ietf.org/html/rfc3339#section-5.8) format(for example, YYYY-MM-DDTHH:MM:SSZ). At this point, no new Spot instance requests are placed or enabled to fulfill the request. The default end date is 7 days from the current date.
 {{% /md %}}</dd>
@@ -4404,7 +2804,7 @@ the instance is terminated, the spot request will be closed.
             title="Optional">
         <span>Volume<wbr>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the devices created by the instance at launch time.
 {{% /md %}}</dd>
@@ -4413,7 +2813,7 @@ the instance is terminated, the spot request will be closed.
             title="Optional">
         <span>Vpc<wbr>Security<wbr>Group<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of security group IDs to associate with.
 {{% /md %}}</dd>
@@ -4422,7 +2822,7 @@ the instance is terminated, the spot request will be closed.
             title="Optional">
         <span>Wait<wbr>For<wbr>Fulfillment</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set, this provider will
 wait for the Spot Request to be fulfilled, and will throw an error if the
@@ -4440,7 +2840,7 @@ timeout of 10m is reached.
             title="Optional">
         <span>Ami</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AMI to use for the instance.
 {{% /md %}}</dd>
@@ -4449,7 +2849,7 @@ timeout of 10m is reached.
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4457,7 +2857,7 @@ timeout of 10m is reached.
             title="Optional">
         <span>Associate<wbr>Public<wbr>Ip<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Associate a public ip address with an instance in a VPC.  Boolean value.
 {{% /md %}}</dd>
@@ -4466,7 +2866,7 @@ timeout of 10m is reached.
             title="Optional">
         <span>Availability<wbr>Zone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AZ to start the instance in.
 {{% /md %}}</dd>
@@ -4475,7 +2875,7 @@ timeout of 10m is reached.
             title="Optional">
         <span>Block<wbr>Duration<wbr>Minutes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The required duration for the Spot instances, in minutes. This value must be a multiple of 60 (60, 120, 180, 240, 300, or 360).
 The duration period starts as soon as your Spot instance receives its instance ID. At the end of the duration period, Amazon EC2 marks the Spot instance for termination and provides a Spot instance termination notice, which gives the instance a two-minute warning before it terminates.
@@ -4486,7 +2886,7 @@ Note that you can't specify an Availability Zone group or a launch group if you 
             title="Optional">
         <span>Cpu<wbr>Core<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Sets the number of CPU cores for an instance. This option is
 only supported on creation of instance type that support CPU Options
@@ -4497,7 +2897,7 @@ only supported on creation of instance type that support CPU Options
             title="Optional">
         <span>Cpu<wbr>Threads<wbr>Per<wbr>Core</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}If set to to 1, hyperthreading is disabled on the launched instance. Defaults to 2 if not set. See [Optimizing CPU Options](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html) for more information.
 {{% /md %}}</dd>
@@ -4506,7 +2906,7 @@ only supported on creation of instance type that support CPU Options
             title="Optional">
         <span>Credit<wbr>Specification</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotinstancerequestcreditspecification">*Spot<wbr>Instance<wbr>Request<wbr>Credit<wbr>Specification</a></span>
+        <span class="property-type"><a href="#spotinstancerequestcreditspecification">Spot<wbr>Instance<wbr>Request<wbr>Credit<wbr>Specification</a></span>
     </dt>
     <dd>{{% md %}}Customize the credit specification of the instance. See Credit Specification below for more details.
 {{% /md %}}</dd>
@@ -4515,7 +2915,7 @@ only supported on creation of instance type that support CPU Options
             title="Optional">
         <span>Disable<wbr>Api<wbr>Termination</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, enables [EC2 Instance
 Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingDisableAPITermination)
@@ -4535,7 +2935,7 @@ instance.  Block device configurations only apply on resource creation. See Bloc
             title="Optional">
         <span>Ebs<wbr>Optimized</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, the launched EC2 instance will be EBS-optimized.
 Note that if this is not set on an instance type that is optimized by default then
@@ -4558,7 +2958,7 @@ See the [EBS Optimized section](https://docs.aws.amazon.com/AWSEC2/latest/UserGu
             title="Optional">
         <span>Get<wbr>Password<wbr>Data</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, wait for password data to become available and retrieve it. Useful for getting the administrator password for instances running Microsoft Windows. The password data is exported to the `password_data` attribute. See [GetPasswordData](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetPasswordData.html) for more information.
 {{% /md %}}</dd>
@@ -4567,7 +2967,7 @@ See the [EBS Optimized section](https://docs.aws.amazon.com/AWSEC2/latest/UserGu
             title="Optional">
         <span>Hibernation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, the launched EC2 instance will support hibernation.
 {{% /md %}}</dd>
@@ -4576,7 +2976,7 @@ See the [EBS Optimized section](https://docs.aws.amazon.com/AWSEC2/latest/UserGu
             title="Optional">
         <span>Host<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Id of a dedicated host that the instance will be assigned to. Use when an instance is to be launched on a specific dedicated host.
 {{% /md %}}</dd>
@@ -4585,7 +2985,7 @@ See the [EBS Optimized section](https://docs.aws.amazon.com/AWSEC2/latest/UserGu
             title="Optional">
         <span>Iam<wbr>Instance<wbr>Profile</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IAM Instance Profile to
 launch the instance with. Specified as the name of the Instance Profile. Ensure your credentials have the correct permission to assign the instance profile according to the [EC2 documentation](http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-ec2.html#roles-usingrole-ec2instance-permissions), notably `iam:PassRole`.
@@ -4596,7 +2996,7 @@ launch the instance with. Specified as the name of the Instance Profile. Ensure 
             title="Optional">
         <span>Instance<wbr>Initiated<wbr>Shutdown<wbr>Behavior</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Shutdown behavior for the
 instance. Amazon defaults this to `stop` for EBS-backed instances and
@@ -4608,7 +3008,7 @@ instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/Use
             title="Optional">
         <span>Instance<wbr>Interruption<wbr>Behaviour</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether a Spot instance stops or terminates when it is interrupted. Default is `terminate` as this is the current AWS behaviour.
 {{% /md %}}</dd>
@@ -4617,7 +3017,7 @@ instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/Use
             title="Optional">
         <span>Instance<wbr>State</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4625,7 +3025,7 @@ instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/Use
             title="Optional">
         <span>Instance<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of instance to start. Updates to this field will trigger a stop/start of the EC2 instance.
 {{% /md %}}</dd>
@@ -4634,7 +3034,7 @@ instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/Use
             title="Optional">
         <span>Ipv6Address<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4651,7 +3051,7 @@ instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/Use
             title="Optional">
         <span>Key<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The key name of the Key Pair to use for the instance; which can be managed using the `aws.ec2.KeyPair` resource.
 {{% /md %}}</dd>
@@ -4660,7 +3060,7 @@ instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/Use
             title="Optional">
         <span>Launch<wbr>Group</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A launch group is a group of spot instances that launch together and terminate together.
 If left empty instances are launched and terminated individually.
@@ -4670,7 +3070,7 @@ If left empty instances are launched and terminated individually.
             title="Optional">
         <span>Metadata<wbr>Options</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotinstancerequestmetadataoptions">*Spot<wbr>Instance<wbr>Request<wbr>Metadata<wbr>Options</a></span>
+        <span class="property-type"><a href="#spotinstancerequestmetadataoptions">Spot<wbr>Instance<wbr>Request<wbr>Metadata<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}Customize the metadata options of the instance. See Metadata Options below for more details.
 {{% /md %}}</dd>
@@ -4679,7 +3079,7 @@ If left empty instances are launched and terminated individually.
             title="Optional">
         <span>Monitoring</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, the launched EC2 instance will have detailed monitoring enabled. (Available since v0.6.0)
 {{% /md %}}</dd>
@@ -4697,7 +3097,7 @@ If left empty instances are launched and terminated individually.
             title="Optional">
         <span>Password<wbr>Data</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4705,7 +3105,7 @@ If left empty instances are launched and terminated individually.
             title="Optional">
         <span>Placement<wbr>Group</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Placement Group to start the instance in.
 {{% /md %}}</dd>
@@ -4714,7 +3114,7 @@ If left empty instances are launched and terminated individually.
             title="Optional">
         <span>Primary<wbr>Network<wbr>Interface<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4722,7 +3122,7 @@ If left empty instances are launched and terminated individually.
             title="Optional">
         <span>Private<wbr>Dns</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The private DNS name assigned to the instance. Can only be
 used inside the Amazon EC2, and only available if you've enabled DNS hostnames
@@ -4733,7 +3133,7 @@ for your VPC
             title="Optional">
         <span>Private<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Private IP address to associate with the
 instance in a VPC.
@@ -4743,7 +3143,7 @@ instance in a VPC.
             title="Optional">
         <span>Public<wbr>Dns</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The public DNS name assigned to the instance. For EC2-VPC, this
 is only available if you've enabled DNS hostnames for your VPC
@@ -4753,7 +3153,7 @@ is only available if you've enabled DNS hostnames for your VPC
             title="Optional">
         <span>Public<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The public IP address assigned to the instance, if applicable.
 {{% /md %}}</dd>
@@ -4762,7 +3162,7 @@ is only available if you've enabled DNS hostnames for your VPC
             title="Optional">
         <span>Root<wbr>Block<wbr>Device</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotinstancerequestrootblockdevice">*Spot<wbr>Instance<wbr>Request<wbr>Root<wbr>Block<wbr>Device</a></span>
+        <span class="property-type"><a href="#spotinstancerequestrootblockdevice">Spot<wbr>Instance<wbr>Request<wbr>Root<wbr>Block<wbr>Device</a></span>
     </dt>
     <dd>{{% md %}}Customize details about the root block
 device of the instance. See Block Devices below for details.
@@ -4781,7 +3181,7 @@ device of the instance. See Block Devices below for details.
             title="Optional">
         <span>Source<wbr>Dest<wbr>Check</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Controls if traffic is routed to the instance when
 the destination address does not match the instance. Used for NAT or VPNs. Defaults true.
@@ -4791,7 +3191,7 @@ the destination address does not match the instance. Used for NAT or VPNs. Defau
             title="Optional">
         <span>Spot<wbr>Bid<wbr>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current [bid
 status](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-bid-status.html)
@@ -4805,7 +3205,7 @@ of the Spot Instance Request.
             title="Optional">
         <span>Spot<wbr>Instance<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Instance ID (if any) that is currently fulfilling
 the Spot Instance request.
@@ -4815,7 +3215,7 @@ the Spot Instance request.
             title="Optional">
         <span>Spot<wbr>Price</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum price to request on the spot market.
 {{% /md %}}</dd>
@@ -4824,7 +3224,7 @@ the Spot Instance request.
             title="Optional">
         <span>Spot<wbr>Request<wbr>State</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4832,7 +3232,7 @@ the Spot Instance request.
             title="Optional">
         <span>Spot<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If set to `one-time`, after
 the instance is terminated, the spot request will be closed.
@@ -4842,7 +3242,7 @@ the instance is terminated, the spot request will be closed.
             title="Optional">
         <span>Subnet<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The VPC Subnet ID to launch in.
 {{% /md %}}</dd>
@@ -4860,7 +3260,7 @@ the instance is terminated, the spot request will be closed.
             title="Optional">
         <span>Tenancy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The tenancy of the instance (if the instance is running in a VPC). An instance with a tenancy of dedicated runs on single-tenant hardware. The host tenancy is not supported for the import-instance command.
 {{% /md %}}</dd>
@@ -4869,7 +3269,7 @@ the instance is terminated, the spot request will be closed.
             title="Optional">
         <span>User<wbr>Data</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user data to provide when launching the instance. Do not pass gzip-compressed data via this argument; see `user_data_base64` instead.
 {{% /md %}}</dd>
@@ -4878,7 +3278,7 @@ the instance is terminated, the spot request will be closed.
             title="Optional">
         <span>User<wbr>Data<wbr>Base64</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Can be used instead of `user_data` to pass base64-encoded binary data directly. Use this instead of `user_data` whenever the value is not a valid UTF-8 string. For example, gzip-encoded user data must be base64-encoded and passed via this argument to avoid corruption.
 {{% /md %}}</dd>
@@ -4887,7 +3287,7 @@ the instance is terminated, the spot request will be closed.
             title="Optional">
         <span>Valid<wbr>From</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The start date and time of the request, in UTC [RFC3339](https://tools.ietf.org/html/rfc3339#section-5.8) format(for example, YYYY-MM-DDTHH:MM:SSZ). The default is to start fulfilling the request immediately.
 {{% /md %}}</dd>
@@ -4896,7 +3296,7 @@ the instance is terminated, the spot request will be closed.
             title="Optional">
         <span>Valid<wbr>Until</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The end date and time of the request, in UTC [RFC3339](https://tools.ietf.org/html/rfc3339#section-5.8) format(for example, YYYY-MM-DDTHH:MM:SSZ). At this point, no new Spot instance requests are placed or enabled to fulfill the request. The default end date is 7 days from the current date.
 {{% /md %}}</dd>
@@ -4923,7 +3323,7 @@ the instance is terminated, the spot request will be closed.
             title="Optional">
         <span>Wait<wbr>For<wbr>Fulfillment</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set, this provider will
 wait for the Spot Request to be fulfilled, and will throw an error if the
@@ -4941,7 +3341,7 @@ timeout of 10m is reached.
             title="Optional">
         <span>ami</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AMI to use for the instance.
 {{% /md %}}</dd>
@@ -4950,7 +3350,7 @@ timeout of 10m is reached.
             title="Optional">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4958,7 +3358,7 @@ timeout of 10m is reached.
             title="Optional">
         <span>associate<wbr>Public<wbr>Ip<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Associate a public ip address with an instance in a VPC.  Boolean value.
 {{% /md %}}</dd>
@@ -4967,7 +3367,7 @@ timeout of 10m is reached.
             title="Optional">
         <span>availability<wbr>Zone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AZ to start the instance in.
 {{% /md %}}</dd>
@@ -4976,7 +3376,7 @@ timeout of 10m is reached.
             title="Optional">
         <span>block<wbr>Duration<wbr>Minutes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The required duration for the Spot instances, in minutes. This value must be a multiple of 60 (60, 120, 180, 240, 300, or 360).
 The duration period starts as soon as your Spot instance receives its instance ID. At the end of the duration period, Amazon EC2 marks the Spot instance for termination and provides a Spot instance termination notice, which gives the instance a two-minute warning before it terminates.
@@ -4987,7 +3387,7 @@ Note that you can't specify an Availability Zone group or a launch group if you 
             title="Optional">
         <span>cpu<wbr>Core<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Sets the number of CPU cores for an instance. This option is
 only supported on creation of instance type that support CPU Options
@@ -4998,7 +3398,7 @@ only supported on creation of instance type that support CPU Options
             title="Optional">
         <span>cpu<wbr>Threads<wbr>Per<wbr>Core</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}If set to to 1, hyperthreading is disabled on the launched instance. Defaults to 2 if not set. See [Optimizing CPU Options](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html) for more information.
 {{% /md %}}</dd>
@@ -5007,7 +3407,7 @@ only supported on creation of instance type that support CPU Options
             title="Optional">
         <span>credit<wbr>Specification</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotinstancerequestcreditspecification">Spot<wbr>Instance<wbr>Request<wbr>Credit<wbr>Specification?</a></span>
+        <span class="property-type"><a href="#spotinstancerequestcreditspecification">Spot<wbr>Instance<wbr>Request<wbr>Credit<wbr>Specification</a></span>
     </dt>
     <dd>{{% md %}}Customize the credit specification of the instance. See Credit Specification below for more details.
 {{% /md %}}</dd>
@@ -5016,7 +3416,7 @@ only supported on creation of instance type that support CPU Options
             title="Optional">
         <span>disable<wbr>Api<wbr>Termination</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, enables [EC2 Instance
 Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingDisableAPITermination)
@@ -5026,7 +3426,7 @@ Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/term
             title="Optional">
         <span>ebs<wbr>Block<wbr>Devices</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotinstancerequestebsblockdevice">Spot<wbr>Instance<wbr>Request<wbr>Ebs<wbr>Block<wbr>Device[]?</a></span>
+        <span class="property-type"><a href="#spotinstancerequestebsblockdevice">Spot<wbr>Instance<wbr>Request<wbr>Ebs<wbr>Block<wbr>Device[]</a></span>
     </dt>
     <dd>{{% md %}}Additional EBS block devices to attach to the
 instance.  Block device configurations only apply on resource creation. See Block Devices below for details on attributes and drift detection.
@@ -5036,7 +3436,7 @@ instance.  Block device configurations only apply on resource creation. See Bloc
             title="Optional">
         <span>ebs<wbr>Optimized</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, the launched EC2 instance will be EBS-optimized.
 Note that if this is not set on an instance type that is optimized by default then
@@ -5049,7 +3449,7 @@ See the [EBS Optimized section](https://docs.aws.amazon.com/AWSEC2/latest/UserGu
             title="Optional">
         <span>ephemeral<wbr>Block<wbr>Devices</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotinstancerequestephemeralblockdevice">Spot<wbr>Instance<wbr>Request<wbr>Ephemeral<wbr>Block<wbr>Device[]?</a></span>
+        <span class="property-type"><a href="#spotinstancerequestephemeralblockdevice">Spot<wbr>Instance<wbr>Request<wbr>Ephemeral<wbr>Block<wbr>Device[]</a></span>
     </dt>
     <dd>{{% md %}}Customize Ephemeral (also known as
 "Instance Store") volumes on the instance. See Block Devices below for details.
@@ -5059,7 +3459,7 @@ See the [EBS Optimized section](https://docs.aws.amazon.com/AWSEC2/latest/UserGu
             title="Optional">
         <span>get<wbr>Password<wbr>Data</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, wait for password data to become available and retrieve it. Useful for getting the administrator password for instances running Microsoft Windows. The password data is exported to the `password_data` attribute. See [GetPasswordData](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetPasswordData.html) for more information.
 {{% /md %}}</dd>
@@ -5068,7 +3468,7 @@ See the [EBS Optimized section](https://docs.aws.amazon.com/AWSEC2/latest/UserGu
             title="Optional">
         <span>hibernation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, the launched EC2 instance will support hibernation.
 {{% /md %}}</dd>
@@ -5077,7 +3477,7 @@ See the [EBS Optimized section](https://docs.aws.amazon.com/AWSEC2/latest/UserGu
             title="Optional">
         <span>host<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Id of a dedicated host that the instance will be assigned to. Use when an instance is to be launched on a specific dedicated host.
 {{% /md %}}</dd>
@@ -5086,7 +3486,7 @@ See the [EBS Optimized section](https://docs.aws.amazon.com/AWSEC2/latest/UserGu
             title="Optional">
         <span>iam<wbr>Instance<wbr>Profile</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IAM Instance Profile to
 launch the instance with. Specified as the name of the Instance Profile. Ensure your credentials have the correct permission to assign the instance profile according to the [EC2 documentation](http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-ec2.html#roles-usingrole-ec2instance-permissions), notably `iam:PassRole`.
@@ -5097,7 +3497,7 @@ launch the instance with. Specified as the name of the Instance Profile. Ensure 
             title="Optional">
         <span>instance<wbr>Initiated<wbr>Shutdown<wbr>Behavior</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Shutdown behavior for the
 instance. Amazon defaults this to `stop` for EBS-backed instances and
@@ -5109,7 +3509,7 @@ instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/Use
             title="Optional">
         <span>instance<wbr>Interruption<wbr>Behaviour</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether a Spot instance stops or terminates when it is interrupted. Default is `terminate` as this is the current AWS behaviour.
 {{% /md %}}</dd>
@@ -5118,7 +3518,7 @@ instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/Use
             title="Optional">
         <span>instance<wbr>State</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5126,7 +3526,7 @@ instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/Use
             title="Optional">
         <span>instance<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of instance to start. Updates to this field will trigger a stop/start of the EC2 instance.
 {{% /md %}}</dd>
@@ -5135,7 +3535,7 @@ instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/Use
             title="Optional">
         <span>ipv6Address<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5143,7 +3543,7 @@ instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/Use
             title="Optional">
         <span>ipv6Addresses</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Specify one or more IPv6 addresses from the range of the subnet to associate with the primary network interface
 {{% /md %}}</dd>
@@ -5152,7 +3552,7 @@ instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/Use
             title="Optional">
         <span>key<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The key name of the Key Pair to use for the instance; which can be managed using the `aws.ec2.KeyPair` resource.
 {{% /md %}}</dd>
@@ -5161,7 +3561,7 @@ instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/Use
             title="Optional">
         <span>launch<wbr>Group</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A launch group is a group of spot instances that launch together and terminate together.
 If left empty instances are launched and terminated individually.
@@ -5171,7 +3571,7 @@ If left empty instances are launched and terminated individually.
             title="Optional">
         <span>metadata<wbr>Options</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotinstancerequestmetadataoptions">Spot<wbr>Instance<wbr>Request<wbr>Metadata<wbr>Options?</a></span>
+        <span class="property-type"><a href="#spotinstancerequestmetadataoptions">Spot<wbr>Instance<wbr>Request<wbr>Metadata<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}Customize the metadata options of the instance. See Metadata Options below for more details.
 {{% /md %}}</dd>
@@ -5180,7 +3580,7 @@ If left empty instances are launched and terminated individually.
             title="Optional">
         <span>monitoring</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, the launched EC2 instance will have detailed monitoring enabled. (Available since v0.6.0)
 {{% /md %}}</dd>
@@ -5189,7 +3589,7 @@ If left empty instances are launched and terminated individually.
             title="Optional">
         <span>network<wbr>Interfaces</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotinstancerequestnetworkinterface">Spot<wbr>Instance<wbr>Request<wbr>Network<wbr>Interface[]?</a></span>
+        <span class="property-type"><a href="#spotinstancerequestnetworkinterface">Spot<wbr>Instance<wbr>Request<wbr>Network<wbr>Interface[]</a></span>
     </dt>
     <dd>{{% md %}}Customize network interfaces to be attached at instance boot time. See Network Interfaces below for more details.
 {{% /md %}}</dd>
@@ -5198,7 +3598,7 @@ If left empty instances are launched and terminated individually.
             title="Optional">
         <span>password<wbr>Data</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5206,7 +3606,7 @@ If left empty instances are launched and terminated individually.
             title="Optional">
         <span>placement<wbr>Group</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Placement Group to start the instance in.
 {{% /md %}}</dd>
@@ -5215,7 +3615,7 @@ If left empty instances are launched and terminated individually.
             title="Optional">
         <span>primary<wbr>Network<wbr>Interface<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5223,7 +3623,7 @@ If left empty instances are launched and terminated individually.
             title="Optional">
         <span>private<wbr>Dns</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The private DNS name assigned to the instance. Can only be
 used inside the Amazon EC2, and only available if you've enabled DNS hostnames
@@ -5234,7 +3634,7 @@ for your VPC
             title="Optional">
         <span>private<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Private IP address to associate with the
 instance in a VPC.
@@ -5244,7 +3644,7 @@ instance in a VPC.
             title="Optional">
         <span>public<wbr>Dns</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The public DNS name assigned to the instance. For EC2-VPC, this
 is only available if you've enabled DNS hostnames for your VPC
@@ -5254,7 +3654,7 @@ is only available if you've enabled DNS hostnames for your VPC
             title="Optional">
         <span>public<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The public IP address assigned to the instance, if applicable.
 {{% /md %}}</dd>
@@ -5263,7 +3663,7 @@ is only available if you've enabled DNS hostnames for your VPC
             title="Optional">
         <span>root<wbr>Block<wbr>Device</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#spotinstancerequestrootblockdevice">Spot<wbr>Instance<wbr>Request<wbr>Root<wbr>Block<wbr>Device?</a></span>
+        <span class="property-type"><a href="#spotinstancerequestrootblockdevice">Spot<wbr>Instance<wbr>Request<wbr>Root<wbr>Block<wbr>Device</a></span>
     </dt>
     <dd>{{% md %}}Customize details about the root block
 device of the instance. See Block Devices below for details.
@@ -5273,7 +3673,7 @@ device of the instance. See Block Devices below for details.
             title="Optional">
         <span>security<wbr>Groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of security group names (EC2-Classic) or IDs (default VPC) to associate with.
 {{% /md %}}</dd>
@@ -5282,7 +3682,7 @@ device of the instance. See Block Devices below for details.
             title="Optional">
         <span>source<wbr>Dest<wbr>Check</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Controls if traffic is routed to the instance when
 the destination address does not match the instance. Used for NAT or VPNs. Defaults true.
@@ -5292,7 +3692,7 @@ the destination address does not match the instance. Used for NAT or VPNs. Defau
             title="Optional">
         <span>spot<wbr>Bid<wbr>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The current [bid
 status](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-bid-status.html)
@@ -5306,7 +3706,7 @@ of the Spot Instance Request.
             title="Optional">
         <span>spot<wbr>Instance<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Instance ID (if any) that is currently fulfilling
 the Spot Instance request.
@@ -5316,7 +3716,7 @@ the Spot Instance request.
             title="Optional">
         <span>spot<wbr>Price</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The maximum price to request on the spot market.
 {{% /md %}}</dd>
@@ -5325,7 +3725,7 @@ the Spot Instance request.
             title="Optional">
         <span>spot<wbr>Request<wbr>State</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5333,7 +3733,7 @@ the Spot Instance request.
             title="Optional">
         <span>spot<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If set to `one-time`, after
 the instance is terminated, the spot request will be closed.
@@ -5343,7 +3743,7 @@ the instance is terminated, the spot request will be closed.
             title="Optional">
         <span>subnet<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The VPC Subnet ID to launch in.
 {{% /md %}}</dd>
@@ -5352,7 +3752,7 @@ the instance is terminated, the spot request will be closed.
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -5361,7 +3761,7 @@ the instance is terminated, the spot request will be closed.
             title="Optional">
         <span>tenancy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The tenancy of the instance (if the instance is running in a VPC). An instance with a tenancy of dedicated runs on single-tenant hardware. The host tenancy is not supported for the import-instance command.
 {{% /md %}}</dd>
@@ -5370,7 +3770,7 @@ the instance is terminated, the spot request will be closed.
             title="Optional">
         <span>user<wbr>Data</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user data to provide when launching the instance. Do not pass gzip-compressed data via this argument; see `user_data_base64` instead.
 {{% /md %}}</dd>
@@ -5379,7 +3779,7 @@ the instance is terminated, the spot request will be closed.
             title="Optional">
         <span>user<wbr>Data<wbr>Base64</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Can be used instead of `user_data` to pass base64-encoded binary data directly. Use this instead of `user_data` whenever the value is not a valid UTF-8 string. For example, gzip-encoded user data must be base64-encoded and passed via this argument to avoid corruption.
 {{% /md %}}</dd>
@@ -5388,7 +3788,7 @@ the instance is terminated, the spot request will be closed.
             title="Optional">
         <span>valid<wbr>From</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The start date and time of the request, in UTC [RFC3339](https://tools.ietf.org/html/rfc3339#section-5.8) format(for example, YYYY-MM-DDTHH:MM:SSZ). The default is to start fulfilling the request immediately.
 {{% /md %}}</dd>
@@ -5397,7 +3797,7 @@ the instance is terminated, the spot request will be closed.
             title="Optional">
         <span>valid<wbr>Until</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The end date and time of the request, in UTC [RFC3339](https://tools.ietf.org/html/rfc3339#section-5.8) format(for example, YYYY-MM-DDTHH:MM:SSZ). At this point, no new Spot instance requests are placed or enabled to fulfill the request. The default end date is 7 days from the current date.
 {{% /md %}}</dd>
@@ -5406,7 +3806,7 @@ the instance is terminated, the spot request will be closed.
             title="Optional">
         <span>volume<wbr>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the devices created by the instance at launch time.
 {{% /md %}}</dd>
@@ -5415,7 +3815,7 @@ the instance is terminated, the spot request will be closed.
             title="Optional">
         <span>vpc<wbr>Security<wbr>Group<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of security group IDs to associate with.
 {{% /md %}}</dd>
@@ -5424,7 +3824,7 @@ the instance is terminated, the spot request will be closed.
             title="Optional">
         <span>wait<wbr>For<wbr>Fulfillment</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If set, this provider will
 wait for the Spot Request to be fulfilled, and will throw an error if the
@@ -5965,7 +4365,7 @@ timeout of 10m is reached.
             title="Optional">
         <span>Cpu<wbr>Credits</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The credit option for CPU usage. Can be `"standard"` or `"unlimited"`. T3 instances are launched as unlimited by default. T2 instances are launched as standard by default.
 {{% /md %}}</dd>
@@ -5981,7 +4381,7 @@ timeout of 10m is reached.
             title="Optional">
         <span>Cpu<wbr>Credits</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The credit option for CPU usage. Can be `"standard"` or `"unlimited"`. T3 instances are launched as unlimited by default. T2 instances are launched as standard by default.
 {{% /md %}}</dd>
@@ -5997,7 +4397,7 @@ timeout of 10m is reached.
             title="Optional">
         <span>cpu<wbr>Credits</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The credit option for CPU usage. Can be `"standard"` or `"unlimited"`. T3 instances are launched as unlimited by default. T2 instances are launched as standard by default.
 {{% /md %}}</dd>
@@ -6040,16 +4440,6 @@ timeout of 10m is reached.
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Delete<wbr>On<wbr>Termination</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Whether the volume should be destroyed
-on instance termination (Default: `true`).
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Device<wbr>Name</span>
@@ -6061,9 +4451,19 @@ on instance termination (Default: `true`).
 
     <dt class="property-optional"
             title="Optional">
+        <span>Delete<wbr>On<wbr>Termination</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether the volume should be destroyed
+on instance termination (Default: `true`).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Encrypted</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables [EBS
 encryption](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html)
@@ -6074,7 +4474,7 @@ on the volume (Default: `false`). Cannot be used with `snapshot_id`. Must be con
             title="Optional">
         <span>Iops</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of provisioned
 [IOPS](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-io-characteristics.html).
@@ -6085,7 +4485,7 @@ This must be set with a `volume_type` of `"io1"`.
             title="Optional">
         <span>Kms<wbr>Key<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the KMS Key to use when encrypting the volume. Must be configured to perform drift detection.
 {{% /md %}}</dd>
@@ -6094,7 +4494,7 @@ This must be set with a `volume_type` of `"io1"`.
             title="Optional">
         <span>Snapshot<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Snapshot ID to mount.
 {{% /md %}}</dd>
@@ -6103,7 +4503,7 @@ This must be set with a `volume_type` of `"io1"`.
             title="Optional">
         <span>Volume<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6111,7 +4511,7 @@ This must be set with a `volume_type` of `"io1"`.
             title="Optional">
         <span>Volume<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of the volume in gibibytes (GiB).
 {{% /md %}}</dd>
@@ -6120,7 +4520,7 @@ This must be set with a `volume_type` of `"io1"`.
             title="Optional">
         <span>Volume<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of volume. Can be `"standard"`, `"gp2"`,
 or `"io1"`. (Default: `"gp2"`).
@@ -6133,16 +4533,6 @@ or `"io1"`. (Default: `"gp2"`).
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Delete<wbr>On<wbr>Termination</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Whether the volume should be destroyed
-on instance termination (Default: `true`).
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Device<wbr>Name</span>
@@ -6154,9 +4544,19 @@ on instance termination (Default: `true`).
 
     <dt class="property-optional"
             title="Optional">
+        <span>Delete<wbr>On<wbr>Termination</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether the volume should be destroyed
+on instance termination (Default: `true`).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Encrypted</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables [EBS
 encryption](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html)
@@ -6167,7 +4567,7 @@ on the volume (Default: `false`). Cannot be used with `snapshot_id`. Must be con
             title="Optional">
         <span>Iops</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of provisioned
 [IOPS](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-io-characteristics.html).
@@ -6178,7 +4578,7 @@ This must be set with a `volume_type` of `"io1"`.
             title="Optional">
         <span>Kms<wbr>Key<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the KMS Key to use when encrypting the volume. Must be configured to perform drift detection.
 {{% /md %}}</dd>
@@ -6187,7 +4587,7 @@ This must be set with a `volume_type` of `"io1"`.
             title="Optional">
         <span>Snapshot<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Snapshot ID to mount.
 {{% /md %}}</dd>
@@ -6196,7 +4596,7 @@ This must be set with a `volume_type` of `"io1"`.
             title="Optional">
         <span>Volume<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6204,7 +4604,7 @@ This must be set with a `volume_type` of `"io1"`.
             title="Optional">
         <span>Volume<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of the volume in gibibytes (GiB).
 {{% /md %}}</dd>
@@ -6213,7 +4613,7 @@ This must be set with a `volume_type` of `"io1"`.
             title="Optional">
         <span>Volume<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of volume. Can be `"standard"`, `"gp2"`,
 or `"io1"`. (Default: `"gp2"`).
@@ -6226,16 +4626,6 @@ or `"io1"`. (Default: `"gp2"`).
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>delete<wbr>On<wbr>Termination</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Whether the volume should be destroyed
-on instance termination (Default: `true`).
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>device<wbr>Name</span>
@@ -6247,9 +4637,19 @@ on instance termination (Default: `true`).
 
     <dt class="property-optional"
             title="Optional">
+        <span>delete<wbr>On<wbr>Termination</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether the volume should be destroyed
+on instance termination (Default: `true`).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>encrypted</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enables [EBS
 encryption](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html)
@@ -6260,7 +4660,7 @@ on the volume (Default: `false`). Cannot be used with `snapshot_id`. Must be con
             title="Optional">
         <span>iops</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The amount of provisioned
 [IOPS](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-io-characteristics.html).
@@ -6271,7 +4671,7 @@ This must be set with a `volume_type` of `"io1"`.
             title="Optional">
         <span>kms<wbr>Key<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the KMS Key to use when encrypting the volume. Must be configured to perform drift detection.
 {{% /md %}}</dd>
@@ -6280,7 +4680,7 @@ This must be set with a `volume_type` of `"io1"`.
             title="Optional">
         <span>snapshot<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Snapshot ID to mount.
 {{% /md %}}</dd>
@@ -6289,7 +4689,7 @@ This must be set with a `volume_type` of `"io1"`.
             title="Optional">
         <span>volume<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6297,7 +4697,7 @@ This must be set with a `volume_type` of `"io1"`.
             title="Optional">
         <span>volume<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The size of the volume in gibibytes (GiB).
 {{% /md %}}</dd>
@@ -6306,7 +4706,7 @@ This must be set with a `volume_type` of `"io1"`.
             title="Optional">
         <span>volume<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of volume. Can be `"standard"`, `"gp2"`,
 or `"io1"`. (Default: `"gp2"`).
@@ -6319,6 +4719,15 @@ or `"io1"`. (Default: `"gp2"`).
 {{% choosable language python %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>device_<wbr>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the device to mount.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>delete<wbr>On<wbr>Termination</span>
@@ -6327,15 +4736,6 @@ or `"io1"`. (Default: `"gp2"`).
     </dt>
     <dd>{{% md %}}Whether the volume should be destroyed
 on instance termination (Default: `true`).
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>device_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the device to mount.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6440,7 +4840,7 @@ or `"io1"`. (Default: `"gp2"`).
             title="Optional">
         <span>No<wbr>Device</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Suppresses the specified device included in the AMI's block device mapping.
 {{% /md %}}</dd>
@@ -6449,7 +4849,7 @@ or `"io1"`. (Default: `"gp2"`).
             title="Optional">
         <span>Virtual<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The [Instance Store Device
 Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#InstanceStoreDeviceNames)
@@ -6476,7 +4876,7 @@ Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#I
             title="Optional">
         <span>No<wbr>Device</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Suppresses the specified device included in the AMI's block device mapping.
 {{% /md %}}</dd>
@@ -6485,7 +4885,7 @@ Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#I
             title="Optional">
         <span>Virtual<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The [Instance Store Device
 Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#InstanceStoreDeviceNames)
@@ -6512,7 +4912,7 @@ Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#I
             title="Optional">
         <span>no<wbr>Device</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Suppresses the specified device included in the AMI's block device mapping.
 {{% /md %}}</dd>
@@ -6521,7 +4921,7 @@ Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#I
             title="Optional">
         <span>virtual<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The [Instance Store Device
 Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#InstanceStoreDeviceNames)
@@ -6590,7 +4990,7 @@ Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#I
             title="Optional">
         <span>Http<wbr>Endpoint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether the metadata service is available. Can be `"enabled"` or `"disabled"`. (Default: `"enabled"`).
 {{% /md %}}</dd>
@@ -6599,7 +4999,7 @@ Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#I
             title="Optional">
         <span>Http<wbr>Put<wbr>Response<wbr>Hop<wbr>Limit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The desired HTTP PUT response hop limit for instance metadata requests. The larger the number, the further instance metadata requests can travel. Can be an integer from `1` to `64`. (Default: `1`).
 {{% /md %}}</dd>
@@ -6608,7 +5008,7 @@ Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#I
             title="Optional">
         <span>Http<wbr>Tokens</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether or not the metadata service requires session tokens, also referred to as _Instance Metadata Service Version 2_. Can be `"optional"` or `"required"`. (Default: `"optional"`).
 {{% /md %}}</dd>
@@ -6624,7 +5024,7 @@ Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#I
             title="Optional">
         <span>Http<wbr>Endpoint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether the metadata service is available. Can be `"enabled"` or `"disabled"`. (Default: `"enabled"`).
 {{% /md %}}</dd>
@@ -6633,7 +5033,7 @@ Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#I
             title="Optional">
         <span>Http<wbr>Put<wbr>Response<wbr>Hop<wbr>Limit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The desired HTTP PUT response hop limit for instance metadata requests. The larger the number, the further instance metadata requests can travel. Can be an integer from `1` to `64`. (Default: `1`).
 {{% /md %}}</dd>
@@ -6642,7 +5042,7 @@ Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#I
             title="Optional">
         <span>Http<wbr>Tokens</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether or not the metadata service requires session tokens, also referred to as _Instance Metadata Service Version 2_. Can be `"optional"` or `"required"`. (Default: `"optional"`).
 {{% /md %}}</dd>
@@ -6658,7 +5058,7 @@ Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#I
             title="Optional">
         <span>http<wbr>Endpoint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether the metadata service is available. Can be `"enabled"` or `"disabled"`. (Default: `"enabled"`).
 {{% /md %}}</dd>
@@ -6667,7 +5067,7 @@ Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#I
             title="Optional">
         <span>http<wbr>Put<wbr>Response<wbr>Hop<wbr>Limit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The desired HTTP PUT response hop limit for instance metadata requests. The larger the number, the further instance metadata requests can travel. Can be an integer from `1` to `64`. (Default: `1`).
 {{% /md %}}</dd>
@@ -6676,7 +5076,7 @@ Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#I
             title="Optional">
         <span>http<wbr>Tokens</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether or not the metadata service requires session tokens, also referred to as _Instance Metadata Service Version 2_. Can be `"optional"` or `"required"`. (Default: `"optional"`).
 {{% /md %}}</dd>
@@ -6737,15 +5137,6 @@ Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#I
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Delete<wbr>On<wbr>Termination</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Whether or not to delete the network interface on instance termination. Defaults to `false`. Currently, the only valid value is `false`, as this is only supported when creating new network interfaces when launching an instance.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Device<wbr>Index</span>
@@ -6762,6 +5153,15 @@ Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#I
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the network interface to attach.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Delete<wbr>On<wbr>Termination</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether or not to delete the network interface on instance termination. Defaults to `false`. Currently, the only valid value is `false`, as this is only supported when creating new network interfaces when launching an instance.
 {{% /md %}}</dd>
 
 </dl>
@@ -6771,15 +5171,6 @@ Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#I
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Delete<wbr>On<wbr>Termination</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Whether or not to delete the network interface on instance termination. Defaults to `false`. Currently, the only valid value is `false`, as this is only supported when creating new network interfaces when launching an instance.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Device<wbr>Index</span>
@@ -6798,21 +5189,21 @@ Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#I
     <dd>{{% md %}}The ID of the network interface to attach.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>Delete<wbr>On<wbr>Termination</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether or not to delete the network interface on instance termination. Defaults to `false`. Currently, the only valid value is `false`, as this is only supported when creating new network interfaces when launching an instance.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>delete<wbr>On<wbr>Termination</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Whether or not to delete the network interface on instance termination. Defaults to `false`. Currently, the only valid value is `false`, as this is only supported when creating new network interfaces when launching an instance.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -6832,21 +5223,21 @@ Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#I
     <dd>{{% md %}}The ID of the network interface to attach.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>delete<wbr>On<wbr>Termination</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether or not to delete the network interface on instance termination. Defaults to `false`. Currently, the only valid value is `false`, as this is only supported when creating new network interfaces when launching an instance.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>delete<wbr>On<wbr>Termination</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Whether or not to delete the network interface on instance termination. Defaults to `false`. Currently, the only valid value is `false`, as this is only supported when creating new network interfaces when launching an instance.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -6864,6 +5255,15 @@ Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#I
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the network interface to attach.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>delete<wbr>On<wbr>Termination</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether or not to delete the network interface on instance termination. Defaults to `false`. Currently, the only valid value is `false`, as this is only supported when creating new network interfaces when launching an instance.
 {{% /md %}}</dd>
 
 </dl>
@@ -6892,7 +5292,7 @@ Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#I
             title="Optional">
         <span>Delete<wbr>On<wbr>Termination</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the volume should be destroyed
 on instance termination (Default: `true`).
@@ -6902,7 +5302,7 @@ on instance termination (Default: `true`).
             title="Optional">
         <span>Encrypted</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable volume encryption. (Default: `false`). Must be configured to perform drift detection.
 {{% /md %}}</dd>
@@ -6911,7 +5311,7 @@ on instance termination (Default: `true`).
             title="Optional">
         <span>Iops</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of provisioned
 [IOPS](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-io-characteristics.html).
@@ -6923,7 +5323,7 @@ using that type
             title="Optional">
         <span>Kms<wbr>Key<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the KMS Key to use when encrypting the volume. Must be configured to perform drift detection.
 {{% /md %}}</dd>
@@ -6932,7 +5332,7 @@ using that type
             title="Optional">
         <span>Volume<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6940,7 +5340,7 @@ using that type
             title="Optional">
         <span>Volume<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of the volume in gibibytes (GiB).
 {{% /md %}}</dd>
@@ -6949,7 +5349,7 @@ using that type
             title="Optional">
         <span>Volume<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of volume. Can be `"standard"`, `"gp2"`, `"io1"`, `"sc1"`, or `"st1"`. (Default: `"standard"`).
 {{% /md %}}</dd>
@@ -6965,7 +5365,7 @@ using that type
             title="Optional">
         <span>Delete<wbr>On<wbr>Termination</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the volume should be destroyed
 on instance termination (Default: `true`).
@@ -6975,7 +5375,7 @@ on instance termination (Default: `true`).
             title="Optional">
         <span>Encrypted</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable volume encryption. (Default: `false`). Must be configured to perform drift detection.
 {{% /md %}}</dd>
@@ -6984,7 +5384,7 @@ on instance termination (Default: `true`).
             title="Optional">
         <span>Iops</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The amount of provisioned
 [IOPS](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-io-characteristics.html).
@@ -6996,7 +5396,7 @@ using that type
             title="Optional">
         <span>Kms<wbr>Key<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the KMS Key to use when encrypting the volume. Must be configured to perform drift detection.
 {{% /md %}}</dd>
@@ -7005,7 +5405,7 @@ using that type
             title="Optional">
         <span>Volume<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7013,7 +5413,7 @@ using that type
             title="Optional">
         <span>Volume<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of the volume in gibibytes (GiB).
 {{% /md %}}</dd>
@@ -7022,7 +5422,7 @@ using that type
             title="Optional">
         <span>Volume<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of volume. Can be `"standard"`, `"gp2"`, `"io1"`, `"sc1"`, or `"st1"`. (Default: `"standard"`).
 {{% /md %}}</dd>
@@ -7038,7 +5438,7 @@ using that type
             title="Optional">
         <span>delete<wbr>On<wbr>Termination</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the volume should be destroyed
 on instance termination (Default: `true`).
@@ -7048,7 +5448,7 @@ on instance termination (Default: `true`).
             title="Optional">
         <span>encrypted</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable volume encryption. (Default: `false`). Must be configured to perform drift detection.
 {{% /md %}}</dd>
@@ -7057,7 +5457,7 @@ on instance termination (Default: `true`).
             title="Optional">
         <span>iops</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The amount of provisioned
 [IOPS](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-io-characteristics.html).
@@ -7069,7 +5469,7 @@ using that type
             title="Optional">
         <span>kms<wbr>Key<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the KMS Key to use when encrypting the volume. Must be configured to perform drift detection.
 {{% /md %}}</dd>
@@ -7078,7 +5478,7 @@ using that type
             title="Optional">
         <span>volume<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7086,7 +5486,7 @@ using that type
             title="Optional">
         <span>volume<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The size of the volume in gibibytes (GiB).
 {{% /md %}}</dd>
@@ -7095,7 +5495,7 @@ using that type
             title="Optional">
         <span>volume<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of volume. Can be `"standard"`, `"gp2"`, `"io1"`, `"sc1"`, or `"st1"`. (Default: `"standard"`).
 {{% /md %}}</dd>

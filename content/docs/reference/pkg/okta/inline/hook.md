@@ -41,7 +41,7 @@ const example = new okta.inline.Hook("example", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/okta/inline/#Hook">Hook</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/okta/inline/#HookArgs">HookArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/okta/inline/#Hook">Hook</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/okta/inline/#HookArgs">HookArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -49,7 +49,7 @@ const example = new okta.inline.Hook("example", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewHook<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/go/okta/inline?tab=doc#HookArgs">HookArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/go/okta/inline?tab=doc#Hook">Hook</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewHook<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/go/okta/inline?tab=doc#HookArgs">HookArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/go/okta/inline?tab=doc#Hook">Hook</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -145,11 +145,29 @@ const example = new okta.inline.Hook("example", {
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of hook to trigger. Currently only `"HTTP"` is supported.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Version</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The version of the endpoint.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Auth</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hookauth">Hook<wbr>Auth<wbr>Args?</a></span>
+        <span class="property-type"><a href="#hookauth">Hook<wbr>Auth<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Authentication required for inline hook request.
 {{% /md %}}</dd>
@@ -158,7 +176,7 @@ const example = new okta.inline.Hook("example", {
             title="Optional">
         <span>Channel</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hookchannel">Hook<wbr>Channel<wbr>Args?</a></span>
+        <span class="property-type"><a href="#hookchannel">Hook<wbr>Channel<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Details of the endpoint the inline hook will hit.
 {{% /md %}}</dd>
@@ -167,7 +185,7 @@ const example = new okta.inline.Hook("example", {
             title="Optional">
         <span>Headers</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hookheader">List&lt;Hook<wbr>Header<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#hookheader">List&lt;Hook<wbr>Header<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Map of headers to send along in inline hook request.
 {{% /md %}}</dd>
@@ -176,7 +194,7 @@ const example = new okta.inline.Hook("example", {
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The inline hook display name.
 {{% /md %}}</dd>
@@ -185,9 +203,16 @@ const example = new okta.inline.Hook("example", {
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
@@ -207,18 +232,11 @@ const example = new okta.inline.Hook("example", {
     <dd>{{% md %}}The version of the endpoint.
 {{% /md %}}</dd>
 
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span>Auth</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hookauth">*Hook<wbr>Auth</a></span>
+        <span class="property-type"><a href="#hookauth">Hook<wbr>Auth</a></span>
     </dt>
     <dd>{{% md %}}Authentication required for inline hook request.
 {{% /md %}}</dd>
@@ -227,7 +245,7 @@ const example = new okta.inline.Hook("example", {
             title="Optional">
         <span>Channel</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hookchannel">*Hook<wbr>Channel</a></span>
+        <span class="property-type"><a href="#hookchannel">Hook<wbr>Channel</a></span>
     </dt>
     <dd>{{% md %}}Details of the endpoint the inline hook will hit.
 {{% /md %}}</dd>
@@ -245,7 +263,7 @@ const example = new okta.inline.Hook("example", {
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The inline hook display name.
 {{% /md %}}</dd>
@@ -254,27 +272,9 @@ const example = new okta.inline.Hook("example", {
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The type of hook to trigger. Currently only `"HTTP"` is supported.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The version of the endpoint.
-{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -282,50 +282,6 @@ const example = new okta.inline.Hook("example", {
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>auth</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hookauth">Hook<wbr>Auth?</a></span>
-    </dt>
-    <dd>{{% md %}}Authentication required for inline hook request.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>channel</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hookchannel">Hook<wbr>Channel?</a></span>
-    </dt>
-    <dd>{{% md %}}Details of the endpoint the inline hook will hit.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>headers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hookheader">Hook<wbr>Header[]?</a></span>
-    </dt>
-    <dd>{{% md %}}Map of headers to send along in inline hook request.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The inline hook display name.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>status</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -345,12 +301,74 @@ const example = new okta.inline.Hook("example", {
     <dd>{{% md %}}The version of the endpoint.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>auth</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#hookauth">Hook<wbr>Auth</a></span>
+    </dt>
+    <dd>{{% md %}}Authentication required for inline hook request.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>channel</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#hookchannel">Hook<wbr>Channel</a></span>
+    </dt>
+    <dd>{{% md %}}Details of the endpoint the inline hook will hit.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>headers</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#hookheader">Hook<wbr>Header[]</a></span>
+    </dt>
+    <dd>{{% md %}}Map of headers to send along in inline hook request.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The inline hook display name.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>status</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The type of hook to trigger. Currently only `"HTTP"` is supported.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>version</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The version of the endpoint.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -396,314 +414,10 @@ const example = new okta.inline.Hook("example", {
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The type of hook to trigger. Currently only `"HTTP"` is supported.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The version of the endpoint.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
-
-
-
-
-
-## Hook Output Properties
-
-The following output properties are available:
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Auth</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hookauth">Hook<wbr>Auth?</a></span>
-    </dt>
-    <dd>{{% md %}}Authentication required for inline hook request.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Channel</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hookchannel">Hook<wbr>Channel?</a></span>
-    </dt>
-    <dd>{{% md %}}Details of the endpoint the inline hook will hit.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Headers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hookheader">List&lt;Hook<wbr>Header&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}Map of headers to send along in inline hook request.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The inline hook display name.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Status</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The type of hook to trigger. Currently only `"HTTP"` is supported.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The version of the endpoint.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Auth</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hookauth">*Hook<wbr>Auth</a></span>
-    </dt>
-    <dd>{{% md %}}Authentication required for inline hook request.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Channel</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hookchannel">*Hook<wbr>Channel</a></span>
-    </dt>
-    <dd>{{% md %}}Details of the endpoint the inline hook will hit.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Headers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hookheader">[]Hook<wbr>Header</a></span>
-    </dt>
-    <dd>{{% md %}}Map of headers to send along in inline hook request.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The inline hook display name.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Status</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The type of hook to trigger. Currently only `"HTTP"` is supported.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The version of the endpoint.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>auth</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hookauth">Hook<wbr>Auth?</a></span>
-    </dt>
-    <dd>{{% md %}}Authentication required for inline hook request.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>channel</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hookchannel">Hook<wbr>Channel?</a></span>
-    </dt>
-    <dd>{{% md %}}Details of the endpoint the inline hook will hit.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>headers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hookheader">Hook<wbr>Header[]?</a></span>
-    </dt>
-    <dd>{{% md %}}Map of headers to send along in inline hook request.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The inline hook display name.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>status</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The type of hook to trigger. Currently only `"HTTP"` is supported.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The version of the endpoint.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>auth</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hookauth">Dict[Hook<wbr>Auth]</a></span>
-    </dt>
-    <dd>{{% md %}}Authentication required for inline hook request.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>channel</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hookchannel">Dict[Hook<wbr>Channel]</a></span>
-    </dt>
-    <dd>{{% md %}}Details of the endpoint the inline hook will hit.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>headers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hookheader">List[Hook<wbr>Header]</a></span>
-    </dt>
-    <dd>{{% md %}}Map of headers to send along in inline hook request.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The inline hook display name.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>status</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The type of hook to trigger. Currently only `"HTTP"` is supported.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The version of the endpoint.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
 
 
 
@@ -841,7 +555,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Auth</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hookauth">Hook<wbr>Auth<wbr>Args?</a></span>
+        <span class="property-type"><a href="#hookauth">Hook<wbr>Auth<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Authentication required for inline hook request.
 {{% /md %}}</dd>
@@ -850,7 +564,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Channel</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hookchannel">Hook<wbr>Channel<wbr>Args?</a></span>
+        <span class="property-type"><a href="#hookchannel">Hook<wbr>Channel<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Details of the endpoint the inline hook will hit.
 {{% /md %}}</dd>
@@ -859,7 +573,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Headers</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hookheader">List&lt;Hook<wbr>Header<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#hookheader">List&lt;Hook<wbr>Header<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Map of headers to send along in inline hook request.
 {{% /md %}}</dd>
@@ -868,7 +582,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The inline hook display name.
 {{% /md %}}</dd>
@@ -877,7 +591,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -885,7 +599,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of hook to trigger. Currently only `"HTTP"` is supported.
 {{% /md %}}</dd>
@@ -894,7 +608,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of the endpoint.
 {{% /md %}}</dd>
@@ -910,7 +624,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Auth</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hookauth">*Hook<wbr>Auth</a></span>
+        <span class="property-type"><a href="#hookauth">Hook<wbr>Auth</a></span>
     </dt>
     <dd>{{% md %}}Authentication required for inline hook request.
 {{% /md %}}</dd>
@@ -919,7 +633,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Channel</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hookchannel">*Hook<wbr>Channel</a></span>
+        <span class="property-type"><a href="#hookchannel">Hook<wbr>Channel</a></span>
     </dt>
     <dd>{{% md %}}Details of the endpoint the inline hook will hit.
 {{% /md %}}</dd>
@@ -937,7 +651,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The inline hook display name.
 {{% /md %}}</dd>
@@ -946,7 +660,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -954,7 +668,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of hook to trigger. Currently only `"HTTP"` is supported.
 {{% /md %}}</dd>
@@ -963,7 +677,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of the endpoint.
 {{% /md %}}</dd>
@@ -979,7 +693,7 @@ The following state arguments are supported:
             title="Optional">
         <span>auth</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hookauth">Hook<wbr>Auth?</a></span>
+        <span class="property-type"><a href="#hookauth">Hook<wbr>Auth</a></span>
     </dt>
     <dd>{{% md %}}Authentication required for inline hook request.
 {{% /md %}}</dd>
@@ -988,7 +702,7 @@ The following state arguments are supported:
             title="Optional">
         <span>channel</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hookchannel">Hook<wbr>Channel?</a></span>
+        <span class="property-type"><a href="#hookchannel">Hook<wbr>Channel</a></span>
     </dt>
     <dd>{{% md %}}Details of the endpoint the inline hook will hit.
 {{% /md %}}</dd>
@@ -997,7 +711,7 @@ The following state arguments are supported:
             title="Optional">
         <span>headers</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hookheader">Hook<wbr>Header[]?</a></span>
+        <span class="property-type"><a href="#hookheader">Hook<wbr>Header[]</a></span>
     </dt>
     <dd>{{% md %}}Map of headers to send along in inline hook request.
 {{% /md %}}</dd>
@@ -1006,7 +720,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The inline hook display name.
 {{% /md %}}</dd>
@@ -1015,7 +729,7 @@ The following state arguments are supported:
             title="Optional">
         <span>status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1023,7 +737,7 @@ The following state arguments are supported:
             title="Optional">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of hook to trigger. Currently only `"HTTP"` is supported.
 {{% /md %}}</dd>
@@ -1032,7 +746,7 @@ The following state arguments are supported:
             title="Optional">
         <span>version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of the endpoint.
 {{% /md %}}</dd>
@@ -1139,7 +853,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Key to use for authentication, usually the header name, for example `"Authorization"`.
 {{% /md %}}</dd>
@@ -1148,7 +862,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of hook to trigger. Currently only `"HTTP"` is supported.
 {{% /md %}}</dd>
@@ -1157,7 +871,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Authentication secret.
 {{% /md %}}</dd>
@@ -1173,7 +887,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Key to use for authentication, usually the header name, for example `"Authorization"`.
 {{% /md %}}</dd>
@@ -1182,7 +896,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of hook to trigger. Currently only `"HTTP"` is supported.
 {{% /md %}}</dd>
@@ -1191,7 +905,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Authentication secret.
 {{% /md %}}</dd>
@@ -1207,7 +921,7 @@ The following state arguments are supported:
             title="Optional">
         <span>key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Key to use for authentication, usually the header name, for example `"Authorization"`.
 {{% /md %}}</dd>
@@ -1216,7 +930,7 @@ The following state arguments are supported:
             title="Optional">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of hook to trigger. Currently only `"HTTP"` is supported.
 {{% /md %}}</dd>
@@ -1225,7 +939,7 @@ The following state arguments are supported:
             title="Optional">
         <span>value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Authentication secret.
 {{% /md %}}</dd>
@@ -1286,24 +1000,6 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Method</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The request method to use. Default is `"POST"`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}The type of hook to trigger. Currently only `"HTTP"` is supported.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Uri</span>
@@ -1320,6 +1016,24 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of the endpoint.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Method</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The request method to use. Default is `"POST"`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}The type of hook to trigger. Currently only `"HTTP"` is supported.
 {{% /md %}}</dd>
 
 </dl>
@@ -1329,24 +1043,6 @@ The following state arguments are supported:
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Method</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The request method to use. Default is `"POST"`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}The type of hook to trigger. Currently only `"HTTP"` is supported.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Uri</span>
@@ -1365,30 +1061,30 @@ The following state arguments are supported:
     <dd>{{% md %}}The version of the endpoint.
 {{% /md %}}</dd>
 
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
-        <span>method</span>
+        <span>Method</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The request method to use. Default is `"POST"`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>type</span>
+        <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The type of hook to trigger. Currently only `"HTTP"` is supported.
 {{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
@@ -1408,12 +1104,48 @@ The following state arguments are supported:
     <dd>{{% md %}}The version of the endpoint.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>method</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The request method to use. Default is `"POST"`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}The type of hook to trigger. Currently only `"HTTP"` is supported.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>uri</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The URI the hook will hit.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>version</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The version of the endpoint.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1431,24 +1163,6 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The type of hook to trigger. Currently only `"HTTP"` is supported.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>uri</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The URI the hook will hit.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The version of the endpoint.
 {{% /md %}}</dd>
 
 </dl>
@@ -1477,7 +1191,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Key to use for authentication, usually the header name, for example `"Authorization"`.
 {{% /md %}}</dd>
@@ -1486,7 +1200,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Authentication secret.
 {{% /md %}}</dd>
@@ -1502,7 +1216,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Key to use for authentication, usually the header name, for example `"Authorization"`.
 {{% /md %}}</dd>
@@ -1511,7 +1225,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Authentication secret.
 {{% /md %}}</dd>
@@ -1527,7 +1241,7 @@ The following state arguments are supported:
             title="Optional">
         <span>key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Key to use for authentication, usually the header name, for example `"Authorization"`.
 {{% /md %}}</dd>
@@ -1536,7 +1250,7 @@ The following state arguments are supported:
             title="Optional">
         <span>value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Authentication secret.
 {{% /md %}}</dd>

@@ -227,7 +227,7 @@ export const scalaCode = example.scalaCode;
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupScript<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/glue?tab=doc#LookupScriptArgs">LookupScriptArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/glue?tab=doc#LookupScriptResult">LookupScriptResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupScript<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/glue?tab=doc#LookupScriptArgs">LookupScriptArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/glue?tab=doc#LookupScriptResult">LookupScriptResult</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -268,7 +268,7 @@ The following arguments are supported:
             title="Optional">
         <span>Language</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The programming language of the resulting code from the DAG. Defaults to `PYTHON`. Valid values are `PYTHON` and `SCALA`.
 {{% /md %}}</dd>
@@ -302,7 +302,7 @@ The following arguments are supported:
             title="Optional">
         <span>Language</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The programming language of the resulting code from the DAG. Defaults to `PYTHON`. Valid values are `PYTHON` and `SCALA`.
 {{% /md %}}</dd>
@@ -336,7 +336,7 @@ The following arguments are supported:
             title="Optional">
         <span>language</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The programming language of the resulting code from the DAG. Defaults to `PYTHON`. Valid values are `PYTHON` and `SCALA`.
 {{% /md %}}</dd>
@@ -422,14 +422,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Language</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Python<wbr>Script</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -445,6 +437,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The Scala code generated from the DAG when the `language` argument is set to `SCALA`.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Language</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -480,14 +480,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Language</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Python<wbr>Script</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -503,6 +495,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The Scala code generated from the DAG when the `language` argument is set to `SCALA`.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Language</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -538,14 +538,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>language</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>python<wbr>Script</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -561,6 +553,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The Scala code generated from the DAG when the `language` argument is set to `SCALA`.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>language</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -596,14 +596,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>language</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>python_<wbr>script</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -619,6 +611,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The Scala code generated from the DAG when the `language` argument is set to `SCALA`.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>language</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -669,7 +669,7 @@ The following output properties are available:
             title="Optional">
         <span>Target<wbr>Parameter</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The target of the edge.
 {{% /md %}}</dd>
@@ -703,7 +703,7 @@ The following output properties are available:
             title="Optional">
         <span>Target<wbr>Parameter</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The target of the edge.
 {{% /md %}}</dd>
@@ -737,7 +737,7 @@ The following output properties are available:
             title="Optional">
         <span>target<wbr>Parameter</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The target of the edge.
 {{% /md %}}</dd>
@@ -816,15 +816,6 @@ The following output properties are available:
     <dd>{{% md %}}A node identifier that is unique within the node's graph.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Line<wbr>Number</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}The line number of the node.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Node<wbr>Type</span>
@@ -832,6 +823,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of node this is.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Line<wbr>Number</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The line number of the node.
 {{% /md %}}</dd>
 
 </dl>
@@ -859,15 +859,6 @@ The following output properties are available:
     <dd>{{% md %}}A node identifier that is unique within the node's graph.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Line<wbr>Number</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}The line number of the node.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Node<wbr>Type</span>
@@ -875,6 +866,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of node this is.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Line<wbr>Number</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The line number of the node.
 {{% /md %}}</dd>
 
 </dl>
@@ -902,15 +902,6 @@ The following output properties are available:
     <dd>{{% md %}}A node identifier that is unique within the node's graph.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>line<wbr>Number</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}The line number of the node.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>node<wbr>Type</span>
@@ -918,6 +909,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of node this is.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>line<wbr>Number</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The line number of the node.
 {{% /md %}}</dd>
 
 </dl>
@@ -945,15 +945,6 @@ The following output properties are available:
     <dd>{{% md %}}A node identifier that is unique within the node's graph.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>line<wbr>Number</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The line number of the node.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>node_<wbr>type</span>
@@ -961,6 +952,15 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of node this is.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>line<wbr>Number</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}The line number of the node.
 {{% /md %}}</dd>
 
 </dl>
@@ -994,15 +994,6 @@ The following output properties are available:
     <dd>{{% md %}}The name of the argument or property.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Param</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Boolean if the value is used as a parameter. Defaults to `false`.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Value</span>
@@ -1010,6 +1001,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the argument or property.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Param</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Boolean if the value is used as a parameter. Defaults to `false`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1028,15 +1028,6 @@ The following output properties are available:
     <dd>{{% md %}}The name of the argument or property.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Param</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Boolean if the value is used as a parameter. Defaults to `false`.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Value</span>
@@ -1044,6 +1035,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the argument or property.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Param</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Boolean if the value is used as a parameter. Defaults to `false`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1062,15 +1062,6 @@ The following output properties are available:
     <dd>{{% md %}}The name of the argument or property.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>param</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Boolean if the value is used as a parameter. Defaults to `false`.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>value</span>
@@ -1078,6 +1069,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value of the argument or property.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>param</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Boolean if the value is used as a parameter. Defaults to `false`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1096,15 +1096,6 @@ The following output properties are available:
     <dd>{{% md %}}The name of the argument or property.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>param</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Boolean if the value is used as a parameter. Defaults to `false`.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>value</span>
@@ -1112,6 +1103,15 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value of the argument or property.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>param</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Boolean if the value is used as a parameter. Defaults to `false`.
 {{% /md %}}</dd>
 
 </dl>

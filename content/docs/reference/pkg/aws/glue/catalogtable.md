@@ -90,7 +90,7 @@ const awsGlueCatalogTable = new aws.glue.CatalogTable("aws.glue.CatalogTable", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/glue/#CatalogTable">CatalogTable</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/glue/#CatalogTableArgs">CatalogTableArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/glue/#CatalogTable">CatalogTable</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/glue/#CatalogTableArgs">CatalogTableArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -98,7 +98,7 @@ const awsGlueCatalogTable = new aws.glue.CatalogTable("aws.glue.CatalogTable", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewCatalogTable<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/glue?tab=doc#CatalogTableArgs">CatalogTableArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/glue?tab=doc#CatalogTable">CatalogTable</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewCatalogTable<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/glue?tab=doc#CatalogTableArgs">CatalogTableArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/glue?tab=doc#CatalogTable">CatalogTable</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -194,15 +194,6 @@ const awsGlueCatalogTable = new aws.glue.CatalogTable("aws.glue.CatalogTable", {
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Catalog<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}ID of the Glue Catalog and database to create the table in. If omitted, this defaults to the AWS Account ID plus the database name.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Database<wbr>Name</span>
@@ -214,9 +205,18 @@ const awsGlueCatalogTable = new aws.glue.CatalogTable("aws.glue.CatalogTable", {
 
     <dt class="property-optional"
             title="Optional">
+        <span>Catalog<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ID of the Glue Catalog and database to create the table in. If omitted, this defaults to the AWS Account ID plus the database name.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the table.
 {{% /md %}}</dd>
@@ -225,7 +225,7 @@ const awsGlueCatalogTable = new aws.glue.CatalogTable("aws.glue.CatalogTable", {
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the SerDe.
 {{% /md %}}</dd>
@@ -234,7 +234,7 @@ const awsGlueCatalogTable = new aws.glue.CatalogTable("aws.glue.CatalogTable", {
             title="Optional">
         <span>Owner</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Owner of the table.
 {{% /md %}}</dd>
@@ -243,7 +243,7 @@ const awsGlueCatalogTable = new aws.glue.CatalogTable("aws.glue.CatalogTable", {
             title="Optional">
         <span>Parameters</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string>?</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of initialization parameters for the SerDe, in key-value form.
 {{% /md %}}</dd>
@@ -252,7 +252,7 @@ const awsGlueCatalogTable = new aws.glue.CatalogTable("aws.glue.CatalogTable", {
             title="Optional">
         <span>Partition<wbr>Keys</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#catalogtablepartitionkey">List&lt;Catalog<wbr>Table<wbr>Partition<wbr>Key<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#catalogtablepartitionkey">List&lt;Catalog<wbr>Table<wbr>Partition<wbr>Key<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of columns by which the table is partitioned. Only primitive types are supported as partition keys.
 {{% /md %}}</dd>
@@ -261,7 +261,7 @@ const awsGlueCatalogTable = new aws.glue.CatalogTable("aws.glue.CatalogTable", {
             title="Optional">
         <span>Retention</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Retention time for this table.
 {{% /md %}}</dd>
@@ -270,7 +270,7 @@ const awsGlueCatalogTable = new aws.glue.CatalogTable("aws.glue.CatalogTable", {
             title="Optional">
         <span>Storage<wbr>Descriptor</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#catalogtablestoragedescriptor">Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Args?</a></span>
+        <span class="property-type"><a href="#catalogtablestoragedescriptor">Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A storage descriptor object containing information about the physical storage of this table. You can refer to the [Glue Developer Guide](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-tables.html#aws-glue-api-catalog-tables-StorageDescriptor) for a full explanation of this object.
 {{% /md %}}</dd>
@@ -279,7 +279,7 @@ const awsGlueCatalogTable = new aws.glue.CatalogTable("aws.glue.CatalogTable", {
             title="Optional">
         <span>Table<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of this table (EXTERNAL_TABLE, VIRTUAL_VIEW, etc.).
 {{% /md %}}</dd>
@@ -288,7 +288,7 @@ const awsGlueCatalogTable = new aws.glue.CatalogTable("aws.glue.CatalogTable", {
             title="Optional">
         <span>View<wbr>Expanded<wbr>Text</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If the table is a view, the expanded text of the view; otherwise null.
 {{% /md %}}</dd>
@@ -297,7 +297,7 @@ const awsGlueCatalogTable = new aws.glue.CatalogTable("aws.glue.CatalogTable", {
             title="Optional">
         <span>View<wbr>Original<wbr>Text</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If the table is a view, the original text of the view; otherwise null.
 {{% /md %}}</dd>
@@ -309,15 +309,6 @@ const awsGlueCatalogTable = new aws.glue.CatalogTable("aws.glue.CatalogTable", {
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Catalog<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}ID of the Glue Catalog and database to create the table in. If omitted, this defaults to the AWS Account ID plus the database name.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Database<wbr>Name</span>
@@ -329,9 +320,18 @@ const awsGlueCatalogTable = new aws.glue.CatalogTable("aws.glue.CatalogTable", {
 
     <dt class="property-optional"
             title="Optional">
+        <span>Catalog<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ID of the Glue Catalog and database to create the table in. If omitted, this defaults to the AWS Account ID plus the database name.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the table.
 {{% /md %}}</dd>
@@ -340,7 +340,7 @@ const awsGlueCatalogTable = new aws.glue.CatalogTable("aws.glue.CatalogTable", {
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the SerDe.
 {{% /md %}}</dd>
@@ -349,7 +349,7 @@ const awsGlueCatalogTable = new aws.glue.CatalogTable("aws.glue.CatalogTable", {
             title="Optional">
         <span>Owner</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Owner of the table.
 {{% /md %}}</dd>
@@ -376,7 +376,7 @@ const awsGlueCatalogTable = new aws.glue.CatalogTable("aws.glue.CatalogTable", {
             title="Optional">
         <span>Retention</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Retention time for this table.
 {{% /md %}}</dd>
@@ -385,7 +385,7 @@ const awsGlueCatalogTable = new aws.glue.CatalogTable("aws.glue.CatalogTable", {
             title="Optional">
         <span>Storage<wbr>Descriptor</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#catalogtablestoragedescriptor">*Catalog<wbr>Table<wbr>Storage<wbr>Descriptor</a></span>
+        <span class="property-type"><a href="#catalogtablestoragedescriptor">Catalog<wbr>Table<wbr>Storage<wbr>Descriptor</a></span>
     </dt>
     <dd>{{% md %}}A storage descriptor object containing information about the physical storage of this table. You can refer to the [Glue Developer Guide](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-tables.html#aws-glue-api-catalog-tables-StorageDescriptor) for a full explanation of this object.
 {{% /md %}}</dd>
@@ -394,7 +394,7 @@ const awsGlueCatalogTable = new aws.glue.CatalogTable("aws.glue.CatalogTable", {
             title="Optional">
         <span>Table<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of this table (EXTERNAL_TABLE, VIRTUAL_VIEW, etc.).
 {{% /md %}}</dd>
@@ -403,7 +403,7 @@ const awsGlueCatalogTable = new aws.glue.CatalogTable("aws.glue.CatalogTable", {
             title="Optional">
         <span>View<wbr>Expanded<wbr>Text</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If the table is a view, the expanded text of the view; otherwise null.
 {{% /md %}}</dd>
@@ -412,7 +412,7 @@ const awsGlueCatalogTable = new aws.glue.CatalogTable("aws.glue.CatalogTable", {
             title="Optional">
         <span>View<wbr>Original<wbr>Text</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If the table is a view, the original text of the view; otherwise null.
 {{% /md %}}</dd>
@@ -423,15 +423,6 @@ const awsGlueCatalogTable = new aws.glue.CatalogTable("aws.glue.CatalogTable", {
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>catalog<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}ID of the Glue Catalog and database to create the table in. If omitted, this defaults to the AWS Account ID plus the database name.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -444,9 +435,18 @@ const awsGlueCatalogTable = new aws.glue.CatalogTable("aws.glue.CatalogTable", {
 
     <dt class="property-optional"
             title="Optional">
+        <span>catalog<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ID of the Glue Catalog and database to create the table in. If omitted, this defaults to the AWS Account ID plus the database name.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the table.
 {{% /md %}}</dd>
@@ -455,7 +455,7 @@ const awsGlueCatalogTable = new aws.glue.CatalogTable("aws.glue.CatalogTable", {
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the SerDe.
 {{% /md %}}</dd>
@@ -464,7 +464,7 @@ const awsGlueCatalogTable = new aws.glue.CatalogTable("aws.glue.CatalogTable", {
             title="Optional">
         <span>owner</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Owner of the table.
 {{% /md %}}</dd>
@@ -473,7 +473,7 @@ const awsGlueCatalogTable = new aws.glue.CatalogTable("aws.glue.CatalogTable", {
             title="Optional">
         <span>parameters</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}?</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of initialization parameters for the SerDe, in key-value form.
 {{% /md %}}</dd>
@@ -482,7 +482,7 @@ const awsGlueCatalogTable = new aws.glue.CatalogTable("aws.glue.CatalogTable", {
             title="Optional">
         <span>partition<wbr>Keys</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#catalogtablepartitionkey">Catalog<wbr>Table<wbr>Partition<wbr>Key[]?</a></span>
+        <span class="property-type"><a href="#catalogtablepartitionkey">Catalog<wbr>Table<wbr>Partition<wbr>Key[]</a></span>
     </dt>
     <dd>{{% md %}}A list of columns by which the table is partitioned. Only primitive types are supported as partition keys.
 {{% /md %}}</dd>
@@ -491,7 +491,7 @@ const awsGlueCatalogTable = new aws.glue.CatalogTable("aws.glue.CatalogTable", {
             title="Optional">
         <span>retention</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Retention time for this table.
 {{% /md %}}</dd>
@@ -500,7 +500,7 @@ const awsGlueCatalogTable = new aws.glue.CatalogTable("aws.glue.CatalogTable", {
             title="Optional">
         <span>storage<wbr>Descriptor</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#catalogtablestoragedescriptor">Catalog<wbr>Table<wbr>Storage<wbr>Descriptor?</a></span>
+        <span class="property-type"><a href="#catalogtablestoragedescriptor">Catalog<wbr>Table<wbr>Storage<wbr>Descriptor</a></span>
     </dt>
     <dd>{{% md %}}A storage descriptor object containing information about the physical storage of this table. You can refer to the [Glue Developer Guide](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-tables.html#aws-glue-api-catalog-tables-StorageDescriptor) for a full explanation of this object.
 {{% /md %}}</dd>
@@ -509,7 +509,7 @@ const awsGlueCatalogTable = new aws.glue.CatalogTable("aws.glue.CatalogTable", {
             title="Optional">
         <span>table<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of this table (EXTERNAL_TABLE, VIRTUAL_VIEW, etc.).
 {{% /md %}}</dd>
@@ -518,7 +518,7 @@ const awsGlueCatalogTable = new aws.glue.CatalogTable("aws.glue.CatalogTable", {
             title="Optional">
         <span>view<wbr>Expanded<wbr>Text</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If the table is a view, the expanded text of the view; otherwise null.
 {{% /md %}}</dd>
@@ -527,7 +527,7 @@ const awsGlueCatalogTable = new aws.glue.CatalogTable("aws.glue.CatalogTable", {
             title="Optional">
         <span>view<wbr>Original<wbr>Text</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If the table is a view, the original text of the view; otherwise null.
 {{% /md %}}</dd>
@@ -539,15 +539,6 @@ const awsGlueCatalogTable = new aws.glue.CatalogTable("aws.glue.CatalogTable", {
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>catalog_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}ID of the Glue Catalog and database to create the table in. If omitted, this defaults to the AWS Account ID plus the database name.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>database_<wbr>name</span>
@@ -555,6 +546,15 @@ const awsGlueCatalogTable = new aws.glue.CatalogTable("aws.glue.CatalogTable", {
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the metadata database where the table metadata resides. For Hive compatibility, this must be all lowercase.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>catalog_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}ID of the Glue Catalog and database to create the table in. If omitted, this defaults to the AWS Account ID plus the database name.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -651,476 +651,6 @@ const awsGlueCatalogTable = new aws.glue.CatalogTable("aws.glue.CatalogTable", {
 {{% /choosable %}}
 
 
-
-
-
-
-
-## CatalogTable Output Properties
-
-The following output properties are available:
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Catalog<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}ID of the Glue Catalog and database to create the table in. If omitted, this defaults to the AWS Account ID plus the database name.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Database<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the metadata database where the table metadata resides. For Hive compatibility, this must be all lowercase.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Description of the table.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the SerDe.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Owner</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Owner of the table.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Parameters</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string>?</span>
-    </dt>
-    <dd>{{% md %}}A map of initialization parameters for the SerDe, in key-value form.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Partition<wbr>Keys</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#catalogtablepartitionkey">List&lt;Catalog<wbr>Table<wbr>Partition<wbr>Key&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}A list of columns by which the table is partitioned. Only primitive types are supported as partition keys.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Retention</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}Retention time for this table.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Storage<wbr>Descriptor</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#catalogtablestoragedescriptor">Catalog<wbr>Table<wbr>Storage<wbr>Descriptor?</a></span>
-    </dt>
-    <dd>{{% md %}}A storage descriptor object containing information about the physical storage of this table. You can refer to the [Glue Developer Guide](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-tables.html#aws-glue-api-catalog-tables-StorageDescriptor) for a full explanation of this object.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Table<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The type of this table (EXTERNAL_TABLE, VIRTUAL_VIEW, etc.).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>View<wbr>Expanded<wbr>Text</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}If the table is a view, the expanded text of the view; otherwise null.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>View<wbr>Original<wbr>Text</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}If the table is a view, the original text of the view; otherwise null.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Catalog<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}ID of the Glue Catalog and database to create the table in. If omitted, this defaults to the AWS Account ID plus the database name.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Database<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the metadata database where the table metadata resides. For Hive compatibility, this must be all lowercase.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Description of the table.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the SerDe.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Owner</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Owner of the table.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Parameters</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]string</span>
-    </dt>
-    <dd>{{% md %}}A map of initialization parameters for the SerDe, in key-value form.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Partition<wbr>Keys</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#catalogtablepartitionkey">[]Catalog<wbr>Table<wbr>Partition<wbr>Key</a></span>
-    </dt>
-    <dd>{{% md %}}A list of columns by which the table is partitioned. Only primitive types are supported as partition keys.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Retention</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}Retention time for this table.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Storage<wbr>Descriptor</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#catalogtablestoragedescriptor">*Catalog<wbr>Table<wbr>Storage<wbr>Descriptor</a></span>
-    </dt>
-    <dd>{{% md %}}A storage descriptor object containing information about the physical storage of this table. You can refer to the [Glue Developer Guide](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-tables.html#aws-glue-api-catalog-tables-StorageDescriptor) for a full explanation of this object.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Table<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The type of this table (EXTERNAL_TABLE, VIRTUAL_VIEW, etc.).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>View<wbr>Expanded<wbr>Text</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}If the table is a view, the expanded text of the view; otherwise null.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>View<wbr>Original<wbr>Text</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}If the table is a view, the original text of the view; otherwise null.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>catalog<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}ID of the Glue Catalog and database to create the table in. If omitted, this defaults to the AWS Account ID plus the database name.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>database<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the metadata database where the table metadata resides. For Hive compatibility, this must be all lowercase.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Description of the table.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the SerDe.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>owner</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Owner of the table.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>parameters</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}?</span>
-    </dt>
-    <dd>{{% md %}}A map of initialization parameters for the SerDe, in key-value form.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>partition<wbr>Keys</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#catalogtablepartitionkey">Catalog<wbr>Table<wbr>Partition<wbr>Key[]?</a></span>
-    </dt>
-    <dd>{{% md %}}A list of columns by which the table is partitioned. Only primitive types are supported as partition keys.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>retention</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}Retention time for this table.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>storage<wbr>Descriptor</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#catalogtablestoragedescriptor">Catalog<wbr>Table<wbr>Storage<wbr>Descriptor?</a></span>
-    </dt>
-    <dd>{{% md %}}A storage descriptor object containing information about the physical storage of this table. You can refer to the [Glue Developer Guide](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-tables.html#aws-glue-api-catalog-tables-StorageDescriptor) for a full explanation of this object.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>table<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The type of this table (EXTERNAL_TABLE, VIRTUAL_VIEW, etc.).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>view<wbr>Expanded<wbr>Text</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}If the table is a view, the expanded text of the view; otherwise null.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>view<wbr>Original<wbr>Text</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}If the table is a view, the original text of the view; otherwise null.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>catalog_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}ID of the Glue Catalog and database to create the table in. If omitted, this defaults to the AWS Account ID plus the database name.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>database_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Name of the metadata database where the table metadata resides. For Hive compatibility, this must be all lowercase.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Description of the table.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Name of the SerDe.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>owner</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Owner of the table.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>parameters</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
-    </dt>
-    <dd>{{% md %}}A map of initialization parameters for the SerDe, in key-value form.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>partition_<wbr>keys</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#catalogtablepartitionkey">List[Catalog<wbr>Table<wbr>Partition<wbr>Key]</a></span>
-    </dt>
-    <dd>{{% md %}}A list of columns by which the table is partitioned. Only primitive types are supported as partition keys.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>retention</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}Retention time for this table.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>storage_<wbr>descriptor</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#catalogtablestoragedescriptor">Dict[Catalog<wbr>Table<wbr>Storage<wbr>Descriptor]</a></span>
-    </dt>
-    <dd>{{% md %}}A storage descriptor object containing information about the physical storage of this table. You can refer to the [Glue Developer Guide](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-tables.html#aws-glue-api-catalog-tables-StorageDescriptor) for a full explanation of this object.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>table_<wbr>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The type of this table (EXTERNAL_TABLE, VIRTUAL_VIEW, etc.).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>view_<wbr>expanded_<wbr>text</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}If the table is a view, the expanded text of the view; otherwise null.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>view_<wbr>original_<wbr>text</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}If the table is a view, the original text of the view; otherwise null.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
 
 
 
@@ -1258,7 +788,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Catalog<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the Glue Catalog and database to create the table in. If omitted, this defaults to the AWS Account ID plus the database name.
 {{% /md %}}</dd>
@@ -1267,7 +797,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Database<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the metadata database where the table metadata resides. For Hive compatibility, this must be all lowercase.
 {{% /md %}}</dd>
@@ -1276,7 +806,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the table.
 {{% /md %}}</dd>
@@ -1285,7 +815,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the SerDe.
 {{% /md %}}</dd>
@@ -1294,7 +824,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Owner</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Owner of the table.
 {{% /md %}}</dd>
@@ -1303,7 +833,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Parameters</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string>?</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of initialization parameters for the SerDe, in key-value form.
 {{% /md %}}</dd>
@@ -1312,7 +842,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Partition<wbr>Keys</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#catalogtablepartitionkey">List&lt;Catalog<wbr>Table<wbr>Partition<wbr>Key<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#catalogtablepartitionkey">List&lt;Catalog<wbr>Table<wbr>Partition<wbr>Key<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of columns by which the table is partitioned. Only primitive types are supported as partition keys.
 {{% /md %}}</dd>
@@ -1321,7 +851,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Retention</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Retention time for this table.
 {{% /md %}}</dd>
@@ -1330,7 +860,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Storage<wbr>Descriptor</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#catalogtablestoragedescriptor">Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Args?</a></span>
+        <span class="property-type"><a href="#catalogtablestoragedescriptor">Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A storage descriptor object containing information about the physical storage of this table. You can refer to the [Glue Developer Guide](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-tables.html#aws-glue-api-catalog-tables-StorageDescriptor) for a full explanation of this object.
 {{% /md %}}</dd>
@@ -1339,7 +869,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Table<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of this table (EXTERNAL_TABLE, VIRTUAL_VIEW, etc.).
 {{% /md %}}</dd>
@@ -1348,7 +878,7 @@ The following state arguments are supported:
             title="Optional">
         <span>View<wbr>Expanded<wbr>Text</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If the table is a view, the expanded text of the view; otherwise null.
 {{% /md %}}</dd>
@@ -1357,7 +887,7 @@ The following state arguments are supported:
             title="Optional">
         <span>View<wbr>Original<wbr>Text</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If the table is a view, the original text of the view; otherwise null.
 {{% /md %}}</dd>
@@ -1373,7 +903,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Catalog<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the Glue Catalog and database to create the table in. If omitted, this defaults to the AWS Account ID plus the database name.
 {{% /md %}}</dd>
@@ -1382,7 +912,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Database<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the metadata database where the table metadata resides. For Hive compatibility, this must be all lowercase.
 {{% /md %}}</dd>
@@ -1391,7 +921,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the table.
 {{% /md %}}</dd>
@@ -1400,7 +930,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the SerDe.
 {{% /md %}}</dd>
@@ -1409,7 +939,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Owner</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Owner of the table.
 {{% /md %}}</dd>
@@ -1436,7 +966,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Retention</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Retention time for this table.
 {{% /md %}}</dd>
@@ -1445,7 +975,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Storage<wbr>Descriptor</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#catalogtablestoragedescriptor">*Catalog<wbr>Table<wbr>Storage<wbr>Descriptor</a></span>
+        <span class="property-type"><a href="#catalogtablestoragedescriptor">Catalog<wbr>Table<wbr>Storage<wbr>Descriptor</a></span>
     </dt>
     <dd>{{% md %}}A storage descriptor object containing information about the physical storage of this table. You can refer to the [Glue Developer Guide](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-tables.html#aws-glue-api-catalog-tables-StorageDescriptor) for a full explanation of this object.
 {{% /md %}}</dd>
@@ -1454,7 +984,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Table<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of this table (EXTERNAL_TABLE, VIRTUAL_VIEW, etc.).
 {{% /md %}}</dd>
@@ -1463,7 +993,7 @@ The following state arguments are supported:
             title="Optional">
         <span>View<wbr>Expanded<wbr>Text</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If the table is a view, the expanded text of the view; otherwise null.
 {{% /md %}}</dd>
@@ -1472,7 +1002,7 @@ The following state arguments are supported:
             title="Optional">
         <span>View<wbr>Original<wbr>Text</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If the table is a view, the original text of the view; otherwise null.
 {{% /md %}}</dd>
@@ -1488,7 +1018,7 @@ The following state arguments are supported:
             title="Optional">
         <span>catalog<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the Glue Catalog and database to create the table in. If omitted, this defaults to the AWS Account ID plus the database name.
 {{% /md %}}</dd>
@@ -1497,7 +1027,7 @@ The following state arguments are supported:
             title="Optional">
         <span>database<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the metadata database where the table metadata resides. For Hive compatibility, this must be all lowercase.
 {{% /md %}}</dd>
@@ -1506,7 +1036,7 @@ The following state arguments are supported:
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the table.
 {{% /md %}}</dd>
@@ -1515,7 +1045,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the SerDe.
 {{% /md %}}</dd>
@@ -1524,7 +1054,7 @@ The following state arguments are supported:
             title="Optional">
         <span>owner</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Owner of the table.
 {{% /md %}}</dd>
@@ -1533,7 +1063,7 @@ The following state arguments are supported:
             title="Optional">
         <span>parameters</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}?</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of initialization parameters for the SerDe, in key-value form.
 {{% /md %}}</dd>
@@ -1542,7 +1072,7 @@ The following state arguments are supported:
             title="Optional">
         <span>partition<wbr>Keys</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#catalogtablepartitionkey">Catalog<wbr>Table<wbr>Partition<wbr>Key[]?</a></span>
+        <span class="property-type"><a href="#catalogtablepartitionkey">Catalog<wbr>Table<wbr>Partition<wbr>Key[]</a></span>
     </dt>
     <dd>{{% md %}}A list of columns by which the table is partitioned. Only primitive types are supported as partition keys.
 {{% /md %}}</dd>
@@ -1551,7 +1081,7 @@ The following state arguments are supported:
             title="Optional">
         <span>retention</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Retention time for this table.
 {{% /md %}}</dd>
@@ -1560,7 +1090,7 @@ The following state arguments are supported:
             title="Optional">
         <span>storage<wbr>Descriptor</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#catalogtablestoragedescriptor">Catalog<wbr>Table<wbr>Storage<wbr>Descriptor?</a></span>
+        <span class="property-type"><a href="#catalogtablestoragedescriptor">Catalog<wbr>Table<wbr>Storage<wbr>Descriptor</a></span>
     </dt>
     <dd>{{% md %}}A storage descriptor object containing information about the physical storage of this table. You can refer to the [Glue Developer Guide](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-catalog-tables.html#aws-glue-api-catalog-tables-StorageDescriptor) for a full explanation of this object.
 {{% /md %}}</dd>
@@ -1569,7 +1099,7 @@ The following state arguments are supported:
             title="Optional">
         <span>table<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of this table (EXTERNAL_TABLE, VIRTUAL_VIEW, etc.).
 {{% /md %}}</dd>
@@ -1578,7 +1108,7 @@ The following state arguments are supported:
             title="Optional">
         <span>view<wbr>Expanded<wbr>Text</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If the table is a view, the expanded text of the view; otherwise null.
 {{% /md %}}</dd>
@@ -1587,7 +1117,7 @@ The following state arguments are supported:
             title="Optional">
         <span>view<wbr>Original<wbr>Text</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If the table is a view, the original text of the view; otherwise null.
 {{% /md %}}</dd>
@@ -1736,15 +1266,6 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Comment</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Free-form text comment.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Name</span>
@@ -1756,9 +1277,18 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>Comment</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Free-form text comment.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The datatype of data in the Column.
 {{% /md %}}</dd>
@@ -1770,15 +1300,6 @@ The following state arguments are supported:
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Comment</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Free-form text comment.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Name</span>
@@ -1790,9 +1311,18 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>Comment</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Free-form text comment.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The datatype of data in the Column.
 {{% /md %}}</dd>
@@ -1803,15 +1333,6 @@ The following state arguments are supported:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>comment</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Free-form text comment.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1824,9 +1345,18 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>comment</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Free-form text comment.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The datatype of data in the Column.
 {{% /md %}}</dd>
@@ -1838,15 +1368,6 @@ The following state arguments are supported:
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>comment</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Free-form text comment.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>name</span>
@@ -1854,6 +1375,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the SerDe.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>comment</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Free-form text comment.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1891,7 +1421,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Bucket<wbr>Columns</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of reducer grouping columns, clustering columns, and bucketing columns in the table.
 {{% /md %}}</dd>
@@ -1900,7 +1430,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Columns</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#catalogtablestoragedescriptorcolumn">List&lt;Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Column<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#catalogtablestoragedescriptorcolumn">List&lt;Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Column<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of the Columns in the table.
 {{% /md %}}</dd>
@@ -1909,7 +1439,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Compressed</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}True if the data in the table is compressed, or False if not.
 {{% /md %}}</dd>
@@ -1918,7 +1448,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Input<wbr>Format</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The input format: SequenceFileInputFormat (binary), or TextInputFormat, or a custom format.
 {{% /md %}}</dd>
@@ -1927,7 +1457,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The physical location of the table. By default this takes the form of the warehouse location, followed by the database location in the warehouse, followed by the table name.
 {{% /md %}}</dd>
@@ -1936,7 +1466,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Number<wbr>Of<wbr>Buckets</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Must be specified if the table contains any dimension columns.
 {{% /md %}}</dd>
@@ -1945,7 +1475,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Output<wbr>Format</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The output format: SequenceFileOutputFormat (binary), or IgnoreKeyTextOutputFormat, or a custom format.
 {{% /md %}}</dd>
@@ -1954,7 +1484,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Parameters</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string>?</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of initialization parameters for the SerDe, in key-value form.
 {{% /md %}}</dd>
@@ -1963,7 +1493,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Ser<wbr>De<wbr>Info</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#catalogtablestoragedescriptorserdeinfo">Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Ser<wbr>De<wbr>Info<wbr>Args?</a></span>
+        <span class="property-type"><a href="#catalogtablestoragedescriptorserdeinfo">Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Ser<wbr>De<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Serialization/deserialization (SerDe) information.
 {{% /md %}}</dd>
@@ -1972,7 +1502,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Skewed<wbr>Info</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#catalogtablestoragedescriptorskewedinfo">Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Skewed<wbr>Info<wbr>Args?</a></span>
+        <span class="property-type"><a href="#catalogtablestoragedescriptorskewedinfo">Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Skewed<wbr>Info<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Information about values that appear very frequently in a column (skewed values).
 {{% /md %}}</dd>
@@ -1981,7 +1511,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Sort<wbr>Columns</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#catalogtablestoragedescriptorsortcolumn">List&lt;Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Sort<wbr>Column<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#catalogtablestoragedescriptorsortcolumn">List&lt;Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Sort<wbr>Column<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of Order objects specifying the sort order of each bucket in the table.
 {{% /md %}}</dd>
@@ -1990,7 +1520,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Stored<wbr>As<wbr>Sub<wbr>Directories</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}True if the table data is stored in subdirectories, or False if not.
 {{% /md %}}</dd>
@@ -2024,7 +1554,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Compressed</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}True if the data in the table is compressed, or False if not.
 {{% /md %}}</dd>
@@ -2033,7 +1563,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Input<wbr>Format</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The input format: SequenceFileInputFormat (binary), or TextInputFormat, or a custom format.
 {{% /md %}}</dd>
@@ -2042,7 +1572,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The physical location of the table. By default this takes the form of the warehouse location, followed by the database location in the warehouse, followed by the table name.
 {{% /md %}}</dd>
@@ -2051,7 +1581,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Number<wbr>Of<wbr>Buckets</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Must be specified if the table contains any dimension columns.
 {{% /md %}}</dd>
@@ -2060,7 +1590,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Output<wbr>Format</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The output format: SequenceFileOutputFormat (binary), or IgnoreKeyTextOutputFormat, or a custom format.
 {{% /md %}}</dd>
@@ -2078,7 +1608,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Ser<wbr>De<wbr>Info</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#catalogtablestoragedescriptorserdeinfo">*Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Ser<wbr>De<wbr>Info</a></span>
+        <span class="property-type"><a href="#catalogtablestoragedescriptorserdeinfo">Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Ser<wbr>De<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Serialization/deserialization (SerDe) information.
 {{% /md %}}</dd>
@@ -2087,7 +1617,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Skewed<wbr>Info</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#catalogtablestoragedescriptorskewedinfo">*Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Skewed<wbr>Info</a></span>
+        <span class="property-type"><a href="#catalogtablestoragedescriptorskewedinfo">Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Skewed<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Information about values that appear very frequently in a column (skewed values).
 {{% /md %}}</dd>
@@ -2105,7 +1635,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Stored<wbr>As<wbr>Sub<wbr>Directories</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}True if the table data is stored in subdirectories, or False if not.
 {{% /md %}}</dd>
@@ -2121,7 +1651,7 @@ The following state arguments are supported:
             title="Optional">
         <span>bucket<wbr>Columns</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of reducer grouping columns, clustering columns, and bucketing columns in the table.
 {{% /md %}}</dd>
@@ -2130,7 +1660,7 @@ The following state arguments are supported:
             title="Optional">
         <span>columns</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#catalogtablestoragedescriptorcolumn">Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Column[]?</a></span>
+        <span class="property-type"><a href="#catalogtablestoragedescriptorcolumn">Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Column[]</a></span>
     </dt>
     <dd>{{% md %}}A list of the Columns in the table.
 {{% /md %}}</dd>
@@ -2139,7 +1669,7 @@ The following state arguments are supported:
             title="Optional">
         <span>compressed</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}True if the data in the table is compressed, or False if not.
 {{% /md %}}</dd>
@@ -2148,7 +1678,7 @@ The following state arguments are supported:
             title="Optional">
         <span>input<wbr>Format</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The input format: SequenceFileInputFormat (binary), or TextInputFormat, or a custom format.
 {{% /md %}}</dd>
@@ -2157,7 +1687,7 @@ The following state arguments are supported:
             title="Optional">
         <span>location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The physical location of the table. By default this takes the form of the warehouse location, followed by the database location in the warehouse, followed by the table name.
 {{% /md %}}</dd>
@@ -2166,7 +1696,7 @@ The following state arguments are supported:
             title="Optional">
         <span>number<wbr>Of<wbr>Buckets</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Must be specified if the table contains any dimension columns.
 {{% /md %}}</dd>
@@ -2175,7 +1705,7 @@ The following state arguments are supported:
             title="Optional">
         <span>output<wbr>Format</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The output format: SequenceFileOutputFormat (binary), or IgnoreKeyTextOutputFormat, or a custom format.
 {{% /md %}}</dd>
@@ -2184,7 +1714,7 @@ The following state arguments are supported:
             title="Optional">
         <span>parameters</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}?</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of initialization parameters for the SerDe, in key-value form.
 {{% /md %}}</dd>
@@ -2193,7 +1723,7 @@ The following state arguments are supported:
             title="Optional">
         <span>ser<wbr>De<wbr>Info</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#catalogtablestoragedescriptorserdeinfo">Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Ser<wbr>De<wbr>Info?</a></span>
+        <span class="property-type"><a href="#catalogtablestoragedescriptorserdeinfo">Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Ser<wbr>De<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Serialization/deserialization (SerDe) information.
 {{% /md %}}</dd>
@@ -2202,7 +1732,7 @@ The following state arguments are supported:
             title="Optional">
         <span>skewed<wbr>Info</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#catalogtablestoragedescriptorskewedinfo">Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Skewed<wbr>Info?</a></span>
+        <span class="property-type"><a href="#catalogtablestoragedescriptorskewedinfo">Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Skewed<wbr>Info</a></span>
     </dt>
     <dd>{{% md %}}Information about values that appear very frequently in a column (skewed values).
 {{% /md %}}</dd>
@@ -2211,7 +1741,7 @@ The following state arguments are supported:
             title="Optional">
         <span>sort<wbr>Columns</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#catalogtablestoragedescriptorsortcolumn">Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Sort<wbr>Column[]?</a></span>
+        <span class="property-type"><a href="#catalogtablestoragedescriptorsortcolumn">Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Sort<wbr>Column[]</a></span>
     </dt>
     <dd>{{% md %}}A list of Order objects specifying the sort order of each bucket in the table.
 {{% /md %}}</dd>
@@ -2220,7 +1750,7 @@ The following state arguments are supported:
             title="Optional">
         <span>stored<wbr>As<wbr>Sub<wbr>Directories</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}True if the table data is stored in subdirectories, or False if not.
 {{% /md %}}</dd>
@@ -2362,15 +1892,6 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Comment</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Free-form text comment.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Name</span>
@@ -2382,9 +1903,18 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>Comment</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Free-form text comment.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The datatype of data in the Column.
 {{% /md %}}</dd>
@@ -2396,15 +1926,6 @@ The following state arguments are supported:
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Comment</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Free-form text comment.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Name</span>
@@ -2416,9 +1937,18 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>Comment</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Free-form text comment.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The datatype of data in the Column.
 {{% /md %}}</dd>
@@ -2429,15 +1959,6 @@ The following state arguments are supported:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>comment</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Free-form text comment.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -2450,9 +1971,18 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>comment</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Free-form text comment.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The datatype of data in the Column.
 {{% /md %}}</dd>
@@ -2464,15 +1994,6 @@ The following state arguments are supported:
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>comment</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Free-form text comment.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>name</span>
@@ -2480,6 +2001,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the SerDe.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>comment</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Free-form text comment.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2517,7 +2047,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the SerDe.
 {{% /md %}}</dd>
@@ -2526,7 +2056,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Parameters</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string>?</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of initialization parameters for the SerDe, in key-value form.
 {{% /md %}}</dd>
@@ -2535,7 +2065,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Serialization<wbr>Library</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Usually the class that implements the SerDe. An example is: org.apache.hadoop.hive.serde2.columnar.ColumnarSerDe.
 {{% /md %}}</dd>
@@ -2551,7 +2081,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the SerDe.
 {{% /md %}}</dd>
@@ -2569,7 +2099,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Serialization<wbr>Library</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Usually the class that implements the SerDe. An example is: org.apache.hadoop.hive.serde2.columnar.ColumnarSerDe.
 {{% /md %}}</dd>
@@ -2585,7 +2115,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the SerDe.
 {{% /md %}}</dd>
@@ -2594,7 +2124,7 @@ The following state arguments are supported:
             title="Optional">
         <span>parameters</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}?</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of initialization parameters for the SerDe, in key-value form.
 {{% /md %}}</dd>
@@ -2603,7 +2133,7 @@ The following state arguments are supported:
             title="Optional">
         <span>serialization<wbr>Library</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Usually the class that implements the SerDe. An example is: org.apache.hadoop.hive.serde2.columnar.ColumnarSerDe.
 {{% /md %}}</dd>
@@ -2668,7 +2198,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Skewed<wbr>Column<wbr>Names</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of names of columns that contain skewed values.
 {{% /md %}}</dd>
@@ -2677,7 +2207,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Skewed<wbr>Column<wbr>Value<wbr>Location<wbr>Maps</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string>?</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of values that appear so frequently as to be considered skewed.
 {{% /md %}}</dd>
@@ -2686,7 +2216,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Skewed<wbr>Column<wbr>Values</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of skewed values to the columns that contain them.
 {{% /md %}}</dd>
@@ -2736,7 +2266,7 @@ The following state arguments are supported:
             title="Optional">
         <span>skewed<wbr>Column<wbr>Names</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of names of columns that contain skewed values.
 {{% /md %}}</dd>
@@ -2745,7 +2275,7 @@ The following state arguments are supported:
             title="Optional">
         <span>skewed<wbr>Column<wbr>Value<wbr>Location<wbr>Maps</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}?</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A list of values that appear so frequently as to be considered skewed.
 {{% /md %}}</dd>
@@ -2754,7 +2284,7 @@ The following state arguments are supported:
             title="Optional">
         <span>skewed<wbr>Column<wbr>Values</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A mapping of skewed values to the columns that contain them.
 {{% /md %}}</dd>

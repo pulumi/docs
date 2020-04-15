@@ -43,13 +43,13 @@ export const firstDiskId = disksDs.disks[0].id;
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupDisks<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/ecs?tab=doc#LookupDisksArgs">LookupDisksArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/ecs?tab=doc#LookupDisksResult">LookupDisksResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupDisks<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/ecs?tab=doc#LookupDisksArgs">LookupDisksArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/ecs?tab=doc#LookupDisksResult">LookupDisksResult</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetDisks </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.Ecs.GetDisksResult.html">GetDisksResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.Ecs.GetDisksArgs.html">GetDisksArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.Ecs.GetDisksResult.html">GetDisksResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.AliCloud.Ecs.GetDisksArgs.html">GetDisksArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -66,7 +66,7 @@ The following arguments are supported:
             title="Optional">
         <span>Category</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Disk category. Possible values: `cloud` (basic cloud disk), `cloud_efficiency` (ultra cloud disk), `ephemeral_ssd` (local SSD cloud disk), `cloud_ssd` (SSD cloud disk), and `cloud_essd` (ESSD cloud disk).
 {{% /md %}}</dd>
@@ -75,7 +75,7 @@ The following arguments are supported:
             title="Optional">
         <span>Encrypted</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicate whether the disk is encrypted or not. Possible values: `on` and `off`.
 {{% /md %}}</dd>
@@ -84,7 +84,7 @@ The following arguments are supported:
             title="Optional">
         <span>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of disks IDs.
 {{% /md %}}</dd>
@@ -93,7 +93,7 @@ The following arguments are supported:
             title="Optional">
         <span>Instance<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Filter the results by the specified ECS instance ID.
 {{% /md %}}</dd>
@@ -102,7 +102,7 @@ The following arguments are supported:
             title="Optional">
         <span>Name<wbr>Regex</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A regex string to filter results by disk name.
 {{% /md %}}</dd>
@@ -111,7 +111,7 @@ The following arguments are supported:
             title="Optional">
         <span>Output<wbr>File</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -119,7 +119,7 @@ The following arguments are supported:
             title="Optional">
         <span>Resource<wbr>Group<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Id of resource group which the disk belongs.
 {{% /md %}}</dd>
@@ -128,7 +128,7 @@ The following arguments are supported:
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags assigned to the disks. It must be in the format:
 ```
@@ -145,7 +145,7 @@ tagKey2 = "tagValue2"
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Disk type. Possible values: `system` and `data`.
 {{% /md %}}</dd>
@@ -161,7 +161,7 @@ tagKey2 = "tagValue2"
             title="Optional">
         <span>Category</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Disk category. Possible values: `cloud` (basic cloud disk), `cloud_efficiency` (ultra cloud disk), `ephemeral_ssd` (local SSD cloud disk), `cloud_ssd` (SSD cloud disk), and `cloud_essd` (ESSD cloud disk).
 {{% /md %}}</dd>
@@ -170,7 +170,7 @@ tagKey2 = "tagValue2"
             title="Optional">
         <span>Encrypted</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicate whether the disk is encrypted or not. Possible values: `on` and `off`.
 {{% /md %}}</dd>
@@ -188,7 +188,7 @@ tagKey2 = "tagValue2"
             title="Optional">
         <span>Instance<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Filter the results by the specified ECS instance ID.
 {{% /md %}}</dd>
@@ -197,7 +197,7 @@ tagKey2 = "tagValue2"
             title="Optional">
         <span>Name<wbr>Regex</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A regex string to filter results by disk name.
 {{% /md %}}</dd>
@@ -206,7 +206,7 @@ tagKey2 = "tagValue2"
             title="Optional">
         <span>Output<wbr>File</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -214,7 +214,7 @@ tagKey2 = "tagValue2"
             title="Optional">
         <span>Resource<wbr>Group<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Id of resource group which the disk belongs.
 {{% /md %}}</dd>
@@ -240,7 +240,7 @@ tagKey2 = "tagValue2"
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Disk type. Possible values: `system` and `data`.
 {{% /md %}}</dd>
@@ -256,7 +256,7 @@ tagKey2 = "tagValue2"
             title="Optional">
         <span>category</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Disk category. Possible values: `cloud` (basic cloud disk), `cloud_efficiency` (ultra cloud disk), `ephemeral_ssd` (local SSD cloud disk), `cloud_ssd` (SSD cloud disk), and `cloud_essd` (ESSD cloud disk).
 {{% /md %}}</dd>
@@ -265,7 +265,7 @@ tagKey2 = "tagValue2"
             title="Optional">
         <span>encrypted</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicate whether the disk is encrypted or not. Possible values: `on` and `off`.
 {{% /md %}}</dd>
@@ -274,7 +274,7 @@ tagKey2 = "tagValue2"
             title="Optional">
         <span>ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of disks IDs.
 {{% /md %}}</dd>
@@ -283,7 +283,7 @@ tagKey2 = "tagValue2"
             title="Optional">
         <span>instance<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Filter the results by the specified ECS instance ID.
 {{% /md %}}</dd>
@@ -292,7 +292,7 @@ tagKey2 = "tagValue2"
             title="Optional">
         <span>name<wbr>Regex</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A regex string to filter results by disk name.
 {{% /md %}}</dd>
@@ -301,7 +301,7 @@ tagKey2 = "tagValue2"
             title="Optional">
         <span>output<wbr>File</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -309,7 +309,7 @@ tagKey2 = "tagValue2"
             title="Optional">
         <span>resource<wbr>Group<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Id of resource group which the disk belongs.
 {{% /md %}}</dd>
@@ -318,7 +318,7 @@ tagKey2 = "tagValue2"
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A map of tags assigned to the disks. It must be in the format:
 ```
@@ -335,7 +335,7 @@ tagKey2 = "tagValue2"
             title="Optional">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Disk type. Possible values: `system` and `data`.
 {{% /md %}}</dd>
@@ -457,29 +457,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Category</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Disk category. Possible values: `cloud` (basic cloud disk), `cloud_efficiency` (ultra cloud disk), `ephemeral_ssd` (local SSD cloud disk), `cloud_ssd` (SSD cloud disk), and `cloud_essd` (ESSD cloud disk).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Disks</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getdisksdisk">List&lt;Get<wbr>Disks<wbr>Disk&gt;</a></span>
+        <span class="property-type"><a href="#getdisksdisk">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Ecs.<wbr>Outputs.<wbr>Get<wbr>Disks<wbr>Disk&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of disks. Each element contains the following attributes:
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Encrypted</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Indicate whether the disk is encrypted or not. Possible values: `on` and `off`.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -495,15 +477,33 @@ The following output properties are available:
             title="">
         <span>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
+        <span>Category</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Disk category. Possible values: `cloud` (basic cloud disk), `cloud_efficiency` (ultra cloud disk), `ephemeral_ssd` (local SSD cloud disk), `cloud_ssd` (SSD cloud disk), and `cloud_essd` (ESSD cloud disk).
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Encrypted</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Indicate whether the disk is encrypted or not. Possible values: `on` and `off`.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Instance<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the related instance. It is `null` unless the `status` is `In_use`.
 {{% /md %}}</dd>
@@ -512,7 +512,7 @@ The following output properties are available:
             title="">
         <span>Name<wbr>Regex</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -520,7 +520,7 @@ The following output properties are available:
             title="">
         <span>Output<wbr>File</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -528,7 +528,7 @@ The following output properties are available:
             title="">
         <span>Resource<wbr>Group<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Id of resource group.
 {{% /md %}}</dd>
@@ -537,7 +537,7 @@ The following output properties are available:
             title="">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags assigned to the disk.
 {{% /md %}}</dd>
@@ -546,7 +546,7 @@ The following output properties are available:
             title="">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Disk type. Possible values: `system` and `data`.
 {{% /md %}}</dd>
@@ -560,29 +560,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Category</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Disk category. Possible values: `cloud` (basic cloud disk), `cloud_efficiency` (ultra cloud disk), `ephemeral_ssd` (local SSD cloud disk), `cloud_ssd` (SSD cloud disk), and `cloud_essd` (ESSD cloud disk).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Disks</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getdisksdisk">[]Get<wbr>Disks<wbr>Disk</a></span>
     </dt>
     <dd>{{% md %}}A list of disks. Each element contains the following attributes:
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Encrypted</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Indicate whether the disk is encrypted or not. Possible values: `on` and `off`.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -604,9 +586,27 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>Category</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Disk category. Possible values: `cloud` (basic cloud disk), `cloud_efficiency` (ultra cloud disk), `ephemeral_ssd` (local SSD cloud disk), `cloud_ssd` (SSD cloud disk), and `cloud_essd` (ESSD cloud disk).
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Encrypted</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Indicate whether the disk is encrypted or not. Possible values: `on` and `off`.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Instance<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the related instance. It is `null` unless the `status` is `In_use`.
 {{% /md %}}</dd>
@@ -615,7 +615,7 @@ The following output properties are available:
             title="">
         <span>Name<wbr>Regex</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -623,7 +623,7 @@ The following output properties are available:
             title="">
         <span>Output<wbr>File</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -631,7 +631,7 @@ The following output properties are available:
             title="">
         <span>Resource<wbr>Group<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Id of resource group.
 {{% /md %}}</dd>
@@ -649,7 +649,7 @@ The following output properties are available:
             title="">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Disk type. Possible values: `system` and `data`.
 {{% /md %}}</dd>
@@ -663,29 +663,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>category</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Disk category. Possible values: `cloud` (basic cloud disk), `cloud_efficiency` (ultra cloud disk), `ephemeral_ssd` (local SSD cloud disk), `cloud_ssd` (SSD cloud disk), and `cloud_essd` (ESSD cloud disk).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>disks</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getdisksdisk">Get<wbr>Disks<wbr>Disk[]</a></span>
     </dt>
     <dd>{{% md %}}A list of disks. Each element contains the following attributes:
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>encrypted</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Indicate whether the disk is encrypted or not. Possible values: `on` and `off`.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -707,9 +689,27 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>category</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Disk category. Possible values: `cloud` (basic cloud disk), `cloud_efficiency` (ultra cloud disk), `ephemeral_ssd` (local SSD cloud disk), `cloud_ssd` (SSD cloud disk), and `cloud_essd` (ESSD cloud disk).
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>encrypted</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Indicate whether the disk is encrypted or not. Possible values: `on` and `off`.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>instance<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the related instance. It is `null` unless the `status` is `In_use`.
 {{% /md %}}</dd>
@@ -718,7 +718,7 @@ The following output properties are available:
             title="">
         <span>name<wbr>Regex</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -726,7 +726,7 @@ The following output properties are available:
             title="">
         <span>output<wbr>File</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -734,7 +734,7 @@ The following output properties are available:
             title="">
         <span>resource<wbr>Group<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Id of resource group.
 {{% /md %}}</dd>
@@ -743,7 +743,7 @@ The following output properties are available:
             title="">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A map of tags assigned to the disk.
 {{% /md %}}</dd>
@@ -752,7 +752,7 @@ The following output properties are available:
             title="">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Disk type. Possible values: `system` and `data`.
 {{% /md %}}</dd>
@@ -766,29 +766,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>category</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Disk category. Possible values: `cloud` (basic cloud disk), `cloud_efficiency` (ultra cloud disk), `ephemeral_ssd` (local SSD cloud disk), `cloud_ssd` (SSD cloud disk), and `cloud_essd` (ESSD cloud disk).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>disks</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getdisksdisk">List[Get<wbr>Disks<wbr>Disk]</a></span>
     </dt>
     <dd>{{% md %}}A list of disks. Each element contains the following attributes:
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>encrypted</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Indicate whether the disk is encrypted or not. Possible values: `on` and `off`.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -807,6 +789,24 @@ The following output properties are available:
         <span class="property-type">List[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>category</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Disk category. Possible values: `cloud` (basic cloud disk), `cloud_efficiency` (ultra cloud disk), `ephemeral_ssd` (local SSD cloud disk), `cloud_ssd` (SSD cloud disk), and `cloud_essd` (ESSD cloud disk).
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>encrypted</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Indicate whether the disk is encrypted or not. Possible values: `on` and `off`.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1040,11 +1040,20 @@ The following output properties are available:
     <dd>{{% md %}}Current status. Possible values: `In_use`, `Available`, `Attaching`, `Detaching`, `Creating` and `ReIniting`.
 {{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Disk type. Possible values: `system` and `data`.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A map of tags assigned to the disks. It must be in the format:
 ```
@@ -1055,15 +1064,6 @@ tagKey2 = "tagValue2"
 }
 }
 ```
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Disk type. Possible values: `system` and `data`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1226,6 +1226,15 @@ tagKey2 = "tagValue2"
     <dd>{{% md %}}Current status. Possible values: `In_use`, `Available`, `Attaching`, `Detaching`, `Creating` and `ReIniting`.
 {{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Disk type. Possible values: `system` and `data`.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Tags</span>
@@ -1241,15 +1250,6 @@ tagKey2 = "tagValue2"
 }
 }
 ```
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Disk type. Possible values: `system` and `data`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1412,11 +1412,20 @@ tagKey2 = "tagValue2"
     <dd>{{% md %}}Current status. Possible values: `In_use`, `Available`, `Attaching`, `Detaching`, `Creating` and `ReIniting`.
 {{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Disk type. Possible values: `system` and `data`.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A map of tags assigned to the disks. It must be in the format:
 ```
@@ -1427,15 +1436,6 @@ tagKey2 = "tagValue2"
 }
 }
 ```
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Disk type. Possible values: `system` and `data`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1598,6 +1598,15 @@ tagKey2 = "tagValue2"
     <dd>{{% md %}}Current status. Possible values: `In_use`, `Available`, `Attaching`, `Detaching`, `Creating` and `ReIniting`.
 {{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Disk type. Possible values: `system` and `data`.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>tags</span>
@@ -1613,15 +1622,6 @@ tagKey2 = "tagValue2"
 }
 }
 ```
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Disk type. Possible values: `system` and `data`.
 {{% /md %}}</dd>
 
 </dl>

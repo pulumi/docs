@@ -41,7 +41,7 @@ const library = pulumi.output(rancher2.getCatalog({
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupCatalog<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/go/rancher2/?tab=doc#GetCatalogArgs">GetCatalogArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/go/rancher2/?tab=doc#LookupCatalogResult">LookupCatalogResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupCatalog<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/go/rancher2/?tab=doc#GetCatalogArgs">GetCatalogArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/go/rancher2/?tab=doc#LookupCatalogResult">LookupCatalogResult</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -73,7 +73,7 @@ The following arguments are supported:
             title="Optional">
         <span>Scope</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The scope of the catalog. `cluster`, `global`, and `project` are supported. Default `global` (string)
 {{% /md %}}</dd>
@@ -98,7 +98,7 @@ The following arguments are supported:
             title="Optional">
         <span>Scope</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The scope of the catalog. `cluster`, `global`, and `project` are supported. Default `global` (string)
 {{% /md %}}</dd>
@@ -123,7 +123,7 @@ The following arguments are supported:
             title="Optional">
         <span>scope</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The scope of the catalog. `cluster`, `global`, and `project` are supported. Default `global` (string)
 {{% /md %}}</dd>
@@ -177,7 +177,7 @@ The following output properties are available:
             title="">
         <span>Annotations</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}(Computed) Annotations for the catalog (map)
 {{% /md %}}</dd>
@@ -231,7 +231,7 @@ The following output properties are available:
             title="">
         <span>Labels</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}(Computed) Labels for the catalog (map)
 {{% /md %}}</dd>
@@ -264,14 +264,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Scope</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Url</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -296,6 +288,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}(Computed) Helm version for the catalog (string)
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Scope</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -395,14 +395,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Scope</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Url</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -427,6 +419,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}(Computed) Helm version for the catalog (string)
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Scope</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -526,14 +526,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>scope</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>url</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -558,6 +550,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}(Computed) Helm version for the catalog (string)
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>scope</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -657,14 +657,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>scope</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>url</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -689,6 +681,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}(Computed) Helm version for the catalog (string)
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>scope</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

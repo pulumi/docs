@@ -14,7 +14,7 @@ block_external_search_index: true
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/spotinst/ecs/#Ocean">Ocean</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/spotinst/ecs/#OceanArgs">OceanArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/spotinst/ecs/#Ocean">Ocean</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/spotinst/ecs/#OceanArgs">OceanArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -22,11 +22,11 @@ block_external_search_index: true
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewOcean<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/go/spotinst/ecs?tab=doc#OceanArgs">OceanArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/go/spotinst/ecs?tab=doc#Ocean">Ocean</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewOcean<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/go/spotinst/ecs?tab=doc#OceanArgs">OceanArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/go/spotinst/ecs?tab=doc#Ocean">Ocean</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.Spotinst.Ecs.Ocean.html">Ocean</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.Spotinst.Ecs.OceanArgs.html">OceanArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.Spotinst.Ecs.Ocean.html">Ocean</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Ecs.OceanArgs.html">OceanArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -118,24 +118,6 @@ block_external_search_index: true
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Associate<wbr>Public<wbr>Ip<wbr>Address</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Configure public IP address allocation.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Autoscaler</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanautoscaler">Ocean<wbr>Autoscaler<wbr>Args?</a></span>
-    </dt>
-    <dd>{{% md %}}Describes the Ocean ECS autoscaler.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Cluster<wbr>Name</span>
@@ -143,96 +125,6 @@ block_external_search_index: true
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ocean cluster name.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Desired<wbr>Capacity</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}The number of instances to launch and maintain in the cluster.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Draining<wbr>Timeout</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}The time in seconds, the instance is allowed to run while detached from the ELB. This is to allow the instance time to be drained from incoming TCP connections before terminating it, during a scale down operation.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Ebs<wbr>Optimized</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Enable EBS optimized for cluster. Flag will enable optimized capacity for high bandwidth connectivity to the EB service for non EBS optimized instance types. For instances that are EBS optimized this flag will be ignored.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Iam<wbr>Instance<wbr>Profile</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The instance profile iam role.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Image<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}ID of the image used to launch the instances.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Key<wbr>Pair</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The key pair to attach the instances.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Max<wbr>Size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}The upper limit of instances the cluster can scale up to.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Min<wbr>Size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}The lower limit of instances the cluster can scale down to.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Monitoring</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Enable detailed monitoring for cluster. Flag will enable Cloud Watch detailed detailed monitoring (one minute increments). Note: there are additional hourly costs for this service based on the region used.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The Ocean cluster name.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -244,19 +136,11 @@ block_external_search_index: true
     <dd>{{% md %}}The region the cluster will run in.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Scheduled<wbr>Tasks</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanscheduledtask">List&lt;Ocean<wbr>Scheduled<wbr>Task<wbr>Args&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Security<wbr>Group<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}One or more security group ids.
 {{% /md %}}</dd>
@@ -265,16 +149,132 @@ block_external_search_index: true
             title="Required">
         <span>Subnet<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A comma-separated list of subnet identifiers for the Ocean cluster. Subnet IDs should be configured with auto assign public ip.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
+        <span>Associate<wbr>Public<wbr>Ip<wbr>Address</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Configure public IP address allocation.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Autoscaler</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanautoscaler">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Ecs.<wbr>Inputs.<wbr>Ocean<wbr>Autoscaler<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Describes the Ocean ECS autoscaler.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Desired<wbr>Capacity</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of instances to launch and maintain in the cluster.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Draining<wbr>Timeout</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The time in seconds, the instance is allowed to run while detached from the ELB. This is to allow the instance time to be drained from incoming TCP connections before terminating it, during a scale down operation.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Ebs<wbr>Optimized</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable EBS optimized for cluster. Flag will enable optimized capacity for high bandwidth connectivity to the EB service for non EBS optimized instance types. For instances that are EBS optimized this flag will be ignored.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Iam<wbr>Instance<wbr>Profile</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The instance profile iam role.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Image<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ID of the image used to launch the instances.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Key<wbr>Pair</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The key pair to attach the instances.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Max<wbr>Size</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The upper limit of instances the cluster can scale up to.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Min<wbr>Size</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The lower limit of instances the cluster can scale down to.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Monitoring</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable detailed monitoring for cluster. Flag will enable Cloud Watch detailed detailed monitoring (one minute increments). Note: there are additional hourly costs for this service based on the region used.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Ocean cluster name.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Scheduled<wbr>Tasks</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanscheduledtask">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Ecs.<wbr>Inputs.<wbr>Ocean<wbr>Scheduled<wbr>Task<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceantag">List&lt;Ocean<wbr>Tag<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#oceantag">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Ecs.<wbr>Inputs.<wbr>Ocean<wbr>Tag<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Optionally adds tags to instances launched in an Ocean cluster.
 {{% /md %}}</dd>
@@ -283,7 +283,7 @@ block_external_search_index: true
             title="Optional">
         <span>Update<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanupdatepolicy">Ocean<wbr>Update<wbr>Policy<wbr>Args?</a></span>
+        <span class="property-type"><a href="#oceanupdatepolicy">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Ecs.<wbr>Inputs.<wbr>Ocean<wbr>Update<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -291,7 +291,7 @@ block_external_search_index: true
             title="Optional">
         <span>User<wbr>Data</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Base64-encoded MIME user data to make available to the instances.
 {{% /md %}}</dd>
@@ -300,7 +300,7 @@ block_external_search_index: true
             title="Optional">
         <span>Utilize<wbr>Reserved<wbr>Instances</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If Reserved instances exist, OCean will utilize them before launching Spot instances.
 {{% /md %}}</dd>
@@ -309,7 +309,7 @@ block_external_search_index: true
             title="Optional">
         <span>Whitelists</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Instance types allowed in the Ocean cluster.
 {{% /md %}}</dd>
@@ -321,24 +321,6 @@ block_external_search_index: true
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Associate<wbr>Public<wbr>Ip<wbr>Address</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Configure public IP address allocation.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Autoscaler</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanautoscaler">*Ocean<wbr>Autoscaler</a></span>
-    </dt>
-    <dd>{{% md %}}Describes the Ocean ECS autoscaler.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Cluster<wbr>Name</span>
@@ -346,96 +328,6 @@ block_external_search_index: true
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ocean cluster name.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Desired<wbr>Capacity</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}The number of instances to launch and maintain in the cluster.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Draining<wbr>Timeout</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}The time in seconds, the instance is allowed to run while detached from the ELB. This is to allow the instance time to be drained from incoming TCP connections before terminating it, during a scale down operation.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Ebs<wbr>Optimized</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Enable EBS optimized for cluster. Flag will enable optimized capacity for high bandwidth connectivity to the EB service for non EBS optimized instance types. For instances that are EBS optimized this flag will be ignored.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Iam<wbr>Instance<wbr>Profile</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The instance profile iam role.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Image<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}ID of the image used to launch the instances.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Key<wbr>Pair</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The key pair to attach the instances.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Max<wbr>Size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}The upper limit of instances the cluster can scale up to.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Min<wbr>Size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}The lower limit of instances the cluster can scale down to.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Monitoring</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Enable detailed monitoring for cluster. Flag will enable Cloud Watch detailed detailed monitoring (one minute increments). Note: there are additional hourly costs for this service based on the region used.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The Ocean cluster name.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -446,14 +338,6 @@ block_external_search_index: true
     </dt>
     <dd>{{% md %}}The region the cluster will run in.
 {{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Scheduled<wbr>Tasks</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanscheduledtask">[]Ocean<wbr>Scheduled<wbr>Task</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -472,6 +356,122 @@ block_external_search_index: true
     </dt>
     <dd>{{% md %}}A comma-separated list of subnet identifiers for the Ocean cluster. Subnet IDs should be configured with auto assign public ip.
 {{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Associate<wbr>Public<wbr>Ip<wbr>Address</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Configure public IP address allocation.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Autoscaler</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanautoscaler">Ocean<wbr>Autoscaler</a></span>
+    </dt>
+    <dd>{{% md %}}Describes the Ocean ECS autoscaler.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Desired<wbr>Capacity</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of instances to launch and maintain in the cluster.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Draining<wbr>Timeout</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The time in seconds, the instance is allowed to run while detached from the ELB. This is to allow the instance time to be drained from incoming TCP connections before terminating it, during a scale down operation.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Ebs<wbr>Optimized</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable EBS optimized for cluster. Flag will enable optimized capacity for high bandwidth connectivity to the EB service for non EBS optimized instance types. For instances that are EBS optimized this flag will be ignored.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Iam<wbr>Instance<wbr>Profile</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The instance profile iam role.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Image<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ID of the image used to launch the instances.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Key<wbr>Pair</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The key pair to attach the instances.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Max<wbr>Size</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The upper limit of instances the cluster can scale up to.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Min<wbr>Size</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The lower limit of instances the cluster can scale down to.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Monitoring</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable detailed monitoring for cluster. Flag will enable Cloud Watch detailed detailed monitoring (one minute increments). Note: there are additional hourly costs for this service based on the region used.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Ocean cluster name.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Scheduled<wbr>Tasks</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanscheduledtask">[]Ocean<wbr>Scheduled<wbr>Task</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -486,7 +486,7 @@ block_external_search_index: true
             title="Optional">
         <span>Update<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanupdatepolicy">*Ocean<wbr>Update<wbr>Policy</a></span>
+        <span class="property-type"><a href="#oceanupdatepolicy">Ocean<wbr>Update<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -494,7 +494,7 @@ block_external_search_index: true
             title="Optional">
         <span>User<wbr>Data</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Base64-encoded MIME user data to make available to the instances.
 {{% /md %}}</dd>
@@ -503,7 +503,7 @@ block_external_search_index: true
             title="Optional">
         <span>Utilize<wbr>Reserved<wbr>Instances</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If Reserved instances exist, OCean will utilize them before launching Spot instances.
 {{% /md %}}</dd>
@@ -524,24 +524,6 @@ block_external_search_index: true
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>associate<wbr>Public<wbr>Ip<wbr>Address</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Configure public IP address allocation.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>autoscaler</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanautoscaler">Ocean<wbr>Autoscaler?</a></span>
-    </dt>
-    <dd>{{% md %}}Describes the Ocean ECS autoscaler.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>cluster<wbr>Name</span>
@@ -549,96 +531,6 @@ block_external_search_index: true
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ocean cluster name.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>desired<wbr>Capacity</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}The number of instances to launch and maintain in the cluster.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>draining<wbr>Timeout</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}The time in seconds, the instance is allowed to run while detached from the ELB. This is to allow the instance time to be drained from incoming TCP connections before terminating it, during a scale down operation.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>ebs<wbr>Optimized</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Enable EBS optimized for cluster. Flag will enable optimized capacity for high bandwidth connectivity to the EB service for non EBS optimized instance types. For instances that are EBS optimized this flag will be ignored.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>iam<wbr>Instance<wbr>Profile</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The instance profile iam role.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>image<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}ID of the image used to launch the instances.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>key<wbr>Pair</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The key pair to attach the instances.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>max<wbr>Size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}The upper limit of instances the cluster can scale up to.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>min<wbr>Size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}The lower limit of instances the cluster can scale down to.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>monitoring</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Enable detailed monitoring for cluster. Flag will enable Cloud Watch detailed detailed monitoring (one minute increments). Note: there are additional hourly costs for this service based on the region used.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The Ocean cluster name.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -649,14 +541,6 @@ block_external_search_index: true
     </dt>
     <dd>{{% md %}}The region the cluster will run in.
 {{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>scheduled<wbr>Tasks</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanscheduledtask">Ocean<wbr>Scheduled<wbr>Task[]?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -678,9 +562,125 @@ block_external_search_index: true
 
     <dt class="property-optional"
             title="Optional">
+        <span>associate<wbr>Public<wbr>Ip<wbr>Address</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Configure public IP address allocation.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>autoscaler</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanautoscaler">Ocean<wbr>Autoscaler</a></span>
+    </dt>
+    <dd>{{% md %}}Describes the Ocean ECS autoscaler.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>desired<wbr>Capacity</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The number of instances to launch and maintain in the cluster.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>draining<wbr>Timeout</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The time in seconds, the instance is allowed to run while detached from the ELB. This is to allow the instance time to be drained from incoming TCP connections before terminating it, during a scale down operation.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>ebs<wbr>Optimized</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Enable EBS optimized for cluster. Flag will enable optimized capacity for high bandwidth connectivity to the EB service for non EBS optimized instance types. For instances that are EBS optimized this flag will be ignored.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>iam<wbr>Instance<wbr>Profile</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The instance profile iam role.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>image<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ID of the image used to launch the instances.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>key<wbr>Pair</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The key pair to attach the instances.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>max<wbr>Size</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The upper limit of instances the cluster can scale up to.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>min<wbr>Size</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The lower limit of instances the cluster can scale down to.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>monitoring</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Enable detailed monitoring for cluster. Flag will enable Cloud Watch detailed detailed monitoring (one minute increments). Note: there are additional hourly costs for this service based on the region used.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Ocean cluster name.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>scheduled<wbr>Tasks</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanscheduledtask">Ocean<wbr>Scheduled<wbr>Task[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceantag">Ocean<wbr>Tag[]?</a></span>
+        <span class="property-type"><a href="#oceantag">Ocean<wbr>Tag[]</a></span>
     </dt>
     <dd>{{% md %}}Optionally adds tags to instances launched in an Ocean cluster.
 {{% /md %}}</dd>
@@ -689,7 +689,7 @@ block_external_search_index: true
             title="Optional">
         <span>update<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanupdatepolicy">Ocean<wbr>Update<wbr>Policy?</a></span>
+        <span class="property-type"><a href="#oceanupdatepolicy">Ocean<wbr>Update<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -697,7 +697,7 @@ block_external_search_index: true
             title="Optional">
         <span>user<wbr>Data</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Base64-encoded MIME user data to make available to the instances.
 {{% /md %}}</dd>
@@ -706,7 +706,7 @@ block_external_search_index: true
             title="Optional">
         <span>utilize<wbr>Reserved<wbr>Instances</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If Reserved instances exist, OCean will utilize them before launching Spot instances.
 {{% /md %}}</dd>
@@ -715,7 +715,7 @@ block_external_search_index: true
             title="Optional">
         <span>whitelists</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Instance types allowed in the Ocean cluster.
 {{% /md %}}</dd>
@@ -726,6 +726,42 @@ block_external_search_index: true
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>cluster_<wbr>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ocean cluster name.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>region</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The region the cluster will run in.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>security_<wbr>group_<wbr>ids</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List[str]</span>
+    </dt>
+    <dd>{{% md %}}One or more security group ids.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>subnet_<wbr>ids</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List[str]</span>
+    </dt>
+    <dd>{{% md %}}A comma-separated list of subnet identifiers for the Ocean cluster. Subnet IDs should be configured with auto assign public ip.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -743,15 +779,6 @@ block_external_search_index: true
         <span class="property-type"><a href="#oceanautoscaler">Dict[Ocean<wbr>Autoscaler]</a></span>
     </dt>
     <dd>{{% md %}}Describes the Ocean ECS autoscaler.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>cluster_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The ocean cluster name.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -844,15 +871,6 @@ block_external_search_index: true
     <dd>{{% md %}}The Ocean cluster name.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The region the cluster will run in.
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>scheduled_<wbr>tasks</span>
@@ -860,24 +878,6 @@ block_external_search_index: true
         <span class="property-type"><a href="#oceanscheduledtask">List[Ocean<wbr>Scheduled<wbr>Task]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>security_<wbr>group_<wbr>ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}One or more security group ids.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>subnet_<wbr>ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}A comma-separated list of subnet identifiers for the Ocean cluster. Subnet IDs should be configured with auto assign public ip.
-{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -927,828 +927,6 @@ block_external_search_index: true
 {{% /choosable %}}
 
 
-
-
-
-
-
-## Ocean Output Properties
-
-The following output properties are available:
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Associate<wbr>Public<wbr>Ip<wbr>Address</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Configure public IP address allocation.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Autoscaler</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanautoscaler">Ocean<wbr>Autoscaler?</a></span>
-    </dt>
-    <dd>{{% md %}}Describes the Ocean ECS autoscaler.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Cluster<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ocean cluster name.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Desired<wbr>Capacity</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The number of instances to launch and maintain in the cluster.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Draining<wbr>Timeout</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}The time in seconds, the instance is allowed to run while detached from the ELB. This is to allow the instance time to be drained from incoming TCP connections before terminating it, during a scale down operation.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Ebs<wbr>Optimized</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Enable EBS optimized for cluster. Flag will enable optimized capacity for high bandwidth connectivity to the EB service for non EBS optimized instance types. For instances that are EBS optimized this flag will be ignored.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Iam<wbr>Instance<wbr>Profile</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The instance profile iam role.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Image<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}ID of the image used to launch the instances.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Key<wbr>Pair</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The key pair to attach the instances.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Max<wbr>Size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The upper limit of instances the cluster can scale up to.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Min<wbr>Size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The lower limit of instances the cluster can scale down to.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Monitoring</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Enable detailed monitoring for cluster. Flag will enable Cloud Watch detailed detailed monitoring (one minute increments). Note: there are additional hourly costs for this service based on the region used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Ocean cluster name.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The region the cluster will run in.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Scheduled<wbr>Tasks</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanscheduledtask">List&lt;Ocean<wbr>Scheduled<wbr>Task&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Security<wbr>Group<wbr>Ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
-    </dt>
-    <dd>{{% md %}}One or more security group ids.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Subnet<wbr>Ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
-    </dt>
-    <dd>{{% md %}}A comma-separated list of subnet identifiers for the Ocean cluster. Subnet IDs should be configured with auto assign public ip.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceantag">List&lt;Ocean<wbr>Tag&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}Optionally adds tags to instances launched in an Ocean cluster.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Update<wbr>Policy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanupdatepolicy">Ocean<wbr>Update<wbr>Policy?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>User<wbr>Data</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Base64-encoded MIME user data to make available to the instances.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Utilize<wbr>Reserved<wbr>Instances</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}If Reserved instances exist, OCean will utilize them before launching Spot instances.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Whitelists</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}Instance types allowed in the Ocean cluster.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Associate<wbr>Public<wbr>Ip<wbr>Address</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Configure public IP address allocation.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Autoscaler</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanautoscaler">*Ocean<wbr>Autoscaler</a></span>
-    </dt>
-    <dd>{{% md %}}Describes the Ocean ECS autoscaler.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Cluster<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ocean cluster name.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Desired<wbr>Capacity</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The number of instances to launch and maintain in the cluster.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Draining<wbr>Timeout</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}The time in seconds, the instance is allowed to run while detached from the ELB. This is to allow the instance time to be drained from incoming TCP connections before terminating it, during a scale down operation.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Ebs<wbr>Optimized</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Enable EBS optimized for cluster. Flag will enable optimized capacity for high bandwidth connectivity to the EB service for non EBS optimized instance types. For instances that are EBS optimized this flag will be ignored.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Iam<wbr>Instance<wbr>Profile</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The instance profile iam role.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Image<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}ID of the image used to launch the instances.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Key<wbr>Pair</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The key pair to attach the instances.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Max<wbr>Size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The upper limit of instances the cluster can scale up to.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Min<wbr>Size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The lower limit of instances the cluster can scale down to.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Monitoring</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Enable detailed monitoring for cluster. Flag will enable Cloud Watch detailed detailed monitoring (one minute increments). Note: there are additional hourly costs for this service based on the region used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Ocean cluster name.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The region the cluster will run in.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Scheduled<wbr>Tasks</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanscheduledtask">[]Ocean<wbr>Scheduled<wbr>Task</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Security<wbr>Group<wbr>Ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}One or more security group ids.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Subnet<wbr>Ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}A comma-separated list of subnet identifiers for the Ocean cluster. Subnet IDs should be configured with auto assign public ip.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceantag">[]Ocean<wbr>Tag</a></span>
-    </dt>
-    <dd>{{% md %}}Optionally adds tags to instances launched in an Ocean cluster.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Update<wbr>Policy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanupdatepolicy">*Ocean<wbr>Update<wbr>Policy</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>User<wbr>Data</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Base64-encoded MIME user data to make available to the instances.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Utilize<wbr>Reserved<wbr>Instances</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}If Reserved instances exist, OCean will utilize them before launching Spot instances.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Whitelists</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}Instance types allowed in the Ocean cluster.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>associate<wbr>Public<wbr>Ip<wbr>Address</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Configure public IP address allocation.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>autoscaler</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanautoscaler">Ocean<wbr>Autoscaler?</a></span>
-    </dt>
-    <dd>{{% md %}}Describes the Ocean ECS autoscaler.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>cluster<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ocean cluster name.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>desired<wbr>Capacity</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}The number of instances to launch and maintain in the cluster.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>draining<wbr>Timeout</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}The time in seconds, the instance is allowed to run while detached from the ELB. This is to allow the instance time to be drained from incoming TCP connections before terminating it, during a scale down operation.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>ebs<wbr>Optimized</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Enable EBS optimized for cluster. Flag will enable optimized capacity for high bandwidth connectivity to the EB service for non EBS optimized instance types. For instances that are EBS optimized this flag will be ignored.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>iam<wbr>Instance<wbr>Profile</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The instance profile iam role.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>image<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}ID of the image used to launch the instances.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>key<wbr>Pair</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The key pair to attach the instances.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>max<wbr>Size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}The upper limit of instances the cluster can scale up to.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>min<wbr>Size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}The lower limit of instances the cluster can scale down to.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>monitoring</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Enable detailed monitoring for cluster. Flag will enable Cloud Watch detailed detailed monitoring (one minute increments). Note: there are additional hourly costs for this service based on the region used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Ocean cluster name.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The region the cluster will run in.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>scheduled<wbr>Tasks</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanscheduledtask">Ocean<wbr>Scheduled<wbr>Task[]?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>security<wbr>Group<wbr>Ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
-    </dt>
-    <dd>{{% md %}}One or more security group ids.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>subnet<wbr>Ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
-    </dt>
-    <dd>{{% md %}}A comma-separated list of subnet identifiers for the Ocean cluster. Subnet IDs should be configured with auto assign public ip.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceantag">Ocean<wbr>Tag[]?</a></span>
-    </dt>
-    <dd>{{% md %}}Optionally adds tags to instances launched in an Ocean cluster.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>update<wbr>Policy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanupdatepolicy">Ocean<wbr>Update<wbr>Policy?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>user<wbr>Data</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Base64-encoded MIME user data to make available to the instances.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>utilize<wbr>Reserved<wbr>Instances</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}If Reserved instances exist, OCean will utilize them before launching Spot instances.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>whitelists</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}Instance types allowed in the Ocean cluster.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>associate_<wbr>public_<wbr>ip_<wbr>address</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Configure public IP address allocation.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>autoscaler</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanautoscaler">Dict[Ocean<wbr>Autoscaler]</a></span>
-    </dt>
-    <dd>{{% md %}}Describes the Ocean ECS autoscaler.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>cluster_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The ocean cluster name.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>desired_<wbr>capacity</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The number of instances to launch and maintain in the cluster.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>draining_<wbr>timeout</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The time in seconds, the instance is allowed to run while detached from the ELB. This is to allow the instance time to be drained from incoming TCP connections before terminating it, during a scale down operation.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>ebs_<wbr>optimized</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Enable EBS optimized for cluster. Flag will enable optimized capacity for high bandwidth connectivity to the EB service for non EBS optimized instance types. For instances that are EBS optimized this flag will be ignored.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>iam_<wbr>instance_<wbr>profile</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The instance profile iam role.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>image_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}ID of the image used to launch the instances.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>key_<wbr>pair</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The key pair to attach the instances.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>max_<wbr>size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The upper limit of instances the cluster can scale up to.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>min_<wbr>size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The lower limit of instances the cluster can scale down to.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>monitoring</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Enable detailed monitoring for cluster. Flag will enable Cloud Watch detailed detailed monitoring (one minute increments). Note: there are additional hourly costs for this service based on the region used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The Ocean cluster name.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The region the cluster will run in.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>scheduled_<wbr>tasks</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanscheduledtask">List[Ocean<wbr>Scheduled<wbr>Task]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>security_<wbr>group_<wbr>ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}One or more security group ids.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>subnet_<wbr>ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}A comma-separated list of subnet identifiers for the Ocean cluster. Subnet IDs should be configured with auto assign public ip.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceantag">List[Ocean<wbr>Tag]</a></span>
-    </dt>
-    <dd>{{% md %}}Optionally adds tags to instances launched in an Ocean cluster.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>update_<wbr>policy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanupdatepolicy">Dict[Ocean<wbr>Update<wbr>Policy]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>user_<wbr>data</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Base64-encoded MIME user data to make available to the instances.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>utilize_<wbr>reserved_<wbr>instances</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}If Reserved instances exist, OCean will utilize them before launching Spot instances.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>whitelists</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}Instance types allowed in the Ocean cluster.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
 
 
 
@@ -1886,7 +1064,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Associate<wbr>Public<wbr>Ip<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Configure public IP address allocation.
 {{% /md %}}</dd>
@@ -1895,7 +1073,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Autoscaler</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanautoscaler">Ocean<wbr>Autoscaler<wbr>Args?</a></span>
+        <span class="property-type"><a href="#oceanautoscaler">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Ecs.<wbr>Inputs.<wbr>Ocean<wbr>Autoscaler<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Describes the Ocean ECS autoscaler.
 {{% /md %}}</dd>
@@ -1904,7 +1082,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Cluster<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ocean cluster name.
 {{% /md %}}</dd>
@@ -1913,7 +1091,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Desired<wbr>Capacity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of instances to launch and maintain in the cluster.
 {{% /md %}}</dd>
@@ -1922,7 +1100,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Draining<wbr>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time in seconds, the instance is allowed to run while detached from the ELB. This is to allow the instance time to be drained from incoming TCP connections before terminating it, during a scale down operation.
 {{% /md %}}</dd>
@@ -1931,7 +1109,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Ebs<wbr>Optimized</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable EBS optimized for cluster. Flag will enable optimized capacity for high bandwidth connectivity to the EB service for non EBS optimized instance types. For instances that are EBS optimized this flag will be ignored.
 {{% /md %}}</dd>
@@ -1940,7 +1118,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Iam<wbr>Instance<wbr>Profile</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The instance profile iam role.
 {{% /md %}}</dd>
@@ -1949,7 +1127,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Image<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the image used to launch the instances.
 {{% /md %}}</dd>
@@ -1958,7 +1136,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Key<wbr>Pair</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The key pair to attach the instances.
 {{% /md %}}</dd>
@@ -1967,7 +1145,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Max<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The upper limit of instances the cluster can scale up to.
 {{% /md %}}</dd>
@@ -1976,7 +1154,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Min<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The lower limit of instances the cluster can scale down to.
 {{% /md %}}</dd>
@@ -1985,7 +1163,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Monitoring</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable detailed monitoring for cluster. Flag will enable Cloud Watch detailed detailed monitoring (one minute increments). Note: there are additional hourly costs for this service based on the region used.
 {{% /md %}}</dd>
@@ -1994,7 +1172,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Ocean cluster name.
 {{% /md %}}</dd>
@@ -2003,7 +1181,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region the cluster will run in.
 {{% /md %}}</dd>
@@ -2012,7 +1190,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Scheduled<wbr>Tasks</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanscheduledtask">List&lt;Ocean<wbr>Scheduled<wbr>Task<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#oceanscheduledtask">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Ecs.<wbr>Inputs.<wbr>Ocean<wbr>Scheduled<wbr>Task<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2020,7 +1198,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Security<wbr>Group<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}One or more security group ids.
 {{% /md %}}</dd>
@@ -2029,7 +1207,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Subnet<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A comma-separated list of subnet identifiers for the Ocean cluster. Subnet IDs should be configured with auto assign public ip.
 {{% /md %}}</dd>
@@ -2038,7 +1216,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceantag">List&lt;Ocean<wbr>Tag<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#oceantag">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Ecs.<wbr>Inputs.<wbr>Ocean<wbr>Tag<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Optionally adds tags to instances launched in an Ocean cluster.
 {{% /md %}}</dd>
@@ -2047,7 +1225,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Update<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanupdatepolicy">Ocean<wbr>Update<wbr>Policy<wbr>Args?</a></span>
+        <span class="property-type"><a href="#oceanupdatepolicy">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Ecs.<wbr>Inputs.<wbr>Ocean<wbr>Update<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2055,7 +1233,7 @@ The following state arguments are supported:
             title="Optional">
         <span>User<wbr>Data</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Base64-encoded MIME user data to make available to the instances.
 {{% /md %}}</dd>
@@ -2064,7 +1242,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Utilize<wbr>Reserved<wbr>Instances</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If Reserved instances exist, OCean will utilize them before launching Spot instances.
 {{% /md %}}</dd>
@@ -2073,7 +1251,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Whitelists</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Instance types allowed in the Ocean cluster.
 {{% /md %}}</dd>
@@ -2089,7 +1267,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Associate<wbr>Public<wbr>Ip<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Configure public IP address allocation.
 {{% /md %}}</dd>
@@ -2098,7 +1276,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Autoscaler</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanautoscaler">*Ocean<wbr>Autoscaler</a></span>
+        <span class="property-type"><a href="#oceanautoscaler">Ocean<wbr>Autoscaler</a></span>
     </dt>
     <dd>{{% md %}}Describes the Ocean ECS autoscaler.
 {{% /md %}}</dd>
@@ -2107,7 +1285,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Cluster<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ocean cluster name.
 {{% /md %}}</dd>
@@ -2116,7 +1294,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Desired<wbr>Capacity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of instances to launch and maintain in the cluster.
 {{% /md %}}</dd>
@@ -2125,7 +1303,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Draining<wbr>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time in seconds, the instance is allowed to run while detached from the ELB. This is to allow the instance time to be drained from incoming TCP connections before terminating it, during a scale down operation.
 {{% /md %}}</dd>
@@ -2134,7 +1312,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Ebs<wbr>Optimized</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable EBS optimized for cluster. Flag will enable optimized capacity for high bandwidth connectivity to the EB service for non EBS optimized instance types. For instances that are EBS optimized this flag will be ignored.
 {{% /md %}}</dd>
@@ -2143,7 +1321,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Iam<wbr>Instance<wbr>Profile</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The instance profile iam role.
 {{% /md %}}</dd>
@@ -2152,7 +1330,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Image<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the image used to launch the instances.
 {{% /md %}}</dd>
@@ -2161,7 +1339,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Key<wbr>Pair</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The key pair to attach the instances.
 {{% /md %}}</dd>
@@ -2170,7 +1348,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Max<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The upper limit of instances the cluster can scale up to.
 {{% /md %}}</dd>
@@ -2179,7 +1357,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Min<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The lower limit of instances the cluster can scale down to.
 {{% /md %}}</dd>
@@ -2188,7 +1366,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Monitoring</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable detailed monitoring for cluster. Flag will enable Cloud Watch detailed detailed monitoring (one minute increments). Note: there are additional hourly costs for this service based on the region used.
 {{% /md %}}</dd>
@@ -2197,7 +1375,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Ocean cluster name.
 {{% /md %}}</dd>
@@ -2206,7 +1384,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region the cluster will run in.
 {{% /md %}}</dd>
@@ -2250,7 +1428,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Update<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanupdatepolicy">*Ocean<wbr>Update<wbr>Policy</a></span>
+        <span class="property-type"><a href="#oceanupdatepolicy">Ocean<wbr>Update<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2258,7 +1436,7 @@ The following state arguments are supported:
             title="Optional">
         <span>User<wbr>Data</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Base64-encoded MIME user data to make available to the instances.
 {{% /md %}}</dd>
@@ -2267,7 +1445,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Utilize<wbr>Reserved<wbr>Instances</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If Reserved instances exist, OCean will utilize them before launching Spot instances.
 {{% /md %}}</dd>
@@ -2292,7 +1470,7 @@ The following state arguments are supported:
             title="Optional">
         <span>associate<wbr>Public<wbr>Ip<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Configure public IP address allocation.
 {{% /md %}}</dd>
@@ -2301,7 +1479,7 @@ The following state arguments are supported:
             title="Optional">
         <span>autoscaler</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanautoscaler">Ocean<wbr>Autoscaler?</a></span>
+        <span class="property-type"><a href="#oceanautoscaler">Ocean<wbr>Autoscaler</a></span>
     </dt>
     <dd>{{% md %}}Describes the Ocean ECS autoscaler.
 {{% /md %}}</dd>
@@ -2310,7 +1488,7 @@ The following state arguments are supported:
             title="Optional">
         <span>cluster<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ocean cluster name.
 {{% /md %}}</dd>
@@ -2319,7 +1497,7 @@ The following state arguments are supported:
             title="Optional">
         <span>desired<wbr>Capacity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of instances to launch and maintain in the cluster.
 {{% /md %}}</dd>
@@ -2328,7 +1506,7 @@ The following state arguments are supported:
             title="Optional">
         <span>draining<wbr>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The time in seconds, the instance is allowed to run while detached from the ELB. This is to allow the instance time to be drained from incoming TCP connections before terminating it, during a scale down operation.
 {{% /md %}}</dd>
@@ -2337,7 +1515,7 @@ The following state arguments are supported:
             title="Optional">
         <span>ebs<wbr>Optimized</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable EBS optimized for cluster. Flag will enable optimized capacity for high bandwidth connectivity to the EB service for non EBS optimized instance types. For instances that are EBS optimized this flag will be ignored.
 {{% /md %}}</dd>
@@ -2346,7 +1524,7 @@ The following state arguments are supported:
             title="Optional">
         <span>iam<wbr>Instance<wbr>Profile</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The instance profile iam role.
 {{% /md %}}</dd>
@@ -2355,7 +1533,7 @@ The following state arguments are supported:
             title="Optional">
         <span>image<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the image used to launch the instances.
 {{% /md %}}</dd>
@@ -2364,7 +1542,7 @@ The following state arguments are supported:
             title="Optional">
         <span>key<wbr>Pair</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The key pair to attach the instances.
 {{% /md %}}</dd>
@@ -2373,7 +1551,7 @@ The following state arguments are supported:
             title="Optional">
         <span>max<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The upper limit of instances the cluster can scale up to.
 {{% /md %}}</dd>
@@ -2382,7 +1560,7 @@ The following state arguments are supported:
             title="Optional">
         <span>min<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The lower limit of instances the cluster can scale down to.
 {{% /md %}}</dd>
@@ -2391,7 +1569,7 @@ The following state arguments are supported:
             title="Optional">
         <span>monitoring</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable detailed monitoring for cluster. Flag will enable Cloud Watch detailed detailed monitoring (one minute increments). Note: there are additional hourly costs for this service based on the region used.
 {{% /md %}}</dd>
@@ -2400,7 +1578,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Ocean cluster name.
 {{% /md %}}</dd>
@@ -2409,7 +1587,7 @@ The following state arguments are supported:
             title="Optional">
         <span>region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region the cluster will run in.
 {{% /md %}}</dd>
@@ -2418,7 +1596,7 @@ The following state arguments are supported:
             title="Optional">
         <span>scheduled<wbr>Tasks</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanscheduledtask">Ocean<wbr>Scheduled<wbr>Task[]?</a></span>
+        <span class="property-type"><a href="#oceanscheduledtask">Ocean<wbr>Scheduled<wbr>Task[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2426,7 +1604,7 @@ The following state arguments are supported:
             title="Optional">
         <span>security<wbr>Group<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}One or more security group ids.
 {{% /md %}}</dd>
@@ -2435,7 +1613,7 @@ The following state arguments are supported:
             title="Optional">
         <span>subnet<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A comma-separated list of subnet identifiers for the Ocean cluster. Subnet IDs should be configured with auto assign public ip.
 {{% /md %}}</dd>
@@ -2444,7 +1622,7 @@ The following state arguments are supported:
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceantag">Ocean<wbr>Tag[]?</a></span>
+        <span class="property-type"><a href="#oceantag">Ocean<wbr>Tag[]</a></span>
     </dt>
     <dd>{{% md %}}Optionally adds tags to instances launched in an Ocean cluster.
 {{% /md %}}</dd>
@@ -2453,7 +1631,7 @@ The following state arguments are supported:
             title="Optional">
         <span>update<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanupdatepolicy">Ocean<wbr>Update<wbr>Policy?</a></span>
+        <span class="property-type"><a href="#oceanupdatepolicy">Ocean<wbr>Update<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2461,7 +1639,7 @@ The following state arguments are supported:
             title="Optional">
         <span>user<wbr>Data</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Base64-encoded MIME user data to make available to the instances.
 {{% /md %}}</dd>
@@ -2470,7 +1648,7 @@ The following state arguments are supported:
             title="Optional">
         <span>utilize<wbr>Reserved<wbr>Instances</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If Reserved instances exist, OCean will utilize them before launching Spot instances.
 {{% /md %}}</dd>
@@ -2479,7 +1657,7 @@ The following state arguments are supported:
             title="Optional">
         <span>whitelists</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Instance types allowed in the Ocean cluster.
 {{% /md %}}</dd>
@@ -2720,7 +1898,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Cooldown</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Cooldown period between scaling actions.
 {{% /md %}}</dd>
@@ -2729,7 +1907,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Down</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanautoscalerdown">Ocean<wbr>Autoscaler<wbr>Down<wbr>Args?</a></span>
+        <span class="property-type"><a href="#oceanautoscalerdown">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Ecs.<wbr>Inputs.<wbr>Ocean<wbr>Autoscaler<wbr>Down<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Auto Scaling scale down operations.
 {{% /md %}}</dd>
@@ -2738,7 +1916,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Headroom</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanautoscalerheadroom">Ocean<wbr>Autoscaler<wbr>Headroom<wbr>Args?</a></span>
+        <span class="property-type"><a href="#oceanautoscalerheadroom">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Ecs.<wbr>Inputs.<wbr>Ocean<wbr>Autoscaler<wbr>Headroom<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Spare resource capacity management enabling fast assignment of tasks without waiting for new resources to launch.
 {{% /md %}}</dd>
@@ -2747,7 +1925,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Is<wbr>Auto<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Automatically configure and optimize headroom resources.
 {{% /md %}}</dd>
@@ -2756,7 +1934,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Is<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable the Ocean ECS autoscaler.
 {{% /md %}}</dd>
@@ -2765,7 +1943,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Resource<wbr>Limits</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanautoscalerresourcelimits">Ocean<wbr>Autoscaler<wbr>Resource<wbr>Limits<wbr>Args?</a></span>
+        <span class="property-type"><a href="#oceanautoscalerresourcelimits">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Ecs.<wbr>Inputs.<wbr>Ocean<wbr>Autoscaler<wbr>Resource<wbr>Limits<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Optionally set upper and lower bounds on the resource usage of the cluster.
 {{% /md %}}</dd>
@@ -2781,7 +1959,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Cooldown</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Cooldown period between scaling actions.
 {{% /md %}}</dd>
@@ -2790,7 +1968,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Down</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanautoscalerdown">*Ocean<wbr>Autoscaler<wbr>Down</a></span>
+        <span class="property-type"><a href="#oceanautoscalerdown">Ocean<wbr>Autoscaler<wbr>Down</a></span>
     </dt>
     <dd>{{% md %}}Auto Scaling scale down operations.
 {{% /md %}}</dd>
@@ -2799,7 +1977,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Headroom</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanautoscalerheadroom">*Ocean<wbr>Autoscaler<wbr>Headroom</a></span>
+        <span class="property-type"><a href="#oceanautoscalerheadroom">Ocean<wbr>Autoscaler<wbr>Headroom</a></span>
     </dt>
     <dd>{{% md %}}Spare resource capacity management enabling fast assignment of tasks without waiting for new resources to launch.
 {{% /md %}}</dd>
@@ -2808,7 +1986,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Is<wbr>Auto<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Automatically configure and optimize headroom resources.
 {{% /md %}}</dd>
@@ -2817,7 +1995,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Is<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable the Ocean ECS autoscaler.
 {{% /md %}}</dd>
@@ -2826,7 +2004,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Resource<wbr>Limits</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanautoscalerresourcelimits">*Ocean<wbr>Autoscaler<wbr>Resource<wbr>Limits</a></span>
+        <span class="property-type"><a href="#oceanautoscalerresourcelimits">Ocean<wbr>Autoscaler<wbr>Resource<wbr>Limits</a></span>
     </dt>
     <dd>{{% md %}}Optionally set upper and lower bounds on the resource usage of the cluster.
 {{% /md %}}</dd>
@@ -2842,7 +2020,7 @@ The following state arguments are supported:
             title="Optional">
         <span>cooldown</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Cooldown period between scaling actions.
 {{% /md %}}</dd>
@@ -2851,7 +2029,7 @@ The following state arguments are supported:
             title="Optional">
         <span>down</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanautoscalerdown">Ocean<wbr>Autoscaler<wbr>Down?</a></span>
+        <span class="property-type"><a href="#oceanautoscalerdown">Ocean<wbr>Autoscaler<wbr>Down</a></span>
     </dt>
     <dd>{{% md %}}Auto Scaling scale down operations.
 {{% /md %}}</dd>
@@ -2860,7 +2038,7 @@ The following state arguments are supported:
             title="Optional">
         <span>headroom</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanautoscalerheadroom">Ocean<wbr>Autoscaler<wbr>Headroom?</a></span>
+        <span class="property-type"><a href="#oceanautoscalerheadroom">Ocean<wbr>Autoscaler<wbr>Headroom</a></span>
     </dt>
     <dd>{{% md %}}Spare resource capacity management enabling fast assignment of tasks without waiting for new resources to launch.
 {{% /md %}}</dd>
@@ -2869,7 +2047,7 @@ The following state arguments are supported:
             title="Optional">
         <span>is<wbr>Auto<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Automatically configure and optimize headroom resources.
 {{% /md %}}</dd>
@@ -2878,7 +2056,7 @@ The following state arguments are supported:
             title="Optional">
         <span>is<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable the Ocean ECS autoscaler.
 {{% /md %}}</dd>
@@ -2887,7 +2065,7 @@ The following state arguments are supported:
             title="Optional">
         <span>resource<wbr>Limits</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanautoscalerresourcelimits">Ocean<wbr>Autoscaler<wbr>Resource<wbr>Limits?</a></span>
+        <span class="property-type"><a href="#oceanautoscalerresourcelimits">Ocean<wbr>Autoscaler<wbr>Resource<wbr>Limits</a></span>
     </dt>
     <dd>{{% md %}}Optionally set upper and lower bounds on the resource usage of the cluster.
 {{% /md %}}</dd>
@@ -2979,7 +2157,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Max<wbr>Scale<wbr>Down<wbr>Percentage</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Would represent the maximum % to scale-down. Number between 1-100
 {{% /md %}}</dd>
@@ -2995,7 +2173,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Max<wbr>Scale<wbr>Down<wbr>Percentage</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Would represent the maximum % to scale-down. Number between 1-100
 {{% /md %}}</dd>
@@ -3011,7 +2189,7 @@ The following state arguments are supported:
             title="Optional">
         <span>max<wbr>Scale<wbr>Down<wbr>Percentage</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Would represent the maximum % to scale-down. Number between 1-100
 {{% /md %}}</dd>
@@ -3058,7 +2236,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Cpu<wbr>Per<wbr>Unit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Optionally configure the number of CPUs to allocate the headroom. CPUs are denoted in millicores, where 1000 millicores = 1 vCPU.
 {{% /md %}}</dd>
@@ -3067,7 +2245,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Memory<wbr>Per<wbr>Unit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Optionally configure the amount of memory (MB) to allocate the headroom.
 {{% /md %}}</dd>
@@ -3076,7 +2254,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Num<wbr>Of<wbr>Units</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of units to retain as headroom, where each unit has the defined headroom CPU and memory.
 {{% /md %}}</dd>
@@ -3092,7 +2270,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Cpu<wbr>Per<wbr>Unit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Optionally configure the number of CPUs to allocate the headroom. CPUs are denoted in millicores, where 1000 millicores = 1 vCPU.
 {{% /md %}}</dd>
@@ -3101,7 +2279,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Memory<wbr>Per<wbr>Unit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Optionally configure the amount of memory (MB) to allocate the headroom.
 {{% /md %}}</dd>
@@ -3110,7 +2288,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Num<wbr>Of<wbr>Units</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of units to retain as headroom, where each unit has the defined headroom CPU and memory.
 {{% /md %}}</dd>
@@ -3126,7 +2304,7 @@ The following state arguments are supported:
             title="Optional">
         <span>cpu<wbr>Per<wbr>Unit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Optionally configure the number of CPUs to allocate the headroom. CPUs are denoted in millicores, where 1000 millicores = 1 vCPU.
 {{% /md %}}</dd>
@@ -3135,7 +2313,7 @@ The following state arguments are supported:
             title="Optional">
         <span>memory<wbr>Per<wbr>Unit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Optionally configure the amount of memory (MB) to allocate the headroom.
 {{% /md %}}</dd>
@@ -3144,7 +2322,7 @@ The following state arguments are supported:
             title="Optional">
         <span>num<wbr>Of<wbr>Units</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of units to retain as headroom, where each unit has the defined headroom CPU and memory.
 {{% /md %}}</dd>
@@ -3209,7 +2387,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Max<wbr>Memory<wbr>Gib</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum memory in GiB units that can be allocated to the cluster.
 {{% /md %}}</dd>
@@ -3218,7 +2396,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Max<wbr>Vcpu</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum cpu in vCPU units that can be allocated to the cluster.
 {{% /md %}}</dd>
@@ -3234,7 +2412,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Max<wbr>Memory<wbr>Gib</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum memory in GiB units that can be allocated to the cluster.
 {{% /md %}}</dd>
@@ -3243,7 +2421,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Max<wbr>Vcpu</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum cpu in vCPU units that can be allocated to the cluster.
 {{% /md %}}</dd>
@@ -3259,7 +2437,7 @@ The following state arguments are supported:
             title="Optional">
         <span>max<wbr>Memory<wbr>Gib</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum memory in GiB units that can be allocated to the cluster.
 {{% /md %}}</dd>
@@ -3268,7 +2446,7 @@ The following state arguments are supported:
             title="Optional">
         <span>max<wbr>Vcpu</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum cpu in vCPU units that can be allocated to the cluster.
 {{% /md %}}</dd>
@@ -3324,7 +2502,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Shutdown<wbr>Hours</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanscheduledtaskshutdownhours">Ocean<wbr>Scheduled<wbr>Task<wbr>Shutdown<wbr>Hours<wbr>Args?</a></span>
+        <span class="property-type"><a href="#oceanscheduledtaskshutdownhours">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Ecs.<wbr>Inputs.<wbr>Ocean<wbr>Scheduled<wbr>Task<wbr>Shutdown<wbr>Hours<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3332,7 +2510,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Tasks</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanscheduledtasktask">List&lt;Ocean<wbr>Scheduled<wbr>Task<wbr>Task<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#oceanscheduledtasktask">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Ecs.<wbr>Inputs.<wbr>Ocean<wbr>Scheduled<wbr>Task<wbr>Task<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3347,7 +2525,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Shutdown<wbr>Hours</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanscheduledtaskshutdownhours">*Ocean<wbr>Scheduled<wbr>Task<wbr>Shutdown<wbr>Hours</a></span>
+        <span class="property-type"><a href="#oceanscheduledtaskshutdownhours">Ocean<wbr>Scheduled<wbr>Task<wbr>Shutdown<wbr>Hours</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3370,7 +2548,7 @@ The following state arguments are supported:
             title="Optional">
         <span>shutdown<wbr>Hours</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanscheduledtaskshutdownhours">Ocean<wbr>Scheduled<wbr>Task<wbr>Shutdown<wbr>Hours?</a></span>
+        <span class="property-type"><a href="#oceanscheduledtaskshutdownhours">Ocean<wbr>Scheduled<wbr>Task<wbr>Shutdown<wbr>Hours</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3378,7 +2556,7 @@ The following state arguments are supported:
             title="Optional">
         <span>tasks</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanscheduledtasktask">Ocean<wbr>Scheduled<wbr>Task<wbr>Task[]?</a></span>
+        <span class="property-type"><a href="#oceanscheduledtasktask">Ocean<wbr>Scheduled<wbr>Task<wbr>Task[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3427,22 +2605,22 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Is<wbr>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Enable the Ocean ECS autoscaler.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Time<wbr>Windows</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Is<wbr>Enabled</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable the Ocean ECS autoscaler.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -3450,15 +2628,6 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Is<wbr>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Enable the Ocean ECS autoscaler.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -3468,21 +2637,21 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>Is<wbr>Enabled</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable the Ocean ECS autoscaler.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>is<wbr>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Enable the Ocean ECS autoscaler.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -3492,12 +2661,29 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>is<wbr>Enabled</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Enable the Ocean ECS autoscaler.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>time<wbr>Windows</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List[str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -3507,14 +2693,6 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Enable the Ocean ECS autoscaler.
 {{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>time<wbr>Windows</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -3796,19 +2974,19 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Roll<wbr>Config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanupdatepolicyrollconfig">Ocean<wbr>Update<wbr>Policy<wbr>Roll<wbr>Config<wbr>Args?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Should<wbr>Roll</span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Roll<wbr>Config</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanupdatepolicyrollconfig">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Ecs.<wbr>Inputs.<wbr>Ocean<wbr>Update<wbr>Policy<wbr>Roll<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3819,19 +2997,19 @@ The following state arguments are supported:
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Roll<wbr>Config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanupdatepolicyrollconfig">*Ocean<wbr>Update<wbr>Policy<wbr>Roll<wbr>Config</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Should<wbr>Roll</span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Roll<wbr>Config</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanupdatepolicyrollconfig">Ocean<wbr>Update<wbr>Policy<wbr>Roll<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3842,19 +3020,19 @@ The following state arguments are supported:
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>roll<wbr>Config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanupdatepolicyrollconfig">Ocean<wbr>Update<wbr>Policy<wbr>Roll<wbr>Config?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>should<wbr>Roll</span>
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>roll<wbr>Config</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanupdatepolicyrollconfig">Ocean<wbr>Update<wbr>Policy<wbr>Roll<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3865,19 +3043,19 @@ The following state arguments are supported:
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>roll<wbr>Config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oceanupdatepolicyrollconfig">Dict[Ocean<wbr>Update<wbr>Policy<wbr>Roll<wbr>Config]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>should<wbr>Roll</span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>roll<wbr>Config</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#oceanupdatepolicyrollconfig">Dict[Ocean<wbr>Update<wbr>Policy<wbr>Roll<wbr>Config]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

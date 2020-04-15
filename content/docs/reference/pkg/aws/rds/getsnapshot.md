@@ -65,7 +65,7 @@ const dev = new aws.rds.Instance("dev", {
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupSnapshot<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/rds?tab=doc#LookupSnapshotArgs">LookupSnapshotArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/rds?tab=doc#LookupSnapshotResult">LookupSnapshotResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupSnapshot<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/rds?tab=doc#LookupSnapshotArgs">LookupSnapshotArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/rds?tab=doc#LookupSnapshotResult">LookupSnapshotResult</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -88,7 +88,7 @@ The following arguments are supported:
             title="Optional">
         <span>Db<wbr>Instance<wbr>Identifier</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Returns the list of snapshots created by the specific db_instance
 {{% /md %}}</dd>
@@ -97,7 +97,7 @@ The following arguments are supported:
             title="Optional">
         <span>Db<wbr>Snapshot<wbr>Identifier</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Returns information on a specific snapshot_id.
 {{% /md %}}</dd>
@@ -106,7 +106,7 @@ The following arguments are supported:
             title="Optional">
         <span>Include<wbr>Public</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set this value to true to include manual DB snapshots that are public and can be
 copied or restored by any AWS account, otherwise set this value to false. The default is `false`.
@@ -116,7 +116,7 @@ copied or restored by any AWS account, otherwise set this value to false. The de
             title="Optional">
         <span>Include<wbr>Shared</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set this value to true to include shared manual DB snapshots from other
 AWS accounts that this AWS account has been given permission to copy or restore, otherwise set this value to false.
@@ -127,7 +127,7 @@ The default is `false`.
             title="Optional">
         <span>Most<wbr>Recent</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If more than one result is returned, use the most
 recent Snapshot.
@@ -137,7 +137,7 @@ recent Snapshot.
             title="Optional">
         <span>Snapshot<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of snapshots to be returned. If you don't specify a SnapshotType
 value, then both automated and manual snapshots are returned. Shared and public DB snapshots are not
@@ -155,7 +155,7 @@ included in the returned results by default. Possible values are, `automated`, `
             title="Optional">
         <span>Db<wbr>Instance<wbr>Identifier</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Returns the list of snapshots created by the specific db_instance
 {{% /md %}}</dd>
@@ -164,7 +164,7 @@ included in the returned results by default. Possible values are, `automated`, `
             title="Optional">
         <span>Db<wbr>Snapshot<wbr>Identifier</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Returns information on a specific snapshot_id.
 {{% /md %}}</dd>
@@ -173,7 +173,7 @@ included in the returned results by default. Possible values are, `automated`, `
             title="Optional">
         <span>Include<wbr>Public</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set this value to true to include manual DB snapshots that are public and can be
 copied or restored by any AWS account, otherwise set this value to false. The default is `false`.
@@ -183,7 +183,7 @@ copied or restored by any AWS account, otherwise set this value to false. The de
             title="Optional">
         <span>Include<wbr>Shared</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set this value to true to include shared manual DB snapshots from other
 AWS accounts that this AWS account has been given permission to copy or restore, otherwise set this value to false.
@@ -194,7 +194,7 @@ The default is `false`.
             title="Optional">
         <span>Most<wbr>Recent</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If more than one result is returned, use the most
 recent Snapshot.
@@ -204,7 +204,7 @@ recent Snapshot.
             title="Optional">
         <span>Snapshot<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of snapshots to be returned. If you don't specify a SnapshotType
 value, then both automated and manual snapshots are returned. Shared and public DB snapshots are not
@@ -222,7 +222,7 @@ included in the returned results by default. Possible values are, `automated`, `
             title="Optional">
         <span>db<wbr>Instance<wbr>Identifier</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Returns the list of snapshots created by the specific db_instance
 {{% /md %}}</dd>
@@ -231,7 +231,7 @@ included in the returned results by default. Possible values are, `automated`, `
             title="Optional">
         <span>db<wbr>Snapshot<wbr>Identifier</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Returns information on a specific snapshot_id.
 {{% /md %}}</dd>
@@ -240,7 +240,7 @@ included in the returned results by default. Possible values are, `automated`, `
             title="Optional">
         <span>include<wbr>Public</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Set this value to true to include manual DB snapshots that are public and can be
 copied or restored by any AWS account, otherwise set this value to false. The default is `false`.
@@ -250,7 +250,7 @@ copied or restored by any AWS account, otherwise set this value to false. The de
             title="Optional">
         <span>include<wbr>Shared</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Set this value to true to include shared manual DB snapshots from other
 AWS accounts that this AWS account has been given permission to copy or restore, otherwise set this value to false.
@@ -261,7 +261,7 @@ The default is `false`.
             title="Optional">
         <span>most<wbr>Recent</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If more than one result is returned, use the most
 recent Snapshot.
@@ -271,7 +271,7 @@ recent Snapshot.
             title="Optional">
         <span>snapshot<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of snapshots to be returned. If you don't specify a SnapshotType
 value, then both automated and manual snapshots are returned. Shared and public DB snapshots are not
@@ -385,28 +385,12 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Db<wbr>Instance<wbr>Identifier</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Db<wbr>Snapshot<wbr>Arn</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) for the DB snapshot.
 {{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Db<wbr>Snapshot<wbr>Identifier</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -446,22 +430,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Include<wbr>Public</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Include<wbr>Shared</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Iops</span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
@@ -489,14 +457,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Most<wbr>Recent</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Option<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -520,14 +480,6 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Provides the time when the snapshot was taken, in Universal Coordinated Time (UTC).
 {{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Snapshot<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -573,6 +525,54 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the ID of the VPC associated with the DB snapshot.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Db<wbr>Instance<wbr>Identifier</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Db<wbr>Snapshot<wbr>Identifier</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Include<wbr>Public</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Include<wbr>Shared</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Most<wbr>Recent</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Snapshot<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -601,28 +601,12 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Db<wbr>Instance<wbr>Identifier</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Db<wbr>Snapshot<wbr>Arn</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) for the DB snapshot.
 {{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Db<wbr>Snapshot<wbr>Identifier</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -662,22 +646,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Include<wbr>Public</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Include<wbr>Shared</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Iops</span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
@@ -705,14 +673,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Most<wbr>Recent</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Option<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -736,14 +696,6 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Provides the time when the snapshot was taken, in Universal Coordinated Time (UTC).
 {{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Snapshot<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -790,6 +742,54 @@ The following output properties are available:
     <dd>{{% md %}}Specifies the ID of the VPC associated with the DB snapshot.
 {{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span>Db<wbr>Instance<wbr>Identifier</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Db<wbr>Snapshot<wbr>Identifier</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Include<wbr>Public</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Include<wbr>Shared</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Most<wbr>Recent</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Snapshot<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -817,28 +817,12 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>db<wbr>Instance<wbr>Identifier</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>db<wbr>Snapshot<wbr>Arn</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) for the DB snapshot.
 {{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>db<wbr>Snapshot<wbr>Identifier</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -878,22 +862,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>include<wbr>Public</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>include<wbr>Shared</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>iops</span>
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
@@ -921,14 +889,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>most<wbr>Recent</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>option<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -952,14 +912,6 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Provides the time when the snapshot was taken, in Universal Coordinated Time (UTC).
 {{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>snapshot<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1006,6 +958,54 @@ The following output properties are available:
     <dd>{{% md %}}Specifies the ID of the VPC associated with the DB snapshot.
 {{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span>db<wbr>Instance<wbr>Identifier</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>db<wbr>Snapshot<wbr>Identifier</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>include<wbr>Public</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>include<wbr>Shared</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>most<wbr>Recent</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>snapshot<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -1033,28 +1033,12 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>db_<wbr>instance_<wbr>identifier</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>db_<wbr>snapshot_<wbr>arn</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) for the DB snapshot.
 {{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>db_<wbr>snapshot_<wbr>identifier</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1094,22 +1078,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>include_<wbr>public</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>include_<wbr>shared</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>iops</span>
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
@@ -1137,14 +1105,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>most_<wbr>recent</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>option_<wbr>group_<wbr>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -1168,14 +1128,6 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Provides the time when the snapshot was taken, in Universal Coordinated Time (UTC).
 {{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>snapshot_<wbr>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1221,6 +1173,54 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies the ID of the VPC associated with the DB snapshot.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>db_<wbr>instance_<wbr>identifier</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>db_<wbr>snapshot_<wbr>identifier</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>include_<wbr>public</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>include_<wbr>shared</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>most_<wbr>recent</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>snapshot_<wbr>type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

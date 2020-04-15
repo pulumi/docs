@@ -19,7 +19,7 @@ Provides a EMR Cluster resource. With this you can create, read, and release  EM
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/emr/#Cluster">Cluster</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/emr/#ClusterArgs">ClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/emr/#Cluster">Cluster</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/emr/#ClusterArgs">ClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -27,11 +27,11 @@ Provides a EMR Cluster resource. With this you can create, read, and release  EM
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewCluster<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/emr?tab=doc#ClusterArgs">ClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/emr?tab=doc#Cluster">Cluster</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewCluster<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/emr?tab=doc#ClusterArgs">ClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/emr?tab=doc#Cluster">Cluster</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.Emr.Cluster.html">Cluster</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.Emr.ClusterArgs.html">ClusterArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.Emr.Cluster.html">Cluster</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.AliCloud.Emr.ClusterArgs.html">ClusterArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -123,23 +123,6 @@ Provides a EMR Cluster resource. With this you can create, read, and release  EM
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Bootstrap<wbr>Actions</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterbootstrapaction">List&lt;Cluster<wbr>Bootstrap<wbr>Action<wbr>Args&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Charge<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Charge Type for this group of hosts: PostPaid or PrePaid. If this is not specified, charge type will follow global charge_type value.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Cluster<wbr>Type</span>
@@ -149,22 +132,6 @@ Provides a EMR Cluster resource. With this you can create, read, and release  EM
     <dd>{{% md %}}EMR Cluster Type, e.g. HADOOP, KAFKA, DRUID, GATEWAY etc. You can find all valid EMR cluster type in emr web console. Supported 'GATEWAY' available in 1.61.0+.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Deposit<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Eas<wbr>Enable</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Emr<wbr>Ver</span>
@@ -173,121 +140,6 @@ Provides a EMR Cluster resource. With this you can create, read, and release  EM
     </dt>
     <dd>{{% md %}}EMR Version, e.g. EMR-3.22.0. You can find the all valid EMR Version in emr web console.
 {{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>High<wbr>Availability<wbr>Enable</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Host<wbr>Groups</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterhostgroup">List&lt;Cluster<wbr>Host<wbr>Group<wbr>Args&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}Groups of Host, You can specify MASTER as a group, CORE as a group (just like the above example).
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Is<wbr>Open<wbr>Public<wbr>Ip</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Key<wbr>Pair<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Master<wbr>Pwd</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}bootstrap action name.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Option<wbr>Software<wbr>Lists</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Related<wbr>Cluster<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Security<wbr>Group<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Ssh<wbr>Enable</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Use<wbr>Local<wbr>Metadb</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>User<wbr>Defined<wbr>Emr<wbr>Ecs<wbr>Role</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Vswitch<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -310,12 +162,199 @@ Provides a EMR Cluster resource. With this you can create, read, and release  EM
 * `related_cluster_id` (Optional, ForceNew) This specify the related cluster id, if this cluster is a Gateway.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>Bootstrap<wbr>Actions</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterbootstrapaction">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Emr.<wbr>Inputs.<wbr>Cluster<wbr>Bootstrap<wbr>Action<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Charge<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Charge Type for this group of hosts: PostPaid or PrePaid. If this is not specified, charge type will follow global charge_type value.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Deposit<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Eas<wbr>Enable</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>High<wbr>Availability<wbr>Enable</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Host<wbr>Groups</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterhostgroup">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Emr.<wbr>Inputs.<wbr>Cluster<wbr>Host<wbr>Group<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Groups of Host, You can specify MASTER as a group, CORE as a group (just like the above example).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Is<wbr>Open<wbr>Public<wbr>Ip</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Key<wbr>Pair<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Master<wbr>Pwd</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}bootstrap action name.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Option<wbr>Software<wbr>Lists</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Related<wbr>Cluster<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Security<wbr>Group<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Ssh<wbr>Enable</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+    </dt>
+    <dd>{{% md %}}A mapping of tags to assign to the resource.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Use<wbr>Local<wbr>Metadb</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>User<wbr>Defined<wbr>Emr<wbr>Ecs<wbr>Role</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Vswitch<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Cluster<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}EMR Cluster Type, e.g. HADOOP, KAFKA, DRUID, GATEWAY etc. You can find all valid EMR cluster type in emr web console. Supported 'GATEWAY' available in 1.61.0+.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Emr<wbr>Ver</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}EMR Version, e.g. EMR-3.22.0. You can find the all valid EMR Version in emr web console.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Zone<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Zone ID, e.g. cn-huhehaote-a
+* `security_group_id` (Optional, ForceNew) Security Group ID for Cluster, you can also specify this key for each host group.
+* `vswitch_id` (Optional, ForceNew) Global vswitch id, you can also specify it in host group.
+* `option_software_list` (Optional, ForceNew) Optional software list.
+* `high_availability_enable` (Optional, ForceNew) High Available for HDFS and YARN. If this is set true, MASTER group must have two nodes.
+* `use_local_metadb` (Optional, ForceNew) Use local metadb. Default is false.
+* `ssh_enable` (Optional, ForceNew) If this is set true, we can ssh into cluster. Default value is false.
+* `master_pwd` (Optional, ForceNew) Master ssh password.
+* `eas_enable` (Optional, ForceNew) High security cluster (true) or not. Default value is false.
+* `user_defined_emr_ecs_role` (Optional, ForceNew) Alicloud EMR uses roles to perform actions on your behalf when provisioning cluster resources, running applications, dynamically scaling resources. EMR uses the following roles when interacting with other Alicloud services. Default value is AliyunEmrEcsDefaultRole.
+* `key_pair_name` (Optional, ForceNew) Ssh key pair.
+* `deposit_type` (Optional, ForceNew) Cluster deposit type, HALF_MANAGED or FULL_MANAGED.
+* `related_cluster_id` (Optional, ForceNew) This specify the related cluster id, if this cluster is a Gateway.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -329,25 +368,16 @@ Provides a EMR Cluster resource. With this you can create, read, and release  EM
             title="Optional">
         <span>Charge<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Charge Type for this group of hosts: PostPaid or PrePaid. If this is not specified, charge type will follow global charge_type value.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Cluster<wbr>Type</span>
-        <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}EMR Cluster Type, e.g. HADOOP, KAFKA, DRUID, GATEWAY etc. You can find all valid EMR cluster type in emr web console. Supported 'GATEWAY' available in 1.61.0+.
+    <dd>{{% md %}}Charge Type for this group of hosts: PostPaid or PrePaid. If this is not specified, charge type will follow global charge_type value.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Deposit<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -355,24 +385,15 @@ Provides a EMR Cluster resource. With this you can create, read, and release  EM
             title="Optional">
         <span>Eas<wbr>Enable</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Emr<wbr>Ver</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}EMR Version, e.g. EMR-3.22.0. You can find the all valid EMR Version in emr web console.
-{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>High<wbr>Availability<wbr>Enable</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -389,7 +410,7 @@ Provides a EMR Cluster resource. With this you can create, read, and release  EM
             title="Optional">
         <span>Is<wbr>Open<wbr>Public<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -397,7 +418,7 @@ Provides a EMR Cluster resource. With this you can create, read, and release  EM
             title="Optional">
         <span>Key<wbr>Pair<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -405,7 +426,7 @@ Provides a EMR Cluster resource. With this you can create, read, and release  EM
             title="Optional">
         <span>Master<wbr>Pwd</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -413,7 +434,7 @@ Provides a EMR Cluster resource. With this you can create, read, and release  EM
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}bootstrap action name.
 {{% /md %}}</dd>
@@ -430,7 +451,7 @@ Provides a EMR Cluster resource. With this you can create, read, and release  EM
             title="Optional">
         <span>Related<wbr>Cluster<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -438,7 +459,7 @@ Provides a EMR Cluster resource. With this you can create, read, and release  EM
             title="Optional">
         <span>Security<wbr>Group<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -446,7 +467,7 @@ Provides a EMR Cluster resource. With this you can create, read, and release  EM
             title="Optional">
         <span>Ssh<wbr>Enable</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -463,7 +484,7 @@ Provides a EMR Cluster resource. With this you can create, read, and release  EM
             title="Optional">
         <span>Use<wbr>Local<wbr>Metadb</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -471,7 +492,7 @@ Provides a EMR Cluster resource. With this you can create, read, and release  EM
             title="Optional">
         <span>User<wbr>Defined<wbr>Emr<wbr>Ecs<wbr>Role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -479,30 +500,9 @@ Provides a EMR Cluster resource. With this you can create, read, and release  EM
             title="Optional">
         <span>Vswitch<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Zone<wbr>Id</span>
-        <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Zone ID, e.g. cn-huhehaote-a
-* `security_group_id` (Optional, ForceNew) Security Group ID for Cluster, you can also specify this key for each host group.
-* `vswitch_id` (Optional, ForceNew) Global vswitch id, you can also specify it in host group.
-* `option_software_list` (Optional, ForceNew) Optional software list.
-* `high_availability_enable` (Optional, ForceNew) High Available for HDFS and YARN. If this is set true, MASTER group must have two nodes.
-* `use_local_metadb` (Optional, ForceNew) Use local metadb. Default is false.
-* `ssh_enable` (Optional, ForceNew) If this is set true, we can ssh into cluster. Default value is false.
-* `master_pwd` (Optional, ForceNew) Master ssh password.
-* `eas_enable` (Optional, ForceNew) High security cluster (true) or not. Default value is false.
-* `user_defined_emr_ecs_role` (Optional, ForceNew) Alicloud EMR uses roles to perform actions on your behalf when provisioning cluster resources, running applications, dynamically scaling resources. EMR uses the following roles when interacting with other Alicloud services. Default value is AliyunEmrEcsDefaultRole.
-* `key_pair_name` (Optional, ForceNew) Ssh key pair.
-* `deposit_type` (Optional, ForceNew) Cluster deposit type, HALF_MANAGED or FULL_MANAGED.
-* `related_cluster_id` (Optional, ForceNew) This specify the related cluster id, if this cluster is a Gateway.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -510,23 +510,6 @@ Provides a EMR Cluster resource. With this you can create, read, and release  EM
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>bootstrap<wbr>Actions</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterbootstrapaction">Cluster<wbr>Bootstrap<wbr>Action[]?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>charge<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Charge Type for this group of hosts: PostPaid or PrePaid. If this is not specified, charge type will follow global charge_type value.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -537,22 +520,6 @@ Provides a EMR Cluster resource. With this you can create, read, and release  EM
     <dd>{{% md %}}EMR Cluster Type, e.g. HADOOP, KAFKA, DRUID, GATEWAY etc. You can find all valid EMR cluster type in emr web console. Supported 'GATEWAY' available in 1.61.0+.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>deposit<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>eas<wbr>Enable</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>emr<wbr>Ver</span>
@@ -561,121 +528,6 @@ Provides a EMR Cluster resource. With this you can create, read, and release  EM
     </dt>
     <dd>{{% md %}}EMR Version, e.g. EMR-3.22.0. You can find the all valid EMR Version in emr web console.
 {{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>high<wbr>Availability<wbr>Enable</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>host<wbr>Groups</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterhostgroup">Cluster<wbr>Host<wbr>Group[]?</a></span>
-    </dt>
-    <dd>{{% md %}}Groups of Host, You can specify MASTER as a group, CORE as a group (just like the above example).
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>is<wbr>Open<wbr>Public<wbr>Ip</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>key<wbr>Pair<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>master<wbr>Pwd</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}bootstrap action name.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>option<wbr>Software<wbr>Lists</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>related<wbr>Cluster<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>security<wbr>Group<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>ssh<wbr>Enable</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>use<wbr>Local<wbr>Metadb</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>user<wbr>Defined<wbr>Emr<wbr>Ecs<wbr>Role</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>vswitch<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -698,12 +550,199 @@ Provides a EMR Cluster resource. With this you can create, read, and release  EM
 * `related_cluster_id` (Optional, ForceNew) This specify the related cluster id, if this cluster is a Gateway.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>bootstrap<wbr>Actions</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterbootstrapaction">Cluster<wbr>Bootstrap<wbr>Action[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>charge<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Charge Type for this group of hosts: PostPaid or PrePaid. If this is not specified, charge type will follow global charge_type value.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>deposit<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>eas<wbr>Enable</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>high<wbr>Availability<wbr>Enable</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>host<wbr>Groups</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clusterhostgroup">Cluster<wbr>Host<wbr>Group[]</a></span>
+    </dt>
+    <dd>{{% md %}}Groups of Host, You can specify MASTER as a group, CORE as a group (just like the above example).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>is<wbr>Open<wbr>Public<wbr>Ip</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>key<wbr>Pair<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>master<wbr>Pwd</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}bootstrap action name.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>option<wbr>Software<wbr>Lists</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>related<wbr>Cluster<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>security<wbr>Group<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>ssh<wbr>Enable</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}</span>
+    </dt>
+    <dd>{{% md %}}A mapping of tags to assign to the resource.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>use<wbr>Local<wbr>Metadb</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>user<wbr>Defined<wbr>Emr<wbr>Ecs<wbr>Role</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>vswitch<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>cluster_<wbr>type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}EMR Cluster Type, e.g. HADOOP, KAFKA, DRUID, GATEWAY etc. You can find all valid EMR cluster type in emr web console. Supported 'GATEWAY' available in 1.61.0+.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>emr_<wbr>ver</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}EMR Version, e.g. EMR-3.22.0. You can find the all valid EMR Version in emr web console.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>zone_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Zone ID, e.g. cn-huhehaote-a
+* `security_group_id` (Optional, ForceNew) Security Group ID for Cluster, you can also specify this key for each host group.
+* `vswitch_id` (Optional, ForceNew) Global vswitch id, you can also specify it in host group.
+* `option_software_list` (Optional, ForceNew) Optional software list.
+* `high_availability_enable` (Optional, ForceNew) High Available for HDFS and YARN. If this is set true, MASTER group must have two nodes.
+* `use_local_metadb` (Optional, ForceNew) Use local metadb. Default is false.
+* `ssh_enable` (Optional, ForceNew) If this is set true, we can ssh into cluster. Default value is false.
+* `master_pwd` (Optional, ForceNew) Master ssh password.
+* `eas_enable` (Optional, ForceNew) High security cluster (true) or not. Default value is false.
+* `user_defined_emr_ecs_role` (Optional, ForceNew) Alicloud EMR uses roles to perform actions on your behalf when provisioning cluster resources, running applications, dynamically scaling resources. EMR uses the following roles when interacting with other Alicloud services. Default value is AliyunEmrEcsDefaultRole.
+* `key_pair_name` (Optional, ForceNew) Ssh key pair.
+* `deposit_type` (Optional, ForceNew) Cluster deposit type, HALF_MANAGED or FULL_MANAGED.
+* `related_cluster_id` (Optional, ForceNew) This specify the related cluster id, if this cluster is a Gateway.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -722,15 +761,6 @@ Provides a EMR Cluster resource. With this you can create, read, and release  EM
     <dd>{{% md %}}Charge Type for this group of hosts: PostPaid or PrePaid. If this is not specified, charge type will follow global charge_type value.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>cluster_<wbr>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}EMR Cluster Type, e.g. HADOOP, KAFKA, DRUID, GATEWAY etc. You can find all valid EMR cluster type in emr web console. Supported 'GATEWAY' available in 1.61.0+.
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>deposit_<wbr>type</span>
@@ -746,15 +776,6 @@ Provides a EMR Cluster resource. With this you can create, read, and release  EM
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>emr_<wbr>ver</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}EMR Version, e.g. EMR-3.22.0. You can find the all valid EMR Version in emr web console.
-{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -871,817 +892,10 @@ Provides a EMR Cluster resource. With this you can create, read, and release  EM
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>zone_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Zone ID, e.g. cn-huhehaote-a
-* `security_group_id` (Optional, ForceNew) Security Group ID for Cluster, you can also specify this key for each host group.
-* `vswitch_id` (Optional, ForceNew) Global vswitch id, you can also specify it in host group.
-* `option_software_list` (Optional, ForceNew) Optional software list.
-* `high_availability_enable` (Optional, ForceNew) High Available for HDFS and YARN. If this is set true, MASTER group must have two nodes.
-* `use_local_metadb` (Optional, ForceNew) Use local metadb. Default is false.
-* `ssh_enable` (Optional, ForceNew) If this is set true, we can ssh into cluster. Default value is false.
-* `master_pwd` (Optional, ForceNew) Master ssh password.
-* `eas_enable` (Optional, ForceNew) High security cluster (true) or not. Default value is false.
-* `user_defined_emr_ecs_role` (Optional, ForceNew) Alicloud EMR uses roles to perform actions on your behalf when provisioning cluster resources, running applications, dynamically scaling resources. EMR uses the following roles when interacting with other Alicloud services. Default value is AliyunEmrEcsDefaultRole.
-* `key_pair_name` (Optional, ForceNew) Ssh key pair.
-* `deposit_type` (Optional, ForceNew) Cluster deposit type, HALF_MANAGED or FULL_MANAGED.
-* `related_cluster_id` (Optional, ForceNew) This specify the related cluster id, if this cluster is a Gateway.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
-
-
-
-
-
-## Cluster Output Properties
-
-The following output properties are available:
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Bootstrap<wbr>Actions</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterbootstrapaction">List&lt;Cluster<wbr>Bootstrap<wbr>Action&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Charge<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Charge Type for this group of hosts: PostPaid or PrePaid. If this is not specified, charge type will follow global charge_type value.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Cluster<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}EMR Cluster Type, e.g. HADOOP, KAFKA, DRUID, GATEWAY etc. You can find all valid EMR cluster type in emr web console. Supported 'GATEWAY' available in 1.61.0+.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Deposit<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Eas<wbr>Enable</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Emr<wbr>Ver</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}EMR Version, e.g. EMR-3.22.0. You can find the all valid EMR Version in emr web console.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>High<wbr>Availability<wbr>Enable</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Host<wbr>Groups</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterhostgroup">List&lt;Cluster<wbr>Host<wbr>Group&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}Groups of Host, You can specify MASTER as a group, CORE as a group (just like the above example).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Is<wbr>Open<wbr>Public<wbr>Ip</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Key<wbr>Pair<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Master<wbr>Pwd</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}bootstrap action name.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Option<wbr>Software<wbr>Lists</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Related<wbr>Cluster<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Security<wbr>Group<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Ssh<wbr>Enable</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Use<wbr>Local<wbr>Metadb</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>User<wbr>Defined<wbr>Emr<wbr>Ecs<wbr>Role</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Vswitch<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Zone<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Zone ID, e.g. cn-huhehaote-a
-* `security_group_id` (Optional, ForceNew) Security Group ID for Cluster, you can also specify this key for each host group.
-* `vswitch_id` (Optional, ForceNew) Global vswitch id, you can also specify it in host group.
-* `option_software_list` (Optional, ForceNew) Optional software list.
-* `high_availability_enable` (Optional, ForceNew) High Available for HDFS and YARN. If this is set true, MASTER group must have two nodes.
-* `use_local_metadb` (Optional, ForceNew) Use local metadb. Default is false.
-* `ssh_enable` (Optional, ForceNew) If this is set true, we can ssh into cluster. Default value is false.
-* `master_pwd` (Optional, ForceNew) Master ssh password.
-* `eas_enable` (Optional, ForceNew) High security cluster (true) or not. Default value is false.
-* `user_defined_emr_ecs_role` (Optional, ForceNew) Alicloud EMR uses roles to perform actions on your behalf when provisioning cluster resources, running applications, dynamically scaling resources. EMR uses the following roles when interacting with other Alicloud services. Default value is AliyunEmrEcsDefaultRole.
-* `key_pair_name` (Optional, ForceNew) Ssh key pair.
-* `deposit_type` (Optional, ForceNew) Cluster deposit type, HALF_MANAGED or FULL_MANAGED.
-* `related_cluster_id` (Optional, ForceNew) This specify the related cluster id, if this cluster is a Gateway.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Bootstrap<wbr>Actions</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterbootstrapaction">[]Cluster<wbr>Bootstrap<wbr>Action</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Charge<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Charge Type for this group of hosts: PostPaid or PrePaid. If this is not specified, charge type will follow global charge_type value.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Cluster<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}EMR Cluster Type, e.g. HADOOP, KAFKA, DRUID, GATEWAY etc. You can find all valid EMR cluster type in emr web console. Supported 'GATEWAY' available in 1.61.0+.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Deposit<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Eas<wbr>Enable</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Emr<wbr>Ver</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}EMR Version, e.g. EMR-3.22.0. You can find the all valid EMR Version in emr web console.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>High<wbr>Availability<wbr>Enable</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Host<wbr>Groups</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterhostgroup">[]Cluster<wbr>Host<wbr>Group</a></span>
-    </dt>
-    <dd>{{% md %}}Groups of Host, You can specify MASTER as a group, CORE as a group (just like the above example).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Is<wbr>Open<wbr>Public<wbr>Ip</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Key<wbr>Pair<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Master<wbr>Pwd</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}bootstrap action name.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Option<wbr>Software<wbr>Lists</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Related<wbr>Cluster<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Security<wbr>Group<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Ssh<wbr>Enable</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Use<wbr>Local<wbr>Metadb</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>User<wbr>Defined<wbr>Emr<wbr>Ecs<wbr>Role</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Vswitch<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Zone<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Zone ID, e.g. cn-huhehaote-a
-* `security_group_id` (Optional, ForceNew) Security Group ID for Cluster, you can also specify this key for each host group.
-* `vswitch_id` (Optional, ForceNew) Global vswitch id, you can also specify it in host group.
-* `option_software_list` (Optional, ForceNew) Optional software list.
-* `high_availability_enable` (Optional, ForceNew) High Available for HDFS and YARN. If this is set true, MASTER group must have two nodes.
-* `use_local_metadb` (Optional, ForceNew) Use local metadb. Default is false.
-* `ssh_enable` (Optional, ForceNew) If this is set true, we can ssh into cluster. Default value is false.
-* `master_pwd` (Optional, ForceNew) Master ssh password.
-* `eas_enable` (Optional, ForceNew) High security cluster (true) or not. Default value is false.
-* `user_defined_emr_ecs_role` (Optional, ForceNew) Alicloud EMR uses roles to perform actions on your behalf when provisioning cluster resources, running applications, dynamically scaling resources. EMR uses the following roles when interacting with other Alicloud services. Default value is AliyunEmrEcsDefaultRole.
-* `key_pair_name` (Optional, ForceNew) Ssh key pair.
-* `deposit_type` (Optional, ForceNew) Cluster deposit type, HALF_MANAGED or FULL_MANAGED.
-* `related_cluster_id` (Optional, ForceNew) This specify the related cluster id, if this cluster is a Gateway.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>bootstrap<wbr>Actions</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterbootstrapaction">Cluster<wbr>Bootstrap<wbr>Action[]?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>charge<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Charge Type for this group of hosts: PostPaid or PrePaid. If this is not specified, charge type will follow global charge_type value.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>cluster<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}EMR Cluster Type, e.g. HADOOP, KAFKA, DRUID, GATEWAY etc. You can find all valid EMR cluster type in emr web console. Supported 'GATEWAY' available in 1.61.0+.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>deposit<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>eas<wbr>Enable</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>emr<wbr>Ver</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}EMR Version, e.g. EMR-3.22.0. You can find the all valid EMR Version in emr web console.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>high<wbr>Availability<wbr>Enable</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>host<wbr>Groups</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterhostgroup">Cluster<wbr>Host<wbr>Group[]?</a></span>
-    </dt>
-    <dd>{{% md %}}Groups of Host, You can specify MASTER as a group, CORE as a group (just like the above example).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>is<wbr>Open<wbr>Public<wbr>Ip</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>key<wbr>Pair<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>master<wbr>Pwd</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}bootstrap action name.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>option<wbr>Software<wbr>Lists</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>related<wbr>Cluster<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>security<wbr>Group<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>ssh<wbr>Enable</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>use<wbr>Local<wbr>Metadb</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>user<wbr>Defined<wbr>Emr<wbr>Ecs<wbr>Role</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>vswitch<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>zone<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Zone ID, e.g. cn-huhehaote-a
-* `security_group_id` (Optional, ForceNew) Security Group ID for Cluster, you can also specify this key for each host group.
-* `vswitch_id` (Optional, ForceNew) Global vswitch id, you can also specify it in host group.
-* `option_software_list` (Optional, ForceNew) Optional software list.
-* `high_availability_enable` (Optional, ForceNew) High Available for HDFS and YARN. If this is set true, MASTER group must have two nodes.
-* `use_local_metadb` (Optional, ForceNew) Use local metadb. Default is false.
-* `ssh_enable` (Optional, ForceNew) If this is set true, we can ssh into cluster. Default value is false.
-* `master_pwd` (Optional, ForceNew) Master ssh password.
-* `eas_enable` (Optional, ForceNew) High security cluster (true) or not. Default value is false.
-* `user_defined_emr_ecs_role` (Optional, ForceNew) Alicloud EMR uses roles to perform actions on your behalf when provisioning cluster resources, running applications, dynamically scaling resources. EMR uses the following roles when interacting with other Alicloud services. Default value is AliyunEmrEcsDefaultRole.
-* `key_pair_name` (Optional, ForceNew) Ssh key pair.
-* `deposit_type` (Optional, ForceNew) Cluster deposit type, HALF_MANAGED or FULL_MANAGED.
-* `related_cluster_id` (Optional, ForceNew) This specify the related cluster id, if this cluster is a Gateway.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>bootstrap_<wbr>actions</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterbootstrapaction">List[Cluster<wbr>Bootstrap<wbr>Action]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>charge_<wbr>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Charge Type for this group of hosts: PostPaid or PrePaid. If this is not specified, charge type will follow global charge_type value.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>cluster_<wbr>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}EMR Cluster Type, e.g. HADOOP, KAFKA, DRUID, GATEWAY etc. You can find all valid EMR cluster type in emr web console. Supported 'GATEWAY' available in 1.61.0+.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>deposit_<wbr>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>eas_<wbr>enable</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>emr_<wbr>ver</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}EMR Version, e.g. EMR-3.22.0. You can find the all valid EMR Version in emr web console.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>high_<wbr>availability_<wbr>enable</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>host_<wbr>groups</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterhostgroup">List[Cluster<wbr>Host<wbr>Group]</a></span>
-    </dt>
-    <dd>{{% md %}}Groups of Host, You can specify MASTER as a group, CORE as a group (just like the above example).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>is_<wbr>open_<wbr>public_<wbr>ip</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>key_<wbr>pair_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>master_<wbr>pwd</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}bootstrap action name.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>option_<wbr>software_<wbr>lists</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>related_<wbr>cluster_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>security_<wbr>group_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>ssh_<wbr>enable</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>use_<wbr>local_<wbr>metadb</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>user_<wbr>defined_<wbr>emr_<wbr>ecs_<wbr>role</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>vswitch_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>zone_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Zone ID, e.g. cn-huhehaote-a
-* `security_group_id` (Optional, ForceNew) Security Group ID for Cluster, you can also specify this key for each host group.
-* `vswitch_id` (Optional, ForceNew) Global vswitch id, you can also specify it in host group.
-* `option_software_list` (Optional, ForceNew) Optional software list.
-* `high_availability_enable` (Optional, ForceNew) High Available for HDFS and YARN. If this is set true, MASTER group must have two nodes.
-* `use_local_metadb` (Optional, ForceNew) Use local metadb. Default is false.
-* `ssh_enable` (Optional, ForceNew) If this is set true, we can ssh into cluster. Default value is false.
-* `master_pwd` (Optional, ForceNew) Master ssh password.
-* `eas_enable` (Optional, ForceNew) High security cluster (true) or not. Default value is false.
-* `user_defined_emr_ecs_role` (Optional, ForceNew) Alicloud EMR uses roles to perform actions on your behalf when provisioning cluster resources, running applications, dynamically scaling resources. EMR uses the following roles when interacting with other Alicloud services. Default value is AliyunEmrEcsDefaultRole.
-* `key_pair_name` (Optional, ForceNew) Ssh key pair.
-* `deposit_type` (Optional, ForceNew) Cluster deposit type, HALF_MANAGED or FULL_MANAGED.
-* `related_cluster_id` (Optional, ForceNew) This specify the related cluster id, if this cluster is a Gateway.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
 
 
 
@@ -1819,7 +1033,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Bootstrap<wbr>Actions</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterbootstrapaction">List&lt;Cluster<wbr>Bootstrap<wbr>Action<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#clusterbootstrapaction">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Emr.<wbr>Inputs.<wbr>Cluster<wbr>Bootstrap<wbr>Action<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1827,7 +1041,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Charge<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Charge Type for this group of hosts: PostPaid or PrePaid. If this is not specified, charge type will follow global charge_type value.
 {{% /md %}}</dd>
@@ -1836,7 +1050,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Cluster<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}EMR Cluster Type, e.g. HADOOP, KAFKA, DRUID, GATEWAY etc. You can find all valid EMR cluster type in emr web console. Supported 'GATEWAY' available in 1.61.0+.
 {{% /md %}}</dd>
@@ -1845,7 +1059,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Deposit<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1853,7 +1067,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Eas<wbr>Enable</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1861,7 +1075,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Emr<wbr>Ver</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}EMR Version, e.g. EMR-3.22.0. You can find the all valid EMR Version in emr web console.
 {{% /md %}}</dd>
@@ -1870,7 +1084,7 @@ The following state arguments are supported:
             title="Optional">
         <span>High<wbr>Availability<wbr>Enable</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1878,7 +1092,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Host<wbr>Groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterhostgroup">List&lt;Cluster<wbr>Host<wbr>Group<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#clusterhostgroup">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Emr.<wbr>Inputs.<wbr>Cluster<wbr>Host<wbr>Group<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Groups of Host, You can specify MASTER as a group, CORE as a group (just like the above example).
 {{% /md %}}</dd>
@@ -1887,7 +1101,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Is<wbr>Open<wbr>Public<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1895,7 +1109,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Key<wbr>Pair<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1903,7 +1117,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Master<wbr>Pwd</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1911,7 +1125,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}bootstrap action name.
 {{% /md %}}</dd>
@@ -1920,7 +1134,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Option<wbr>Software<wbr>Lists</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1928,7 +1142,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Related<wbr>Cluster<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1936,7 +1150,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Security<wbr>Group<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1944,7 +1158,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Ssh<wbr>Enable</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1952,7 +1166,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1961,7 +1175,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Use<wbr>Local<wbr>Metadb</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1969,7 +1183,7 @@ The following state arguments are supported:
             title="Optional">
         <span>User<wbr>Defined<wbr>Emr<wbr>Ecs<wbr>Role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1977,7 +1191,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Vswitch<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1985,7 +1199,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Zone<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Zone ID, e.g. cn-huhehaote-a
 * `security_group_id` (Optional, ForceNew) Security Group ID for Cluster, you can also specify this key for each host group.
@@ -2021,7 +1235,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Charge<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Charge Type for this group of hosts: PostPaid or PrePaid. If this is not specified, charge type will follow global charge_type value.
 {{% /md %}}</dd>
@@ -2030,7 +1244,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Cluster<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}EMR Cluster Type, e.g. HADOOP, KAFKA, DRUID, GATEWAY etc. You can find all valid EMR cluster type in emr web console. Supported 'GATEWAY' available in 1.61.0+.
 {{% /md %}}</dd>
@@ -2039,7 +1253,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Deposit<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2047,7 +1261,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Eas<wbr>Enable</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2055,7 +1269,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Emr<wbr>Ver</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}EMR Version, e.g. EMR-3.22.0. You can find the all valid EMR Version in emr web console.
 {{% /md %}}</dd>
@@ -2064,7 +1278,7 @@ The following state arguments are supported:
             title="Optional">
         <span>High<wbr>Availability<wbr>Enable</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2081,7 +1295,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Is<wbr>Open<wbr>Public<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2089,7 +1303,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Key<wbr>Pair<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2097,7 +1311,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Master<wbr>Pwd</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2105,7 +1319,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}bootstrap action name.
 {{% /md %}}</dd>
@@ -2122,7 +1336,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Related<wbr>Cluster<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2130,7 +1344,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Security<wbr>Group<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2138,7 +1352,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Ssh<wbr>Enable</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2155,7 +1369,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Use<wbr>Local<wbr>Metadb</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2163,7 +1377,7 @@ The following state arguments are supported:
             title="Optional">
         <span>User<wbr>Defined<wbr>Emr<wbr>Ecs<wbr>Role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2171,7 +1385,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Vswitch<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2179,7 +1393,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Zone<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Zone ID, e.g. cn-huhehaote-a
 * `security_group_id` (Optional, ForceNew) Security Group ID for Cluster, you can also specify this key for each host group.
@@ -2207,7 +1421,7 @@ The following state arguments are supported:
             title="Optional">
         <span>bootstrap<wbr>Actions</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterbootstrapaction">Cluster<wbr>Bootstrap<wbr>Action[]?</a></span>
+        <span class="property-type"><a href="#clusterbootstrapaction">Cluster<wbr>Bootstrap<wbr>Action[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2215,7 +1429,7 @@ The following state arguments are supported:
             title="Optional">
         <span>charge<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Charge Type for this group of hosts: PostPaid or PrePaid. If this is not specified, charge type will follow global charge_type value.
 {{% /md %}}</dd>
@@ -2224,7 +1438,7 @@ The following state arguments are supported:
             title="Optional">
         <span>cluster<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}EMR Cluster Type, e.g. HADOOP, KAFKA, DRUID, GATEWAY etc. You can find all valid EMR cluster type in emr web console. Supported 'GATEWAY' available in 1.61.0+.
 {{% /md %}}</dd>
@@ -2233,7 +1447,7 @@ The following state arguments are supported:
             title="Optional">
         <span>deposit<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2241,7 +1455,7 @@ The following state arguments are supported:
             title="Optional">
         <span>eas<wbr>Enable</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2249,7 +1463,7 @@ The following state arguments are supported:
             title="Optional">
         <span>emr<wbr>Ver</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}EMR Version, e.g. EMR-3.22.0. You can find the all valid EMR Version in emr web console.
 {{% /md %}}</dd>
@@ -2258,7 +1472,7 @@ The following state arguments are supported:
             title="Optional">
         <span>high<wbr>Availability<wbr>Enable</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2266,7 +1480,7 @@ The following state arguments are supported:
             title="Optional">
         <span>host<wbr>Groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterhostgroup">Cluster<wbr>Host<wbr>Group[]?</a></span>
+        <span class="property-type"><a href="#clusterhostgroup">Cluster<wbr>Host<wbr>Group[]</a></span>
     </dt>
     <dd>{{% md %}}Groups of Host, You can specify MASTER as a group, CORE as a group (just like the above example).
 {{% /md %}}</dd>
@@ -2275,7 +1489,7 @@ The following state arguments are supported:
             title="Optional">
         <span>is<wbr>Open<wbr>Public<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2283,7 +1497,7 @@ The following state arguments are supported:
             title="Optional">
         <span>key<wbr>Pair<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2291,7 +1505,7 @@ The following state arguments are supported:
             title="Optional">
         <span>master<wbr>Pwd</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2299,7 +1513,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}bootstrap action name.
 {{% /md %}}</dd>
@@ -2308,7 +1522,7 @@ The following state arguments are supported:
             title="Optional">
         <span>option<wbr>Software<wbr>Lists</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2316,7 +1530,7 @@ The following state arguments are supported:
             title="Optional">
         <span>related<wbr>Cluster<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2324,7 +1538,7 @@ The following state arguments are supported:
             title="Optional">
         <span>security<wbr>Group<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2332,7 +1546,7 @@ The following state arguments are supported:
             title="Optional">
         <span>ssh<wbr>Enable</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2340,7 +1554,7 @@ The following state arguments are supported:
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -2349,7 +1563,7 @@ The following state arguments are supported:
             title="Optional">
         <span>use<wbr>Local<wbr>Metadb</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2357,7 +1571,7 @@ The following state arguments are supported:
             title="Optional">
         <span>user<wbr>Defined<wbr>Emr<wbr>Ecs<wbr>Role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2365,7 +1579,7 @@ The following state arguments are supported:
             title="Optional">
         <span>vswitch<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2373,7 +1587,7 @@ The following state arguments are supported:
             title="Optional">
         <span>zone<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Zone ID, e.g. cn-huhehaote-a
 * `security_group_id` (Optional, ForceNew) Security Group ID for Cluster, you can also specify this key for each host group.
@@ -2617,7 +1831,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Arg</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}bootstrap action args, e.g. "--a=b".
 {{% /md %}}</dd>
@@ -2626,7 +1840,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}bootstrap action name.
 {{% /md %}}</dd>
@@ -2635,7 +1849,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}bootstrap action path, e.g. "oss://bucket/path".
 {{% /md %}}</dd>
@@ -2651,7 +1865,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Arg</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}bootstrap action args, e.g. "--a=b".
 {{% /md %}}</dd>
@@ -2660,7 +1874,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}bootstrap action name.
 {{% /md %}}</dd>
@@ -2669,7 +1883,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}bootstrap action path, e.g. "oss://bucket/path".
 {{% /md %}}</dd>
@@ -2685,7 +1899,7 @@ The following state arguments are supported:
             title="Optional">
         <span>arg</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}bootstrap action args, e.g. "--a=b".
 {{% /md %}}</dd>
@@ -2694,7 +1908,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}bootstrap action name.
 {{% /md %}}</dd>
@@ -2703,7 +1917,7 @@ The following state arguments are supported:
             title="Optional">
         <span>path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}bootstrap action path, e.g. "oss://bucket/path".
 {{% /md %}}</dd>
@@ -2768,7 +1982,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Auto<wbr>Renew</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Auto renew for prepaid, true of false. Default is false.
 {{% /md %}}</dd>
@@ -2777,7 +1991,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Charge<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Charge Type for this group of hosts: PostPaid or PrePaid. If this is not specified, charge type will follow global charge_type value.
 {{% /md %}}</dd>
@@ -2786,7 +2000,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Disk<wbr>Capacity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Data disk capacity.
 {{% /md %}}</dd>
@@ -2795,7 +2009,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Disk<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Data disk count.
 {{% /md %}}</dd>
@@ -2804,7 +2018,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Disk<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Data disk type. Supported value: cloud,cloud_efficiency,cloud_ssd,local_disk,cloud_essd.
 {{% /md %}}</dd>
@@ -2813,7 +2027,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Gpu<wbr>Driver</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2821,7 +2035,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Host<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}host group name.
 {{% /md %}}</dd>
@@ -2830,7 +2044,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Host<wbr>Group<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}host group type, supported value: MASTER, CORE or TASK, supported 'GATEWAY' available in 1.61.0+.
 {{% /md %}}</dd>
@@ -2839,7 +2053,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Instance<wbr>List</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Instance list for cluster scale down. This value follows the json format, e.g. ["instance_id1","instance_id2"]. escape character for " is \".
 {{% /md %}}</dd>
@@ -2848,7 +2062,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Instance<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Host Ecs instance type.
 {{% /md %}}</dd>
@@ -2857,7 +2071,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Node<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Host number in this group.
 {{% /md %}}</dd>
@@ -2866,7 +2080,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Period</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}If charge type is PrePaid, this should be specified, unit is month. Supported value: 1、2、3、4、5、6、7、8、9、12、24、36.
 {{% /md %}}</dd>
@@ -2875,7 +2089,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Sys<wbr>Disk<wbr>Capacity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}System disk capacity.
 {{% /md %}}</dd>
@@ -2884,7 +2098,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Sys<wbr>Disk<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}System disk type. Supported value: cloud,cloud_efficiency,cloud_ssd,cloud_essd.
 {{% /md %}}</dd>
@@ -2900,7 +2114,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Auto<wbr>Renew</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Auto renew for prepaid, true of false. Default is false.
 {{% /md %}}</dd>
@@ -2909,7 +2123,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Charge<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Charge Type for this group of hosts: PostPaid or PrePaid. If this is not specified, charge type will follow global charge_type value.
 {{% /md %}}</dd>
@@ -2918,7 +2132,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Disk<wbr>Capacity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Data disk capacity.
 {{% /md %}}</dd>
@@ -2927,7 +2141,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Disk<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Data disk count.
 {{% /md %}}</dd>
@@ -2936,7 +2150,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Disk<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Data disk type. Supported value: cloud,cloud_efficiency,cloud_ssd,local_disk,cloud_essd.
 {{% /md %}}</dd>
@@ -2945,7 +2159,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Gpu<wbr>Driver</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2953,7 +2167,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Host<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}host group name.
 {{% /md %}}</dd>
@@ -2962,7 +2176,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Host<wbr>Group<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}host group type, supported value: MASTER, CORE or TASK, supported 'GATEWAY' available in 1.61.0+.
 {{% /md %}}</dd>
@@ -2971,7 +2185,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Instance<wbr>List</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Instance list for cluster scale down. This value follows the json format, e.g. ["instance_id1","instance_id2"]. escape character for " is \".
 {{% /md %}}</dd>
@@ -2980,7 +2194,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Instance<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Host Ecs instance type.
 {{% /md %}}</dd>
@@ -2989,7 +2203,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Node<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Host number in this group.
 {{% /md %}}</dd>
@@ -2998,7 +2212,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Period</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}If charge type is PrePaid, this should be specified, unit is month. Supported value: 1、2、3、4、5、6、7、8、9、12、24、36.
 {{% /md %}}</dd>
@@ -3007,7 +2221,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Sys<wbr>Disk<wbr>Capacity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}System disk capacity.
 {{% /md %}}</dd>
@@ -3016,7 +2230,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Sys<wbr>Disk<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}System disk type. Supported value: cloud,cloud_efficiency,cloud_ssd,cloud_essd.
 {{% /md %}}</dd>
@@ -3032,7 +2246,7 @@ The following state arguments are supported:
             title="Optional">
         <span>auto<wbr>Renew</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Auto renew for prepaid, true of false. Default is false.
 {{% /md %}}</dd>
@@ -3041,7 +2255,7 @@ The following state arguments are supported:
             title="Optional">
         <span>charge<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Charge Type for this group of hosts: PostPaid or PrePaid. If this is not specified, charge type will follow global charge_type value.
 {{% /md %}}</dd>
@@ -3050,7 +2264,7 @@ The following state arguments are supported:
             title="Optional">
         <span>disk<wbr>Capacity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Data disk capacity.
 {{% /md %}}</dd>
@@ -3059,7 +2273,7 @@ The following state arguments are supported:
             title="Optional">
         <span>disk<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Data disk count.
 {{% /md %}}</dd>
@@ -3068,7 +2282,7 @@ The following state arguments are supported:
             title="Optional">
         <span>disk<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Data disk type. Supported value: cloud,cloud_efficiency,cloud_ssd,local_disk,cloud_essd.
 {{% /md %}}</dd>
@@ -3077,7 +2291,7 @@ The following state arguments are supported:
             title="Optional">
         <span>gpu<wbr>Driver</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3085,7 +2299,7 @@ The following state arguments are supported:
             title="Optional">
         <span>host<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}host group name.
 {{% /md %}}</dd>
@@ -3094,7 +2308,7 @@ The following state arguments are supported:
             title="Optional">
         <span>host<wbr>Group<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}host group type, supported value: MASTER, CORE or TASK, supported 'GATEWAY' available in 1.61.0+.
 {{% /md %}}</dd>
@@ -3103,7 +2317,7 @@ The following state arguments are supported:
             title="Optional">
         <span>instance<wbr>List</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Instance list for cluster scale down. This value follows the json format, e.g. ["instance_id1","instance_id2"]. escape character for " is \".
 {{% /md %}}</dd>
@@ -3112,7 +2326,7 @@ The following state arguments are supported:
             title="Optional">
         <span>instance<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Host Ecs instance type.
 {{% /md %}}</dd>
@@ -3121,7 +2335,7 @@ The following state arguments are supported:
             title="Optional">
         <span>node<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Host number in this group.
 {{% /md %}}</dd>
@@ -3130,7 +2344,7 @@ The following state arguments are supported:
             title="Optional">
         <span>period</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}If charge type is PrePaid, this should be specified, unit is month. Supported value: 1、2、3、4、5、6、7、8、9、12、24、36.
 {{% /md %}}</dd>
@@ -3139,7 +2353,7 @@ The following state arguments are supported:
             title="Optional">
         <span>sys<wbr>Disk<wbr>Capacity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}System disk capacity.
 {{% /md %}}</dd>
@@ -3148,7 +2362,7 @@ The following state arguments are supported:
             title="Optional">
         <span>sys<wbr>Disk<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}System disk type. Supported value: cloud,cloud_efficiency,cloud_ssd,cloud_essd.
 {{% /md %}}</dd>

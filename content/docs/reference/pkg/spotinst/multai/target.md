@@ -36,7 +36,7 @@ const myTarget = new spotinst.multai.Target("my_target", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/spotinst/multai/#Target">Target</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/spotinst/multai/#TargetArgs">TargetArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/spotinst/multai/#Target">Target</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/spotinst/multai/#TargetArgs">TargetArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -44,11 +44,11 @@ const myTarget = new spotinst.multai.Target("my_target", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewTarget<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/go/spotinst/multai?tab=doc#TargetArgs">TargetArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/go/spotinst/multai?tab=doc#Target">Target</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewTarget<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/go/spotinst/multai?tab=doc#TargetArgs">TargetArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/go/spotinst/multai?tab=doc#Target">Target</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.Spotinst.Multai.Target.html">Target</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.Spotinst.Multai.TargetArgs.html">TargetArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.Spotinst.Multai.Target.html">Target</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Multai.TargetArgs.html">TargetArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -158,33 +158,6 @@ const myTarget = new spotinst.multai.Target("my_target", {
     <dd>{{% md %}}The address (IP or URL) of the targets to register
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The name of the Target . Must contain only alphanumeric characters or hyphens, and must not begin or end with a hyphen.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Port</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}The port the target will register to.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#targettag">List&lt;Target<wbr>Tag<wbr>Args&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}A list of key:value paired tags.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Target<wbr>Set<wbr>Id</span>
@@ -201,6 +174,33 @@ const myTarget = new spotinst.multai.Target("my_target", {
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Defines how traffic is distributed between targets.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the Target . Must contain only alphanumeric characters or hyphens, and must not begin or end with a hyphen.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Port</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The port the target will register to.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#targettag">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Multai.<wbr>Inputs.<wbr>Target<wbr>Tag<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A list of key:value paired tags.
 {{% /md %}}</dd>
 
 </dl>
@@ -228,33 +228,6 @@ const myTarget = new spotinst.multai.Target("my_target", {
     <dd>{{% md %}}The address (IP or URL) of the targets to register
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The name of the Target . Must contain only alphanumeric characters or hyphens, and must not begin or end with a hyphen.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Port</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}The port the target will register to.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#targettag">[]Target<wbr>Tag</a></span>
-    </dt>
-    <dd>{{% md %}}A list of key:value paired tags.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Target<wbr>Set<wbr>Id</span>
@@ -271,6 +244,33 @@ const myTarget = new spotinst.multai.Target("my_target", {
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Defines how traffic is distributed between targets.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the Target . Must contain only alphanumeric characters or hyphens, and must not begin or end with a hyphen.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Port</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The port the target will register to.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#targettag">[]Target<wbr>Tag</a></span>
+    </dt>
+    <dd>{{% md %}}A list of key:value paired tags.
 {{% /md %}}</dd>
 
 </dl>
@@ -298,33 +298,6 @@ const myTarget = new spotinst.multai.Target("my_target", {
     <dd>{{% md %}}The address (IP or URL) of the targets to register
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The name of the Target . Must contain only alphanumeric characters or hyphens, and must not begin or end with a hyphen.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>port</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}The port the target will register to.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#targettag">Target<wbr>Tag[]?</a></span>
-    </dt>
-    <dd>{{% md %}}A list of key:value paired tags.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>target<wbr>Set<wbr>Id</span>
@@ -341,6 +314,33 @@ const myTarget = new spotinst.multai.Target("my_target", {
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Defines how traffic is distributed between targets.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the Target . Must contain only alphanumeric characters or hyphens, and must not begin or end with a hyphen.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>port</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The port the target will register to.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#targettag">Target<wbr>Tag[]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of key:value paired tags.
 {{% /md %}}</dd>
 
 </dl>
@@ -366,6 +366,24 @@ const myTarget = new spotinst.multai.Target("my_target", {
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The address (IP or URL) of the targets to register
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>target_<wbr>set_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ID of the target set.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>weight</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}Defines how traffic is distributed between targets.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -395,318 +413,10 @@ const myTarget = new spotinst.multai.Target("my_target", {
     <dd>{{% md %}}A list of key:value paired tags.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>target_<wbr>set_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The ID of the target set.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>weight</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}Defines how traffic is distributed between targets.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
-
-
-
-
-
-## Target Output Properties
-
-The following output properties are available:
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Balancer<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the balancer.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Host</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The address (IP or URL) of the targets to register
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the Target . Must contain only alphanumeric characters or hyphens, and must not begin or end with a hyphen.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Port</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}The port the target will register to.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#targettag">List&lt;Target<wbr>Tag&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}A list of key:value paired tags.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Target<wbr>Set<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the target set.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Weight</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Defines how traffic is distributed between targets.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Balancer<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the balancer.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Host</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The address (IP or URL) of the targets to register
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the Target . Must contain only alphanumeric characters or hyphens, and must not begin or end with a hyphen.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Port</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}The port the target will register to.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#targettag">[]Target<wbr>Tag</a></span>
-    </dt>
-    <dd>{{% md %}}A list of key:value paired tags.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Target<wbr>Set<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the target set.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Weight</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Defines how traffic is distributed between targets.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>balancer<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the balancer.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>host</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The address (IP or URL) of the targets to register
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the Target . Must contain only alphanumeric characters or hyphens, and must not begin or end with a hyphen.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>port</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}The port the target will register to.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#targettag">Target<wbr>Tag[]?</a></span>
-    </dt>
-    <dd>{{% md %}}A list of key:value paired tags.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>target<wbr>Set<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the target set.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>weight</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}Defines how traffic is distributed between targets.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>balancer_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The ID of the balancer.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>host</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The address (IP or URL) of the targets to register
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the Target . Must contain only alphanumeric characters or hyphens, and must not begin or end with a hyphen.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>port</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The port the target will register to.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#targettag">List[Target<wbr>Tag]</a></span>
-    </dt>
-    <dd>{{% md %}}A list of key:value paired tags.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>target_<wbr>set_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The ID of the target set.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>weight</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}Defines how traffic is distributed between targets.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
 
 
 
@@ -844,7 +554,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Balancer<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the balancer.
 {{% /md %}}</dd>
@@ -853,7 +563,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Host</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The address (IP or URL) of the targets to register
 {{% /md %}}</dd>
@@ -862,7 +572,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Target . Must contain only alphanumeric characters or hyphens, and must not begin or end with a hyphen.
 {{% /md %}}</dd>
@@ -871,7 +581,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port the target will register to.
 {{% /md %}}</dd>
@@ -880,7 +590,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#targettag">List&lt;Target<wbr>Tag<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#targettag">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Multai.<wbr>Inputs.<wbr>Target<wbr>Tag<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of key:value paired tags.
 {{% /md %}}</dd>
@@ -889,7 +599,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Target<wbr>Set<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the target set.
 {{% /md %}}</dd>
@@ -898,7 +608,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Weight</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Defines how traffic is distributed between targets.
 {{% /md %}}</dd>
@@ -914,7 +624,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Balancer<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the balancer.
 {{% /md %}}</dd>
@@ -923,7 +633,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Host</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The address (IP or URL) of the targets to register
 {{% /md %}}</dd>
@@ -932,7 +642,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Target . Must contain only alphanumeric characters or hyphens, and must not begin or end with a hyphen.
 {{% /md %}}</dd>
@@ -941,7 +651,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port the target will register to.
 {{% /md %}}</dd>
@@ -959,7 +669,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Target<wbr>Set<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the target set.
 {{% /md %}}</dd>
@@ -968,7 +678,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Weight</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Defines how traffic is distributed between targets.
 {{% /md %}}</dd>
@@ -984,7 +694,7 @@ The following state arguments are supported:
             title="Optional">
         <span>balancer<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the balancer.
 {{% /md %}}</dd>
@@ -993,7 +703,7 @@ The following state arguments are supported:
             title="Optional">
         <span>host</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The address (IP or URL) of the targets to register
 {{% /md %}}</dd>
@@ -1002,7 +712,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Target . Must contain only alphanumeric characters or hyphens, and must not begin or end with a hyphen.
 {{% /md %}}</dd>
@@ -1011,7 +721,7 @@ The following state arguments are supported:
             title="Optional">
         <span>port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The port the target will register to.
 {{% /md %}}</dd>
@@ -1020,7 +730,7 @@ The following state arguments are supported:
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#targettag">Target<wbr>Tag[]?</a></span>
+        <span class="property-type"><a href="#targettag">Target<wbr>Tag[]</a></span>
     </dt>
     <dd>{{% md %}}A list of key:value paired tags.
 {{% /md %}}</dd>
@@ -1029,7 +739,7 @@ The following state arguments are supported:
             title="Optional">
         <span>target<wbr>Set<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the target set.
 {{% /md %}}</dd>
@@ -1038,7 +748,7 @@ The following state arguments are supported:
             title="Optional">
         <span>weight</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Defines how traffic is distributed between targets.
 {{% /md %}}</dd>

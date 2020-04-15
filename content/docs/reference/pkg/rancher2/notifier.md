@@ -14,7 +14,7 @@ block_external_search_index: true
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/rancher2/#Notifier">Notifier</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/rancher2/#NotifierArgs">NotifierArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/rancher2/#Notifier">Notifier</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/rancher2/#NotifierArgs">NotifierArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -22,11 +22,11 @@ block_external_search_index: true
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewNotifier<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/go/rancher2/?tab=doc#NotifierArgs">NotifierArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/go/rancher2/?tab=doc#Notifier">Notifier</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewNotifier<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/go/rancher2/?tab=doc#NotifierArgs">NotifierArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/go/rancher2/?tab=doc#Notifier">Notifier</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2..Notifier.html">Notifier</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.NotifierArgs.html">NotifierArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Notifier.html">Notifier</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.NotifierArgs.html">NotifierArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -118,15 +118,6 @@ block_external_search_index: true
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Annotations</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
-    </dt>
-    <dd>{{% md %}}Annotations for notifier object (map)
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Cluster<wbr>Id</span>
@@ -138,9 +129,18 @@ block_external_search_index: true
 
     <dt class="property-optional"
             title="Optional">
+        <span>Annotations</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+    </dt>
+    <dd>{{% md %}}Annotations for notifier object (map)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The notifier description (string)
 * `send_resolved` = (Optional) Enable the notifier to send resolved notifications. Default `false` (bool)
@@ -150,7 +150,7 @@ block_external_search_index: true
             title="Optional">
         <span>Labels</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Labels for notifier object (map)
 {{% /md %}}</dd>
@@ -159,7 +159,7 @@ block_external_search_index: true
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the notifier (string)
 {{% /md %}}</dd>
@@ -168,7 +168,7 @@ block_external_search_index: true
             title="Optional">
         <span>Pagerduty<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notifierpagerdutyconfig">Notifier<wbr>Pagerduty<wbr>Config<wbr>Args?</a></span>
+        <span class="property-type"><a href="#notifierpagerdutyconfig">Notifier<wbr>Pagerduty<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Pagerduty config for notifier (list maxitems:1)
 {{% /md %}}</dd>
@@ -177,7 +177,7 @@ block_external_search_index: true
             title="Optional">
         <span>Send<wbr>Resolved</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Notifier send resolved
 {{% /md %}}</dd>
@@ -186,7 +186,7 @@ block_external_search_index: true
             title="Optional">
         <span>Slack<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notifierslackconfig">Notifier<wbr>Slack<wbr>Config<wbr>Args?</a></span>
+        <span class="property-type"><a href="#notifierslackconfig">Notifier<wbr>Slack<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Slack config for notifier (list maxitems:1)
 {{% /md %}}</dd>
@@ -195,7 +195,7 @@ block_external_search_index: true
             title="Optional">
         <span>Smtp<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notifiersmtpconfig">Notifier<wbr>Smtp<wbr>Config<wbr>Args?</a></span>
+        <span class="property-type"><a href="#notifiersmtpconfig">Notifier<wbr>Smtp<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SMTP config for notifier (list maxitems:1)
 {{% /md %}}</dd>
@@ -204,7 +204,7 @@ block_external_search_index: true
             title="Optional">
         <span>Webhook<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notifierwebhookconfig">Notifier<wbr>Webhook<wbr>Config<wbr>Args?</a></span>
+        <span class="property-type"><a href="#notifierwebhookconfig">Notifier<wbr>Webhook<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Webhook config for notifier (list maxitems:1)
 {{% /md %}}</dd>
@@ -213,7 +213,7 @@ block_external_search_index: true
             title="Optional">
         <span>Wechat<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notifierwechatconfig">Notifier<wbr>Wechat<wbr>Config<wbr>Args?</a></span>
+        <span class="property-type"><a href="#notifierwechatconfig">Notifier<wbr>Wechat<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Wechat config for notifier (list maxitems:1)
 {{% /md %}}</dd>
@@ -225,15 +225,6 @@ block_external_search_index: true
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Annotations</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
-    </dt>
-    <dd>{{% md %}}Annotations for notifier object (map)
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Cluster<wbr>Id</span>
@@ -245,9 +236,18 @@ block_external_search_index: true
 
     <dt class="property-optional"
             title="Optional">
+        <span>Annotations</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}Annotations for notifier object (map)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The notifier description (string)
 * `send_resolved` = (Optional) Enable the notifier to send resolved notifications. Default `false` (bool)
@@ -266,7 +266,7 @@ block_external_search_index: true
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the notifier (string)
 {{% /md %}}</dd>
@@ -275,7 +275,7 @@ block_external_search_index: true
             title="Optional">
         <span>Pagerduty<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notifierpagerdutyconfig">*Notifier<wbr>Pagerduty<wbr>Config</a></span>
+        <span class="property-type"><a href="#notifierpagerdutyconfig">Notifier<wbr>Pagerduty<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Pagerduty config for notifier (list maxitems:1)
 {{% /md %}}</dd>
@@ -284,7 +284,7 @@ block_external_search_index: true
             title="Optional">
         <span>Send<wbr>Resolved</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Notifier send resolved
 {{% /md %}}</dd>
@@ -293,7 +293,7 @@ block_external_search_index: true
             title="Optional">
         <span>Slack<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notifierslackconfig">*Notifier<wbr>Slack<wbr>Config</a></span>
+        <span class="property-type"><a href="#notifierslackconfig">Notifier<wbr>Slack<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Slack config for notifier (list maxitems:1)
 {{% /md %}}</dd>
@@ -302,7 +302,7 @@ block_external_search_index: true
             title="Optional">
         <span>Smtp<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notifiersmtpconfig">*Notifier<wbr>Smtp<wbr>Config</a></span>
+        <span class="property-type"><a href="#notifiersmtpconfig">Notifier<wbr>Smtp<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}SMTP config for notifier (list maxitems:1)
 {{% /md %}}</dd>
@@ -311,7 +311,7 @@ block_external_search_index: true
             title="Optional">
         <span>Webhook<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notifierwebhookconfig">*Notifier<wbr>Webhook<wbr>Config</a></span>
+        <span class="property-type"><a href="#notifierwebhookconfig">Notifier<wbr>Webhook<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Webhook config for notifier (list maxitems:1)
 {{% /md %}}</dd>
@@ -320,7 +320,7 @@ block_external_search_index: true
             title="Optional">
         <span>Wechat<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notifierwechatconfig">*Notifier<wbr>Wechat<wbr>Config</a></span>
+        <span class="property-type"><a href="#notifierwechatconfig">Notifier<wbr>Wechat<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Wechat config for notifier (list maxitems:1)
 {{% /md %}}</dd>
@@ -331,15 +331,6 @@ block_external_search_index: true
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>annotations</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
-    </dt>
-    <dd>{{% md %}}Annotations for notifier object (map)
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -352,9 +343,18 @@ block_external_search_index: true
 
     <dt class="property-optional"
             title="Optional">
+        <span>annotations</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}</span>
+    </dt>
+    <dd>{{% md %}}Annotations for notifier object (map)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The notifier description (string)
 * `send_resolved` = (Optional) Enable the notifier to send resolved notifications. Default `false` (bool)
@@ -364,7 +364,7 @@ block_external_search_index: true
             title="Optional">
         <span>labels</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Labels for notifier object (map)
 {{% /md %}}</dd>
@@ -373,7 +373,7 @@ block_external_search_index: true
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the notifier (string)
 {{% /md %}}</dd>
@@ -382,7 +382,7 @@ block_external_search_index: true
             title="Optional">
         <span>pagerduty<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notifierpagerdutyconfig">Notifier<wbr>Pagerduty<wbr>Config?</a></span>
+        <span class="property-type"><a href="#notifierpagerdutyconfig">Notifier<wbr>Pagerduty<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Pagerduty config for notifier (list maxitems:1)
 {{% /md %}}</dd>
@@ -391,7 +391,7 @@ block_external_search_index: true
             title="Optional">
         <span>send<wbr>Resolved</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Notifier send resolved
 {{% /md %}}</dd>
@@ -400,7 +400,7 @@ block_external_search_index: true
             title="Optional">
         <span>slack<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notifierslackconfig">Notifier<wbr>Slack<wbr>Config?</a></span>
+        <span class="property-type"><a href="#notifierslackconfig">Notifier<wbr>Slack<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Slack config for notifier (list maxitems:1)
 {{% /md %}}</dd>
@@ -409,7 +409,7 @@ block_external_search_index: true
             title="Optional">
         <span>smtp<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notifiersmtpconfig">Notifier<wbr>Smtp<wbr>Config?</a></span>
+        <span class="property-type"><a href="#notifiersmtpconfig">Notifier<wbr>Smtp<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}SMTP config for notifier (list maxitems:1)
 {{% /md %}}</dd>
@@ -418,7 +418,7 @@ block_external_search_index: true
             title="Optional">
         <span>webhook<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notifierwebhookconfig">Notifier<wbr>Webhook<wbr>Config?</a></span>
+        <span class="property-type"><a href="#notifierwebhookconfig">Notifier<wbr>Webhook<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Webhook config for notifier (list maxitems:1)
 {{% /md %}}</dd>
@@ -427,7 +427,7 @@ block_external_search_index: true
             title="Optional">
         <span>wechat<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notifierwechatconfig">Notifier<wbr>Wechat<wbr>Config?</a></span>
+        <span class="property-type"><a href="#notifierwechatconfig">Notifier<wbr>Wechat<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Wechat config for notifier (list maxitems:1)
 {{% /md %}}</dd>
@@ -439,15 +439,6 @@ block_external_search_index: true
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>annotations</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
-    </dt>
-    <dd>{{% md %}}Annotations for notifier object (map)
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>cluster_<wbr>id</span>
@@ -455,6 +446,15 @@ block_external_search_index: true
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The cluster id where create notifier (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>annotations</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}Annotations for notifier object (map)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -543,444 +543,6 @@ block_external_search_index: true
 {{% /choosable %}}
 
 
-
-
-
-
-
-## Notifier Output Properties
-
-The following output properties are available:
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Annotations</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object></span>
-    </dt>
-    <dd>{{% md %}}Annotations for notifier object (map)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Cluster<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The cluster id where create notifier (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The notifier description (string)
-* `send_resolved` = (Optional) Enable the notifier to send resolved notifications. Default `false` (bool)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Labels</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object></span>
-    </dt>
-    <dd>{{% md %}}Labels for notifier object (map)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the notifier (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Pagerduty<wbr>Config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notifierpagerdutyconfig">Notifier<wbr>Pagerduty<wbr>Config?</a></span>
-    </dt>
-    <dd>{{% md %}}Pagerduty config for notifier (list maxitems:1)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Send<wbr>Resolved</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Notifier send resolved
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Slack<wbr>Config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notifierslackconfig">Notifier<wbr>Slack<wbr>Config?</a></span>
-    </dt>
-    <dd>{{% md %}}Slack config for notifier (list maxitems:1)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Smtp<wbr>Config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notifiersmtpconfig">Notifier<wbr>Smtp<wbr>Config?</a></span>
-    </dt>
-    <dd>{{% md %}}SMTP config for notifier (list maxitems:1)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Webhook<wbr>Config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notifierwebhookconfig">Notifier<wbr>Webhook<wbr>Config?</a></span>
-    </dt>
-    <dd>{{% md %}}Webhook config for notifier (list maxitems:1)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Wechat<wbr>Config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notifierwechatconfig">Notifier<wbr>Wechat<wbr>Config?</a></span>
-    </dt>
-    <dd>{{% md %}}Wechat config for notifier (list maxitems:1)
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Annotations</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
-    </dt>
-    <dd>{{% md %}}Annotations for notifier object (map)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Cluster<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The cluster id where create notifier (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The notifier description (string)
-* `send_resolved` = (Optional) Enable the notifier to send resolved notifications. Default `false` (bool)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Labels</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
-    </dt>
-    <dd>{{% md %}}Labels for notifier object (map)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the notifier (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Pagerduty<wbr>Config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notifierpagerdutyconfig">*Notifier<wbr>Pagerduty<wbr>Config</a></span>
-    </dt>
-    <dd>{{% md %}}Pagerduty config for notifier (list maxitems:1)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Send<wbr>Resolved</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Notifier send resolved
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Slack<wbr>Config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notifierslackconfig">*Notifier<wbr>Slack<wbr>Config</a></span>
-    </dt>
-    <dd>{{% md %}}Slack config for notifier (list maxitems:1)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Smtp<wbr>Config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notifiersmtpconfig">*Notifier<wbr>Smtp<wbr>Config</a></span>
-    </dt>
-    <dd>{{% md %}}SMTP config for notifier (list maxitems:1)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Webhook<wbr>Config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notifierwebhookconfig">*Notifier<wbr>Webhook<wbr>Config</a></span>
-    </dt>
-    <dd>{{% md %}}Webhook config for notifier (list maxitems:1)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Wechat<wbr>Config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notifierwechatconfig">*Notifier<wbr>Wechat<wbr>Config</a></span>
-    </dt>
-    <dd>{{% md %}}Wechat config for notifier (list maxitems:1)
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>annotations</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
-    </dt>
-    <dd>{{% md %}}Annotations for notifier object (map)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>cluster<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The cluster id where create notifier (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The notifier description (string)
-* `send_resolved` = (Optional) Enable the notifier to send resolved notifications. Default `false` (bool)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>labels</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
-    </dt>
-    <dd>{{% md %}}Labels for notifier object (map)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the notifier (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>pagerduty<wbr>Config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notifierpagerdutyconfig">Notifier<wbr>Pagerduty<wbr>Config?</a></span>
-    </dt>
-    <dd>{{% md %}}Pagerduty config for notifier (list maxitems:1)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>send<wbr>Resolved</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Notifier send resolved
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>slack<wbr>Config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notifierslackconfig">Notifier<wbr>Slack<wbr>Config?</a></span>
-    </dt>
-    <dd>{{% md %}}Slack config for notifier (list maxitems:1)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>smtp<wbr>Config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notifiersmtpconfig">Notifier<wbr>Smtp<wbr>Config?</a></span>
-    </dt>
-    <dd>{{% md %}}SMTP config for notifier (list maxitems:1)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>webhook<wbr>Config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notifierwebhookconfig">Notifier<wbr>Webhook<wbr>Config?</a></span>
-    </dt>
-    <dd>{{% md %}}Webhook config for notifier (list maxitems:1)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>wechat<wbr>Config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notifierwechatconfig">Notifier<wbr>Wechat<wbr>Config?</a></span>
-    </dt>
-    <dd>{{% md %}}Wechat config for notifier (list maxitems:1)
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>annotations</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
-    </dt>
-    <dd>{{% md %}}Annotations for notifier object (map)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>cluster_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The cluster id where create notifier (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The notifier description (string)
-* `send_resolved` = (Optional) Enable the notifier to send resolved notifications. Default `false` (bool)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>labels</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
-    </dt>
-    <dd>{{% md %}}Labels for notifier object (map)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the notifier (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>pagerduty_<wbr>config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notifierpagerdutyconfig">Dict[Notifier<wbr>Pagerduty<wbr>Config]</a></span>
-    </dt>
-    <dd>{{% md %}}Pagerduty config for notifier (list maxitems:1)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>send_<wbr>resolved</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Notifier send resolved
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>slack_<wbr>config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notifierslackconfig">Dict[Notifier<wbr>Slack<wbr>Config]</a></span>
-    </dt>
-    <dd>{{% md %}}Slack config for notifier (list maxitems:1)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>smtp_<wbr>config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notifiersmtpconfig">Dict[Notifier<wbr>Smtp<wbr>Config]</a></span>
-    </dt>
-    <dd>{{% md %}}SMTP config for notifier (list maxitems:1)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>webhook_<wbr>config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notifierwebhookconfig">Dict[Notifier<wbr>Webhook<wbr>Config]</a></span>
-    </dt>
-    <dd>{{% md %}}Webhook config for notifier (list maxitems:1)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>wechat_<wbr>config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notifierwechatconfig">Dict[Notifier<wbr>Wechat<wbr>Config]</a></span>
-    </dt>
-    <dd>{{% md %}}Wechat config for notifier (list maxitems:1)
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
 
 
 
@@ -1008,7 +570,7 @@ Get an existing Notifier resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2..Notifier.html">Notifier</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2..NotifierState.html">NotifierState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Notifier.html">Notifier</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2..NotifierState.html">NotifierState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1118,7 +680,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Annotations</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Annotations for notifier object (map)
 {{% /md %}}</dd>
@@ -1127,7 +689,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Cluster<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The cluster id where create notifier (string)
 {{% /md %}}</dd>
@@ -1136,7 +698,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The notifier description (string)
 * `send_resolved` = (Optional) Enable the notifier to send resolved notifications. Default `false` (bool)
@@ -1146,7 +708,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Labels</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Labels for notifier object (map)
 {{% /md %}}</dd>
@@ -1155,7 +717,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the notifier (string)
 {{% /md %}}</dd>
@@ -1164,7 +726,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Pagerduty<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notifierpagerdutyconfig">Notifier<wbr>Pagerduty<wbr>Config<wbr>Args?</a></span>
+        <span class="property-type"><a href="#notifierpagerdutyconfig">Notifier<wbr>Pagerduty<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Pagerduty config for notifier (list maxitems:1)
 {{% /md %}}</dd>
@@ -1173,7 +735,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Send<wbr>Resolved</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Notifier send resolved
 {{% /md %}}</dd>
@@ -1182,7 +744,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Slack<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notifierslackconfig">Notifier<wbr>Slack<wbr>Config<wbr>Args?</a></span>
+        <span class="property-type"><a href="#notifierslackconfig">Notifier<wbr>Slack<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Slack config for notifier (list maxitems:1)
 {{% /md %}}</dd>
@@ -1191,7 +753,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Smtp<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notifiersmtpconfig">Notifier<wbr>Smtp<wbr>Config<wbr>Args?</a></span>
+        <span class="property-type"><a href="#notifiersmtpconfig">Notifier<wbr>Smtp<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SMTP config for notifier (list maxitems:1)
 {{% /md %}}</dd>
@@ -1200,7 +762,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Webhook<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notifierwebhookconfig">Notifier<wbr>Webhook<wbr>Config<wbr>Args?</a></span>
+        <span class="property-type"><a href="#notifierwebhookconfig">Notifier<wbr>Webhook<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Webhook config for notifier (list maxitems:1)
 {{% /md %}}</dd>
@@ -1209,7 +771,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Wechat<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notifierwechatconfig">Notifier<wbr>Wechat<wbr>Config<wbr>Args?</a></span>
+        <span class="property-type"><a href="#notifierwechatconfig">Notifier<wbr>Wechat<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Wechat config for notifier (list maxitems:1)
 {{% /md %}}</dd>
@@ -1234,7 +796,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Cluster<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The cluster id where create notifier (string)
 {{% /md %}}</dd>
@@ -1243,7 +805,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The notifier description (string)
 * `send_resolved` = (Optional) Enable the notifier to send resolved notifications. Default `false` (bool)
@@ -1262,7 +824,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the notifier (string)
 {{% /md %}}</dd>
@@ -1271,7 +833,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Pagerduty<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notifierpagerdutyconfig">*Notifier<wbr>Pagerduty<wbr>Config</a></span>
+        <span class="property-type"><a href="#notifierpagerdutyconfig">Notifier<wbr>Pagerduty<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Pagerduty config for notifier (list maxitems:1)
 {{% /md %}}</dd>
@@ -1280,7 +842,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Send<wbr>Resolved</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Notifier send resolved
 {{% /md %}}</dd>
@@ -1289,7 +851,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Slack<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notifierslackconfig">*Notifier<wbr>Slack<wbr>Config</a></span>
+        <span class="property-type"><a href="#notifierslackconfig">Notifier<wbr>Slack<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Slack config for notifier (list maxitems:1)
 {{% /md %}}</dd>
@@ -1298,7 +860,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Smtp<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notifiersmtpconfig">*Notifier<wbr>Smtp<wbr>Config</a></span>
+        <span class="property-type"><a href="#notifiersmtpconfig">Notifier<wbr>Smtp<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}SMTP config for notifier (list maxitems:1)
 {{% /md %}}</dd>
@@ -1307,7 +869,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Webhook<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notifierwebhookconfig">*Notifier<wbr>Webhook<wbr>Config</a></span>
+        <span class="property-type"><a href="#notifierwebhookconfig">Notifier<wbr>Webhook<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Webhook config for notifier (list maxitems:1)
 {{% /md %}}</dd>
@@ -1316,7 +878,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Wechat<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notifierwechatconfig">*Notifier<wbr>Wechat<wbr>Config</a></span>
+        <span class="property-type"><a href="#notifierwechatconfig">Notifier<wbr>Wechat<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Wechat config for notifier (list maxitems:1)
 {{% /md %}}</dd>
@@ -1332,7 +894,7 @@ The following state arguments are supported:
             title="Optional">
         <span>annotations</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Annotations for notifier object (map)
 {{% /md %}}</dd>
@@ -1341,7 +903,7 @@ The following state arguments are supported:
             title="Optional">
         <span>cluster<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The cluster id where create notifier (string)
 {{% /md %}}</dd>
@@ -1350,7 +912,7 @@ The following state arguments are supported:
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The notifier description (string)
 * `send_resolved` = (Optional) Enable the notifier to send resolved notifications. Default `false` (bool)
@@ -1360,7 +922,7 @@ The following state arguments are supported:
             title="Optional">
         <span>labels</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Labels for notifier object (map)
 {{% /md %}}</dd>
@@ -1369,7 +931,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the notifier (string)
 {{% /md %}}</dd>
@@ -1378,7 +940,7 @@ The following state arguments are supported:
             title="Optional">
         <span>pagerduty<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notifierpagerdutyconfig">Notifier<wbr>Pagerduty<wbr>Config?</a></span>
+        <span class="property-type"><a href="#notifierpagerdutyconfig">Notifier<wbr>Pagerduty<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Pagerduty config for notifier (list maxitems:1)
 {{% /md %}}</dd>
@@ -1387,7 +949,7 @@ The following state arguments are supported:
             title="Optional">
         <span>send<wbr>Resolved</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Notifier send resolved
 {{% /md %}}</dd>
@@ -1396,7 +958,7 @@ The following state arguments are supported:
             title="Optional">
         <span>slack<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notifierslackconfig">Notifier<wbr>Slack<wbr>Config?</a></span>
+        <span class="property-type"><a href="#notifierslackconfig">Notifier<wbr>Slack<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Slack config for notifier (list maxitems:1)
 {{% /md %}}</dd>
@@ -1405,7 +967,7 @@ The following state arguments are supported:
             title="Optional">
         <span>smtp<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notifiersmtpconfig">Notifier<wbr>Smtp<wbr>Config?</a></span>
+        <span class="property-type"><a href="#notifiersmtpconfig">Notifier<wbr>Smtp<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}SMTP config for notifier (list maxitems:1)
 {{% /md %}}</dd>
@@ -1414,7 +976,7 @@ The following state arguments are supported:
             title="Optional">
         <span>webhook<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notifierwebhookconfig">Notifier<wbr>Webhook<wbr>Config?</a></span>
+        <span class="property-type"><a href="#notifierwebhookconfig">Notifier<wbr>Webhook<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Webhook config for notifier (list maxitems:1)
 {{% /md %}}</dd>
@@ -1423,7 +985,7 @@ The following state arguments are supported:
             title="Optional">
         <span>wechat<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#notifierwechatconfig">Notifier<wbr>Wechat<wbr>Config?</a></span>
+        <span class="property-type"><a href="#notifierwechatconfig">Notifier<wbr>Wechat<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Wechat config for notifier (list maxitems:1)
 {{% /md %}}</dd>
@@ -1564,15 +1126,6 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Proxy<wbr>Url</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Wechat proxy url (string)
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Service<wbr>Key</span>
@@ -1580,6 +1133,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Pagerduty service key (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Proxy<wbr>Url</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Wechat proxy url (string)
 {{% /md %}}</dd>
 
 </dl>
@@ -1589,15 +1151,6 @@ The following state arguments are supported:
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Proxy<wbr>Url</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Wechat proxy url (string)
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Service<wbr>Key</span>
@@ -1607,21 +1160,21 @@ The following state arguments are supported:
     <dd>{{% md %}}Pagerduty service key (string)
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>Proxy<wbr>Url</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Wechat proxy url (string)
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>proxy<wbr>Url</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Wechat proxy url (string)
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1632,21 +1185,21 @@ The following state arguments are supported:
     <dd>{{% md %}}Pagerduty service key (string)
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>proxy<wbr>Url</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Wechat proxy url (string)
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>proxy<wbr>Url</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Wechat proxy url (string)
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1655,6 +1208,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Pagerduty service key (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>proxy<wbr>Url</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Wechat proxy url (string)
 {{% /md %}}</dd>
 
 </dl>
@@ -1688,15 +1250,6 @@ The following state arguments are supported:
     <dd>{{% md %}}Wechat default recipient (string)
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Proxy<wbr>Url</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Wechat proxy url (string)
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Url</span>
@@ -1704,6 +1257,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Webhook url (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Proxy<wbr>Url</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Wechat proxy url (string)
 {{% /md %}}</dd>
 
 </dl>
@@ -1722,15 +1284,6 @@ The following state arguments are supported:
     <dd>{{% md %}}Wechat default recipient (string)
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Proxy<wbr>Url</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Wechat proxy url (string)
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Url</span>
@@ -1738,6 +1291,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Webhook url (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Proxy<wbr>Url</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Wechat proxy url (string)
 {{% /md %}}</dd>
 
 </dl>
@@ -1756,15 +1318,6 @@ The following state arguments are supported:
     <dd>{{% md %}}Wechat default recipient (string)
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>proxy<wbr>Url</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Wechat proxy url (string)
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>url</span>
@@ -1772,6 +1325,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Webhook url (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>proxy<wbr>Url</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Wechat proxy url (string)
 {{% /md %}}</dd>
 
 </dl>
@@ -1790,15 +1352,6 @@ The following state arguments are supported:
     <dd>{{% md %}}Wechat default recipient (string)
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>proxy<wbr>Url</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Wechat proxy url (string)
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>url</span>
@@ -1806,6 +1359,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Webhook url (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>proxy<wbr>Url</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Wechat proxy url (string)
 {{% /md %}}</dd>
 
 </dl>
@@ -1848,15 +1410,6 @@ The following state arguments are supported:
     <dd>{{% md %}}SMTP host (string)
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Password</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}SMTP password (string)
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Port</span>
@@ -1877,9 +1430,18 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>Password</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}SMTP password (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Tls</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}SMTP tls. Default `true` (bool)
 {{% /md %}}</dd>
@@ -1888,7 +1450,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Username</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SMTP username (string)
 {{% /md %}}</dd>
@@ -1918,15 +1480,6 @@ The following state arguments are supported:
     <dd>{{% md %}}SMTP host (string)
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Password</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}SMTP password (string)
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Port</span>
@@ -1947,9 +1500,18 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>Password</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}SMTP password (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Tls</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}SMTP tls. Default `true` (bool)
 {{% /md %}}</dd>
@@ -1958,7 +1520,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Username</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SMTP username (string)
 {{% /md %}}</dd>
@@ -1988,15 +1550,6 @@ The following state arguments are supported:
     <dd>{{% md %}}SMTP host (string)
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>password</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}SMTP password (string)
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>port</span>
@@ -2017,9 +1570,18 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>password</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}SMTP password (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>tls</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}SMTP tls. Default `true` (bool)
 {{% /md %}}</dd>
@@ -2028,7 +1590,7 @@ The following state arguments are supported:
             title="Optional">
         <span>username</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}SMTP username (string)
 {{% /md %}}</dd>
@@ -2058,15 +1620,6 @@ The following state arguments are supported:
     <dd>{{% md %}}SMTP host (string)
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>password</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}SMTP password (string)
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>port</span>
@@ -2083,6 +1636,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}SMTP sender (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>password</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}SMTP password (string)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2125,15 +1687,6 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Proxy<wbr>Url</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Wechat proxy url (string)
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Url</span>
@@ -2141,6 +1694,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Webhook url (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Proxy<wbr>Url</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Wechat proxy url (string)
 {{% /md %}}</dd>
 
 </dl>
@@ -2150,15 +1712,6 @@ The following state arguments are supported:
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Proxy<wbr>Url</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Wechat proxy url (string)
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Url</span>
@@ -2168,21 +1721,21 @@ The following state arguments are supported:
     <dd>{{% md %}}Webhook url (string)
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>Proxy<wbr>Url</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Wechat proxy url (string)
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>proxy<wbr>Url</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Wechat proxy url (string)
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -2193,21 +1746,21 @@ The following state arguments are supported:
     <dd>{{% md %}}Webhook url (string)
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>proxy<wbr>Url</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Wechat proxy url (string)
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>proxy<wbr>Url</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Wechat proxy url (string)
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -2216,6 +1769,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Webhook url (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>proxy<wbr>Url</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Wechat proxy url (string)
 {{% /md %}}</dd>
 
 </dl>
@@ -2267,11 +1829,20 @@ The following state arguments are supported:
     <dd>{{% md %}}Wechat default recipient (string)
 {{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>Secret</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Wechat agent ID (string)
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Proxy<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Wechat proxy url (string)
 {{% /md %}}</dd>
@@ -2280,18 +1851,9 @@ The following state arguments are supported:
             title="Optional">
         <span>Recipient<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Wechat recipient type. Allowed values: `party` | `tag` | `user` (string)
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Secret</span>
-        <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Wechat agent ID (string)
+    <dd>{{% md %}}Wechat recipient type. Allowed values: `party` | `tag` | `user` (string)
 {{% /md %}}</dd>
 
 </dl>
@@ -2328,11 +1890,20 @@ The following state arguments are supported:
     <dd>{{% md %}}Wechat default recipient (string)
 {{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>Secret</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Wechat agent ID (string)
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Proxy<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Wechat proxy url (string)
 {{% /md %}}</dd>
@@ -2341,18 +1912,9 @@ The following state arguments are supported:
             title="Optional">
         <span>Recipient<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Wechat recipient type. Allowed values: `party` | `tag` | `user` (string)
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Secret</span>
-        <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Wechat agent ID (string)
+    <dd>{{% md %}}Wechat recipient type. Allowed values: `party` | `tag` | `user` (string)
 {{% /md %}}</dd>
 
 </dl>
@@ -2389,11 +1951,20 @@ The following state arguments are supported:
     <dd>{{% md %}}Wechat default recipient (string)
 {{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>secret</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Wechat agent ID (string)
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>proxy<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Wechat proxy url (string)
 {{% /md %}}</dd>
@@ -2402,18 +1973,9 @@ The following state arguments are supported:
             title="Optional">
         <span>recipient<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Wechat recipient type. Allowed values: `party` | `tag` | `user` (string)
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>secret</span>
-        <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Wechat agent ID (string)
+    <dd>{{% md %}}Wechat recipient type. Allowed values: `party` | `tag` | `user` (string)
 {{% /md %}}</dd>
 
 </dl>
@@ -2450,6 +2012,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Wechat default recipient (string)
 {{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>secret</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Wechat agent ID (string)
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>proxy<wbr>Url</span>
@@ -2466,15 +2037,6 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Wechat recipient type. Allowed values: `party` | `tag` | `user` (string)
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>secret</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Wechat agent ID (string)
 {{% /md %}}</dd>
 
 </dl>

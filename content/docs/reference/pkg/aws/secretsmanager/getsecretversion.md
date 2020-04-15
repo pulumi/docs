@@ -62,7 +62,7 @@ const by_version_stage = aws_secretsmanager_secret_example.id.apply(id => aws.se
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupSecretVersion<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/secretsmanager?tab=doc#LookupSecretVersionArgs">LookupSecretVersionArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/secretsmanager?tab=doc#LookupSecretVersionResult">LookupSecretVersionResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupSecretVersion<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/secretsmanager?tab=doc#LookupSecretVersionArgs">LookupSecretVersionArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/secretsmanager?tab=doc#LookupSecretVersionResult">LookupSecretVersionResult</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -94,7 +94,7 @@ The following arguments are supported:
             title="Optional">
         <span>Version<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the unique identifier of the version of the secret that you want to retrieve. Overrides `version_stage`.
 {{% /md %}}</dd>
@@ -103,7 +103,7 @@ The following arguments are supported:
             title="Optional">
         <span>Version<wbr>Stage</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the secret version that you want to retrieve by the staging label attached to the version. Defaults to `AWSCURRENT`.
 {{% /md %}}</dd>
@@ -128,7 +128,7 @@ The following arguments are supported:
             title="Optional">
         <span>Version<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the unique identifier of the version of the secret that you want to retrieve. Overrides `version_stage`.
 {{% /md %}}</dd>
@@ -137,7 +137,7 @@ The following arguments are supported:
             title="Optional">
         <span>Version<wbr>Stage</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the secret version that you want to retrieve by the staging label attached to the version. Defaults to `AWSCURRENT`.
 {{% /md %}}</dd>
@@ -162,7 +162,7 @@ The following arguments are supported:
             title="Optional">
         <span>version<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the unique identifier of the version of the secret that you want to retrieve. Overrides `version_stage`.
 {{% /md %}}</dd>
@@ -171,7 +171,7 @@ The following arguments are supported:
             title="Optional">
         <span>version<wbr>Stage</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the secret version that you want to retrieve by the staging label attached to the version. Defaults to `AWSCURRENT`.
 {{% /md %}}</dd>
@@ -285,17 +285,17 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Version<wbr>Stage</span>
+        <span>Version<wbr>Stages</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>Version<wbr>Stages</span>
+        <span>Version<wbr>Stage</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -361,17 +361,17 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Version<wbr>Stage</span>
+        <span>Version<wbr>Stages</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>Version<wbr>Stages</span>
+        <span>Version<wbr>Stage</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -437,17 +437,17 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>version<wbr>Stage</span>
+        <span>version<wbr>Stages</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>version<wbr>Stages</span>
+        <span>version<wbr>Stage</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -513,17 +513,17 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>version_<wbr>stage</span>
+        <span>version_<wbr>stages</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">List[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>version_<wbr>stages</span>
+        <span>version_<wbr>stage</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

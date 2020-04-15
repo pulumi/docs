@@ -14,7 +14,7 @@ block_external_search_index: true
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/rancher2/#Bootstrap">Bootstrap</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/rancher2/#BootstrapArgs">BootstrapArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/rancher2/#Bootstrap">Bootstrap</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/rancher2/#BootstrapArgs">BootstrapArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -22,11 +22,11 @@ block_external_search_index: true
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewBootstrap<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/go/rancher2/?tab=doc#BootstrapArgs">BootstrapArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/go/rancher2/?tab=doc#Bootstrap">Bootstrap</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewBootstrap<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/go/rancher2/?tab=doc#BootstrapArgs">BootstrapArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/go/rancher2/?tab=doc#Bootstrap">Bootstrap</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2..Bootstrap.html">Bootstrap</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.BootstrapArgs.html">BootstrapArgs</a></span>? <span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Bootstrap.html">Bootstrap</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.BootstrapArgs.html">BootstrapArgs</a></span>? <span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -122,7 +122,7 @@ block_external_search_index: true
             title="Optional">
         <span>Current<wbr>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Current password for Admin user. Just needed for recover if admin password has been changed from other resources and token is expired (string)
 {{% /md %}}</dd>
@@ -131,7 +131,7 @@ block_external_search_index: true
             title="Optional">
         <span>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password for Admin user or random generated if empty (string)
 {{% /md %}}</dd>
@@ -140,7 +140,7 @@ block_external_search_index: true
             title="Optional">
         <span>Telemetry</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Send telemetry anonymous data. Default: `false` (bool)
 {{% /md %}}</dd>
@@ -149,7 +149,7 @@ block_external_search_index: true
             title="Optional">
         <span>Token<wbr>Ttl</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}TTL in seconds for generated admin token. Default: `0`  (int)
 {{% /md %}}</dd>
@@ -158,7 +158,7 @@ block_external_search_index: true
             title="Optional">
         <span>Token<wbr>Update</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Regenerate admin token. Default: `false` (bool)
 {{% /md %}}</dd>
@@ -174,7 +174,7 @@ block_external_search_index: true
             title="Optional">
         <span>Current<wbr>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Current password for Admin user. Just needed for recover if admin password has been changed from other resources and token is expired (string)
 {{% /md %}}</dd>
@@ -183,7 +183,7 @@ block_external_search_index: true
             title="Optional">
         <span>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password for Admin user or random generated if empty (string)
 {{% /md %}}</dd>
@@ -192,7 +192,7 @@ block_external_search_index: true
             title="Optional">
         <span>Telemetry</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Send telemetry anonymous data. Default: `false` (bool)
 {{% /md %}}</dd>
@@ -201,7 +201,7 @@ block_external_search_index: true
             title="Optional">
         <span>Token<wbr>Ttl</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}TTL in seconds for generated admin token. Default: `0`  (int)
 {{% /md %}}</dd>
@@ -210,7 +210,7 @@ block_external_search_index: true
             title="Optional">
         <span>Token<wbr>Update</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Regenerate admin token. Default: `false` (bool)
 {{% /md %}}</dd>
@@ -226,7 +226,7 @@ block_external_search_index: true
             title="Optional">
         <span>current<wbr>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Current password for Admin user. Just needed for recover if admin password has been changed from other resources and token is expired (string)
 {{% /md %}}</dd>
@@ -235,7 +235,7 @@ block_external_search_index: true
             title="Optional">
         <span>password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password for Admin user or random generated if empty (string)
 {{% /md %}}</dd>
@@ -244,7 +244,7 @@ block_external_search_index: true
             title="Optional">
         <span>telemetry</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Send telemetry anonymous data. Default: `false` (bool)
 {{% /md %}}</dd>
@@ -253,7 +253,7 @@ block_external_search_index: true
             title="Optional">
         <span>token<wbr>Ttl</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}TTL in seconds for generated admin token. Default: `0`  (int)
 {{% /md %}}</dd>
@@ -262,7 +262,7 @@ block_external_search_index: true
             title="Optional">
         <span>token<wbr>Update</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Regenerate admin token. Default: `false` (bool)
 {{% /md %}}</dd>
@@ -340,33 +340,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Current<wbr>Password</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Current password for Admin user. Just needed for recover if admin password has been changed from other resources and token is expired (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Password</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Password for Admin user or random generated if empty (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Telemetry</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Send telemetry anonymous data. Default: `false` (bool)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Temp<wbr>Token</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -399,24 +372,6 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) Generated API token id for Admin User (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Token<wbr>Ttl</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}TTL in seconds for generated admin token. Default: `0`  (int)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Token<wbr>Update</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Regenerate admin token. Default: `false` (bool)
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -446,33 +401,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Current<wbr>Password</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Current password for Admin user. Just needed for recover if admin password has been changed from other resources and token is expired (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Password</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Password for Admin user or random generated if empty (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Telemetry</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Send telemetry anonymous data. Default: `false` (bool)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Temp<wbr>Token</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -509,24 +437,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Token<wbr>Ttl</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}TTL in seconds for generated admin token. Default: `0`  (int)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Token<wbr>Update</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Regenerate admin token. Default: `false` (bool)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Url</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -549,33 +459,6 @@ The following output properties are available:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>current<wbr>Password</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Current password for Admin user. Just needed for recover if admin password has been changed from other resources and token is expired (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>password</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Password for Admin user or random generated if empty (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>telemetry</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Send telemetry anonymous data. Default: `false` (bool)
-{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -615,24 +498,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>token<wbr>Ttl</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}TTL in seconds for generated admin token. Default: `0`  (int)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>token<wbr>Update</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Regenerate admin token. Default: `false` (bool)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>url</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -655,33 +520,6 @@ The following output properties are available:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>current_<wbr>password</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Current password for Admin user. Just needed for recover if admin password has been changed from other resources and token is expired (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>password</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Password for Admin user or random generated if empty (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>telemetry</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Send telemetry anonymous data. Default: `false` (bool)
-{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -717,24 +555,6 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Computed) Generated API token id for Admin User (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>token_<wbr>ttl</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}TTL in seconds for generated admin token. Default: `0`  (int)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>token_<wbr>update</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Regenerate admin token. Default: `false` (bool)
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -784,7 +604,7 @@ Get an existing Bootstrap resource's state with the given name, ID, and optional
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2..Bootstrap.html">Bootstrap</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2..BootstrapState.html">BootstrapState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.Bootstrap.html">Bootstrap</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2..BootstrapState.html">BootstrapState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -894,7 +714,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Current<wbr>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Current password for Admin user. Just needed for recover if admin password has been changed from other resources and token is expired (string)
 {{% /md %}}</dd>
@@ -903,7 +723,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password for Admin user or random generated if empty (string)
 {{% /md %}}</dd>
@@ -912,7 +732,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Telemetry</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Send telemetry anonymous data. Default: `false` (bool)
 {{% /md %}}</dd>
@@ -921,7 +741,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Temp<wbr>Token</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) Generated API temporary token as helper. Should be empty (string)
 {{% /md %}}</dd>
@@ -930,7 +750,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Temp<wbr>Token<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) Generated API temporary token id as helper. Should be empty (string)
 {{% /md %}}</dd>
@@ -939,7 +759,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Token</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) Generated API token for Admin User (string)
 {{% /md %}}</dd>
@@ -948,7 +768,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Token<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) Generated API token id for Admin User (string)
 {{% /md %}}</dd>
@@ -957,7 +777,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Token<wbr>Ttl</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}TTL in seconds for generated admin token. Default: `0`  (int)
 {{% /md %}}</dd>
@@ -966,7 +786,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Token<wbr>Update</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Regenerate admin token. Default: `false` (bool)
 {{% /md %}}</dd>
@@ -975,7 +795,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) URL set as server-url (string)
 {{% /md %}}</dd>
@@ -984,7 +804,7 @@ The following state arguments are supported:
             title="Optional">
         <span>User</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) Admin username (string)
 {{% /md %}}</dd>
@@ -1000,7 +820,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Current<wbr>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Current password for Admin user. Just needed for recover if admin password has been changed from other resources and token is expired (string)
 {{% /md %}}</dd>
@@ -1009,7 +829,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password for Admin user or random generated if empty (string)
 {{% /md %}}</dd>
@@ -1018,7 +838,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Telemetry</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Send telemetry anonymous data. Default: `false` (bool)
 {{% /md %}}</dd>
@@ -1027,7 +847,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Temp<wbr>Token</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) Generated API temporary token as helper. Should be empty (string)
 {{% /md %}}</dd>
@@ -1036,7 +856,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Temp<wbr>Token<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) Generated API temporary token id as helper. Should be empty (string)
 {{% /md %}}</dd>
@@ -1045,7 +865,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Token</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) Generated API token for Admin User (string)
 {{% /md %}}</dd>
@@ -1054,7 +874,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Token<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) Generated API token id for Admin User (string)
 {{% /md %}}</dd>
@@ -1063,7 +883,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Token<wbr>Ttl</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}TTL in seconds for generated admin token. Default: `0`  (int)
 {{% /md %}}</dd>
@@ -1072,7 +892,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Token<wbr>Update</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Regenerate admin token. Default: `false` (bool)
 {{% /md %}}</dd>
@@ -1081,7 +901,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) URL set as server-url (string)
 {{% /md %}}</dd>
@@ -1090,7 +910,7 @@ The following state arguments are supported:
             title="Optional">
         <span>User</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) Admin username (string)
 {{% /md %}}</dd>
@@ -1106,7 +926,7 @@ The following state arguments are supported:
             title="Optional">
         <span>current<wbr>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Current password for Admin user. Just needed for recover if admin password has been changed from other resources and token is expired (string)
 {{% /md %}}</dd>
@@ -1115,7 +935,7 @@ The following state arguments are supported:
             title="Optional">
         <span>password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password for Admin user or random generated if empty (string)
 {{% /md %}}</dd>
@@ -1124,7 +944,7 @@ The following state arguments are supported:
             title="Optional">
         <span>telemetry</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Send telemetry anonymous data. Default: `false` (bool)
 {{% /md %}}</dd>
@@ -1133,7 +953,7 @@ The following state arguments are supported:
             title="Optional">
         <span>temp<wbr>Token</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) Generated API temporary token as helper. Should be empty (string)
 {{% /md %}}</dd>
@@ -1142,7 +962,7 @@ The following state arguments are supported:
             title="Optional">
         <span>temp<wbr>Token<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) Generated API temporary token id as helper. Should be empty (string)
 {{% /md %}}</dd>
@@ -1151,7 +971,7 @@ The following state arguments are supported:
             title="Optional">
         <span>token</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) Generated API token for Admin User (string)
 {{% /md %}}</dd>
@@ -1160,7 +980,7 @@ The following state arguments are supported:
             title="Optional">
         <span>token<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) Generated API token id for Admin User (string)
 {{% /md %}}</dd>
@@ -1169,7 +989,7 @@ The following state arguments are supported:
             title="Optional">
         <span>token<wbr>Ttl</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}TTL in seconds for generated admin token. Default: `0`  (int)
 {{% /md %}}</dd>
@@ -1178,7 +998,7 @@ The following state arguments are supported:
             title="Optional">
         <span>token<wbr>Update</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Regenerate admin token. Default: `false` (bool)
 {{% /md %}}</dd>
@@ -1187,7 +1007,7 @@ The following state arguments are supported:
             title="Optional">
         <span>url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) URL set as server-url (string)
 {{% /md %}}</dd>
@@ -1196,7 +1016,7 @@ The following state arguments are supported:
             title="Optional">
         <span>user</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) Admin username (string)
 {{% /md %}}</dd>

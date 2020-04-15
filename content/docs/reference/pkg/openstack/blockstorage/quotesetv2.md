@@ -22,7 +22,7 @@ Manages a V2 block storage quotaset resource within OpenStack.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/openstack/blockstorage/#QuoteSetV2">QuoteSetV2</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/openstack/blockstorage/#QuoteSetV2Args">QuoteSetV2Args</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/openstack/blockstorage/#QuoteSetV2">QuoteSetV2</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/openstack/blockstorage/#QuoteSetV2Args">QuoteSetV2Args</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -30,11 +30,11 @@ Manages a V2 block storage quotaset resource within OpenStack.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewQuoteSetV2<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/blockstorage?tab=doc#QuoteSetV2Args">QuoteSetV2Args</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/blockstorage?tab=doc#QuoteSetV2">QuoteSetV2</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewQuoteSetV2<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/blockstorage?tab=doc#QuoteSetV2Args">QuoteSetV2Args</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/blockstorage?tab=doc#QuoteSetV2">QuoteSetV2</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.Openstack.Blockstorage.QuoteSetV2.html">QuoteSetV2</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.Openstack.BlockStorage.QuoteSetV2Args.html">QuoteSetV2Args</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.Openstack.BlockStorage.QuoteSetV2.html">QuoteSetV2</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.OpenStack.BlockStorage.QuoteSetV2Args.html">QuoteSetV2Args</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -126,56 +126,6 @@ Manages a V2 block storage quotaset resource within OpenStack.
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Backup<wbr>Gigabytes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}Quota value for backup gigabytes. Changing
-this updates the existing quotaset.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Backups</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}Quota value for backups. Changing this updates the
-existing quotaset.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Gigabytes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}Quota value for gigabytes. Changing this updates the
-existing quotaset.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Groups</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}Quota value for groups. Changing this updates the
-existing quotaset.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Per<wbr>Volume<wbr>Gigabytes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}Quota value for gigabytes per volume .
-Changing this updates the existing quotaset.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Project<wbr>Id</span>
@@ -188,9 +138,59 @@ creates a new quotaset.
 
     <dt class="property-optional"
             title="Optional">
+        <span>Backup<wbr>Gigabytes</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Quota value for backup gigabytes. Changing
+this updates the existing quotaset.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Backups</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Quota value for backups. Changing this updates the
+existing quotaset.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Gigabytes</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Quota value for gigabytes. Changing this updates the
+existing quotaset.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Groups</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Quota value for groups. Changing this updates the
+existing quotaset.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Per<wbr>Volume<wbr>Gigabytes</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Quota value for gigabytes per volume .
+Changing this updates the existing quotaset.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region in which to create the volume. If
 omitted, the `region` argument of the provider is used. Changing this
@@ -201,7 +201,7 @@ creates a new quotaset.
             title="Optional">
         <span>Snapshots</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Quota value for snapshots. Changing this updates the
 existing quotaset.
@@ -211,7 +211,7 @@ existing quotaset.
             title="Optional">
         <span>Volumes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Quota value for volumes. Changing this updates the
 existing quotaset.
@@ -224,56 +224,6 @@ existing quotaset.
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Backup<wbr>Gigabytes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}Quota value for backup gigabytes. Changing
-this updates the existing quotaset.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Backups</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}Quota value for backups. Changing this updates the
-existing quotaset.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Gigabytes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}Quota value for gigabytes. Changing this updates the
-existing quotaset.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Groups</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}Quota value for groups. Changing this updates the
-existing quotaset.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Per<wbr>Volume<wbr>Gigabytes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}Quota value for gigabytes per volume .
-Changing this updates the existing quotaset.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Project<wbr>Id</span>
@@ -286,9 +236,59 @@ creates a new quotaset.
 
     <dt class="property-optional"
             title="Optional">
+        <span>Backup<wbr>Gigabytes</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Quota value for backup gigabytes. Changing
+this updates the existing quotaset.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Backups</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Quota value for backups. Changing this updates the
+existing quotaset.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Gigabytes</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Quota value for gigabytes. Changing this updates the
+existing quotaset.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Groups</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Quota value for groups. Changing this updates the
+existing quotaset.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Per<wbr>Volume<wbr>Gigabytes</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Quota value for gigabytes per volume .
+Changing this updates the existing quotaset.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region in which to create the volume. If
 omitted, the `region` argument of the provider is used. Changing this
@@ -299,7 +299,7 @@ creates a new quotaset.
             title="Optional">
         <span>Snapshots</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Quota value for snapshots. Changing this updates the
 existing quotaset.
@@ -309,7 +309,7 @@ existing quotaset.
             title="Optional">
         <span>Volumes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Quota value for volumes. Changing this updates the
 existing quotaset.
@@ -321,56 +321,6 @@ existing quotaset.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>backup<wbr>Gigabytes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}Quota value for backup gigabytes. Changing
-this updates the existing quotaset.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>backups</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}Quota value for backups. Changing this updates the
-existing quotaset.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>gigabytes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}Quota value for gigabytes. Changing this updates the
-existing quotaset.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>groups</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}Quota value for groups. Changing this updates the
-existing quotaset.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>per<wbr>Volume<wbr>Gigabytes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}Quota value for gigabytes per volume .
-Changing this updates the existing quotaset.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -384,9 +334,59 @@ creates a new quotaset.
 
     <dt class="property-optional"
             title="Optional">
+        <span>backup<wbr>Gigabytes</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Quota value for backup gigabytes. Changing
+this updates the existing quotaset.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>backups</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Quota value for backups. Changing this updates the
+existing quotaset.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>gigabytes</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Quota value for gigabytes. Changing this updates the
+existing quotaset.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>groups</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Quota value for groups. Changing this updates the
+existing quotaset.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>per<wbr>Volume<wbr>Gigabytes</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Quota value for gigabytes per volume .
+Changing this updates the existing quotaset.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region in which to create the volume. If
 omitted, the `region` argument of the provider is used. Changing this
@@ -397,7 +397,7 @@ creates a new quotaset.
             title="Optional">
         <span>snapshots</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Quota value for snapshots. Changing this updates the
 existing quotaset.
@@ -407,7 +407,7 @@ existing quotaset.
             title="Optional">
         <span>volumes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Quota value for volumes. Changing this updates the
 existing quotaset.
@@ -419,6 +419,16 @@ existing quotaset.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>project_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}ID of the project to manage quotas. Changing this
+creates a new quotaset.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -470,16 +480,6 @@ existing quotaset.
 Changing this updates the existing quotaset.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>project_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}ID of the project to manage quotas. Changing this
-creates a new quotaset.
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>region</span>
@@ -515,408 +515,6 @@ existing quotaset.
 {{% /choosable %}}
 
 
-
-
-
-
-
-## QuoteSetV2 Output Properties
-
-The following output properties are available:
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Backup<wbr>Gigabytes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Quota value for backup gigabytes. Changing
-this updates the existing quotaset.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Backups</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Quota value for backups. Changing this updates the
-existing quotaset.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Gigabytes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Quota value for gigabytes. Changing this updates the
-existing quotaset.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Groups</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Quota value for groups. Changing this updates the
-existing quotaset.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Per<wbr>Volume<wbr>Gigabytes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Quota value for gigabytes per volume .
-Changing this updates the existing quotaset.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Project<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}ID of the project to manage quotas. Changing this
-creates a new quotaset.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The region in which to create the volume. If
-omitted, the `region` argument of the provider is used. Changing this
-creates a new quotaset.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Snapshots</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Quota value for snapshots. Changing this updates the
-existing quotaset.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Volumes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Quota value for volumes. Changing this updates the
-existing quotaset.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Backup<wbr>Gigabytes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Quota value for backup gigabytes. Changing
-this updates the existing quotaset.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Backups</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Quota value for backups. Changing this updates the
-existing quotaset.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Gigabytes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Quota value for gigabytes. Changing this updates the
-existing quotaset.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Groups</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Quota value for groups. Changing this updates the
-existing quotaset.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Per<wbr>Volume<wbr>Gigabytes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Quota value for gigabytes per volume .
-Changing this updates the existing quotaset.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Project<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}ID of the project to manage quotas. Changing this
-creates a new quotaset.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The region in which to create the volume. If
-omitted, the `region` argument of the provider is used. Changing this
-creates a new quotaset.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Snapshots</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Quota value for snapshots. Changing this updates the
-existing quotaset.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Volumes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Quota value for volumes. Changing this updates the
-existing quotaset.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>backup<wbr>Gigabytes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}Quota value for backup gigabytes. Changing
-this updates the existing quotaset.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>backups</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}Quota value for backups. Changing this updates the
-existing quotaset.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>gigabytes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}Quota value for gigabytes. Changing this updates the
-existing quotaset.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>groups</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}Quota value for groups. Changing this updates the
-existing quotaset.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>per<wbr>Volume<wbr>Gigabytes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}Quota value for gigabytes per volume .
-Changing this updates the existing quotaset.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>project<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}ID of the project to manage quotas. Changing this
-creates a new quotaset.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The region in which to create the volume. If
-omitted, the `region` argument of the provider is used. Changing this
-creates a new quotaset.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>snapshots</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}Quota value for snapshots. Changing this updates the
-existing quotaset.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>volumes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}Quota value for volumes. Changing this updates the
-existing quotaset.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>backup_<wbr>gigabytes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}Quota value for backup gigabytes. Changing
-this updates the existing quotaset.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>backups</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}Quota value for backups. Changing this updates the
-existing quotaset.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>gigabytes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}Quota value for gigabytes. Changing this updates the
-existing quotaset.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>groups</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}Quota value for groups. Changing this updates the
-existing quotaset.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>per_<wbr>volume_<wbr>gigabytes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}Quota value for gigabytes per volume .
-Changing this updates the existing quotaset.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>project_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}ID of the project to manage quotas. Changing this
-creates a new quotaset.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The region in which to create the volume. If
-omitted, the `region` argument of the provider is used. Changing this
-creates a new quotaset.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>snapshots</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}Quota value for snapshots. Changing this updates the
-existing quotaset.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>volumes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}Quota value for volumes. Changing this updates the
-existing quotaset.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
 
 
 
@@ -944,7 +542,7 @@ Get an existing QuoteSetV2 resource's state with the given name, ID, and optiona
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.Openstack.Blockstorage.QuoteSetV2.html">QuoteSetV2</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.Openstack.Blockstorage.QuoteSetV2State.html">QuoteSetV2State</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.Openstack.BlockStorage.QuoteSetV2.html">QuoteSetV2</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.Openstack.BlockStorage.QuoteSetV2State.html">QuoteSetV2State</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1054,7 +652,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Backup<wbr>Gigabytes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Quota value for backup gigabytes. Changing
 this updates the existing quotaset.
@@ -1064,7 +662,7 @@ this updates the existing quotaset.
             title="Optional">
         <span>Backups</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Quota value for backups. Changing this updates the
 existing quotaset.
@@ -1074,7 +672,7 @@ existing quotaset.
             title="Optional">
         <span>Gigabytes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Quota value for gigabytes. Changing this updates the
 existing quotaset.
@@ -1084,7 +682,7 @@ existing quotaset.
             title="Optional">
         <span>Groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Quota value for groups. Changing this updates the
 existing quotaset.
@@ -1094,7 +692,7 @@ existing quotaset.
             title="Optional">
         <span>Per<wbr>Volume<wbr>Gigabytes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Quota value for gigabytes per volume .
 Changing this updates the existing quotaset.
@@ -1104,7 +702,7 @@ Changing this updates the existing quotaset.
             title="Optional">
         <span>Project<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the project to manage quotas. Changing this
 creates a new quotaset.
@@ -1114,7 +712,7 @@ creates a new quotaset.
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region in which to create the volume. If
 omitted, the `region` argument of the provider is used. Changing this
@@ -1125,7 +723,7 @@ creates a new quotaset.
             title="Optional">
         <span>Snapshots</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Quota value for snapshots. Changing this updates the
 existing quotaset.
@@ -1135,7 +733,7 @@ existing quotaset.
             title="Optional">
         <span>Volumes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Quota value for volumes. Changing this updates the
 existing quotaset.
@@ -1152,7 +750,7 @@ existing quotaset.
             title="Optional">
         <span>Backup<wbr>Gigabytes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Quota value for backup gigabytes. Changing
 this updates the existing quotaset.
@@ -1162,7 +760,7 @@ this updates the existing quotaset.
             title="Optional">
         <span>Backups</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Quota value for backups. Changing this updates the
 existing quotaset.
@@ -1172,7 +770,7 @@ existing quotaset.
             title="Optional">
         <span>Gigabytes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Quota value for gigabytes. Changing this updates the
 existing quotaset.
@@ -1182,7 +780,7 @@ existing quotaset.
             title="Optional">
         <span>Groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Quota value for groups. Changing this updates the
 existing quotaset.
@@ -1192,7 +790,7 @@ existing quotaset.
             title="Optional">
         <span>Per<wbr>Volume<wbr>Gigabytes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Quota value for gigabytes per volume .
 Changing this updates the existing quotaset.
@@ -1202,7 +800,7 @@ Changing this updates the existing quotaset.
             title="Optional">
         <span>Project<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the project to manage quotas. Changing this
 creates a new quotaset.
@@ -1212,7 +810,7 @@ creates a new quotaset.
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region in which to create the volume. If
 omitted, the `region` argument of the provider is used. Changing this
@@ -1223,7 +821,7 @@ creates a new quotaset.
             title="Optional">
         <span>Snapshots</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Quota value for snapshots. Changing this updates the
 existing quotaset.
@@ -1233,7 +831,7 @@ existing quotaset.
             title="Optional">
         <span>Volumes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Quota value for volumes. Changing this updates the
 existing quotaset.
@@ -1250,7 +848,7 @@ existing quotaset.
             title="Optional">
         <span>backup<wbr>Gigabytes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Quota value for backup gigabytes. Changing
 this updates the existing quotaset.
@@ -1260,7 +858,7 @@ this updates the existing quotaset.
             title="Optional">
         <span>backups</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Quota value for backups. Changing this updates the
 existing quotaset.
@@ -1270,7 +868,7 @@ existing quotaset.
             title="Optional">
         <span>gigabytes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Quota value for gigabytes. Changing this updates the
 existing quotaset.
@@ -1280,7 +878,7 @@ existing quotaset.
             title="Optional">
         <span>groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Quota value for groups. Changing this updates the
 existing quotaset.
@@ -1290,7 +888,7 @@ existing quotaset.
             title="Optional">
         <span>per<wbr>Volume<wbr>Gigabytes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Quota value for gigabytes per volume .
 Changing this updates the existing quotaset.
@@ -1300,7 +898,7 @@ Changing this updates the existing quotaset.
             title="Optional">
         <span>project<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}ID of the project to manage quotas. Changing this
 creates a new quotaset.
@@ -1310,7 +908,7 @@ creates a new quotaset.
             title="Optional">
         <span>region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region in which to create the volume. If
 omitted, the `region` argument of the provider is used. Changing this
@@ -1321,7 +919,7 @@ creates a new quotaset.
             title="Optional">
         <span>snapshots</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Quota value for snapshots. Changing this updates the
 existing quotaset.
@@ -1331,7 +929,7 @@ existing quotaset.
             title="Optional">
         <span>volumes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Quota value for volumes. Changing this updates the
 existing quotaset.

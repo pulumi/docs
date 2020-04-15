@@ -77,7 +77,7 @@ const developerGrant = new mysql.Grant("developer", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/mysql/#Grant">Grant</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/mysql/#GrantArgs">GrantArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/mysql/#Grant">Grant</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/mysql/#GrantArgs">GrantArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -85,11 +85,11 @@ const developerGrant = new mysql.Grant("developer", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewGrant<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-mysql/sdk/go/mysql/?tab=doc#GrantArgs">GrantArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-mysql/sdk/go/mysql/?tab=doc#Grant">Grant</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewGrant<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-mysql/sdk/go/mysql/?tab=doc#GrantArgs">GrantArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-mysql/sdk/go/mysql/?tab=doc#Grant">Grant</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Mysql/Pulumi.Mysql..Grant.html">Grant</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Mysql/Pulumi.Mysql.GrantArgs.html">GrantArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Mysql/Pulumi.Mysql.Grant.html">Grant</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Mysql/Pulumi.MySql.GrantArgs.html">GrantArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -194,7 +194,7 @@ const developerGrant = new mysql.Grant("developer", {
             title="Optional">
         <span>Grant<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to also give the user privileges to grant the same privileges to other users.
 {{% /md %}}</dd>
@@ -203,7 +203,7 @@ const developerGrant = new mysql.Grant("developer", {
             title="Optional">
         <span>Host</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The source host of the user. Defaults to "localhost". Conflicts with `role`.
 {{% /md %}}</dd>
@@ -212,7 +212,7 @@ const developerGrant = new mysql.Grant("developer", {
             title="Optional">
         <span>Privileges</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of privileges to grant to the user. Refer to a list of privileges (such as [here](https://dev.mysql.com/doc/refman/5.5/en/grant.html)) for applicable privileges. Conflicts with `roles`.
 {{% /md %}}</dd>
@@ -221,7 +221,7 @@ const developerGrant = new mysql.Grant("developer", {
             title="Optional">
         <span>Role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The role to grant `privileges` to. Conflicts with `user` and `host`.
 {{% /md %}}</dd>
@@ -230,7 +230,7 @@ const developerGrant = new mysql.Grant("developer", {
             title="Optional">
         <span>Roles</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of rols to grant to the user. Conflicts with `privileges`.
 {{% /md %}}</dd>
@@ -239,7 +239,7 @@ const developerGrant = new mysql.Grant("developer", {
             title="Optional">
         <span>Table</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Which table to grant `privileges` on. Defaults to `*`, which is all tables.
 {{% /md %}}</dd>
@@ -248,7 +248,7 @@ const developerGrant = new mysql.Grant("developer", {
             title="Optional">
         <span>Tls<wbr>Option</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An TLS-Option for the `GRANT` statement. The value is suffixed to `REQUIRE`. A value of 'SSL' will generate a `GRANT ... REQUIRE SSL` statement. See the [MYSQL `GRANT` documentation](https://dev.mysql.com/doc/refman/5.7/en/grant.html) for more. Ignored if MySQL version is under 5.7.0.
 {{% /md %}}</dd>
@@ -257,7 +257,7 @@ const developerGrant = new mysql.Grant("developer", {
             title="Optional">
         <span>User</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the user. Conflicts with `role`.
 {{% /md %}}</dd>
@@ -282,7 +282,7 @@ const developerGrant = new mysql.Grant("developer", {
             title="Optional">
         <span>Grant</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to also give the user privileges to grant the same privileges to other users.
 {{% /md %}}</dd>
@@ -291,7 +291,7 @@ const developerGrant = new mysql.Grant("developer", {
             title="Optional">
         <span>Host</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The source host of the user. Defaults to "localhost". Conflicts with `role`.
 {{% /md %}}</dd>
@@ -309,7 +309,7 @@ const developerGrant = new mysql.Grant("developer", {
             title="Optional">
         <span>Role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The role to grant `privileges` to. Conflicts with `user` and `host`.
 {{% /md %}}</dd>
@@ -327,7 +327,7 @@ const developerGrant = new mysql.Grant("developer", {
             title="Optional">
         <span>Table</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Which table to grant `privileges` on. Defaults to `*`, which is all tables.
 {{% /md %}}</dd>
@@ -336,7 +336,7 @@ const developerGrant = new mysql.Grant("developer", {
             title="Optional">
         <span>Tls<wbr>Option</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An TLS-Option for the `GRANT` statement. The value is suffixed to `REQUIRE`. A value of 'SSL' will generate a `GRANT ... REQUIRE SSL` statement. See the [MYSQL `GRANT` documentation](https://dev.mysql.com/doc/refman/5.7/en/grant.html) for more. Ignored if MySQL version is under 5.7.0.
 {{% /md %}}</dd>
@@ -345,7 +345,7 @@ const developerGrant = new mysql.Grant("developer", {
             title="Optional">
         <span>User</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the user. Conflicts with `role`.
 {{% /md %}}</dd>
@@ -370,7 +370,7 @@ const developerGrant = new mysql.Grant("developer", {
             title="Optional">
         <span>grant</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to also give the user privileges to grant the same privileges to other users.
 {{% /md %}}</dd>
@@ -379,7 +379,7 @@ const developerGrant = new mysql.Grant("developer", {
             title="Optional">
         <span>host</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The source host of the user. Defaults to "localhost". Conflicts with `role`.
 {{% /md %}}</dd>
@@ -388,7 +388,7 @@ const developerGrant = new mysql.Grant("developer", {
             title="Optional">
         <span>privileges</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of privileges to grant to the user. Refer to a list of privileges (such as [here](https://dev.mysql.com/doc/refman/5.5/en/grant.html)) for applicable privileges. Conflicts with `roles`.
 {{% /md %}}</dd>
@@ -397,7 +397,7 @@ const developerGrant = new mysql.Grant("developer", {
             title="Optional">
         <span>role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The role to grant `privileges` to. Conflicts with `user` and `host`.
 {{% /md %}}</dd>
@@ -406,7 +406,7 @@ const developerGrant = new mysql.Grant("developer", {
             title="Optional">
         <span>roles</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of rols to grant to the user. Conflicts with `privileges`.
 {{% /md %}}</dd>
@@ -415,7 +415,7 @@ const developerGrant = new mysql.Grant("developer", {
             title="Optional">
         <span>table</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Which table to grant `privileges` on. Defaults to `*`, which is all tables.
 {{% /md %}}</dd>
@@ -424,7 +424,7 @@ const developerGrant = new mysql.Grant("developer", {
             title="Optional">
         <span>tls<wbr>Option</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An TLS-Option for the `GRANT` statement. The value is suffixed to `REQUIRE`. A value of 'SSL' will generate a `GRANT ... REQUIRE SSL` statement. See the [MYSQL `GRANT` documentation](https://dev.mysql.com/doc/refman/5.7/en/grant.html) for more. Ignored if MySQL version is under 5.7.0.
 {{% /md %}}</dd>
@@ -433,7 +433,7 @@ const developerGrant = new mysql.Grant("developer", {
             title="Optional">
         <span>user</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the user. Conflicts with `role`.
 {{% /md %}}</dd>
@@ -530,368 +530,6 @@ const developerGrant = new mysql.Grant("developer", {
 {{% /choosable %}}
 
 
-
-
-
-
-
-## Grant Output Properties
-
-The following output properties are available:
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Database</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The database to grant privileges on.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Grant<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Whether to also give the user privileges to grant the same privileges to other users.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Host</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The source host of the user. Defaults to "localhost". Conflicts with `role`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Privileges</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}A list of privileges to grant to the user. Refer to a list of privileges (such as [here](https://dev.mysql.com/doc/refman/5.5/en/grant.html)) for applicable privileges. Conflicts with `roles`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Role</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The role to grant `privileges` to. Conflicts with `user` and `host`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Roles</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}A list of rols to grant to the user. Conflicts with `privileges`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Table</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Which table to grant `privileges` on. Defaults to `*`, which is all tables.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tls<wbr>Option</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}An TLS-Option for the `GRANT` statement. The value is suffixed to `REQUIRE`. A value of 'SSL' will generate a `GRANT ... REQUIRE SSL` statement. See the [MYSQL `GRANT` documentation](https://dev.mysql.com/doc/refman/5.7/en/grant.html) for more. Ignored if MySQL version is under 5.7.0.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>User</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The name of the user. Conflicts with `role`.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Database</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The database to grant privileges on.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Grant</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Whether to also give the user privileges to grant the same privileges to other users.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Host</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The source host of the user. Defaults to "localhost". Conflicts with `role`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Privileges</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}A list of privileges to grant to the user. Refer to a list of privileges (such as [here](https://dev.mysql.com/doc/refman/5.5/en/grant.html)) for applicable privileges. Conflicts with `roles`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Role</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The role to grant `privileges` to. Conflicts with `user` and `host`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Roles</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}A list of rols to grant to the user. Conflicts with `privileges`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Table</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Which table to grant `privileges` on. Defaults to `*`, which is all tables.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tls<wbr>Option</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}An TLS-Option for the `GRANT` statement. The value is suffixed to `REQUIRE`. A value of 'SSL' will generate a `GRANT ... REQUIRE SSL` statement. See the [MYSQL `GRANT` documentation](https://dev.mysql.com/doc/refman/5.7/en/grant.html) for more. Ignored if MySQL version is under 5.7.0.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>User</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The name of the user. Conflicts with `role`.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>database</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The database to grant privileges on.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>grant</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Whether to also give the user privileges to grant the same privileges to other users.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>host</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The source host of the user. Defaults to "localhost". Conflicts with `role`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>privileges</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}A list of privileges to grant to the user. Refer to a list of privileges (such as [here](https://dev.mysql.com/doc/refman/5.5/en/grant.html)) for applicable privileges. Conflicts with `roles`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>role</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The role to grant `privileges` to. Conflicts with `user` and `host`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>roles</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}A list of rols to grant to the user. Conflicts with `privileges`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>table</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Which table to grant `privileges` on. Defaults to `*`, which is all tables.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tls<wbr>Option</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}An TLS-Option for the `GRANT` statement. The value is suffixed to `REQUIRE`. A value of 'SSL' will generate a `GRANT ... REQUIRE SSL` statement. See the [MYSQL `GRANT` documentation](https://dev.mysql.com/doc/refman/5.7/en/grant.html) for more. Ignored if MySQL version is under 5.7.0.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>user</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The name of the user. Conflicts with `role`.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>database</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The database to grant privileges on.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>grant</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Whether to also give the user privileges to grant the same privileges to other users.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>host</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The source host of the user. Defaults to "localhost". Conflicts with `role`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>privileges</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}A list of privileges to grant to the user. Refer to a list of privileges (such as [here](https://dev.mysql.com/doc/refman/5.5/en/grant.html)) for applicable privileges. Conflicts with `roles`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>role</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The role to grant `privileges` to. Conflicts with `user` and `host`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>roles</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}A list of rols to grant to the user. Conflicts with `privileges`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>table</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Which table to grant `privileges` on. Defaults to `*`, which is all tables.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tls_<wbr>option</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}An TLS-Option for the `GRANT` statement. The value is suffixed to `REQUIRE`. A value of 'SSL' will generate a `GRANT ... REQUIRE SSL` statement. See the [MYSQL `GRANT` documentation](https://dev.mysql.com/doc/refman/5.7/en/grant.html) for more. Ignored if MySQL version is under 5.7.0.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>user</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the user. Conflicts with `role`.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
 
 
 
@@ -919,7 +557,7 @@ Get an existing Grant resource's state with the given name, ID, and optional ext
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Mysql/Pulumi.Mysql..Grant.html">Grant</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Mysql/Pulumi.Mysql..GrantState.html">GrantState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Mysql/Pulumi.Mysql.Grant.html">Grant</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Mysql/Pulumi.Mysql..GrantState.html">GrantState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1029,7 +667,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Database</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The database to grant privileges on.
 {{% /md %}}</dd>
@@ -1038,7 +676,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Grant<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to also give the user privileges to grant the same privileges to other users.
 {{% /md %}}</dd>
@@ -1047,7 +685,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Host</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The source host of the user. Defaults to "localhost". Conflicts with `role`.
 {{% /md %}}</dd>
@@ -1056,7 +694,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Privileges</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of privileges to grant to the user. Refer to a list of privileges (such as [here](https://dev.mysql.com/doc/refman/5.5/en/grant.html)) for applicable privileges. Conflicts with `roles`.
 {{% /md %}}</dd>
@@ -1065,7 +703,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The role to grant `privileges` to. Conflicts with `user` and `host`.
 {{% /md %}}</dd>
@@ -1074,7 +712,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Roles</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of rols to grant to the user. Conflicts with `privileges`.
 {{% /md %}}</dd>
@@ -1083,7 +721,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Table</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Which table to grant `privileges` on. Defaults to `*`, which is all tables.
 {{% /md %}}</dd>
@@ -1092,7 +730,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Tls<wbr>Option</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An TLS-Option for the `GRANT` statement. The value is suffixed to `REQUIRE`. A value of 'SSL' will generate a `GRANT ... REQUIRE SSL` statement. See the [MYSQL `GRANT` documentation](https://dev.mysql.com/doc/refman/5.7/en/grant.html) for more. Ignored if MySQL version is under 5.7.0.
 {{% /md %}}</dd>
@@ -1101,7 +739,7 @@ The following state arguments are supported:
             title="Optional">
         <span>User</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the user. Conflicts with `role`.
 {{% /md %}}</dd>
@@ -1117,7 +755,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Database</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The database to grant privileges on.
 {{% /md %}}</dd>
@@ -1126,7 +764,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Grant</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to also give the user privileges to grant the same privileges to other users.
 {{% /md %}}</dd>
@@ -1135,7 +773,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Host</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The source host of the user. Defaults to "localhost". Conflicts with `role`.
 {{% /md %}}</dd>
@@ -1153,7 +791,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The role to grant `privileges` to. Conflicts with `user` and `host`.
 {{% /md %}}</dd>
@@ -1171,7 +809,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Table</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Which table to grant `privileges` on. Defaults to `*`, which is all tables.
 {{% /md %}}</dd>
@@ -1180,7 +818,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Tls<wbr>Option</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An TLS-Option for the `GRANT` statement. The value is suffixed to `REQUIRE`. A value of 'SSL' will generate a `GRANT ... REQUIRE SSL` statement. See the [MYSQL `GRANT` documentation](https://dev.mysql.com/doc/refman/5.7/en/grant.html) for more. Ignored if MySQL version is under 5.7.0.
 {{% /md %}}</dd>
@@ -1189,7 +827,7 @@ The following state arguments are supported:
             title="Optional">
         <span>User</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the user. Conflicts with `role`.
 {{% /md %}}</dd>
@@ -1205,7 +843,7 @@ The following state arguments are supported:
             title="Optional">
         <span>database</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The database to grant privileges on.
 {{% /md %}}</dd>
@@ -1214,7 +852,7 @@ The following state arguments are supported:
             title="Optional">
         <span>grant</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to also give the user privileges to grant the same privileges to other users.
 {{% /md %}}</dd>
@@ -1223,7 +861,7 @@ The following state arguments are supported:
             title="Optional">
         <span>host</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The source host of the user. Defaults to "localhost". Conflicts with `role`.
 {{% /md %}}</dd>
@@ -1232,7 +870,7 @@ The following state arguments are supported:
             title="Optional">
         <span>privileges</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of privileges to grant to the user. Refer to a list of privileges (such as [here](https://dev.mysql.com/doc/refman/5.5/en/grant.html)) for applicable privileges. Conflicts with `roles`.
 {{% /md %}}</dd>
@@ -1241,7 +879,7 @@ The following state arguments are supported:
             title="Optional">
         <span>role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The role to grant `privileges` to. Conflicts with `user` and `host`.
 {{% /md %}}</dd>
@@ -1250,7 +888,7 @@ The following state arguments are supported:
             title="Optional">
         <span>roles</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of rols to grant to the user. Conflicts with `privileges`.
 {{% /md %}}</dd>
@@ -1259,7 +897,7 @@ The following state arguments are supported:
             title="Optional">
         <span>table</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Which table to grant `privileges` on. Defaults to `*`, which is all tables.
 {{% /md %}}</dd>
@@ -1268,7 +906,7 @@ The following state arguments are supported:
             title="Optional">
         <span>tls<wbr>Option</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An TLS-Option for the `GRANT` statement. The value is suffixed to `REQUIRE`. A value of 'SSL' will generate a `GRANT ... REQUIRE SSL` statement. See the [MYSQL `GRANT` documentation](https://dev.mysql.com/doc/refman/5.7/en/grant.html) for more. Ignored if MySQL version is under 5.7.0.
 {{% /md %}}</dd>
@@ -1277,7 +915,7 @@ The following state arguments are supported:
             title="Optional">
         <span>user</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the user. Conflicts with `role`.
 {{% /md %}}</dd>

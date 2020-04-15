@@ -105,7 +105,7 @@ const testUserPoolClient = new aws.cognito.UserPoolClient("test", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/cognito/#UserPoolClient">UserPoolClient</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/cognito/#UserPoolClientArgs">UserPoolClientArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/cognito/#UserPoolClient">UserPoolClient</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/cognito/#UserPoolClientArgs">UserPoolClientArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -113,7 +113,7 @@ const testUserPoolClient = new aws.cognito.UserPoolClient("test", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewUserPoolClient<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cognito?tab=doc#UserPoolClientArgs">UserPoolClientArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cognito?tab=doc#UserPoolClient">UserPoolClient</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewUserPoolClient<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cognito?tab=doc#UserPoolClientArgs">UserPoolClientArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cognito?tab=doc#UserPoolClient">UserPoolClient</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -209,132 +209,6 @@ const testUserPoolClient = new aws.cognito.UserPoolClient("test", {
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Allowed<wbr>Oauth<wbr>Flows</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}List of allowed OAuth flows (code, implicit, client_credentials).
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Allowed<wbr>Oauth<wbr>Flows<wbr>User<wbr>Pool<wbr>Client</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Whether the client is allowed to follow the OAuth protocol when interacting with Cognito user pools.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Allowed<wbr>Oauth<wbr>Scopes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}List of allowed OAuth scopes (phone, email, openid, profile, and aws.cognito.signin.user.admin).
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Analytics<wbr>Configuration</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpoolclientanalyticsconfiguration">User<wbr>Pool<wbr>Client<wbr>Analytics<wbr>Configuration<wbr>Args?</a></span>
-    </dt>
-    <dd>{{% md %}}The Amazon Pinpoint analytics configuration for collecting metrics for this user pool.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Callback<wbr>Urls</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}List of allowed callback URLs for the identity providers.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Default<wbr>Redirect<wbr>Uri</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The default redirect URI. Must be in the list of callback URLs.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Explicit<wbr>Auth<wbr>Flows</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}List of authentication flows (ADMIN_NO_SRP_AUTH, CUSTOM_AUTH_FLOW_ONLY,  USER_PASSWORD_AUTH, ALLOW_ADMIN_USER_PASSWORD_AUTH, ALLOW_CUSTOM_AUTH, ALLOW_USER_PASSWORD_AUTH, ALLOW_USER_SRP_AUTH, ALLOW_REFRESH_TOKEN_AUTH).
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Generate<wbr>Secret</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Should an application secret be generated.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Logout<wbr>Urls</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}List of allowed logout URLs for the identity providers.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The name of the application client.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Prevent<wbr>User<wbr>Existence<wbr>Errors</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Choose which errors and responses are returned by Cognito APIs during authentication, account confirmation, and password recovery when the user does not exist in the user pool. When set to `ENABLED` and the user does not exist, authentication returns an error indicating either the username or password was incorrect, and account confirmation and password recovery return a response indicating a code was sent to a simulated destination. When set to `LEGACY`, those APIs will return a `UserNotFoundException` exception if the user does not exist in the user pool.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Read<wbr>Attributes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}List of user pool attributes the application client can read from.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Refresh<wbr>Token<wbr>Validity</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}The time limit in days refresh tokens are valid for.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Supported<wbr>Identity<wbr>Providers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}List of provider names for the identity providers that are supported on this client.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>User<wbr>Pool<wbr>Id</span>
@@ -346,9 +220,135 @@ const testUserPoolClient = new aws.cognito.UserPoolClient("test", {
 
     <dt class="property-optional"
             title="Optional">
+        <span>Allowed<wbr>Oauth<wbr>Flows</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}List of allowed OAuth flows (code, implicit, client_credentials).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Allowed<wbr>Oauth<wbr>Flows<wbr>User<wbr>Pool<wbr>Client</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether the client is allowed to follow the OAuth protocol when interacting with Cognito user pools.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Allowed<wbr>Oauth<wbr>Scopes</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}List of allowed OAuth scopes (phone, email, openid, profile, and aws.cognito.signin.user.admin).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Analytics<wbr>Configuration</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#userpoolclientanalyticsconfiguration">User<wbr>Pool<wbr>Client<wbr>Analytics<wbr>Configuration<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The Amazon Pinpoint analytics configuration for collecting metrics for this user pool.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Callback<wbr>Urls</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}List of allowed callback URLs for the identity providers.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Default<wbr>Redirect<wbr>Uri</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The default redirect URI. Must be in the list of callback URLs.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Explicit<wbr>Auth<wbr>Flows</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}List of authentication flows (ADMIN_NO_SRP_AUTH, CUSTOM_AUTH_FLOW_ONLY,  USER_PASSWORD_AUTH, ALLOW_ADMIN_USER_PASSWORD_AUTH, ALLOW_CUSTOM_AUTH, ALLOW_USER_PASSWORD_AUTH, ALLOW_USER_SRP_AUTH, ALLOW_REFRESH_TOKEN_AUTH).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Generate<wbr>Secret</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Should an application secret be generated.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Logout<wbr>Urls</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}List of allowed logout URLs for the identity providers.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the application client.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Prevent<wbr>User<wbr>Existence<wbr>Errors</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Choose which errors and responses are returned by Cognito APIs during authentication, account confirmation, and password recovery when the user does not exist in the user pool. When set to `ENABLED` and the user does not exist, authentication returns an error indicating either the username or password was incorrect, and account confirmation and password recovery return a response indicating a code was sent to a simulated destination. When set to `LEGACY`, those APIs will return a `UserNotFoundException` exception if the user does not exist in the user pool.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Read<wbr>Attributes</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}List of user pool attributes the application client can read from.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Refresh<wbr>Token<wbr>Validity</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The time limit in days refresh tokens are valid for.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Supported<wbr>Identity<wbr>Providers</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}List of provider names for the identity providers that are supported on this client.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Write<wbr>Attributes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of user pool attributes the application client can write to.
 {{% /md %}}</dd>
@@ -360,6 +360,15 @@ const testUserPoolClient = new aws.cognito.UserPoolClient("test", {
 {{% choosable language go %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>User<wbr>Pool<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The user pool the client belongs to.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Allowed<wbr>Oauth<wbr>Flows</span>
@@ -373,7 +382,7 @@ const testUserPoolClient = new aws.cognito.UserPoolClient("test", {
             title="Optional">
         <span>Allowed<wbr>Oauth<wbr>Flows<wbr>User<wbr>Pool<wbr>Client</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the client is allowed to follow the OAuth protocol when interacting with Cognito user pools.
 {{% /md %}}</dd>
@@ -391,7 +400,7 @@ const testUserPoolClient = new aws.cognito.UserPoolClient("test", {
             title="Optional">
         <span>Analytics<wbr>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpoolclientanalyticsconfiguration">*User<wbr>Pool<wbr>Client<wbr>Analytics<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#userpoolclientanalyticsconfiguration">User<wbr>Pool<wbr>Client<wbr>Analytics<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Pinpoint analytics configuration for collecting metrics for this user pool.
 {{% /md %}}</dd>
@@ -409,7 +418,7 @@ const testUserPoolClient = new aws.cognito.UserPoolClient("test", {
             title="Optional">
         <span>Default<wbr>Redirect<wbr>Uri</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default redirect URI. Must be in the list of callback URLs.
 {{% /md %}}</dd>
@@ -427,7 +436,7 @@ const testUserPoolClient = new aws.cognito.UserPoolClient("test", {
             title="Optional">
         <span>Generate<wbr>Secret</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should an application secret be generated.
 {{% /md %}}</dd>
@@ -445,7 +454,7 @@ const testUserPoolClient = new aws.cognito.UserPoolClient("test", {
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the application client.
 {{% /md %}}</dd>
@@ -454,7 +463,7 @@ const testUserPoolClient = new aws.cognito.UserPoolClient("test", {
             title="Optional">
         <span>Prevent<wbr>User<wbr>Existence<wbr>Errors</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Choose which errors and responses are returned by Cognito APIs during authentication, account confirmation, and password recovery when the user does not exist in the user pool. When set to `ENABLED` and the user does not exist, authentication returns an error indicating either the username or password was incorrect, and account confirmation and password recovery return a response indicating a code was sent to a simulated destination. When set to `LEGACY`, those APIs will return a `UserNotFoundException` exception if the user does not exist in the user pool.
 {{% /md %}}</dd>
@@ -472,7 +481,7 @@ const testUserPoolClient = new aws.cognito.UserPoolClient("test", {
             title="Optional">
         <span>Refresh<wbr>Token<wbr>Validity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time limit in days refresh tokens are valid for.
 {{% /md %}}</dd>
@@ -484,15 +493,6 @@ const testUserPoolClient = new aws.cognito.UserPoolClient("test", {
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}List of provider names for the identity providers that are supported on this client.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>User<wbr>Pool<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The user pool the client belongs to.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -511,132 +511,6 @@ const testUserPoolClient = new aws.cognito.UserPoolClient("test", {
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>allowed<wbr>Oauth<wbr>Flows</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}List of allowed OAuth flows (code, implicit, client_credentials).
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>allowed<wbr>Oauth<wbr>Flows<wbr>User<wbr>Pool<wbr>Client</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Whether the client is allowed to follow the OAuth protocol when interacting with Cognito user pools.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>allowed<wbr>Oauth<wbr>Scopes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}List of allowed OAuth scopes (phone, email, openid, profile, and aws.cognito.signin.user.admin).
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>analytics<wbr>Configuration</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpoolclientanalyticsconfiguration">User<wbr>Pool<wbr>Client<wbr>Analytics<wbr>Configuration?</a></span>
-    </dt>
-    <dd>{{% md %}}The Amazon Pinpoint analytics configuration for collecting metrics for this user pool.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>callback<wbr>Urls</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}List of allowed callback URLs for the identity providers.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>default<wbr>Redirect<wbr>Uri</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The default redirect URI. Must be in the list of callback URLs.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>explicit<wbr>Auth<wbr>Flows</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}List of authentication flows (ADMIN_NO_SRP_AUTH, CUSTOM_AUTH_FLOW_ONLY,  USER_PASSWORD_AUTH, ALLOW_ADMIN_USER_PASSWORD_AUTH, ALLOW_CUSTOM_AUTH, ALLOW_USER_PASSWORD_AUTH, ALLOW_USER_SRP_AUTH, ALLOW_REFRESH_TOKEN_AUTH).
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>generate<wbr>Secret</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Should an application secret be generated.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>logout<wbr>Urls</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}List of allowed logout URLs for the identity providers.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The name of the application client.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>prevent<wbr>User<wbr>Existence<wbr>Errors</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Choose which errors and responses are returned by Cognito APIs during authentication, account confirmation, and password recovery when the user does not exist in the user pool. When set to `ENABLED` and the user does not exist, authentication returns an error indicating either the username or password was incorrect, and account confirmation and password recovery return a response indicating a code was sent to a simulated destination. When set to `LEGACY`, those APIs will return a `UserNotFoundException` exception if the user does not exist in the user pool.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>read<wbr>Attributes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}List of user pool attributes the application client can read from.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>refresh<wbr>Token<wbr>Validity</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}The time limit in days refresh tokens are valid for.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>supported<wbr>Identity<wbr>Providers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}List of provider names for the identity providers that are supported on this client.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>user<wbr>Pool<wbr>Id</span>
@@ -648,9 +522,135 @@ const testUserPoolClient = new aws.cognito.UserPoolClient("test", {
 
     <dt class="property-optional"
             title="Optional">
+        <span>allowed<wbr>Oauth<wbr>Flows</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}List of allowed OAuth flows (code, implicit, client_credentials).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>allowed<wbr>Oauth<wbr>Flows<wbr>User<wbr>Pool<wbr>Client</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether the client is allowed to follow the OAuth protocol when interacting with Cognito user pools.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>allowed<wbr>Oauth<wbr>Scopes</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}List of allowed OAuth scopes (phone, email, openid, profile, and aws.cognito.signin.user.admin).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>analytics<wbr>Configuration</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#userpoolclientanalyticsconfiguration">User<wbr>Pool<wbr>Client<wbr>Analytics<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}The Amazon Pinpoint analytics configuration for collecting metrics for this user pool.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>callback<wbr>Urls</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}List of allowed callback URLs for the identity providers.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>default<wbr>Redirect<wbr>Uri</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The default redirect URI. Must be in the list of callback URLs.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>explicit<wbr>Auth<wbr>Flows</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}List of authentication flows (ADMIN_NO_SRP_AUTH, CUSTOM_AUTH_FLOW_ONLY,  USER_PASSWORD_AUTH, ALLOW_ADMIN_USER_PASSWORD_AUTH, ALLOW_CUSTOM_AUTH, ALLOW_USER_PASSWORD_AUTH, ALLOW_USER_SRP_AUTH, ALLOW_REFRESH_TOKEN_AUTH).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>generate<wbr>Secret</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Should an application secret be generated.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>logout<wbr>Urls</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}List of allowed logout URLs for the identity providers.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the application client.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>prevent<wbr>User<wbr>Existence<wbr>Errors</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Choose which errors and responses are returned by Cognito APIs during authentication, account confirmation, and password recovery when the user does not exist in the user pool. When set to `ENABLED` and the user does not exist, authentication returns an error indicating either the username or password was incorrect, and account confirmation and password recovery return a response indicating a code was sent to a simulated destination. When set to `LEGACY`, those APIs will return a `UserNotFoundException` exception if the user does not exist in the user pool.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>read<wbr>Attributes</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}List of user pool attributes the application client can read from.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>refresh<wbr>Token<wbr>Validity</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The time limit in days refresh tokens are valid for.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>supported<wbr>Identity<wbr>Providers</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}List of provider names for the identity providers that are supported on this client.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>write<wbr>Attributes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of user pool attributes the application client can write to.
 {{% /md %}}</dd>
@@ -661,6 +661,15 @@ const testUserPoolClient = new aws.cognito.UserPoolClient("test", {
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>user_<wbr>pool_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The user pool the client belongs to.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -786,15 +795,6 @@ const testUserPoolClient = new aws.cognito.UserPoolClient("test", {
         <span class="property-type">List[str]</span>
     </dt>
     <dd>{{% md %}}List of provider names for the identity providers that are supported on this client.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>user_<wbr>pool_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The user pool the client belongs to.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -827,155 +827,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Allowed<wbr>Oauth<wbr>Flows</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}List of allowed OAuth flows (code, implicit, client_credentials).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Allowed<wbr>Oauth<wbr>Flows<wbr>User<wbr>Pool<wbr>Client</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Whether the client is allowed to follow the OAuth protocol when interacting with Cognito user pools.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Allowed<wbr>Oauth<wbr>Scopes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}List of allowed OAuth scopes (phone, email, openid, profile, and aws.cognito.signin.user.admin).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Analytics<wbr>Configuration</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpoolclientanalyticsconfiguration">User<wbr>Pool<wbr>Client<wbr>Analytics<wbr>Configuration?</a></span>
-    </dt>
-    <dd>{{% md %}}The Amazon Pinpoint analytics configuration for collecting metrics for this user pool.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Callback<wbr>Urls</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}List of allowed callback URLs for the identity providers.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Client<wbr>Secret</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The client secret of the user pool client.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Default<wbr>Redirect<wbr>Uri</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The default redirect URI. Must be in the list of callback URLs.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Explicit<wbr>Auth<wbr>Flows</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}List of authentication flows (ADMIN_NO_SRP_AUTH, CUSTOM_AUTH_FLOW_ONLY,  USER_PASSWORD_AUTH, ALLOW_ADMIN_USER_PASSWORD_AUTH, ALLOW_CUSTOM_AUTH, ALLOW_USER_PASSWORD_AUTH, ALLOW_USER_SRP_AUTH, ALLOW_REFRESH_TOKEN_AUTH).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Generate<wbr>Secret</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Should an application secret be generated.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Logout<wbr>Urls</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}List of allowed logout URLs for the identity providers.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the application client.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Prevent<wbr>User<wbr>Existence<wbr>Errors</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Choose which errors and responses are returned by Cognito APIs during authentication, account confirmation, and password recovery when the user does not exist in the user pool. When set to `ENABLED` and the user does not exist, authentication returns an error indicating either the username or password was incorrect, and account confirmation and password recovery return a response indicating a code was sent to a simulated destination. When set to `LEGACY`, those APIs will return a `UserNotFoundException` exception if the user does not exist in the user pool.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Read<wbr>Attributes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}List of user pool attributes the application client can read from.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Refresh<wbr>Token<wbr>Validity</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}The time limit in days refresh tokens are valid for.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Supported<wbr>Identity<wbr>Providers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}List of provider names for the identity providers that are supported on this client.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>User<wbr>Pool<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The user pool the client belongs to.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Write<wbr>Attributes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}List of user pool attributes the application client can write to.
 {{% /md %}}</dd>
 
 </dl>
@@ -987,155 +843,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Allowed<wbr>Oauth<wbr>Flows</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}List of allowed OAuth flows (code, implicit, client_credentials).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Allowed<wbr>Oauth<wbr>Flows<wbr>User<wbr>Pool<wbr>Client</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Whether the client is allowed to follow the OAuth protocol when interacting with Cognito user pools.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Allowed<wbr>Oauth<wbr>Scopes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}List of allowed OAuth scopes (phone, email, openid, profile, and aws.cognito.signin.user.admin).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Analytics<wbr>Configuration</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpoolclientanalyticsconfiguration">*User<wbr>Pool<wbr>Client<wbr>Analytics<wbr>Configuration</a></span>
-    </dt>
-    <dd>{{% md %}}The Amazon Pinpoint analytics configuration for collecting metrics for this user pool.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Callback<wbr>Urls</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}List of allowed callback URLs for the identity providers.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Client<wbr>Secret</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The client secret of the user pool client.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Default<wbr>Redirect<wbr>Uri</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The default redirect URI. Must be in the list of callback URLs.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Explicit<wbr>Auth<wbr>Flows</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}List of authentication flows (ADMIN_NO_SRP_AUTH, CUSTOM_AUTH_FLOW_ONLY,  USER_PASSWORD_AUTH, ALLOW_ADMIN_USER_PASSWORD_AUTH, ALLOW_CUSTOM_AUTH, ALLOW_USER_PASSWORD_AUTH, ALLOW_USER_SRP_AUTH, ALLOW_REFRESH_TOKEN_AUTH).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Generate<wbr>Secret</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Should an application secret be generated.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Logout<wbr>Urls</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}List of allowed logout URLs for the identity providers.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the application client.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Prevent<wbr>User<wbr>Existence<wbr>Errors</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Choose which errors and responses are returned by Cognito APIs during authentication, account confirmation, and password recovery when the user does not exist in the user pool. When set to `ENABLED` and the user does not exist, authentication returns an error indicating either the username or password was incorrect, and account confirmation and password recovery return a response indicating a code was sent to a simulated destination. When set to `LEGACY`, those APIs will return a `UserNotFoundException` exception if the user does not exist in the user pool.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Read<wbr>Attributes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}List of user pool attributes the application client can read from.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Refresh<wbr>Token<wbr>Validity</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}The time limit in days refresh tokens are valid for.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Supported<wbr>Identity<wbr>Providers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}List of provider names for the identity providers that are supported on this client.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>User<wbr>Pool<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The user pool the client belongs to.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Write<wbr>Attributes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}List of user pool attributes the application client can write to.
 {{% /md %}}</dd>
 
 </dl>
@@ -1147,155 +859,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>allowed<wbr>Oauth<wbr>Flows</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}List of allowed OAuth flows (code, implicit, client_credentials).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>allowed<wbr>Oauth<wbr>Flows<wbr>User<wbr>Pool<wbr>Client</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Whether the client is allowed to follow the OAuth protocol when interacting with Cognito user pools.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>allowed<wbr>Oauth<wbr>Scopes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}List of allowed OAuth scopes (phone, email, openid, profile, and aws.cognito.signin.user.admin).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>analytics<wbr>Configuration</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpoolclientanalyticsconfiguration">User<wbr>Pool<wbr>Client<wbr>Analytics<wbr>Configuration?</a></span>
-    </dt>
-    <dd>{{% md %}}The Amazon Pinpoint analytics configuration for collecting metrics for this user pool.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>callback<wbr>Urls</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}List of allowed callback URLs for the identity providers.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>client<wbr>Secret</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The client secret of the user pool client.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>default<wbr>Redirect<wbr>Uri</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The default redirect URI. Must be in the list of callback URLs.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>explicit<wbr>Auth<wbr>Flows</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}List of authentication flows (ADMIN_NO_SRP_AUTH, CUSTOM_AUTH_FLOW_ONLY,  USER_PASSWORD_AUTH, ALLOW_ADMIN_USER_PASSWORD_AUTH, ALLOW_CUSTOM_AUTH, ALLOW_USER_PASSWORD_AUTH, ALLOW_USER_SRP_AUTH, ALLOW_REFRESH_TOKEN_AUTH).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>generate<wbr>Secret</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Should an application secret be generated.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>logout<wbr>Urls</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}List of allowed logout URLs for the identity providers.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the application client.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>prevent<wbr>User<wbr>Existence<wbr>Errors</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Choose which errors and responses are returned by Cognito APIs during authentication, account confirmation, and password recovery when the user does not exist in the user pool. When set to `ENABLED` and the user does not exist, authentication returns an error indicating either the username or password was incorrect, and account confirmation and password recovery return a response indicating a code was sent to a simulated destination. When set to `LEGACY`, those APIs will return a `UserNotFoundException` exception if the user does not exist in the user pool.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>read<wbr>Attributes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}List of user pool attributes the application client can read from.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>refresh<wbr>Token<wbr>Validity</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}The time limit in days refresh tokens are valid for.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>supported<wbr>Identity<wbr>Providers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}List of provider names for the identity providers that are supported on this client.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>user<wbr>Pool<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The user pool the client belongs to.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>write<wbr>Attributes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}List of user pool attributes the application client can write to.
 {{% /md %}}</dd>
 
 </dl>
@@ -1307,155 +875,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>allowed_<wbr>oauth_<wbr>flows</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}List of allowed OAuth flows (code, implicit, client_credentials).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>allowed_<wbr>oauth_<wbr>flows_<wbr>user_<wbr>pool_<wbr>client</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Whether the client is allowed to follow the OAuth protocol when interacting with Cognito user pools.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>allowed_<wbr>oauth_<wbr>scopes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}List of allowed OAuth scopes (phone, email, openid, profile, and aws.cognito.signin.user.admin).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>analytics_<wbr>configuration</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpoolclientanalyticsconfiguration">Dict[User<wbr>Pool<wbr>Client<wbr>Analytics<wbr>Configuration]</a></span>
-    </dt>
-    <dd>{{% md %}}The Amazon Pinpoint analytics configuration for collecting metrics for this user pool.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>callback_<wbr>urls</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}List of allowed callback URLs for the identity providers.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>client_<wbr>secret</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The client secret of the user pool client.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>default_<wbr>redirect_<wbr>uri</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The default redirect URI. Must be in the list of callback URLs.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>explicit_<wbr>auth_<wbr>flows</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}List of authentication flows (ADMIN_NO_SRP_AUTH, CUSTOM_AUTH_FLOW_ONLY,  USER_PASSWORD_AUTH, ALLOW_ADMIN_USER_PASSWORD_AUTH, ALLOW_CUSTOM_AUTH, ALLOW_USER_PASSWORD_AUTH, ALLOW_USER_SRP_AUTH, ALLOW_REFRESH_TOKEN_AUTH).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>generate_<wbr>secret</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Should an application secret be generated.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>logout_<wbr>urls</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}List of allowed logout URLs for the identity providers.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the application client.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>prevent_<wbr>user_<wbr>existence_<wbr>errors</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Choose which errors and responses are returned by Cognito APIs during authentication, account confirmation, and password recovery when the user does not exist in the user pool. When set to `ENABLED` and the user does not exist, authentication returns an error indicating either the username or password was incorrect, and account confirmation and password recovery return a response indicating a code was sent to a simulated destination. When set to `LEGACY`, those APIs will return a `UserNotFoundException` exception if the user does not exist in the user pool.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>read_<wbr>attributes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}List of user pool attributes the application client can read from.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>refresh_<wbr>token_<wbr>validity</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The time limit in days refresh tokens are valid for.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>supported_<wbr>identity_<wbr>providers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}List of provider names for the identity providers that are supported on this client.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>user_<wbr>pool_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The user pool the client belongs to.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>write_<wbr>attributes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}List of user pool attributes the application client can write to.
 {{% /md %}}</dd>
 
 </dl>
@@ -1597,7 +1021,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Allowed<wbr>Oauth<wbr>Flows</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of allowed OAuth flows (code, implicit, client_credentials).
 {{% /md %}}</dd>
@@ -1606,7 +1030,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Allowed<wbr>Oauth<wbr>Flows<wbr>User<wbr>Pool<wbr>Client</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the client is allowed to follow the OAuth protocol when interacting with Cognito user pools.
 {{% /md %}}</dd>
@@ -1615,7 +1039,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Allowed<wbr>Oauth<wbr>Scopes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of allowed OAuth scopes (phone, email, openid, profile, and aws.cognito.signin.user.admin).
 {{% /md %}}</dd>
@@ -1624,7 +1048,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Analytics<wbr>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpoolclientanalyticsconfiguration">User<wbr>Pool<wbr>Client<wbr>Analytics<wbr>Configuration<wbr>Args?</a></span>
+        <span class="property-type"><a href="#userpoolclientanalyticsconfiguration">User<wbr>Pool<wbr>Client<wbr>Analytics<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Pinpoint analytics configuration for collecting metrics for this user pool.
 {{% /md %}}</dd>
@@ -1633,7 +1057,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Callback<wbr>Urls</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of allowed callback URLs for the identity providers.
 {{% /md %}}</dd>
@@ -1642,7 +1066,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Client<wbr>Secret</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The client secret of the user pool client.
 {{% /md %}}</dd>
@@ -1651,7 +1075,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Default<wbr>Redirect<wbr>Uri</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default redirect URI. Must be in the list of callback URLs.
 {{% /md %}}</dd>
@@ -1660,7 +1084,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Explicit<wbr>Auth<wbr>Flows</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of authentication flows (ADMIN_NO_SRP_AUTH, CUSTOM_AUTH_FLOW_ONLY,  USER_PASSWORD_AUTH, ALLOW_ADMIN_USER_PASSWORD_AUTH, ALLOW_CUSTOM_AUTH, ALLOW_USER_PASSWORD_AUTH, ALLOW_USER_SRP_AUTH, ALLOW_REFRESH_TOKEN_AUTH).
 {{% /md %}}</dd>
@@ -1669,7 +1093,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Generate<wbr>Secret</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should an application secret be generated.
 {{% /md %}}</dd>
@@ -1678,7 +1102,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Logout<wbr>Urls</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of allowed logout URLs for the identity providers.
 {{% /md %}}</dd>
@@ -1687,7 +1111,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the application client.
 {{% /md %}}</dd>
@@ -1696,7 +1120,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Prevent<wbr>User<wbr>Existence<wbr>Errors</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Choose which errors and responses are returned by Cognito APIs during authentication, account confirmation, and password recovery when the user does not exist in the user pool. When set to `ENABLED` and the user does not exist, authentication returns an error indicating either the username or password was incorrect, and account confirmation and password recovery return a response indicating a code was sent to a simulated destination. When set to `LEGACY`, those APIs will return a `UserNotFoundException` exception if the user does not exist in the user pool.
 {{% /md %}}</dd>
@@ -1705,7 +1129,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Read<wbr>Attributes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of user pool attributes the application client can read from.
 {{% /md %}}</dd>
@@ -1714,7 +1138,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Refresh<wbr>Token<wbr>Validity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time limit in days refresh tokens are valid for.
 {{% /md %}}</dd>
@@ -1723,7 +1147,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Supported<wbr>Identity<wbr>Providers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of provider names for the identity providers that are supported on this client.
 {{% /md %}}</dd>
@@ -1732,7 +1156,7 @@ The following state arguments are supported:
             title="Optional">
         <span>User<wbr>Pool<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user pool the client belongs to.
 {{% /md %}}</dd>
@@ -1741,7 +1165,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Write<wbr>Attributes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of user pool attributes the application client can write to.
 {{% /md %}}</dd>
@@ -1766,7 +1190,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Allowed<wbr>Oauth<wbr>Flows<wbr>User<wbr>Pool<wbr>Client</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the client is allowed to follow the OAuth protocol when interacting with Cognito user pools.
 {{% /md %}}</dd>
@@ -1784,7 +1208,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Analytics<wbr>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpoolclientanalyticsconfiguration">*User<wbr>Pool<wbr>Client<wbr>Analytics<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#userpoolclientanalyticsconfiguration">User<wbr>Pool<wbr>Client<wbr>Analytics<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Pinpoint analytics configuration for collecting metrics for this user pool.
 {{% /md %}}</dd>
@@ -1802,7 +1226,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Client<wbr>Secret</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The client secret of the user pool client.
 {{% /md %}}</dd>
@@ -1811,7 +1235,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Default<wbr>Redirect<wbr>Uri</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default redirect URI. Must be in the list of callback URLs.
 {{% /md %}}</dd>
@@ -1829,7 +1253,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Generate<wbr>Secret</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should an application secret be generated.
 {{% /md %}}</dd>
@@ -1847,7 +1271,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the application client.
 {{% /md %}}</dd>
@@ -1856,7 +1280,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Prevent<wbr>User<wbr>Existence<wbr>Errors</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Choose which errors and responses are returned by Cognito APIs during authentication, account confirmation, and password recovery when the user does not exist in the user pool. When set to `ENABLED` and the user does not exist, authentication returns an error indicating either the username or password was incorrect, and account confirmation and password recovery return a response indicating a code was sent to a simulated destination. When set to `LEGACY`, those APIs will return a `UserNotFoundException` exception if the user does not exist in the user pool.
 {{% /md %}}</dd>
@@ -1874,7 +1298,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Refresh<wbr>Token<wbr>Validity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time limit in days refresh tokens are valid for.
 {{% /md %}}</dd>
@@ -1892,7 +1316,7 @@ The following state arguments are supported:
             title="Optional">
         <span>User<wbr>Pool<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user pool the client belongs to.
 {{% /md %}}</dd>
@@ -1917,7 +1341,7 @@ The following state arguments are supported:
             title="Optional">
         <span>allowed<wbr>Oauth<wbr>Flows</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of allowed OAuth flows (code, implicit, client_credentials).
 {{% /md %}}</dd>
@@ -1926,7 +1350,7 @@ The following state arguments are supported:
             title="Optional">
         <span>allowed<wbr>Oauth<wbr>Flows<wbr>User<wbr>Pool<wbr>Client</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the client is allowed to follow the OAuth protocol when interacting with Cognito user pools.
 {{% /md %}}</dd>
@@ -1935,7 +1359,7 @@ The following state arguments are supported:
             title="Optional">
         <span>allowed<wbr>Oauth<wbr>Scopes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of allowed OAuth scopes (phone, email, openid, profile, and aws.cognito.signin.user.admin).
 {{% /md %}}</dd>
@@ -1944,7 +1368,7 @@ The following state arguments are supported:
             title="Optional">
         <span>analytics<wbr>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#userpoolclientanalyticsconfiguration">User<wbr>Pool<wbr>Client<wbr>Analytics<wbr>Configuration?</a></span>
+        <span class="property-type"><a href="#userpoolclientanalyticsconfiguration">User<wbr>Pool<wbr>Client<wbr>Analytics<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Pinpoint analytics configuration for collecting metrics for this user pool.
 {{% /md %}}</dd>
@@ -1953,7 +1377,7 @@ The following state arguments are supported:
             title="Optional">
         <span>callback<wbr>Urls</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of allowed callback URLs for the identity providers.
 {{% /md %}}</dd>
@@ -1962,7 +1386,7 @@ The following state arguments are supported:
             title="Optional">
         <span>client<wbr>Secret</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The client secret of the user pool client.
 {{% /md %}}</dd>
@@ -1971,7 +1395,7 @@ The following state arguments are supported:
             title="Optional">
         <span>default<wbr>Redirect<wbr>Uri</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default redirect URI. Must be in the list of callback URLs.
 {{% /md %}}</dd>
@@ -1980,7 +1404,7 @@ The following state arguments are supported:
             title="Optional">
         <span>explicit<wbr>Auth<wbr>Flows</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of authentication flows (ADMIN_NO_SRP_AUTH, CUSTOM_AUTH_FLOW_ONLY,  USER_PASSWORD_AUTH, ALLOW_ADMIN_USER_PASSWORD_AUTH, ALLOW_CUSTOM_AUTH, ALLOW_USER_PASSWORD_AUTH, ALLOW_USER_SRP_AUTH, ALLOW_REFRESH_TOKEN_AUTH).
 {{% /md %}}</dd>
@@ -1989,7 +1413,7 @@ The following state arguments are supported:
             title="Optional">
         <span>generate<wbr>Secret</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should an application secret be generated.
 {{% /md %}}</dd>
@@ -1998,7 +1422,7 @@ The following state arguments are supported:
             title="Optional">
         <span>logout<wbr>Urls</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of allowed logout URLs for the identity providers.
 {{% /md %}}</dd>
@@ -2007,7 +1431,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the application client.
 {{% /md %}}</dd>
@@ -2016,7 +1440,7 @@ The following state arguments are supported:
             title="Optional">
         <span>prevent<wbr>User<wbr>Existence<wbr>Errors</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Choose which errors and responses are returned by Cognito APIs during authentication, account confirmation, and password recovery when the user does not exist in the user pool. When set to `ENABLED` and the user does not exist, authentication returns an error indicating either the username or password was incorrect, and account confirmation and password recovery return a response indicating a code was sent to a simulated destination. When set to `LEGACY`, those APIs will return a `UserNotFoundException` exception if the user does not exist in the user pool.
 {{% /md %}}</dd>
@@ -2025,7 +1449,7 @@ The following state arguments are supported:
             title="Optional">
         <span>read<wbr>Attributes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of user pool attributes the application client can read from.
 {{% /md %}}</dd>
@@ -2034,7 +1458,7 @@ The following state arguments are supported:
             title="Optional">
         <span>refresh<wbr>Token<wbr>Validity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The time limit in days refresh tokens are valid for.
 {{% /md %}}</dd>
@@ -2043,7 +1467,7 @@ The following state arguments are supported:
             title="Optional">
         <span>supported<wbr>Identity<wbr>Providers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of provider names for the identity providers that are supported on this client.
 {{% /md %}}</dd>
@@ -2052,7 +1476,7 @@ The following state arguments are supported:
             title="Optional">
         <span>user<wbr>Pool<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The user pool the client belongs to.
 {{% /md %}}</dd>
@@ -2061,7 +1485,7 @@ The following state arguments are supported:
             title="Optional">
         <span>write<wbr>Attributes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of user pool attributes the application client can write to.
 {{% /md %}}</dd>
@@ -2286,7 +1710,7 @@ The following state arguments are supported:
             title="Optional">
         <span>User<wbr>Data<wbr>Shared</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to `true`, Amazon Cognito will include user data in the events it publishes to Amazon Pinpoint analytics.
 {{% /md %}}</dd>
@@ -2329,7 +1753,7 @@ The following state arguments are supported:
             title="Optional">
         <span>User<wbr>Data<wbr>Shared</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If set to `true`, Amazon Cognito will include user data in the events it publishes to Amazon Pinpoint analytics.
 {{% /md %}}</dd>
@@ -2372,7 +1796,7 @@ The following state arguments are supported:
             title="Optional">
         <span>user<wbr>Data<wbr>Shared</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If set to `true`, Amazon Cognito will include user data in the events it publishes to Amazon Pinpoint analytics.
 {{% /md %}}</dd>

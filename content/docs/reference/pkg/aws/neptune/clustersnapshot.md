@@ -32,7 +32,7 @@ const example = new aws.neptune.ClusterSnapshot("example", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/neptune/#ClusterSnapshot">ClusterSnapshot</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/neptune/#ClusterSnapshotArgs">ClusterSnapshotArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/neptune/#ClusterSnapshot">ClusterSnapshot</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/neptune/#ClusterSnapshotArgs">ClusterSnapshotArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -40,7 +40,7 @@ const example = new aws.neptune.ClusterSnapshot("example", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewClusterSnapshot<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/neptune?tab=doc#ClusterSnapshotArgs">ClusterSnapshotArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/neptune?tab=doc#ClusterSnapshot">ClusterSnapshot</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewClusterSnapshot<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/neptune?tab=doc#ClusterSnapshotArgs">ClusterSnapshotArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/neptune?tab=doc#ClusterSnapshot">ClusterSnapshot</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -261,18 +261,9 @@ The following output properties are available:
             title="">
         <span>Availability<wbr>Zones</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of EC2 Availability Zones that instances in the DB cluster snapshot can be restored in.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Db<wbr>Cluster<wbr>Identifier</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The DB Cluster Identifier from which to take the snapshot.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -282,15 +273,6 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) for the DB Cluster Snapshot.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Db<wbr>Cluster<wbr>Snapshot<wbr>Identifier</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Identifier for the snapshot.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -408,29 +390,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Db<wbr>Cluster<wbr>Identifier</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The DB Cluster Identifier from which to take the snapshot.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Db<wbr>Cluster<wbr>Snapshot<wbr>Arn</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) for the DB Cluster Snapshot.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Db<wbr>Cluster<wbr>Snapshot<wbr>Identifier</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Identifier for the snapshot.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -548,29 +512,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>db<wbr>Cluster<wbr>Identifier</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The DB Cluster Identifier from which to take the snapshot.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>db<wbr>Cluster<wbr>Snapshot<wbr>Arn</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) for the DB Cluster Snapshot.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>db<wbr>Cluster<wbr>Snapshot<wbr>Identifier</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Identifier for the snapshot.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -688,29 +634,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>db_<wbr>cluster_<wbr>identifier</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The DB Cluster Identifier from which to take the snapshot.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>db_<wbr>cluster_<wbr>snapshot_<wbr>arn</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) for the DB Cluster Snapshot.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>db_<wbr>cluster_<wbr>snapshot_<wbr>identifier</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The Identifier for the snapshot.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -940,7 +868,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Allocated<wbr>Storage</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the allocated storage size in gigabytes (GB).
 {{% /md %}}</dd>
@@ -949,7 +877,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Availability<wbr>Zones</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of EC2 Availability Zones that instances in the DB cluster snapshot can be restored in.
 {{% /md %}}</dd>
@@ -958,7 +886,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Db<wbr>Cluster<wbr>Identifier</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DB Cluster Identifier from which to take the snapshot.
 {{% /md %}}</dd>
@@ -967,7 +895,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Db<wbr>Cluster<wbr>Snapshot<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) for the DB Cluster Snapshot.
 {{% /md %}}</dd>
@@ -976,7 +904,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Db<wbr>Cluster<wbr>Snapshot<wbr>Identifier</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Identifier for the snapshot.
 {{% /md %}}</dd>
@@ -985,7 +913,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Engine</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the database engine.
 {{% /md %}}</dd>
@@ -994,7 +922,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Engine<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Version of the database engine for this DB cluster snapshot.
 {{% /md %}}</dd>
@@ -1003,7 +931,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Kms<wbr>Key<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If storage_encrypted is true, the AWS KMS key identifier for the encrypted DB cluster snapshot.
 {{% /md %}}</dd>
@@ -1012,7 +940,7 @@ The following state arguments are supported:
             title="Optional">
         <span>License<wbr>Model</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}License model information for the restored DB cluster.
 {{% /md %}}</dd>
@@ -1021,7 +949,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Port that the DB cluster was listening on at the time of the snapshot.
 {{% /md %}}</dd>
@@ -1030,7 +958,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Snapshot<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1038,7 +966,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Source<wbr>Db<wbr>Cluster<wbr>Snapshot<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1046,7 +974,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of this DB Cluster Snapshot.
 {{% /md %}}</dd>
@@ -1055,7 +983,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Storage<wbr>Encrypted</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether the DB cluster snapshot is encrypted.
 {{% /md %}}</dd>
@@ -1064,7 +992,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Vpc<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The VPC ID associated with the DB cluster snapshot.
 {{% /md %}}</dd>
@@ -1080,7 +1008,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Allocated<wbr>Storage</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Specifies the allocated storage size in gigabytes (GB).
 {{% /md %}}</dd>
@@ -1098,7 +1026,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Db<wbr>Cluster<wbr>Identifier</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DB Cluster Identifier from which to take the snapshot.
 {{% /md %}}</dd>
@@ -1107,7 +1035,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Db<wbr>Cluster<wbr>Snapshot<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) for the DB Cluster Snapshot.
 {{% /md %}}</dd>
@@ -1116,7 +1044,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Db<wbr>Cluster<wbr>Snapshot<wbr>Identifier</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Identifier for the snapshot.
 {{% /md %}}</dd>
@@ -1125,7 +1053,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Engine</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the database engine.
 {{% /md %}}</dd>
@@ -1134,7 +1062,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Engine<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Version of the database engine for this DB cluster snapshot.
 {{% /md %}}</dd>
@@ -1143,7 +1071,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Kms<wbr>Key<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If storage_encrypted is true, the AWS KMS key identifier for the encrypted DB cluster snapshot.
 {{% /md %}}</dd>
@@ -1152,7 +1080,7 @@ The following state arguments are supported:
             title="Optional">
         <span>License<wbr>Model</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}License model information for the restored DB cluster.
 {{% /md %}}</dd>
@@ -1161,7 +1089,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Port that the DB cluster was listening on at the time of the snapshot.
 {{% /md %}}</dd>
@@ -1170,7 +1098,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Snapshot<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1178,7 +1106,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Source<wbr>Db<wbr>Cluster<wbr>Snapshot<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1186,7 +1114,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of this DB Cluster Snapshot.
 {{% /md %}}</dd>
@@ -1195,7 +1123,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Storage<wbr>Encrypted</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether the DB cluster snapshot is encrypted.
 {{% /md %}}</dd>
@@ -1204,7 +1132,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Vpc<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The VPC ID associated with the DB cluster snapshot.
 {{% /md %}}</dd>
@@ -1220,7 +1148,7 @@ The following state arguments are supported:
             title="Optional">
         <span>allocated<wbr>Storage</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Specifies the allocated storage size in gigabytes (GB).
 {{% /md %}}</dd>
@@ -1229,7 +1157,7 @@ The following state arguments are supported:
             title="Optional">
         <span>availability<wbr>Zones</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of EC2 Availability Zones that instances in the DB cluster snapshot can be restored in.
 {{% /md %}}</dd>
@@ -1238,7 +1166,7 @@ The following state arguments are supported:
             title="Optional">
         <span>db<wbr>Cluster<wbr>Identifier</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DB Cluster Identifier from which to take the snapshot.
 {{% /md %}}</dd>
@@ -1247,7 +1175,7 @@ The following state arguments are supported:
             title="Optional">
         <span>db<wbr>Cluster<wbr>Snapshot<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) for the DB Cluster Snapshot.
 {{% /md %}}</dd>
@@ -1256,7 +1184,7 @@ The following state arguments are supported:
             title="Optional">
         <span>db<wbr>Cluster<wbr>Snapshot<wbr>Identifier</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Identifier for the snapshot.
 {{% /md %}}</dd>
@@ -1265,7 +1193,7 @@ The following state arguments are supported:
             title="Optional">
         <span>engine</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the database engine.
 {{% /md %}}</dd>
@@ -1274,7 +1202,7 @@ The following state arguments are supported:
             title="Optional">
         <span>engine<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Version of the database engine for this DB cluster snapshot.
 {{% /md %}}</dd>
@@ -1283,7 +1211,7 @@ The following state arguments are supported:
             title="Optional">
         <span>kms<wbr>Key<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If storage_encrypted is true, the AWS KMS key identifier for the encrypted DB cluster snapshot.
 {{% /md %}}</dd>
@@ -1292,7 +1220,7 @@ The following state arguments are supported:
             title="Optional">
         <span>license<wbr>Model</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}License model information for the restored DB cluster.
 {{% /md %}}</dd>
@@ -1301,7 +1229,7 @@ The following state arguments are supported:
             title="Optional">
         <span>port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Port that the DB cluster was listening on at the time of the snapshot.
 {{% /md %}}</dd>
@@ -1310,7 +1238,7 @@ The following state arguments are supported:
             title="Optional">
         <span>snapshot<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1318,7 +1246,7 @@ The following state arguments are supported:
             title="Optional">
         <span>source<wbr>Db<wbr>Cluster<wbr>Snapshot<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1326,7 +1254,7 @@ The following state arguments are supported:
             title="Optional">
         <span>status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of this DB Cluster Snapshot.
 {{% /md %}}</dd>
@@ -1335,7 +1263,7 @@ The following state arguments are supported:
             title="Optional">
         <span>storage<wbr>Encrypted</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies whether the DB cluster snapshot is encrypted.
 {{% /md %}}</dd>
@@ -1344,7 +1272,7 @@ The following state arguments are supported:
             title="Optional">
         <span>vpc<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The VPC ID associated with the DB cluster snapshot.
 {{% /md %}}</dd>

@@ -29,7 +29,7 @@ const test = new aws.mediaconvert.Queue("test", {});
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/mediaconvert/#Queue">Queue</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/mediaconvert/#QueueArgs">QueueArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/mediaconvert/#Queue">Queue</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/mediaconvert/#QueueArgs">QueueArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -37,11 +37,11 @@ const test = new aws.mediaconvert.Queue("test", {});
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewQueue<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/mediaconvert?tab=doc#QueueArgs">QueueArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/mediaconvert?tab=doc#Queue">Queue</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewQueue<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/mediaconvert?tab=doc#QueueArgs">QueueArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/mediaconvert?tab=doc#Queue">Queue</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Mediaconvert.Queue.html">Queue</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.MediaConvert.QueueArgs.html">QueueArgs</a></span>? <span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.MediaConvert.Queue.html">Queue</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.MediaConvert.QueueArgs.html">QueueArgs</a></span>? <span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -137,7 +137,7 @@ const test = new aws.mediaconvert.Queue("test", {});
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the queue
 {{% /md %}}</dd>
@@ -146,7 +146,7 @@ const test = new aws.mediaconvert.Queue("test", {});
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique identifier describing the queue
 {{% /md %}}</dd>
@@ -155,7 +155,7 @@ const test = new aws.mediaconvert.Queue("test", {});
             title="Optional">
         <span>Pricing<wbr>Plan</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether the pricing plan for the queue is on-demand or reserved. Valid values are `ON_DEMAND` or `RESERVED`. Default to `ON_DEMAND`.
 {{% /md %}}</dd>
@@ -164,7 +164,7 @@ const test = new aws.mediaconvert.Queue("test", {});
             title="Optional">
         <span>Reservation<wbr>Plan<wbr>Settings</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#queuereservationplansettings">Queue<wbr>Reservation<wbr>Plan<wbr>Settings<wbr>Args?</a></span>
+        <span class="property-type"><a href="#queuereservationplansettings">Queue<wbr>Reservation<wbr>Plan<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A detail pricing plan of the  reserved queue. See below.
 {{% /md %}}</dd>
@@ -173,7 +173,7 @@ const test = new aws.mediaconvert.Queue("test", {});
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A status of the queue. Valid values are `ACTIVE` or `RESERVED`. Default to `PAUSED`.
 {{% /md %}}</dd>
@@ -182,7 +182,7 @@ const test = new aws.mediaconvert.Queue("test", {});
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -198,7 +198,7 @@ const test = new aws.mediaconvert.Queue("test", {});
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the queue
 {{% /md %}}</dd>
@@ -207,7 +207,7 @@ const test = new aws.mediaconvert.Queue("test", {});
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique identifier describing the queue
 {{% /md %}}</dd>
@@ -216,7 +216,7 @@ const test = new aws.mediaconvert.Queue("test", {});
             title="Optional">
         <span>Pricing<wbr>Plan</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether the pricing plan for the queue is on-demand or reserved. Valid values are `ON_DEMAND` or `RESERVED`. Default to `ON_DEMAND`.
 {{% /md %}}</dd>
@@ -225,7 +225,7 @@ const test = new aws.mediaconvert.Queue("test", {});
             title="Optional">
         <span>Reservation<wbr>Plan<wbr>Settings</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#queuereservationplansettings">*Queue<wbr>Reservation<wbr>Plan<wbr>Settings</a></span>
+        <span class="property-type"><a href="#queuereservationplansettings">Queue<wbr>Reservation<wbr>Plan<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}A detail pricing plan of the  reserved queue. See below.
 {{% /md %}}</dd>
@@ -234,7 +234,7 @@ const test = new aws.mediaconvert.Queue("test", {});
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A status of the queue. Valid values are `ACTIVE` or `RESERVED`. Default to `PAUSED`.
 {{% /md %}}</dd>
@@ -259,7 +259,7 @@ const test = new aws.mediaconvert.Queue("test", {});
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the queue
 {{% /md %}}</dd>
@@ -268,7 +268,7 @@ const test = new aws.mediaconvert.Queue("test", {});
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique identifier describing the queue
 {{% /md %}}</dd>
@@ -277,7 +277,7 @@ const test = new aws.mediaconvert.Queue("test", {});
             title="Optional">
         <span>pricing<wbr>Plan</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether the pricing plan for the queue is on-demand or reserved. Valid values are `ON_DEMAND` or `RESERVED`. Default to `ON_DEMAND`.
 {{% /md %}}</dd>
@@ -286,7 +286,7 @@ const test = new aws.mediaconvert.Queue("test", {});
             title="Optional">
         <span>reservation<wbr>Plan<wbr>Settings</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#queuereservationplansettings">Queue<wbr>Reservation<wbr>Plan<wbr>Settings?</a></span>
+        <span class="property-type"><a href="#queuereservationplansettings">Queue<wbr>Reservation<wbr>Plan<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}A detail pricing plan of the  reserved queue. See below.
 {{% /md %}}</dd>
@@ -295,7 +295,7 @@ const test = new aws.mediaconvert.Queue("test", {});
             title="Optional">
         <span>status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A status of the queue. Valid values are `ACTIVE` or `RESERVED`. Default to `PAUSED`.
 {{% /md %}}</dd>
@@ -304,7 +304,7 @@ const test = new aws.mediaconvert.Queue("test", {});
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -398,60 +398,6 @@ The following output properties are available:
     <dd>{{% md %}}The Arn of the queue
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}A description of the queue
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A unique identifier describing the queue
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Pricing<wbr>Plan</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Specifies whether the pricing plan for the queue is on-demand or reserved. Valid values are `ON_DEMAND` or `RESERVED`. Default to `ON_DEMAND`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Reservation<wbr>Plan<wbr>Settings</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#queuereservationplansettings">Queue<wbr>Reservation<wbr>Plan<wbr>Settings</a></span>
-    </dt>
-    <dd>{{% md %}}A detail pricing plan of the  reserved queue. See below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Status</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}A status of the queue. Valid values are `ACTIVE` or `RESERVED`. Default to `PAUSED`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -466,60 +412,6 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Arn of the queue
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}A description of the queue
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A unique identifier describing the queue
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Pricing<wbr>Plan</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Specifies whether the pricing plan for the queue is on-demand or reserved. Valid values are `ON_DEMAND` or `RESERVED`. Default to `ON_DEMAND`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Reservation<wbr>Plan<wbr>Settings</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#queuereservationplansettings">Queue<wbr>Reservation<wbr>Plan<wbr>Settings</a></span>
-    </dt>
-    <dd>{{% md %}}A detail pricing plan of the  reserved queue. See below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Status</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}A status of the queue. Valid values are `ACTIVE` or `RESERVED`. Default to `PAUSED`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
 
 </dl>
@@ -538,60 +430,6 @@ The following output properties are available:
     <dd>{{% md %}}The Arn of the queue
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}A description of the queue
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A unique identifier describing the queue
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>pricing<wbr>Plan</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Specifies whether the pricing plan for the queue is on-demand or reserved. Valid values are `ON_DEMAND` or `RESERVED`. Default to `ON_DEMAND`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>reservation<wbr>Plan<wbr>Settings</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#queuereservationplansettings">Queue<wbr>Reservation<wbr>Plan<wbr>Settings</a></span>
-    </dt>
-    <dd>{{% md %}}A detail pricing plan of the  reserved queue. See below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>status</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}A status of the queue. Valid values are `ACTIVE` or `RESERVED`. Default to `PAUSED`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -606,60 +444,6 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Arn of the queue
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}A description of the queue
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}A unique identifier describing the queue
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>pricing_<wbr>plan</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Specifies whether the pricing plan for the queue is on-demand or reserved. Valid values are `ON_DEMAND` or `RESERVED`. Default to `ON_DEMAND`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>reservation_<wbr>plan_<wbr>settings</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#queuereservationplansettings">Dict[Queue<wbr>Reservation<wbr>Plan<wbr>Settings]</a></span>
-    </dt>
-    <dd>{{% md %}}A detail pricing plan of the  reserved queue. See below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>status</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}A status of the queue. Valid values are `ACTIVE` or `RESERVED`. Default to `PAUSED`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
 
 </dl>
@@ -691,7 +475,7 @@ Get an existing Queue resource's state with the given name, ID, and optional ext
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Mediaconvert.Queue.html">Queue</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Mediaconvert.QueueState.html">QueueState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.MediaConvert.Queue.html">Queue</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.MediaConvert.QueueState.html">QueueState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -801,7 +585,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Arn of the queue
 {{% /md %}}</dd>
@@ -810,7 +594,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the queue
 {{% /md %}}</dd>
@@ -819,7 +603,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique identifier describing the queue
 {{% /md %}}</dd>
@@ -828,7 +612,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Pricing<wbr>Plan</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether the pricing plan for the queue is on-demand or reserved. Valid values are `ON_DEMAND` or `RESERVED`. Default to `ON_DEMAND`.
 {{% /md %}}</dd>
@@ -837,7 +621,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Reservation<wbr>Plan<wbr>Settings</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#queuereservationplansettings">Queue<wbr>Reservation<wbr>Plan<wbr>Settings<wbr>Args?</a></span>
+        <span class="property-type"><a href="#queuereservationplansettings">Queue<wbr>Reservation<wbr>Plan<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A detail pricing plan of the  reserved queue. See below.
 {{% /md %}}</dd>
@@ -846,7 +630,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A status of the queue. Valid values are `ACTIVE` or `RESERVED`. Default to `PAUSED`.
 {{% /md %}}</dd>
@@ -855,7 +639,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -871,7 +655,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Arn of the queue
 {{% /md %}}</dd>
@@ -880,7 +664,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the queue
 {{% /md %}}</dd>
@@ -889,7 +673,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique identifier describing the queue
 {{% /md %}}</dd>
@@ -898,7 +682,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Pricing<wbr>Plan</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether the pricing plan for the queue is on-demand or reserved. Valid values are `ON_DEMAND` or `RESERVED`. Default to `ON_DEMAND`.
 {{% /md %}}</dd>
@@ -907,7 +691,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Reservation<wbr>Plan<wbr>Settings</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#queuereservationplansettings">*Queue<wbr>Reservation<wbr>Plan<wbr>Settings</a></span>
+        <span class="property-type"><a href="#queuereservationplansettings">Queue<wbr>Reservation<wbr>Plan<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}A detail pricing plan of the  reserved queue. See below.
 {{% /md %}}</dd>
@@ -916,7 +700,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A status of the queue. Valid values are `ACTIVE` or `RESERVED`. Default to `PAUSED`.
 {{% /md %}}</dd>
@@ -941,7 +725,7 @@ The following state arguments are supported:
             title="Optional">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Arn of the queue
 {{% /md %}}</dd>
@@ -950,7 +734,7 @@ The following state arguments are supported:
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the queue
 {{% /md %}}</dd>
@@ -959,7 +743,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique identifier describing the queue
 {{% /md %}}</dd>
@@ -968,7 +752,7 @@ The following state arguments are supported:
             title="Optional">
         <span>pricing<wbr>Plan</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies whether the pricing plan for the queue is on-demand or reserved. Valid values are `ON_DEMAND` or `RESERVED`. Default to `ON_DEMAND`.
 {{% /md %}}</dd>
@@ -977,7 +761,7 @@ The following state arguments are supported:
             title="Optional">
         <span>reservation<wbr>Plan<wbr>Settings</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#queuereservationplansettings">Queue<wbr>Reservation<wbr>Plan<wbr>Settings?</a></span>
+        <span class="property-type"><a href="#queuereservationplansettings">Queue<wbr>Reservation<wbr>Plan<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}A detail pricing plan of the  reserved queue. See below.
 {{% /md %}}</dd>
@@ -986,7 +770,7 @@ The following state arguments are supported:
             title="Optional">
         <span>status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A status of the queue. Valid values are `ACTIVE` or `RESERVED`. Default to `PAUSED`.
 {{% /md %}}</dd>
@@ -995,7 +779,7 @@ The following state arguments are supported:
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>

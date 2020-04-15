@@ -59,7 +59,7 @@ const mainWorkspacesDirectory = new aws.workspaces.Directory("main", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/workspaces/#Directory">Directory</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/workspaces/#DirectoryArgs">DirectoryArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/workspaces/#Directory">Directory</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/workspaces/#DirectoryArgs">DirectoryArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -67,7 +67,7 @@ const mainWorkspacesDirectory = new aws.workspaces.Directory("main", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewDirectory<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/workspaces?tab=doc#DirectoryArgs">DirectoryArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/workspaces?tab=doc#Directory">Directory</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewDirectory<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/workspaces?tab=doc#DirectoryArgs">DirectoryArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/workspaces?tab=doc#Directory">Directory</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -176,7 +176,7 @@ const mainWorkspacesDirectory = new aws.workspaces.Directory("main", {
             title="Optional">
         <span>Self<wbr>Service<wbr>Permissions</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#directoryselfservicepermissions">Directory<wbr>Self<wbr>Service<wbr>Permissions<wbr>Args?</a></span>
+        <span class="property-type"><a href="#directoryselfservicepermissions">Directory<wbr>Self<wbr>Service<wbr>Permissions<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The permissions to enable or disable self-service capabilities.
 {{% /md %}}</dd>
@@ -185,7 +185,7 @@ const mainWorkspacesDirectory = new aws.workspaces.Directory("main", {
             title="Optional">
         <span>Subnet<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The identifiers of the subnets where the directory resides.
 {{% /md %}}</dd>
@@ -194,7 +194,7 @@ const mainWorkspacesDirectory = new aws.workspaces.Directory("main", {
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags assigned to the WorkSpaces directory.
 {{% /md %}}</dd>
@@ -219,7 +219,7 @@ const mainWorkspacesDirectory = new aws.workspaces.Directory("main", {
             title="Optional">
         <span>Self<wbr>Service<wbr>Permissions</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#directoryselfservicepermissions">*Directory<wbr>Self<wbr>Service<wbr>Permissions</a></span>
+        <span class="property-type"><a href="#directoryselfservicepermissions">Directory<wbr>Self<wbr>Service<wbr>Permissions</a></span>
     </dt>
     <dd>{{% md %}}The permissions to enable or disable self-service capabilities.
 {{% /md %}}</dd>
@@ -262,197 +262,13 @@ const mainWorkspacesDirectory = new aws.workspaces.Directory("main", {
             title="Optional">
         <span>self<wbr>Service<wbr>Permissions</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#directoryselfservicepermissions">Directory<wbr>Self<wbr>Service<wbr>Permissions?</a></span>
-    </dt>
-    <dd>{{% md %}}The permissions to enable or disable self-service capabilities.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>subnet<wbr>Ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}The identifiers of the subnets where the directory resides.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags assigned to the WorkSpaces directory.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span>directory_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The directory identifier for registration in WorkSpaces service.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>self_<wbr>service_<wbr>permissions</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#directoryselfservicepermissions">Dict[Directory<wbr>Self<wbr>Service<wbr>Permissions]</a></span>
-    </dt>
-    <dd>{{% md %}}The permissions to enable or disable self-service capabilities.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>subnet_<wbr>ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}The identifiers of the subnets where the directory resides.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags assigned to the WorkSpaces directory.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-
-
-
-
-
-## Directory Output Properties
-
-The following output properties are available:
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Directory<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The directory identifier for registration in WorkSpaces service.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Self<wbr>Service<wbr>Permissions</span>
-        <span class="property-indicator"></span>
         <span class="property-type"><a href="#directoryselfservicepermissions">Directory<wbr>Self<wbr>Service<wbr>Permissions</a></span>
     </dt>
     <dd>{{% md %}}The permissions to enable or disable self-service capabilities.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span>Subnet<wbr>Ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
-    </dt>
-    <dd>{{% md %}}The identifiers of the subnets where the directory resides.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags assigned to the WorkSpaces directory.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Directory<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The directory identifier for registration in WorkSpaces service.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Self<wbr>Service<wbr>Permissions</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#directoryselfservicepermissions">Directory<wbr>Self<wbr>Service<wbr>Permissions</a></span>
-    </dt>
-    <dd>{{% md %}}The permissions to enable or disable self-service capabilities.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Subnet<wbr>Ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}The identifiers of the subnets where the directory resides.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags assigned to the WorkSpaces directory.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>directory<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The directory identifier for registration in WorkSpaces service.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>self<wbr>Service<wbr>Permissions</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#directoryselfservicepermissions">Directory<wbr>Self<wbr>Service<wbr>Permissions</a></span>
-    </dt>
-    <dd>{{% md %}}The permissions to enable or disable self-service capabilities.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>subnet<wbr>Ids</span>
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
@@ -460,11 +276,11 @@ The following output properties are available:
     <dd>{{% md %}}The identifiers of the subnets where the directory resides.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags assigned to the WorkSpaces directory.
 {{% /md %}}</dd>
@@ -476,8 +292,8 @@ The following output properties are available:
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-"
-            title="">
+    <dt class="property-required"
+            title="Required">
         <span>directory_<wbr>id</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -485,8 +301,8 @@ The following output properties are available:
     <dd>{{% md %}}The directory identifier for registration in WorkSpaces service.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>self_<wbr>service_<wbr>permissions</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#directoryselfservicepermissions">Dict[Directory<wbr>Self<wbr>Service<wbr>Permissions]</a></span>
@@ -494,8 +310,8 @@ The following output properties are available:
     <dd>{{% md %}}The permissions to enable or disable self-service capabilities.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>subnet_<wbr>ids</span>
         <span class="property-indicator"></span>
         <span class="property-type">List[str]</span>
@@ -503,8 +319,8 @@ The following output properties are available:
     <dd>{{% md %}}The identifiers of the subnets where the directory resides.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
@@ -514,6 +330,8 @@ The following output properties are available:
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 
@@ -651,7 +469,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Directory<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The directory identifier for registration in WorkSpaces service.
 {{% /md %}}</dd>
@@ -660,7 +478,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Self<wbr>Service<wbr>Permissions</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#directoryselfservicepermissions">Directory<wbr>Self<wbr>Service<wbr>Permissions<wbr>Args?</a></span>
+        <span class="property-type"><a href="#directoryselfservicepermissions">Directory<wbr>Self<wbr>Service<wbr>Permissions<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The permissions to enable or disable self-service capabilities.
 {{% /md %}}</dd>
@@ -669,7 +487,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Subnet<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The identifiers of the subnets where the directory resides.
 {{% /md %}}</dd>
@@ -678,7 +496,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags assigned to the WorkSpaces directory.
 {{% /md %}}</dd>
@@ -694,7 +512,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Directory<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The directory identifier for registration in WorkSpaces service.
 {{% /md %}}</dd>
@@ -703,7 +521,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Self<wbr>Service<wbr>Permissions</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#directoryselfservicepermissions">*Directory<wbr>Self<wbr>Service<wbr>Permissions</a></span>
+        <span class="property-type"><a href="#directoryselfservicepermissions">Directory<wbr>Self<wbr>Service<wbr>Permissions</a></span>
     </dt>
     <dd>{{% md %}}The permissions to enable or disable self-service capabilities.
 {{% /md %}}</dd>
@@ -737,7 +555,7 @@ The following state arguments are supported:
             title="Optional">
         <span>directory<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The directory identifier for registration in WorkSpaces service.
 {{% /md %}}</dd>
@@ -746,7 +564,7 @@ The following state arguments are supported:
             title="Optional">
         <span>self<wbr>Service<wbr>Permissions</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#directoryselfservicepermissions">Directory<wbr>Self<wbr>Service<wbr>Permissions?</a></span>
+        <span class="property-type"><a href="#directoryselfservicepermissions">Directory<wbr>Self<wbr>Service<wbr>Permissions</a></span>
     </dt>
     <dd>{{% md %}}The permissions to enable or disable self-service capabilities.
 {{% /md %}}</dd>
@@ -755,7 +573,7 @@ The following state arguments are supported:
             title="Optional">
         <span>subnet<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The identifiers of the subnets where the directory resides.
 {{% /md %}}</dd>
@@ -764,7 +582,7 @@ The following state arguments are supported:
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags assigned to the WorkSpaces directory.
 {{% /md %}}</dd>
@@ -845,7 +663,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Change<wbr>Compute<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether WorkSpaces directory users can change the compute type (bundle) for their workspace. Default `false`.
 {{% /md %}}</dd>
@@ -854,7 +672,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Increase<wbr>Volume<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether WorkSpaces directory users can increase the volume size of the drives on their workspace. Default `false`.
 {{% /md %}}</dd>
@@ -863,7 +681,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Rebuild<wbr>Workspace</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether WorkSpaces directory users can rebuild the operating system of a workspace to its original state. Default `false`.
 {{% /md %}}</dd>
@@ -872,7 +690,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Restart<wbr>Workspace</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether WorkSpaces directory users can restart their workspace. Default `true`.
 {{% /md %}}</dd>
@@ -881,7 +699,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Switch<wbr>Running<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether WorkSpaces directory users can switch the running mode of their workspace. Default `false`.
 {{% /md %}}</dd>
@@ -897,7 +715,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Change<wbr>Compute<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether WorkSpaces directory users can change the compute type (bundle) for their workspace. Default `false`.
 {{% /md %}}</dd>
@@ -906,7 +724,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Increase<wbr>Volume<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether WorkSpaces directory users can increase the volume size of the drives on their workspace. Default `false`.
 {{% /md %}}</dd>
@@ -915,7 +733,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Rebuild<wbr>Workspace</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether WorkSpaces directory users can rebuild the operating system of a workspace to its original state. Default `false`.
 {{% /md %}}</dd>
@@ -924,7 +742,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Restart<wbr>Workspace</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether WorkSpaces directory users can restart their workspace. Default `true`.
 {{% /md %}}</dd>
@@ -933,7 +751,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Switch<wbr>Running<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether WorkSpaces directory users can switch the running mode of their workspace. Default `false`.
 {{% /md %}}</dd>
@@ -949,7 +767,7 @@ The following state arguments are supported:
             title="Optional">
         <span>change<wbr>Compute<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether WorkSpaces directory users can change the compute type (bundle) for their workspace. Default `false`.
 {{% /md %}}</dd>
@@ -958,7 +776,7 @@ The following state arguments are supported:
             title="Optional">
         <span>increase<wbr>Volume<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether WorkSpaces directory users can increase the volume size of the drives on their workspace. Default `false`.
 {{% /md %}}</dd>
@@ -967,7 +785,7 @@ The following state arguments are supported:
             title="Optional">
         <span>rebuild<wbr>Workspace</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether WorkSpaces directory users can rebuild the operating system of a workspace to its original state. Default `false`.
 {{% /md %}}</dd>
@@ -976,7 +794,7 @@ The following state arguments are supported:
             title="Optional">
         <span>restart<wbr>Workspace</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether WorkSpaces directory users can restart their workspace. Default `true`.
 {{% /md %}}</dd>
@@ -985,7 +803,7 @@ The following state arguments are supported:
             title="Optional">
         <span>switch<wbr>Running<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether WorkSpaces directory users can switch the running mode of their workspace. Default `false`.
 {{% /md %}}</dd>

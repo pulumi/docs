@@ -58,7 +58,7 @@ const defaultForwardEntry = new alicloud.vpc.ForwardEntry("default", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/vpc/#ForwardEntry">ForwardEntry</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/vpc/#ForwardEntryArgs">ForwardEntryArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/vpc/#ForwardEntry">ForwardEntry</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/vpc/#ForwardEntryArgs">ForwardEntryArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -66,11 +66,11 @@ const defaultForwardEntry = new alicloud.vpc.ForwardEntry("default", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewForwardEntry<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/vpc?tab=doc#ForwardEntryArgs">ForwardEntryArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/vpc?tab=doc#ForwardEntry">ForwardEntry</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewForwardEntry<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/vpc?tab=doc#ForwardEntryArgs">ForwardEntryArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/vpc?tab=doc#ForwardEntry">ForwardEntry</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.Vpc.ForwardEntry.html">ForwardEntry</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.Vpc.ForwardEntryArgs.html">ForwardEntryArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.Vpc.ForwardEntry.html">ForwardEntry</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.AliCloud.Vpc.ForwardEntryArgs.html">ForwardEntryArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -220,7 +220,7 @@ const defaultForwardEntry = new alicloud.vpc.ForwardEntry("default", {
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of forward entry.
 {{% /md %}}</dd>
@@ -290,7 +290,7 @@ const defaultForwardEntry = new alicloud.vpc.ForwardEntry("default", {
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of forward entry.
 {{% /md %}}</dd>
@@ -360,7 +360,7 @@ const defaultForwardEntry = new alicloud.vpc.ForwardEntry("default", {
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of forward entry.
 {{% /md %}}</dd>
@@ -456,74 +456,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>External<wbr>Ip</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The external ip address, the ip must along bandwidth package public ip which `alicloud.vpc.NatGateway` argument `bandwidth_packages`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>External<wbr>Port</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The external port, valid value is 1~65535|any.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Forward<wbr>Entry<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the forward entry on the server.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Forward<wbr>Table<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The value can get from `alicloud.vpc.NatGateway` Attributes "forward_table_ids".
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Internal<wbr>Ip</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The internal ip, must a private ip.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Internal<wbr>Port</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The internal port, valid value is 1~65535|any.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Ip<wbr>Protocol</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ip protocal, valid value is tcp|udp|any.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of forward entry.
 {{% /md %}}</dd>
 
 </dl>
@@ -535,74 +472,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>External<wbr>Ip</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The external ip address, the ip must along bandwidth package public ip which `alicloud.vpc.NatGateway` argument `bandwidth_packages`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>External<wbr>Port</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The external port, valid value is 1~65535|any.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Forward<wbr>Entry<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the forward entry on the server.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Forward<wbr>Table<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The value can get from `alicloud.vpc.NatGateway` Attributes "forward_table_ids".
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Internal<wbr>Ip</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The internal ip, must a private ip.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Internal<wbr>Port</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The internal port, valid value is 1~65535|any.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Ip<wbr>Protocol</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ip protocal, valid value is tcp|udp|any.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of forward entry.
 {{% /md %}}</dd>
 
 </dl>
@@ -614,74 +488,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>external<wbr>Ip</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The external ip address, the ip must along bandwidth package public ip which `alicloud.vpc.NatGateway` argument `bandwidth_packages`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>external<wbr>Port</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The external port, valid value is 1~65535|any.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>forward<wbr>Entry<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the forward entry on the server.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>forward<wbr>Table<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The value can get from `alicloud.vpc.NatGateway` Attributes "forward_table_ids".
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>internal<wbr>Ip</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The internal ip, must a private ip.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>internal<wbr>Port</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The internal port, valid value is 1~65535|any.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>ip<wbr>Protocol</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ip protocal, valid value is tcp|udp|any.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of forward entry.
 {{% /md %}}</dd>
 
 </dl>
@@ -693,74 +504,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>external_<wbr>ip</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The external ip address, the ip must along bandwidth package public ip which `alicloud.vpc.NatGateway` argument `bandwidth_packages`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>external_<wbr>port</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The external port, valid value is 1~65535|any.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>forward_<wbr>entry_<wbr>id</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The id of the forward entry on the server.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>forward_<wbr>table_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The value can get from `alicloud.vpc.NatGateway` Attributes "forward_table_ids".
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>internal_<wbr>ip</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The internal ip, must a private ip.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>internal_<wbr>port</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The internal port, valid value is 1~65535|any.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>ip_<wbr>protocol</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The ip protocal, valid value is tcp|udp|any.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of forward entry.
 {{% /md %}}</dd>
 
 </dl>
@@ -902,7 +650,7 @@ The following state arguments are supported:
             title="Optional">
         <span>External<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The external ip address, the ip must along bandwidth package public ip which `alicloud.vpc.NatGateway` argument `bandwidth_packages`.
 {{% /md %}}</dd>
@@ -911,7 +659,7 @@ The following state arguments are supported:
             title="Optional">
         <span>External<wbr>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The external port, valid value is 1~65535|any.
 {{% /md %}}</dd>
@@ -920,7 +668,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Forward<wbr>Entry<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the forward entry on the server.
 {{% /md %}}</dd>
@@ -929,7 +677,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Forward<wbr>Table<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value can get from `alicloud.vpc.NatGateway` Attributes "forward_table_ids".
 {{% /md %}}</dd>
@@ -938,7 +686,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Internal<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The internal ip, must a private ip.
 {{% /md %}}</dd>
@@ -947,7 +695,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Internal<wbr>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The internal port, valid value is 1~65535|any.
 {{% /md %}}</dd>
@@ -956,7 +704,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Ip<wbr>Protocol</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ip protocal, valid value is tcp|udp|any.
 {{% /md %}}</dd>
@@ -965,7 +713,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of forward entry.
 {{% /md %}}</dd>
@@ -981,7 +729,7 @@ The following state arguments are supported:
             title="Optional">
         <span>External<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The external ip address, the ip must along bandwidth package public ip which `alicloud.vpc.NatGateway` argument `bandwidth_packages`.
 {{% /md %}}</dd>
@@ -990,7 +738,7 @@ The following state arguments are supported:
             title="Optional">
         <span>External<wbr>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The external port, valid value is 1~65535|any.
 {{% /md %}}</dd>
@@ -999,7 +747,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Forward<wbr>Entry<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the forward entry on the server.
 {{% /md %}}</dd>
@@ -1008,7 +756,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Forward<wbr>Table<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value can get from `alicloud.vpc.NatGateway` Attributes "forward_table_ids".
 {{% /md %}}</dd>
@@ -1017,7 +765,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Internal<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The internal ip, must a private ip.
 {{% /md %}}</dd>
@@ -1026,7 +774,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Internal<wbr>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The internal port, valid value is 1~65535|any.
 {{% /md %}}</dd>
@@ -1035,7 +783,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Ip<wbr>Protocol</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ip protocal, valid value is tcp|udp|any.
 {{% /md %}}</dd>
@@ -1044,7 +792,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of forward entry.
 {{% /md %}}</dd>
@@ -1060,7 +808,7 @@ The following state arguments are supported:
             title="Optional">
         <span>external<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The external ip address, the ip must along bandwidth package public ip which `alicloud.vpc.NatGateway` argument `bandwidth_packages`.
 {{% /md %}}</dd>
@@ -1069,7 +817,7 @@ The following state arguments are supported:
             title="Optional">
         <span>external<wbr>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The external port, valid value is 1~65535|any.
 {{% /md %}}</dd>
@@ -1078,7 +826,7 @@ The following state arguments are supported:
             title="Optional">
         <span>forward<wbr>Entry<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the forward entry on the server.
 {{% /md %}}</dd>
@@ -1087,7 +835,7 @@ The following state arguments are supported:
             title="Optional">
         <span>forward<wbr>Table<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value can get from `alicloud.vpc.NatGateway` Attributes "forward_table_ids".
 {{% /md %}}</dd>
@@ -1096,7 +844,7 @@ The following state arguments are supported:
             title="Optional">
         <span>internal<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The internal ip, must a private ip.
 {{% /md %}}</dd>
@@ -1105,7 +853,7 @@ The following state arguments are supported:
             title="Optional">
         <span>internal<wbr>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The internal port, valid value is 1~65535|any.
 {{% /md %}}</dd>
@@ -1114,7 +862,7 @@ The following state arguments are supported:
             title="Optional">
         <span>ip<wbr>Protocol</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ip protocal, valid value is tcp|udp|any.
 {{% /md %}}</dd>
@@ -1123,7 +871,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of forward entry.
 {{% /md %}}</dd>

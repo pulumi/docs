@@ -35,7 +35,7 @@ const foo = new aws.directconnect.HostedPrivateVirtualInterface("foo", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/directconnect/#HostedPrivateVirtualInterface">HostedPrivateVirtualInterface</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/directconnect/#HostedPrivateVirtualInterfaceArgs">HostedPrivateVirtualInterfaceArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/directconnect/#HostedPrivateVirtualInterface">HostedPrivateVirtualInterface</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/directconnect/#HostedPrivateVirtualInterfaceArgs">HostedPrivateVirtualInterfaceArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -43,11 +43,11 @@ const foo = new aws.directconnect.HostedPrivateVirtualInterface("foo", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewHostedPrivateVirtualInterface<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/directconnect?tab=doc#HostedPrivateVirtualInterfaceArgs">HostedPrivateVirtualInterfaceArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/directconnect?tab=doc#HostedPrivateVirtualInterface">HostedPrivateVirtualInterface</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewHostedPrivateVirtualInterface<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/directconnect?tab=doc#HostedPrivateVirtualInterfaceArgs">HostedPrivateVirtualInterfaceArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/directconnect?tab=doc#HostedPrivateVirtualInterface">HostedPrivateVirtualInterface</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Directconnect.HostedPrivateVirtualInterface.html">HostedPrivateVirtualInterface</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.DirectConnect.HostedPrivateVirtualInterfaceArgs.html">HostedPrivateVirtualInterfaceArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.DirectConnect.HostedPrivateVirtualInterface.html">HostedPrivateVirtualInterface</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.DirectConnect.HostedPrivateVirtualInterfaceArgs.html">HostedPrivateVirtualInterfaceArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -148,15 +148,6 @@ const foo = new aws.directconnect.HostedPrivateVirtualInterface("foo", {
     <dd>{{% md %}}The address family for the BGP peer. `ipv4 ` or `ipv6`.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Amazon<wbr>Address</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The IPv4 CIDR address to use to send traffic to Amazon. Required for IPv4 BGP peers.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Bgp<wbr>Asn</span>
@@ -166,15 +157,6 @@ const foo = new aws.directconnect.HostedPrivateVirtualInterface("foo", {
     <dd>{{% md %}}The autonomous system (AS) number for Border Gateway Protocol (BGP) configuration.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Bgp<wbr>Auth<wbr>Key</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The authentication key for BGP configuration.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Connection<wbr>Id</span>
@@ -182,33 +164,6 @@ const foo = new aws.directconnect.HostedPrivateVirtualInterface("foo", {
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Direct Connect connection (or LAG) on which to create the virtual interface.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Customer<wbr>Address</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The IPv4 CIDR destination address to which Amazon should send traffic. Required for IPv4 BGP peers.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Mtu</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}The maximum transmission unit (MTU) is the size, in bytes, of the largest permissible packet that can be passed over the connection. The MTU of a virtual private interface can be either `1500` or `9001` (jumbo frames). Default is `1500`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The name for the virtual interface.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -227,6 +182,51 @@ const foo = new aws.directconnect.HostedPrivateVirtualInterface("foo", {
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The VLAN ID.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Amazon<wbr>Address</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The IPv4 CIDR address to use to send traffic to Amazon. Required for IPv4 BGP peers.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Bgp<wbr>Auth<wbr>Key</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The authentication key for BGP configuration.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Customer<wbr>Address</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The IPv4 CIDR destination address to which Amazon should send traffic. Required for IPv4 BGP peers.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Mtu</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The maximum transmission unit (MTU) is the size, in bytes, of the largest permissible packet that can be passed over the connection. The MTU of a virtual private interface can be either `1500` or `9001` (jumbo frames). Default is `1500`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name for the virtual interface.
 {{% /md %}}</dd>
 
 </dl>
@@ -245,15 +245,6 @@ const foo = new aws.directconnect.HostedPrivateVirtualInterface("foo", {
     <dd>{{% md %}}The address family for the BGP peer. `ipv4 ` or `ipv6`.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Amazon<wbr>Address</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The IPv4 CIDR address to use to send traffic to Amazon. Required for IPv4 BGP peers.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Bgp<wbr>Asn</span>
@@ -263,15 +254,6 @@ const foo = new aws.directconnect.HostedPrivateVirtualInterface("foo", {
     <dd>{{% md %}}The autonomous system (AS) number for Border Gateway Protocol (BGP) configuration.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Bgp<wbr>Auth<wbr>Key</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The authentication key for BGP configuration.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Connection<wbr>Id</span>
@@ -279,33 +261,6 @@ const foo = new aws.directconnect.HostedPrivateVirtualInterface("foo", {
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Direct Connect connection (or LAG) on which to create the virtual interface.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Customer<wbr>Address</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The IPv4 CIDR destination address to which Amazon should send traffic. Required for IPv4 BGP peers.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Mtu</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}The maximum transmission unit (MTU) is the size, in bytes, of the largest permissible packet that can be passed over the connection. The MTU of a virtual private interface can be either `1500` or `9001` (jumbo frames). Default is `1500`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The name for the virtual interface.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -326,6 +281,51 @@ const foo = new aws.directconnect.HostedPrivateVirtualInterface("foo", {
     <dd>{{% md %}}The VLAN ID.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>Amazon<wbr>Address</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The IPv4 CIDR address to use to send traffic to Amazon. Required for IPv4 BGP peers.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Bgp<wbr>Auth<wbr>Key</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The authentication key for BGP configuration.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Customer<wbr>Address</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The IPv4 CIDR destination address to which Amazon should send traffic. Required for IPv4 BGP peers.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Mtu</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The maximum transmission unit (MTU) is the size, in bytes, of the largest permissible packet that can be passed over the connection. The MTU of a virtual private interface can be either `1500` or `9001` (jumbo frames). Default is `1500`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name for the virtual interface.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -342,15 +342,6 @@ const foo = new aws.directconnect.HostedPrivateVirtualInterface("foo", {
     <dd>{{% md %}}The address family for the BGP peer. `ipv4 ` or `ipv6`.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>amazon<wbr>Address</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The IPv4 CIDR address to use to send traffic to Amazon. Required for IPv4 BGP peers.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>bgp<wbr>Asn</span>
@@ -360,15 +351,6 @@ const foo = new aws.directconnect.HostedPrivateVirtualInterface("foo", {
     <dd>{{% md %}}The autonomous system (AS) number for Border Gateway Protocol (BGP) configuration.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>bgp<wbr>Auth<wbr>Key</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The authentication key for BGP configuration.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>connection<wbr>Id</span>
@@ -376,33 +358,6 @@ const foo = new aws.directconnect.HostedPrivateVirtualInterface("foo", {
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Direct Connect connection (or LAG) on which to create the virtual interface.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>customer<wbr>Address</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The IPv4 CIDR destination address to which Amazon should send traffic. Required for IPv4 BGP peers.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>mtu</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}The maximum transmission unit (MTU) is the size, in bytes, of the largest permissible packet that can be passed over the connection. The MTU of a virtual private interface can be either `1500` or `9001` (jumbo frames). Default is `1500`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The name for the virtual interface.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -423,6 +378,51 @@ const foo = new aws.directconnect.HostedPrivateVirtualInterface("foo", {
     <dd>{{% md %}}The VLAN ID.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>amazon<wbr>Address</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The IPv4 CIDR address to use to send traffic to Amazon. Required for IPv4 BGP peers.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>bgp<wbr>Auth<wbr>Key</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The authentication key for BGP configuration.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>customer<wbr>Address</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The IPv4 CIDR destination address to which Amazon should send traffic. Required for IPv4 BGP peers.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>mtu</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The maximum transmission unit (MTU) is the size, in bytes, of the largest permissible packet that can be passed over the connection. The MTU of a virtual private interface can be either `1500` or `9001` (jumbo frames). Default is `1500`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name for the virtual interface.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -439,15 +439,6 @@ const foo = new aws.directconnect.HostedPrivateVirtualInterface("foo", {
     <dd>{{% md %}}The address family for the BGP peer. `ipv4 ` or `ipv6`.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>amazon_<wbr>address</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The IPv4 CIDR address to use to send traffic to Amazon. Required for IPv4 BGP peers.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>bgp_<wbr>asn</span>
@@ -457,15 +448,6 @@ const foo = new aws.directconnect.HostedPrivateVirtualInterface("foo", {
     <dd>{{% md %}}The autonomous system (AS) number for Border Gateway Protocol (BGP) configuration.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>bgp_<wbr>auth_<wbr>key</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The authentication key for BGP configuration.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>connection_<wbr>id</span>
@@ -473,6 +455,42 @@ const foo = new aws.directconnect.HostedPrivateVirtualInterface("foo", {
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the Direct Connect connection (or LAG) on which to create the virtual interface.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>owner_<wbr>account_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The AWS account that will own the new virtual interface.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>vlan</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}The VLAN ID.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>amazon_<wbr>address</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The IPv4 CIDR address to use to send traffic to Amazon. Required for IPv4 BGP peers.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>bgp_<wbr>auth_<wbr>key</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The authentication key for BGP configuration.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -502,24 +520,6 @@ const foo = new aws.directconnect.HostedPrivateVirtualInterface("foo", {
     <dd>{{% md %}}The name for the virtual interface.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>owner_<wbr>account_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The AWS account that will own the new virtual interface.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>vlan</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The VLAN ID.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -541,24 +541,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Address<wbr>Family</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The address family for the BGP peer. `ipv4 ` or `ipv6`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Amazon<wbr>Address</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The IPv4 CIDR address to use to send traffic to Amazon. Required for IPv4 BGP peers.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Amazon<wbr>Side<wbr>Asn</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -585,83 +567,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Bgp<wbr>Asn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The autonomous system (AS) number for Border Gateway Protocol (BGP) configuration.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Bgp<wbr>Auth<wbr>Key</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The authentication key for BGP configuration.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Connection<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the Direct Connect connection (or LAG) on which to create the virtual interface.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Customer<wbr>Address</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The IPv4 CIDR destination address to which Amazon should send traffic. Required for IPv4 BGP peers.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Jumbo<wbr>Frame<wbr>Capable</span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether jumbo frames (9001 MTU) are supported.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Mtu</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}The maximum transmission unit (MTU) is the size, in bytes, of the largest permissible packet that can be passed over the connection. The MTU of a virtual private interface can be either `1500` or `9001` (jumbo frames). Default is `1500`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name for the virtual interface.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Owner<wbr>Account<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The AWS account that will own the new virtual interface.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Vlan</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The VLAN ID.
 {{% /md %}}</dd>
 
 </dl>
@@ -673,24 +583,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Address<wbr>Family</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The address family for the BGP peer. `ipv4 ` or `ipv6`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Amazon<wbr>Address</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The IPv4 CIDR address to use to send traffic to Amazon. Required for IPv4 BGP peers.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Amazon<wbr>Side<wbr>Asn</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -717,83 +609,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Bgp<wbr>Asn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The autonomous system (AS) number for Border Gateway Protocol (BGP) configuration.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Bgp<wbr>Auth<wbr>Key</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The authentication key for BGP configuration.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Connection<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the Direct Connect connection (or LAG) on which to create the virtual interface.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Customer<wbr>Address</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The IPv4 CIDR destination address to which Amazon should send traffic. Required for IPv4 BGP peers.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Jumbo<wbr>Frame<wbr>Capable</span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether jumbo frames (9001 MTU) are supported.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Mtu</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}The maximum transmission unit (MTU) is the size, in bytes, of the largest permissible packet that can be passed over the connection. The MTU of a virtual private interface can be either `1500` or `9001` (jumbo frames). Default is `1500`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name for the virtual interface.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Owner<wbr>Account<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The AWS account that will own the new virtual interface.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Vlan</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The VLAN ID.
 {{% /md %}}</dd>
 
 </dl>
@@ -802,24 +622,6 @@ The following output properties are available:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>address<wbr>Family</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The address family for the BGP peer. `ipv4 ` or `ipv6`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>amazon<wbr>Address</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The IPv4 CIDR address to use to send traffic to Amazon. Required for IPv4 BGP peers.
-{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -849,83 +651,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>bgp<wbr>Asn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}The autonomous system (AS) number for Border Gateway Protocol (BGP) configuration.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>bgp<wbr>Auth<wbr>Key</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The authentication key for BGP configuration.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>connection<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the Direct Connect connection (or LAG) on which to create the virtual interface.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>customer<wbr>Address</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The IPv4 CIDR destination address to which Amazon should send traffic. Required for IPv4 BGP peers.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>jumbo<wbr>Frame<wbr>Capable</span>
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether jumbo frames (9001 MTU) are supported.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>mtu</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}The maximum transmission unit (MTU) is the size, in bytes, of the largest permissible packet that can be passed over the connection. The MTU of a virtual private interface can be either `1500` or `9001` (jumbo frames). Default is `1500`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name for the virtual interface.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>owner<wbr>Account<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The AWS account that will own the new virtual interface.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>vlan</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}The VLAN ID.
 {{% /md %}}</dd>
 
 </dl>
@@ -934,24 +664,6 @@ The following output properties are available:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>address_<wbr>family</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The address family for the BGP peer. `ipv4 ` or `ipv6`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>amazon_<wbr>address</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The IPv4 CIDR address to use to send traffic to Amazon. Required for IPv4 BGP peers.
-{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -981,83 +693,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>bgp_<wbr>asn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The autonomous system (AS) number for Border Gateway Protocol (BGP) configuration.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>bgp_<wbr>auth_<wbr>key</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The authentication key for BGP configuration.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>connection_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The ID of the Direct Connect connection (or LAG) on which to create the virtual interface.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>customer_<wbr>address</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The IPv4 CIDR destination address to which Amazon should send traffic. Required for IPv4 BGP peers.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>jumbo_<wbr>frame_<wbr>capable</span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether jumbo frames (9001 MTU) are supported.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>mtu</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The maximum transmission unit (MTU) is the size, in bytes, of the largest permissible packet that can be passed over the connection. The MTU of a virtual private interface can be either `1500` or `9001` (jumbo frames). Default is `1500`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name for the virtual interface.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>owner_<wbr>account_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The AWS account that will own the new virtual interface.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>vlan</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The VLAN ID.
 {{% /md %}}</dd>
 
 </dl>
@@ -1089,7 +729,7 @@ Get an existing HostedPrivateVirtualInterface resource's state with the given na
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Directconnect.HostedPrivateVirtualInterface.html">HostedPrivateVirtualInterface</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Directconnect.HostedPrivateVirtualInterfaceState.html">HostedPrivateVirtualInterfaceState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.DirectConnect.HostedPrivateVirtualInterface.html">HostedPrivateVirtualInterface</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.DirectConnect.HostedPrivateVirtualInterfaceState.html">HostedPrivateVirtualInterfaceState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1199,7 +839,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Address<wbr>Family</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The address family for the BGP peer. `ipv4 ` or `ipv6`.
 {{% /md %}}</dd>
@@ -1208,7 +848,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Amazon<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IPv4 CIDR address to use to send traffic to Amazon. Required for IPv4 BGP peers.
 {{% /md %}}</dd>
@@ -1217,7 +857,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Amazon<wbr>Side<wbr>Asn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1225,7 +865,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the virtual interface.
 {{% /md %}}</dd>
@@ -1234,7 +874,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Aws<wbr>Device</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Direct Connect endpoint on which the virtual interface terminates.
 {{% /md %}}</dd>
@@ -1243,7 +883,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Bgp<wbr>Asn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The autonomous system (AS) number for Border Gateway Protocol (BGP) configuration.
 {{% /md %}}</dd>
@@ -1252,7 +892,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Bgp<wbr>Auth<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The authentication key for BGP configuration.
 {{% /md %}}</dd>
@@ -1261,7 +901,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Connection<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Direct Connect connection (or LAG) on which to create the virtual interface.
 {{% /md %}}</dd>
@@ -1270,7 +910,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Customer<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IPv4 CIDR destination address to which Amazon should send traffic. Required for IPv4 BGP peers.
 {{% /md %}}</dd>
@@ -1279,7 +919,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Jumbo<wbr>Frame<wbr>Capable</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether jumbo frames (9001 MTU) are supported.
 {{% /md %}}</dd>
@@ -1288,7 +928,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Mtu</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum transmission unit (MTU) is the size, in bytes, of the largest permissible packet that can be passed over the connection. The MTU of a virtual private interface can be either `1500` or `9001` (jumbo frames). Default is `1500`.
 {{% /md %}}</dd>
@@ -1297,7 +937,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name for the virtual interface.
 {{% /md %}}</dd>
@@ -1306,7 +946,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Owner<wbr>Account<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS account that will own the new virtual interface.
 {{% /md %}}</dd>
@@ -1315,7 +955,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Vlan</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The VLAN ID.
 {{% /md %}}</dd>
@@ -1331,7 +971,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Address<wbr>Family</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The address family for the BGP peer. `ipv4 ` or `ipv6`.
 {{% /md %}}</dd>
@@ -1340,7 +980,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Amazon<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IPv4 CIDR address to use to send traffic to Amazon. Required for IPv4 BGP peers.
 {{% /md %}}</dd>
@@ -1349,7 +989,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Amazon<wbr>Side<wbr>Asn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1357,7 +997,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the virtual interface.
 {{% /md %}}</dd>
@@ -1366,7 +1006,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Aws<wbr>Device</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Direct Connect endpoint on which the virtual interface terminates.
 {{% /md %}}</dd>
@@ -1375,7 +1015,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Bgp<wbr>Asn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The autonomous system (AS) number for Border Gateway Protocol (BGP) configuration.
 {{% /md %}}</dd>
@@ -1384,7 +1024,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Bgp<wbr>Auth<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The authentication key for BGP configuration.
 {{% /md %}}</dd>
@@ -1393,7 +1033,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Connection<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Direct Connect connection (or LAG) on which to create the virtual interface.
 {{% /md %}}</dd>
@@ -1402,7 +1042,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Customer<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IPv4 CIDR destination address to which Amazon should send traffic. Required for IPv4 BGP peers.
 {{% /md %}}</dd>
@@ -1411,7 +1051,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Jumbo<wbr>Frame<wbr>Capable</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether jumbo frames (9001 MTU) are supported.
 {{% /md %}}</dd>
@@ -1420,7 +1060,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Mtu</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum transmission unit (MTU) is the size, in bytes, of the largest permissible packet that can be passed over the connection. The MTU of a virtual private interface can be either `1500` or `9001` (jumbo frames). Default is `1500`.
 {{% /md %}}</dd>
@@ -1429,7 +1069,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name for the virtual interface.
 {{% /md %}}</dd>
@@ -1438,7 +1078,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Owner<wbr>Account<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS account that will own the new virtual interface.
 {{% /md %}}</dd>
@@ -1447,7 +1087,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Vlan</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The VLAN ID.
 {{% /md %}}</dd>
@@ -1463,7 +1103,7 @@ The following state arguments are supported:
             title="Optional">
         <span>address<wbr>Family</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The address family for the BGP peer. `ipv4 ` or `ipv6`.
 {{% /md %}}</dd>
@@ -1472,7 +1112,7 @@ The following state arguments are supported:
             title="Optional">
         <span>amazon<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IPv4 CIDR address to use to send traffic to Amazon. Required for IPv4 BGP peers.
 {{% /md %}}</dd>
@@ -1481,7 +1121,7 @@ The following state arguments are supported:
             title="Optional">
         <span>amazon<wbr>Side<wbr>Asn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1489,7 +1129,7 @@ The following state arguments are supported:
             title="Optional">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the virtual interface.
 {{% /md %}}</dd>
@@ -1498,7 +1138,7 @@ The following state arguments are supported:
             title="Optional">
         <span>aws<wbr>Device</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Direct Connect endpoint on which the virtual interface terminates.
 {{% /md %}}</dd>
@@ -1507,7 +1147,7 @@ The following state arguments are supported:
             title="Optional">
         <span>bgp<wbr>Asn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The autonomous system (AS) number for Border Gateway Protocol (BGP) configuration.
 {{% /md %}}</dd>
@@ -1516,7 +1156,7 @@ The following state arguments are supported:
             title="Optional">
         <span>bgp<wbr>Auth<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The authentication key for BGP configuration.
 {{% /md %}}</dd>
@@ -1525,7 +1165,7 @@ The following state arguments are supported:
             title="Optional">
         <span>connection<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the Direct Connect connection (or LAG) on which to create the virtual interface.
 {{% /md %}}</dd>
@@ -1534,7 +1174,7 @@ The following state arguments are supported:
             title="Optional">
         <span>customer<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IPv4 CIDR destination address to which Amazon should send traffic. Required for IPv4 BGP peers.
 {{% /md %}}</dd>
@@ -1543,7 +1183,7 @@ The following state arguments are supported:
             title="Optional">
         <span>jumbo<wbr>Frame<wbr>Capable</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether jumbo frames (9001 MTU) are supported.
 {{% /md %}}</dd>
@@ -1552,7 +1192,7 @@ The following state arguments are supported:
             title="Optional">
         <span>mtu</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum transmission unit (MTU) is the size, in bytes, of the largest permissible packet that can be passed over the connection. The MTU of a virtual private interface can be either `1500` or `9001` (jumbo frames). Default is `1500`.
 {{% /md %}}</dd>
@@ -1561,7 +1201,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name for the virtual interface.
 {{% /md %}}</dd>
@@ -1570,7 +1210,7 @@ The following state arguments are supported:
             title="Optional">
         <span>owner<wbr>Account<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS account that will own the new virtual interface.
 {{% /md %}}</dd>
@@ -1579,7 +1219,7 @@ The following state arguments are supported:
             title="Optional">
         <span>vlan</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The VLAN ID.
 {{% /md %}}</dd>

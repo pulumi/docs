@@ -236,7 +236,7 @@ const testStream = new aws.kinesis.FirehoseDeliveryStream("test_stream", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/kinesis/#FirehoseDeliveryStream">FirehoseDeliveryStream</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/kinesis/#FirehoseDeliveryStreamArgs">FirehoseDeliveryStreamArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/kinesis/#FirehoseDeliveryStream">FirehoseDeliveryStream</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/kinesis/#FirehoseDeliveryStreamArgs">FirehoseDeliveryStreamArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -244,7 +244,7 @@ const testStream = new aws.kinesis.FirehoseDeliveryStream("test_stream", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewFirehoseDeliveryStream<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamArgs">FirehoseDeliveryStreamArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/kinesis?tab=doc#FirehoseDeliveryStream">FirehoseDeliveryStream</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewFirehoseDeliveryStream<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/kinesis?tab=doc#FirehoseDeliveryStreamArgs">FirehoseDeliveryStreamArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/kinesis?tab=doc#FirehoseDeliveryStream">FirehoseDeliveryStream</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -340,15 +340,6 @@ const testStream = new aws.kinesis.FirehoseDeliveryStream("test_stream", {
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) specifying the Stream
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Destination</span>
@@ -360,9 +351,18 @@ const testStream = new aws.kinesis.FirehoseDeliveryStream("test_stream", {
 
     <dt class="property-optional"
             title="Optional">
+        <span>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name (ARN) specifying the Stream
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Destination<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -370,7 +370,7 @@ const testStream = new aws.kinesis.FirehoseDeliveryStream("test_stream", {
             title="Optional">
         <span>Elasticsearch<wbr>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration<wbr>Args?</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration options if elasticsearch is the destination. More details are given below.
 {{% /md %}}</dd>
@@ -379,7 +379,7 @@ const testStream = new aws.kinesis.FirehoseDeliveryStream("test_stream", {
             title="Optional">
         <span>Extended<wbr>S3Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configuration">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Args?</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configuration">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Enhanced configuration options for the s3 destination. More details are given below.
 {{% /md %}}</dd>
@@ -388,7 +388,7 @@ const testStream = new aws.kinesis.FirehoseDeliveryStream("test_stream", {
             title="Optional">
         <span>Kinesis<wbr>Source<wbr>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamkinesissourceconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Kinesis<wbr>Source<wbr>Configuration<wbr>Args?</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamkinesissourceconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Kinesis<wbr>Source<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Allows the ability to specify the kinesis stream that is used as the source of the firehose delivery stream.
 {{% /md %}}</dd>
@@ -397,7 +397,7 @@ const testStream = new aws.kinesis.FirehoseDeliveryStream("test_stream", {
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A name to identify the stream. This is unique to the
 AWS account and region the Stream is created in.
@@ -407,7 +407,7 @@ AWS account and region the Stream is created in.
             title="Optional">
         <span>Redshift<wbr>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>Args?</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration options if redshift is the destination.
 Using `redshift_configuration` requires the user to also specify a
@@ -418,7 +418,7 @@ Using `redshift_configuration` requires the user to also specify a
             title="Optional">
         <span>S3Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreams3configuration">Firehose<wbr>Delivery<wbr>Stream<wbr>S3Configuration<wbr>Args?</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreams3configuration">Firehose<wbr>Delivery<wbr>Stream<wbr>S3Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required for non-S3 destinations. For S3 destination, use `extended_s3_configuration` instead. Configuration options for the s3 destination (or the intermediate bucket if the destination
 is redshift). More details are given below.
@@ -428,7 +428,7 @@ is redshift). More details are given below.
             title="Optional">
         <span>Server<wbr>Side<wbr>Encryption</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamserversideencryption">Firehose<wbr>Delivery<wbr>Stream<wbr>Server<wbr>Side<wbr>Encryption<wbr>Args?</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamserversideencryption">Firehose<wbr>Delivery<wbr>Stream<wbr>Server<wbr>Side<wbr>Encryption<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Encrypt at rest options.
 Server-side encryption should not be enabled when a kinesis stream is configured as the source of the firehose delivery stream.
@@ -438,7 +438,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
             title="Optional">
         <span>Splunk<wbr>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamsplunkconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration<wbr>Args?</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamsplunkconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -446,7 +446,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -455,7 +455,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
             title="Optional">
         <span>Version<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the table version for the output data schema. Defaults to `LATEST`.
 {{% /md %}}</dd>
@@ -467,15 +467,6 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) specifying the Stream
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Destination</span>
@@ -487,9 +478,18 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-optional"
             title="Optional">
+        <span>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name (ARN) specifying the Stream
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Destination<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -497,7 +497,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
             title="Optional">
         <span>Elasticsearch<wbr>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfiguration">*Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Configuration options if elasticsearch is the destination. More details are given below.
 {{% /md %}}</dd>
@@ -506,7 +506,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
             title="Optional">
         <span>Extended<wbr>S3Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configuration">*Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configuration">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration</a></span>
     </dt>
     <dd>{{% md %}}Enhanced configuration options for the s3 destination. More details are given below.
 {{% /md %}}</dd>
@@ -515,7 +515,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
             title="Optional">
         <span>Kinesis<wbr>Source<wbr>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamkinesissourceconfiguration">*Firehose<wbr>Delivery<wbr>Stream<wbr>Kinesis<wbr>Source<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamkinesissourceconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Kinesis<wbr>Source<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Allows the ability to specify the kinesis stream that is used as the source of the firehose delivery stream.
 {{% /md %}}</dd>
@@ -524,7 +524,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A name to identify the stream. This is unique to the
 AWS account and region the Stream is created in.
@@ -534,7 +534,7 @@ AWS account and region the Stream is created in.
             title="Optional">
         <span>Redshift<wbr>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfiguration">*Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Configuration options if redshift is the destination.
 Using `redshift_configuration` requires the user to also specify a
@@ -545,7 +545,7 @@ Using `redshift_configuration` requires the user to also specify a
             title="Optional">
         <span>S3Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreams3configuration">*Firehose<wbr>Delivery<wbr>Stream<wbr>S3Configuration</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreams3configuration">Firehose<wbr>Delivery<wbr>Stream<wbr>S3Configuration</a></span>
     </dt>
     <dd>{{% md %}}Required for non-S3 destinations. For S3 destination, use `extended_s3_configuration` instead. Configuration options for the s3 destination (or the intermediate bucket if the destination
 is redshift). More details are given below.
@@ -555,7 +555,7 @@ is redshift). More details are given below.
             title="Optional">
         <span>Server<wbr>Side<wbr>Encryption</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamserversideencryption">*Firehose<wbr>Delivery<wbr>Stream<wbr>Server<wbr>Side<wbr>Encryption</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamserversideencryption">Firehose<wbr>Delivery<wbr>Stream<wbr>Server<wbr>Side<wbr>Encryption</a></span>
     </dt>
     <dd>{{% md %}}Encrypt at rest options.
 Server-side encryption should not be enabled when a kinesis stream is configured as the source of the firehose delivery stream.
@@ -565,7 +565,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
             title="Optional">
         <span>Splunk<wbr>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamsplunkconfiguration">*Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamsplunkconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -582,7 +582,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
             title="Optional">
         <span>Version<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the table version for the output data schema. Defaults to `LATEST`.
 {{% /md %}}</dd>
@@ -593,15 +593,6 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) specifying the Stream
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -614,9 +605,18 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-optional"
             title="Optional">
+        <span>arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name (ARN) specifying the Stream
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>destination<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -624,7 +624,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
             title="Optional">
         <span>elasticsearch<wbr>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration?</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Configuration options if elasticsearch is the destination. More details are given below.
 {{% /md %}}</dd>
@@ -633,7 +633,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
             title="Optional">
         <span>extended<wbr>S3Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configuration">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration?</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configuration">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration</a></span>
     </dt>
     <dd>{{% md %}}Enhanced configuration options for the s3 destination. More details are given below.
 {{% /md %}}</dd>
@@ -642,7 +642,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
             title="Optional">
         <span>kinesis<wbr>Source<wbr>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamkinesissourceconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Kinesis<wbr>Source<wbr>Configuration?</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamkinesissourceconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Kinesis<wbr>Source<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Allows the ability to specify the kinesis stream that is used as the source of the firehose delivery stream.
 {{% /md %}}</dd>
@@ -651,7 +651,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A name to identify the stream. This is unique to the
 AWS account and region the Stream is created in.
@@ -661,7 +661,7 @@ AWS account and region the Stream is created in.
             title="Optional">
         <span>redshift<wbr>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration?</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Configuration options if redshift is the destination.
 Using `redshift_configuration` requires the user to also specify a
@@ -672,7 +672,7 @@ Using `redshift_configuration` requires the user to also specify a
             title="Optional">
         <span>s3Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreams3configuration">Firehose<wbr>Delivery<wbr>Stream<wbr>S3Configuration?</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreams3configuration">Firehose<wbr>Delivery<wbr>Stream<wbr>S3Configuration</a></span>
     </dt>
     <dd>{{% md %}}Required for non-S3 destinations. For S3 destination, use `extended_s3_configuration` instead. Configuration options for the s3 destination (or the intermediate bucket if the destination
 is redshift). More details are given below.
@@ -682,7 +682,7 @@ is redshift). More details are given below.
             title="Optional">
         <span>server<wbr>Side<wbr>Encryption</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamserversideencryption">Firehose<wbr>Delivery<wbr>Stream<wbr>Server<wbr>Side<wbr>Encryption?</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamserversideencryption">Firehose<wbr>Delivery<wbr>Stream<wbr>Server<wbr>Side<wbr>Encryption</a></span>
     </dt>
     <dd>{{% md %}}Encrypt at rest options.
 Server-side encryption should not be enabled when a kinesis stream is configured as the source of the firehose delivery stream.
@@ -692,7 +692,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
             title="Optional">
         <span>splunk<wbr>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamsplunkconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration?</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamsplunkconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -700,7 +700,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -709,7 +709,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
             title="Optional">
         <span>version<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the table version for the output data schema. Defaults to `LATEST`.
 {{% /md %}}</dd>
@@ -721,15 +721,6 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) specifying the Stream
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>destination</span>
@@ -737,6 +728,15 @@ Server-side encryption should not be enabled when a kinesis stream is configured
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}This is the destination to where the data is delivered. The only options are `s3` (Deprecated, use `extended_s3` instead), `extended_s3`, `redshift`, `elasticsearch`, and `splunk`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name (ARN) specifying the Stream
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -845,524 +845,6 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 {{% /choosable %}}
 
 
-
-
-
-
-
-## FirehoseDeliveryStream Output Properties
-
-The following output properties are available:
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) specifying the Stream
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Destination</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}This is the destination to where the data is delivered. The only options are `s3` (Deprecated, use `extended_s3` instead), `extended_s3`, `redshift`, `elasticsearch`, and `splunk`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Destination<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Elasticsearch<wbr>Configuration</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration?</a></span>
-    </dt>
-    <dd>{{% md %}}Configuration options if elasticsearch is the destination. More details are given below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Extended<wbr>S3Configuration</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configuration">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration?</a></span>
-    </dt>
-    <dd>{{% md %}}Enhanced configuration options for the s3 destination. More details are given below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Kinesis<wbr>Source<wbr>Configuration</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamkinesissourceconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Kinesis<wbr>Source<wbr>Configuration?</a></span>
-    </dt>
-    <dd>{{% md %}}Allows the ability to specify the kinesis stream that is used as the source of the firehose delivery stream.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A name to identify the stream. This is unique to the
-AWS account and region the Stream is created in.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Redshift<wbr>Configuration</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration?</a></span>
-    </dt>
-    <dd>{{% md %}}Configuration options if redshift is the destination.
-Using `redshift_configuration` requires the user to also specify a
-`s3_configuration` block. More details are given below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>S3Configuration</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreams3configuration">Firehose<wbr>Delivery<wbr>Stream<wbr>S3Configuration?</a></span>
-    </dt>
-    <dd>{{% md %}}Required for non-S3 destinations. For S3 destination, use `extended_s3_configuration` instead. Configuration options for the s3 destination (or the intermediate bucket if the destination
-is redshift). More details are given below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Server<wbr>Side<wbr>Encryption</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamserversideencryption">Firehose<wbr>Delivery<wbr>Stream<wbr>Server<wbr>Side<wbr>Encryption?</a></span>
-    </dt>
-    <dd>{{% md %}}Encrypt at rest options.
-Server-side encryption should not be enabled when a kinesis stream is configured as the source of the firehose delivery stream.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Splunk<wbr>Configuration</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamsplunkconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Version<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the table version for the output data schema. Defaults to `LATEST`.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) specifying the Stream
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Destination</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}This is the destination to where the data is delivered. The only options are `s3` (Deprecated, use `extended_s3` instead), `extended_s3`, `redshift`, `elasticsearch`, and `splunk`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Destination<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Elasticsearch<wbr>Configuration</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfiguration">*Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration</a></span>
-    </dt>
-    <dd>{{% md %}}Configuration options if elasticsearch is the destination. More details are given below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Extended<wbr>S3Configuration</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configuration">*Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration</a></span>
-    </dt>
-    <dd>{{% md %}}Enhanced configuration options for the s3 destination. More details are given below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Kinesis<wbr>Source<wbr>Configuration</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamkinesissourceconfiguration">*Firehose<wbr>Delivery<wbr>Stream<wbr>Kinesis<wbr>Source<wbr>Configuration</a></span>
-    </dt>
-    <dd>{{% md %}}Allows the ability to specify the kinesis stream that is used as the source of the firehose delivery stream.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A name to identify the stream. This is unique to the
-AWS account and region the Stream is created in.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Redshift<wbr>Configuration</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfiguration">*Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration</a></span>
-    </dt>
-    <dd>{{% md %}}Configuration options if redshift is the destination.
-Using `redshift_configuration` requires the user to also specify a
-`s3_configuration` block. More details are given below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>S3Configuration</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreams3configuration">*Firehose<wbr>Delivery<wbr>Stream<wbr>S3Configuration</a></span>
-    </dt>
-    <dd>{{% md %}}Required for non-S3 destinations. For S3 destination, use `extended_s3_configuration` instead. Configuration options for the s3 destination (or the intermediate bucket if the destination
-is redshift). More details are given below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Server<wbr>Side<wbr>Encryption</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamserversideencryption">*Firehose<wbr>Delivery<wbr>Stream<wbr>Server<wbr>Side<wbr>Encryption</a></span>
-    </dt>
-    <dd>{{% md %}}Encrypt at rest options.
-Server-side encryption should not be enabled when a kinesis stream is configured as the source of the firehose delivery stream.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Splunk<wbr>Configuration</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamsplunkconfiguration">*Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Version<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the table version for the output data schema. Defaults to `LATEST`.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) specifying the Stream
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>destination</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}This is the destination to where the data is delivered. The only options are `s3` (Deprecated, use `extended_s3` instead), `extended_s3`, `redshift`, `elasticsearch`, and `splunk`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>destination<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>elasticsearch<wbr>Configuration</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration?</a></span>
-    </dt>
-    <dd>{{% md %}}Configuration options if elasticsearch is the destination. More details are given below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>extended<wbr>S3Configuration</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configuration">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration?</a></span>
-    </dt>
-    <dd>{{% md %}}Enhanced configuration options for the s3 destination. More details are given below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>kinesis<wbr>Source<wbr>Configuration</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamkinesissourceconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Kinesis<wbr>Source<wbr>Configuration?</a></span>
-    </dt>
-    <dd>{{% md %}}Allows the ability to specify the kinesis stream that is used as the source of the firehose delivery stream.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A name to identify the stream. This is unique to the
-AWS account and region the Stream is created in.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>redshift<wbr>Configuration</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration?</a></span>
-    </dt>
-    <dd>{{% md %}}Configuration options if redshift is the destination.
-Using `redshift_configuration` requires the user to also specify a
-`s3_configuration` block. More details are given below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>s3Configuration</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreams3configuration">Firehose<wbr>Delivery<wbr>Stream<wbr>S3Configuration?</a></span>
-    </dt>
-    <dd>{{% md %}}Required for non-S3 destinations. For S3 destination, use `extended_s3_configuration` instead. Configuration options for the s3 destination (or the intermediate bucket if the destination
-is redshift). More details are given below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>server<wbr>Side<wbr>Encryption</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamserversideencryption">Firehose<wbr>Delivery<wbr>Stream<wbr>Server<wbr>Side<wbr>Encryption?</a></span>
-    </dt>
-    <dd>{{% md %}}Encrypt at rest options.
-Server-side encryption should not be enabled when a kinesis stream is configured as the source of the firehose delivery stream.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>splunk<wbr>Configuration</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamsplunkconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>version<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the table version for the output data schema. Defaults to `LATEST`.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The Amazon Resource Name (ARN) specifying the Stream
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>destination</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}This is the destination to where the data is delivered. The only options are `s3` (Deprecated, use `extended_s3` instead), `extended_s3`, `redshift`, `elasticsearch`, and `splunk`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>destination_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>elasticsearch_<wbr>configuration</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfiguration">Dict[Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration]</a></span>
-    </dt>
-    <dd>{{% md %}}Configuration options if elasticsearch is the destination. More details are given below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>extended_<wbr>s3_<wbr>configuration</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configuration">Dict[Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration]</a></span>
-    </dt>
-    <dd>{{% md %}}Enhanced configuration options for the s3 destination. More details are given below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>kinesis_<wbr>source_<wbr>configuration</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamkinesissourceconfiguration">Dict[Firehose<wbr>Delivery<wbr>Stream<wbr>Kinesis<wbr>Source<wbr>Configuration]</a></span>
-    </dt>
-    <dd>{{% md %}}Allows the ability to specify the kinesis stream that is used as the source of the firehose delivery stream.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}A name to identify the stream. This is unique to the
-AWS account and region the Stream is created in.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>redshift_<wbr>configuration</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfiguration">Dict[Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration]</a></span>
-    </dt>
-    <dd>{{% md %}}Configuration options if redshift is the destination.
-Using `redshift_configuration` requires the user to also specify a
-`s3_configuration` block. More details are given below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>s3_<wbr>configuration</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreams3configuration">Dict[Firehose<wbr>Delivery<wbr>Stream<wbr>S3Configuration]</a></span>
-    </dt>
-    <dd>{{% md %}}Required for non-S3 destinations. For S3 destination, use `extended_s3_configuration` instead. Configuration options for the s3 destination (or the intermediate bucket if the destination
-is redshift). More details are given below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>server_<wbr>side_<wbr>encryption</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamserversideencryption">Dict[Firehose<wbr>Delivery<wbr>Stream<wbr>Server<wbr>Side<wbr>Encryption]</a></span>
-    </dt>
-    <dd>{{% md %}}Encrypt at rest options.
-Server-side encryption should not be enabled when a kinesis stream is configured as the source of the firehose delivery stream.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>splunk_<wbr>configuration</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamsplunkconfiguration">Dict[Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>version_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Specifies the table version for the output data schema. Defaults to `LATEST`.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
 
 
 
@@ -1500,7 +982,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) specifying the Stream
 {{% /md %}}</dd>
@@ -1509,7 +991,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Destination</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This is the destination to where the data is delivered. The only options are `s3` (Deprecated, use `extended_s3` instead), `extended_s3`, `redshift`, `elasticsearch`, and `splunk`.
 {{% /md %}}</dd>
@@ -1518,7 +1000,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Destination<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1526,7 +1008,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Elasticsearch<wbr>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration<wbr>Args?</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration options if elasticsearch is the destination. More details are given below.
 {{% /md %}}</dd>
@@ -1535,7 +1017,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Extended<wbr>S3Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configuration">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Args?</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configuration">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Enhanced configuration options for the s3 destination. More details are given below.
 {{% /md %}}</dd>
@@ -1544,7 +1026,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Kinesis<wbr>Source<wbr>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamkinesissourceconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Kinesis<wbr>Source<wbr>Configuration<wbr>Args?</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamkinesissourceconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Kinesis<wbr>Source<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Allows the ability to specify the kinesis stream that is used as the source of the firehose delivery stream.
 {{% /md %}}</dd>
@@ -1553,7 +1035,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A name to identify the stream. This is unique to the
 AWS account and region the Stream is created in.
@@ -1563,7 +1045,7 @@ AWS account and region the Stream is created in.
             title="Optional">
         <span>Redshift<wbr>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>Args?</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration options if redshift is the destination.
 Using `redshift_configuration` requires the user to also specify a
@@ -1574,7 +1056,7 @@ Using `redshift_configuration` requires the user to also specify a
             title="Optional">
         <span>S3Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreams3configuration">Firehose<wbr>Delivery<wbr>Stream<wbr>S3Configuration<wbr>Args?</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreams3configuration">Firehose<wbr>Delivery<wbr>Stream<wbr>S3Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Required for non-S3 destinations. For S3 destination, use `extended_s3_configuration` instead. Configuration options for the s3 destination (or the intermediate bucket if the destination
 is redshift). More details are given below.
@@ -1584,7 +1066,7 @@ is redshift). More details are given below.
             title="Optional">
         <span>Server<wbr>Side<wbr>Encryption</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamserversideencryption">Firehose<wbr>Delivery<wbr>Stream<wbr>Server<wbr>Side<wbr>Encryption<wbr>Args?</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamserversideencryption">Firehose<wbr>Delivery<wbr>Stream<wbr>Server<wbr>Side<wbr>Encryption<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Encrypt at rest options.
 Server-side encryption should not be enabled when a kinesis stream is configured as the source of the firehose delivery stream.
@@ -1594,7 +1076,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
             title="Optional">
         <span>Splunk<wbr>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamsplunkconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration<wbr>Args?</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamsplunkconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1602,7 +1084,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1611,7 +1093,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
             title="Optional">
         <span>Version<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the table version for the output data schema. Defaults to `LATEST`.
 {{% /md %}}</dd>
@@ -1627,7 +1109,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) specifying the Stream
 {{% /md %}}</dd>
@@ -1636,7 +1118,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
             title="Optional">
         <span>Destination</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This is the destination to where the data is delivered. The only options are `s3` (Deprecated, use `extended_s3` instead), `extended_s3`, `redshift`, `elasticsearch`, and `splunk`.
 {{% /md %}}</dd>
@@ -1645,7 +1127,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
             title="Optional">
         <span>Destination<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1653,7 +1135,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
             title="Optional">
         <span>Elasticsearch<wbr>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfiguration">*Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Configuration options if elasticsearch is the destination. More details are given below.
 {{% /md %}}</dd>
@@ -1662,7 +1144,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
             title="Optional">
         <span>Extended<wbr>S3Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configuration">*Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configuration">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration</a></span>
     </dt>
     <dd>{{% md %}}Enhanced configuration options for the s3 destination. More details are given below.
 {{% /md %}}</dd>
@@ -1671,7 +1153,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
             title="Optional">
         <span>Kinesis<wbr>Source<wbr>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamkinesissourceconfiguration">*Firehose<wbr>Delivery<wbr>Stream<wbr>Kinesis<wbr>Source<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamkinesissourceconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Kinesis<wbr>Source<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Allows the ability to specify the kinesis stream that is used as the source of the firehose delivery stream.
 {{% /md %}}</dd>
@@ -1680,7 +1162,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A name to identify the stream. This is unique to the
 AWS account and region the Stream is created in.
@@ -1690,7 +1172,7 @@ AWS account and region the Stream is created in.
             title="Optional">
         <span>Redshift<wbr>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfiguration">*Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Configuration options if redshift is the destination.
 Using `redshift_configuration` requires the user to also specify a
@@ -1701,7 +1183,7 @@ Using `redshift_configuration` requires the user to also specify a
             title="Optional">
         <span>S3Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreams3configuration">*Firehose<wbr>Delivery<wbr>Stream<wbr>S3Configuration</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreams3configuration">Firehose<wbr>Delivery<wbr>Stream<wbr>S3Configuration</a></span>
     </dt>
     <dd>{{% md %}}Required for non-S3 destinations. For S3 destination, use `extended_s3_configuration` instead. Configuration options for the s3 destination (or the intermediate bucket if the destination
 is redshift). More details are given below.
@@ -1711,7 +1193,7 @@ is redshift). More details are given below.
             title="Optional">
         <span>Server<wbr>Side<wbr>Encryption</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamserversideencryption">*Firehose<wbr>Delivery<wbr>Stream<wbr>Server<wbr>Side<wbr>Encryption</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamserversideencryption">Firehose<wbr>Delivery<wbr>Stream<wbr>Server<wbr>Side<wbr>Encryption</a></span>
     </dt>
     <dd>{{% md %}}Encrypt at rest options.
 Server-side encryption should not be enabled when a kinesis stream is configured as the source of the firehose delivery stream.
@@ -1721,7 +1203,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
             title="Optional">
         <span>Splunk<wbr>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamsplunkconfiguration">*Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamsplunkconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1738,7 +1220,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
             title="Optional">
         <span>Version<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the table version for the output data schema. Defaults to `LATEST`.
 {{% /md %}}</dd>
@@ -1754,7 +1236,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
             title="Optional">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) specifying the Stream
 {{% /md %}}</dd>
@@ -1763,7 +1245,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
             title="Optional">
         <span>destination</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This is the destination to where the data is delivered. The only options are `s3` (Deprecated, use `extended_s3` instead), `extended_s3`, `redshift`, `elasticsearch`, and `splunk`.
 {{% /md %}}</dd>
@@ -1772,7 +1254,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
             title="Optional">
         <span>destination<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1780,7 +1262,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
             title="Optional">
         <span>elasticsearch<wbr>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration?</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Configuration options if elasticsearch is the destination. More details are given below.
 {{% /md %}}</dd>
@@ -1789,7 +1271,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
             title="Optional">
         <span>extended<wbr>S3Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configuration">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration?</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configuration">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration</a></span>
     </dt>
     <dd>{{% md %}}Enhanced configuration options for the s3 destination. More details are given below.
 {{% /md %}}</dd>
@@ -1798,7 +1280,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
             title="Optional">
         <span>kinesis<wbr>Source<wbr>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamkinesissourceconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Kinesis<wbr>Source<wbr>Configuration?</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamkinesissourceconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Kinesis<wbr>Source<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Allows the ability to specify the kinesis stream that is used as the source of the firehose delivery stream.
 {{% /md %}}</dd>
@@ -1807,7 +1289,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A name to identify the stream. This is unique to the
 AWS account and region the Stream is created in.
@@ -1817,7 +1299,7 @@ AWS account and region the Stream is created in.
             title="Optional">
         <span>redshift<wbr>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration?</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Configuration options if redshift is the destination.
 Using `redshift_configuration` requires the user to also specify a
@@ -1828,7 +1310,7 @@ Using `redshift_configuration` requires the user to also specify a
             title="Optional">
         <span>s3Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreams3configuration">Firehose<wbr>Delivery<wbr>Stream<wbr>S3Configuration?</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreams3configuration">Firehose<wbr>Delivery<wbr>Stream<wbr>S3Configuration</a></span>
     </dt>
     <dd>{{% md %}}Required for non-S3 destinations. For S3 destination, use `extended_s3_configuration` instead. Configuration options for the s3 destination (or the intermediate bucket if the destination
 is redshift). More details are given below.
@@ -1838,7 +1320,7 @@ is redshift). More details are given below.
             title="Optional">
         <span>server<wbr>Side<wbr>Encryption</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamserversideencryption">Firehose<wbr>Delivery<wbr>Stream<wbr>Server<wbr>Side<wbr>Encryption?</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamserversideencryption">Firehose<wbr>Delivery<wbr>Stream<wbr>Server<wbr>Side<wbr>Encryption</a></span>
     </dt>
     <dd>{{% md %}}Encrypt at rest options.
 Server-side encryption should not be enabled when a kinesis stream is configured as the source of the firehose delivery stream.
@@ -1848,7 +1330,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
             title="Optional">
         <span>splunk<wbr>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamsplunkconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration?</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamsplunkconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1856,7 +1338,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1865,7 +1347,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
             title="Optional">
         <span>version<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the table version for the output data schema. Defaults to `LATEST`.
 {{% /md %}}</dd>
@@ -2026,33 +1508,6 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Buffering<wbr>Interval</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}Buffer incoming data for the specified period of time, in seconds between 60 to 900, before delivering it to the destination.  The default value is 300s.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Buffering<wbr>Size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}Buffer incoming data to the specified size, in MBs between 1 to 100, before delivering it to the destination.  The default value is 5MB.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Cloudwatch<wbr>Logging<wbr>Options</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfigurationcloudwatchloggingoptions">Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options<wbr>Args?</a></span>
-    </dt>
-    <dd>{{% md %}}The CloudWatch Logging Options for the delivery stream. More details are given below
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Domain<wbr>Arn</span>
@@ -2071,33 +1526,6 @@ Server-side encryption should not be enabled when a kinesis stream is configured
     <dd>{{% md %}}The Elasticsearch index name.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Index<wbr>Rotation<wbr>Period</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The Elasticsearch index rotation period.  Index rotation appends a timestamp to the IndexName to facilitate expiration of old data.  Valid values are `NoRotation`, `OneHour`, `OneDay`, `OneWeek`, and `OneMonth`.  The default value is `OneDay`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Processing<wbr>Configuration</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfigurationprocessingconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Args?</a></span>
-    </dt>
-    <dd>{{% md %}}The data processing configuration.  More details are given below.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Retry<wbr>Duration</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}After an initial failure to deliver to Amazon Elasticsearch, the total amount of time, in seconds between 0 to 7200, during which Firehose re-attempts delivery (including the first attempt).  After this time has elapsed, the failed documents are written to Amazon S3.  The default value is 300s.  There will be no retry if the value is 0.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Role<wbr>Arn</span>
@@ -2109,9 +1537,63 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-optional"
             title="Optional">
+        <span>Buffering<wbr>Interval</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Buffer incoming data for the specified period of time, in seconds between 60 to 900, before delivering it to the destination.  The default value is 300s.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Buffering<wbr>Size</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Buffer incoming data to the specified size, in MBs between 1 to 100, before delivering it to the destination.  The default value is 5MB.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Cloudwatch<wbr>Logging<wbr>Options</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfigurationcloudwatchloggingoptions">Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The CloudWatch Logging Options for the delivery stream. More details are given below
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Index<wbr>Rotation<wbr>Period</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Elasticsearch index rotation period.  Index rotation appends a timestamp to the IndexName to facilitate expiration of old data.  Valid values are `NoRotation`, `OneHour`, `OneDay`, `OneWeek`, and `OneMonth`.  The default value is `OneDay`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Processing<wbr>Configuration</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfigurationprocessingconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The data processing configuration.  More details are given below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Retry<wbr>Duration</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}After an initial failure to deliver to Amazon Elasticsearch, the total amount of time, in seconds between 0 to 7200, during which Firehose re-attempts delivery (including the first attempt).  After this time has elapsed, the failed documents are written to Amazon S3.  The default value is 300s.  There will be no retry if the value is 0.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>S3Backup<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Defines how documents should be delivered to Amazon S3.  Valid values are `FailedDocumentsOnly` and `AllDocuments`.  Default value is `FailedDocumentsOnly`.
 {{% /md %}}</dd>
@@ -2120,7 +1602,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
             title="Optional">
         <span>Type<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Elasticsearch type name with maximum length of 100 characters.
 {{% /md %}}</dd>
@@ -2132,33 +1614,6 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Buffering<wbr>Interval</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}Buffer incoming data for the specified period of time, in seconds between 60 to 900, before delivering it to the destination.  The default value is 300s.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Buffering<wbr>Size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}Buffer incoming data to the specified size, in MBs between 1 to 100, before delivering it to the destination.  The default value is 5MB.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Cloudwatch<wbr>Logging<wbr>Options</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfigurationcloudwatchloggingoptions">*Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options</a></span>
-    </dt>
-    <dd>{{% md %}}The CloudWatch Logging Options for the delivery stream. More details are given below
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Domain<wbr>Arn</span>
@@ -2177,33 +1632,6 @@ Server-side encryption should not be enabled when a kinesis stream is configured
     <dd>{{% md %}}The Elasticsearch index name.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Index<wbr>Rotation<wbr>Period</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The Elasticsearch index rotation period.  Index rotation appends a timestamp to the IndexName to facilitate expiration of old data.  Valid values are `NoRotation`, `OneHour`, `OneDay`, `OneWeek`, and `OneMonth`.  The default value is `OneDay`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Processing<wbr>Configuration</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfigurationprocessingconfiguration">*Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration<wbr>Processing<wbr>Configuration</a></span>
-    </dt>
-    <dd>{{% md %}}The data processing configuration.  More details are given below.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Retry<wbr>Duration</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}After an initial failure to deliver to Amazon Elasticsearch, the total amount of time, in seconds between 0 to 7200, during which Firehose re-attempts delivery (including the first attempt).  After this time has elapsed, the failed documents are written to Amazon S3.  The default value is 300s.  There will be no retry if the value is 0.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Role<wbr>Arn</span>
@@ -2215,9 +1643,63 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-optional"
             title="Optional">
+        <span>Buffering<wbr>Interval</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Buffer incoming data for the specified period of time, in seconds between 60 to 900, before delivering it to the destination.  The default value is 300s.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Buffering<wbr>Size</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Buffer incoming data to the specified size, in MBs between 1 to 100, before delivering it to the destination.  The default value is 5MB.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Cloudwatch<wbr>Logging<wbr>Options</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfigurationcloudwatchloggingoptions">Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options</a></span>
+    </dt>
+    <dd>{{% md %}}The CloudWatch Logging Options for the delivery stream. More details are given below
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Index<wbr>Rotation<wbr>Period</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Elasticsearch index rotation period.  Index rotation appends a timestamp to the IndexName to facilitate expiration of old data.  Valid values are `NoRotation`, `OneHour`, `OneDay`, `OneWeek`, and `OneMonth`.  The default value is `OneDay`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Processing<wbr>Configuration</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfigurationprocessingconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration<wbr>Processing<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}The data processing configuration.  More details are given below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Retry<wbr>Duration</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}After an initial failure to deliver to Amazon Elasticsearch, the total amount of time, in seconds between 0 to 7200, during which Firehose re-attempts delivery (including the first attempt).  After this time has elapsed, the failed documents are written to Amazon S3.  The default value is 300s.  There will be no retry if the value is 0.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>S3Backup<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Defines how documents should be delivered to Amazon S3.  Valid values are `FailedDocumentsOnly` and `AllDocuments`.  Default value is `FailedDocumentsOnly`.
 {{% /md %}}</dd>
@@ -2226,7 +1708,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
             title="Optional">
         <span>Type<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Elasticsearch type name with maximum length of 100 characters.
 {{% /md %}}</dd>
@@ -2237,33 +1719,6 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>buffering<wbr>Interval</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}Buffer incoming data for the specified period of time, in seconds between 60 to 900, before delivering it to the destination.  The default value is 300s.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>buffering<wbr>Size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}Buffer incoming data to the specified size, in MBs between 1 to 100, before delivering it to the destination.  The default value is 5MB.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>cloudwatch<wbr>Logging<wbr>Options</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfigurationcloudwatchloggingoptions">Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options?</a></span>
-    </dt>
-    <dd>{{% md %}}The CloudWatch Logging Options for the delivery stream. More details are given below
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -2283,33 +1738,6 @@ Server-side encryption should not be enabled when a kinesis stream is configured
     <dd>{{% md %}}The Elasticsearch index name.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>index<wbr>Rotation<wbr>Period</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The Elasticsearch index rotation period.  Index rotation appends a timestamp to the IndexName to facilitate expiration of old data.  Valid values are `NoRotation`, `OneHour`, `OneDay`, `OneWeek`, and `OneMonth`.  The default value is `OneDay`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>processing<wbr>Configuration</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfigurationprocessingconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration<wbr>Processing<wbr>Configuration?</a></span>
-    </dt>
-    <dd>{{% md %}}The data processing configuration.  More details are given below.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>retry<wbr>Duration</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}After an initial failure to deliver to Amazon Elasticsearch, the total amount of time, in seconds between 0 to 7200, during which Firehose re-attempts delivery (including the first attempt).  After this time has elapsed, the failed documents are written to Amazon S3.  The default value is 300s.  There will be no retry if the value is 0.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>role<wbr>Arn</span>
@@ -2321,9 +1749,63 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-optional"
             title="Optional">
+        <span>buffering<wbr>Interval</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Buffer incoming data for the specified period of time, in seconds between 60 to 900, before delivering it to the destination.  The default value is 300s.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>buffering<wbr>Size</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Buffer incoming data to the specified size, in MBs between 1 to 100, before delivering it to the destination.  The default value is 5MB.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>cloudwatch<wbr>Logging<wbr>Options</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfigurationcloudwatchloggingoptions">Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options</a></span>
+    </dt>
+    <dd>{{% md %}}The CloudWatch Logging Options for the delivery stream. More details are given below
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>index<wbr>Rotation<wbr>Period</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Elasticsearch index rotation period.  Index rotation appends a timestamp to the IndexName to facilitate expiration of old data.  Valid values are `NoRotation`, `OneHour`, `OneDay`, `OneWeek`, and `OneMonth`.  The default value is `OneDay`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>processing<wbr>Configuration</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfigurationprocessingconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration<wbr>Processing<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}The data processing configuration.  More details are given below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>retry<wbr>Duration</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}After an initial failure to deliver to Amazon Elasticsearch, the total amount of time, in seconds between 0 to 7200, during which Firehose re-attempts delivery (including the first attempt).  After this time has elapsed, the failed documents are written to Amazon S3.  The default value is 300s.  There will be no retry if the value is 0.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>s3Backup<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Defines how documents should be delivered to Amazon S3.  Valid values are `FailedDocumentsOnly` and `AllDocuments`.  Default value is `FailedDocumentsOnly`.
 {{% /md %}}</dd>
@@ -2332,7 +1814,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
             title="Optional">
         <span>type<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Elasticsearch type name with maximum length of 100 characters.
 {{% /md %}}</dd>
@@ -2343,6 +1825,33 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>domain<wbr>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the Amazon ES domain.  The IAM role must have permission for `DescribeElasticsearchDomain`, `DescribeElasticsearchDomains`, and `DescribeElasticsearchDomainConfig` after assuming `RoleARN`.  The pattern needs to be `arn:.*`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>index<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Elasticsearch index name.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>role_<wbr>arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ARN of the IAM role to be assumed by Firehose for calling the Amazon ES Configuration API and for indexing documents.  The pattern needs to be `arn:.*`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2371,24 +1880,6 @@ Server-side encryption should not be enabled when a kinesis stream is configured
     <dd>{{% md %}}The CloudWatch Logging Options for the delivery stream. More details are given below
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>domain<wbr>Arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The ARN of the Amazon ES domain.  The IAM role must have permission for `DescribeElasticsearchDomain`, `DescribeElasticsearchDomains`, and `DescribeElasticsearchDomainConfig` after assuming `RoleARN`.  The pattern needs to be `arn:.*`.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>index<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The Elasticsearch index name.
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>index<wbr>Rotation<wbr>Period</span>
@@ -2414,15 +1905,6 @@ Server-side encryption should not be enabled when a kinesis stream is configured
         <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}After an initial failure to deliver to Amazon Elasticsearch, the total amount of time, in seconds between 0 to 7200, during which Firehose re-attempts delivery (including the first attempt).  After this time has elapsed, the failed documents are written to Amazon S3.  The default value is 300s.  There will be no retry if the value is 0.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>role_<wbr>arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The ARN of the IAM role to be assumed by Firehose for calling the Amazon ES Configuration API and for indexing documents.  The pattern needs to be `arn:.*`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2469,7 +1951,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
             title="Optional">
         <span>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables or disables the logging. Defaults to `false`.
 {{% /md %}}</dd>
@@ -2478,7 +1960,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
             title="Optional">
         <span>Log<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CloudWatch group name for logging. This value is required if `enabled` is true.
 {{% /md %}}</dd>
@@ -2487,7 +1969,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
             title="Optional">
         <span>Log<wbr>Stream<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CloudWatch log stream name for logging. This value is required if `enabled` is true.
 {{% /md %}}</dd>
@@ -2503,7 +1985,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
             title="Optional">
         <span>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables or disables the logging. Defaults to `false`.
 {{% /md %}}</dd>
@@ -2512,7 +1994,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
             title="Optional">
         <span>Log<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CloudWatch group name for logging. This value is required if `enabled` is true.
 {{% /md %}}</dd>
@@ -2521,7 +2003,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
             title="Optional">
         <span>Log<wbr>Stream<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CloudWatch log stream name for logging. This value is required if `enabled` is true.
 {{% /md %}}</dd>
@@ -2537,7 +2019,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
             title="Optional">
         <span>enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enables or disables the logging. Defaults to `false`.
 {{% /md %}}</dd>
@@ -2546,7 +2028,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
             title="Optional">
         <span>log<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CloudWatch group name for logging. This value is required if `enabled` is true.
 {{% /md %}}</dd>
@@ -2555,7 +2037,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
             title="Optional">
         <span>log<wbr>Stream<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CloudWatch log stream name for logging. This value is required if `enabled` is true.
 {{% /md %}}</dd>
@@ -2620,7 +2102,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
             title="Optional">
         <span>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables or disables data processing.
 {{% /md %}}</dd>
@@ -2629,7 +2111,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
             title="Optional">
         <span>Processors</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfigurationprocessingconfigurationprocessor">List&lt;Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfigurationprocessingconfigurationprocessor">List&lt;Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Array of data processors. More details are given below
 {{% /md %}}</dd>
@@ -2645,7 +2127,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
             title="Optional">
         <span>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables or disables data processing.
 {{% /md %}}</dd>
@@ -2670,7 +2152,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
             title="Optional">
         <span>enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enables or disables data processing.
 {{% /md %}}</dd>
@@ -2679,7 +2161,7 @@ Server-side encryption should not be enabled when a kinesis stream is configured
             title="Optional">
         <span>processors</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfigurationprocessingconfigurationprocessor">Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor[]?</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfigurationprocessingconfigurationprocessor">Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor[]</a></span>
     </dt>
     <dd>{{% md %}}Array of data processors. More details are given below
 {{% /md %}}</dd>
@@ -2731,15 +2213,6 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Parameters</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfigurationprocessingconfigurationprocessorparameter">List&lt;Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Parameter<wbr>Args&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}Array of processor parameters. More details are given below
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Type</span>
@@ -2749,12 +2222,30 @@ Server-side encryption should not be enabled when a kinesis stream is configured
     <dd>{{% md %}}The type of processor. Valid Values: `Lambda`
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>Parameters</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfigurationprocessingconfigurationprocessorparameter">List&lt;Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Parameter<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Array of processor parameters. More details are given below
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of processor. Valid Values: `Lambda`
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2765,30 +2256,12 @@ Server-side encryption should not be enabled when a kinesis stream is configured
     <dd>{{% md %}}Array of processor parameters. More details are given below
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The type of processor. Valid Values: `Lambda`
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>parameters</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfigurationprocessingconfigurationprocessorparameter">Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Parameter[]?</a></span>
-    </dt>
-    <dd>{{% md %}}Array of processor parameters. More details are given below
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -2797,6 +2270,15 @@ Server-side encryption should not be enabled when a kinesis stream is configured
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of processor. Valid Values: `Lambda`
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>parameters</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfigurationprocessingconfigurationprocessorparameter">Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Parameter[]</a></span>
+    </dt>
+    <dd>{{% md %}}Array of processor parameters. More details are given below
 {{% /md %}}</dd>
 
 </dl>
@@ -2806,15 +2288,6 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>parameters</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfigurationprocessingconfigurationprocessorparameter">List[Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Parameter]</a></span>
-    </dt>
-    <dd>{{% md %}}Array of processor parameters. More details are given below
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>type</span>
@@ -2822,6 +2295,15 @@ Server-side encryption should not be enabled when a kinesis stream is configured
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of processor. Valid Values: `Lambda`
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>parameters</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firehosedeliverystreamelasticsearchconfigurationprocessingconfigurationprocessorparameter">List[Firehose<wbr>Delivery<wbr>Stream<wbr>Elasticsearch<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Parameter]</a></span>
+    </dt>
+    <dd>{{% md %}}Array of processor parameters. More details are given below
 {{% /md %}}</dd>
 
 </dl>
@@ -2970,89 +2452,6 @@ Server-side encryption should not be enabled when a kinesis stream is configured
     <dd>{{% md %}}The ARN of the S3 bucket
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Buffer<wbr>Interval</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}Buffer incoming data for the specified period of time, in seconds, before delivering it to the destination. The default value is 300.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Buffer<wbr>Size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}Buffer incoming data to the specified size, in MBs, before delivering it to the destination. The default value is 5.
-We recommend setting SizeInMBs to a value greater than the amount of data you typically ingest into the delivery stream in 10 seconds. For example, if you typically ingest data at 1 MB/sec set SizeInMBs to be 10 MB or higher.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Cloudwatch<wbr>Logging<wbr>Options</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationcloudwatchloggingoptions">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options<wbr>Args?</a></span>
-    </dt>
-    <dd>{{% md %}}The CloudWatch Logging Options for the delivery stream. More details are given below
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Compression<wbr>Format</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The compression format. If no value is specified, the default is UNCOMPRESSED. Other supported values are GZIP, ZIP & Snappy. If the destination is redshift you cannot use ZIP or Snappy.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Data<wbr>Format<wbr>Conversion<wbr>Configuration</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Args?</a></span>
-    </dt>
-    <dd>{{% md %}}Nested argument for the serializer, deserializer, and schema for converting data from the JSON format to the Parquet or ORC format before writing it to Amazon S3. More details given below.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Error<wbr>Output<wbr>Prefix</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Prefix added to failed records before writing them to S3. This prefix appears immediately following the bucket name.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Kms<wbr>Key<wbr>Arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Specifies the KMS key ARN the stream will use to encrypt data. If not set, no encryption will
-be used.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Prefix</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The "YYYY/MM/DD/HH" time format prefix is automatically used for delivered S3 files. You can specify an extra prefix to be added in front of the time format prefix. Note that if the prefix ends with a slash, it appears as a folder in the S3 bucket
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Processing<wbr>Configuration</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationprocessingconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Processing<wbr>Configuration<wbr>Args?</a></span>
-    </dt>
-    <dd>{{% md %}}The data processing configuration.  More details are given below.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Role<wbr>Arn</span>
@@ -3064,9 +2463,92 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
+        <span>Buffer<wbr>Interval</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Buffer incoming data for the specified period of time, in seconds, before delivering it to the destination. The default value is 300.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Buffer<wbr>Size</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Buffer incoming data to the specified size, in MBs, before delivering it to the destination. The default value is 5.
+We recommend setting SizeInMBs to a value greater than the amount of data you typically ingest into the delivery stream in 10 seconds. For example, if you typically ingest data at 1 MB/sec set SizeInMBs to be 10 MB or higher.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Cloudwatch<wbr>Logging<wbr>Options</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationcloudwatchloggingoptions">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The CloudWatch Logging Options for the delivery stream. More details are given below
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Compression<wbr>Format</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The compression format. If no value is specified, the default is UNCOMPRESSED. Other supported values are GZIP, ZIP & Snappy. If the destination is redshift you cannot use ZIP or Snappy.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Data<wbr>Format<wbr>Conversion<wbr>Configuration</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Nested argument for the serializer, deserializer, and schema for converting data from the JSON format to the Parquet or ORC format before writing it to Amazon S3. More details given below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Error<wbr>Output<wbr>Prefix</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Prefix added to failed records before writing them to S3. This prefix appears immediately following the bucket name.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Kms<wbr>Key<wbr>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the KMS key ARN the stream will use to encrypt data. If not set, no encryption will
+be used.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Prefix</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The "YYYY/MM/DD/HH" time format prefix is automatically used for delivered S3 files. You can specify an extra prefix to be added in front of the time format prefix. Note that if the prefix ends with a slash, it appears as a folder in the S3 bucket
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Processing<wbr>Configuration</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationprocessingconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Processing<wbr>Configuration<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The data processing configuration.  More details are given below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>S3Backup<wbr>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurations3backupconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>S3Backup<wbr>Configuration<wbr>Args?</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurations3backupconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>S3Backup<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration for backup in Amazon S3. Required if `s3_backup_mode` is `Enabled`. Supports the same fields as `s3_configuration` object.
 {{% /md %}}</dd>
@@ -3075,7 +2557,7 @@ be used.
             title="Optional">
         <span>S3Backup<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon S3 backup mode.  Valid values are `Disabled` and `Enabled`.  Default value is `Disabled`.
 {{% /md %}}</dd>
@@ -3096,89 +2578,6 @@ be used.
     <dd>{{% md %}}The ARN of the S3 bucket
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Buffer<wbr>Interval</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}Buffer incoming data for the specified period of time, in seconds, before delivering it to the destination. The default value is 300.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Buffer<wbr>Size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}Buffer incoming data to the specified size, in MBs, before delivering it to the destination. The default value is 5.
-We recommend setting SizeInMBs to a value greater than the amount of data you typically ingest into the delivery stream in 10 seconds. For example, if you typically ingest data at 1 MB/sec set SizeInMBs to be 10 MB or higher.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Cloudwatch<wbr>Logging<wbr>Options</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationcloudwatchloggingoptions">*Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options</a></span>
-    </dt>
-    <dd>{{% md %}}The CloudWatch Logging Options for the delivery stream. More details are given below
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Compression<wbr>Format</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The compression format. If no value is specified, the default is UNCOMPRESSED. Other supported values are GZIP, ZIP & Snappy. If the destination is redshift you cannot use ZIP or Snappy.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Data<wbr>Format<wbr>Conversion<wbr>Configuration</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfiguration">*Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration</a></span>
-    </dt>
-    <dd>{{% md %}}Nested argument for the serializer, deserializer, and schema for converting data from the JSON format to the Parquet or ORC format before writing it to Amazon S3. More details given below.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Error<wbr>Output<wbr>Prefix</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Prefix added to failed records before writing them to S3. This prefix appears immediately following the bucket name.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Kms<wbr>Key<wbr>Arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the KMS key ARN the stream will use to encrypt data. If not set, no encryption will
-be used.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Prefix</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The "YYYY/MM/DD/HH" time format prefix is automatically used for delivered S3 files. You can specify an extra prefix to be added in front of the time format prefix. Note that if the prefix ends with a slash, it appears as a folder in the S3 bucket
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Processing<wbr>Configuration</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationprocessingconfiguration">*Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Processing<wbr>Configuration</a></span>
-    </dt>
-    <dd>{{% md %}}The data processing configuration.  More details are given below.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Role<wbr>Arn</span>
@@ -3190,9 +2589,92 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
+        <span>Buffer<wbr>Interval</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Buffer incoming data for the specified period of time, in seconds, before delivering it to the destination. The default value is 300.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Buffer<wbr>Size</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Buffer incoming data to the specified size, in MBs, before delivering it to the destination. The default value is 5.
+We recommend setting SizeInMBs to a value greater than the amount of data you typically ingest into the delivery stream in 10 seconds. For example, if you typically ingest data at 1 MB/sec set SizeInMBs to be 10 MB or higher.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Cloudwatch<wbr>Logging<wbr>Options</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationcloudwatchloggingoptions">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options</a></span>
+    </dt>
+    <dd>{{% md %}}The CloudWatch Logging Options for the delivery stream. More details are given below
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Compression<wbr>Format</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The compression format. If no value is specified, the default is UNCOMPRESSED. Other supported values are GZIP, ZIP & Snappy. If the destination is redshift you cannot use ZIP or Snappy.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Data<wbr>Format<wbr>Conversion<wbr>Configuration</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}Nested argument for the serializer, deserializer, and schema for converting data from the JSON format to the Parquet or ORC format before writing it to Amazon S3. More details given below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Error<wbr>Output<wbr>Prefix</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Prefix added to failed records before writing them to S3. This prefix appears immediately following the bucket name.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Kms<wbr>Key<wbr>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the KMS key ARN the stream will use to encrypt data. If not set, no encryption will
+be used.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Prefix</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The "YYYY/MM/DD/HH" time format prefix is automatically used for delivered S3 files. You can specify an extra prefix to be added in front of the time format prefix. Note that if the prefix ends with a slash, it appears as a folder in the S3 bucket
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Processing<wbr>Configuration</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationprocessingconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Processing<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}The data processing configuration.  More details are given below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>S3Backup<wbr>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurations3backupconfiguration">*Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>S3Backup<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurations3backupconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>S3Backup<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The configuration for backup in Amazon S3. Required if `s3_backup_mode` is `Enabled`. Supports the same fields as `s3_configuration` object.
 {{% /md %}}</dd>
@@ -3201,7 +2683,7 @@ be used.
             title="Optional">
         <span>S3Backup<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon S3 backup mode.  Valid values are `Disabled` and `Enabled`.  Default value is `Disabled`.
 {{% /md %}}</dd>
@@ -3222,89 +2704,6 @@ be used.
     <dd>{{% md %}}The ARN of the S3 bucket
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>buffer<wbr>Interval</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}Buffer incoming data for the specified period of time, in seconds, before delivering it to the destination. The default value is 300.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>buffer<wbr>Size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}Buffer incoming data to the specified size, in MBs, before delivering it to the destination. The default value is 5.
-We recommend setting SizeInMBs to a value greater than the amount of data you typically ingest into the delivery stream in 10 seconds. For example, if you typically ingest data at 1 MB/sec set SizeInMBs to be 10 MB or higher.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>cloudwatch<wbr>Logging<wbr>Options</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationcloudwatchloggingoptions">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options?</a></span>
-    </dt>
-    <dd>{{% md %}}The CloudWatch Logging Options for the delivery stream. More details are given below
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>compression<wbr>Format</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The compression format. If no value is specified, the default is UNCOMPRESSED. Other supported values are GZIP, ZIP & Snappy. If the destination is redshift you cannot use ZIP or Snappy.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>data<wbr>Format<wbr>Conversion<wbr>Configuration</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration?</a></span>
-    </dt>
-    <dd>{{% md %}}Nested argument for the serializer, deserializer, and schema for converting data from the JSON format to the Parquet or ORC format before writing it to Amazon S3. More details given below.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>error<wbr>Output<wbr>Prefix</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Prefix added to failed records before writing them to S3. This prefix appears immediately following the bucket name.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>kms<wbr>Key<wbr>Arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Specifies the KMS key ARN the stream will use to encrypt data. If not set, no encryption will
-be used.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>prefix</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The "YYYY/MM/DD/HH" time format prefix is automatically used for delivered S3 files. You can specify an extra prefix to be added in front of the time format prefix. Note that if the prefix ends with a slash, it appears as a folder in the S3 bucket
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>processing<wbr>Configuration</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationprocessingconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Processing<wbr>Configuration?</a></span>
-    </dt>
-    <dd>{{% md %}}The data processing configuration.  More details are given below.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>role<wbr>Arn</span>
@@ -3316,9 +2715,92 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
+        <span>buffer<wbr>Interval</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Buffer incoming data for the specified period of time, in seconds, before delivering it to the destination. The default value is 300.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>buffer<wbr>Size</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Buffer incoming data to the specified size, in MBs, before delivering it to the destination. The default value is 5.
+We recommend setting SizeInMBs to a value greater than the amount of data you typically ingest into the delivery stream in 10 seconds. For example, if you typically ingest data at 1 MB/sec set SizeInMBs to be 10 MB or higher.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>cloudwatch<wbr>Logging<wbr>Options</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationcloudwatchloggingoptions">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options</a></span>
+    </dt>
+    <dd>{{% md %}}The CloudWatch Logging Options for the delivery stream. More details are given below
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>compression<wbr>Format</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The compression format. If no value is specified, the default is UNCOMPRESSED. Other supported values are GZIP, ZIP & Snappy. If the destination is redshift you cannot use ZIP or Snappy.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>data<wbr>Format<wbr>Conversion<wbr>Configuration</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}Nested argument for the serializer, deserializer, and schema for converting data from the JSON format to the Parquet or ORC format before writing it to Amazon S3. More details given below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>error<wbr>Output<wbr>Prefix</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Prefix added to failed records before writing them to S3. This prefix appears immediately following the bucket name.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>kms<wbr>Key<wbr>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the KMS key ARN the stream will use to encrypt data. If not set, no encryption will
+be used.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>prefix</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The "YYYY/MM/DD/HH" time format prefix is automatically used for delivered S3 files. You can specify an extra prefix to be added in front of the time format prefix. Note that if the prefix ends with a slash, it appears as a folder in the S3 bucket
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>processing<wbr>Configuration</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationprocessingconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Processing<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}The data processing configuration.  More details are given below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>s3Backup<wbr>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurations3backupconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>S3Backup<wbr>Configuration?</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurations3backupconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>S3Backup<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The configuration for backup in Amazon S3. Required if `s3_backup_mode` is `Enabled`. Supports the same fields as `s3_configuration` object.
 {{% /md %}}</dd>
@@ -3327,7 +2809,7 @@ be used.
             title="Optional">
         <span>s3Backup<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon S3 backup mode.  Valid values are `Disabled` and `Enabled`.  Default value is `Disabled`.
 {{% /md %}}</dd>
@@ -3346,6 +2828,15 @@ be used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the S3 bucket
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>role_<wbr>arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The role that Kinesis Data Firehose can use to access AWS Glue. This role must be in the same account you use for Kinesis Data Firehose. Cross-account roles aren't allowed.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3431,15 +2922,6 @@ be used.
     <dd>{{% md %}}The data processing configuration.  More details are given below.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>role_<wbr>arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The role that Kinesis Data Firehose can use to access AWS Glue. This role must be in the same account you use for Kinesis Data Firehose. Cross-account roles aren't allowed.
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>s3Backup<wbr>Configuration</span>
@@ -3484,7 +2966,7 @@ be used.
             title="Optional">
         <span>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables or disables the logging. Defaults to `false`.
 {{% /md %}}</dd>
@@ -3493,7 +2975,7 @@ be used.
             title="Optional">
         <span>Log<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CloudWatch group name for logging. This value is required if `enabled` is true.
 {{% /md %}}</dd>
@@ -3502,7 +2984,7 @@ be used.
             title="Optional">
         <span>Log<wbr>Stream<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CloudWatch log stream name for logging. This value is required if `enabled` is true.
 {{% /md %}}</dd>
@@ -3518,7 +3000,7 @@ be used.
             title="Optional">
         <span>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables or disables the logging. Defaults to `false`.
 {{% /md %}}</dd>
@@ -3527,7 +3009,7 @@ be used.
             title="Optional">
         <span>Log<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CloudWatch group name for logging. This value is required if `enabled` is true.
 {{% /md %}}</dd>
@@ -3536,7 +3018,7 @@ be used.
             title="Optional">
         <span>Log<wbr>Stream<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CloudWatch log stream name for logging. This value is required if `enabled` is true.
 {{% /md %}}</dd>
@@ -3552,7 +3034,7 @@ be used.
             title="Optional">
         <span>enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enables or disables the logging. Defaults to `false`.
 {{% /md %}}</dd>
@@ -3561,7 +3043,7 @@ be used.
             title="Optional">
         <span>log<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CloudWatch group name for logging. This value is required if `enabled` is true.
 {{% /md %}}</dd>
@@ -3570,7 +3052,7 @@ be used.
             title="Optional">
         <span>log<wbr>Stream<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CloudWatch log stream name for logging. This value is required if `enabled` is true.
 {{% /md %}}</dd>
@@ -3631,15 +3113,6 @@ be used.
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Defaults to `true`. Set it to `false` if you want to disable format conversion while preserving the configuration details.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Input<wbr>Format<wbr>Configuration</span>
@@ -3667,21 +3140,21 @@ be used.
     <dd>{{% md %}}Nested argument that specifies the AWS Glue Data Catalog table that contains the column information. More details below.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>Enabled</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Defaults to `true`. Set it to `false` if you want to disable format conversion while preserving the configuration details.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Defaults to `true`. Set it to `false` if you want to disable format conversion while preserving the configuration details.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -3710,21 +3183,21 @@ be used.
     <dd>{{% md %}}Nested argument that specifies the AWS Glue Data Catalog table that contains the column information. More details below.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>Enabled</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Defaults to `true`. Set it to `false` if you want to disable format conversion while preserving the configuration details.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Defaults to `true`. Set it to `false` if you want to disable format conversion while preserving the configuration details.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -3753,21 +3226,21 @@ be used.
     <dd>{{% md %}}Nested argument that specifies the AWS Glue Data Catalog table that contains the column information. More details below.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>enabled</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Defaults to `true`. Set it to `false` if you want to disable format conversion while preserving the configuration details.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Defaults to `true`. Set it to `false` if you want to disable format conversion while preserving the configuration details.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -3794,6 +3267,15 @@ be used.
         <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationschemaconfiguration">Dict[Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Schema<wbr>Configuration]</a></span>
     </dt>
     <dd>{{% md %}}Nested argument that specifies the AWS Glue Data Catalog table that contains the column information. More details below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>enabled</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Defaults to `true`. Set it to `false` if you want to disable format conversion while preserving the configuration details.
 {{% /md %}}</dd>
 
 </dl>
@@ -3901,7 +3383,7 @@ be used.
             title="Optional">
         <span>Hive<wbr>Json<wbr>Ser<wbr>De</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationinputformatconfigurationdeserializerhivejsonserde">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Input<wbr>Format<wbr>Configuration<wbr>Deserializer<wbr>Hive<wbr>Json<wbr>Ser<wbr>De<wbr>Args?</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationinputformatconfigurationdeserializerhivejsonserde">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Input<wbr>Format<wbr>Configuration<wbr>Deserializer<wbr>Hive<wbr>Json<wbr>Ser<wbr>De<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Nested argument that specifies the native Hive / HCatalog JsonSerDe. More details below.
 {{% /md %}}</dd>
@@ -3910,7 +3392,7 @@ be used.
             title="Optional">
         <span>Open<wbr>XJson<wbr>Ser<wbr>De</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationinputformatconfigurationdeserializeropenxjsonserde">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Input<wbr>Format<wbr>Configuration<wbr>Deserializer<wbr>Open<wbr>XJson<wbr>Ser<wbr>De<wbr>Args?</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationinputformatconfigurationdeserializeropenxjsonserde">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Input<wbr>Format<wbr>Configuration<wbr>Deserializer<wbr>Open<wbr>XJson<wbr>Ser<wbr>De<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Nested argument that specifies the OpenX SerDe. More details below.
 {{% /md %}}</dd>
@@ -3926,7 +3408,7 @@ be used.
             title="Optional">
         <span>Hive<wbr>Json<wbr>Ser<wbr>De</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationinputformatconfigurationdeserializerhivejsonserde">*Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Input<wbr>Format<wbr>Configuration<wbr>Deserializer<wbr>Hive<wbr>Json<wbr>Ser<wbr>De</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationinputformatconfigurationdeserializerhivejsonserde">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Input<wbr>Format<wbr>Configuration<wbr>Deserializer<wbr>Hive<wbr>Json<wbr>Ser<wbr>De</a></span>
     </dt>
     <dd>{{% md %}}Nested argument that specifies the native Hive / HCatalog JsonSerDe. More details below.
 {{% /md %}}</dd>
@@ -3935,7 +3417,7 @@ be used.
             title="Optional">
         <span>Open<wbr>XJson<wbr>Ser<wbr>De</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationinputformatconfigurationdeserializeropenxjsonserde">*Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Input<wbr>Format<wbr>Configuration<wbr>Deserializer<wbr>Open<wbr>XJson<wbr>Ser<wbr>De</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationinputformatconfigurationdeserializeropenxjsonserde">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Input<wbr>Format<wbr>Configuration<wbr>Deserializer<wbr>Open<wbr>XJson<wbr>Ser<wbr>De</a></span>
     </dt>
     <dd>{{% md %}}Nested argument that specifies the OpenX SerDe. More details below.
 {{% /md %}}</dd>
@@ -3951,7 +3433,7 @@ be used.
             title="Optional">
         <span>hive<wbr>Json<wbr>Ser<wbr>De</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationinputformatconfigurationdeserializerhivejsonserde">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Input<wbr>Format<wbr>Configuration<wbr>Deserializer<wbr>Hive<wbr>Json<wbr>Ser<wbr>De?</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationinputformatconfigurationdeserializerhivejsonserde">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Input<wbr>Format<wbr>Configuration<wbr>Deserializer<wbr>Hive<wbr>Json<wbr>Ser<wbr>De</a></span>
     </dt>
     <dd>{{% md %}}Nested argument that specifies the native Hive / HCatalog JsonSerDe. More details below.
 {{% /md %}}</dd>
@@ -3960,7 +3442,7 @@ be used.
             title="Optional">
         <span>open<wbr>XJson<wbr>Ser<wbr>De</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationinputformatconfigurationdeserializeropenxjsonserde">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Input<wbr>Format<wbr>Configuration<wbr>Deserializer<wbr>Open<wbr>XJson<wbr>Ser<wbr>De?</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationinputformatconfigurationdeserializeropenxjsonserde">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Input<wbr>Format<wbr>Configuration<wbr>Deserializer<wbr>Open<wbr>XJson<wbr>Ser<wbr>De</a></span>
     </dt>
     <dd>{{% md %}}Nested argument that specifies the OpenX SerDe. More details below.
 {{% /md %}}</dd>
@@ -4016,7 +3498,7 @@ be used.
             title="Optional">
         <span>Timestamp<wbr>Formats</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of how you want Kinesis Data Firehose to parse the date and time stamps that may be present in your input data JSON. To specify these format strings, follow the pattern syntax of JodaTime's DateTimeFormat format strings. For more information, see [Class DateTimeFormat](https://www.joda.org/joda-time/apidocs/org/joda/time/format/DateTimeFormat.html). You can also use the special value millis to parse time stamps in epoch milliseconds. If you don't specify a format, Kinesis Data Firehose uses java.sql.Timestamp::valueOf by default.
 {{% /md %}}</dd>
@@ -4048,7 +3530,7 @@ be used.
             title="Optional">
         <span>timestamp<wbr>Formats</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of how you want Kinesis Data Firehose to parse the date and time stamps that may be present in your input data JSON. To specify these format strings, follow the pattern syntax of JodaTime's DateTimeFormat format strings. For more information, see [Class DateTimeFormat](https://www.joda.org/joda-time/apidocs/org/joda/time/format/DateTimeFormat.html). You can also use the special value millis to parse time stamps in epoch milliseconds. If you don't specify a format, Kinesis Data Firehose uses java.sql.Timestamp::valueOf by default.
 {{% /md %}}</dd>
@@ -4095,7 +3577,7 @@ be used.
             title="Optional">
         <span>Case<wbr>Insensitive</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When set to true, which is the default, Kinesis Data Firehose converts JSON keys to lowercase before deserializing them.
 {{% /md %}}</dd>
@@ -4104,7 +3586,7 @@ be used.
             title="Optional">
         <span>Column<wbr>To<wbr>Json<wbr>Key<wbr>Mappings</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string>?</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A map of column names to JSON keys that aren't identical to the column names. This is useful when the JSON contains keys that are Hive keywords. For example, timestamp is a Hive keyword. If you have a JSON key named timestamp, set this parameter to `{ ts = "timestamp" }` to map this key to a column named ts.
 {{% /md %}}</dd>
@@ -4113,7 +3595,7 @@ be used.
             title="Optional">
         <span>Convert<wbr>Dots<wbr>In<wbr>Json<wbr>Keys<wbr>To<wbr>Underscores</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When set to `true`, specifies that the names of the keys include dots and that you want Kinesis Data Firehose to replace them with underscores. This is useful because Apache Hive does not allow dots in column names. For example, if the JSON contains a key whose name is "a.b", you can define the column name to be "a_b" when using this option. Defaults to `false`.
 {{% /md %}}</dd>
@@ -4129,7 +3611,7 @@ be used.
             title="Optional">
         <span>Case<wbr>Insensitive</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When set to true, which is the default, Kinesis Data Firehose converts JSON keys to lowercase before deserializing them.
 {{% /md %}}</dd>
@@ -4147,7 +3629,7 @@ be used.
             title="Optional">
         <span>Convert<wbr>Dots<wbr>In<wbr>Json<wbr>Keys<wbr>To<wbr>Underscores</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When set to `true`, specifies that the names of the keys include dots and that you want Kinesis Data Firehose to replace them with underscores. This is useful because Apache Hive does not allow dots in column names. For example, if the JSON contains a key whose name is "a.b", you can define the column name to be "a_b" when using this option. Defaults to `false`.
 {{% /md %}}</dd>
@@ -4163,7 +3645,7 @@ be used.
             title="Optional">
         <span>case<wbr>Insensitive</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When set to true, which is the default, Kinesis Data Firehose converts JSON keys to lowercase before deserializing them.
 {{% /md %}}</dd>
@@ -4172,7 +3654,7 @@ be used.
             title="Optional">
         <span>column<wbr>To<wbr>Json<wbr>Key<wbr>Mappings</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}?</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A map of column names to JSON keys that aren't identical to the column names. This is useful when the JSON contains keys that are Hive keywords. For example, timestamp is a Hive keyword. If you have a JSON key named timestamp, set this parameter to `{ ts = "timestamp" }` to map this key to a column named ts.
 {{% /md %}}</dd>
@@ -4181,7 +3663,7 @@ be used.
             title="Optional">
         <span>convert<wbr>Dots<wbr>In<wbr>Json<wbr>Keys<wbr>To<wbr>Underscores</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When set to `true`, specifies that the names of the keys include dots and that you want Kinesis Data Firehose to replace them with underscores. This is useful because Apache Hive does not allow dots in column names. For example, if the JSON contains a key whose name is "a.b", you can define the column name to be "a_b" when using this option. Defaults to `false`.
 {{% /md %}}</dd>
@@ -4325,7 +3807,7 @@ be used.
             title="Optional">
         <span>Orc<wbr>Ser<wbr>De</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationoutputformatconfigurationserializerorcserde">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Output<wbr>Format<wbr>Configuration<wbr>Serializer<wbr>Orc<wbr>Ser<wbr>De<wbr>Args?</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationoutputformatconfigurationserializerorcserde">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Output<wbr>Format<wbr>Configuration<wbr>Serializer<wbr>Orc<wbr>Ser<wbr>De<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Nested argument that specifies converting data to the ORC format before storing it in Amazon S3. For more information, see [Apache ORC](https://orc.apache.org/docs/). More details below.
 {{% /md %}}</dd>
@@ -4334,7 +3816,7 @@ be used.
             title="Optional">
         <span>Parquet<wbr>Ser<wbr>De</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationoutputformatconfigurationserializerparquetserde">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Output<wbr>Format<wbr>Configuration<wbr>Serializer<wbr>Parquet<wbr>Ser<wbr>De<wbr>Args?</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationoutputformatconfigurationserializerparquetserde">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Output<wbr>Format<wbr>Configuration<wbr>Serializer<wbr>Parquet<wbr>Ser<wbr>De<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Nested argument that specifies converting data to the Parquet format before storing it in Amazon S3. For more information, see [Apache Parquet](https://parquet.apache.org/documentation/latest/). More details below.
 {{% /md %}}</dd>
@@ -4350,7 +3832,7 @@ be used.
             title="Optional">
         <span>Orc<wbr>Ser<wbr>De</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationoutputformatconfigurationserializerorcserde">*Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Output<wbr>Format<wbr>Configuration<wbr>Serializer<wbr>Orc<wbr>Ser<wbr>De</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationoutputformatconfigurationserializerorcserde">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Output<wbr>Format<wbr>Configuration<wbr>Serializer<wbr>Orc<wbr>Ser<wbr>De</a></span>
     </dt>
     <dd>{{% md %}}Nested argument that specifies converting data to the ORC format before storing it in Amazon S3. For more information, see [Apache ORC](https://orc.apache.org/docs/). More details below.
 {{% /md %}}</dd>
@@ -4359,7 +3841,7 @@ be used.
             title="Optional">
         <span>Parquet<wbr>Ser<wbr>De</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationoutputformatconfigurationserializerparquetserde">*Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Output<wbr>Format<wbr>Configuration<wbr>Serializer<wbr>Parquet<wbr>Ser<wbr>De</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationoutputformatconfigurationserializerparquetserde">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Output<wbr>Format<wbr>Configuration<wbr>Serializer<wbr>Parquet<wbr>Ser<wbr>De</a></span>
     </dt>
     <dd>{{% md %}}Nested argument that specifies converting data to the Parquet format before storing it in Amazon S3. For more information, see [Apache Parquet](https://parquet.apache.org/documentation/latest/). More details below.
 {{% /md %}}</dd>
@@ -4375,7 +3857,7 @@ be used.
             title="Optional">
         <span>orc<wbr>Ser<wbr>De</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationoutputformatconfigurationserializerorcserde">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Output<wbr>Format<wbr>Configuration<wbr>Serializer<wbr>Orc<wbr>Ser<wbr>De?</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationoutputformatconfigurationserializerorcserde">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Output<wbr>Format<wbr>Configuration<wbr>Serializer<wbr>Orc<wbr>Ser<wbr>De</a></span>
     </dt>
     <dd>{{% md %}}Nested argument that specifies converting data to the ORC format before storing it in Amazon S3. For more information, see [Apache ORC](https://orc.apache.org/docs/). More details below.
 {{% /md %}}</dd>
@@ -4384,7 +3866,7 @@ be used.
             title="Optional">
         <span>parquet<wbr>Ser<wbr>De</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationoutputformatconfigurationserializerparquetserde">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Output<wbr>Format<wbr>Configuration<wbr>Serializer<wbr>Parquet<wbr>Ser<wbr>De?</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationdataformatconversionconfigurationoutputformatconfigurationserializerparquetserde">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Data<wbr>Format<wbr>Conversion<wbr>Configuration<wbr>Output<wbr>Format<wbr>Configuration<wbr>Serializer<wbr>Parquet<wbr>Ser<wbr>De</a></span>
     </dt>
     <dd>{{% md %}}Nested argument that specifies converting data to the Parquet format before storing it in Amazon S3. For more information, see [Apache Parquet](https://parquet.apache.org/documentation/latest/). More details below.
 {{% /md %}}</dd>
@@ -4440,7 +3922,7 @@ be used.
             title="Optional">
         <span>Block<wbr>Size<wbr>Bytes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The Hadoop Distributed File System (HDFS) block size. This is useful if you intend to copy the data from Amazon S3 to HDFS before querying. The default is 256 MiB and the minimum is 64 MiB. Kinesis Data Firehose uses this value for padding calculations.
 {{% /md %}}</dd>
@@ -4449,7 +3931,7 @@ be used.
             title="Optional">
         <span>Bloom<wbr>Filter<wbr>Columns</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of column names for which you want Kinesis Data Firehose to create bloom filters.
 {{% /md %}}</dd>
@@ -4458,7 +3940,7 @@ be used.
             title="Optional">
         <span>Bloom<wbr>Filter<wbr>False<wbr>Positive<wbr>Probability</span>
         <span class="property-indicator"></span>
-        <span class="property-type">double?</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The Bloom filter false positive probability (FPP). The lower the FPP, the bigger the Bloom filter. The default value is `0.05`, the minimum is `0`, and the maximum is `1`.
 {{% /md %}}</dd>
@@ -4467,7 +3949,7 @@ be used.
             title="Optional">
         <span>Compression</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The compression code to use over data blocks. The possible values are `UNCOMPRESSED`, `SNAPPY`, and `GZIP`, with the default being `SNAPPY`. Use `SNAPPY` for higher decompression speed. Use `GZIP` if the compression ratio is more important than speed.
 {{% /md %}}</dd>
@@ -4476,7 +3958,7 @@ be used.
             title="Optional">
         <span>Dictionary<wbr>Key<wbr>Threshold</span>
         <span class="property-indicator"></span>
-        <span class="property-type">double?</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}A float that represents the fraction of the total number of non-null rows. To turn off dictionary encoding, set this fraction to a number that is less than the number of distinct keys in a dictionary. To always use dictionary encoding, set this threshold to `1`.
 {{% /md %}}</dd>
@@ -4485,7 +3967,7 @@ be used.
             title="Optional">
         <span>Enable<wbr>Padding</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set this to `true` to indicate that you want stripes to be padded to the HDFS block boundaries. This is useful if you intend to copy the data from Amazon S3 to HDFS before querying. The default is `false`.
 {{% /md %}}</dd>
@@ -4494,7 +3976,7 @@ be used.
             title="Optional">
         <span>Format<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of the file to write. The possible values are `V0_11` and `V0_12`. The default is `V0_12`.
 {{% /md %}}</dd>
@@ -4503,7 +3985,7 @@ be used.
             title="Optional">
         <span>Padding<wbr>Tolerance</span>
         <span class="property-indicator"></span>
-        <span class="property-type">double?</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}A float between 0 and 1 that defines the tolerance for block padding as a decimal fraction of stripe size. The default value is `0.05`, which means 5 percent of stripe size. For the default values of 64 MiB ORC stripes and 256 MiB HDFS blocks, the default block padding tolerance of 5 percent reserves a maximum of 3.2 MiB for padding within the 256 MiB block. In such a case, if the available size within the block is more than 3.2 MiB, a new, smaller stripe is inserted to fit within that space. This ensures that no stripe crosses block boundaries and causes remote reads within a node-local task. Kinesis Data Firehose ignores this parameter when `enable_padding` is `false`.
 {{% /md %}}</dd>
@@ -4512,7 +3994,7 @@ be used.
             title="Optional">
         <span>Row<wbr>Index<wbr>Stride</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of rows between index entries. The default is `10000` and the minimum is `1000`.
 {{% /md %}}</dd>
@@ -4521,7 +4003,7 @@ be used.
             title="Optional">
         <span>Stripe<wbr>Size<wbr>Bytes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of bytes in each stripe. The default is 64 MiB and the minimum is 8 MiB.
 {{% /md %}}</dd>
@@ -4537,7 +4019,7 @@ be used.
             title="Optional">
         <span>Block<wbr>Size<wbr>Bytes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The Hadoop Distributed File System (HDFS) block size. This is useful if you intend to copy the data from Amazon S3 to HDFS before querying. The default is 256 MiB and the minimum is 64 MiB. Kinesis Data Firehose uses this value for padding calculations.
 {{% /md %}}</dd>
@@ -4555,7 +4037,7 @@ be used.
             title="Optional">
         <span>Bloom<wbr>Filter<wbr>False<wbr>Positive<wbr>Probability</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*float64</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The Bloom filter false positive probability (FPP). The lower the FPP, the bigger the Bloom filter. The default value is `0.05`, the minimum is `0`, and the maximum is `1`.
 {{% /md %}}</dd>
@@ -4564,7 +4046,7 @@ be used.
             title="Optional">
         <span>Compression</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The compression code to use over data blocks. The possible values are `UNCOMPRESSED`, `SNAPPY`, and `GZIP`, with the default being `SNAPPY`. Use `SNAPPY` for higher decompression speed. Use `GZIP` if the compression ratio is more important than speed.
 {{% /md %}}</dd>
@@ -4573,7 +4055,7 @@ be used.
             title="Optional">
         <span>Dictionary<wbr>Key<wbr>Threshold</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*float64</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}A float that represents the fraction of the total number of non-null rows. To turn off dictionary encoding, set this fraction to a number that is less than the number of distinct keys in a dictionary. To always use dictionary encoding, set this threshold to `1`.
 {{% /md %}}</dd>
@@ -4582,7 +4064,7 @@ be used.
             title="Optional">
         <span>Enable<wbr>Padding</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Set this to `true` to indicate that you want stripes to be padded to the HDFS block boundaries. This is useful if you intend to copy the data from Amazon S3 to HDFS before querying. The default is `false`.
 {{% /md %}}</dd>
@@ -4591,7 +4073,7 @@ be used.
             title="Optional">
         <span>Format<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of the file to write. The possible values are `V0_11` and `V0_12`. The default is `V0_12`.
 {{% /md %}}</dd>
@@ -4600,7 +4082,7 @@ be used.
             title="Optional">
         <span>Padding<wbr>Tolerance</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*float64</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}A float between 0 and 1 that defines the tolerance for block padding as a decimal fraction of stripe size. The default value is `0.05`, which means 5 percent of stripe size. For the default values of 64 MiB ORC stripes and 256 MiB HDFS blocks, the default block padding tolerance of 5 percent reserves a maximum of 3.2 MiB for padding within the 256 MiB block. In such a case, if the available size within the block is more than 3.2 MiB, a new, smaller stripe is inserted to fit within that space. This ensures that no stripe crosses block boundaries and causes remote reads within a node-local task. Kinesis Data Firehose ignores this parameter when `enable_padding` is `false`.
 {{% /md %}}</dd>
@@ -4609,7 +4091,7 @@ be used.
             title="Optional">
         <span>Row<wbr>Index<wbr>Stride</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of rows between index entries. The default is `10000` and the minimum is `1000`.
 {{% /md %}}</dd>
@@ -4618,7 +4100,7 @@ be used.
             title="Optional">
         <span>Stripe<wbr>Size<wbr>Bytes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of bytes in each stripe. The default is 64 MiB and the minimum is 8 MiB.
 {{% /md %}}</dd>
@@ -4634,7 +4116,7 @@ be used.
             title="Optional">
         <span>block<wbr>Size<wbr>Bytes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The Hadoop Distributed File System (HDFS) block size. This is useful if you intend to copy the data from Amazon S3 to HDFS before querying. The default is 256 MiB and the minimum is 64 MiB. Kinesis Data Firehose uses this value for padding calculations.
 {{% /md %}}</dd>
@@ -4643,7 +4125,7 @@ be used.
             title="Optional">
         <span>bloom<wbr>Filter<wbr>Columns</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of column names for which you want Kinesis Data Firehose to create bloom filters.
 {{% /md %}}</dd>
@@ -4652,7 +4134,7 @@ be used.
             title="Optional">
         <span>bloom<wbr>Filter<wbr>False<wbr>Positive<wbr>Probability</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The Bloom filter false positive probability (FPP). The lower the FPP, the bigger the Bloom filter. The default value is `0.05`, the minimum is `0`, and the maximum is `1`.
 {{% /md %}}</dd>
@@ -4661,7 +4143,7 @@ be used.
             title="Optional">
         <span>compression</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The compression code to use over data blocks. The possible values are `UNCOMPRESSED`, `SNAPPY`, and `GZIP`, with the default being `SNAPPY`. Use `SNAPPY` for higher decompression speed. Use `GZIP` if the compression ratio is more important than speed.
 {{% /md %}}</dd>
@@ -4670,7 +4152,7 @@ be used.
             title="Optional">
         <span>dictionary<wbr>Key<wbr>Threshold</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}A float that represents the fraction of the total number of non-null rows. To turn off dictionary encoding, set this fraction to a number that is less than the number of distinct keys in a dictionary. To always use dictionary encoding, set this threshold to `1`.
 {{% /md %}}</dd>
@@ -4679,7 +4161,7 @@ be used.
             title="Optional">
         <span>enable<wbr>Padding</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Set this to `true` to indicate that you want stripes to be padded to the HDFS block boundaries. This is useful if you intend to copy the data from Amazon S3 to HDFS before querying. The default is `false`.
 {{% /md %}}</dd>
@@ -4688,7 +4170,7 @@ be used.
             title="Optional">
         <span>format<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of the file to write. The possible values are `V0_11` and `V0_12`. The default is `V0_12`.
 {{% /md %}}</dd>
@@ -4697,7 +4179,7 @@ be used.
             title="Optional">
         <span>padding<wbr>Tolerance</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}A float between 0 and 1 that defines the tolerance for block padding as a decimal fraction of stripe size. The default value is `0.05`, which means 5 percent of stripe size. For the default values of 64 MiB ORC stripes and 256 MiB HDFS blocks, the default block padding tolerance of 5 percent reserves a maximum of 3.2 MiB for padding within the 256 MiB block. In such a case, if the available size within the block is more than 3.2 MiB, a new, smaller stripe is inserted to fit within that space. This ensures that no stripe crosses block boundaries and causes remote reads within a node-local task. Kinesis Data Firehose ignores this parameter when `enable_padding` is `false`.
 {{% /md %}}</dd>
@@ -4706,7 +4188,7 @@ be used.
             title="Optional">
         <span>row<wbr>Index<wbr>Stride</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of rows between index entries. The default is `10000` and the minimum is `1000`.
 {{% /md %}}</dd>
@@ -4715,7 +4197,7 @@ be used.
             title="Optional">
         <span>stripe<wbr>Size<wbr>Bytes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of bytes in each stripe. The default is 64 MiB and the minimum is 8 MiB.
 {{% /md %}}</dd>
@@ -4843,7 +4325,7 @@ be used.
             title="Optional">
         <span>Block<wbr>Size<wbr>Bytes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The Hadoop Distributed File System (HDFS) block size. This is useful if you intend to copy the data from Amazon S3 to HDFS before querying. The default is 256 MiB and the minimum is 64 MiB. Kinesis Data Firehose uses this value for padding calculations.
 {{% /md %}}</dd>
@@ -4852,7 +4334,7 @@ be used.
             title="Optional">
         <span>Compression</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The compression code to use over data blocks. The possible values are `UNCOMPRESSED`, `SNAPPY`, and `GZIP`, with the default being `SNAPPY`. Use `SNAPPY` for higher decompression speed. Use `GZIP` if the compression ratio is more important than speed.
 {{% /md %}}</dd>
@@ -4861,7 +4343,7 @@ be used.
             title="Optional">
         <span>Enable<wbr>Dictionary<wbr>Compression</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether to enable dictionary compression.
 {{% /md %}}</dd>
@@ -4870,7 +4352,7 @@ be used.
             title="Optional">
         <span>Max<wbr>Padding<wbr>Bytes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum amount of padding to apply. This is useful if you intend to copy the data from Amazon S3 to HDFS before querying. The default is `0`.
 {{% /md %}}</dd>
@@ -4879,7 +4361,7 @@ be used.
             title="Optional">
         <span>Page<wbr>Size<wbr>Bytes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The Parquet page size. Column chunks are divided into pages. A page is conceptually an indivisible unit (in terms of compression and encoding). The minimum value is 64 KiB and the default is 1 MiB.
 {{% /md %}}</dd>
@@ -4888,7 +4370,7 @@ be used.
             title="Optional">
         <span>Writer<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates the version of row format to output. The possible values are `V1` and `V2`. The default is `V1`.
 {{% /md %}}</dd>
@@ -4904,7 +4386,7 @@ be used.
             title="Optional">
         <span>Block<wbr>Size<wbr>Bytes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The Hadoop Distributed File System (HDFS) block size. This is useful if you intend to copy the data from Amazon S3 to HDFS before querying. The default is 256 MiB and the minimum is 64 MiB. Kinesis Data Firehose uses this value for padding calculations.
 {{% /md %}}</dd>
@@ -4913,7 +4395,7 @@ be used.
             title="Optional">
         <span>Compression</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The compression code to use over data blocks. The possible values are `UNCOMPRESSED`, `SNAPPY`, and `GZIP`, with the default being `SNAPPY`. Use `SNAPPY` for higher decompression speed. Use `GZIP` if the compression ratio is more important than speed.
 {{% /md %}}</dd>
@@ -4922,7 +4404,7 @@ be used.
             title="Optional">
         <span>Enable<wbr>Dictionary<wbr>Compression</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Indicates whether to enable dictionary compression.
 {{% /md %}}</dd>
@@ -4931,7 +4413,7 @@ be used.
             title="Optional">
         <span>Max<wbr>Padding<wbr>Bytes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum amount of padding to apply. This is useful if you intend to copy the data from Amazon S3 to HDFS before querying. The default is `0`.
 {{% /md %}}</dd>
@@ -4940,7 +4422,7 @@ be used.
             title="Optional">
         <span>Page<wbr>Size<wbr>Bytes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The Parquet page size. Column chunks are divided into pages. A page is conceptually an indivisible unit (in terms of compression and encoding). The minimum value is 64 KiB and the default is 1 MiB.
 {{% /md %}}</dd>
@@ -4949,7 +4431,7 @@ be used.
             title="Optional">
         <span>Writer<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates the version of row format to output. The possible values are `V1` and `V2`. The default is `V1`.
 {{% /md %}}</dd>
@@ -4965,7 +4447,7 @@ be used.
             title="Optional">
         <span>block<wbr>Size<wbr>Bytes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The Hadoop Distributed File System (HDFS) block size. This is useful if you intend to copy the data from Amazon S3 to HDFS before querying. The default is 256 MiB and the minimum is 64 MiB. Kinesis Data Firehose uses this value for padding calculations.
 {{% /md %}}</dd>
@@ -4974,7 +4456,7 @@ be used.
             title="Optional">
         <span>compression</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The compression code to use over data blocks. The possible values are `UNCOMPRESSED`, `SNAPPY`, and `GZIP`, with the default being `SNAPPY`. Use `SNAPPY` for higher decompression speed. Use `GZIP` if the compression ratio is more important than speed.
 {{% /md %}}</dd>
@@ -4983,7 +4465,7 @@ be used.
             title="Optional">
         <span>enable<wbr>Dictionary<wbr>Compression</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Indicates whether to enable dictionary compression.
 {{% /md %}}</dd>
@@ -4992,7 +4474,7 @@ be used.
             title="Optional">
         <span>max<wbr>Padding<wbr>Bytes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum amount of padding to apply. This is useful if you intend to copy the data from Amazon S3 to HDFS before querying. The default is `0`.
 {{% /md %}}</dd>
@@ -5001,7 +4483,7 @@ be used.
             title="Optional">
         <span>page<wbr>Size<wbr>Bytes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The Parquet page size. Column chunks are divided into pages. A page is conceptually an indivisible unit (in terms of compression and encoding). The minimum value is 64 KiB and the default is 1 MiB.
 {{% /md %}}</dd>
@@ -5010,7 +4492,7 @@ be used.
             title="Optional">
         <span>writer<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates the version of row format to output. The possible values are `V1` and `V2`. The default is `V1`.
 {{% /md %}}</dd>
@@ -5098,15 +4580,6 @@ be used.
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Catalog<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The ID of the AWS Glue Data Catalog. If you don't supply this, the AWS account ID is used by default.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Database<wbr>Name</span>
@@ -5114,15 +4587,6 @@ be used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the AWS Glue database that contains the schema for the output data.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}If you don't specify an AWS Region, the default is the current region.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -5145,9 +4609,27 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
+        <span>Catalog<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the AWS Glue Data Catalog. If you don't supply this, the AWS account ID is used by default.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Region</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}If you don't specify an AWS Region, the default is the current region.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Version<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the table version for the output data schema. Defaults to `LATEST`.
 {{% /md %}}</dd>
@@ -5159,15 +4641,6 @@ be used.
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Catalog<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the AWS Glue Data Catalog. If you don't supply this, the AWS account ID is used by default.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Database<wbr>Name</span>
@@ -5175,15 +4648,6 @@ be used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the AWS Glue database that contains the schema for the output data.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}If you don't specify an AWS Region, the default is the current region.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -5206,9 +4670,27 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
+        <span>Catalog<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the AWS Glue Data Catalog. If you don't supply this, the AWS account ID is used by default.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Region</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}If you don't specify an AWS Region, the default is the current region.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Version<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the table version for the output data schema. Defaults to `LATEST`.
 {{% /md %}}</dd>
@@ -5220,15 +4702,6 @@ be used.
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>catalog<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The ID of the AWS Glue Data Catalog. If you don't supply this, the AWS account ID is used by default.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>database<wbr>Name</span>
@@ -5236,15 +4709,6 @@ be used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the AWS Glue database that contains the schema for the output data.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}If you don't specify an AWS Region, the default is the current region.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -5267,9 +4731,27 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
+        <span>catalog<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the AWS Glue Data Catalog. If you don't supply this, the AWS account ID is used by default.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>region</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}If you don't specify an AWS Region, the default is the current region.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>version<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the table version for the output data schema. Defaults to `LATEST`.
 {{% /md %}}</dd>
@@ -5281,15 +4763,6 @@ be used.
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>catalog_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The ID of the AWS Glue Data Catalog. If you don't supply this, the AWS account ID is used by default.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>database_<wbr>name</span>
@@ -5297,15 +4770,6 @@ be used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the AWS Glue database that contains the schema for the output data.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}If you don't specify an AWS Region, the default is the current region.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -5324,6 +4788,24 @@ be used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the AWS Glue table that contains the column information that constitutes your data schema.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>catalog_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ID of the AWS Glue Data Catalog. If you don't supply this, the AWS account ID is used by default.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>region</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}If you don't specify an AWS Region, the default is the current region.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -5361,7 +4843,7 @@ be used.
             title="Optional">
         <span>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables or disables data processing.
 {{% /md %}}</dd>
@@ -5370,7 +4852,7 @@ be used.
             title="Optional">
         <span>Processors</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationprocessingconfigurationprocessor">List&lt;Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationprocessingconfigurationprocessor">List&lt;Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Array of data processors. More details are given below
 {{% /md %}}</dd>
@@ -5386,7 +4868,7 @@ be used.
             title="Optional">
         <span>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables or disables data processing.
 {{% /md %}}</dd>
@@ -5411,7 +4893,7 @@ be used.
             title="Optional">
         <span>enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enables or disables data processing.
 {{% /md %}}</dd>
@@ -5420,7 +4902,7 @@ be used.
             title="Optional">
         <span>processors</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationprocessingconfigurationprocessor">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Processing<wbr>Configuration<wbr>Processor[]?</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationprocessingconfigurationprocessor">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Processing<wbr>Configuration<wbr>Processor[]</a></span>
     </dt>
     <dd>{{% md %}}Array of data processors. More details are given below
 {{% /md %}}</dd>
@@ -5472,15 +4954,6 @@ be used.
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Parameters</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationprocessingconfigurationprocessorparameter">List&lt;Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Parameter<wbr>Args&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}Array of processor parameters. More details are given below
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Type</span>
@@ -5490,12 +4963,30 @@ be used.
     <dd>{{% md %}}The type of processor. Valid Values: `Lambda`
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>Parameters</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationprocessingconfigurationprocessorparameter">List&lt;Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Parameter<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Array of processor parameters. More details are given below
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of processor. Valid Values: `Lambda`
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5506,30 +4997,12 @@ be used.
     <dd>{{% md %}}Array of processor parameters. More details are given below
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The type of processor. Valid Values: `Lambda`
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>parameters</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationprocessingconfigurationprocessorparameter">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Parameter[]?</a></span>
-    </dt>
-    <dd>{{% md %}}Array of processor parameters. More details are given below
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -5538,6 +5011,15 @@ be used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of processor. Valid Values: `Lambda`
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>parameters</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationprocessingconfigurationprocessorparameter">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Parameter[]</a></span>
+    </dt>
+    <dd>{{% md %}}Array of processor parameters. More details are given below
 {{% /md %}}</dd>
 
 </dl>
@@ -5547,15 +5029,6 @@ be used.
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>parameters</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationprocessingconfigurationprocessorparameter">List[Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Parameter]</a></span>
-    </dt>
-    <dd>{{% md %}}Array of processor parameters. More details are given below
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>type</span>
@@ -5563,6 +5036,15 @@ be used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of processor. Valid Values: `Lambda`
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>parameters</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurationprocessingconfigurationprocessorparameter">List[Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Parameter]</a></span>
+    </dt>
+    <dd>{{% md %}}Array of processor parameters. More details are given below
 {{% /md %}}</dd>
 
 </dl>
@@ -5711,11 +5193,20 @@ be used.
     <dd>{{% md %}}The ARN of the S3 bucket
 {{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>Role<wbr>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The role that Kinesis Data Firehose can use to access AWS Glue. This role must be in the same account you use for Kinesis Data Firehose. Cross-account roles aren't allowed.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Buffer<wbr>Interval</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Buffer incoming data for the specified period of time, in seconds, before delivering it to the destination. The default value is 300.
 {{% /md %}}</dd>
@@ -5724,7 +5215,7 @@ be used.
             title="Optional">
         <span>Buffer<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Buffer incoming data to the specified size, in MBs, before delivering it to the destination. The default value is 5.
 We recommend setting SizeInMBs to a value greater than the amount of data you typically ingest into the delivery stream in 10 seconds. For example, if you typically ingest data at 1 MB/sec set SizeInMBs to be 10 MB or higher.
@@ -5734,7 +5225,7 @@ We recommend setting SizeInMBs to a value greater than the amount of data you ty
             title="Optional">
         <span>Cloudwatch<wbr>Logging<wbr>Options</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurations3backupconfigurationcloudwatchloggingoptions">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>S3Backup<wbr>Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options<wbr>Args?</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurations3backupconfigurationcloudwatchloggingoptions">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>S3Backup<wbr>Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The CloudWatch Logging Options for the delivery stream. More details are given below
 {{% /md %}}</dd>
@@ -5743,7 +5234,7 @@ We recommend setting SizeInMBs to a value greater than the amount of data you ty
             title="Optional">
         <span>Compression<wbr>Format</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The compression format. If no value is specified, the default is UNCOMPRESSED. Other supported values are GZIP, ZIP & Snappy. If the destination is redshift you cannot use ZIP or Snappy.
 {{% /md %}}</dd>
@@ -5752,7 +5243,7 @@ We recommend setting SizeInMBs to a value greater than the amount of data you ty
             title="Optional">
         <span>Kms<wbr>Key<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the KMS key ARN the stream will use to encrypt data. If not set, no encryption will
 be used.
@@ -5762,18 +5253,9 @@ be used.
             title="Optional">
         <span>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The "YYYY/MM/DD/HH" time format prefix is automatically used for delivered S3 files. You can specify an extra prefix to be added in front of the time format prefix. Note that if the prefix ends with a slash, it appears as a folder in the S3 bucket
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Role<wbr>Arn</span>
-        <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The role that Kinesis Data Firehose can use to access AWS Glue. This role must be in the same account you use for Kinesis Data Firehose. Cross-account roles aren't allowed.
+    <dd>{{% md %}}The "YYYY/MM/DD/HH" time format prefix is automatically used for delivered S3 files. You can specify an extra prefix to be added in front of the time format prefix. Note that if the prefix ends with a slash, it appears as a folder in the S3 bucket
 {{% /md %}}</dd>
 
 </dl>
@@ -5792,11 +5274,20 @@ be used.
     <dd>{{% md %}}The ARN of the S3 bucket
 {{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>Role<wbr>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The role that Kinesis Data Firehose can use to access AWS Glue. This role must be in the same account you use for Kinesis Data Firehose. Cross-account roles aren't allowed.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Buffer<wbr>Interval</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Buffer incoming data for the specified period of time, in seconds, before delivering it to the destination. The default value is 300.
 {{% /md %}}</dd>
@@ -5805,7 +5296,7 @@ be used.
             title="Optional">
         <span>Buffer<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Buffer incoming data to the specified size, in MBs, before delivering it to the destination. The default value is 5.
 We recommend setting SizeInMBs to a value greater than the amount of data you typically ingest into the delivery stream in 10 seconds. For example, if you typically ingest data at 1 MB/sec set SizeInMBs to be 10 MB or higher.
@@ -5815,7 +5306,7 @@ We recommend setting SizeInMBs to a value greater than the amount of data you ty
             title="Optional">
         <span>Cloudwatch<wbr>Logging<wbr>Options</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurations3backupconfigurationcloudwatchloggingoptions">*Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>S3Backup<wbr>Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurations3backupconfigurationcloudwatchloggingoptions">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>S3Backup<wbr>Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}The CloudWatch Logging Options for the delivery stream. More details are given below
 {{% /md %}}</dd>
@@ -5824,7 +5315,7 @@ We recommend setting SizeInMBs to a value greater than the amount of data you ty
             title="Optional">
         <span>Compression<wbr>Format</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The compression format. If no value is specified, the default is UNCOMPRESSED. Other supported values are GZIP, ZIP & Snappy. If the destination is redshift you cannot use ZIP or Snappy.
 {{% /md %}}</dd>
@@ -5833,7 +5324,7 @@ We recommend setting SizeInMBs to a value greater than the amount of data you ty
             title="Optional">
         <span>Kms<wbr>Key<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the KMS key ARN the stream will use to encrypt data. If not set, no encryption will
 be used.
@@ -5843,18 +5334,9 @@ be used.
             title="Optional">
         <span>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The "YYYY/MM/DD/HH" time format prefix is automatically used for delivered S3 files. You can specify an extra prefix to be added in front of the time format prefix. Note that if the prefix ends with a slash, it appears as a folder in the S3 bucket
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Role<wbr>Arn</span>
-        <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The role that Kinesis Data Firehose can use to access AWS Glue. This role must be in the same account you use for Kinesis Data Firehose. Cross-account roles aren't allowed.
+    <dd>{{% md %}}The "YYYY/MM/DD/HH" time format prefix is automatically used for delivered S3 files. You can specify an extra prefix to be added in front of the time format prefix. Note that if the prefix ends with a slash, it appears as a folder in the S3 bucket
 {{% /md %}}</dd>
 
 </dl>
@@ -5873,11 +5355,20 @@ be used.
     <dd>{{% md %}}The ARN of the S3 bucket
 {{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>role<wbr>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The role that Kinesis Data Firehose can use to access AWS Glue. This role must be in the same account you use for Kinesis Data Firehose. Cross-account roles aren't allowed.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>buffer<wbr>Interval</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Buffer incoming data for the specified period of time, in seconds, before delivering it to the destination. The default value is 300.
 {{% /md %}}</dd>
@@ -5886,7 +5377,7 @@ be used.
             title="Optional">
         <span>buffer<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Buffer incoming data to the specified size, in MBs, before delivering it to the destination. The default value is 5.
 We recommend setting SizeInMBs to a value greater than the amount of data you typically ingest into the delivery stream in 10 seconds. For example, if you typically ingest data at 1 MB/sec set SizeInMBs to be 10 MB or higher.
@@ -5896,7 +5387,7 @@ We recommend setting SizeInMBs to a value greater than the amount of data you ty
             title="Optional">
         <span>cloudwatch<wbr>Logging<wbr>Options</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurations3backupconfigurationcloudwatchloggingoptions">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>S3Backup<wbr>Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options?</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamextendeds3configurations3backupconfigurationcloudwatchloggingoptions">Firehose<wbr>Delivery<wbr>Stream<wbr>Extended<wbr>S3Configuration<wbr>S3Backup<wbr>Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}The CloudWatch Logging Options for the delivery stream. More details are given below
 {{% /md %}}</dd>
@@ -5905,7 +5396,7 @@ We recommend setting SizeInMBs to a value greater than the amount of data you ty
             title="Optional">
         <span>compression<wbr>Format</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The compression format. If no value is specified, the default is UNCOMPRESSED. Other supported values are GZIP, ZIP & Snappy. If the destination is redshift you cannot use ZIP or Snappy.
 {{% /md %}}</dd>
@@ -5914,7 +5405,7 @@ We recommend setting SizeInMBs to a value greater than the amount of data you ty
             title="Optional">
         <span>kms<wbr>Key<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the KMS key ARN the stream will use to encrypt data. If not set, no encryption will
 be used.
@@ -5924,18 +5415,9 @@ be used.
             title="Optional">
         <span>prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The "YYYY/MM/DD/HH" time format prefix is automatically used for delivered S3 files. You can specify an extra prefix to be added in front of the time format prefix. Note that if the prefix ends with a slash, it appears as a folder in the S3 bucket
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>role<wbr>Arn</span>
-        <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The role that Kinesis Data Firehose can use to access AWS Glue. This role must be in the same account you use for Kinesis Data Firehose. Cross-account roles aren't allowed.
+    <dd>{{% md %}}The "YYYY/MM/DD/HH" time format prefix is automatically used for delivered S3 files. You can specify an extra prefix to be added in front of the time format prefix. Note that if the prefix ends with a slash, it appears as a folder in the S3 bucket
 {{% /md %}}</dd>
 
 </dl>
@@ -5952,6 +5434,15 @@ be used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the S3 bucket
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>role_<wbr>arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The role that Kinesis Data Firehose can use to access AWS Glue. This role must be in the same account you use for Kinesis Data Firehose. Cross-account roles aren't allowed.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6010,15 +5501,6 @@ be used.
     <dd>{{% md %}}The "YYYY/MM/DD/HH" time format prefix is automatically used for delivered S3 files. You can specify an extra prefix to be added in front of the time format prefix. Note that if the prefix ends with a slash, it appears as a folder in the S3 bucket
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>role_<wbr>arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The role that Kinesis Data Firehose can use to access AWS Glue. This role must be in the same account you use for Kinesis Data Firehose. Cross-account roles aren't allowed.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -6045,7 +5527,7 @@ be used.
             title="Optional">
         <span>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables or disables the logging. Defaults to `false`.
 {{% /md %}}</dd>
@@ -6054,7 +5536,7 @@ be used.
             title="Optional">
         <span>Log<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CloudWatch group name for logging. This value is required if `enabled` is true.
 {{% /md %}}</dd>
@@ -6063,7 +5545,7 @@ be used.
             title="Optional">
         <span>Log<wbr>Stream<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CloudWatch log stream name for logging. This value is required if `enabled` is true.
 {{% /md %}}</dd>
@@ -6079,7 +5561,7 @@ be used.
             title="Optional">
         <span>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables or disables the logging. Defaults to `false`.
 {{% /md %}}</dd>
@@ -6088,7 +5570,7 @@ be used.
             title="Optional">
         <span>Log<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CloudWatch group name for logging. This value is required if `enabled` is true.
 {{% /md %}}</dd>
@@ -6097,7 +5579,7 @@ be used.
             title="Optional">
         <span>Log<wbr>Stream<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CloudWatch log stream name for logging. This value is required if `enabled` is true.
 {{% /md %}}</dd>
@@ -6113,7 +5595,7 @@ be used.
             title="Optional">
         <span>enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enables or disables the logging. Defaults to `false`.
 {{% /md %}}</dd>
@@ -6122,7 +5604,7 @@ be used.
             title="Optional">
         <span>log<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CloudWatch group name for logging. This value is required if `enabled` is true.
 {{% /md %}}</dd>
@@ -6131,7 +5613,7 @@ be used.
             title="Optional">
         <span>log<wbr>Stream<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CloudWatch log stream name for logging. This value is required if `enabled` is true.
 {{% /md %}}</dd>
@@ -6307,15 +5789,6 @@ be used.
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Cloudwatch<wbr>Logging<wbr>Options</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfigurationcloudwatchloggingoptions">Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options<wbr>Args?</a></span>
-    </dt>
-    <dd>{{% md %}}The CloudWatch Logging Options for the delivery stream. More details are given below
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Cluster<wbr>Jdbcurl</span>
@@ -6323,24 +5796,6 @@ be used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The jdbcurl of the redshift cluster.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Copy<wbr>Options</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Copy options for copying the data from the s3 intermediate bucket into redshift, for example to change the default delimiter. For valid values, see the [AWS documentation](http://docs.aws.amazon.com/firehose/latest/APIReference/API_CopyCommand.html)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Data<wbr>Table<wbr>Columns</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The data table columns that will be targeted by the copy command.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -6361,24 +5816,6 @@ be used.
     <dd>{{% md %}}The password for the username above.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Processing<wbr>Configuration</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfigurationprocessingconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Args?</a></span>
-    </dt>
-    <dd>{{% md %}}The data processing configuration.  More details are given below.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Retry<wbr>Duration</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}The length of time during which Firehose retries delivery after a failure, starting from the initial request and including the first attempt. The default value is 3600 seconds (60 minutes). Firehose does not retry if the value of DurationInSeconds is 0 (zero) or if the first delivery attempt takes longer than the current value.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Role<wbr>Arn</span>
@@ -6388,11 +5825,65 @@ be used.
     <dd>{{% md %}}The arn of the role the stream assumes.
 {{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>Username</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The username that the firehose delivery stream will assume. It is strongly recommended that the username and password provided is used exclusively for Amazon Kinesis Firehose purposes, and that the permissions for the account are restricted for Amazon Redshift INSERT permissions.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Cloudwatch<wbr>Logging<wbr>Options</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfigurationcloudwatchloggingoptions">Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The CloudWatch Logging Options for the delivery stream. More details are given below
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Copy<wbr>Options</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Copy options for copying the data from the s3 intermediate bucket into redshift, for example to change the default delimiter. For valid values, see the [AWS documentation](http://docs.aws.amazon.com/firehose/latest/APIReference/API_CopyCommand.html)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Data<wbr>Table<wbr>Columns</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The data table columns that will be targeted by the copy command.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Processing<wbr>Configuration</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfigurationprocessingconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The data processing configuration.  More details are given below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Retry<wbr>Duration</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The length of time during which Firehose retries delivery after a failure, starting from the initial request and including the first attempt. The default value is 3600 seconds (60 minutes). Firehose does not retry if the value of DurationInSeconds is 0 (zero) or if the first delivery attempt takes longer than the current value.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>S3Backup<wbr>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfigurations3backupconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>S3Backup<wbr>Configuration<wbr>Args?</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfigurations3backupconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>S3Backup<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The configuration for backup in Amazon S3. Required if `s3_backup_mode` is `Enabled`. Supports the same fields as `s3_configuration` object.
 {{% /md %}}</dd>
@@ -6401,18 +5892,9 @@ be used.
             title="Optional">
         <span>S3Backup<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The Amazon S3 backup mode.  Valid values are `Disabled` and `Enabled`.  Default value is `Disabled`.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Username</span>
-        <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The username that the firehose delivery stream will assume. It is strongly recommended that the username and password provided is used exclusively for Amazon Kinesis Firehose purposes, and that the permissions for the account are restricted for Amazon Redshift INSERT permissions.
+    <dd>{{% md %}}The Amazon S3 backup mode.  Valid values are `Disabled` and `Enabled`.  Default value is `Disabled`.
 {{% /md %}}</dd>
 
 </dl>
@@ -6422,15 +5904,6 @@ be used.
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Cloudwatch<wbr>Logging<wbr>Options</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfigurationcloudwatchloggingoptions">*Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options</a></span>
-    </dt>
-    <dd>{{% md %}}The CloudWatch Logging Options for the delivery stream. More details are given below
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Cluster<wbr>Jdbcurl</span>
@@ -6438,24 +5911,6 @@ be used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The jdbcurl of the redshift cluster.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Copy<wbr>Options</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Copy options for copying the data from the s3 intermediate bucket into redshift, for example to change the default delimiter. For valid values, see the [AWS documentation](http://docs.aws.amazon.com/firehose/latest/APIReference/API_CopyCommand.html)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Data<wbr>Table<wbr>Columns</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The data table columns that will be targeted by the copy command.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -6476,24 +5931,6 @@ be used.
     <dd>{{% md %}}The password for the username above.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Processing<wbr>Configuration</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfigurationprocessingconfiguration">*Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>Processing<wbr>Configuration</a></span>
-    </dt>
-    <dd>{{% md %}}The data processing configuration.  More details are given below.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Retry<wbr>Duration</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}The length of time during which Firehose retries delivery after a failure, starting from the initial request and including the first attempt. The default value is 3600 seconds (60 minutes). Firehose does not retry if the value of DurationInSeconds is 0 (zero) or if the first delivery attempt takes longer than the current value.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Role<wbr>Arn</span>
@@ -6501,24 +5938,6 @@ be used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The arn of the role the stream assumes.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>S3Backup<wbr>Configuration</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfigurations3backupconfiguration">*Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>S3Backup<wbr>Configuration</a></span>
-    </dt>
-    <dd>{{% md %}}The configuration for backup in Amazon S3. Required if `s3_backup_mode` is `Enabled`. Supports the same fields as `s3_configuration` object.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>S3Backup<wbr>Mode</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The Amazon S3 backup mode.  Valid values are `Disabled` and `Enabled`.  Default value is `Disabled`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -6530,21 +5949,75 @@ be used.
     <dd>{{% md %}}The username that the firehose delivery stream will assume. It is strongly recommended that the username and password provided is used exclusively for Amazon Kinesis Firehose purposes, and that the permissions for the account are restricted for Amazon Redshift INSERT permissions.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>Cloudwatch<wbr>Logging<wbr>Options</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfigurationcloudwatchloggingoptions">Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options</a></span>
+    </dt>
+    <dd>{{% md %}}The CloudWatch Logging Options for the delivery stream. More details are given below
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Copy<wbr>Options</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Copy options for copying the data from the s3 intermediate bucket into redshift, for example to change the default delimiter. For valid values, see the [AWS documentation](http://docs.aws.amazon.com/firehose/latest/APIReference/API_CopyCommand.html)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Data<wbr>Table<wbr>Columns</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The data table columns that will be targeted by the copy command.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Processing<wbr>Configuration</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfigurationprocessingconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>Processing<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}The data processing configuration.  More details are given below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Retry<wbr>Duration</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The length of time during which Firehose retries delivery after a failure, starting from the initial request and including the first attempt. The default value is 3600 seconds (60 minutes). Firehose does not retry if the value of DurationInSeconds is 0 (zero) or if the first delivery attempt takes longer than the current value.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>S3Backup<wbr>Configuration</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfigurations3backupconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>S3Backup<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}The configuration for backup in Amazon S3. Required if `s3_backup_mode` is `Enabled`. Supports the same fields as `s3_configuration` object.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>S3Backup<wbr>Mode</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Amazon S3 backup mode.  Valid values are `Disabled` and `Enabled`.  Default value is `Disabled`.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>cloudwatch<wbr>Logging<wbr>Options</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfigurationcloudwatchloggingoptions">Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options?</a></span>
-    </dt>
-    <dd>{{% md %}}The CloudWatch Logging Options for the delivery stream. More details are given below
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -6553,24 +6026,6 @@ be used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The jdbcurl of the redshift cluster.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>copy<wbr>Options</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Copy options for copying the data from the s3 intermediate bucket into redshift, for example to change the default delimiter. For valid values, see the [AWS documentation](http://docs.aws.amazon.com/firehose/latest/APIReference/API_CopyCommand.html)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>data<wbr>Table<wbr>Columns</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The data table columns that will be targeted by the copy command.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -6589,24 +6044,6 @@ be used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password for the username above.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>processing<wbr>Configuration</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfigurationprocessingconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>Processing<wbr>Configuration?</a></span>
-    </dt>
-    <dd>{{% md %}}The data processing configuration.  More details are given below.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>retry<wbr>Duration</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}The length of time during which Firehose retries delivery after a failure, starting from the initial request and including the first attempt. The default value is 3600 seconds (60 minutes). Firehose does not retry if the value of DurationInSeconds is 0 (zero) or if the first delivery attempt takes longer than the current value.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -6618,24 +6055,6 @@ be used.
     <dd>{{% md %}}The arn of the role the stream assumes.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>s3Backup<wbr>Configuration</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfigurations3backupconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>S3Backup<wbr>Configuration?</a></span>
-    </dt>
-    <dd>{{% md %}}The configuration for backup in Amazon S3. Required if `s3_backup_mode` is `Enabled`. Supports the same fields as `s3_configuration` object.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>s3Backup<wbr>Mode</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The Amazon S3 backup mode.  Valid values are `Disabled` and `Enabled`.  Default value is `Disabled`.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>username</span>
@@ -6645,36 +6064,20 @@ be used.
     <dd>{{% md %}}The username that the firehose delivery stream will assume. It is strongly recommended that the username and password provided is used exclusively for Amazon Kinesis Firehose purposes, and that the permissions for the account are restricted for Amazon Redshift INSERT permissions.
 {{% /md %}}</dd>
 
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
-        <span>cloudwatch_<wbr>logging_<wbr>options</span>
+        <span>cloudwatch<wbr>Logging<wbr>Options</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfigurationcloudwatchloggingoptions">Dict[Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options]</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfigurationcloudwatchloggingoptions">Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}The CloudWatch Logging Options for the delivery stream. More details are given below
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>cluster<wbr>Jdbcurl</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The jdbcurl of the redshift cluster.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>copy<wbr>Options</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Copy options for copying the data from the s3 intermediate bucket into redshift, for example to change the default delimiter. For valid values, see the [AWS documentation](http://docs.aws.amazon.com/firehose/latest/APIReference/API_CopyCommand.html)
 {{% /md %}}</dd>
@@ -6683,9 +6086,61 @@ be used.
             title="Optional">
         <span>data<wbr>Table<wbr>Columns</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The data table columns that will be targeted by the copy command.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>processing<wbr>Configuration</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfigurationprocessingconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>Processing<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}The data processing configuration.  More details are given below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>retry<wbr>Duration</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The length of time during which Firehose retries delivery after a failure, starting from the initial request and including the first attempt. The default value is 3600 seconds (60 minutes). Firehose does not retry if the value of DurationInSeconds is 0 (zero) or if the first delivery attempt takes longer than the current value.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>s3Backup<wbr>Configuration</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfigurations3backupconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>S3Backup<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}The configuration for backup in Amazon S3. Required if `s3_backup_mode` is `Enabled`. Supports the same fields as `s3_configuration` object.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>s3Backup<wbr>Mode</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Amazon S3 backup mode.  Valid values are `Disabled` and `Enabled`.  Default value is `Disabled`.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>cluster<wbr>Jdbcurl</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The jdbcurl of the redshift cluster.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -6704,6 +6159,51 @@ be used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The password for the username above.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>role_<wbr>arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The arn of the role the stream assumes.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>username</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The username that the firehose delivery stream will assume. It is strongly recommended that the username and password provided is used exclusively for Amazon Kinesis Firehose purposes, and that the permissions for the account are restricted for Amazon Redshift INSERT permissions.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>cloudwatch_<wbr>logging_<wbr>options</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfigurationcloudwatchloggingoptions">Dict[Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options]</a></span>
+    </dt>
+    <dd>{{% md %}}The CloudWatch Logging Options for the delivery stream. More details are given below
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>copy<wbr>Options</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Copy options for copying the data from the s3 intermediate bucket into redshift, for example to change the default delimiter. For valid values, see the [AWS documentation](http://docs.aws.amazon.com/firehose/latest/APIReference/API_CopyCommand.html)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>data<wbr>Table<wbr>Columns</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The data table columns that will be targeted by the copy command.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6724,15 +6224,6 @@ be used.
     <dd>{{% md %}}The length of time during which Firehose retries delivery after a failure, starting from the initial request and including the first attempt. The default value is 3600 seconds (60 minutes). Firehose does not retry if the value of DurationInSeconds is 0 (zero) or if the first delivery attempt takes longer than the current value.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>role_<wbr>arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The arn of the role the stream assumes.
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>s3Backup<wbr>Configuration</span>
@@ -6749,15 +6240,6 @@ be used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Amazon S3 backup mode.  Valid values are `Disabled` and `Enabled`.  Default value is `Disabled`.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>username</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The username that the firehose delivery stream will assume. It is strongly recommended that the username and password provided is used exclusively for Amazon Kinesis Firehose purposes, and that the permissions for the account are restricted for Amazon Redshift INSERT permissions.
 {{% /md %}}</dd>
 
 </dl>
@@ -6786,7 +6268,7 @@ be used.
             title="Optional">
         <span>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables or disables the logging. Defaults to `false`.
 {{% /md %}}</dd>
@@ -6795,7 +6277,7 @@ be used.
             title="Optional">
         <span>Log<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CloudWatch group name for logging. This value is required if `enabled` is true.
 {{% /md %}}</dd>
@@ -6804,7 +6286,7 @@ be used.
             title="Optional">
         <span>Log<wbr>Stream<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CloudWatch log stream name for logging. This value is required if `enabled` is true.
 {{% /md %}}</dd>
@@ -6820,7 +6302,7 @@ be used.
             title="Optional">
         <span>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables or disables the logging. Defaults to `false`.
 {{% /md %}}</dd>
@@ -6829,7 +6311,7 @@ be used.
             title="Optional">
         <span>Log<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CloudWatch group name for logging. This value is required if `enabled` is true.
 {{% /md %}}</dd>
@@ -6838,7 +6320,7 @@ be used.
             title="Optional">
         <span>Log<wbr>Stream<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CloudWatch log stream name for logging. This value is required if `enabled` is true.
 {{% /md %}}</dd>
@@ -6854,7 +6336,7 @@ be used.
             title="Optional">
         <span>enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enables or disables the logging. Defaults to `false`.
 {{% /md %}}</dd>
@@ -6863,7 +6345,7 @@ be used.
             title="Optional">
         <span>log<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CloudWatch group name for logging. This value is required if `enabled` is true.
 {{% /md %}}</dd>
@@ -6872,7 +6354,7 @@ be used.
             title="Optional">
         <span>log<wbr>Stream<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CloudWatch log stream name for logging. This value is required if `enabled` is true.
 {{% /md %}}</dd>
@@ -6937,7 +6419,7 @@ be used.
             title="Optional">
         <span>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables or disables data processing.
 {{% /md %}}</dd>
@@ -6946,7 +6428,7 @@ be used.
             title="Optional">
         <span>Processors</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfigurationprocessingconfigurationprocessor">List&lt;Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfigurationprocessingconfigurationprocessor">List&lt;Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Array of data processors. More details are given below
 {{% /md %}}</dd>
@@ -6962,7 +6444,7 @@ be used.
             title="Optional">
         <span>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables or disables data processing.
 {{% /md %}}</dd>
@@ -6987,7 +6469,7 @@ be used.
             title="Optional">
         <span>enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enables or disables data processing.
 {{% /md %}}</dd>
@@ -6996,7 +6478,7 @@ be used.
             title="Optional">
         <span>processors</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfigurationprocessingconfigurationprocessor">Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor[]?</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfigurationprocessingconfigurationprocessor">Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor[]</a></span>
     </dt>
     <dd>{{% md %}}Array of data processors. More details are given below
 {{% /md %}}</dd>
@@ -7048,15 +6530,6 @@ be used.
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Parameters</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfigurationprocessingconfigurationprocessorparameter">List&lt;Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Parameter<wbr>Args&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}Array of processor parameters. More details are given below
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Type</span>
@@ -7066,12 +6539,30 @@ be used.
     <dd>{{% md %}}The type of processor. Valid Values: `Lambda`
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>Parameters</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfigurationprocessingconfigurationprocessorparameter">List&lt;Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Parameter<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Array of processor parameters. More details are given below
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of processor. Valid Values: `Lambda`
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -7082,30 +6573,12 @@ be used.
     <dd>{{% md %}}Array of processor parameters. More details are given below
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The type of processor. Valid Values: `Lambda`
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>parameters</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfigurationprocessingconfigurationprocessorparameter">Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Parameter[]?</a></span>
-    </dt>
-    <dd>{{% md %}}Array of processor parameters. More details are given below
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -7114,6 +6587,15 @@ be used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of processor. Valid Values: `Lambda`
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>parameters</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfigurationprocessingconfigurationprocessorparameter">Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Parameter[]</a></span>
+    </dt>
+    <dd>{{% md %}}Array of processor parameters. More details are given below
 {{% /md %}}</dd>
 
 </dl>
@@ -7123,15 +6605,6 @@ be used.
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>parameters</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfigurationprocessingconfigurationprocessorparameter">List[Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Parameter]</a></span>
-    </dt>
-    <dd>{{% md %}}Array of processor parameters. More details are given below
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>type</span>
@@ -7139,6 +6612,15 @@ be used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of processor. Valid Values: `Lambda`
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>parameters</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfigurationprocessingconfigurationprocessorparameter">List[Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Parameter]</a></span>
+    </dt>
+    <dd>{{% md %}}Array of processor parameters. More details are given below
 {{% /md %}}</dd>
 
 </dl>
@@ -7287,11 +6769,20 @@ be used.
     <dd>{{% md %}}The ARN of the S3 bucket
 {{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>Role<wbr>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The role that Kinesis Data Firehose can use to access AWS Glue. This role must be in the same account you use for Kinesis Data Firehose. Cross-account roles aren't allowed.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Buffer<wbr>Interval</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Buffer incoming data for the specified period of time, in seconds, before delivering it to the destination. The default value is 300.
 {{% /md %}}</dd>
@@ -7300,7 +6791,7 @@ be used.
             title="Optional">
         <span>Buffer<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Buffer incoming data to the specified size, in MBs, before delivering it to the destination. The default value is 5.
 We recommend setting SizeInMBs to a value greater than the amount of data you typically ingest into the delivery stream in 10 seconds. For example, if you typically ingest data at 1 MB/sec set SizeInMBs to be 10 MB or higher.
@@ -7310,7 +6801,7 @@ We recommend setting SizeInMBs to a value greater than the amount of data you ty
             title="Optional">
         <span>Cloudwatch<wbr>Logging<wbr>Options</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfigurations3backupconfigurationcloudwatchloggingoptions">Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>S3Backup<wbr>Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options<wbr>Args?</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfigurations3backupconfigurationcloudwatchloggingoptions">Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>S3Backup<wbr>Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The CloudWatch Logging Options for the delivery stream. More details are given below
 {{% /md %}}</dd>
@@ -7319,7 +6810,7 @@ We recommend setting SizeInMBs to a value greater than the amount of data you ty
             title="Optional">
         <span>Compression<wbr>Format</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The compression format. If no value is specified, the default is UNCOMPRESSED. Other supported values are GZIP, ZIP & Snappy. If the destination is redshift you cannot use ZIP or Snappy.
 {{% /md %}}</dd>
@@ -7328,7 +6819,7 @@ We recommend setting SizeInMBs to a value greater than the amount of data you ty
             title="Optional">
         <span>Kms<wbr>Key<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the KMS key ARN the stream will use to encrypt data. If not set, no encryption will
 be used.
@@ -7338,18 +6829,9 @@ be used.
             title="Optional">
         <span>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The "YYYY/MM/DD/HH" time format prefix is automatically used for delivered S3 files. You can specify an extra prefix to be added in front of the time format prefix. Note that if the prefix ends with a slash, it appears as a folder in the S3 bucket
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Role<wbr>Arn</span>
-        <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The role that Kinesis Data Firehose can use to access AWS Glue. This role must be in the same account you use for Kinesis Data Firehose. Cross-account roles aren't allowed.
+    <dd>{{% md %}}The "YYYY/MM/DD/HH" time format prefix is automatically used for delivered S3 files. You can specify an extra prefix to be added in front of the time format prefix. Note that if the prefix ends with a slash, it appears as a folder in the S3 bucket
 {{% /md %}}</dd>
 
 </dl>
@@ -7368,11 +6850,20 @@ be used.
     <dd>{{% md %}}The ARN of the S3 bucket
 {{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>Role<wbr>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The role that Kinesis Data Firehose can use to access AWS Glue. This role must be in the same account you use for Kinesis Data Firehose. Cross-account roles aren't allowed.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Buffer<wbr>Interval</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Buffer incoming data for the specified period of time, in seconds, before delivering it to the destination. The default value is 300.
 {{% /md %}}</dd>
@@ -7381,7 +6872,7 @@ be used.
             title="Optional">
         <span>Buffer<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Buffer incoming data to the specified size, in MBs, before delivering it to the destination. The default value is 5.
 We recommend setting SizeInMBs to a value greater than the amount of data you typically ingest into the delivery stream in 10 seconds. For example, if you typically ingest data at 1 MB/sec set SizeInMBs to be 10 MB or higher.
@@ -7391,7 +6882,7 @@ We recommend setting SizeInMBs to a value greater than the amount of data you ty
             title="Optional">
         <span>Cloudwatch<wbr>Logging<wbr>Options</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfigurations3backupconfigurationcloudwatchloggingoptions">*Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>S3Backup<wbr>Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfigurations3backupconfigurationcloudwatchloggingoptions">Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>S3Backup<wbr>Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}The CloudWatch Logging Options for the delivery stream. More details are given below
 {{% /md %}}</dd>
@@ -7400,7 +6891,7 @@ We recommend setting SizeInMBs to a value greater than the amount of data you ty
             title="Optional">
         <span>Compression<wbr>Format</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The compression format. If no value is specified, the default is UNCOMPRESSED. Other supported values are GZIP, ZIP & Snappy. If the destination is redshift you cannot use ZIP or Snappy.
 {{% /md %}}</dd>
@@ -7409,7 +6900,7 @@ We recommend setting SizeInMBs to a value greater than the amount of data you ty
             title="Optional">
         <span>Kms<wbr>Key<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the KMS key ARN the stream will use to encrypt data. If not set, no encryption will
 be used.
@@ -7419,18 +6910,9 @@ be used.
             title="Optional">
         <span>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The "YYYY/MM/DD/HH" time format prefix is automatically used for delivered S3 files. You can specify an extra prefix to be added in front of the time format prefix. Note that if the prefix ends with a slash, it appears as a folder in the S3 bucket
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Role<wbr>Arn</span>
-        <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The role that Kinesis Data Firehose can use to access AWS Glue. This role must be in the same account you use for Kinesis Data Firehose. Cross-account roles aren't allowed.
+    <dd>{{% md %}}The "YYYY/MM/DD/HH" time format prefix is automatically used for delivered S3 files. You can specify an extra prefix to be added in front of the time format prefix. Note that if the prefix ends with a slash, it appears as a folder in the S3 bucket
 {{% /md %}}</dd>
 
 </dl>
@@ -7449,11 +6931,20 @@ be used.
     <dd>{{% md %}}The ARN of the S3 bucket
 {{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>role<wbr>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The role that Kinesis Data Firehose can use to access AWS Glue. This role must be in the same account you use for Kinesis Data Firehose. Cross-account roles aren't allowed.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>buffer<wbr>Interval</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Buffer incoming data for the specified period of time, in seconds, before delivering it to the destination. The default value is 300.
 {{% /md %}}</dd>
@@ -7462,7 +6953,7 @@ be used.
             title="Optional">
         <span>buffer<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Buffer incoming data to the specified size, in MBs, before delivering it to the destination. The default value is 5.
 We recommend setting SizeInMBs to a value greater than the amount of data you typically ingest into the delivery stream in 10 seconds. For example, if you typically ingest data at 1 MB/sec set SizeInMBs to be 10 MB or higher.
@@ -7472,7 +6963,7 @@ We recommend setting SizeInMBs to a value greater than the amount of data you ty
             title="Optional">
         <span>cloudwatch<wbr>Logging<wbr>Options</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfigurations3backupconfigurationcloudwatchloggingoptions">Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>S3Backup<wbr>Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options?</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamredshiftconfigurations3backupconfigurationcloudwatchloggingoptions">Firehose<wbr>Delivery<wbr>Stream<wbr>Redshift<wbr>Configuration<wbr>S3Backup<wbr>Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}The CloudWatch Logging Options for the delivery stream. More details are given below
 {{% /md %}}</dd>
@@ -7481,7 +6972,7 @@ We recommend setting SizeInMBs to a value greater than the amount of data you ty
             title="Optional">
         <span>compression<wbr>Format</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The compression format. If no value is specified, the default is UNCOMPRESSED. Other supported values are GZIP, ZIP & Snappy. If the destination is redshift you cannot use ZIP or Snappy.
 {{% /md %}}</dd>
@@ -7490,7 +6981,7 @@ We recommend setting SizeInMBs to a value greater than the amount of data you ty
             title="Optional">
         <span>kms<wbr>Key<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the KMS key ARN the stream will use to encrypt data. If not set, no encryption will
 be used.
@@ -7500,18 +6991,9 @@ be used.
             title="Optional">
         <span>prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The "YYYY/MM/DD/HH" time format prefix is automatically used for delivered S3 files. You can specify an extra prefix to be added in front of the time format prefix. Note that if the prefix ends with a slash, it appears as a folder in the S3 bucket
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>role<wbr>Arn</span>
-        <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The role that Kinesis Data Firehose can use to access AWS Glue. This role must be in the same account you use for Kinesis Data Firehose. Cross-account roles aren't allowed.
+    <dd>{{% md %}}The "YYYY/MM/DD/HH" time format prefix is automatically used for delivered S3 files. You can specify an extra prefix to be added in front of the time format prefix. Note that if the prefix ends with a slash, it appears as a folder in the S3 bucket
 {{% /md %}}</dd>
 
 </dl>
@@ -7528,6 +7010,15 @@ be used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the S3 bucket
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>role_<wbr>arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The role that Kinesis Data Firehose can use to access AWS Glue. This role must be in the same account you use for Kinesis Data Firehose. Cross-account roles aren't allowed.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -7586,15 +7077,6 @@ be used.
     <dd>{{% md %}}The "YYYY/MM/DD/HH" time format prefix is automatically used for delivered S3 files. You can specify an extra prefix to be added in front of the time format prefix. Note that if the prefix ends with a slash, it appears as a folder in the S3 bucket
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>role_<wbr>arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The role that Kinesis Data Firehose can use to access AWS Glue. This role must be in the same account you use for Kinesis Data Firehose. Cross-account roles aren't allowed.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -7621,7 +7103,7 @@ be used.
             title="Optional">
         <span>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables or disables the logging. Defaults to `false`.
 {{% /md %}}</dd>
@@ -7630,7 +7112,7 @@ be used.
             title="Optional">
         <span>Log<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CloudWatch group name for logging. This value is required if `enabled` is true.
 {{% /md %}}</dd>
@@ -7639,7 +7121,7 @@ be used.
             title="Optional">
         <span>Log<wbr>Stream<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CloudWatch log stream name for logging. This value is required if `enabled` is true.
 {{% /md %}}</dd>
@@ -7655,7 +7137,7 @@ be used.
             title="Optional">
         <span>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables or disables the logging. Defaults to `false`.
 {{% /md %}}</dd>
@@ -7664,7 +7146,7 @@ be used.
             title="Optional">
         <span>Log<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CloudWatch group name for logging. This value is required if `enabled` is true.
 {{% /md %}}</dd>
@@ -7673,7 +7155,7 @@ be used.
             title="Optional">
         <span>Log<wbr>Stream<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CloudWatch log stream name for logging. This value is required if `enabled` is true.
 {{% /md %}}</dd>
@@ -7689,7 +7171,7 @@ be used.
             title="Optional">
         <span>enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enables or disables the logging. Defaults to `false`.
 {{% /md %}}</dd>
@@ -7698,7 +7180,7 @@ be used.
             title="Optional">
         <span>log<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CloudWatch group name for logging. This value is required if `enabled` is true.
 {{% /md %}}</dd>
@@ -7707,7 +7189,7 @@ be used.
             title="Optional">
         <span>log<wbr>Stream<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CloudWatch log stream name for logging. This value is required if `enabled` is true.
 {{% /md %}}</dd>
@@ -7777,11 +7259,20 @@ be used.
     <dd>{{% md %}}The ARN of the S3 bucket
 {{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>Role<wbr>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The role that Kinesis Data Firehose can use to access AWS Glue. This role must be in the same account you use for Kinesis Data Firehose. Cross-account roles aren't allowed.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Buffer<wbr>Interval</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Buffer incoming data for the specified period of time, in seconds, before delivering it to the destination. The default value is 300.
 {{% /md %}}</dd>
@@ -7790,7 +7281,7 @@ be used.
             title="Optional">
         <span>Buffer<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Buffer incoming data to the specified size, in MBs, before delivering it to the destination. The default value is 5.
 We recommend setting SizeInMBs to a value greater than the amount of data you typically ingest into the delivery stream in 10 seconds. For example, if you typically ingest data at 1 MB/sec set SizeInMBs to be 10 MB or higher.
@@ -7800,7 +7291,7 @@ We recommend setting SizeInMBs to a value greater than the amount of data you ty
             title="Optional">
         <span>Cloudwatch<wbr>Logging<wbr>Options</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreams3configurationcloudwatchloggingoptions">Firehose<wbr>Delivery<wbr>Stream<wbr>S3Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options<wbr>Args?</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreams3configurationcloudwatchloggingoptions">Firehose<wbr>Delivery<wbr>Stream<wbr>S3Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The CloudWatch Logging Options for the delivery stream. More details are given below
 {{% /md %}}</dd>
@@ -7809,7 +7300,7 @@ We recommend setting SizeInMBs to a value greater than the amount of data you ty
             title="Optional">
         <span>Compression<wbr>Format</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The compression format. If no value is specified, the default is UNCOMPRESSED. Other supported values are GZIP, ZIP & Snappy. If the destination is redshift you cannot use ZIP or Snappy.
 {{% /md %}}</dd>
@@ -7818,7 +7309,7 @@ We recommend setting SizeInMBs to a value greater than the amount of data you ty
             title="Optional">
         <span>Kms<wbr>Key<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the KMS key ARN the stream will use to encrypt data. If not set, no encryption will
 be used.
@@ -7828,18 +7319,9 @@ be used.
             title="Optional">
         <span>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The "YYYY/MM/DD/HH" time format prefix is automatically used for delivered S3 files. You can specify an extra prefix to be added in front of the time format prefix. Note that if the prefix ends with a slash, it appears as a folder in the S3 bucket
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Role<wbr>Arn</span>
-        <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The role that Kinesis Data Firehose can use to access AWS Glue. This role must be in the same account you use for Kinesis Data Firehose. Cross-account roles aren't allowed.
+    <dd>{{% md %}}The "YYYY/MM/DD/HH" time format prefix is automatically used for delivered S3 files. You can specify an extra prefix to be added in front of the time format prefix. Note that if the prefix ends with a slash, it appears as a folder in the S3 bucket
 {{% /md %}}</dd>
 
 </dl>
@@ -7858,11 +7340,20 @@ be used.
     <dd>{{% md %}}The ARN of the S3 bucket
 {{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>Role<wbr>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The role that Kinesis Data Firehose can use to access AWS Glue. This role must be in the same account you use for Kinesis Data Firehose. Cross-account roles aren't allowed.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Buffer<wbr>Interval</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Buffer incoming data for the specified period of time, in seconds, before delivering it to the destination. The default value is 300.
 {{% /md %}}</dd>
@@ -7871,7 +7362,7 @@ be used.
             title="Optional">
         <span>Buffer<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Buffer incoming data to the specified size, in MBs, before delivering it to the destination. The default value is 5.
 We recommend setting SizeInMBs to a value greater than the amount of data you typically ingest into the delivery stream in 10 seconds. For example, if you typically ingest data at 1 MB/sec set SizeInMBs to be 10 MB or higher.
@@ -7881,7 +7372,7 @@ We recommend setting SizeInMBs to a value greater than the amount of data you ty
             title="Optional">
         <span>Cloudwatch<wbr>Logging<wbr>Options</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreams3configurationcloudwatchloggingoptions">*Firehose<wbr>Delivery<wbr>Stream<wbr>S3Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreams3configurationcloudwatchloggingoptions">Firehose<wbr>Delivery<wbr>Stream<wbr>S3Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}The CloudWatch Logging Options for the delivery stream. More details are given below
 {{% /md %}}</dd>
@@ -7890,7 +7381,7 @@ We recommend setting SizeInMBs to a value greater than the amount of data you ty
             title="Optional">
         <span>Compression<wbr>Format</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The compression format. If no value is specified, the default is UNCOMPRESSED. Other supported values are GZIP, ZIP & Snappy. If the destination is redshift you cannot use ZIP or Snappy.
 {{% /md %}}</dd>
@@ -7899,7 +7390,7 @@ We recommend setting SizeInMBs to a value greater than the amount of data you ty
             title="Optional">
         <span>Kms<wbr>Key<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the KMS key ARN the stream will use to encrypt data. If not set, no encryption will
 be used.
@@ -7909,18 +7400,9 @@ be used.
             title="Optional">
         <span>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The "YYYY/MM/DD/HH" time format prefix is automatically used for delivered S3 files. You can specify an extra prefix to be added in front of the time format prefix. Note that if the prefix ends with a slash, it appears as a folder in the S3 bucket
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Role<wbr>Arn</span>
-        <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The role that Kinesis Data Firehose can use to access AWS Glue. This role must be in the same account you use for Kinesis Data Firehose. Cross-account roles aren't allowed.
+    <dd>{{% md %}}The "YYYY/MM/DD/HH" time format prefix is automatically used for delivered S3 files. You can specify an extra prefix to be added in front of the time format prefix. Note that if the prefix ends with a slash, it appears as a folder in the S3 bucket
 {{% /md %}}</dd>
 
 </dl>
@@ -7939,11 +7421,20 @@ be used.
     <dd>{{% md %}}The ARN of the S3 bucket
 {{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>role<wbr>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The role that Kinesis Data Firehose can use to access AWS Glue. This role must be in the same account you use for Kinesis Data Firehose. Cross-account roles aren't allowed.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>buffer<wbr>Interval</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Buffer incoming data for the specified period of time, in seconds, before delivering it to the destination. The default value is 300.
 {{% /md %}}</dd>
@@ -7952,7 +7443,7 @@ be used.
             title="Optional">
         <span>buffer<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Buffer incoming data to the specified size, in MBs, before delivering it to the destination. The default value is 5.
 We recommend setting SizeInMBs to a value greater than the amount of data you typically ingest into the delivery stream in 10 seconds. For example, if you typically ingest data at 1 MB/sec set SizeInMBs to be 10 MB or higher.
@@ -7962,7 +7453,7 @@ We recommend setting SizeInMBs to a value greater than the amount of data you ty
             title="Optional">
         <span>cloudwatch<wbr>Logging<wbr>Options</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreams3configurationcloudwatchloggingoptions">Firehose<wbr>Delivery<wbr>Stream<wbr>S3Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options?</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreams3configurationcloudwatchloggingoptions">Firehose<wbr>Delivery<wbr>Stream<wbr>S3Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}The CloudWatch Logging Options for the delivery stream. More details are given below
 {{% /md %}}</dd>
@@ -7971,7 +7462,7 @@ We recommend setting SizeInMBs to a value greater than the amount of data you ty
             title="Optional">
         <span>compression<wbr>Format</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The compression format. If no value is specified, the default is UNCOMPRESSED. Other supported values are GZIP, ZIP & Snappy. If the destination is redshift you cannot use ZIP or Snappy.
 {{% /md %}}</dd>
@@ -7980,7 +7471,7 @@ We recommend setting SizeInMBs to a value greater than the amount of data you ty
             title="Optional">
         <span>kms<wbr>Key<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the KMS key ARN the stream will use to encrypt data. If not set, no encryption will
 be used.
@@ -7990,18 +7481,9 @@ be used.
             title="Optional">
         <span>prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The "YYYY/MM/DD/HH" time format prefix is automatically used for delivered S3 files. You can specify an extra prefix to be added in front of the time format prefix. Note that if the prefix ends with a slash, it appears as a folder in the S3 bucket
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>role<wbr>Arn</span>
-        <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The role that Kinesis Data Firehose can use to access AWS Glue. This role must be in the same account you use for Kinesis Data Firehose. Cross-account roles aren't allowed.
+    <dd>{{% md %}}The "YYYY/MM/DD/HH" time format prefix is automatically used for delivered S3 files. You can specify an extra prefix to be added in front of the time format prefix. Note that if the prefix ends with a slash, it appears as a folder in the S3 bucket
 {{% /md %}}</dd>
 
 </dl>
@@ -8018,6 +7500,15 @@ be used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the S3 bucket
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>role_<wbr>arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The role that Kinesis Data Firehose can use to access AWS Glue. This role must be in the same account you use for Kinesis Data Firehose. Cross-account roles aren't allowed.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -8076,15 +7567,6 @@ be used.
     <dd>{{% md %}}The "YYYY/MM/DD/HH" time format prefix is automatically used for delivered S3 files. You can specify an extra prefix to be added in front of the time format prefix. Note that if the prefix ends with a slash, it appears as a folder in the S3 bucket
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>role_<wbr>arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The role that Kinesis Data Firehose can use to access AWS Glue. This role must be in the same account you use for Kinesis Data Firehose. Cross-account roles aren't allowed.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -8111,7 +7593,7 @@ be used.
             title="Optional">
         <span>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables or disables the logging. Defaults to `false`.
 {{% /md %}}</dd>
@@ -8120,7 +7602,7 @@ be used.
             title="Optional">
         <span>Log<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CloudWatch group name for logging. This value is required if `enabled` is true.
 {{% /md %}}</dd>
@@ -8129,7 +7611,7 @@ be used.
             title="Optional">
         <span>Log<wbr>Stream<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CloudWatch log stream name for logging. This value is required if `enabled` is true.
 {{% /md %}}</dd>
@@ -8145,7 +7627,7 @@ be used.
             title="Optional">
         <span>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables or disables the logging. Defaults to `false`.
 {{% /md %}}</dd>
@@ -8154,7 +7636,7 @@ be used.
             title="Optional">
         <span>Log<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CloudWatch group name for logging. This value is required if `enabled` is true.
 {{% /md %}}</dd>
@@ -8163,7 +7645,7 @@ be used.
             title="Optional">
         <span>Log<wbr>Stream<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CloudWatch log stream name for logging. This value is required if `enabled` is true.
 {{% /md %}}</dd>
@@ -8179,7 +7661,7 @@ be used.
             title="Optional">
         <span>enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enables or disables the logging. Defaults to `false`.
 {{% /md %}}</dd>
@@ -8188,7 +7670,7 @@ be used.
             title="Optional">
         <span>log<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CloudWatch group name for logging. This value is required if `enabled` is true.
 {{% /md %}}</dd>
@@ -8197,7 +7679,7 @@ be used.
             title="Optional">
         <span>log<wbr>Stream<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CloudWatch log stream name for logging. This value is required if `enabled` is true.
 {{% /md %}}</dd>
@@ -8262,7 +7744,7 @@ be used.
             title="Optional">
         <span>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to enable encryption at rest. Default is `false`.
 {{% /md %}}</dd>
@@ -8278,7 +7760,7 @@ be used.
             title="Optional">
         <span>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to enable encryption at rest. Default is `false`.
 {{% /md %}}</dd>
@@ -8294,7 +7776,7 @@ be used.
             title="Optional">
         <span>enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to enable encryption at rest. Default is `false`.
 {{% /md %}}</dd>
@@ -8337,24 +7819,6 @@ be used.
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Cloudwatch<wbr>Logging<wbr>Options</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamsplunkconfigurationcloudwatchloggingoptions">Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options<wbr>Args?</a></span>
-    </dt>
-    <dd>{{% md %}}The CloudWatch Logging Options for the delivery stream. More details are given below.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Hec<wbr>Acknowledgment<wbr>Timeout</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}The amount of time, in seconds between 180 and 600, that Kinesis Firehose waits to receive an acknowledgment from Splunk after it sends it data.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Hec<wbr>Endpoint</span>
@@ -8362,15 +7826,6 @@ be used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The HTTP Event Collector (HEC) endpoint to which Kinesis Firehose sends your data.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Hec<wbr>Endpoint<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The HEC endpoint type. Valid values are `Raw` or `Event`. The default value is `Raw`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -8384,9 +7839,36 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
+        <span>Cloudwatch<wbr>Logging<wbr>Options</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firehosedeliverystreamsplunkconfigurationcloudwatchloggingoptions">Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The CloudWatch Logging Options for the delivery stream. More details are given below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Hec<wbr>Acknowledgment<wbr>Timeout</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The amount of time, in seconds between 180 and 600, that Kinesis Firehose waits to receive an acknowledgment from Splunk after it sends it data.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Hec<wbr>Endpoint<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The HEC endpoint type. Valid values are `Raw` or `Event`. The default value is `Raw`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Processing<wbr>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamsplunkconfigurationprocessingconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Args?</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamsplunkconfigurationprocessingconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The data processing configuration.  More details are given below.
 {{% /md %}}</dd>
@@ -8395,7 +7877,7 @@ be used.
             title="Optional">
         <span>Retry<wbr>Duration</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}After an initial failure to deliver to Splunk, the total amount of time, in seconds between 0 to 7200, during which Firehose re-attempts delivery (including the first attempt).  After this time has elapsed, the failed documents are written to Amazon S3.  The default value is 300s.  There will be no retry if the value is 0.
 {{% /md %}}</dd>
@@ -8404,7 +7886,7 @@ be used.
             title="Optional">
         <span>S3Backup<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Defines how documents should be delivered to Amazon S3.  Valid values are `FailedEventsOnly` and `AllEvents`.  Default value is `FailedEventsOnly`.
 {{% /md %}}</dd>
@@ -8416,24 +7898,6 @@ be used.
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Cloudwatch<wbr>Logging<wbr>Options</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamsplunkconfigurationcloudwatchloggingoptions">*Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options</a></span>
-    </dt>
-    <dd>{{% md %}}The CloudWatch Logging Options for the delivery stream. More details are given below.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Hec<wbr>Acknowledgment<wbr>Timeout</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}The amount of time, in seconds between 180 and 600, that Kinesis Firehose waits to receive an acknowledgment from Splunk after it sends it data.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Hec<wbr>Endpoint</span>
@@ -8441,15 +7905,6 @@ be used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The HTTP Event Collector (HEC) endpoint to which Kinesis Firehose sends your data.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Hec<wbr>Endpoint<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The HEC endpoint type. Valid values are `Raw` or `Event`. The default value is `Raw`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -8463,9 +7918,36 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
+        <span>Cloudwatch<wbr>Logging<wbr>Options</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firehosedeliverystreamsplunkconfigurationcloudwatchloggingoptions">Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options</a></span>
+    </dt>
+    <dd>{{% md %}}The CloudWatch Logging Options for the delivery stream. More details are given below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Hec<wbr>Acknowledgment<wbr>Timeout</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The amount of time, in seconds between 180 and 600, that Kinesis Firehose waits to receive an acknowledgment from Splunk after it sends it data.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Hec<wbr>Endpoint<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The HEC endpoint type. Valid values are `Raw` or `Event`. The default value is `Raw`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Processing<wbr>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamsplunkconfigurationprocessingconfiguration">*Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration<wbr>Processing<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamsplunkconfigurationprocessingconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration<wbr>Processing<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The data processing configuration.  More details are given below.
 {{% /md %}}</dd>
@@ -8474,7 +7956,7 @@ be used.
             title="Optional">
         <span>Retry<wbr>Duration</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}After an initial failure to deliver to Splunk, the total amount of time, in seconds between 0 to 7200, during which Firehose re-attempts delivery (including the first attempt).  After this time has elapsed, the failed documents are written to Amazon S3.  The default value is 300s.  There will be no retry if the value is 0.
 {{% /md %}}</dd>
@@ -8483,7 +7965,7 @@ be used.
             title="Optional">
         <span>S3Backup<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Defines how documents should be delivered to Amazon S3.  Valid values are `FailedEventsOnly` and `AllEvents`.  Default value is `FailedEventsOnly`.
 {{% /md %}}</dd>
@@ -8495,24 +7977,6 @@ be used.
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>cloudwatch<wbr>Logging<wbr>Options</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamsplunkconfigurationcloudwatchloggingoptions">Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options?</a></span>
-    </dt>
-    <dd>{{% md %}}The CloudWatch Logging Options for the delivery stream. More details are given below.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>hec<wbr>Acknowledgment<wbr>Timeout</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}The amount of time, in seconds between 180 and 600, that Kinesis Firehose waits to receive an acknowledgment from Splunk after it sends it data.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>hec<wbr>Endpoint</span>
@@ -8520,15 +7984,6 @@ be used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The HTTP Event Collector (HEC) endpoint to which Kinesis Firehose sends your data.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>hec<wbr>Endpoint<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The HEC endpoint type. Valid values are `Raw` or `Event`. The default value is `Raw`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -8542,9 +7997,36 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
+        <span>cloudwatch<wbr>Logging<wbr>Options</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firehosedeliverystreamsplunkconfigurationcloudwatchloggingoptions">Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration<wbr>Cloudwatch<wbr>Logging<wbr>Options</a></span>
+    </dt>
+    <dd>{{% md %}}The CloudWatch Logging Options for the delivery stream. More details are given below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>hec<wbr>Acknowledgment<wbr>Timeout</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The amount of time, in seconds between 180 and 600, that Kinesis Firehose waits to receive an acknowledgment from Splunk after it sends it data.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>hec<wbr>Endpoint<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The HEC endpoint type. Valid values are `Raw` or `Event`. The default value is `Raw`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>processing<wbr>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamsplunkconfigurationprocessingconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration<wbr>Processing<wbr>Configuration?</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamsplunkconfigurationprocessingconfiguration">Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration<wbr>Processing<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}The data processing configuration.  More details are given below.
 {{% /md %}}</dd>
@@ -8553,7 +8035,7 @@ be used.
             title="Optional">
         <span>retry<wbr>Duration</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}After an initial failure to deliver to Splunk, the total amount of time, in seconds between 0 to 7200, during which Firehose re-attempts delivery (including the first attempt).  After this time has elapsed, the failed documents are written to Amazon S3.  The default value is 300s.  There will be no retry if the value is 0.
 {{% /md %}}</dd>
@@ -8562,7 +8044,7 @@ be used.
             title="Optional">
         <span>s3Backup<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Defines how documents should be delivered to Amazon S3.  Valid values are `FailedEventsOnly` and `AllEvents`.  Default value is `FailedEventsOnly`.
 {{% /md %}}</dd>
@@ -8573,6 +8055,24 @@ be used.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>hec<wbr>Endpoint</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The HTTP Event Collector (HEC) endpoint to which Kinesis Firehose sends your data.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>hec<wbr>Token</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The GUID that you obtain from your Splunk cluster when you create a new HEC endpoint.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -8592,15 +8092,6 @@ be used.
     <dd>{{% md %}}The amount of time, in seconds between 180 and 600, that Kinesis Firehose waits to receive an acknowledgment from Splunk after it sends it data.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>hec<wbr>Endpoint</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The HTTP Event Collector (HEC) endpoint to which Kinesis Firehose sends your data.
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>hec<wbr>Endpoint<wbr>Type</span>
@@ -8608,15 +8099,6 @@ be used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The HEC endpoint type. Valid values are `Raw` or `Event`. The default value is `Raw`.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>hec<wbr>Token</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The GUID that you obtain from your Splunk cluster when you create a new HEC endpoint.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -8672,7 +8154,7 @@ be used.
             title="Optional">
         <span>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables or disables the logging. Defaults to `false`.
 {{% /md %}}</dd>
@@ -8681,7 +8163,7 @@ be used.
             title="Optional">
         <span>Log<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CloudWatch group name for logging. This value is required if `enabled` is true.
 {{% /md %}}</dd>
@@ -8690,7 +8172,7 @@ be used.
             title="Optional">
         <span>Log<wbr>Stream<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CloudWatch log stream name for logging. This value is required if `enabled` is true.
 {{% /md %}}</dd>
@@ -8706,7 +8188,7 @@ be used.
             title="Optional">
         <span>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables or disables the logging. Defaults to `false`.
 {{% /md %}}</dd>
@@ -8715,7 +8197,7 @@ be used.
             title="Optional">
         <span>Log<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CloudWatch group name for logging. This value is required if `enabled` is true.
 {{% /md %}}</dd>
@@ -8724,7 +8206,7 @@ be used.
             title="Optional">
         <span>Log<wbr>Stream<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CloudWatch log stream name for logging. This value is required if `enabled` is true.
 {{% /md %}}</dd>
@@ -8740,7 +8222,7 @@ be used.
             title="Optional">
         <span>enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enables or disables the logging. Defaults to `false`.
 {{% /md %}}</dd>
@@ -8749,7 +8231,7 @@ be used.
             title="Optional">
         <span>log<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CloudWatch group name for logging. This value is required if `enabled` is true.
 {{% /md %}}</dd>
@@ -8758,7 +8240,7 @@ be used.
             title="Optional">
         <span>log<wbr>Stream<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The CloudWatch log stream name for logging. This value is required if `enabled` is true.
 {{% /md %}}</dd>
@@ -8823,7 +8305,7 @@ be used.
             title="Optional">
         <span>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables or disables data processing.
 {{% /md %}}</dd>
@@ -8832,7 +8314,7 @@ be used.
             title="Optional">
         <span>Processors</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamsplunkconfigurationprocessingconfigurationprocessor">List&lt;Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamsplunkconfigurationprocessingconfigurationprocessor">List&lt;Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Array of data processors. More details are given below
 {{% /md %}}</dd>
@@ -8848,7 +8330,7 @@ be used.
             title="Optional">
         <span>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables or disables data processing.
 {{% /md %}}</dd>
@@ -8873,7 +8355,7 @@ be used.
             title="Optional">
         <span>enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enables or disables data processing.
 {{% /md %}}</dd>
@@ -8882,7 +8364,7 @@ be used.
             title="Optional">
         <span>processors</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamsplunkconfigurationprocessingconfigurationprocessor">Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor[]?</a></span>
+        <span class="property-type"><a href="#firehosedeliverystreamsplunkconfigurationprocessingconfigurationprocessor">Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor[]</a></span>
     </dt>
     <dd>{{% md %}}Array of data processors. More details are given below
 {{% /md %}}</dd>
@@ -8934,15 +8416,6 @@ be used.
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Parameters</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamsplunkconfigurationprocessingconfigurationprocessorparameter">List&lt;Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Parameter<wbr>Args&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}Array of processor parameters. More details are given below
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Type</span>
@@ -8952,12 +8425,30 @@ be used.
     <dd>{{% md %}}The type of processor. Valid Values: `Lambda`
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>Parameters</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firehosedeliverystreamsplunkconfigurationprocessingconfigurationprocessorparameter">List&lt;Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Parameter<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Array of processor parameters. More details are given below
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of processor. Valid Values: `Lambda`
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -8968,30 +8459,12 @@ be used.
     <dd>{{% md %}}Array of processor parameters. More details are given below
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The type of processor. Valid Values: `Lambda`
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>parameters</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamsplunkconfigurationprocessingconfigurationprocessorparameter">Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Parameter[]?</a></span>
-    </dt>
-    <dd>{{% md %}}Array of processor parameters. More details are given below
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -9000,6 +8473,15 @@ be used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of processor. Valid Values: `Lambda`
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>parameters</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firehosedeliverystreamsplunkconfigurationprocessingconfigurationprocessorparameter">Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Parameter[]</a></span>
+    </dt>
+    <dd>{{% md %}}Array of processor parameters. More details are given below
 {{% /md %}}</dd>
 
 </dl>
@@ -9009,15 +8491,6 @@ be used.
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>parameters</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#firehosedeliverystreamsplunkconfigurationprocessingconfigurationprocessorparameter">List[Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Parameter]</a></span>
-    </dt>
-    <dd>{{% md %}}Array of processor parameters. More details are given below
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>type</span>
@@ -9025,6 +8498,15 @@ be used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of processor. Valid Values: `Lambda`
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>parameters</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#firehosedeliverystreamsplunkconfigurationprocessingconfigurationprocessorparameter">List[Firehose<wbr>Delivery<wbr>Stream<wbr>Splunk<wbr>Configuration<wbr>Processing<wbr>Configuration<wbr>Processor<wbr>Parameter]</a></span>
+    </dt>
+    <dd>{{% md %}}Array of processor parameters. More details are given below
 {{% /md %}}</dd>
 
 </dl>

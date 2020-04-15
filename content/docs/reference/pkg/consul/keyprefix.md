@@ -14,7 +14,7 @@ block_external_search_index: true
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/consul/#KeyPrefix">KeyPrefix</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/consul/#KeyPrefixArgs">KeyPrefixArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/consul/#KeyPrefix">KeyPrefix</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/consul/#KeyPrefixArgs">KeyPrefixArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -22,11 +22,11 @@ block_external_search_index: true
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewKeyPrefix<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-consul/sdk/go/consul/?tab=doc#KeyPrefixArgs">KeyPrefixArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-consul/sdk/go/consul/?tab=doc#KeyPrefix">KeyPrefix</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewKeyPrefix<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-consul/sdk/go/consul/?tab=doc#KeyPrefixArgs">KeyPrefixArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-consul/sdk/go/consul/?tab=doc#KeyPrefix">KeyPrefix</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Consul/Pulumi.Consul..KeyPrefix.html">KeyPrefix</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Consul/Pulumi.Consul.KeyPrefixArgs.html">KeyPrefixArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Consul/Pulumi.Consul.KeyPrefix.html">KeyPrefix</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Consul/Pulumi.Consul.KeyPrefixArgs.html">KeyPrefixArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -118,25 +118,6 @@ block_external_search_index: true
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Datacenter</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The datacenter to use. This overrides the
-agent's default datacenter and the datacenter in the provider setup.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Namespace</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The namespace to create the keys within.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Path<wbr>Prefix</span>
@@ -150,9 +131,28 @@ end with a slash, to manage a "folder" of keys.
 
     <dt class="property-optional"
             title="Optional">
+        <span>Datacenter</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The datacenter to use. This overrides the
+agent's default datacenter and the datacenter in the provider setup.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Namespace</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The namespace to create the keys within.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Subkey<wbr>Collection</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyprefixsubkeycollection">List&lt;Key<wbr>Prefix<wbr>Subkey<wbr>Collection<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#keyprefixsubkeycollection">List&lt;Key<wbr>Prefix<wbr>Subkey<wbr>Collection<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A subkey to add. Supported values documented below.
 Multiple blocks supported.
@@ -162,7 +162,7 @@ Multiple blocks supported.
             title="Optional">
         <span>Subkeys</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string>?</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping from subkey name (which will be appended
 to the given `path_prefix`) to the value that should be stored at that key.
@@ -174,7 +174,7 @@ the given path prefix.
             title="Optional">
         <span>Token</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ACL token to use. This overrides the
 token that the agent provides by default.
@@ -187,25 +187,6 @@ token that the agent provides by default.
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Datacenter</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The datacenter to use. This overrides the
-agent's default datacenter and the datacenter in the provider setup.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Namespace</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The namespace to create the keys within.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Path<wbr>Prefix</span>
@@ -215,6 +196,25 @@ agent's default datacenter and the datacenter in the provider setup.
     <dd>{{% md %}}Specifies the common prefix shared by all keys
 that will be managed by this resource instance. In most cases this will
 end with a slash, to manage a "folder" of keys.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Datacenter</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The datacenter to use. This overrides the
+agent's default datacenter and the datacenter in the provider setup.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Namespace</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The namespace to create the keys within.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -243,7 +243,7 @@ the given path prefix.
             title="Optional">
         <span>Token</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ACL token to use. This overrides the
 token that the agent provides by default.
@@ -255,25 +255,6 @@ token that the agent provides by default.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>datacenter</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The datacenter to use. This overrides the
-agent's default datacenter and the datacenter in the provider setup.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>namespace</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The namespace to create the keys within.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -288,9 +269,28 @@ end with a slash, to manage a "folder" of keys.
 
     <dt class="property-optional"
             title="Optional">
+        <span>datacenter</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The datacenter to use. This overrides the
+agent's default datacenter and the datacenter in the provider setup.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>namespace</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The namespace to create the keys within.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>subkey<wbr>Collection</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyprefixsubkeycollection">Key<wbr>Prefix<wbr>Subkey<wbr>Collection[]?</a></span>
+        <span class="property-type"><a href="#keyprefixsubkeycollection">Key<wbr>Prefix<wbr>Subkey<wbr>Collection[]</a></span>
     </dt>
     <dd>{{% md %}}A subkey to add. Supported values documented below.
 Multiple blocks supported.
@@ -300,7 +300,7 @@ Multiple blocks supported.
             title="Optional">
         <span>subkeys</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}?</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping from subkey name (which will be appended
 to the given `path_prefix`) to the value that should be stored at that key.
@@ -312,7 +312,7 @@ the given path prefix.
             title="Optional">
         <span>token</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ACL token to use. This overrides the
 token that the agent provides by default.
@@ -324,6 +324,17 @@ token that the agent provides by default.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>path_<wbr>prefix</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies the common prefix shared by all keys
+that will be managed by this resource instance. In most cases this will
+end with a slash, to manage a "folder" of keys.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -342,17 +353,6 @@ agent's default datacenter and the datacenter in the provider setup.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The namespace to create the keys within.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>path_<wbr>prefix</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Specifies the common prefix shared by all keys
-that will be managed by this resource instance. In most cases this will
-end with a slash, to manage a "folder" of keys.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -391,292 +391,6 @@ token that the agent provides by default.
 {{% /choosable %}}
 
 
-
-
-
-
-
-## KeyPrefix Output Properties
-
-The following output properties are available:
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Datacenter</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The datacenter to use. This overrides the
-agent's default datacenter and the datacenter in the provider setup.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Namespace</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The namespace to create the keys within.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Path<wbr>Prefix</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the common prefix shared by all keys
-that will be managed by this resource instance. In most cases this will
-end with a slash, to manage a "folder" of keys.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Subkey<wbr>Collection</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyprefixsubkeycollection">List&lt;Key<wbr>Prefix<wbr>Subkey<wbr>Collection&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}A subkey to add. Supported values documented below.
-Multiple blocks supported.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Subkeys</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string>?</span>
-    </dt>
-    <dd>{{% md %}}A mapping from subkey name (which will be appended
-to the given `path_prefix`) to the value that should be stored at that key.
-Use slashes, as shown in the above example, to create "sub-folders" under
-the given path prefix.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Token</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The ACL token to use. This overrides the
-token that the agent provides by default.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Datacenter</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The datacenter to use. This overrides the
-agent's default datacenter and the datacenter in the provider setup.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Namespace</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The namespace to create the keys within.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Path<wbr>Prefix</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the common prefix shared by all keys
-that will be managed by this resource instance. In most cases this will
-end with a slash, to manage a "folder" of keys.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Subkey<wbr>Collection</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyprefixsubkeycollection">[]Key<wbr>Prefix<wbr>Subkey<wbr>Collection</a></span>
-    </dt>
-    <dd>{{% md %}}A subkey to add. Supported values documented below.
-Multiple blocks supported.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Subkeys</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]string</span>
-    </dt>
-    <dd>{{% md %}}A mapping from subkey name (which will be appended
-to the given `path_prefix`) to the value that should be stored at that key.
-Use slashes, as shown in the above example, to create "sub-folders" under
-the given path prefix.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Token</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The ACL token to use. This overrides the
-token that the agent provides by default.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>datacenter</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The datacenter to use. This overrides the
-agent's default datacenter and the datacenter in the provider setup.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>namespace</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The namespace to create the keys within.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>path<wbr>Prefix</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the common prefix shared by all keys
-that will be managed by this resource instance. In most cases this will
-end with a slash, to manage a "folder" of keys.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>subkey<wbr>Collection</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyprefixsubkeycollection">Key<wbr>Prefix<wbr>Subkey<wbr>Collection[]?</a></span>
-    </dt>
-    <dd>{{% md %}}A subkey to add. Supported values documented below.
-Multiple blocks supported.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>subkeys</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}?</span>
-    </dt>
-    <dd>{{% md %}}A mapping from subkey name (which will be appended
-to the given `path_prefix`) to the value that should be stored at that key.
-Use slashes, as shown in the above example, to create "sub-folders" under
-the given path prefix.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>token</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The ACL token to use. This overrides the
-token that the agent provides by default.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>datacenter</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The datacenter to use. This overrides the
-agent's default datacenter and the datacenter in the provider setup.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>namespace</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The namespace to create the keys within.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>path_<wbr>prefix</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Specifies the common prefix shared by all keys
-that will be managed by this resource instance. In most cases this will
-end with a slash, to manage a "folder" of keys.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>subkey_<wbr>collection</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyprefixsubkeycollection">List[Key<wbr>Prefix<wbr>Subkey<wbr>Collection]</a></span>
-    </dt>
-    <dd>{{% md %}}A subkey to add. Supported values documented below.
-Multiple blocks supported.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>subkeys</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
-    </dt>
-    <dd>{{% md %}}A mapping from subkey name (which will be appended
-to the given `path_prefix`) to the value that should be stored at that key.
-Use slashes, as shown in the above example, to create "sub-folders" under
-the given path prefix.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>token</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The ACL token to use. This overrides the
-token that the agent provides by default.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
 
 
 
@@ -704,7 +418,7 @@ Get an existing KeyPrefix resource's state with the given name, ID, and optional
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Consul/Pulumi.Consul..KeyPrefix.html">KeyPrefix</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Consul/Pulumi.Consul..KeyPrefixState.html">KeyPrefixState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Consul/Pulumi.Consul.KeyPrefix.html">KeyPrefix</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Consul/Pulumi.Consul..KeyPrefixState.html">KeyPrefixState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -814,7 +528,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Datacenter</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The datacenter to use. This overrides the
 agent's default datacenter and the datacenter in the provider setup.
@@ -824,7 +538,7 @@ agent's default datacenter and the datacenter in the provider setup.
             title="Optional">
         <span>Namespace</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The namespace to create the keys within.
 {{% /md %}}</dd>
@@ -833,7 +547,7 @@ agent's default datacenter and the datacenter in the provider setup.
             title="Optional">
         <span>Path<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the common prefix shared by all keys
 that will be managed by this resource instance. In most cases this will
@@ -844,7 +558,7 @@ end with a slash, to manage a "folder" of keys.
             title="Optional">
         <span>Subkey<wbr>Collection</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyprefixsubkeycollection">List&lt;Key<wbr>Prefix<wbr>Subkey<wbr>Collection<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#keyprefixsubkeycollection">List&lt;Key<wbr>Prefix<wbr>Subkey<wbr>Collection<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A subkey to add. Supported values documented below.
 Multiple blocks supported.
@@ -854,7 +568,7 @@ Multiple blocks supported.
             title="Optional">
         <span>Subkeys</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string>?</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping from subkey name (which will be appended
 to the given `path_prefix`) to the value that should be stored at that key.
@@ -866,7 +580,7 @@ the given path prefix.
             title="Optional">
         <span>Token</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ACL token to use. This overrides the
 token that the agent provides by default.
@@ -883,7 +597,7 @@ token that the agent provides by default.
             title="Optional">
         <span>Datacenter</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The datacenter to use. This overrides the
 agent's default datacenter and the datacenter in the provider setup.
@@ -893,7 +607,7 @@ agent's default datacenter and the datacenter in the provider setup.
             title="Optional">
         <span>Namespace</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The namespace to create the keys within.
 {{% /md %}}</dd>
@@ -902,7 +616,7 @@ agent's default datacenter and the datacenter in the provider setup.
             title="Optional">
         <span>Path<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the common prefix shared by all keys
 that will be managed by this resource instance. In most cases this will
@@ -935,7 +649,7 @@ the given path prefix.
             title="Optional">
         <span>Token</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ACL token to use. This overrides the
 token that the agent provides by default.
@@ -952,7 +666,7 @@ token that the agent provides by default.
             title="Optional">
         <span>datacenter</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The datacenter to use. This overrides the
 agent's default datacenter and the datacenter in the provider setup.
@@ -962,7 +676,7 @@ agent's default datacenter and the datacenter in the provider setup.
             title="Optional">
         <span>namespace</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The namespace to create the keys within.
 {{% /md %}}</dd>
@@ -971,7 +685,7 @@ agent's default datacenter and the datacenter in the provider setup.
             title="Optional">
         <span>path<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the common prefix shared by all keys
 that will be managed by this resource instance. In most cases this will
@@ -982,7 +696,7 @@ end with a slash, to manage a "folder" of keys.
             title="Optional">
         <span>subkey<wbr>Collection</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyprefixsubkeycollection">Key<wbr>Prefix<wbr>Subkey<wbr>Collection[]?</a></span>
+        <span class="property-type"><a href="#keyprefixsubkeycollection">Key<wbr>Prefix<wbr>Subkey<wbr>Collection[]</a></span>
     </dt>
     <dd>{{% md %}}A subkey to add. Supported values documented below.
 Multiple blocks supported.
@@ -992,7 +706,7 @@ Multiple blocks supported.
             title="Optional">
         <span>subkeys</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}?</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping from subkey name (which will be appended
 to the given `path_prefix`) to the value that should be stored at that key.
@@ -1004,7 +718,7 @@ the given path prefix.
             title="Optional">
         <span>token</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ACL token to use. This overrides the
 token that the agent provides by default.
@@ -1108,16 +822,6 @@ token that the agent provides by default.
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Flags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}An [unsigned integer value](https://www.consul.io/api/kv.html#flags-1)
-to attach to the key (defaults to 0).
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Path</span>
@@ -1135,6 +839,16 @@ to attach to the key (defaults to 0).
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value to write to the given path.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Flags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}An [unsigned integer value](https://www.consul.io/api/kv.html#flags-1)
+to attach to the key (defaults to 0).
 {{% /md %}}</dd>
 
 </dl>
@@ -1144,16 +858,6 @@ to attach to the key (defaults to 0).
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Flags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}An [unsigned integer value](https://www.consul.io/api/kv.html#flags-1)
-to attach to the key (defaults to 0).
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Path</span>
@@ -1173,22 +877,22 @@ to attach to the key (defaults to 0).
     <dd>{{% md %}}The value to write to the given path.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>Flags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}An [unsigned integer value](https://www.consul.io/api/kv.html#flags-1)
+to attach to the key (defaults to 0).
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>flags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}An [unsigned integer value](https://www.consul.io/api/kv.html#flags-1)
-to attach to the key (defaults to 0).
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1207,6 +911,16 @@ to attach to the key (defaults to 0).
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The value to write to the given path.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>flags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}An [unsigned integer value](https://www.consul.io/api/kv.html#flags-1)
+to attach to the key (defaults to 0).
 {{% /md %}}</dd>
 
 </dl>
@@ -1216,16 +930,6 @@ to attach to the key (defaults to 0).
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>flags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}An [unsigned integer value](https://www.consul.io/api/kv.html#flags-1)
-to attach to the key (defaults to 0).
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>path</span>
@@ -1243,6 +947,16 @@ to attach to the key (defaults to 0).
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The value to write to the given path.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>flags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}An [unsigned integer value](https://www.consul.io/api/kv.html#flags-1)
+to attach to the key (defaults to 0).
 {{% /md %}}</dd>
 
 </dl>

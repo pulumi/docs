@@ -39,7 +39,7 @@ const example = new aws.datasync.EfsLocation("example", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/datasync/#EfsLocation">EfsLocation</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/datasync/#EfsLocationArgs">EfsLocationArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/datasync/#EfsLocation">EfsLocation</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/datasync/#EfsLocationArgs">EfsLocationArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -47,11 +47,11 @@ const example = new aws.datasync.EfsLocation("example", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewEfsLocation<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/datasync?tab=doc#EfsLocationArgs">EfsLocationArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/datasync?tab=doc#EfsLocation">EfsLocation</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewEfsLocation<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/datasync?tab=doc#EfsLocationArgs">EfsLocationArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/datasync?tab=doc#EfsLocation">EfsLocation</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Datasync.EfsLocation.html">EfsLocation</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.DataSync.EfsLocationArgs.html">EfsLocationArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.DataSync.EfsLocation.html">EfsLocation</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.DataSync.EfsLocationArgs.html">EfsLocationArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -165,7 +165,7 @@ const example = new aws.datasync.EfsLocation("example", {
             title="Optional">
         <span>Subdirectory</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Subdirectory to perform actions as source or destination. Default `/`.
 {{% /md %}}</dd>
@@ -174,7 +174,7 @@ const example = new aws.datasync.EfsLocation("example", {
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Key-value pairs of resource tags to assign to the DataSync Location.
 {{% /md %}}</dd>
@@ -208,7 +208,7 @@ const example = new aws.datasync.EfsLocation("example", {
             title="Optional">
         <span>Subdirectory</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Subdirectory to perform actions as source or destination. Default `/`.
 {{% /md %}}</dd>
@@ -251,7 +251,7 @@ const example = new aws.datasync.EfsLocation("example", {
             title="Optional">
         <span>subdirectory</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Subdirectory to perform actions as source or destination. Default `/`.
 {{% /md %}}</dd>
@@ -260,7 +260,7 @@ const example = new aws.datasync.EfsLocation("example", {
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Key-value pairs of resource tags to assign to the DataSync Location.
 {{% /md %}}</dd>
@@ -338,42 +338,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Ec2Config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#efslocationec2config">Efs<wbr>Location<wbr>Ec2Config</a></span>
-    </dt>
-    <dd>{{% md %}}Configuration block containing EC2 configurations for connecting to the EFS File System.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Efs<wbr>File<wbr>System<wbr>Arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Amazon Resource Name (ARN) of EFS File System.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Subdirectory</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Subdirectory to perform actions as source or destination. Default `/`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
-    </dt>
-    <dd>{{% md %}}Key-value pairs of resource tags to assign to the DataSync Location.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Uri</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -394,42 +358,6 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the DataSync Location.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Ec2Config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#efslocationec2config">Efs<wbr>Location<wbr>Ec2Config</a></span>
-    </dt>
-    <dd>{{% md %}}Configuration block containing EC2 configurations for connecting to the EFS File System.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Efs<wbr>File<wbr>System<wbr>Arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Amazon Resource Name (ARN) of EFS File System.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Subdirectory</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Subdirectory to perform actions as source or destination. Default `/`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
-    </dt>
-    <dd>{{% md %}}Key-value pairs of resource tags to assign to the DataSync Location.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -458,42 +386,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>ec2Config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#efslocationec2config">Efs<wbr>Location<wbr>Ec2Config</a></span>
-    </dt>
-    <dd>{{% md %}}Configuration block containing EC2 configurations for connecting to the EFS File System.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>efs<wbr>File<wbr>System<wbr>Arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">ARN</span>
-    </dt>
-    <dd>{{% md %}}Amazon Resource Name (ARN) of EFS File System.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>subdirectory</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Subdirectory to perform actions as source or destination. Default `/`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
-    </dt>
-    <dd>{{% md %}}Key-value pairs of resource tags to assign to the DataSync Location.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>uri</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -514,42 +406,6 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the DataSync Location.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>ec2_<wbr>config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#efslocationec2config">Dict[Efs<wbr>Location<wbr>Ec2Config]</a></span>
-    </dt>
-    <dd>{{% md %}}Configuration block containing EC2 configurations for connecting to the EFS File System.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>efs_<wbr>file_<wbr>system_<wbr>arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Amazon Resource Name (ARN) of EFS File System.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>subdirectory</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Subdirectory to perform actions as source or destination. Default `/`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
-    </dt>
-    <dd>{{% md %}}Key-value pairs of resource tags to assign to the DataSync Location.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -589,7 +445,7 @@ Get an existing EfsLocation resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Datasync.EfsLocation.html">EfsLocation</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Datasync.EfsLocationState.html">EfsLocationState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.DataSync.EfsLocation.html">EfsLocation</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.DataSync.EfsLocationState.html">EfsLocationState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -699,7 +555,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the DataSync Location.
 {{% /md %}}</dd>
@@ -708,7 +564,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Ec2Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#efslocationec2config">Efs<wbr>Location<wbr>Ec2Config<wbr>Args?</a></span>
+        <span class="property-type"><a href="#efslocationec2config">Efs<wbr>Location<wbr>Ec2Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block containing EC2 configurations for connecting to the EFS File System.
 {{% /md %}}</dd>
@@ -717,7 +573,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Efs<wbr>File<wbr>System<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of EFS File System.
 {{% /md %}}</dd>
@@ -726,7 +582,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Subdirectory</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Subdirectory to perform actions as source or destination. Default `/`.
 {{% /md %}}</dd>
@@ -735,7 +591,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Key-value pairs of resource tags to assign to the DataSync Location.
 {{% /md %}}</dd>
@@ -744,7 +600,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Uri</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -759,7 +615,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the DataSync Location.
 {{% /md %}}</dd>
@@ -768,7 +624,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Ec2Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#efslocationec2config">*Efs<wbr>Location<wbr>Ec2Config</a></span>
+        <span class="property-type"><a href="#efslocationec2config">Efs<wbr>Location<wbr>Ec2Config</a></span>
     </dt>
     <dd>{{% md %}}Configuration block containing EC2 configurations for connecting to the EFS File System.
 {{% /md %}}</dd>
@@ -777,7 +633,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Efs<wbr>File<wbr>System<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of EFS File System.
 {{% /md %}}</dd>
@@ -786,7 +642,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Subdirectory</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Subdirectory to perform actions as source or destination. Default `/`.
 {{% /md %}}</dd>
@@ -804,7 +660,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Uri</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -819,7 +675,7 @@ The following state arguments are supported:
             title="Optional">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the DataSync Location.
 {{% /md %}}</dd>
@@ -828,7 +684,7 @@ The following state arguments are supported:
             title="Optional">
         <span>ec2Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#efslocationec2config">Efs<wbr>Location<wbr>Ec2Config?</a></span>
+        <span class="property-type"><a href="#efslocationec2config">Efs<wbr>Location<wbr>Ec2Config</a></span>
     </dt>
     <dd>{{% md %}}Configuration block containing EC2 configurations for connecting to the EFS File System.
 {{% /md %}}</dd>
@@ -837,7 +693,7 @@ The following state arguments are supported:
             title="Optional">
         <span>efs<wbr>File<wbr>System<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">ARN?</span>
+        <span class="property-type">ARN</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of EFS File System.
 {{% /md %}}</dd>
@@ -846,7 +702,7 @@ The following state arguments are supported:
             title="Optional">
         <span>subdirectory</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Subdirectory to perform actions as source or destination. Default `/`.
 {{% /md %}}</dd>
@@ -855,7 +711,7 @@ The following state arguments are supported:
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Key-value pairs of resource tags to assign to the DataSync Location.
 {{% /md %}}</dd>
@@ -864,7 +720,7 @@ The following state arguments are supported:
             title="Optional">
         <span>uri</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -961,7 +817,7 @@ The following state arguments are supported:
             title="Required">
         <span>Security<wbr>Group<wbr>Arns</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of Amazon Resource Names (ARNs) of the EC2 Security Groups that are associated with the EFS Mount Target.
 {{% /md %}}</dd>

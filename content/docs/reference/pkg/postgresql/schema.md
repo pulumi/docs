@@ -52,7 +52,7 @@ const mySchema = new postgresql.Schema("my_schema", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/postgresql/#Schema">Schema</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/postgresql/#SchemaArgs">SchemaArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/postgresql/#Schema">Schema</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/postgresql/#SchemaArgs">SchemaArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -60,11 +60,11 @@ const mySchema = new postgresql.Schema("my_schema", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewSchema<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-postgresql/sdk/go/postgresql/?tab=doc#SchemaArgs">SchemaArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-postgresql/sdk/go/postgresql/?tab=doc#Schema">Schema</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewSchema<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-postgresql/sdk/go/postgresql/?tab=doc#SchemaArgs">SchemaArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-postgresql/sdk/go/postgresql/?tab=doc#Schema">Schema</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Postgresql/Pulumi.Postgresql..Schema.html">Schema</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Postgresql/Pulumi.Postgresql.SchemaArgs.html">SchemaArgs</a></span>? <span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Postgresql/Pulumi.Postgresql.Schema.html">Schema</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Postgresql/Pulumi.PostgreSql.SchemaArgs.html">SchemaArgs</a></span>? <span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -160,7 +160,7 @@ const mySchema = new postgresql.Schema("my_schema", {
             title="Optional">
         <span>Database</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DATABASE in which where this schema will be created. (Default: The database used by your `provider` configuration)
 {{% /md %}}</dd>
@@ -169,7 +169,7 @@ const mySchema = new postgresql.Schema("my_schema", {
             title="Optional">
         <span>Drop<wbr>Cascade</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When true, will also drop all the objects that are contained in the schema. (Default: false)
 {{% /md %}}</dd>
@@ -178,7 +178,7 @@ const mySchema = new postgresql.Schema("my_schema", {
             title="Optional">
         <span>If<wbr>Not<wbr>Exists</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When true, use the existing schema if it exists. (Default: true)
 {{% /md %}}</dd>
@@ -187,7 +187,7 @@ const mySchema = new postgresql.Schema("my_schema", {
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the schema. Must be unique in the PostgreSQL
 database instance where it is configured.
@@ -197,7 +197,7 @@ database instance where it is configured.
             title="Optional">
         <span>Owner</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ROLE who owns the schema.
 {{% /md %}}</dd>
@@ -206,7 +206,7 @@ database instance where it is configured.
             title="Optional">
         <span>Policies</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#schemapolicy">List&lt;Schema<wbr>Policy<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#schemapolicy">List&lt;Pulumi.<wbr>Postgre<wbr>Sql.<wbr>Inputs.<wbr>Schema<wbr>Policy<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Can be specified multiple times for each policy.  Each
 policy block supports fields documented below.
@@ -223,7 +223,7 @@ policy block supports fields documented below.
             title="Optional">
         <span>Database</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DATABASE in which where this schema will be created. (Default: The database used by your `provider` configuration)
 {{% /md %}}</dd>
@@ -232,7 +232,7 @@ policy block supports fields documented below.
             title="Optional">
         <span>Drop<wbr>Cascade</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When true, will also drop all the objects that are contained in the schema. (Default: false)
 {{% /md %}}</dd>
@@ -241,7 +241,7 @@ policy block supports fields documented below.
             title="Optional">
         <span>If<wbr>Not<wbr>Exists</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When true, use the existing schema if it exists. (Default: true)
 {{% /md %}}</dd>
@@ -250,7 +250,7 @@ policy block supports fields documented below.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the schema. Must be unique in the PostgreSQL
 database instance where it is configured.
@@ -260,7 +260,7 @@ database instance where it is configured.
             title="Optional">
         <span>Owner</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ROLE who owns the schema.
 {{% /md %}}</dd>
@@ -286,7 +286,7 @@ policy block supports fields documented below.
             title="Optional">
         <span>database</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DATABASE in which where this schema will be created. (Default: The database used by your `provider` configuration)
 {{% /md %}}</dd>
@@ -295,7 +295,7 @@ policy block supports fields documented below.
             title="Optional">
         <span>drop<wbr>Cascade</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When true, will also drop all the objects that are contained in the schema. (Default: false)
 {{% /md %}}</dd>
@@ -304,7 +304,7 @@ policy block supports fields documented below.
             title="Optional">
         <span>if<wbr>Not<wbr>Exists</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When true, use the existing schema if it exists. (Default: true)
 {{% /md %}}</dd>
@@ -313,7 +313,7 @@ policy block supports fields documented below.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the schema. Must be unique in the PostgreSQL
 database instance where it is configured.
@@ -323,277 +323,13 @@ database instance where it is configured.
             title="Optional">
         <span>owner</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The ROLE who owns the schema.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>policies</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#schemapolicy">Schema<wbr>Policy[]?</a></span>
-    </dt>
-    <dd>{{% md %}}Can be specified multiple times for each policy.  Each
-policy block supports fields documented below.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>database</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The DATABASE in which where this schema will be created. (Default: The database used by your `provider` configuration)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>drop_<wbr>cascade</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}When true, will also drop all the objects that are contained in the schema. (Default: false)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>if_<wbr>not_<wbr>exists</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}When true, use the existing schema if it exists. (Default: true)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the schema. Must be unique in the PostgreSQL
-database instance where it is configured.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>owner</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The ROLE who owns the schema.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>policies</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#schemapolicy">List[Schema<wbr>Policy]</a></span>
-    </dt>
-    <dd>{{% md %}}Can be specified multiple times for each policy.  Each
-policy block supports fields documented below.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-
-
-
-
-
-## Schema Output Properties
-
-The following output properties are available:
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Database</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The DATABASE in which where this schema will be created. (Default: The database used by your `provider` configuration)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Drop<wbr>Cascade</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}When true, will also drop all the objects that are contained in the schema. (Default: false)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>If<wbr>Not<wbr>Exists</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}When true, use the existing schema if it exists. (Default: true)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the schema. Must be unique in the PostgreSQL
-database instance where it is configured.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Owner</span>
-        <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ROLE who owns the schema.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span>Policies</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#schemapolicy">List&lt;Schema<wbr>Policy&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}Can be specified multiple times for each policy.  Each
-policy block supports fields documented below.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Database</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The DATABASE in which where this schema will be created. (Default: The database used by your `provider` configuration)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Drop<wbr>Cascade</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}When true, will also drop all the objects that are contained in the schema. (Default: false)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>If<wbr>Not<wbr>Exists</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}When true, use the existing schema if it exists. (Default: true)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the schema. Must be unique in the PostgreSQL
-database instance where it is configured.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Owner</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ROLE who owns the schema.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Policies</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#schemapolicy">[]Schema<wbr>Policy</a></span>
-    </dt>
-    <dd>{{% md %}}Can be specified multiple times for each policy.  Each
-policy block supports fields documented below.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>database</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The DATABASE in which where this schema will be created. (Default: The database used by your `provider` configuration)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>drop<wbr>Cascade</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}When true, will also drop all the objects that are contained in the schema. (Default: false)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>if<wbr>Not<wbr>Exists</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}When true, use the existing schema if it exists. (Default: true)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the schema. Must be unique in the PostgreSQL
-database instance where it is configured.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>owner</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ROLE who owns the schema.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>policies</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#schemapolicy">Schema<wbr>Policy[]</a></span>
@@ -609,8 +345,8 @@ policy block supports fields documented below.
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>database</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -618,8 +354,8 @@ policy block supports fields documented below.
     <dd>{{% md %}}The DATABASE in which where this schema will be created. (Default: The database used by your `provider` configuration)
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>drop_<wbr>cascade</span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
@@ -627,8 +363,8 @@ policy block supports fields documented below.
     <dd>{{% md %}}When true, will also drop all the objects that are contained in the schema. (Default: false)
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>if_<wbr>not_<wbr>exists</span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
@@ -636,8 +372,8 @@ policy block supports fields documented below.
     <dd>{{% md %}}When true, use the existing schema if it exists. (Default: true)
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -646,8 +382,8 @@ policy block supports fields documented below.
 database instance where it is configured.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>owner</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -655,8 +391,8 @@ database instance where it is configured.
     <dd>{{% md %}}The ROLE who owns the schema.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>policies</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#schemapolicy">List[Schema<wbr>Policy]</a></span>
@@ -667,6 +403,8 @@ policy block supports fields documented below.
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 
@@ -694,7 +432,7 @@ Get an existing Schema resource's state with the given name, ID, and optional ex
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Postgresql/Pulumi.Postgresql..Schema.html">Schema</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Postgresql/Pulumi.Postgresql..SchemaState.html">SchemaState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Postgresql/Pulumi.Postgresql.Schema.html">Schema</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Postgresql/Pulumi.Postgresql..SchemaState.html">SchemaState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -804,7 +542,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Database</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DATABASE in which where this schema will be created. (Default: The database used by your `provider` configuration)
 {{% /md %}}</dd>
@@ -813,7 +551,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Drop<wbr>Cascade</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When true, will also drop all the objects that are contained in the schema. (Default: false)
 {{% /md %}}</dd>
@@ -822,7 +560,7 @@ The following state arguments are supported:
             title="Optional">
         <span>If<wbr>Not<wbr>Exists</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When true, use the existing schema if it exists. (Default: true)
 {{% /md %}}</dd>
@@ -831,7 +569,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the schema. Must be unique in the PostgreSQL
 database instance where it is configured.
@@ -841,7 +579,7 @@ database instance where it is configured.
             title="Optional">
         <span>Owner</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ROLE who owns the schema.
 {{% /md %}}</dd>
@@ -850,7 +588,7 @@ database instance where it is configured.
             title="Optional">
         <span>Policies</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#schemapolicy">List&lt;Schema<wbr>Policy<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#schemapolicy">List&lt;Pulumi.<wbr>Postgre<wbr>Sql.<wbr>Inputs.<wbr>Schema<wbr>Policy<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Can be specified multiple times for each policy.  Each
 policy block supports fields documented below.
@@ -867,7 +605,7 @@ policy block supports fields documented below.
             title="Optional">
         <span>Database</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DATABASE in which where this schema will be created. (Default: The database used by your `provider` configuration)
 {{% /md %}}</dd>
@@ -876,7 +614,7 @@ policy block supports fields documented below.
             title="Optional">
         <span>Drop<wbr>Cascade</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When true, will also drop all the objects that are contained in the schema. (Default: false)
 {{% /md %}}</dd>
@@ -885,7 +623,7 @@ policy block supports fields documented below.
             title="Optional">
         <span>If<wbr>Not<wbr>Exists</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}When true, use the existing schema if it exists. (Default: true)
 {{% /md %}}</dd>
@@ -894,7 +632,7 @@ policy block supports fields documented below.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the schema. Must be unique in the PostgreSQL
 database instance where it is configured.
@@ -904,7 +642,7 @@ database instance where it is configured.
             title="Optional">
         <span>Owner</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ROLE who owns the schema.
 {{% /md %}}</dd>
@@ -930,7 +668,7 @@ policy block supports fields documented below.
             title="Optional">
         <span>database</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The DATABASE in which where this schema will be created. (Default: The database used by your `provider` configuration)
 {{% /md %}}</dd>
@@ -939,7 +677,7 @@ policy block supports fields documented below.
             title="Optional">
         <span>drop<wbr>Cascade</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When true, will also drop all the objects that are contained in the schema. (Default: false)
 {{% /md %}}</dd>
@@ -948,7 +686,7 @@ policy block supports fields documented below.
             title="Optional">
         <span>if<wbr>Not<wbr>Exists</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}When true, use the existing schema if it exists. (Default: true)
 {{% /md %}}</dd>
@@ -957,7 +695,7 @@ policy block supports fields documented below.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the schema. Must be unique in the PostgreSQL
 database instance where it is configured.
@@ -967,7 +705,7 @@ database instance where it is configured.
             title="Optional">
         <span>owner</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ROLE who owns the schema.
 {{% /md %}}</dd>
@@ -976,7 +714,7 @@ database instance where it is configured.
             title="Optional">
         <span>policies</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#schemapolicy">Schema<wbr>Policy[]?</a></span>
+        <span class="property-type"><a href="#schemapolicy">Schema<wbr>Policy[]</a></span>
     </dt>
     <dd>{{% md %}}Can be specified multiple times for each policy.  Each
 policy block supports fields documented below.
@@ -1078,7 +816,7 @@ policy block supports fields documented below.
             title="Optional">
         <span>Create</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the specified ROLE have CREATE privileges to the specified SCHEMA.
 {{% /md %}}</dd>
@@ -1087,7 +825,7 @@ policy block supports fields documented below.
             title="Optional">
         <span>Create<wbr>With<wbr>Grant</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the specified ROLE have CREATE privileges to the specified SCHEMA and the ability to GRANT the CREATE privilege to other ROLEs.
 {{% /md %}}</dd>
@@ -1096,7 +834,7 @@ policy block supports fields documented below.
             title="Optional">
         <span>Role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ROLE who is receiving the policy.  If this value is empty or not specified it implies the policy is referring to the [`PUBLIC` role](https://www.postgresql.org/docs/current/static/sql-grant.html).
 {{% /md %}}</dd>
@@ -1105,7 +843,7 @@ policy block supports fields documented below.
             title="Optional">
         <span>Usage</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the specified ROLE have USAGE privileges to the specified SCHEMA.
 {{% /md %}}</dd>
@@ -1114,7 +852,7 @@ policy block supports fields documented below.
             title="Optional">
         <span>Usage<wbr>With<wbr>Grant</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the specified ROLE have USAGE privileges to the specified SCHEMA and the ability to GRANT the USAGE privilege to other ROLEs.
 {{% /md %}}</dd>
@@ -1130,7 +868,7 @@ policy block supports fields documented below.
             title="Optional">
         <span>Create</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the specified ROLE have CREATE privileges to the specified SCHEMA.
 {{% /md %}}</dd>
@@ -1139,7 +877,7 @@ policy block supports fields documented below.
             title="Optional">
         <span>Create<wbr>With<wbr>Grant</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the specified ROLE have CREATE privileges to the specified SCHEMA and the ability to GRANT the CREATE privilege to other ROLEs.
 {{% /md %}}</dd>
@@ -1148,7 +886,7 @@ policy block supports fields documented below.
             title="Optional">
         <span>Role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ROLE who is receiving the policy.  If this value is empty or not specified it implies the policy is referring to the [`PUBLIC` role](https://www.postgresql.org/docs/current/static/sql-grant.html).
 {{% /md %}}</dd>
@@ -1157,7 +895,7 @@ policy block supports fields documented below.
             title="Optional">
         <span>Usage</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the specified ROLE have USAGE privileges to the specified SCHEMA.
 {{% /md %}}</dd>
@@ -1166,7 +904,7 @@ policy block supports fields documented below.
             title="Optional">
         <span>Usage<wbr>With<wbr>Grant</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Should the specified ROLE have USAGE privileges to the specified SCHEMA and the ability to GRANT the USAGE privilege to other ROLEs.
 {{% /md %}}</dd>
@@ -1182,7 +920,7 @@ policy block supports fields documented below.
             title="Optional">
         <span>create</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should the specified ROLE have CREATE privileges to the specified SCHEMA.
 {{% /md %}}</dd>
@@ -1191,7 +929,7 @@ policy block supports fields documented below.
             title="Optional">
         <span>create<wbr>With<wbr>Grant</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should the specified ROLE have CREATE privileges to the specified SCHEMA and the ability to GRANT the CREATE privilege to other ROLEs.
 {{% /md %}}</dd>
@@ -1200,7 +938,7 @@ policy block supports fields documented below.
             title="Optional">
         <span>role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ROLE who is receiving the policy.  If this value is empty or not specified it implies the policy is referring to the [`PUBLIC` role](https://www.postgresql.org/docs/current/static/sql-grant.html).
 {{% /md %}}</dd>
@@ -1209,7 +947,7 @@ policy block supports fields documented below.
             title="Optional">
         <span>usage</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should the specified ROLE have USAGE privileges to the specified SCHEMA.
 {{% /md %}}</dd>
@@ -1218,7 +956,7 @@ policy block supports fields documented below.
             title="Optional">
         <span>usage<wbr>With<wbr>Grant</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Should the specified ROLE have USAGE privileges to the specified SCHEMA and the ability to GRANT the USAGE privilege to other ROLEs.
 {{% /md %}}</dd>

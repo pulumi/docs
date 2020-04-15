@@ -36,7 +36,7 @@ const myBalancer = new spotinst.multai.Balancer("my_balancer", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/spotinst/multai/#Balancer">Balancer</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/spotinst/multai/#BalancerArgs">BalancerArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/spotinst/multai/#Balancer">Balancer</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/spotinst/multai/#BalancerArgs">BalancerArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -44,11 +44,11 @@ const myBalancer = new spotinst.multai.Balancer("my_balancer", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewBalancer<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/go/spotinst/multai?tab=doc#BalancerArgs">BalancerArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/go/spotinst/multai?tab=doc#Balancer">Balancer</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewBalancer<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/go/spotinst/multai?tab=doc#BalancerArgs">BalancerArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-spotinst/sdk/go/spotinst/multai?tab=doc#Balancer">Balancer</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.Spotinst.Multai.Balancer.html">Balancer</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.Spotinst.Multai.BalancerArgs.html">BalancerArgs</a></span>? <span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.Spotinst.Multai.Balancer.html">Balancer</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Spotinst/Pulumi.SpotInst.Multai.BalancerArgs.html">BalancerArgs</a></span>? <span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -144,7 +144,7 @@ const myBalancer = new spotinst.multai.Balancer("my_balancer", {
             title="Optional">
         <span>Connection<wbr>Timeouts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#balancerconnectiontimeouts">Balancer<wbr>Connection<wbr>Timeouts<wbr>Args?</a></span>
+        <span class="property-type"><a href="#balancerconnectiontimeouts">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Multai.<wbr>Inputs.<wbr>Balancer<wbr>Connection<wbr>Timeouts<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -152,7 +152,7 @@ const myBalancer = new spotinst.multai.Balancer("my_balancer", {
             title="Optional">
         <span>Dns<wbr>Cname<wbr>Aliases</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -160,7 +160,7 @@ const myBalancer = new spotinst.multai.Balancer("my_balancer", {
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The balancer name. May contain only alphanumeric characters or hyphens, and must not begin or end with a hyphen.
 {{% /md %}}</dd>
@@ -169,7 +169,7 @@ const myBalancer = new spotinst.multai.Balancer("my_balancer", {
             title="Optional">
         <span>Scheme</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -177,7 +177,7 @@ const myBalancer = new spotinst.multai.Balancer("my_balancer", {
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#balancertag">List&lt;Balancer<wbr>Tag<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#balancertag">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Multai.<wbr>Inputs.<wbr>Balancer<wbr>Tag<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of key:value paired tags.
 {{% /md %}}</dd>
@@ -193,7 +193,7 @@ const myBalancer = new spotinst.multai.Balancer("my_balancer", {
             title="Optional">
         <span>Connection<wbr>Timeouts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#balancerconnectiontimeouts">*Balancer<wbr>Connection<wbr>Timeouts</a></span>
+        <span class="property-type"><a href="#balancerconnectiontimeouts">Balancer<wbr>Connection<wbr>Timeouts</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -209,7 +209,7 @@ const myBalancer = new spotinst.multai.Balancer("my_balancer", {
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The balancer name. May contain only alphanumeric characters or hyphens, and must not begin or end with a hyphen.
 {{% /md %}}</dd>
@@ -218,7 +218,7 @@ const myBalancer = new spotinst.multai.Balancer("my_balancer", {
             title="Optional">
         <span>Scheme</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -242,7 +242,7 @@ const myBalancer = new spotinst.multai.Balancer("my_balancer", {
             title="Optional">
         <span>connection<wbr>Timeouts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#balancerconnectiontimeouts">Balancer<wbr>Connection<wbr>Timeouts?</a></span>
+        <span class="property-type"><a href="#balancerconnectiontimeouts">Balancer<wbr>Connection<wbr>Timeouts</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -250,7 +250,7 @@ const myBalancer = new spotinst.multai.Balancer("my_balancer", {
             title="Optional">
         <span>dns<wbr>Cname<wbr>Aliases</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -258,7 +258,7 @@ const myBalancer = new spotinst.multai.Balancer("my_balancer", {
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The balancer name. May contain only alphanumeric characters or hyphens, and must not begin or end with a hyphen.
 {{% /md %}}</dd>
@@ -267,7 +267,7 @@ const myBalancer = new spotinst.multai.Balancer("my_balancer", {
             title="Optional">
         <span>scheme</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -275,7 +275,7 @@ const myBalancer = new spotinst.multai.Balancer("my_balancer", {
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#balancertag">Balancer<wbr>Tag[]?</a></span>
+        <span class="property-type"><a href="#balancertag">Balancer<wbr>Tag[]</a></span>
     </dt>
     <dd>{{% md %}}A list of key:value paired tags.
 {{% /md %}}</dd>
@@ -333,212 +333,6 @@ const myBalancer = new spotinst.multai.Balancer("my_balancer", {
 {{% /choosable %}}
 
 
-
-
-
-
-
-## Balancer Output Properties
-
-The following output properties are available:
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Connection<wbr>Timeouts</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#balancerconnectiontimeouts">Balancer<wbr>Connection<wbr>Timeouts?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Dns<wbr>Cname<wbr>Aliases</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The balancer name. May contain only alphanumeric characters or hyphens, and must not begin or end with a hyphen.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Scheme</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#balancertag">List&lt;Balancer<wbr>Tag&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}A list of key:value paired tags.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Connection<wbr>Timeouts</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#balancerconnectiontimeouts">*Balancer<wbr>Connection<wbr>Timeouts</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Dns<wbr>Cname<wbr>Aliases</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The balancer name. May contain only alphanumeric characters or hyphens, and must not begin or end with a hyphen.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Scheme</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#balancertag">[]Balancer<wbr>Tag</a></span>
-    </dt>
-    <dd>{{% md %}}A list of key:value paired tags.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>connection<wbr>Timeouts</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#balancerconnectiontimeouts">Balancer<wbr>Connection<wbr>Timeouts?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>dns<wbr>Cname<wbr>Aliases</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The balancer name. May contain only alphanumeric characters or hyphens, and must not begin or end with a hyphen.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>scheme</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#balancertag">Balancer<wbr>Tag[]?</a></span>
-    </dt>
-    <dd>{{% md %}}A list of key:value paired tags.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>connection_<wbr>timeouts</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#balancerconnectiontimeouts">Dict[Balancer<wbr>Connection<wbr>Timeouts]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>dns_<wbr>cname_<wbr>aliases</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The balancer name. May contain only alphanumeric characters or hyphens, and must not begin or end with a hyphen.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>scheme</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#balancertag">List[Balancer<wbr>Tag]</a></span>
-    </dt>
-    <dd>{{% md %}}A list of key:value paired tags.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
 
 
 
@@ -676,7 +470,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Connection<wbr>Timeouts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#balancerconnectiontimeouts">Balancer<wbr>Connection<wbr>Timeouts<wbr>Args?</a></span>
+        <span class="property-type"><a href="#balancerconnectiontimeouts">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Multai.<wbr>Inputs.<wbr>Balancer<wbr>Connection<wbr>Timeouts<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -684,7 +478,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Dns<wbr>Cname<wbr>Aliases</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -692,7 +486,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The balancer name. May contain only alphanumeric characters or hyphens, and must not begin or end with a hyphen.
 {{% /md %}}</dd>
@@ -701,7 +495,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Scheme</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -709,7 +503,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#balancertag">List&lt;Balancer<wbr>Tag<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#balancertag">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Multai.<wbr>Inputs.<wbr>Balancer<wbr>Tag<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of key:value paired tags.
 {{% /md %}}</dd>
@@ -725,7 +519,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Connection<wbr>Timeouts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#balancerconnectiontimeouts">*Balancer<wbr>Connection<wbr>Timeouts</a></span>
+        <span class="property-type"><a href="#balancerconnectiontimeouts">Balancer<wbr>Connection<wbr>Timeouts</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -741,7 +535,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The balancer name. May contain only alphanumeric characters or hyphens, and must not begin or end with a hyphen.
 {{% /md %}}</dd>
@@ -750,7 +544,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Scheme</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -774,7 +568,7 @@ The following state arguments are supported:
             title="Optional">
         <span>connection<wbr>Timeouts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#balancerconnectiontimeouts">Balancer<wbr>Connection<wbr>Timeouts?</a></span>
+        <span class="property-type"><a href="#balancerconnectiontimeouts">Balancer<wbr>Connection<wbr>Timeouts</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -782,7 +576,7 @@ The following state arguments are supported:
             title="Optional">
         <span>dns<wbr>Cname<wbr>Aliases</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -790,7 +584,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The balancer name. May contain only alphanumeric characters or hyphens, and must not begin or end with a hyphen.
 {{% /md %}}</dd>
@@ -799,7 +593,7 @@ The following state arguments are supported:
             title="Optional">
         <span>scheme</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -807,7 +601,7 @@ The following state arguments are supported:
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#balancertag">Balancer<wbr>Tag[]?</a></span>
+        <span class="property-type"><a href="#balancertag">Balancer<wbr>Tag[]</a></span>
     </dt>
     <dd>{{% md %}}A list of key:value paired tags.
 {{% /md %}}</dd>
@@ -894,7 +688,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Draining</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time for the load balancer to keep connections alive before reporting the target as de-registered, in seconds (range: 1 - 3600).
 {{% /md %}}</dd>
@@ -903,7 +697,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Idle</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The idle timeout value, in seconds. (range: 1 - 3600).
 {{% /md %}}</dd>
@@ -919,7 +713,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Draining</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The time for the load balancer to keep connections alive before reporting the target as de-registered, in seconds (range: 1 - 3600).
 {{% /md %}}</dd>
@@ -928,7 +722,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Idle</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The idle timeout value, in seconds. (range: 1 - 3600).
 {{% /md %}}</dd>
@@ -944,7 +738,7 @@ The following state arguments are supported:
             title="Optional">
         <span>draining</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The time for the load balancer to keep connections alive before reporting the target as de-registered, in seconds (range: 1 - 3600).
 {{% /md %}}</dd>
@@ -953,7 +747,7 @@ The following state arguments are supported:
             title="Optional">
         <span>idle</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The idle timeout value, in seconds. (range: 1 - 3600).
 {{% /md %}}</dd>

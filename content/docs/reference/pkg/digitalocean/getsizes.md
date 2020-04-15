@@ -32,13 +32,13 @@ will be returned.
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupSizes<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/go/digitalocean/?tab=doc#GetSizesArgs">GetSizesArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/go/digitalocean/?tab=doc#LookupSizesResult">LookupSizesResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupSizes<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/go/digitalocean/?tab=doc#GetSizesArgs">GetSizesArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/go/digitalocean/?tab=doc#LookupSizesResult">LookupSizesResult</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetSizes </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.Digitalocean.GetSizesResult.html">GetSizesResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.Digitalocean.GetSizesArgs.html">GetSizesArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.Digitalocean.GetSizesResult.html">GetSizesResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.DigitalOcean.GetSizesArgs.html">GetSizesArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -55,7 +55,7 @@ The following arguments are supported:
             title="Optional">
         <span>Filters</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getsizesfilter">List&lt;Get<wbr>Sizes<wbr>Filter<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#getsizesfilter">List&lt;Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Inputs.<wbr>Get<wbr>Sizes<wbr>Filter<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Filter the results.
 The `filter` block is documented below.
@@ -65,7 +65,7 @@ The `filter` block is documented below.
             title="Optional">
         <span>Sorts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getsizessort">List&lt;Get<wbr>Sizes<wbr>Sort<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#getsizessort">List&lt;Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Inputs.<wbr>Get<wbr>Sizes<wbr>Sort<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Sort the results.
 The `sort` block is documented below.
@@ -109,7 +109,7 @@ The `sort` block is documented below.
             title="Optional">
         <span>filters</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getsizesfilter">Get<wbr>Sizes<wbr>Filter[]?</a></span>
+        <span class="property-type"><a href="#getsizesfilter">Get<wbr>Sizes<wbr>Filter[]</a></span>
     </dt>
     <dd>{{% md %}}Filter the results.
 The `filter` block is documented below.
@@ -119,7 +119,7 @@ The `filter` block is documented below.
             title="Optional">
         <span>sorts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getsizessort">Get<wbr>Sizes<wbr>Sort[]?</a></span>
+        <span class="property-type"><a href="#getsizessort">Get<wbr>Sizes<wbr>Sort[]</a></span>
     </dt>
     <dd>{{% md %}}Sort the results.
 The `sort` block is documented below.
@@ -174,14 +174,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Filters</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getsizesfilter">List&lt;Get<wbr>Sizes<wbr>Filter&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -193,7 +185,15 @@ The following output properties are available:
             title="">
         <span>Sizes</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getsizessize">List&lt;Get<wbr>Sizes<wbr>Size&gt;</a></span>
+        <span class="property-type"><a href="#getsizessize">List&lt;Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Outputs.<wbr>Get<wbr>Sizes<wbr>Size&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Filters</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getsizesfilter">List&lt;Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Outputs.<wbr>Get<wbr>Sizes<wbr>Filter&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -201,7 +201,7 @@ The following output properties are available:
             title="">
         <span>Sorts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getsizessort">List&lt;Get<wbr>Sizes<wbr>Sort&gt;?</a></span>
+        <span class="property-type"><a href="#getsizessort">List&lt;Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Outputs.<wbr>Get<wbr>Sizes<wbr>Sort&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -211,14 +211,6 @@ The following output properties are available:
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Filters</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getsizesfilter">[]Get<wbr>Sizes<wbr>Filter</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -239,6 +231,14 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>Filters</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getsizesfilter">[]Get<wbr>Sizes<wbr>Filter</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Sorts</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getsizessort">[]Get<wbr>Sizes<wbr>Sort</a></span>
@@ -251,14 +251,6 @@ The following output properties are available:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>filters</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getsizesfilter">Get<wbr>Sizes<wbr>Filter[]?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -279,9 +271,17 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>filters</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getsizesfilter">Get<wbr>Sizes<wbr>Filter[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>sorts</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getsizessort">Get<wbr>Sizes<wbr>Sort[]?</a></span>
+        <span class="property-type"><a href="#getsizessort">Get<wbr>Sizes<wbr>Sort[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -291,14 +291,6 @@ The following output properties are available:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>filters</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getsizesfilter">List[Get<wbr>Sizes<wbr>Filter]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -314,6 +306,14 @@ The following output properties are available:
         <span>sizes</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getsizessize">List[Get<wbr>Sizes<wbr>Size]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>filters</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getsizesfilter">List[Get<wbr>Sizes<wbr>Filter]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -367,7 +367,7 @@ The following output properties are available:
             title="Required">
         <span>Values</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Only retrieves images which keys has value that matches
 one of the values provided here.
@@ -528,7 +528,7 @@ one of the values provided here.
             title="Required">
         <span>Regions</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of region slugs where Droplets can be created in this size.
 {{% /md %}}</dd>
@@ -846,15 +846,6 @@ one of the values provided here.
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Direction</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The sort direction. This may be either `asc` or `desc`.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Key</span>
@@ -863,6 +854,15 @@ one of the values provided here.
     </dt>
     <dd>{{% md %}}Sort the sizes by this key. This may be one of `slug`,
 `memory`, `vcpus`, `disk`, `transfer`, `price_monthly`, or `price_hourly`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Direction</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The sort direction. This may be either `asc` or `desc`.
 {{% /md %}}</dd>
 
 </dl>
@@ -872,15 +872,6 @@ one of the values provided here.
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Direction</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The sort direction. This may be either `asc` or `desc`.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Key</span>
@@ -891,21 +882,21 @@ one of the values provided here.
 `memory`, `vcpus`, `disk`, `transfer`, `price_monthly`, or `price_hourly`.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>Direction</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The sort direction. This may be either `asc` or `desc`.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>direction</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The sort direction. This may be either `asc` or `desc`.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -917,21 +908,21 @@ one of the values provided here.
 `memory`, `vcpus`, `disk`, `transfer`, `price_monthly`, or `price_hourly`.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>direction</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The sort direction. This may be either `asc` or `desc`.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>direction</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The sort direction. This may be either `asc` or `desc`.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -941,6 +932,15 @@ one of the values provided here.
     </dt>
     <dd>{{% md %}}Sort the sizes by this key. This may be one of `slug`,
 `memory`, `vcpus`, `disk`, `transfer`, `price_monthly`, or `price_hourly`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>direction</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The sort direction. This may be either `asc` or `desc`.
 {{% /md %}}</dd>
 
 </dl>

@@ -27,7 +27,7 @@ block_external_search_index: true
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupCatalogNodes<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-consul/sdk/go/consul/?tab=doc#GetCatalogNodesArgs">GetCatalogNodesArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-consul/sdk/go/consul/?tab=doc#LookupCatalogNodesResult">LookupCatalogNodesResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupCatalogNodes<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-consul/sdk/go/consul/?tab=doc#GetCatalogNodesArgs">GetCatalogNodesArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-consul/sdk/go/consul/?tab=doc#LookupCatalogNodesResult">LookupCatalogNodesResult</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -50,7 +50,7 @@ The following arguments are supported:
             title="Optional">
         <span>Query<wbr>Options</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getcatalognodesqueryoption">List&lt;Get<wbr>Catalog<wbr>Nodes<wbr>Query<wbr>Option<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#getcatalognodesqueryoption">List&lt;Get<wbr>Catalog<wbr>Nodes<wbr>Query<wbr>Option<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -80,7 +80,7 @@ The following arguments are supported:
             title="Optional">
         <span>query<wbr>Options</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getcatalognodesqueryoption">Get<wbr>Catalog<wbr>Nodes<wbr>Query<wbr>Option[]?</a></span>
+        <span class="property-type"><a href="#getcatalognodesqueryoption">Get<wbr>Catalog<wbr>Nodes<wbr>Query<wbr>Option[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -140,7 +140,7 @@ The following output properties are available:
             title="">
         <span>Node<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -148,7 +148,7 @@ The following output properties are available:
             title="">
         <span>Node<wbr>Names</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -164,7 +164,7 @@ The following output properties are available:
             title="">
         <span>Query<wbr>Options</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getcatalognodesqueryoption">List&lt;Get<wbr>Catalog<wbr>Nodes<wbr>Query<wbr>Option&gt;?</a></span>
+        <span class="property-type"><a href="#getcatalognodesqueryoption">List&lt;Get<wbr>Catalog<wbr>Nodes<wbr>Query<wbr>Option&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -276,7 +276,7 @@ The following output properties are available:
             title="">
         <span>query<wbr>Options</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getcatalognodesqueryoption">Get<wbr>Catalog<wbr>Nodes<wbr>Query<wbr>Option[]?</a></span>
+        <span class="property-type"><a href="#getcatalognodesqueryoption">Get<wbr>Catalog<wbr>Nodes<wbr>Query<wbr>Option[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -383,7 +383,7 @@ The following output properties are available:
             title="Required">
         <span>Meta</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -399,7 +399,7 @@ The following output properties are available:
             title="Required">
         <span>Tagged<wbr>Addresses</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -570,7 +570,7 @@ The following output properties are available:
             title="Optional">
         <span>Allow<wbr>Stale</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -578,7 +578,7 @@ The following output properties are available:
             title="Optional">
         <span>Datacenter</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -586,7 +586,7 @@ The following output properties are available:
             title="Optional">
         <span>Near</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -594,7 +594,7 @@ The following output properties are available:
             title="Optional">
         <span>Node<wbr>Meta</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string>?</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -602,7 +602,7 @@ The following output properties are available:
             title="Optional">
         <span>Require<wbr>Consistent</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -610,7 +610,7 @@ The following output properties are available:
             title="Optional">
         <span>Token</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -618,7 +618,7 @@ The following output properties are available:
             title="Optional">
         <span>Wait<wbr>Index</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -626,7 +626,7 @@ The following output properties are available:
             title="Optional">
         <span>Wait<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -641,7 +641,7 @@ The following output properties are available:
             title="Optional">
         <span>Allow<wbr>Stale</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -649,7 +649,7 @@ The following output properties are available:
             title="Optional">
         <span>Datacenter</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -657,7 +657,7 @@ The following output properties are available:
             title="Optional">
         <span>Near</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -673,7 +673,7 @@ The following output properties are available:
             title="Optional">
         <span>Require<wbr>Consistent</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -681,7 +681,7 @@ The following output properties are available:
             title="Optional">
         <span>Token</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -689,7 +689,7 @@ The following output properties are available:
             title="Optional">
         <span>Wait<wbr>Index</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -697,7 +697,7 @@ The following output properties are available:
             title="Optional">
         <span>Wait<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -712,7 +712,7 @@ The following output properties are available:
             title="Optional">
         <span>allow<wbr>Stale</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -720,7 +720,7 @@ The following output properties are available:
             title="Optional">
         <span>datacenter</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -728,7 +728,7 @@ The following output properties are available:
             title="Optional">
         <span>near</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -736,7 +736,7 @@ The following output properties are available:
             title="Optional">
         <span>node<wbr>Meta</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}?</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -744,7 +744,7 @@ The following output properties are available:
             title="Optional">
         <span>require<wbr>Consistent</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -752,7 +752,7 @@ The following output properties are available:
             title="Optional">
         <span>token</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -760,7 +760,7 @@ The following output properties are available:
             title="Optional">
         <span>wait<wbr>Index</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -768,7 +768,7 @@ The following output properties are available:
             title="Optional">
         <span>wait<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

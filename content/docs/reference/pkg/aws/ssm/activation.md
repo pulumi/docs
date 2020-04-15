@@ -48,7 +48,7 @@ const foo = new aws.ssm.Activation("foo", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ssm/#Activation">Activation</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ssm/#ActivationArgs">ActivationArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ssm/#Activation">Activation</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ssm/#ActivationArgs">ActivationArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -56,7 +56,7 @@ const foo = new aws.ssm.Activation("foo", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewActivation<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ssm?tab=doc#ActivationArgs">ActivationArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ssm?tab=doc#Activation">Activation</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewActivation<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ssm?tab=doc#ActivationArgs">ActivationArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ssm?tab=doc#Activation">Activation</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -152,24 +152,6 @@ const foo = new aws.ssm.Activation("foo", {
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The description of the resource that you want to register.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Expiration<wbr>Date</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}UTC timestamp in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) by which this activation request should expire. The default value is 24 hours from resource creation time. This provider will only perform drift detection of its value when present in a configuration.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Iam<wbr>Role</span>
@@ -181,9 +163,27 @@ const foo = new aws.ssm.Activation("foo", {
 
     <dt class="property-optional"
             title="Optional">
+        <span>Description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The description of the resource that you want to register.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Expiration<wbr>Date</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}UTC timestamp in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) by which this activation request should expire. The default value is 24 hours from resource creation time. This provider will only perform drift detection of its value when present in a configuration.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default name of the registered managed instance.
 {{% /md %}}</dd>
@@ -192,7 +192,7 @@ const foo = new aws.ssm.Activation("foo", {
             title="Optional">
         <span>Registration<wbr>Limit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of managed instances you want to register. The default value is 1 instance.
 {{% /md %}}</dd>
@@ -201,7 +201,7 @@ const foo = new aws.ssm.Activation("foo", {
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the object.
 {{% /md %}}</dd>
@@ -213,24 +213,6 @@ const foo = new aws.ssm.Activation("foo", {
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The description of the resource that you want to register.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Expiration<wbr>Date</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}UTC timestamp in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) by which this activation request should expire. The default value is 24 hours from resource creation time. This provider will only perform drift detection of its value when present in a configuration.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Iam<wbr>Role</span>
@@ -242,9 +224,27 @@ const foo = new aws.ssm.Activation("foo", {
 
     <dt class="property-optional"
             title="Optional">
+        <span>Description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The description of the resource that you want to register.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Expiration<wbr>Date</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}UTC timestamp in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) by which this activation request should expire. The default value is 24 hours from resource creation time. This provider will only perform drift detection of its value when present in a configuration.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default name of the registered managed instance.
 {{% /md %}}</dd>
@@ -253,7 +253,7 @@ const foo = new aws.ssm.Activation("foo", {
             title="Optional">
         <span>Registration<wbr>Limit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of managed instances you want to register. The default value is 1 instance.
 {{% /md %}}</dd>
@@ -274,24 +274,6 @@ const foo = new aws.ssm.Activation("foo", {
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The description of the resource that you want to register.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>expiration<wbr>Date</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}UTC timestamp in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) by which this activation request should expire. The default value is 24 hours from resource creation time. This provider will only perform drift detection of its value when present in a configuration.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>iam<wbr>Role</span>
@@ -303,9 +285,27 @@ const foo = new aws.ssm.Activation("foo", {
 
     <dt class="property-optional"
             title="Optional">
+        <span>description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The description of the resource that you want to register.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>expiration<wbr>Date</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}UTC timestamp in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) by which this activation request should expire. The default value is 24 hours from resource creation time. This provider will only perform drift detection of its value when present in a configuration.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default name of the registered managed instance.
 {{% /md %}}</dd>
@@ -314,7 +314,7 @@ const foo = new aws.ssm.Activation("foo", {
             title="Optional">
         <span>registration<wbr>Limit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum number of managed instances you want to register. The default value is 1 instance.
 {{% /md %}}</dd>
@@ -323,7 +323,7 @@ const foo = new aws.ssm.Activation("foo", {
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the object.
 {{% /md %}}</dd>
@@ -334,6 +334,15 @@ const foo = new aws.ssm.Activation("foo", {
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>iam_<wbr>role</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The IAM Role to attach to the managed instance.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -351,15 +360,6 @@ const foo = new aws.ssm.Activation("foo", {
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}UTC timestamp in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) by which this activation request should expire. The default value is 24 hours from resource creation time. This provider will only perform drift detection of its value when present in a configuration.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>iam_<wbr>role</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The IAM Role to attach to the managed instance.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -419,24 +419,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The description of the resource that you want to register.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Expiration<wbr>Date</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}UTC timestamp in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) by which this activation request should expire. The default value is 24 hours from resource creation time. This provider will only perform drift detection of its value when present in a configuration.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Expired</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -446,47 +428,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Iam<wbr>Role</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The IAM Role to attach to the managed instance.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The default name of the registered managed instance.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Registration<wbr>Count</span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of managed instances that are currently registered using this activation.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Registration<wbr>Limit</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}The maximum number of managed instances you want to register. The default value is 1 instance.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the object.
 {{% /md %}}</dd>
 
 </dl>
@@ -507,24 +453,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The description of the resource that you want to register.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Expiration<wbr>Date</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}UTC timestamp in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) by which this activation request should expire. The default value is 24 hours from resource creation time. This provider will only perform drift detection of its value when present in a configuration.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Expired</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -534,47 +462,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Iam<wbr>Role</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The IAM Role to attach to the managed instance.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The default name of the registered managed instance.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Registration<wbr>Count</span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of managed instances that are currently registered using this activation.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Registration<wbr>Limit</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}The maximum number of managed instances you want to register. The default value is 1 instance.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the object.
 {{% /md %}}</dd>
 
 </dl>
@@ -595,24 +487,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The description of the resource that you want to register.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>expiration<wbr>Date</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}UTC timestamp in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) by which this activation request should expire. The default value is 24 hours from resource creation time. This provider will only perform drift detection of its value when present in a configuration.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>expired</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -622,47 +496,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>iam<wbr>Role</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The IAM Role to attach to the managed instance.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The default name of the registered managed instance.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>registration<wbr>Count</span>
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of managed instances that are currently registered using this activation.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>registration<wbr>Limit</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}The maximum number of managed instances you want to register. The default value is 1 instance.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the object.
 {{% /md %}}</dd>
 
 </dl>
@@ -683,24 +521,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The description of the resource that you want to register.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>expiration_<wbr>date</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}UTC timestamp in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) by which this activation request should expire. The default value is 24 hours from resource creation time. This provider will only perform drift detection of its value when present in a configuration.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>expired</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -710,47 +530,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>iam_<wbr>role</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The IAM Role to attach to the managed instance.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The default name of the registered managed instance.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>registration_<wbr>count</span>
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}The number of managed instances that are currently registered using this activation.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>registration_<wbr>limit</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The maximum number of managed instances you want to register. The default value is 1 instance.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the object.
 {{% /md %}}</dd>
 
 </dl>
@@ -892,7 +676,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Activation<wbr>Code</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The code the system generates when it processes the activation.
 {{% /md %}}</dd>
@@ -901,7 +685,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the resource that you want to register.
 {{% /md %}}</dd>
@@ -910,7 +694,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Expiration<wbr>Date</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}UTC timestamp in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) by which this activation request should expire. The default value is 24 hours from resource creation time. This provider will only perform drift detection of its value when present in a configuration.
 {{% /md %}}</dd>
@@ -919,7 +703,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Expired</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If the current activation has expired.
 {{% /md %}}</dd>
@@ -928,7 +712,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Iam<wbr>Role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IAM Role to attach to the managed instance.
 {{% /md %}}</dd>
@@ -937,7 +721,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default name of the registered managed instance.
 {{% /md %}}</dd>
@@ -946,7 +730,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Registration<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of managed instances that are currently registered using this activation.
 {{% /md %}}</dd>
@@ -955,7 +739,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Registration<wbr>Limit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of managed instances you want to register. The default value is 1 instance.
 {{% /md %}}</dd>
@@ -964,7 +748,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the object.
 {{% /md %}}</dd>
@@ -980,7 +764,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Activation<wbr>Code</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The code the system generates when it processes the activation.
 {{% /md %}}</dd>
@@ -989,7 +773,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the resource that you want to register.
 {{% /md %}}</dd>
@@ -998,7 +782,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Expiration<wbr>Date</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}UTC timestamp in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) by which this activation request should expire. The default value is 24 hours from resource creation time. This provider will only perform drift detection of its value when present in a configuration.
 {{% /md %}}</dd>
@@ -1007,7 +791,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Expired</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If the current activation has expired.
 {{% /md %}}</dd>
@@ -1016,7 +800,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Iam<wbr>Role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IAM Role to attach to the managed instance.
 {{% /md %}}</dd>
@@ -1025,7 +809,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default name of the registered managed instance.
 {{% /md %}}</dd>
@@ -1034,7 +818,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Registration<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The number of managed instances that are currently registered using this activation.
 {{% /md %}}</dd>
@@ -1043,7 +827,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Registration<wbr>Limit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum number of managed instances you want to register. The default value is 1 instance.
 {{% /md %}}</dd>
@@ -1068,7 +852,7 @@ The following state arguments are supported:
             title="Optional">
         <span>activation<wbr>Code</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The code the system generates when it processes the activation.
 {{% /md %}}</dd>
@@ -1077,7 +861,7 @@ The following state arguments are supported:
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the resource that you want to register.
 {{% /md %}}</dd>
@@ -1086,7 +870,7 @@ The following state arguments are supported:
             title="Optional">
         <span>expiration<wbr>Date</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}UTC timestamp in [RFC3339 format](https://tools.ietf.org/html/rfc3339#section-5.8) by which this activation request should expire. The default value is 24 hours from resource creation time. This provider will only perform drift detection of its value when present in a configuration.
 {{% /md %}}</dd>
@@ -1095,7 +879,7 @@ The following state arguments are supported:
             title="Optional">
         <span>expired</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If the current activation has expired.
 {{% /md %}}</dd>
@@ -1104,7 +888,7 @@ The following state arguments are supported:
             title="Optional">
         <span>iam<wbr>Role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IAM Role to attach to the managed instance.
 {{% /md %}}</dd>
@@ -1113,7 +897,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The default name of the registered managed instance.
 {{% /md %}}</dd>
@@ -1122,7 +906,7 @@ The following state arguments are supported:
             title="Optional">
         <span>registration<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The number of managed instances that are currently registered using this activation.
 {{% /md %}}</dd>
@@ -1131,7 +915,7 @@ The following state arguments are supported:
             title="Optional">
         <span>registration<wbr>Limit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum number of managed instances you want to register. The default value is 1 instance.
 {{% /md %}}</dd>
@@ -1140,7 +924,7 @@ The following state arguments are supported:
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the object.
 {{% /md %}}</dd>

@@ -135,7 +135,7 @@ const connector = new aws.directoryservice.Directory("connector", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/directoryservice/#Directory">Directory</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/directoryservice/#DirectoryArgs">DirectoryArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/directoryservice/#Directory">Directory</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/directoryservice/#DirectoryArgs">DirectoryArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -143,11 +143,11 @@ const connector = new aws.directoryservice.Directory("connector", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewDirectory<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/directoryservice?tab=doc#DirectoryArgs">DirectoryArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/directoryservice?tab=doc#Directory">Directory</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewDirectory<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/directoryservice?tab=doc#DirectoryArgs">DirectoryArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/directoryservice?tab=doc#Directory">Directory</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Directoryservice.Directory.html">Directory</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.DirectoryService.DirectoryArgs.html">DirectoryArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.DirectoryService.Directory.html">Directory</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.DirectoryService.DirectoryArgs.html">DirectoryArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -239,60 +239,6 @@ const connector = new aws.directoryservice.Directory("connector", {
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Alias</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The alias for the directory (must be unique amongst all aliases in AWS). Required for `enable_sso`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Connect<wbr>Settings</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#directoryconnectsettings">Directory<wbr>Connect<wbr>Settings<wbr>Args?</a></span>
-    </dt>
-    <dd>{{% md %}}Connector related information about the directory. Fields documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}A textual description for the directory.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Edition</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The MicrosoftAD edition (`Standard` or `Enterprise`). Defaults to `Enterprise` (applies to MicrosoftAD type only).
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Enable<wbr>Sso</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Whether to enable single-sign on for the directory. Requires `alias`. Defaults to `false`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The fully qualified name for the directory, such as `corp.example.com`
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Password</span>
@@ -304,9 +250,63 @@ const connector = new aws.directoryservice.Directory("connector", {
 
     <dt class="property-optional"
             title="Optional">
+        <span>Alias</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The alias for the directory (must be unique amongst all aliases in AWS). Required for `enable_sso`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Connect<wbr>Settings</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#directoryconnectsettings">Directory<wbr>Connect<wbr>Settings<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Connector related information about the directory. Fields documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A textual description for the directory.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Edition</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The MicrosoftAD edition (`Standard` or `Enterprise`). Defaults to `Enterprise` (applies to MicrosoftAD type only).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Enable<wbr>Sso</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to enable single-sign on for the directory. Requires `alias`. Defaults to `false`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The fully qualified name for the directory, such as `corp.example.com`
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Short<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The short name of the directory, such as `CORP`.
 {{% /md %}}</dd>
@@ -315,7 +315,7 @@ const connector = new aws.directoryservice.Directory("connector", {
             title="Optional">
         <span>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The size of the directory (`Small` or `Large` are accepted values).
 {{% /md %}}</dd>
@@ -324,7 +324,7 @@ const connector = new aws.directoryservice.Directory("connector", {
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -333,7 +333,7 @@ const connector = new aws.directoryservice.Directory("connector", {
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The directory type (`SimpleAD`, `ADConnector` or `MicrosoftAD` are accepted values). Defaults to `SimpleAD`.
 {{% /md %}}</dd>
@@ -342,7 +342,7 @@ const connector = new aws.directoryservice.Directory("connector", {
             title="Optional">
         <span>Vpc<wbr>Settings</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#directoryvpcsettings">Directory<wbr>Vpc<wbr>Settings<wbr>Args?</a></span>
+        <span class="property-type"><a href="#directoryvpcsettings">Directory<wbr>Vpc<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}VPC related information about the directory. Fields documented below.
 {{% /md %}}</dd>
@@ -354,60 +354,6 @@ const connector = new aws.directoryservice.Directory("connector", {
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Alias</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The alias for the directory (must be unique amongst all aliases in AWS). Required for `enable_sso`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Connect<wbr>Settings</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#directoryconnectsettings">*Directory<wbr>Connect<wbr>Settings</a></span>
-    </dt>
-    <dd>{{% md %}}Connector related information about the directory. Fields documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}A textual description for the directory.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Edition</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The MicrosoftAD edition (`Standard` or `Enterprise`). Defaults to `Enterprise` (applies to MicrosoftAD type only).
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Enable<wbr>Sso</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Whether to enable single-sign on for the directory. Requires `alias`. Defaults to `false`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The fully qualified name for the directory, such as `corp.example.com`
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Password</span>
@@ -419,9 +365,63 @@ const connector = new aws.directoryservice.Directory("connector", {
 
     <dt class="property-optional"
             title="Optional">
+        <span>Alias</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The alias for the directory (must be unique amongst all aliases in AWS). Required for `enable_sso`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Connect<wbr>Settings</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#directoryconnectsettings">Directory<wbr>Connect<wbr>Settings</a></span>
+    </dt>
+    <dd>{{% md %}}Connector related information about the directory. Fields documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A textual description for the directory.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Edition</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The MicrosoftAD edition (`Standard` or `Enterprise`). Defaults to `Enterprise` (applies to MicrosoftAD type only).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Enable<wbr>Sso</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to enable single-sign on for the directory. Requires `alias`. Defaults to `false`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The fully qualified name for the directory, such as `corp.example.com`
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Short<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The short name of the directory, such as `CORP`.
 {{% /md %}}</dd>
@@ -430,7 +430,7 @@ const connector = new aws.directoryservice.Directory("connector", {
             title="Optional">
         <span>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The size of the directory (`Small` or `Large` are accepted values).
 {{% /md %}}</dd>
@@ -448,7 +448,7 @@ const connector = new aws.directoryservice.Directory("connector", {
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The directory type (`SimpleAD`, `ADConnector` or `MicrosoftAD` are accepted values). Defaults to `SimpleAD`.
 {{% /md %}}</dd>
@@ -457,7 +457,7 @@ const connector = new aws.directoryservice.Directory("connector", {
             title="Optional">
         <span>Vpc<wbr>Settings</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#directoryvpcsettings">*Directory<wbr>Vpc<wbr>Settings</a></span>
+        <span class="property-type"><a href="#directoryvpcsettings">Directory<wbr>Vpc<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}VPC related information about the directory. Fields documented below.
 {{% /md %}}</dd>
@@ -468,60 +468,6 @@ const connector = new aws.directoryservice.Directory("connector", {
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>alias</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The alias for the directory (must be unique amongst all aliases in AWS). Required for `enable_sso`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>connect<wbr>Settings</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#directoryconnectsettings">Directory<wbr>Connect<wbr>Settings?</a></span>
-    </dt>
-    <dd>{{% md %}}Connector related information about the directory. Fields documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}A textual description for the directory.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>edition</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The MicrosoftAD edition (`Standard` or `Enterprise`). Defaults to `Enterprise` (applies to MicrosoftAD type only).
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>enable<wbr>Sso</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Whether to enable single-sign on for the directory. Requires `alias`. Defaults to `false`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The fully qualified name for the directory, such as `corp.example.com`
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -534,9 +480,63 @@ const connector = new aws.directoryservice.Directory("connector", {
 
     <dt class="property-optional"
             title="Optional">
+        <span>alias</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The alias for the directory (must be unique amongst all aliases in AWS). Required for `enable_sso`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>connect<wbr>Settings</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#directoryconnectsettings">Directory<wbr>Connect<wbr>Settings</a></span>
+    </dt>
+    <dd>{{% md %}}Connector related information about the directory. Fields documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A textual description for the directory.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>edition</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The MicrosoftAD edition (`Standard` or `Enterprise`). Defaults to `Enterprise` (applies to MicrosoftAD type only).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>enable<wbr>Sso</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether to enable single-sign on for the directory. Requires `alias`. Defaults to `false`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The fully qualified name for the directory, such as `corp.example.com`
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>short<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The short name of the directory, such as `CORP`.
 {{% /md %}}</dd>
@@ -545,7 +545,7 @@ const connector = new aws.directoryservice.Directory("connector", {
             title="Optional">
         <span>size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The size of the directory (`Small` or `Large` are accepted values).
 {{% /md %}}</dd>
@@ -554,7 +554,7 @@ const connector = new aws.directoryservice.Directory("connector", {
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -563,7 +563,7 @@ const connector = new aws.directoryservice.Directory("connector", {
             title="Optional">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The directory type (`SimpleAD`, `ADConnector` or `MicrosoftAD` are accepted values). Defaults to `SimpleAD`.
 {{% /md %}}</dd>
@@ -572,7 +572,7 @@ const connector = new aws.directoryservice.Directory("connector", {
             title="Optional">
         <span>vpc<wbr>Settings</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#directoryvpcsettings">Directory<wbr>Vpc<wbr>Settings?</a></span>
+        <span class="property-type"><a href="#directoryvpcsettings">Directory<wbr>Vpc<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}VPC related information about the directory. Fields documented below.
 {{% /md %}}</dd>
@@ -583,6 +583,15 @@ const connector = new aws.directoryservice.Directory("connector", {
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>password</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The password for the directory administrator or connector user.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -636,15 +645,6 @@ const connector = new aws.directoryservice.Directory("connector", {
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The fully qualified name for the directory, such as `corp.example.com`
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>password</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The password for the directory administrator or connector user.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -722,74 +722,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Alias</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The alias for the directory (must be unique amongst all aliases in AWS). Required for `enable_sso`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Connect<wbr>Settings</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#directoryconnectsettings">Directory<wbr>Connect<wbr>Settings?</a></span>
-    </dt>
-    <dd>{{% md %}}Connector related information about the directory. Fields documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}A textual description for the directory.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Dns<wbr>Ip<wbr>Addresses</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of IP addresses of the DNS servers for the directory or connector.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Edition</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The MicrosoftAD edition (`Standard` or `Enterprise`). Defaults to `Enterprise` (applies to MicrosoftAD type only).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Enable<wbr>Sso</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Whether to enable single-sign on for the directory. Requires `alias`. Defaults to `false`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The fully qualified name for the directory, such as `corp.example.com`
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Password</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The password for the directory administrator or connector user.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -799,51 +736,6 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the security group created by the directory.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Short<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The short name of the directory, such as `CORP`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The size of the directory (`Small` or `Large` are accepted values).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The directory type (`SimpleAD`, `ADConnector` or `MicrosoftAD` are accepted values). Defaults to `SimpleAD`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Vpc<wbr>Settings</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#directoryvpcsettings">Directory<wbr>Vpc<wbr>Settings?</a></span>
-    </dt>
-    <dd>{{% md %}}VPC related information about the directory. Fields documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -864,33 +756,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Alias</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The alias for the directory (must be unique amongst all aliases in AWS). Required for `enable_sso`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Connect<wbr>Settings</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#directoryconnectsettings">*Directory<wbr>Connect<wbr>Settings</a></span>
-    </dt>
-    <dd>{{% md %}}Connector related information about the directory. Fields documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}A textual description for the directory.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Dns<wbr>Ip<wbr>Addresses</span>
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
@@ -900,92 +765,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Edition</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The MicrosoftAD edition (`Standard` or `Enterprise`). Defaults to `Enterprise` (applies to MicrosoftAD type only).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Enable<wbr>Sso</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Whether to enable single-sign on for the directory. Requires `alias`. Defaults to `false`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The fully qualified name for the directory, such as `corp.example.com`
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Password</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The password for the directory administrator or connector user.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Security<wbr>Group<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the security group created by the directory.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Short<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The short name of the directory, such as `CORP`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The size of the directory (`Small` or `Large` are accepted values).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The directory type (`SimpleAD`, `ADConnector` or `MicrosoftAD` are accepted values). Defaults to `SimpleAD`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Vpc<wbr>Settings</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#directoryvpcsettings">*Directory<wbr>Vpc<wbr>Settings</a></span>
-    </dt>
-    <dd>{{% md %}}VPC related information about the directory. Fields documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1006,33 +790,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>alias</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The alias for the directory (must be unique amongst all aliases in AWS). Required for `enable_sso`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>connect<wbr>Settings</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#directoryconnectsettings">Directory<wbr>Connect<wbr>Settings?</a></span>
-    </dt>
-    <dd>{{% md %}}Connector related information about the directory. Fields documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}A textual description for the directory.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>dns<wbr>Ip<wbr>Addresses</span>
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
@@ -1042,92 +799,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>edition</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The MicrosoftAD edition (`Standard` or `Enterprise`). Defaults to `Enterprise` (applies to MicrosoftAD type only).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>enable<wbr>Sso</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Whether to enable single-sign on for the directory. Requires `alias`. Defaults to `false`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The fully qualified name for the directory, such as `corp.example.com`
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>password</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The password for the directory administrator or connector user.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>security<wbr>Group<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the security group created by the directory.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>short<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The short name of the directory, such as `CORP`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The size of the directory (`Small` or `Large` are accepted values).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The directory type (`SimpleAD`, `ADConnector` or `MicrosoftAD` are accepted values). Defaults to `SimpleAD`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>vpc<wbr>Settings</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#directoryvpcsettings">Directory<wbr>Vpc<wbr>Settings?</a></span>
-    </dt>
-    <dd>{{% md %}}VPC related information about the directory. Fields documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1148,33 +824,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>alias</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The alias for the directory (must be unique amongst all aliases in AWS). Required for `enable_sso`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>connect_<wbr>settings</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#directoryconnectsettings">Dict[Directory<wbr>Connect<wbr>Settings]</a></span>
-    </dt>
-    <dd>{{% md %}}Connector related information about the directory. Fields documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}A textual description for the directory.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>dns_<wbr>ip_<wbr>addresses</span>
         <span class="property-indicator"></span>
         <span class="property-type">List[str]</span>
@@ -1184,92 +833,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>edition</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The MicrosoftAD edition (`Standard` or `Enterprise`). Defaults to `Enterprise` (applies to MicrosoftAD type only).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>enable_<wbr>sso</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Whether to enable single-sign on for the directory. Requires `alias`. Defaults to `false`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The fully qualified name for the directory, such as `corp.example.com`
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>password</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The password for the directory administrator or connector user.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>security_<wbr>group_<wbr>id</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the security group created by the directory.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>short_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The short name of the directory, such as `CORP`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The size of the directory (`Small` or `Large` are accepted values).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The directory type (`SimpleAD`, `ADConnector` or `MicrosoftAD` are accepted values). Defaults to `SimpleAD`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>vpc_<wbr>settings</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#directoryvpcsettings">Dict[Directory<wbr>Vpc<wbr>Settings]</a></span>
-    </dt>
-    <dd>{{% md %}}VPC related information about the directory. Fields documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1301,7 +869,7 @@ Get an existing Directory resource's state with the given name, ID, and optional
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Directoryservice.Directory.html">Directory</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Directoryservice.DirectoryState.html">DirectoryState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.DirectoryService.Directory.html">Directory</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.DirectoryService.DirectoryState.html">DirectoryState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1411,7 +979,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Access<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The access URL for the directory, such as `http://alias.awsapps.com`.
 {{% /md %}}</dd>
@@ -1420,7 +988,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Alias</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The alias for the directory (must be unique amongst all aliases in AWS). Required for `enable_sso`.
 {{% /md %}}</dd>
@@ -1429,7 +997,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Connect<wbr>Settings</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#directoryconnectsettings">Directory<wbr>Connect<wbr>Settings<wbr>Args?</a></span>
+        <span class="property-type"><a href="#directoryconnectsettings">Directory<wbr>Connect<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Connector related information about the directory. Fields documented below.
 {{% /md %}}</dd>
@@ -1438,7 +1006,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A textual description for the directory.
 {{% /md %}}</dd>
@@ -1447,7 +1015,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Dns<wbr>Ip<wbr>Addresses</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of IP addresses of the DNS servers for the directory or connector.
 {{% /md %}}</dd>
@@ -1456,7 +1024,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Edition</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The MicrosoftAD edition (`Standard` or `Enterprise`). Defaults to `Enterprise` (applies to MicrosoftAD type only).
 {{% /md %}}</dd>
@@ -1465,7 +1033,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Enable<wbr>Sso</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to enable single-sign on for the directory. Requires `alias`. Defaults to `false`.
 {{% /md %}}</dd>
@@ -1474,7 +1042,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fully qualified name for the directory, such as `corp.example.com`
 {{% /md %}}</dd>
@@ -1483,7 +1051,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password for the directory administrator or connector user.
 {{% /md %}}</dd>
@@ -1492,7 +1060,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Security<wbr>Group<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the security group created by the directory.
 {{% /md %}}</dd>
@@ -1501,7 +1069,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Short<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The short name of the directory, such as `CORP`.
 {{% /md %}}</dd>
@@ -1510,7 +1078,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The size of the directory (`Small` or `Large` are accepted values).
 {{% /md %}}</dd>
@@ -1519,7 +1087,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1528,7 +1096,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The directory type (`SimpleAD`, `ADConnector` or `MicrosoftAD` are accepted values). Defaults to `SimpleAD`.
 {{% /md %}}</dd>
@@ -1537,7 +1105,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Vpc<wbr>Settings</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#directoryvpcsettings">Directory<wbr>Vpc<wbr>Settings<wbr>Args?</a></span>
+        <span class="property-type"><a href="#directoryvpcsettings">Directory<wbr>Vpc<wbr>Settings<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}VPC related information about the directory. Fields documented below.
 {{% /md %}}</dd>
@@ -1553,7 +1121,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Access<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The access URL for the directory, such as `http://alias.awsapps.com`.
 {{% /md %}}</dd>
@@ -1562,7 +1130,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Alias</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The alias for the directory (must be unique amongst all aliases in AWS). Required for `enable_sso`.
 {{% /md %}}</dd>
@@ -1571,7 +1139,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Connect<wbr>Settings</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#directoryconnectsettings">*Directory<wbr>Connect<wbr>Settings</a></span>
+        <span class="property-type"><a href="#directoryconnectsettings">Directory<wbr>Connect<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Connector related information about the directory. Fields documented below.
 {{% /md %}}</dd>
@@ -1580,7 +1148,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A textual description for the directory.
 {{% /md %}}</dd>
@@ -1598,7 +1166,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Edition</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The MicrosoftAD edition (`Standard` or `Enterprise`). Defaults to `Enterprise` (applies to MicrosoftAD type only).
 {{% /md %}}</dd>
@@ -1607,7 +1175,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Enable<wbr>Sso</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to enable single-sign on for the directory. Requires `alias`. Defaults to `false`.
 {{% /md %}}</dd>
@@ -1616,7 +1184,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fully qualified name for the directory, such as `corp.example.com`
 {{% /md %}}</dd>
@@ -1625,7 +1193,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password for the directory administrator or connector user.
 {{% /md %}}</dd>
@@ -1634,7 +1202,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Security<wbr>Group<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the security group created by the directory.
 {{% /md %}}</dd>
@@ -1643,7 +1211,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Short<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The short name of the directory, such as `CORP`.
 {{% /md %}}</dd>
@@ -1652,7 +1220,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The size of the directory (`Small` or `Large` are accepted values).
 {{% /md %}}</dd>
@@ -1670,7 +1238,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The directory type (`SimpleAD`, `ADConnector` or `MicrosoftAD` are accepted values). Defaults to `SimpleAD`.
 {{% /md %}}</dd>
@@ -1679,7 +1247,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Vpc<wbr>Settings</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#directoryvpcsettings">*Directory<wbr>Vpc<wbr>Settings</a></span>
+        <span class="property-type"><a href="#directoryvpcsettings">Directory<wbr>Vpc<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}VPC related information about the directory. Fields documented below.
 {{% /md %}}</dd>
@@ -1695,7 +1263,7 @@ The following state arguments are supported:
             title="Optional">
         <span>access<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The access URL for the directory, such as `http://alias.awsapps.com`.
 {{% /md %}}</dd>
@@ -1704,7 +1272,7 @@ The following state arguments are supported:
             title="Optional">
         <span>alias</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The alias for the directory (must be unique amongst all aliases in AWS). Required for `enable_sso`.
 {{% /md %}}</dd>
@@ -1713,7 +1281,7 @@ The following state arguments are supported:
             title="Optional">
         <span>connect<wbr>Settings</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#directoryconnectsettings">Directory<wbr>Connect<wbr>Settings?</a></span>
+        <span class="property-type"><a href="#directoryconnectsettings">Directory<wbr>Connect<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Connector related information about the directory. Fields documented below.
 {{% /md %}}</dd>
@@ -1722,7 +1290,7 @@ The following state arguments are supported:
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A textual description for the directory.
 {{% /md %}}</dd>
@@ -1731,7 +1299,7 @@ The following state arguments are supported:
             title="Optional">
         <span>dns<wbr>Ip<wbr>Addresses</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of IP addresses of the DNS servers for the directory or connector.
 {{% /md %}}</dd>
@@ -1740,7 +1308,7 @@ The following state arguments are supported:
             title="Optional">
         <span>edition</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The MicrosoftAD edition (`Standard` or `Enterprise`). Defaults to `Enterprise` (applies to MicrosoftAD type only).
 {{% /md %}}</dd>
@@ -1749,7 +1317,7 @@ The following state arguments are supported:
             title="Optional">
         <span>enable<wbr>Sso</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to enable single-sign on for the directory. Requires `alias`. Defaults to `false`.
 {{% /md %}}</dd>
@@ -1758,7 +1326,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The fully qualified name for the directory, such as `corp.example.com`
 {{% /md %}}</dd>
@@ -1767,7 +1335,7 @@ The following state arguments are supported:
             title="Optional">
         <span>password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The password for the directory administrator or connector user.
 {{% /md %}}</dd>
@@ -1776,7 +1344,7 @@ The following state arguments are supported:
             title="Optional">
         <span>security<wbr>Group<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the security group created by the directory.
 {{% /md %}}</dd>
@@ -1785,7 +1353,7 @@ The following state arguments are supported:
             title="Optional">
         <span>short<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The short name of the directory, such as `CORP`.
 {{% /md %}}</dd>
@@ -1794,7 +1362,7 @@ The following state arguments are supported:
             title="Optional">
         <span>size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The size of the directory (`Small` or `Large` are accepted values).
 {{% /md %}}</dd>
@@ -1803,7 +1371,7 @@ The following state arguments are supported:
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1812,7 +1380,7 @@ The following state arguments are supported:
             title="Optional">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The directory type (`SimpleAD`, `ADConnector` or `MicrosoftAD` are accepted values). Defaults to `SimpleAD`.
 {{% /md %}}</dd>
@@ -1821,7 +1389,7 @@ The following state arguments are supported:
             title="Optional">
         <span>vpc<wbr>Settings</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#directoryvpcsettings">Directory<wbr>Vpc<wbr>Settings?</a></span>
+        <span class="property-type"><a href="#directoryvpcsettings">Directory<wbr>Vpc<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}VPC related information about the directory. Fields documented below.
 {{% /md %}}</dd>
@@ -2001,7 +1569,7 @@ The following state arguments are supported:
             title="Required">
         <span>Customer<wbr>Dns<wbr>Ips</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The DNS IP addresses of the domain to connect to.
 {{% /md %}}</dd>
@@ -2019,7 +1587,7 @@ The following state arguments are supported:
             title="Required">
         <span>Subnet<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The identifiers of the subnets for the directory servers (2 subnets in 2 different AZs).
 {{% /md %}}</dd>
@@ -2188,7 +1756,7 @@ The following state arguments are supported:
             title="Required">
         <span>Subnet<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The identifiers of the subnets for the directory servers (2 subnets in 2 different AZs).
 {{% /md %}}</dd>

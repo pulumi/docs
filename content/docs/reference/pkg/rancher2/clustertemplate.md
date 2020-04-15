@@ -14,7 +14,7 @@ block_external_search_index: true
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/rancher2/#ClusterTemplate">ClusterTemplate</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/rancher2/#ClusterTemplateArgs">ClusterTemplateArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/rancher2/#ClusterTemplate">ClusterTemplate</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/rancher2/#ClusterTemplateArgs">ClusterTemplateArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -22,11 +22,11 @@ block_external_search_index: true
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewClusterTemplate<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/go/rancher2/?tab=doc#ClusterTemplateArgs">ClusterTemplateArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/go/rancher2/?tab=doc#ClusterTemplate">ClusterTemplate</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewClusterTemplate<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/go/rancher2/?tab=doc#ClusterTemplateArgs">ClusterTemplateArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/go/rancher2/?tab=doc#ClusterTemplate">ClusterTemplate</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2..ClusterTemplate.html">ClusterTemplate</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.ClusterTemplateArgs.html">ClusterTemplateArgs</a></span>? <span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.ClusterTemplate.html">ClusterTemplate</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.ClusterTemplateArgs.html">ClusterTemplateArgs</a></span>? <span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -122,7 +122,7 @@ block_external_search_index: true
             title="Optional">
         <span>Annotations</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Annotations for the cluster template revision (map)
 {{% /md %}}</dd>
@@ -131,7 +131,7 @@ block_external_search_index: true
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cluster template description
 {{% /md %}}</dd>
@@ -140,7 +140,7 @@ block_external_search_index: true
             title="Optional">
         <span>Labels</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Labels for the cluster template revision (map)
 {{% /md %}}</dd>
@@ -149,7 +149,7 @@ block_external_search_index: true
             title="Optional">
         <span>Members</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatemember">List&lt;Cluster<wbr>Template<wbr>Member<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#clustertemplatemember">List&lt;Cluster<wbr>Template<wbr>Member<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Cluster template members (list)
 {{% /md %}}</dd>
@@ -158,7 +158,7 @@ block_external_search_index: true
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The cluster template revision name (string)
 {{% /md %}}</dd>
@@ -167,7 +167,7 @@ block_external_search_index: true
             title="Optional">
         <span>Template<wbr>Revisions</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevision">List&lt;Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevision">List&lt;Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Cluster template revisions (list)
 {{% /md %}}</dd>
@@ -192,7 +192,7 @@ block_external_search_index: true
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cluster template description
 {{% /md %}}</dd>
@@ -219,7 +219,7 @@ block_external_search_index: true
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The cluster template revision name (string)
 {{% /md %}}</dd>
@@ -244,7 +244,7 @@ block_external_search_index: true
             title="Optional">
         <span>annotations</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Annotations for the cluster template revision (map)
 {{% /md %}}</dd>
@@ -253,7 +253,7 @@ block_external_search_index: true
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cluster template description
 {{% /md %}}</dd>
@@ -262,7 +262,7 @@ block_external_search_index: true
             title="Optional">
         <span>labels</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Labels for the cluster template revision (map)
 {{% /md %}}</dd>
@@ -271,7 +271,7 @@ block_external_search_index: true
             title="Optional">
         <span>members</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatemember">Cluster<wbr>Template<wbr>Member[]?</a></span>
+        <span class="property-type"><a href="#clustertemplatemember">Cluster<wbr>Template<wbr>Member[]</a></span>
     </dt>
     <dd>{{% md %}}Cluster template members (list)
 {{% /md %}}</dd>
@@ -280,7 +280,7 @@ block_external_search_index: true
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The cluster template revision name (string)
 {{% /md %}}</dd>
@@ -289,7 +289,7 @@ block_external_search_index: true
             title="Optional">
         <span>template<wbr>Revisions</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevision">Cluster<wbr>Template<wbr>Template<wbr>Revision[]?</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevision">Cluster<wbr>Template<wbr>Template<wbr>Revision[]</a></span>
     </dt>
     <dd>{{% md %}}Cluster template revisions (list)
 {{% /md %}}</dd>
@@ -376,65 +376,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Annotations</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object></span>
-    </dt>
-    <dd>{{% md %}}Annotations for the cluster template revision (map)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Default<wbr>Revision<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) Default cluster template revision ID (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Cluster template description
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Labels</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object></span>
-    </dt>
-    <dd>{{% md %}}Labels for the cluster template revision (map)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Members</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatemember">List&lt;Cluster<wbr>Template<wbr>Member&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}Cluster template members (list)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The cluster template revision name (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Template<wbr>Revisions</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevision">List&lt;Cluster<wbr>Template<wbr>Template<wbr>Revision&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}Cluster template revisions (list)
 {{% /md %}}</dd>
 
 </dl>
@@ -446,65 +392,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Annotations</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
-    </dt>
-    <dd>{{% md %}}Annotations for the cluster template revision (map)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Default<wbr>Revision<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) Default cluster template revision ID (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Cluster template description
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Labels</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
-    </dt>
-    <dd>{{% md %}}Labels for the cluster template revision (map)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Members</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatemember">[]Cluster<wbr>Template<wbr>Member</a></span>
-    </dt>
-    <dd>{{% md %}}Cluster template members (list)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The cluster template revision name (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Template<wbr>Revisions</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevision">[]Cluster<wbr>Template<wbr>Template<wbr>Revision</a></span>
-    </dt>
-    <dd>{{% md %}}Cluster template revisions (list)
 {{% /md %}}</dd>
 
 </dl>
@@ -516,65 +408,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>annotations</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
-    </dt>
-    <dd>{{% md %}}Annotations for the cluster template revision (map)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>default<wbr>Revision<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) Default cluster template revision ID (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Cluster template description
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>labels</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
-    </dt>
-    <dd>{{% md %}}Labels for the cluster template revision (map)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>members</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatemember">Cluster<wbr>Template<wbr>Member[]?</a></span>
-    </dt>
-    <dd>{{% md %}}Cluster template members (list)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The cluster template revision name (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>template<wbr>Revisions</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevision">Cluster<wbr>Template<wbr>Template<wbr>Revision[]</a></span>
-    </dt>
-    <dd>{{% md %}}Cluster template revisions (list)
 {{% /md %}}</dd>
 
 </dl>
@@ -586,65 +424,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>annotations</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
-    </dt>
-    <dd>{{% md %}}Annotations for the cluster template revision (map)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>default_<wbr>revision_<wbr>id</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}(Computed) Default cluster template revision ID (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Cluster template description
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>labels</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
-    </dt>
-    <dd>{{% md %}}Labels for the cluster template revision (map)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>members</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatemember">List[Cluster<wbr>Template<wbr>Member]</a></span>
-    </dt>
-    <dd>{{% md %}}Cluster template members (list)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The cluster template revision name (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>template_<wbr>revisions</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevision">List[Cluster<wbr>Template<wbr>Template<wbr>Revision]</a></span>
-    </dt>
-    <dd>{{% md %}}Cluster template revisions (list)
 {{% /md %}}</dd>
 
 </dl>
@@ -676,7 +460,7 @@ Get an existing ClusterTemplate resource's state with the given name, ID, and op
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2..ClusterTemplate.html">ClusterTemplate</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2..ClusterTemplateState.html">ClusterTemplateState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.ClusterTemplate.html">ClusterTemplate</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2..ClusterTemplateState.html">ClusterTemplateState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -786,7 +570,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Annotations</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Annotations for the cluster template revision (map)
 {{% /md %}}</dd>
@@ -795,7 +579,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Default<wbr>Revision<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) Default cluster template revision ID (string)
 {{% /md %}}</dd>
@@ -804,7 +588,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cluster template description
 {{% /md %}}</dd>
@@ -813,7 +597,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Labels</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Labels for the cluster template revision (map)
 {{% /md %}}</dd>
@@ -822,7 +606,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Members</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatemember">List&lt;Cluster<wbr>Template<wbr>Member<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#clustertemplatemember">List&lt;Cluster<wbr>Template<wbr>Member<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Cluster template members (list)
 {{% /md %}}</dd>
@@ -831,7 +615,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The cluster template revision name (string)
 {{% /md %}}</dd>
@@ -840,7 +624,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Template<wbr>Revisions</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevision">List&lt;Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevision">List&lt;Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Cluster template revisions (list)
 {{% /md %}}</dd>
@@ -865,7 +649,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Default<wbr>Revision<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) Default cluster template revision ID (string)
 {{% /md %}}</dd>
@@ -874,7 +658,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cluster template description
 {{% /md %}}</dd>
@@ -901,7 +685,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The cluster template revision name (string)
 {{% /md %}}</dd>
@@ -926,7 +710,7 @@ The following state arguments are supported:
             title="Optional">
         <span>annotations</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Annotations for the cluster template revision (map)
 {{% /md %}}</dd>
@@ -935,7 +719,7 @@ The following state arguments are supported:
             title="Optional">
         <span>default<wbr>Revision<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}(Computed) Default cluster template revision ID (string)
 {{% /md %}}</dd>
@@ -944,7 +728,7 @@ The following state arguments are supported:
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cluster template description
 {{% /md %}}</dd>
@@ -953,7 +737,7 @@ The following state arguments are supported:
             title="Optional">
         <span>labels</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Labels for the cluster template revision (map)
 {{% /md %}}</dd>
@@ -962,7 +746,7 @@ The following state arguments are supported:
             title="Optional">
         <span>members</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatemember">Cluster<wbr>Template<wbr>Member[]?</a></span>
+        <span class="property-type"><a href="#clustertemplatemember">Cluster<wbr>Template<wbr>Member[]</a></span>
     </dt>
     <dd>{{% md %}}Cluster template members (list)
 {{% /md %}}</dd>
@@ -971,7 +755,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The cluster template revision name (string)
 {{% /md %}}</dd>
@@ -980,7 +764,7 @@ The following state arguments are supported:
             title="Optional">
         <span>template<wbr>Revisions</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevision">Cluster<wbr>Template<wbr>Template<wbr>Revision[]?</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevision">Cluster<wbr>Template<wbr>Template<wbr>Revision[]</a></span>
     </dt>
     <dd>{{% md %}}Cluster template revisions (list)
 {{% /md %}}</dd>
@@ -1088,7 +872,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Access<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Member access type. Valid values: `["read-only" | "owner"]` (string)
 {{% /md %}}</dd>
@@ -1097,7 +881,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Group<wbr>Principal<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Member group principal id (string)
 {{% /md %}}</dd>
@@ -1106,7 +890,7 @@ The following state arguments are supported:
             title="Optional">
         <span>User<wbr>Principal<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Member user principal id (string)
 {{% /md %}}</dd>
@@ -1122,7 +906,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Access<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Member access type. Valid values: `["read-only" | "owner"]` (string)
 {{% /md %}}</dd>
@@ -1131,7 +915,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Group<wbr>Principal<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Member group principal id (string)
 {{% /md %}}</dd>
@@ -1140,7 +924,7 @@ The following state arguments are supported:
             title="Optional">
         <span>User<wbr>Principal<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Member user principal id (string)
 {{% /md %}}</dd>
@@ -1156,7 +940,7 @@ The following state arguments are supported:
             title="Optional">
         <span>access<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Member access type. Valid values: `["read-only" | "owner"]` (string)
 {{% /md %}}</dd>
@@ -1165,7 +949,7 @@ The following state arguments are supported:
             title="Optional">
         <span>group<wbr>Principal<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Member group principal id (string)
 {{% /md %}}</dd>
@@ -1174,7 +958,7 @@ The following state arguments are supported:
             title="Optional">
         <span>user<wbr>Principal<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Member user principal id (string)
 {{% /md %}}</dd>
@@ -1235,15 +1019,6 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Annotations</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
-    </dt>
-    <dd>{{% md %}}Annotations for the cluster template revision (map)
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Cluster<wbr>Config</span>
@@ -1251,51 +1026,6 @@ The following state arguments are supported:
         <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfig">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Cluster configuration (list maxitem: 1)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Cluster<wbr>Template<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Cluster template ID (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Default</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Default variable value (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Enable cluster template revision. Default `true` (bool)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The cluster template revision ID (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Labels</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
-    </dt>
-    <dd>{{% md %}}Labels for the cluster template revision (map)
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1309,9 +1039,63 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>Annotations</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+    </dt>
+    <dd>{{% md %}}Annotations for the cluster template revision (map)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Cluster<wbr>Template<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Cluster template ID (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Default</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Default variable value (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Enabled</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable cluster template revision. Default `true` (bool)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The cluster template revision ID (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Labels</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+    </dt>
+    <dd>{{% md %}}Labels for the cluster template revision (map)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Questions</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionquestion">List&lt;Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Question<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionquestion">List&lt;Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Question<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Cluster template questions (list)
 {{% /md %}}</dd>
@@ -1323,15 +1107,6 @@ The following state arguments are supported:
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Annotations</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
-    </dt>
-    <dd>{{% md %}}Annotations for the cluster template revision (map)
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Cluster<wbr>Config</span>
@@ -1341,11 +1116,29 @@ The following state arguments are supported:
     <dd>{{% md %}}Cluster configuration (list maxitem: 1)
 {{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The cluster template revision name (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Annotations</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}Annotations for the cluster template revision (map)
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Cluster<wbr>Template<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Cluster template ID (string)
 {{% /md %}}</dd>
@@ -1354,7 +1147,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Default</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Default variable value (string)
 {{% /md %}}</dd>
@@ -1363,7 +1156,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable cluster template revision. Default `true` (bool)
 {{% /md %}}</dd>
@@ -1372,7 +1165,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The cluster template revision ID (string)
 {{% /md %}}</dd>
@@ -1384,15 +1177,6 @@ The following state arguments are supported:
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}Labels for the cluster template revision (map)
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The cluster template revision name (string)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1411,15 +1195,6 @@ The following state arguments are supported:
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>annotations</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
-    </dt>
-    <dd>{{% md %}}Annotations for the cluster template revision (map)
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>cluster<wbr>Config</span>
@@ -1427,51 +1202,6 @@ The following state arguments are supported:
         <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfig">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Cluster configuration (list maxitem: 1)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>cluster<wbr>Template<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Cluster template ID (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>default</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Default variable value (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Enable cluster template revision. Default `true` (bool)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The cluster template revision ID (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>labels</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
-    </dt>
-    <dd>{{% md %}}Labels for the cluster template revision (map)
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1485,9 +1215,63 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>annotations</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}</span>
+    </dt>
+    <dd>{{% md %}}Annotations for the cluster template revision (map)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>cluster<wbr>Template<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Cluster template ID (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>default</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Default variable value (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>enabled</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Enable cluster template revision. Default `true` (bool)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The cluster template revision ID (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>labels</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}</span>
+    </dt>
+    <dd>{{% md %}}Labels for the cluster template revision (map)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>questions</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionquestion">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Question[]?</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionquestion">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Question[]</a></span>
     </dt>
     <dd>{{% md %}}Cluster template questions (list)
 {{% /md %}}</dd>
@@ -1499,15 +1283,6 @@ The following state arguments are supported:
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>annotations</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
-    </dt>
-    <dd>{{% md %}}Annotations for the cluster template revision (map)
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>cluster<wbr>Config</span>
@@ -1515,6 +1290,24 @@ The following state arguments are supported:
         <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfig">Dict[Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config]</a></span>
     </dt>
     <dd>{{% md %}}Cluster configuration (list maxitem: 1)
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The cluster template revision name (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>annotations</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}Annotations for the cluster template revision (map)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1562,15 +1355,6 @@ The following state arguments are supported:
     <dd>{{% md %}}Labels for the cluster template revision (map)
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The cluster template revision name (string)
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>questions</span>
@@ -1602,87 +1386,6 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Cluster<wbr>Auth<wbr>Endpoint</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigclusterauthendpoint">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Cluster<wbr>Auth<wbr>Endpoint<wbr>Args?</a></span>
-    </dt>
-    <dd>{{% md %}}Local cluster auth endpoint (list maxitems: 1)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Default<wbr>Cluster<wbr>Role<wbr>For<wbr>Project<wbr>Members</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Default cluster role for project members (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Default<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Default pod security policy template ID (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Desired<wbr>Agent<wbr>Image</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Desired agent image (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Desired<wbr>Auth<wbr>Image</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Desired auth image (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Docker<wbr>Root<wbr>Dir</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Desired auth image (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Enable<wbr>Cluster<wbr>Alerting</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Enable built-in cluster alerting. Default: `false` (bool)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Enable<wbr>Cluster<wbr>Monitoring</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Enable built-in cluster monitoring. Default: `false` (bool)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Enable<wbr>Network<wbr>Policy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Enable project network isolation. Default: `false` (bool)
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Rke<wbr>Config</span>
@@ -1695,9 +1398,90 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>Cluster<wbr>Auth<wbr>Endpoint</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigclusterauthendpoint">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Cluster<wbr>Auth<wbr>Endpoint<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Local cluster auth endpoint (list maxitems: 1)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Default<wbr>Cluster<wbr>Role<wbr>For<wbr>Project<wbr>Members</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Default cluster role for project members (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Default<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Default pod security policy template ID (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Desired<wbr>Agent<wbr>Image</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Desired agent image (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Desired<wbr>Auth<wbr>Image</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Desired auth image (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Docker<wbr>Root<wbr>Dir</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Desired auth image (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Enable<wbr>Cluster<wbr>Alerting</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable built-in cluster alerting. Default: `false` (bool)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Enable<wbr>Cluster<wbr>Monitoring</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable built-in cluster monitoring. Default: `false` (bool)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Enable<wbr>Network<wbr>Policy</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable project network isolation. Default: `false` (bool)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Scheduled<wbr>Cluster<wbr>Scan</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigscheduledclusterscan">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Scheduled<wbr>Cluster<wbr>Scan<wbr>Args?</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigscheduledclusterscan">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Scheduled<wbr>Cluster<wbr>Scan<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1705,7 +1489,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Windows<wbr>Prefered<wbr>Cluster</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Windows prefered cluster. Default: `false` (bool)
 {{% /md %}}</dd>
@@ -1716,87 +1500,6 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Cluster<wbr>Auth<wbr>Endpoint</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigclusterauthendpoint">*Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Cluster<wbr>Auth<wbr>Endpoint</a></span>
-    </dt>
-    <dd>{{% md %}}Local cluster auth endpoint (list maxitems: 1)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Default<wbr>Cluster<wbr>Role<wbr>For<wbr>Project<wbr>Members</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Default cluster role for project members (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Default<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Default pod security policy template ID (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Desired<wbr>Agent<wbr>Image</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Desired agent image (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Desired<wbr>Auth<wbr>Image</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Desired auth image (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Docker<wbr>Root<wbr>Dir</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Desired auth image (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Enable<wbr>Cluster<wbr>Alerting</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Enable built-in cluster alerting. Default: `false` (bool)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Enable<wbr>Cluster<wbr>Monitoring</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Enable built-in cluster monitoring. Default: `false` (bool)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Enable<wbr>Network<wbr>Policy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Enable project network isolation. Default: `false` (bool)
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1810,9 +1513,90 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>Cluster<wbr>Auth<wbr>Endpoint</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigclusterauthendpoint">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Cluster<wbr>Auth<wbr>Endpoint</a></span>
+    </dt>
+    <dd>{{% md %}}Local cluster auth endpoint (list maxitems: 1)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Default<wbr>Cluster<wbr>Role<wbr>For<wbr>Project<wbr>Members</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Default cluster role for project members (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Default<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Default pod security policy template ID (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Desired<wbr>Agent<wbr>Image</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Desired agent image (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Desired<wbr>Auth<wbr>Image</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Desired auth image (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Docker<wbr>Root<wbr>Dir</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Desired auth image (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Enable<wbr>Cluster<wbr>Alerting</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable built-in cluster alerting. Default: `false` (bool)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Enable<wbr>Cluster<wbr>Monitoring</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable built-in cluster monitoring. Default: `false` (bool)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Enable<wbr>Network<wbr>Policy</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable project network isolation. Default: `false` (bool)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Scheduled<wbr>Cluster<wbr>Scan</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigscheduledclusterscan">*Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Scheduled<wbr>Cluster<wbr>Scan</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigscheduledclusterscan">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Scheduled<wbr>Cluster<wbr>Scan</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1820,7 +1604,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Windows<wbr>Prefered<wbr>Cluster</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Windows prefered cluster. Default: `false` (bool)
 {{% /md %}}</dd>
@@ -1831,87 +1615,6 @@ The following state arguments are supported:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>cluster<wbr>Auth<wbr>Endpoint</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigclusterauthendpoint">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Cluster<wbr>Auth<wbr>Endpoint?</a></span>
-    </dt>
-    <dd>{{% md %}}Local cluster auth endpoint (list maxitems: 1)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>default<wbr>Cluster<wbr>Role<wbr>For<wbr>Project<wbr>Members</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Default cluster role for project members (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>default<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Default pod security policy template ID (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>desired<wbr>Agent<wbr>Image</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Desired agent image (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>desired<wbr>Auth<wbr>Image</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Desired auth image (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>docker<wbr>Root<wbr>Dir</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Desired auth image (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>enable<wbr>Cluster<wbr>Alerting</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Enable built-in cluster alerting. Default: `false` (bool)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>enable<wbr>Cluster<wbr>Monitoring</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Enable built-in cluster monitoring. Default: `false` (bool)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>enable<wbr>Network<wbr>Policy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Enable project network isolation. Default: `false` (bool)
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1925,9 +1628,90 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>cluster<wbr>Auth<wbr>Endpoint</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigclusterauthendpoint">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Cluster<wbr>Auth<wbr>Endpoint</a></span>
+    </dt>
+    <dd>{{% md %}}Local cluster auth endpoint (list maxitems: 1)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>default<wbr>Cluster<wbr>Role<wbr>For<wbr>Project<wbr>Members</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Default cluster role for project members (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>default<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Default pod security policy template ID (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>desired<wbr>Agent<wbr>Image</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Desired agent image (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>desired<wbr>Auth<wbr>Image</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Desired auth image (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>docker<wbr>Root<wbr>Dir</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Desired auth image (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>enable<wbr>Cluster<wbr>Alerting</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Enable built-in cluster alerting. Default: `false` (bool)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>enable<wbr>Cluster<wbr>Monitoring</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Enable built-in cluster monitoring. Default: `false` (bool)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>enable<wbr>Network<wbr>Policy</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Enable project network isolation. Default: `false` (bool)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>scheduled<wbr>Cluster<wbr>Scan</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigscheduledclusterscan">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Scheduled<wbr>Cluster<wbr>Scan?</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigscheduledclusterscan">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Scheduled<wbr>Cluster<wbr>Scan</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1935,7 +1719,7 @@ The following state arguments are supported:
             title="Optional">
         <span>windows<wbr>Prefered<wbr>Cluster</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Windows prefered cluster. Default: `false` (bool)
 {{% /md %}}</dd>
@@ -1946,6 +1730,16 @@ The following state arguments are supported:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>rke_<wbr>config</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfig">Dict[Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config]</a></span>
+    </dt>
+    <dd>{{% md %}}Rancher Kubernetes Engine Config (list maxitems: 1)
+* `scheduled_cluster_scan`- (Optional) Cluster scheduled cis scan. For Rancher v2.4.0 or above (List MaxItem:1)
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2028,16 +1822,6 @@ The following state arguments are supported:
     <dd>{{% md %}}Enable project network isolation. Default: `false` (bool)
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>rke_<wbr>config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfig">Dict[Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config]</a></span>
-    </dt>
-    <dd>{{% md %}}Rancher Kubernetes Engine Config (list maxitems: 1)
-* `scheduled_cluster_scan`- (Optional) Cluster scheduled cis scan. For Rancher v2.4.0 or above (List MaxItem:1)
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>scheduled_<wbr>cluster_<wbr>scan</span>
@@ -2081,7 +1865,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Ca<wbr>Certs</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2089,7 +1873,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable cluster template revision. Default `true` (bool)
 {{% /md %}}</dd>
@@ -2098,7 +1882,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Fqdn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2113,7 +1897,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Ca<wbr>Certs</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2121,7 +1905,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable cluster template revision. Default `true` (bool)
 {{% /md %}}</dd>
@@ -2130,7 +1914,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Fqdn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2145,7 +1929,7 @@ The following state arguments are supported:
             title="Optional">
         <span>ca<wbr>Certs</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2153,7 +1937,7 @@ The following state arguments are supported:
             title="Optional">
         <span>enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable cluster template revision. Default `true` (bool)
 {{% /md %}}</dd>
@@ -2162,7 +1946,7 @@ The following state arguments are supported:
             title="Optional">
         <span>fqdn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2224,7 +2008,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Addon<wbr>Job<wbr>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2232,7 +2016,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Addons</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2240,7 +2024,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Addons<wbr>Includes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2248,7 +2032,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Authentication</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigauthentication">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Authentication<wbr>Args?</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigauthentication">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Authentication<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2256,7 +2040,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Authorization</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigauthorization">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Authorization<wbr>Args?</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigauthorization">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Authorization<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2264,7 +2048,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Bastion<wbr>Host</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigbastionhost">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Bastion<wbr>Host<wbr>Args?</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigbastionhost">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Bastion<wbr>Host<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2272,7 +2056,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Cloud<wbr>Provider</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovider">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Args?</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovider">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2280,7 +2064,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Dns</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigdns">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Dns<wbr>Args?</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigdns">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Dns<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2288,7 +2072,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Ignore<wbr>Docker<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2296,7 +2080,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Ingress</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigingress">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Ingress<wbr>Args?</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigingress">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Ingress<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2304,7 +2088,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Kubernetes<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2312,7 +2096,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Monitoring</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigmonitoring">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Monitoring<wbr>Args?</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigmonitoring">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Monitoring<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2320,7 +2104,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Network</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfignetwork">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Network<wbr>Args?</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfignetwork">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Network<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2328,7 +2112,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Nodes</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfignode">List&lt;Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Node<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfignode">List&lt;Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Node<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2336,7 +2120,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Prefix<wbr>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2344,7 +2128,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Private<wbr>Registries</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigprivateregistry">List&lt;Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Private<wbr>Registry<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigprivateregistry">List&lt;Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Private<wbr>Registry<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2352,7 +2136,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Services</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigservices">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Args?</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigservices">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2360,7 +2144,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Ssh<wbr>Agent<wbr>Auth</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2368,7 +2152,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Ssh<wbr>Cert<wbr>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2376,7 +2160,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Ssh<wbr>Key<wbr>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2384,7 +2168,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Upgrade<wbr>Strategy</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigupgradestrategy">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Upgrade<wbr>Strategy<wbr>Args?</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigupgradestrategy">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Upgrade<wbr>Strategy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2399,7 +2183,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Addon<wbr>Job<wbr>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2407,7 +2191,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Addons</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2423,7 +2207,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Authentication</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigauthentication">*Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Authentication</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigauthentication">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Authentication</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2431,7 +2215,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Authorization</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigauthorization">*Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Authorization</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigauthorization">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Authorization</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2439,7 +2223,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Bastion<wbr>Host</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigbastionhost">*Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Bastion<wbr>Host</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigbastionhost">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Bastion<wbr>Host</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2447,7 +2231,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Cloud<wbr>Provider</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovider">*Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovider">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2455,7 +2239,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Dns</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigdns">*Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Dns</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigdns">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Dns</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2463,7 +2247,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Ignore<wbr>Docker<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2471,7 +2255,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Ingress</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigingress">*Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Ingress</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigingress">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Ingress</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2479,7 +2263,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Kubernetes<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2487,7 +2271,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Monitoring</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigmonitoring">*Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Monitoring</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigmonitoring">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Monitoring</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2495,7 +2279,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Network</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfignetwork">*Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Network</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfignetwork">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Network</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2511,7 +2295,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Prefix<wbr>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2527,7 +2311,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Services</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigservices">*Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigservices">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2535,7 +2319,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Ssh<wbr>Agent<wbr>Auth</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2543,7 +2327,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Ssh<wbr>Cert<wbr>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2551,7 +2335,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Ssh<wbr>Key<wbr>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2559,7 +2343,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Upgrade<wbr>Strategy</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigupgradestrategy">*Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Upgrade<wbr>Strategy</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigupgradestrategy">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Upgrade<wbr>Strategy</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2574,7 +2358,7 @@ The following state arguments are supported:
             title="Optional">
         <span>addon<wbr>Job<wbr>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2582,7 +2366,7 @@ The following state arguments are supported:
             title="Optional">
         <span>addons</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2590,7 +2374,7 @@ The following state arguments are supported:
             title="Optional">
         <span>addons<wbr>Includes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2598,7 +2382,7 @@ The following state arguments are supported:
             title="Optional">
         <span>authentication</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigauthentication">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Authentication?</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigauthentication">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Authentication</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2606,7 +2390,7 @@ The following state arguments are supported:
             title="Optional">
         <span>authorization</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigauthorization">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Authorization?</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigauthorization">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Authorization</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2614,7 +2398,7 @@ The following state arguments are supported:
             title="Optional">
         <span>bastion<wbr>Host</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigbastionhost">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Bastion<wbr>Host?</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigbastionhost">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Bastion<wbr>Host</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2622,7 +2406,7 @@ The following state arguments are supported:
             title="Optional">
         <span>cloud<wbr>Provider</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovider">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider?</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovider">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2630,7 +2414,7 @@ The following state arguments are supported:
             title="Optional">
         <span>dns</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigdns">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Dns?</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigdns">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Dns</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2638,7 +2422,7 @@ The following state arguments are supported:
             title="Optional">
         <span>ignore<wbr>Docker<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2646,7 +2430,7 @@ The following state arguments are supported:
             title="Optional">
         <span>ingress</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigingress">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Ingress?</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigingress">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Ingress</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2654,7 +2438,7 @@ The following state arguments are supported:
             title="Optional">
         <span>kubernetes<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2662,7 +2446,7 @@ The following state arguments are supported:
             title="Optional">
         <span>monitoring</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigmonitoring">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Monitoring?</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigmonitoring">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Monitoring</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2670,7 +2454,7 @@ The following state arguments are supported:
             title="Optional">
         <span>network</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfignetwork">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Network?</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfignetwork">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Network</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2678,7 +2462,7 @@ The following state arguments are supported:
             title="Optional">
         <span>nodes</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfignode">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Node[]?</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfignode">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Node[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2686,7 +2470,7 @@ The following state arguments are supported:
             title="Optional">
         <span>prefix<wbr>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2694,7 +2478,7 @@ The following state arguments are supported:
             title="Optional">
         <span>private<wbr>Registries</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigprivateregistry">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Private<wbr>Registry[]?</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigprivateregistry">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Private<wbr>Registry[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2702,7 +2486,7 @@ The following state arguments are supported:
             title="Optional">
         <span>services</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigservices">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services?</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigservices">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2710,7 +2494,7 @@ The following state arguments are supported:
             title="Optional">
         <span>ssh<wbr>Agent<wbr>Auth</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2718,7 +2502,7 @@ The following state arguments are supported:
             title="Optional">
         <span>ssh<wbr>Cert<wbr>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2726,7 +2510,7 @@ The following state arguments are supported:
             title="Optional">
         <span>ssh<wbr>Key<wbr>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2734,7 +2518,7 @@ The following state arguments are supported:
             title="Optional">
         <span>upgrade<wbr>Strategy</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigupgradestrategy">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Upgrade<wbr>Strategy?</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigupgradestrategy">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Upgrade<wbr>Strategy</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2939,7 +2723,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Sans</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2947,7 +2731,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Strategy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2970,7 +2754,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Strategy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2985,7 +2769,7 @@ The following state arguments are supported:
             title="Optional">
         <span>sans</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2993,7 +2777,7 @@ The following state arguments are supported:
             title="Optional">
         <span>strategy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3046,7 +2830,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3054,7 +2838,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Options</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3069,7 +2853,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3092,7 +2876,7 @@ The following state arguments are supported:
             title="Optional">
         <span>mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3100,7 +2884,7 @@ The following state arguments are supported:
             title="Optional">
         <span>options</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3157,11 +2941,19 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>User</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3169,7 +2961,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Ssh<wbr>Agent<wbr>Auth</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3177,21 +2969,13 @@ The following state arguments are supported:
             title="Optional">
         <span>Ssh<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Ssh<wbr>Key<wbr>Path</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>User</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
@@ -3212,11 +2996,19 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>User</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3224,7 +3016,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Ssh<wbr>Agent<wbr>Auth</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3232,21 +3024,13 @@ The following state arguments are supported:
             title="Optional">
         <span>Ssh<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Ssh<wbr>Key<wbr>Path</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>User</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
@@ -3267,11 +3051,19 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>user</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3279,7 +3071,7 @@ The following state arguments are supported:
             title="Optional">
         <span>ssh<wbr>Agent<wbr>Auth</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3287,21 +3079,13 @@ The following state arguments are supported:
             title="Optional">
         <span>ssh<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>ssh<wbr>Key<wbr>Path</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>user</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
@@ -3317,6 +3101,14 @@ The following state arguments are supported:
     <dt class="property-required"
             title="Required">
         <span>address</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>user</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -3354,14 +3146,6 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>user</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -3388,7 +3172,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Aws<wbr>Cloud<wbr>Provider</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudproviderawscloudprovider">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Aws<wbr>Cloud<wbr>Provider<wbr>Args?</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudproviderawscloudprovider">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Aws<wbr>Cloud<wbr>Provider<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3396,7 +3180,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Azure<wbr>Cloud<wbr>Provider</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudproviderazurecloudprovider">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Azure<wbr>Cloud<wbr>Provider<wbr>Args?</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudproviderazurecloudprovider">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Azure<wbr>Cloud<wbr>Provider<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3404,7 +3188,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Custom<wbr>Cloud<wbr>Provider</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3412,7 +3196,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The cluster template revision name (string)
 {{% /md %}}</dd>
@@ -3421,7 +3205,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Openstack<wbr>Cloud<wbr>Provider</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovideropenstackcloudprovider">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Openstack<wbr>Cloud<wbr>Provider<wbr>Args?</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovideropenstackcloudprovider">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Openstack<wbr>Cloud<wbr>Provider<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3429,7 +3213,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Vsphere<wbr>Cloud<wbr>Provider</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovidervspherecloudprovider">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Vsphere<wbr>Cloud<wbr>Provider<wbr>Args?</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovidervspherecloudprovider">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Vsphere<wbr>Cloud<wbr>Provider<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3444,7 +3228,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Aws<wbr>Cloud<wbr>Provider</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudproviderawscloudprovider">*Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Aws<wbr>Cloud<wbr>Provider</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudproviderawscloudprovider">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Aws<wbr>Cloud<wbr>Provider</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3452,7 +3236,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Azure<wbr>Cloud<wbr>Provider</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudproviderazurecloudprovider">*Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Azure<wbr>Cloud<wbr>Provider</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudproviderazurecloudprovider">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Azure<wbr>Cloud<wbr>Provider</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3460,7 +3244,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Custom<wbr>Cloud<wbr>Provider</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3468,7 +3252,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The cluster template revision name (string)
 {{% /md %}}</dd>
@@ -3477,7 +3261,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Openstack<wbr>Cloud<wbr>Provider</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovideropenstackcloudprovider">*Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Openstack<wbr>Cloud<wbr>Provider</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovideropenstackcloudprovider">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Openstack<wbr>Cloud<wbr>Provider</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3485,7 +3269,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Vsphere<wbr>Cloud<wbr>Provider</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovidervspherecloudprovider">*Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Vsphere<wbr>Cloud<wbr>Provider</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovidervspherecloudprovider">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Vsphere<wbr>Cloud<wbr>Provider</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3500,7 +3284,7 @@ The following state arguments are supported:
             title="Optional">
         <span>aws<wbr>Cloud<wbr>Provider</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudproviderawscloudprovider">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Aws<wbr>Cloud<wbr>Provider?</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudproviderawscloudprovider">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Aws<wbr>Cloud<wbr>Provider</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3508,7 +3292,7 @@ The following state arguments are supported:
             title="Optional">
         <span>azure<wbr>Cloud<wbr>Provider</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudproviderazurecloudprovider">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Azure<wbr>Cloud<wbr>Provider?</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudproviderazurecloudprovider">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Azure<wbr>Cloud<wbr>Provider</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3516,7 +3300,7 @@ The following state arguments are supported:
             title="Optional">
         <span>custom<wbr>Cloud<wbr>Provider</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3524,7 +3308,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The cluster template revision name (string)
 {{% /md %}}</dd>
@@ -3533,7 +3317,7 @@ The following state arguments are supported:
             title="Optional">
         <span>openstack<wbr>Cloud<wbr>Provider</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovideropenstackcloudprovider">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Openstack<wbr>Cloud<wbr>Provider?</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovideropenstackcloudprovider">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Openstack<wbr>Cloud<wbr>Provider</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3541,7 +3325,7 @@ The following state arguments are supported:
             title="Optional">
         <span>vsphere<wbr>Cloud<wbr>Provider</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovidervspherecloudprovider">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Vsphere<wbr>Cloud<wbr>Provider?</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovidervspherecloudprovider">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Vsphere<wbr>Cloud<wbr>Provider</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3627,7 +3411,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Global</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudproviderawscloudproviderglobal">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Aws<wbr>Cloud<wbr>Provider<wbr>Global<wbr>Args?</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudproviderawscloudproviderglobal">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Aws<wbr>Cloud<wbr>Provider<wbr>Global<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3635,7 +3419,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Service<wbr>Overrides</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudproviderawscloudproviderserviceoverride">List&lt;Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Aws<wbr>Cloud<wbr>Provider<wbr>Service<wbr>Override<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudproviderawscloudproviderserviceoverride">List&lt;Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Aws<wbr>Cloud<wbr>Provider<wbr>Service<wbr>Override<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3650,7 +3434,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Global</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudproviderawscloudproviderglobal">*Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Aws<wbr>Cloud<wbr>Provider<wbr>Global</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudproviderawscloudproviderglobal">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Aws<wbr>Cloud<wbr>Provider<wbr>Global</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3673,7 +3457,7 @@ The following state arguments are supported:
             title="Optional">
         <span>global</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudproviderawscloudproviderglobal">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Aws<wbr>Cloud<wbr>Provider<wbr>Global?</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudproviderawscloudproviderglobal">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Aws<wbr>Cloud<wbr>Provider<wbr>Global</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3681,7 +3465,7 @@ The following state arguments are supported:
             title="Optional">
         <span>service<wbr>Overrides</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudproviderawscloudproviderserviceoverride">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Aws<wbr>Cloud<wbr>Provider<wbr>Service<wbr>Override[]?</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudproviderawscloudproviderserviceoverride">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Aws<wbr>Cloud<wbr>Provider<wbr>Service<wbr>Override[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3734,7 +3518,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Disable<wbr>Security<wbr>Group<wbr>Ingress</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3742,7 +3526,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Disable<wbr>Strict<wbr>Zone<wbr>Check</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3750,7 +3534,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Elb<wbr>Security<wbr>Group</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3758,7 +3542,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Kubernetes<wbr>Cluster<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3766,7 +3550,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Kubernetes<wbr>Cluster<wbr>Tag</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3774,7 +3558,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Role<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3782,7 +3566,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Route<wbr>Table<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3790,7 +3574,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Subnet<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3798,7 +3582,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Vpc</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3806,7 +3590,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Zone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3821,7 +3605,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Disable<wbr>Security<wbr>Group<wbr>Ingress</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3829,7 +3613,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Disable<wbr>Strict<wbr>Zone<wbr>Check</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3837,7 +3621,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Elb<wbr>Security<wbr>Group</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3845,7 +3629,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Kubernetes<wbr>Cluster<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3853,7 +3637,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Kubernetes<wbr>Cluster<wbr>Tag</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3861,7 +3645,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Role<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3869,7 +3653,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Route<wbr>Table<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3877,7 +3661,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Subnet<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3885,7 +3669,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Vpc</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3893,7 +3677,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Zone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3908,7 +3692,7 @@ The following state arguments are supported:
             title="Optional">
         <span>disable<wbr>Security<wbr>Group<wbr>Ingress</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3916,7 +3700,7 @@ The following state arguments are supported:
             title="Optional">
         <span>disable<wbr>Strict<wbr>Zone<wbr>Check</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3924,7 +3708,7 @@ The following state arguments are supported:
             title="Optional">
         <span>elb<wbr>Security<wbr>Group</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3932,7 +3716,7 @@ The following state arguments are supported:
             title="Optional">
         <span>kubernetes<wbr>Cluster<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3940,7 +3724,7 @@ The following state arguments are supported:
             title="Optional">
         <span>kubernetes<wbr>Cluster<wbr>Tag</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3948,7 +3732,7 @@ The following state arguments are supported:
             title="Optional">
         <span>role<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3956,7 +3740,7 @@ The following state arguments are supported:
             title="Optional">
         <span>route<wbr>Table<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3964,7 +3748,7 @@ The following state arguments are supported:
             title="Optional">
         <span>subnet<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3972,7 +3756,7 @@ The following state arguments are supported:
             title="Optional">
         <span>vpc</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3980,7 +3764,7 @@ The following state arguments are supported:
             title="Optional">
         <span>zone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4093,14 +3877,6 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Service</span>
@@ -4111,9 +3887,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>Region</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Signing<wbr>Method</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4121,7 +3905,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Signing<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4129,7 +3913,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Signing<wbr>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4137,7 +3921,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4148,14 +3932,6 @@ The following state arguments are supported:
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Service</span>
@@ -4166,9 +3942,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>Region</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Signing<wbr>Method</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4176,7 +3960,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Signing<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4184,7 +3968,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Signing<wbr>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4192,7 +3976,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4202,14 +3986,6 @@ The following state arguments are supported:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -4221,9 +3997,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>region</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>signing<wbr>Method</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4231,7 +4015,7 @@ The following state arguments are supported:
             title="Optional">
         <span>signing<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4239,7 +4023,7 @@ The following state arguments are supported:
             title="Optional">
         <span>signing<wbr>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4247,7 +4031,7 @@ The following state arguments are supported:
             title="Optional">
         <span>url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4258,17 +4042,17 @@ The following state arguments are supported:
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>region</span>
+    <dt class="property-required"
+            title="Required">
+        <span>service</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>service</span>
+    <dt class="property-optional"
+            title="Optional">
+        <span>region</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -4328,22 +4112,6 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Aad<wbr>Client<wbr>Cert<wbr>Password</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Aad<wbr>Client<wbr>Cert<wbr>Path</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Aad<wbr>Client<wbr>Id</span>
@@ -4357,142 +4125,6 @@ The following state arguments are supported:
         <span>Aad<wbr>Client<wbr>Secret</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Cloud</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Cloud<wbr>Provider<wbr>Backoff</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Cloud<wbr>Provider<wbr>Backoff<wbr>Duration</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Cloud<wbr>Provider<wbr>Backoff<wbr>Exponent</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Cloud<wbr>Provider<wbr>Backoff<wbr>Jitter</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Cloud<wbr>Provider<wbr>Backoff<wbr>Retries</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Cloud<wbr>Provider<wbr>Rate<wbr>Limit</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Cloud<wbr>Provider<wbr>Rate<wbr>Limit<wbr>Bucket</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Cloud<wbr>Provider<wbr>Rate<wbr>Limit<wbr>Qps</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Location</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Maximum<wbr>Load<wbr>Balancer<wbr>Rule<wbr>Count</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Primary<wbr>Availability<wbr>Set<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Primary<wbr>Scale<wbr>Set<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Resource<wbr>Group</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Route<wbr>Table<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Security<wbr>Group<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Subnet<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4514,9 +4146,161 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>Aad<wbr>Client<wbr>Cert<wbr>Password</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Aad<wbr>Client<wbr>Cert<wbr>Path</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Cloud</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Cloud<wbr>Provider<wbr>Backoff</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Cloud<wbr>Provider<wbr>Backoff<wbr>Duration</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Cloud<wbr>Provider<wbr>Backoff<wbr>Exponent</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Cloud<wbr>Provider<wbr>Backoff<wbr>Jitter</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Cloud<wbr>Provider<wbr>Backoff<wbr>Retries</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Cloud<wbr>Provider<wbr>Rate<wbr>Limit</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Cloud<wbr>Provider<wbr>Rate<wbr>Limit<wbr>Bucket</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Cloud<wbr>Provider<wbr>Rate<wbr>Limit<wbr>Qps</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Location</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Maximum<wbr>Load<wbr>Balancer<wbr>Rule<wbr>Count</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Primary<wbr>Availability<wbr>Set<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Primary<wbr>Scale<wbr>Set<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Resource<wbr>Group</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Route<wbr>Table<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Security<wbr>Group<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Subnet<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Use<wbr>Instance<wbr>Metadata</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4524,7 +4308,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Use<wbr>Managed<wbr>Identity<wbr>Extension</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4532,7 +4316,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Vm<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4540,7 +4324,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Vnet<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4548,7 +4332,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Vnet<wbr>Resource<wbr>Group</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4559,22 +4343,6 @@ The following state arguments are supported:
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Aad<wbr>Client<wbr>Cert<wbr>Password</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Aad<wbr>Client<wbr>Cert<wbr>Path</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Aad<wbr>Client<wbr>Id</span>
@@ -4588,142 +4356,6 @@ The following state arguments are supported:
         <span>Aad<wbr>Client<wbr>Secret</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Cloud</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Cloud<wbr>Provider<wbr>Backoff</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Cloud<wbr>Provider<wbr>Backoff<wbr>Duration</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Cloud<wbr>Provider<wbr>Backoff<wbr>Exponent</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Cloud<wbr>Provider<wbr>Backoff<wbr>Jitter</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Cloud<wbr>Provider<wbr>Backoff<wbr>Retries</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Cloud<wbr>Provider<wbr>Rate<wbr>Limit</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Cloud<wbr>Provider<wbr>Rate<wbr>Limit<wbr>Bucket</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Cloud<wbr>Provider<wbr>Rate<wbr>Limit<wbr>Qps</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Location</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Maximum<wbr>Load<wbr>Balancer<wbr>Rule<wbr>Count</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Primary<wbr>Availability<wbr>Set<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Primary<wbr>Scale<wbr>Set<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Resource<wbr>Group</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Route<wbr>Table<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Security<wbr>Group<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Subnet<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4745,9 +4377,161 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>Aad<wbr>Client<wbr>Cert<wbr>Password</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Aad<wbr>Client<wbr>Cert<wbr>Path</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Cloud</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Cloud<wbr>Provider<wbr>Backoff</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Cloud<wbr>Provider<wbr>Backoff<wbr>Duration</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Cloud<wbr>Provider<wbr>Backoff<wbr>Exponent</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Cloud<wbr>Provider<wbr>Backoff<wbr>Jitter</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Cloud<wbr>Provider<wbr>Backoff<wbr>Retries</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Cloud<wbr>Provider<wbr>Rate<wbr>Limit</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Cloud<wbr>Provider<wbr>Rate<wbr>Limit<wbr>Bucket</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Cloud<wbr>Provider<wbr>Rate<wbr>Limit<wbr>Qps</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Location</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Maximum<wbr>Load<wbr>Balancer<wbr>Rule<wbr>Count</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Primary<wbr>Availability<wbr>Set<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Primary<wbr>Scale<wbr>Set<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Resource<wbr>Group</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Route<wbr>Table<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Security<wbr>Group<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Subnet<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Use<wbr>Instance<wbr>Metadata</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4755,7 +4539,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Use<wbr>Managed<wbr>Identity<wbr>Extension</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4763,7 +4547,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Vm<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4771,7 +4555,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Vnet<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4779,7 +4563,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Vnet<wbr>Resource<wbr>Group</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4789,22 +4573,6 @@ The following state arguments are supported:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>aad<wbr>Client<wbr>Cert<wbr>Password</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>aad<wbr>Client<wbr>Cert<wbr>Path</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -4819,142 +4587,6 @@ The following state arguments are supported:
         <span>aad<wbr>Client<wbr>Secret</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>cloud</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>cloud<wbr>Provider<wbr>Backoff</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>cloud<wbr>Provider<wbr>Backoff<wbr>Duration</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>cloud<wbr>Provider<wbr>Backoff<wbr>Exponent</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>cloud<wbr>Provider<wbr>Backoff<wbr>Jitter</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>cloud<wbr>Provider<wbr>Backoff<wbr>Retries</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>cloud<wbr>Provider<wbr>Rate<wbr>Limit</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>cloud<wbr>Provider<wbr>Rate<wbr>Limit<wbr>Bucket</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>cloud<wbr>Provider<wbr>Rate<wbr>Limit<wbr>Qps</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>location</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>maximum<wbr>Load<wbr>Balancer<wbr>Rule<wbr>Count</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>primary<wbr>Availability<wbr>Set<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>primary<wbr>Scale<wbr>Set<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>resource<wbr>Group</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>route<wbr>Table<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>security<wbr>Group<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>subnet<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4976,9 +4608,161 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>aad<wbr>Client<wbr>Cert<wbr>Password</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>aad<wbr>Client<wbr>Cert<wbr>Path</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>cloud</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>cloud<wbr>Provider<wbr>Backoff</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>cloud<wbr>Provider<wbr>Backoff<wbr>Duration</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>cloud<wbr>Provider<wbr>Backoff<wbr>Exponent</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>cloud<wbr>Provider<wbr>Backoff<wbr>Jitter</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>cloud<wbr>Provider<wbr>Backoff<wbr>Retries</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>cloud<wbr>Provider<wbr>Rate<wbr>Limit</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>cloud<wbr>Provider<wbr>Rate<wbr>Limit<wbr>Bucket</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>cloud<wbr>Provider<wbr>Rate<wbr>Limit<wbr>Qps</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>location</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>maximum<wbr>Load<wbr>Balancer<wbr>Rule<wbr>Count</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>primary<wbr>Availability<wbr>Set<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>primary<wbr>Scale<wbr>Set<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>resource<wbr>Group</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>route<wbr>Table<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>security<wbr>Group<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>subnet<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>use<wbr>Instance<wbr>Metadata</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4986,7 +4770,7 @@ The following state arguments are supported:
             title="Optional">
         <span>use<wbr>Managed<wbr>Identity<wbr>Extension</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4994,7 +4778,7 @@ The following state arguments are supported:
             title="Optional">
         <span>vm<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5002,7 +4786,7 @@ The following state arguments are supported:
             title="Optional">
         <span>vnet<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5010,7 +4794,7 @@ The following state arguments are supported:
             title="Optional">
         <span>vnet<wbr>Resource<wbr>Group</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5020,22 +4804,6 @@ The following state arguments are supported:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>aad<wbr>Client<wbr>Cert<wbr>Password</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>aad<wbr>Client<wbr>Cert<wbr>Path</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -5048,6 +4816,38 @@ The following state arguments are supported:
     <dt class="property-required"
             title="Required">
         <span>aad<wbr>Client<wbr>Secret</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>subscription<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>tenant_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>aad<wbr>Client<wbr>Cert<wbr>Password</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>aad<wbr>Client<wbr>Cert<wbr>Path</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -5184,22 +4984,6 @@ The following state arguments are supported:
     <dt class="property-optional"
             title="Optional">
         <span>subnet<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>subscription<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>tenant_<wbr>id</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -5267,14 +5051,6 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Block<wbr>Storage</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovideropenstackcloudproviderblockstorage">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Openstack<wbr>Cloud<wbr>Provider<wbr>Block<wbr>Storage<wbr>Args?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Global</span>
@@ -5285,9 +5061,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>Block<wbr>Storage</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovideropenstackcloudproviderblockstorage">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Openstack<wbr>Cloud<wbr>Provider<wbr>Block<wbr>Storage<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Load<wbr>Balancer</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovideropenstackcloudproviderloadbalancer">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Openstack<wbr>Cloud<wbr>Provider<wbr>Load<wbr>Balancer<wbr>Args?</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovideropenstackcloudproviderloadbalancer">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Openstack<wbr>Cloud<wbr>Provider<wbr>Load<wbr>Balancer<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5295,7 +5079,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Metadata</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovideropenstackcloudprovidermetadata">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Openstack<wbr>Cloud<wbr>Provider<wbr>Metadata<wbr>Args?</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovideropenstackcloudprovidermetadata">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Openstack<wbr>Cloud<wbr>Provider<wbr>Metadata<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5303,7 +5087,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Route</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovideropenstackcloudproviderroute">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Openstack<wbr>Cloud<wbr>Provider<wbr>Route<wbr>Args?</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovideropenstackcloudproviderroute">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Openstack<wbr>Cloud<wbr>Provider<wbr>Route<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5313,14 +5097,6 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Block<wbr>Storage</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovideropenstackcloudproviderblockstorage">*Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Openstack<wbr>Cloud<wbr>Provider<wbr>Block<wbr>Storage</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -5332,9 +5108,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>Block<wbr>Storage</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovideropenstackcloudproviderblockstorage">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Openstack<wbr>Cloud<wbr>Provider<wbr>Block<wbr>Storage</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Load<wbr>Balancer</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovideropenstackcloudproviderloadbalancer">*Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Openstack<wbr>Cloud<wbr>Provider<wbr>Load<wbr>Balancer</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovideropenstackcloudproviderloadbalancer">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Openstack<wbr>Cloud<wbr>Provider<wbr>Load<wbr>Balancer</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5342,7 +5126,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Metadata</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovideropenstackcloudprovidermetadata">*Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Openstack<wbr>Cloud<wbr>Provider<wbr>Metadata</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovideropenstackcloudprovidermetadata">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Openstack<wbr>Cloud<wbr>Provider<wbr>Metadata</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5350,7 +5134,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Route</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovideropenstackcloudproviderroute">*Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Openstack<wbr>Cloud<wbr>Provider<wbr>Route</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovideropenstackcloudproviderroute">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Openstack<wbr>Cloud<wbr>Provider<wbr>Route</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5360,14 +5144,6 @@ The following state arguments are supported:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>block<wbr>Storage</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovideropenstackcloudproviderblockstorage">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Openstack<wbr>Cloud<wbr>Provider<wbr>Block<wbr>Storage?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -5379,9 +5155,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>block<wbr>Storage</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovideropenstackcloudproviderblockstorage">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Openstack<wbr>Cloud<wbr>Provider<wbr>Block<wbr>Storage</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>load<wbr>Balancer</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovideropenstackcloudproviderloadbalancer">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Openstack<wbr>Cloud<wbr>Provider<wbr>Load<wbr>Balancer?</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovideropenstackcloudproviderloadbalancer">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Openstack<wbr>Cloud<wbr>Provider<wbr>Load<wbr>Balancer</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5389,7 +5173,7 @@ The following state arguments are supported:
             title="Optional">
         <span>metadata</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovideropenstackcloudprovidermetadata">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Openstack<wbr>Cloud<wbr>Provider<wbr>Metadata?</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovideropenstackcloudprovidermetadata">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Openstack<wbr>Cloud<wbr>Provider<wbr>Metadata</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5397,7 +5181,7 @@ The following state arguments are supported:
             title="Optional">
         <span>route</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovideropenstackcloudproviderroute">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Openstack<wbr>Cloud<wbr>Provider<wbr>Route?</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovideropenstackcloudproviderroute">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Openstack<wbr>Cloud<wbr>Provider<wbr>Route</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5408,19 +5192,19 @@ The following state arguments are supported:
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>block<wbr>Storage</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovideropenstackcloudproviderblockstorage">Dict[Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Openstack<wbr>Cloud<wbr>Provider<wbr>Block<wbr>Storage]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>global</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovideropenstackcloudproviderglobal">Dict[Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Openstack<wbr>Cloud<wbr>Provider<wbr>Global]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>block<wbr>Storage</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovideropenstackcloudproviderblockstorage">Dict[Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Openstack<wbr>Cloud<wbr>Provider<wbr>Block<wbr>Storage]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5474,7 +5258,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Bs<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5482,7 +5266,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Ignore<wbr>Volume<wbr>Az</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5490,7 +5274,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Trust<wbr>Device<wbr>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5505,7 +5289,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Bs<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5513,7 +5297,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Ignore<wbr>Volume<wbr>Az</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5521,7 +5305,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Trust<wbr>Device<wbr>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5536,7 +5320,7 @@ The following state arguments are supported:
             title="Optional">
         <span>bs<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5544,7 +5328,7 @@ The following state arguments are supported:
             title="Optional">
         <span>ignore<wbr>Volume<wbr>Az</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5552,7 +5336,7 @@ The following state arguments are supported:
             title="Optional">
         <span>trust<wbr>Device<wbr>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5617,11 +5401,27 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>Password</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Username</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Ca<wbr>File</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5629,21 +5429,13 @@ The following state arguments are supported:
             title="Optional">
         <span>Domain<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Domain<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Password</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
@@ -5653,7 +5445,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5661,7 +5453,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Tenant<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5669,21 +5461,13 @@ The following state arguments are supported:
             title="Optional">
         <span>Tenant<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Trust<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Username</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
@@ -5704,11 +5488,27 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>Password</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Username</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Ca<wbr>File</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5716,21 +5516,13 @@ The following state arguments are supported:
             title="Optional">
         <span>Domain<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Domain<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Password</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
@@ -5740,7 +5532,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5748,7 +5540,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Tenant<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5756,21 +5548,13 @@ The following state arguments are supported:
             title="Optional">
         <span>Tenant<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Trust<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Username</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
@@ -5791,11 +5575,27 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>password</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>username</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>ca<wbr>File</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5803,21 +5603,13 @@ The following state arguments are supported:
             title="Optional">
         <span>domain<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>domain<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>password</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
@@ -5827,7 +5619,7 @@ The following state arguments are supported:
             title="Optional">
         <span>region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5835,7 +5627,7 @@ The following state arguments are supported:
             title="Optional">
         <span>tenant<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5843,21 +5635,13 @@ The following state arguments are supported:
             title="Optional">
         <span>tenant<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>trust<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>username</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
@@ -5878,6 +5662,22 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>password</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>username</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>ca<wbr>File</span>
@@ -5897,14 +5697,6 @@ The following state arguments are supported:
     <dt class="property-optional"
             title="Optional">
         <span>domain<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>password</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -5942,14 +5734,6 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>username</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -5976,7 +5760,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Create<wbr>Monitor</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5984,7 +5768,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Floating<wbr>Network<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5992,7 +5776,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Lb<wbr>Method</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6000,7 +5784,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Lb<wbr>Provider</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6008,7 +5792,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Lb<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6016,7 +5800,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Manage<wbr>Security<wbr>Groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6024,7 +5808,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Monitor<wbr>Delay</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6032,7 +5816,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Monitor<wbr>Max<wbr>Retries</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6040,7 +5824,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Monitor<wbr>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6048,7 +5832,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Subnet<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6056,7 +5840,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Use<wbr>Octavia</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6071,7 +5855,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Create<wbr>Monitor</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6079,7 +5863,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Floating<wbr>Network<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6087,7 +5871,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Lb<wbr>Method</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6095,7 +5879,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Lb<wbr>Provider</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6103,7 +5887,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Lb<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6111,7 +5895,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Manage<wbr>Security<wbr>Groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6119,7 +5903,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Monitor<wbr>Delay</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6127,7 +5911,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Monitor<wbr>Max<wbr>Retries</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6135,7 +5919,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Monitor<wbr>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6143,7 +5927,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Subnet<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6151,7 +5935,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Use<wbr>Octavia</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6166,7 +5950,7 @@ The following state arguments are supported:
             title="Optional">
         <span>create<wbr>Monitor</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6174,7 +5958,7 @@ The following state arguments are supported:
             title="Optional">
         <span>floating<wbr>Network<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6182,7 +5966,7 @@ The following state arguments are supported:
             title="Optional">
         <span>lb<wbr>Method</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6190,7 +5974,7 @@ The following state arguments are supported:
             title="Optional">
         <span>lb<wbr>Provider</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6198,7 +5982,7 @@ The following state arguments are supported:
             title="Optional">
         <span>lb<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6206,7 +5990,7 @@ The following state arguments are supported:
             title="Optional">
         <span>manage<wbr>Security<wbr>Groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6214,7 +5998,7 @@ The following state arguments are supported:
             title="Optional">
         <span>monitor<wbr>Delay</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6222,7 +6006,7 @@ The following state arguments are supported:
             title="Optional">
         <span>monitor<wbr>Max<wbr>Retries</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6230,7 +6014,7 @@ The following state arguments are supported:
             title="Optional">
         <span>monitor<wbr>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6238,7 +6022,7 @@ The following state arguments are supported:
             title="Optional">
         <span>subnet<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6246,7 +6030,7 @@ The following state arguments are supported:
             title="Optional">
         <span>use<wbr>Octavia</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6371,7 +6155,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Request<wbr>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6379,7 +6163,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Search<wbr>Order</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6394,7 +6178,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Request<wbr>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6402,7 +6186,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Search<wbr>Order</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6417,7 +6201,7 @@ The following state arguments are supported:
             title="Optional">
         <span>request<wbr>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6425,7 +6209,7 @@ The following state arguments are supported:
             title="Optional">
         <span>search<wbr>Order</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6478,7 +6262,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Router<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6493,7 +6277,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Router<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6508,7 +6292,7 @@ The following state arguments are supported:
             title="Optional">
         <span>router<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6549,30 +6333,6 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Disk</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovidervspherecloudproviderdisk">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Vsphere<wbr>Cloud<wbr>Provider<wbr>Disk<wbr>Args?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Global</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovidervspherecloudproviderglobal">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Vsphere<wbr>Cloud<wbr>Provider<wbr>Global<wbr>Args?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Network</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovidervspherecloudprovidernetwork">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Vsphere<wbr>Cloud<wbr>Provider<wbr>Network<wbr>Args?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Virtual<wbr>Centers</span>
@@ -6589,18 +6349,11 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span>Disk</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovidervspherecloudproviderdisk">*Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Vsphere<wbr>Cloud<wbr>Provider<wbr>Disk</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovidervspherecloudproviderdisk">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Vsphere<wbr>Cloud<wbr>Provider<wbr>Disk<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6608,7 +6361,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Global</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovidervspherecloudproviderglobal">*Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Vsphere<wbr>Cloud<wbr>Provider<wbr>Global</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovidervspherecloudproviderglobal">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Vsphere<wbr>Cloud<wbr>Provider<wbr>Global<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6616,9 +6369,16 @@ The following state arguments are supported:
             title="Optional">
         <span>Network</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovidervspherecloudprovidernetwork">*Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Vsphere<wbr>Cloud<wbr>Provider<wbr>Network</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovidervspherecloudprovidernetwork">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Vsphere<wbr>Cloud<wbr>Provider<wbr>Network<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
@@ -6636,36 +6396,36 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>Disk</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovidervspherecloudproviderdisk">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Vsphere<wbr>Cloud<wbr>Provider<wbr>Disk</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Global</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovidervspherecloudproviderglobal">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Vsphere<wbr>Cloud<wbr>Provider<wbr>Global</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Network</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovidervspherecloudprovidernetwork">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Vsphere<wbr>Cloud<wbr>Provider<wbr>Network</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>disk</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovidervspherecloudproviderdisk">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Vsphere<wbr>Cloud<wbr>Provider<wbr>Disk?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>global</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovidervspherecloudproviderglobal">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Vsphere<wbr>Cloud<wbr>Provider<wbr>Global?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>network</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovidervspherecloudprovidernetwork">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Vsphere<wbr>Cloud<wbr>Provider<wbr>Network?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -6683,12 +6443,52 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>disk</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovidervspherecloudproviderdisk">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Vsphere<wbr>Cloud<wbr>Provider<wbr>Disk</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>global</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovidervspherecloudproviderglobal">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Vsphere<wbr>Cloud<wbr>Provider<wbr>Global</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>network</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovidervspherecloudprovidernetwork">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Vsphere<wbr>Cloud<wbr>Provider<wbr>Network</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>virtual<wbr>Centers</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovidervspherecloudprovidervirtualcenter">List[Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Vsphere<wbr>Cloud<wbr>Provider<wbr>Virtual<wbr>Center]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>workspace</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovidervspherecloudproviderworkspace">Dict[Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Vsphere<wbr>Cloud<wbr>Provider<wbr>Workspace]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -6711,22 +6511,6 @@ The following state arguments are supported:
         <span>network</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovidervspherecloudprovidernetwork">Dict[Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Vsphere<wbr>Cloud<wbr>Provider<wbr>Network]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>virtual<wbr>Centers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovidervspherecloudprovidervirtualcenter">List[Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Vsphere<wbr>Cloud<wbr>Provider<wbr>Virtual<wbr>Center]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>workspace</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigcloudprovidervspherecloudproviderworkspace">Dict[Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Vsphere<wbr>Cloud<wbr>Provider<wbr>Workspace]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6756,7 +6540,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Scsi<wbr>Controller<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6771,7 +6555,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Scsi<wbr>Controller<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6786,7 +6570,7 @@ The following state arguments are supported:
             title="Optional">
         <span>scsi<wbr>Controller<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6831,7 +6615,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Datacenters</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6839,7 +6623,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Insecure<wbr>Flag</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6847,7 +6631,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6855,7 +6639,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6863,7 +6647,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Soap<wbr>Roundtrip<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6871,7 +6655,7 @@ The following state arguments are supported:
             title="Optional">
         <span>User</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6886,7 +6670,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Datacenters</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6894,7 +6678,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Insecure<wbr>Flag</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6902,7 +6686,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6910,7 +6694,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6918,7 +6702,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Soap<wbr>Roundtrip<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6926,7 +6710,7 @@ The following state arguments are supported:
             title="Optional">
         <span>User</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6941,7 +6725,7 @@ The following state arguments are supported:
             title="Optional">
         <span>datacenters</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6949,7 +6733,7 @@ The following state arguments are supported:
             title="Optional">
         <span>insecure<wbr>Flag</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6957,7 +6741,7 @@ The following state arguments are supported:
             title="Optional">
         <span>password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6965,7 +6749,7 @@ The following state arguments are supported:
             title="Optional">
         <span>port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6973,7 +6757,7 @@ The following state arguments are supported:
             title="Optional">
         <span>soap<wbr>Roundtrip<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -6981,7 +6765,7 @@ The following state arguments are supported:
             title="Optional">
         <span>user</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7066,7 +6850,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Public<wbr>Network</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7081,7 +6865,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Public<wbr>Network</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7096,7 +6880,7 @@ The following state arguments are supported:
             title="Optional">
         <span>public<wbr>Network</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7162,11 +6946,19 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>User</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7174,15 +6966,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Soap<wbr>Roundtrip<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>User</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7218,11 +7002,19 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>User</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7230,15 +7022,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Soap<wbr>Roundtrip<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>User</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7274,11 +7058,19 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>user</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7286,15 +7078,7 @@ The following state arguments are supported:
             title="Optional">
         <span>soap<wbr>Roundtrip<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>user</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7330,6 +7114,14 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>user</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>port</span>
@@ -7343,14 +7135,6 @@ The following state arguments are supported:
         <span>soap<wbr>Roundtrip<wbr>Count</span>
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>user</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7384,14 +7168,6 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Default<wbr>Datastore</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Folder</span>
@@ -7400,17 +7176,25 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Resourcepool<wbr>Path</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Server</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Default<wbr>Datastore</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Resourcepool<wbr>Path</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
@@ -7431,14 +7215,6 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Default<wbr>Datastore</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Folder</span>
@@ -7447,17 +7223,25 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Resourcepool<wbr>Path</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Server</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Default<wbr>Datastore</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Resourcepool<wbr>Path</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
@@ -7478,14 +7262,6 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>default<wbr>Datastore</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>folder</span>
@@ -7494,17 +7270,25 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>resourcepool<wbr>Path</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>server</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>default<wbr>Datastore</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>resourcepool<wbr>Path</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
@@ -7525,14 +7309,6 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>default<wbr>Datastore</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>folder</span>
@@ -7541,17 +7317,25 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>resourcepool<wbr>Path</span>
+    <dt class="property-required"
+            title="Required">
+        <span>server</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>server</span>
+    <dt class="property-optional"
+            title="Optional">
+        <span>default<wbr>Datastore</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>resourcepool<wbr>Path</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -7583,7 +7367,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Node<wbr>Selector</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7591,7 +7375,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Provider</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7599,7 +7383,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Reverse<wbr>Cidrs</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7607,7 +7391,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Upstream<wbr>Nameservers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7630,7 +7414,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Provider</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7661,7 +7445,7 @@ The following state arguments are supported:
             title="Optional">
         <span>node<wbr>Selector</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7669,7 +7453,7 @@ The following state arguments are supported:
             title="Optional">
         <span>provider</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7677,7 +7461,7 @@ The following state arguments are supported:
             title="Optional">
         <span>reverse<wbr>Cidrs</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7685,7 +7469,7 @@ The following state arguments are supported:
             title="Optional">
         <span>upstream<wbr>Nameservers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7754,7 +7538,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Dns<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7762,7 +7546,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Extra<wbr>Args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7770,7 +7554,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Node<wbr>Selector</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7778,7 +7562,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Options</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7786,7 +7570,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Provider</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7801,7 +7585,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Dns<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7833,7 +7617,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Provider</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7848,7 +7632,7 @@ The following state arguments are supported:
             title="Optional">
         <span>dns<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7856,7 +7640,7 @@ The following state arguments are supported:
             title="Optional">
         <span>extra<wbr>Args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7864,7 +7648,7 @@ The following state arguments are supported:
             title="Optional">
         <span>node<wbr>Selector</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7872,7 +7656,7 @@ The following state arguments are supported:
             title="Optional">
         <span>options</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7880,7 +7664,7 @@ The following state arguments are supported:
             title="Optional">
         <span>provider</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7957,7 +7741,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Options</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7965,7 +7749,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Provider</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7988,7 +7772,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Provider</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8003,7 +7787,7 @@ The following state arguments are supported:
             title="Optional">
         <span>options</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8011,7 +7795,7 @@ The following state arguments are supported:
             title="Optional">
         <span>provider</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8064,7 +7848,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Calico<wbr>Network<wbr>Provider</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfignetworkcaliconetworkprovider">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Network<wbr>Calico<wbr>Network<wbr>Provider<wbr>Args?</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfignetworkcaliconetworkprovider">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Network<wbr>Calico<wbr>Network<wbr>Provider<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8072,7 +7856,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Canal<wbr>Network<wbr>Provider</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfignetworkcanalnetworkprovider">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Network<wbr>Canal<wbr>Network<wbr>Provider<wbr>Args?</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfignetworkcanalnetworkprovider">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Network<wbr>Canal<wbr>Network<wbr>Provider<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8080,7 +7864,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Flannel<wbr>Network<wbr>Provider</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfignetworkflannelnetworkprovider">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Network<wbr>Flannel<wbr>Network<wbr>Provider<wbr>Args?</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfignetworkflannelnetworkprovider">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Network<wbr>Flannel<wbr>Network<wbr>Provider<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8088,7 +7872,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Mtu</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8096,7 +7880,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Options</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8104,7 +7888,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Plugin</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8112,7 +7896,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Weave<wbr>Network<wbr>Provider</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfignetworkweavenetworkprovider">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Network<wbr>Weave<wbr>Network<wbr>Provider<wbr>Args?</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfignetworkweavenetworkprovider">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Network<wbr>Weave<wbr>Network<wbr>Provider<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8127,7 +7911,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Calico<wbr>Network<wbr>Provider</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfignetworkcaliconetworkprovider">*Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Network<wbr>Calico<wbr>Network<wbr>Provider</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfignetworkcaliconetworkprovider">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Network<wbr>Calico<wbr>Network<wbr>Provider</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8135,7 +7919,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Canal<wbr>Network<wbr>Provider</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfignetworkcanalnetworkprovider">*Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Network<wbr>Canal<wbr>Network<wbr>Provider</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfignetworkcanalnetworkprovider">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Network<wbr>Canal<wbr>Network<wbr>Provider</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8143,7 +7927,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Flannel<wbr>Network<wbr>Provider</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfignetworkflannelnetworkprovider">*Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Network<wbr>Flannel<wbr>Network<wbr>Provider</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfignetworkflannelnetworkprovider">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Network<wbr>Flannel<wbr>Network<wbr>Provider</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8151,7 +7935,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Mtu</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8167,7 +7951,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Plugin</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8175,7 +7959,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Weave<wbr>Network<wbr>Provider</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfignetworkweavenetworkprovider">*Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Network<wbr>Weave<wbr>Network<wbr>Provider</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfignetworkweavenetworkprovider">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Network<wbr>Weave<wbr>Network<wbr>Provider</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8190,7 +7974,7 @@ The following state arguments are supported:
             title="Optional">
         <span>calico<wbr>Network<wbr>Provider</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfignetworkcaliconetworkprovider">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Network<wbr>Calico<wbr>Network<wbr>Provider?</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfignetworkcaliconetworkprovider">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Network<wbr>Calico<wbr>Network<wbr>Provider</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8198,7 +7982,7 @@ The following state arguments are supported:
             title="Optional">
         <span>canal<wbr>Network<wbr>Provider</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfignetworkcanalnetworkprovider">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Network<wbr>Canal<wbr>Network<wbr>Provider?</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfignetworkcanalnetworkprovider">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Network<wbr>Canal<wbr>Network<wbr>Provider</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8206,7 +7990,7 @@ The following state arguments are supported:
             title="Optional">
         <span>flannel<wbr>Network<wbr>Provider</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfignetworkflannelnetworkprovider">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Network<wbr>Flannel<wbr>Network<wbr>Provider?</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfignetworkflannelnetworkprovider">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Network<wbr>Flannel<wbr>Network<wbr>Provider</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8214,7 +7998,7 @@ The following state arguments are supported:
             title="Optional">
         <span>mtu</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8222,7 +8006,7 @@ The following state arguments are supported:
             title="Optional">
         <span>options</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8230,7 +8014,7 @@ The following state arguments are supported:
             title="Optional">
         <span>plugin</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8238,7 +8022,7 @@ The following state arguments are supported:
             title="Optional">
         <span>weave<wbr>Network<wbr>Provider</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfignetworkweavenetworkprovider">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Network<wbr>Weave<wbr>Network<wbr>Provider?</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfignetworkweavenetworkprovider">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Network<wbr>Weave<wbr>Network<wbr>Provider</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8331,7 +8115,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Cloud<wbr>Provider</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8346,7 +8130,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Cloud<wbr>Provider</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8361,7 +8145,7 @@ The following state arguments are supported:
             title="Optional">
         <span>cloud<wbr>Provider</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8406,7 +8190,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Iface</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8421,7 +8205,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Iface</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8436,7 +8220,7 @@ The following state arguments are supported:
             title="Optional">
         <span>iface</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8481,7 +8265,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Iface</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8496,7 +8280,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Iface</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8511,7 +8295,7 @@ The following state arguments are supported:
             title="Optional">
         <span>iface</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8635,11 +8419,27 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>Roles</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>User</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Docker<wbr>Socket</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8647,7 +8447,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Hostname<wbr>Override</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8655,7 +8455,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Internal<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8663,7 +8463,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Labels</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Labels for the cluster template revision (map)
 {{% /md %}}</dd>
@@ -8672,7 +8472,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Node<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8680,15 +8480,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Roles</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8696,7 +8488,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Ssh<wbr>Agent<wbr>Auth</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8704,21 +8496,13 @@ The following state arguments are supported:
             title="Optional">
         <span>Ssh<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Ssh<wbr>Key<wbr>Path</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>User</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
@@ -8739,11 +8523,27 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>Roles</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>User</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Docker<wbr>Socket</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8751,7 +8551,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Hostname<wbr>Override</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8759,7 +8559,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Internal<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8776,7 +8576,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Node<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8784,15 +8584,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Roles</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8800,7 +8592,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Ssh<wbr>Agent<wbr>Auth</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8808,21 +8600,13 @@ The following state arguments are supported:
             title="Optional">
         <span>Ssh<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Ssh<wbr>Key<wbr>Path</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>User</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
@@ -8843,55 +8627,6 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>docker<wbr>Socket</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>hostname<wbr>Override</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>internal<wbr>Address</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>labels</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
-    </dt>
-    <dd>{{% md %}}Labels for the cluster template revision (map)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>node<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>port</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>roles</span>
@@ -8900,11 +8635,68 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>user</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>docker<wbr>Socket</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>hostname<wbr>Override</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>internal<wbr>Address</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>labels</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}</span>
+    </dt>
+    <dd>{{% md %}}Labels for the cluster template revision (map)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>node<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>port</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>ssh<wbr>Agent<wbr>Auth</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -8912,21 +8704,13 @@ The following state arguments are supported:
             title="Optional">
         <span>ssh<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>ssh<wbr>Key<wbr>Path</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>user</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
@@ -8942,6 +8726,22 @@ The following state arguments are supported:
     <dt class="property-required"
             title="Required">
         <span>address</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>roles</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List[str]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>user</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -8996,14 +8796,6 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>roles</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>ssh<wbr>Agent<wbr>Auth</span>
@@ -9023,14 +8815,6 @@ The following state arguments are supported:
     <dt class="property-optional"
             title="Optional">
         <span>ssh<wbr>Key<wbr>Path</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>user</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -9058,22 +8842,6 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Is<wbr>Default</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Password</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Url</span>
@@ -9084,9 +8852,25 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>Is<wbr>Default</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Password</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>User</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -9097,22 +8881,6 @@ The following state arguments are supported:
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Is<wbr>Default</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Password</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Url</span>
@@ -9123,9 +8891,25 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>Is<wbr>Default</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Password</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>User</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -9135,22 +8919,6 @@ The following state arguments are supported:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>is<wbr>Default</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>password</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -9162,9 +8930,25 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>is<wbr>Default</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>password</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>user</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -9174,6 +8958,14 @@ The following state arguments are supported:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>url</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -9186,14 +8978,6 @@ The following state arguments are supported:
     <dt class="property-optional"
             title="Optional">
         <span>password</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>url</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -9233,7 +9017,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Etcd</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigservicesetcd">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Etcd<wbr>Args?</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigservicesetcd">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Etcd<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -9241,7 +9025,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Kube<wbr>Api</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigserviceskubeapi">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Kube<wbr>Api<wbr>Args?</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigserviceskubeapi">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Kube<wbr>Api<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -9249,7 +9033,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Kube<wbr>Controller</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigserviceskubecontroller">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Kube<wbr>Controller<wbr>Args?</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigserviceskubecontroller">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Kube<wbr>Controller<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -9257,7 +9041,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Kubelet</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigserviceskubelet">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Kubelet<wbr>Args?</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigserviceskubelet">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Kubelet<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -9265,7 +9049,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Kubeproxy</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigserviceskubeproxy">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Kubeproxy<wbr>Args?</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigserviceskubeproxy">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Kubeproxy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -9273,7 +9057,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Scheduler</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigservicesscheduler">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Scheduler<wbr>Args?</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigservicesscheduler">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Scheduler<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -9288,7 +9072,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Etcd</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigservicesetcd">*Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Etcd</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigservicesetcd">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Etcd</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -9296,7 +9080,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Kube<wbr>Api</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigserviceskubeapi">*Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Kube<wbr>Api</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigserviceskubeapi">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Kube<wbr>Api</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -9304,7 +9088,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Kube<wbr>Controller</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigserviceskubecontroller">*Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Kube<wbr>Controller</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigserviceskubecontroller">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Kube<wbr>Controller</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -9312,7 +9096,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Kubelet</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigserviceskubelet">*Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Kubelet</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigserviceskubelet">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Kubelet</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -9320,7 +9104,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Kubeproxy</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigserviceskubeproxy">*Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Kubeproxy</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigserviceskubeproxy">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Kubeproxy</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -9328,7 +9112,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Scheduler</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigservicesscheduler">*Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Scheduler</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigservicesscheduler">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Scheduler</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -9343,7 +9127,7 @@ The following state arguments are supported:
             title="Optional">
         <span>etcd</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigservicesetcd">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Etcd?</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigservicesetcd">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Etcd</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -9351,7 +9135,7 @@ The following state arguments are supported:
             title="Optional">
         <span>kube<wbr>Api</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigserviceskubeapi">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Kube<wbr>Api?</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigserviceskubeapi">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Kube<wbr>Api</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -9359,7 +9143,7 @@ The following state arguments are supported:
             title="Optional">
         <span>kube<wbr>Controller</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigserviceskubecontroller">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Kube<wbr>Controller?</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigserviceskubecontroller">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Kube<wbr>Controller</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -9367,7 +9151,7 @@ The following state arguments are supported:
             title="Optional">
         <span>kubelet</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigserviceskubelet">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Kubelet?</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigserviceskubelet">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Kubelet</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -9375,7 +9159,7 @@ The following state arguments are supported:
             title="Optional">
         <span>kubeproxy</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigserviceskubeproxy">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Kubeproxy?</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigserviceskubeproxy">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Kubeproxy</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -9383,7 +9167,7 @@ The following state arguments are supported:
             title="Optional">
         <span>scheduler</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigservicesscheduler">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Scheduler?</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigservicesscheduler">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Scheduler</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -9468,7 +9252,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Backup<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigservicesetcdbackupconfig">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Etcd<wbr>Backup<wbr>Config<wbr>Args?</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigservicesetcdbackupconfig">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Etcd<wbr>Backup<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -9476,7 +9260,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Ca<wbr>Cert</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -9484,7 +9268,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Cert</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -9492,7 +9276,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Creation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -9500,7 +9284,7 @@ The following state arguments are supported:
             title="Optional">
         <span>External<wbr>Urls</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -9508,7 +9292,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Extra<wbr>Args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -9516,7 +9300,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Extra<wbr>Binds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -9524,7 +9308,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Extra<wbr>Envs</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -9532,7 +9316,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Gid</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -9540,7 +9324,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Image</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -9548,7 +9332,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -9556,7 +9340,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -9564,7 +9348,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Retention</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -9572,7 +9356,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Snapshot</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -9580,7 +9364,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Uid</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -9595,7 +9379,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Backup<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigservicesetcdbackupconfig">*Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Etcd<wbr>Backup<wbr>Config</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigservicesetcdbackupconfig">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Etcd<wbr>Backup<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -9603,7 +9387,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Ca<wbr>Cert</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -9611,7 +9395,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Cert</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -9619,7 +9403,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Creation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -9659,7 +9443,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Gid</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -9667,7 +9451,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Image</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -9675,7 +9459,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -9683,7 +9467,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -9691,7 +9475,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Retention</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -9699,7 +9483,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Snapshot</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -9707,7 +9491,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Uid</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -9722,7 +9506,7 @@ The following state arguments are supported:
             title="Optional">
         <span>backup<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigservicesetcdbackupconfig">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Etcd<wbr>Backup<wbr>Config?</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigservicesetcdbackupconfig">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Etcd<wbr>Backup<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -9730,7 +9514,7 @@ The following state arguments are supported:
             title="Optional">
         <span>ca<wbr>Cert</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -9738,7 +9522,7 @@ The following state arguments are supported:
             title="Optional">
         <span>cert</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -9746,7 +9530,7 @@ The following state arguments are supported:
             title="Optional">
         <span>creation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -9754,7 +9538,7 @@ The following state arguments are supported:
             title="Optional">
         <span>external<wbr>Urls</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -9762,7 +9546,7 @@ The following state arguments are supported:
             title="Optional">
         <span>extra<wbr>Args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -9770,7 +9554,7 @@ The following state arguments are supported:
             title="Optional">
         <span>extra<wbr>Binds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -9778,7 +9562,7 @@ The following state arguments are supported:
             title="Optional">
         <span>extra<wbr>Envs</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -9786,7 +9570,7 @@ The following state arguments are supported:
             title="Optional">
         <span>gid</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -9794,7 +9578,7 @@ The following state arguments are supported:
             title="Optional">
         <span>image</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -9802,7 +9586,7 @@ The following state arguments are supported:
             title="Optional">
         <span>key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -9810,7 +9594,7 @@ The following state arguments are supported:
             title="Optional">
         <span>path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -9818,7 +9602,7 @@ The following state arguments are supported:
             title="Optional">
         <span>retention</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -9826,7 +9610,7 @@ The following state arguments are supported:
             title="Optional">
         <span>snapshot</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -9834,7 +9618,7 @@ The following state arguments are supported:
             title="Optional">
         <span>uid</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -9991,7 +9775,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable cluster template revision. Default `true` (bool)
 {{% /md %}}</dd>
@@ -10000,7 +9784,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Interval<wbr>Hours</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -10008,7 +9792,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Retention</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -10016,7 +9800,7 @@ The following state arguments are supported:
             title="Optional">
         <span>S3Backup<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigservicesetcdbackupconfigs3backupconfig">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Etcd<wbr>Backup<wbr>Config<wbr>S3Backup<wbr>Config<wbr>Args?</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigservicesetcdbackupconfigs3backupconfig">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Etcd<wbr>Backup<wbr>Config<wbr>S3Backup<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -10024,7 +9808,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Safe<wbr>Timestamp</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -10039,7 +9823,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable cluster template revision. Default `true` (bool)
 {{% /md %}}</dd>
@@ -10048,7 +9832,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Interval<wbr>Hours</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -10056,7 +9840,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Retention</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -10064,7 +9848,7 @@ The following state arguments are supported:
             title="Optional">
         <span>S3Backup<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigservicesetcdbackupconfigs3backupconfig">*Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Etcd<wbr>Backup<wbr>Config<wbr>S3Backup<wbr>Config</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigservicesetcdbackupconfigs3backupconfig">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Etcd<wbr>Backup<wbr>Config<wbr>S3Backup<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -10072,7 +9856,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Safe<wbr>Timestamp</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -10087,7 +9871,7 @@ The following state arguments are supported:
             title="Optional">
         <span>enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable cluster template revision. Default `true` (bool)
 {{% /md %}}</dd>
@@ -10096,7 +9880,7 @@ The following state arguments are supported:
             title="Optional">
         <span>interval<wbr>Hours</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -10104,7 +9888,7 @@ The following state arguments are supported:
             title="Optional">
         <span>retention</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -10112,7 +9896,7 @@ The following state arguments are supported:
             title="Optional">
         <span>s3Backup<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigservicesetcdbackupconfigs3backupconfig">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Etcd<wbr>Backup<wbr>Config<wbr>S3Backup<wbr>Config?</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigservicesetcdbackupconfigs3backupconfig">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Etcd<wbr>Backup<wbr>Config<wbr>S3Backup<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -10120,7 +9904,7 @@ The following state arguments are supported:
             title="Optional">
         <span>safe<wbr>Timestamp</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -10194,27 +9978,11 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Access<wbr>Key</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Bucket<wbr>Name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Custom<wbr>Ca</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -10228,9 +9996,25 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>Access<wbr>Key</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Custom<wbr>Ca</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Folder</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -10238,7 +10022,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -10246,7 +10030,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Secret<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -10257,27 +10041,11 @@ The following state arguments are supported:
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Access<wbr>Key</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Bucket<wbr>Name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Custom<wbr>Ca</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -10291,9 +10059,25 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>Access<wbr>Key</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Custom<wbr>Ca</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Folder</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -10301,7 +10085,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -10309,7 +10093,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Secret<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -10320,27 +10104,11 @@ The following state arguments are supported:
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>access<wbr>Key</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>bucket<wbr>Name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>custom<wbr>Ca</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -10354,9 +10122,25 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>access<wbr>Key</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>custom<wbr>Ca</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>folder</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -10364,7 +10148,7 @@ The following state arguments are supported:
             title="Optional">
         <span>region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -10372,7 +10156,7 @@ The following state arguments are supported:
             title="Optional">
         <span>secret<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -10383,14 +10167,6 @@ The following state arguments are supported:
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>access_<wbr>key</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>bucket<wbr>Name</span>
@@ -10399,17 +10175,25 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>custom<wbr>Ca</span>
+    <dt class="property-required"
+            title="Required">
+        <span>endpoint</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>endpoint</span>
+    <dt class="property-optional"
+            title="Optional">
+        <span>access_<wbr>key</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>custom<wbr>Ca</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -10465,7 +10249,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Admission<wbr>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -10473,7 +10257,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Always<wbr>Pull<wbr>Images</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -10481,7 +10265,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Audit<wbr>Log</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigserviceskubeapiauditlog">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Kube<wbr>Api<wbr>Audit<wbr>Log<wbr>Args?</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigserviceskubeapiauditlog">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Kube<wbr>Api<wbr>Audit<wbr>Log<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -10489,7 +10273,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Event<wbr>Rate<wbr>Limit</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigserviceskubeapieventratelimit">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Kube<wbr>Api<wbr>Event<wbr>Rate<wbr>Limit<wbr>Args?</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigserviceskubeapieventratelimit">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Kube<wbr>Api<wbr>Event<wbr>Rate<wbr>Limit<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -10497,7 +10281,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Extra<wbr>Args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -10505,7 +10289,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Extra<wbr>Binds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -10513,7 +10297,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Extra<wbr>Envs</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -10521,7 +10305,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Image</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -10529,7 +10313,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Pod<wbr>Security<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -10537,7 +10321,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Secrets<wbr>Encryption<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigserviceskubeapisecretsencryptionconfig">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Kube<wbr>Api<wbr>Secrets<wbr>Encryption<wbr>Config<wbr>Args?</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigserviceskubeapisecretsencryptionconfig">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Kube<wbr>Api<wbr>Secrets<wbr>Encryption<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -10545,7 +10329,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Service<wbr>Cluster<wbr>Ip<wbr>Range</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -10553,7 +10337,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Service<wbr>Node<wbr>Port<wbr>Range</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -10576,7 +10360,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Always<wbr>Pull<wbr>Images</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -10584,7 +10368,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Audit<wbr>Log</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigserviceskubeapiauditlog">*Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Kube<wbr>Api<wbr>Audit<wbr>Log</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigserviceskubeapiauditlog">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Kube<wbr>Api<wbr>Audit<wbr>Log</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -10592,7 +10376,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Event<wbr>Rate<wbr>Limit</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigserviceskubeapieventratelimit">*Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Kube<wbr>Api<wbr>Event<wbr>Rate<wbr>Limit</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigserviceskubeapieventratelimit">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Kube<wbr>Api<wbr>Event<wbr>Rate<wbr>Limit</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -10624,7 +10408,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Image</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -10632,7 +10416,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Pod<wbr>Security<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -10640,7 +10424,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Secrets<wbr>Encryption<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigserviceskubeapisecretsencryptionconfig">*Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Kube<wbr>Api<wbr>Secrets<wbr>Encryption<wbr>Config</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigserviceskubeapisecretsencryptionconfig">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Kube<wbr>Api<wbr>Secrets<wbr>Encryption<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -10648,7 +10432,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Service<wbr>Cluster<wbr>Ip<wbr>Range</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -10656,7 +10440,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Service<wbr>Node<wbr>Port<wbr>Range</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -10671,7 +10455,7 @@ The following state arguments are supported:
             title="Optional">
         <span>admission<wbr>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -10679,7 +10463,7 @@ The following state arguments are supported:
             title="Optional">
         <span>always<wbr>Pull<wbr>Images</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -10687,7 +10471,7 @@ The following state arguments are supported:
             title="Optional">
         <span>audit<wbr>Log</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigserviceskubeapiauditlog">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Kube<wbr>Api<wbr>Audit<wbr>Log?</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigserviceskubeapiauditlog">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Kube<wbr>Api<wbr>Audit<wbr>Log</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -10695,7 +10479,7 @@ The following state arguments are supported:
             title="Optional">
         <span>event<wbr>Rate<wbr>Limit</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigserviceskubeapieventratelimit">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Kube<wbr>Api<wbr>Event<wbr>Rate<wbr>Limit?</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigserviceskubeapieventratelimit">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Kube<wbr>Api<wbr>Event<wbr>Rate<wbr>Limit</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -10703,7 +10487,7 @@ The following state arguments are supported:
             title="Optional">
         <span>extra<wbr>Args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -10711,7 +10495,7 @@ The following state arguments are supported:
             title="Optional">
         <span>extra<wbr>Binds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -10719,7 +10503,7 @@ The following state arguments are supported:
             title="Optional">
         <span>extra<wbr>Envs</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -10727,7 +10511,7 @@ The following state arguments are supported:
             title="Optional">
         <span>image</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -10735,7 +10519,7 @@ The following state arguments are supported:
             title="Optional">
         <span>pod<wbr>Security<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -10743,7 +10527,7 @@ The following state arguments are supported:
             title="Optional">
         <span>secrets<wbr>Encryption<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigserviceskubeapisecretsencryptionconfig">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Kube<wbr>Api<wbr>Secrets<wbr>Encryption<wbr>Config?</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigserviceskubeapisecretsencryptionconfig">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Kube<wbr>Api<wbr>Secrets<wbr>Encryption<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -10751,7 +10535,7 @@ The following state arguments are supported:
             title="Optional">
         <span>service<wbr>Cluster<wbr>Ip<wbr>Range</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -10759,7 +10543,7 @@ The following state arguments are supported:
             title="Optional">
         <span>service<wbr>Node<wbr>Port<wbr>Range</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -10892,7 +10676,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigserviceskubeapiauditlogconfiguration">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Kube<wbr>Api<wbr>Audit<wbr>Log<wbr>Configuration<wbr>Args?</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigserviceskubeapiauditlogconfiguration">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Kube<wbr>Api<wbr>Audit<wbr>Log<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -10900,7 +10684,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable cluster template revision. Default `true` (bool)
 {{% /md %}}</dd>
@@ -10916,7 +10700,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigserviceskubeapiauditlogconfiguration">*Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Kube<wbr>Api<wbr>Audit<wbr>Log<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigserviceskubeapiauditlogconfiguration">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Kube<wbr>Api<wbr>Audit<wbr>Log<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -10924,7 +10708,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable cluster template revision. Default `true` (bool)
 {{% /md %}}</dd>
@@ -10940,7 +10724,7 @@ The following state arguments are supported:
             title="Optional">
         <span>configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigserviceskubeapiauditlogconfiguration">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Kube<wbr>Api<wbr>Audit<wbr>Log<wbr>Configuration?</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigserviceskubeapiauditlogconfiguration">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Services<wbr>Kube<wbr>Api<wbr>Audit<wbr>Log<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -10948,7 +10732,7 @@ The following state arguments are supported:
             title="Optional">
         <span>enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable cluster template revision. Default `true` (bool)
 {{% /md %}}</dd>
@@ -11003,7 +10787,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Format</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -11011,7 +10795,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Max<wbr>Age</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -11019,7 +10803,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Max<wbr>Backup</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -11027,7 +10811,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Max<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -11035,7 +10819,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -11043,7 +10827,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -11058,7 +10842,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Format</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -11066,7 +10850,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Max<wbr>Age</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -11074,7 +10858,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Max<wbr>Backup</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -11082,7 +10866,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Max<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -11090,7 +10874,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -11098,7 +10882,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -11113,7 +10897,7 @@ The following state arguments are supported:
             title="Optional">
         <span>format</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -11121,7 +10905,7 @@ The following state arguments are supported:
             title="Optional">
         <span>max<wbr>Age</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -11129,7 +10913,7 @@ The following state arguments are supported:
             title="Optional">
         <span>max<wbr>Backup</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -11137,7 +10921,7 @@ The following state arguments are supported:
             title="Optional">
         <span>max<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -11145,7 +10929,7 @@ The following state arguments are supported:
             title="Optional">
         <span>path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -11153,7 +10937,7 @@ The following state arguments are supported:
             title="Optional">
         <span>policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -11238,7 +11022,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -11246,7 +11030,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable cluster template revision. Default `true` (bool)
 {{% /md %}}</dd>
@@ -11270,7 +11054,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable cluster template revision. Default `true` (bool)
 {{% /md %}}</dd>
@@ -11286,7 +11070,7 @@ The following state arguments are supported:
             title="Optional">
         <span>configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -11294,7 +11078,7 @@ The following state arguments are supported:
             title="Optional">
         <span>enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable cluster template revision. Default `true` (bool)
 {{% /md %}}</dd>
@@ -11349,7 +11133,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Custom<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -11357,7 +11141,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable cluster template revision. Default `true` (bool)
 {{% /md %}}</dd>
@@ -11381,7 +11165,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable cluster template revision. Default `true` (bool)
 {{% /md %}}</dd>
@@ -11397,7 +11181,7 @@ The following state arguments are supported:
             title="Optional">
         <span>custom<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -11405,7 +11189,7 @@ The following state arguments are supported:
             title="Optional">
         <span>enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable cluster template revision. Default `true` (bool)
 {{% /md %}}</dd>
@@ -11460,7 +11244,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Cluster<wbr>Cidr</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -11468,7 +11252,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Extra<wbr>Args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -11476,7 +11260,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Extra<wbr>Binds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -11484,7 +11268,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Extra<wbr>Envs</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -11492,7 +11276,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Image</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -11500,7 +11284,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Service<wbr>Cluster<wbr>Ip<wbr>Range</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -11515,7 +11299,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Cluster<wbr>Cidr</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -11547,7 +11331,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Image</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -11555,7 +11339,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Service<wbr>Cluster<wbr>Ip<wbr>Range</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -11570,7 +11354,7 @@ The following state arguments are supported:
             title="Optional">
         <span>cluster<wbr>Cidr</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -11578,7 +11362,7 @@ The following state arguments are supported:
             title="Optional">
         <span>extra<wbr>Args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -11586,7 +11370,7 @@ The following state arguments are supported:
             title="Optional">
         <span>extra<wbr>Binds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -11594,7 +11378,7 @@ The following state arguments are supported:
             title="Optional">
         <span>extra<wbr>Envs</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -11602,7 +11386,7 @@ The following state arguments are supported:
             title="Optional">
         <span>image</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -11610,7 +11394,7 @@ The following state arguments are supported:
             title="Optional">
         <span>service<wbr>Cluster<wbr>Ip<wbr>Range</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -11695,7 +11479,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Cluster<wbr>Dns<wbr>Server</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -11703,7 +11487,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Cluster<wbr>Domain</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -11711,7 +11495,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Extra<wbr>Args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -11719,7 +11503,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Extra<wbr>Binds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -11727,7 +11511,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Extra<wbr>Envs</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -11735,7 +11519,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Fail<wbr>Swap<wbr>On</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -11743,7 +11527,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Generate<wbr>Serving<wbr>Certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -11751,7 +11535,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Image</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -11759,7 +11543,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Infra<wbr>Container<wbr>Image</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -11774,7 +11558,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Cluster<wbr>Dns<wbr>Server</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -11782,7 +11566,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Cluster<wbr>Domain</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -11814,7 +11598,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Fail<wbr>Swap<wbr>On</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -11822,7 +11606,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Generate<wbr>Serving<wbr>Certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -11830,7 +11614,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Image</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -11838,7 +11622,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Infra<wbr>Container<wbr>Image</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -11853,7 +11637,7 @@ The following state arguments are supported:
             title="Optional">
         <span>cluster<wbr>Dns<wbr>Server</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -11861,7 +11645,7 @@ The following state arguments are supported:
             title="Optional">
         <span>cluster<wbr>Domain</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -11869,7 +11653,7 @@ The following state arguments are supported:
             title="Optional">
         <span>extra<wbr>Args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -11877,7 +11661,7 @@ The following state arguments are supported:
             title="Optional">
         <span>extra<wbr>Binds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -11885,7 +11669,7 @@ The following state arguments are supported:
             title="Optional">
         <span>extra<wbr>Envs</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -11893,7 +11677,7 @@ The following state arguments are supported:
             title="Optional">
         <span>fail<wbr>Swap<wbr>On</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -11901,7 +11685,7 @@ The following state arguments are supported:
             title="Optional">
         <span>generate<wbr>Serving<wbr>Certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -11909,7 +11693,7 @@ The following state arguments are supported:
             title="Optional">
         <span>image</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -11917,7 +11701,7 @@ The following state arguments are supported:
             title="Optional">
         <span>infra<wbr>Container<wbr>Image</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -12026,7 +11810,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Extra<wbr>Args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -12034,7 +11818,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Extra<wbr>Binds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -12042,7 +11826,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Extra<wbr>Envs</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -12050,7 +11834,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Image</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -12089,7 +11873,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Image</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -12104,7 +11888,7 @@ The following state arguments are supported:
             title="Optional">
         <span>extra<wbr>Args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -12112,7 +11896,7 @@ The following state arguments are supported:
             title="Optional">
         <span>extra<wbr>Binds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -12120,7 +11904,7 @@ The following state arguments are supported:
             title="Optional">
         <span>extra<wbr>Envs</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -12128,7 +11912,7 @@ The following state arguments are supported:
             title="Optional">
         <span>image</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -12197,7 +11981,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Extra<wbr>Args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -12205,7 +11989,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Extra<wbr>Binds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -12213,7 +11997,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Extra<wbr>Envs</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -12221,7 +12005,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Image</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -12260,7 +12044,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Image</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -12275,7 +12059,7 @@ The following state arguments are supported:
             title="Optional">
         <span>extra<wbr>Args</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -12283,7 +12067,7 @@ The following state arguments are supported:
             title="Optional">
         <span>extra<wbr>Binds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -12291,7 +12075,7 @@ The following state arguments are supported:
             title="Optional">
         <span>extra<wbr>Envs</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -12299,7 +12083,7 @@ The following state arguments are supported:
             title="Optional">
         <span>image</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -12368,7 +12152,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Drain</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -12376,7 +12160,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Drain<wbr>Input</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigupgradestrategydraininput">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Upgrade<wbr>Strategy<wbr>Drain<wbr>Input<wbr>Args?</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigupgradestrategydraininput">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Upgrade<wbr>Strategy<wbr>Drain<wbr>Input<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -12384,7 +12168,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Max<wbr>Unavailable<wbr>Controlplane</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -12392,7 +12176,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Max<wbr>Unavailable<wbr>Worker</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -12407,7 +12191,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Drain</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -12415,7 +12199,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Drain<wbr>Input</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigupgradestrategydraininput">*Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Upgrade<wbr>Strategy<wbr>Drain<wbr>Input</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigupgradestrategydraininput">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Upgrade<wbr>Strategy<wbr>Drain<wbr>Input</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -12423,7 +12207,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Max<wbr>Unavailable<wbr>Controlplane</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -12431,7 +12215,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Max<wbr>Unavailable<wbr>Worker</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -12446,7 +12230,7 @@ The following state arguments are supported:
             title="Optional">
         <span>drain</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -12454,7 +12238,7 @@ The following state arguments are supported:
             title="Optional">
         <span>drain<wbr>Input</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigupgradestrategydraininput">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Upgrade<wbr>Strategy<wbr>Drain<wbr>Input?</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigrkeconfigupgradestrategydraininput">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Rke<wbr>Config<wbr>Upgrade<wbr>Strategy<wbr>Drain<wbr>Input</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -12462,7 +12246,7 @@ The following state arguments are supported:
             title="Optional">
         <span>max<wbr>Unavailable<wbr>Controlplane</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -12470,7 +12254,7 @@ The following state arguments are supported:
             title="Optional">
         <span>max<wbr>Unavailable<wbr>Worker</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -12539,7 +12323,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Delete<wbr>Local<wbr>Data</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -12547,7 +12331,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Force</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -12555,7 +12339,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Grace<wbr>Period</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -12563,7 +12347,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Ignore<wbr>Daemon<wbr>Sets</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -12571,7 +12355,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -12586,7 +12370,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Delete<wbr>Local<wbr>Data</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -12594,7 +12378,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Force</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -12602,7 +12386,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Grace<wbr>Period</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -12610,7 +12394,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Ignore<wbr>Daemon<wbr>Sets</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -12618,7 +12402,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -12633,7 +12417,7 @@ The following state arguments are supported:
             title="Optional">
         <span>delete<wbr>Local<wbr>Data</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -12641,7 +12425,7 @@ The following state arguments are supported:
             title="Optional">
         <span>force</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -12649,7 +12433,7 @@ The following state arguments are supported:
             title="Optional">
         <span>grace<wbr>Period</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -12657,7 +12441,7 @@ The following state arguments are supported:
             title="Optional">
         <span>ignore<wbr>Daemon<wbr>Sets</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -12665,7 +12449,7 @@ The following state arguments are supported:
             title="Optional">
         <span>timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -12738,15 +12522,6 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Enable cluster template revision. Default `true` (bool)
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Scan<wbr>Config</span>
@@ -12763,21 +12538,21 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>Enabled</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable cluster template revision. Default `true` (bool)
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Enable cluster template revision. Default `true` (bool)
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -12795,21 +12570,21 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>Enabled</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable cluster template revision. Default `true` (bool)
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Enable cluster template revision. Default `true` (bool)
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -12827,21 +12602,21 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>enabled</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Enable cluster template revision. Default `true` (bool)
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Enable cluster template revision. Default `true` (bool)
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -12858,6 +12633,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigscheduledclusterscanscheduleconfig">Dict[Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Scheduled<wbr>Cluster<wbr>Scan<wbr>Schedule<wbr>Config]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>enabled</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable cluster template revision. Default `true` (bool)
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -12885,7 +12669,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Cis<wbr>Scan<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigscheduledclusterscanscanconfigcisscanconfig">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Scheduled<wbr>Cluster<wbr>Scan<wbr>Scan<wbr>Config<wbr>Cis<wbr>Scan<wbr>Config<wbr>Args?</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigscheduledclusterscanscanconfigcisscanconfig">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Scheduled<wbr>Cluster<wbr>Scan<wbr>Scan<wbr>Config<wbr>Cis<wbr>Scan<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -12900,7 +12684,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Cis<wbr>Scan<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigscheduledclusterscanscanconfigcisscanconfig">*Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Scheduled<wbr>Cluster<wbr>Scan<wbr>Scan<wbr>Config<wbr>Cis<wbr>Scan<wbr>Config</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigscheduledclusterscanscanconfigcisscanconfig">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Scheduled<wbr>Cluster<wbr>Scan<wbr>Scan<wbr>Config<wbr>Cis<wbr>Scan<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -12915,7 +12699,7 @@ The following state arguments are supported:
             title="Optional">
         <span>cis<wbr>Scan<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigscheduledclusterscanscanconfigcisscanconfig">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Scheduled<wbr>Cluster<wbr>Scan<wbr>Scan<wbr>Config<wbr>Cis<wbr>Scan<wbr>Config?</a></span>
+        <span class="property-type"><a href="#clustertemplatetemplaterevisionclusterconfigscheduledclusterscanscanconfigcisscanconfig">Cluster<wbr>Template<wbr>Template<wbr>Revision<wbr>Cluster<wbr>Config<wbr>Scheduled<wbr>Cluster<wbr>Scan<wbr>Scan<wbr>Config<wbr>Cis<wbr>Scan<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -12960,7 +12744,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Debug<wbr>Master</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -12968,7 +12752,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Debug<wbr>Worker</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -12976,7 +12760,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Override<wbr>Benchmark<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -12984,7 +12768,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Override<wbr>Skips</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -12992,7 +12776,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Profile</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -13007,7 +12791,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Debug<wbr>Master</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -13015,7 +12799,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Debug<wbr>Worker</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -13023,7 +12807,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Override<wbr>Benchmark<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -13039,7 +12823,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Profile</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -13054,7 +12838,7 @@ The following state arguments are supported:
             title="Optional">
         <span>debug<wbr>Master</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -13062,7 +12846,7 @@ The following state arguments are supported:
             title="Optional">
         <span>debug<wbr>Worker</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -13070,7 +12854,7 @@ The following state arguments are supported:
             title="Optional">
         <span>override<wbr>Benchmark<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -13078,7 +12862,7 @@ The following state arguments are supported:
             title="Optional">
         <span>override<wbr>Skips</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -13086,7 +12870,7 @@ The following state arguments are supported:
             title="Optional">
         <span>profile</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -13171,7 +12955,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Retention</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -13194,7 +12978,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Retention</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -13217,7 +13001,7 @@ The following state arguments are supported:
             title="Optional">
         <span>retention</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -13275,11 +13059,20 @@ The following state arguments are supported:
     <dd>{{% md %}}Default variable value (string)
 {{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>Variable</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Variable name (string)
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Required</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Required variable. Default `false` (bool)
 {{% /md %}}</dd>
@@ -13288,18 +13081,9 @@ The following state arguments are supported:
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Variable type. `boolean`, `int` and `string` are allowed. Default `string` (string)
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Variable</span>
-        <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Variable name (string)
+    <dd>{{% md %}}Variable type. `boolean`, `int` and `string` are allowed. Default `string` (string)
 {{% /md %}}</dd>
 
 </dl>
@@ -13318,11 +13102,20 @@ The following state arguments are supported:
     <dd>{{% md %}}Default variable value (string)
 {{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>Variable</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Variable name (string)
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Required</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Required variable. Default `false` (bool)
 {{% /md %}}</dd>
@@ -13331,18 +13124,9 @@ The following state arguments are supported:
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Variable type. `boolean`, `int` and `string` are allowed. Default `string` (string)
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Variable</span>
-        <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Variable name (string)
+    <dd>{{% md %}}Variable type. `boolean`, `int` and `string` are allowed. Default `string` (string)
 {{% /md %}}</dd>
 
 </dl>
@@ -13361,11 +13145,20 @@ The following state arguments are supported:
     <dd>{{% md %}}Default variable value (string)
 {{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>variable</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Variable name (string)
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>required</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Required variable. Default `false` (bool)
 {{% /md %}}</dd>
@@ -13374,18 +13167,9 @@ The following state arguments are supported:
             title="Optional">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Variable type. `boolean`, `int` and `string` are allowed. Default `string` (string)
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>variable</span>
-        <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Variable name (string)
+    <dd>{{% md %}}Variable type. `boolean`, `int` and `string` are allowed. Default `string` (string)
 {{% /md %}}</dd>
 
 </dl>
@@ -13404,6 +13188,15 @@ The following state arguments are supported:
     <dd>{{% md %}}Default variable value (string)
 {{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>variable</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Variable name (string)
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>required</span>
@@ -13420,15 +13213,6 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Variable type. `boolean`, `int` and `string` are allowed. Default `string` (string)
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>variable</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Variable name (string)
 {{% /md %}}</dd>
 
 </dl>

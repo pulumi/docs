@@ -47,7 +47,7 @@ const example = new aws.ec2.Ami("example", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#Ami">Ami</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#AmiArgs">AmiArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#Ami">Ami</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#AmiArgs">AmiArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -55,7 +55,7 @@ const example = new aws.ec2.Ami("example", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewAmi<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2?tab=doc#AmiArgs">AmiArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2?tab=doc#Ami">Ami</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewAmi<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2?tab=doc#AmiArgs">AmiArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2?tab=doc#Ami">Ami</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -155,7 +155,7 @@ const example = new aws.ec2.Ami("example", {
             title="Optional">
         <span>Architecture</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Machine architecture for created instances. Defaults to "x86_64".
 {{% /md %}}</dd>
@@ -164,7 +164,7 @@ const example = new aws.ec2.Ami("example", {
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A longer, human-readable description for the AMI.
 {{% /md %}}</dd>
@@ -173,7 +173,7 @@ const example = new aws.ec2.Ami("example", {
             title="Optional">
         <span>Ebs<wbr>Block<wbr>Devices</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amiebsblockdevice">List&lt;Ami<wbr>Ebs<wbr>Block<wbr>Device<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#amiebsblockdevice">List&lt;Ami<wbr>Ebs<wbr>Block<wbr>Device<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Nested block describing an EBS block device that should be
 attached to created instances. The structure of this block is described below.
@@ -183,7 +183,7 @@ attached to created instances. The structure of this block is described below.
             title="Optional">
         <span>Ena<wbr>Support</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether enhanced networking with ENA is enabled. Defaults to `false`.
 {{% /md %}}</dd>
@@ -192,7 +192,7 @@ attached to created instances. The structure of this block is described below.
             title="Optional">
         <span>Ephemeral<wbr>Block<wbr>Devices</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amiephemeralblockdevice">List&lt;Ami<wbr>Ephemeral<wbr>Block<wbr>Device<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#amiephemeralblockdevice">List&lt;Ami<wbr>Ephemeral<wbr>Block<wbr>Device<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Nested block describing an ephemeral block device that
 should be attached to created instances. The structure of this block is described below.
@@ -202,7 +202,7 @@ should be attached to created instances. The structure of this block is describe
             title="Optional">
         <span>Image<wbr>Location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path to an S3 object containing an image manifest, e.g. created
 by the `ec2-upload-bundle` command in the EC2 command line tools.
@@ -212,7 +212,7 @@ by the `ec2-upload-bundle` command in the EC2 command line tools.
             title="Optional">
         <span>Kernel<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the kernel image (AKI) that will be used as the paravirtual
 kernel in created instances.
@@ -222,7 +222,7 @@ kernel in created instances.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A region-unique name for the AMI.
 {{% /md %}}</dd>
@@ -231,7 +231,7 @@ kernel in created instances.
             title="Optional">
         <span>Ramdisk<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of an initrd image (ARI) that will be used when booting the
 created instances.
@@ -241,7 +241,7 @@ created instances.
             title="Optional">
         <span>Root<wbr>Device<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the root device (for example, `/dev/sda1`, or `/dev/xvda`).
 {{% /md %}}</dd>
@@ -250,7 +250,7 @@ created instances.
             title="Optional">
         <span>Sriov<wbr>Net<wbr>Support</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}When set to "simple" (the default), enables enhanced networking
 for created instances. No other value is supported at this time.
@@ -260,7 +260,7 @@ for created instances. No other value is supported at this time.
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -269,7 +269,7 @@ for created instances. No other value is supported at this time.
             title="Optional">
         <span>Virtualization<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Keyword to choose what virtualization mode created instances
 will use. Can be either "paravirtual" (the default) or "hvm". The choice of virtualization type
@@ -287,7 +287,7 @@ changes the set of further arguments that are required, as described below.
             title="Optional">
         <span>Architecture</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Machine architecture for created instances. Defaults to "x86_64".
 {{% /md %}}</dd>
@@ -296,7 +296,7 @@ changes the set of further arguments that are required, as described below.
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A longer, human-readable description for the AMI.
 {{% /md %}}</dd>
@@ -315,7 +315,7 @@ attached to created instances. The structure of this block is described below.
             title="Optional">
         <span>Ena<wbr>Support</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether enhanced networking with ENA is enabled. Defaults to `false`.
 {{% /md %}}</dd>
@@ -334,7 +334,7 @@ should be attached to created instances. The structure of this block is describe
             title="Optional">
         <span>Image<wbr>Location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path to an S3 object containing an image manifest, e.g. created
 by the `ec2-upload-bundle` command in the EC2 command line tools.
@@ -344,7 +344,7 @@ by the `ec2-upload-bundle` command in the EC2 command line tools.
             title="Optional">
         <span>Kernel<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the kernel image (AKI) that will be used as the paravirtual
 kernel in created instances.
@@ -354,7 +354,7 @@ kernel in created instances.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A region-unique name for the AMI.
 {{% /md %}}</dd>
@@ -363,7 +363,7 @@ kernel in created instances.
             title="Optional">
         <span>Ramdisk<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of an initrd image (ARI) that will be used when booting the
 created instances.
@@ -373,7 +373,7 @@ created instances.
             title="Optional">
         <span>Root<wbr>Device<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the root device (for example, `/dev/sda1`, or `/dev/xvda`).
 {{% /md %}}</dd>
@@ -382,7 +382,7 @@ created instances.
             title="Optional">
         <span>Sriov<wbr>Net<wbr>Support</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}When set to "simple" (the default), enables enhanced networking
 for created instances. No other value is supported at this time.
@@ -401,7 +401,7 @@ for created instances. No other value is supported at this time.
             title="Optional">
         <span>Virtualization<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Keyword to choose what virtualization mode created instances
 will use. Can be either "paravirtual" (the default) or "hvm". The choice of virtualization type
@@ -419,7 +419,7 @@ changes the set of further arguments that are required, as described below.
             title="Optional">
         <span>architecture</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Machine architecture for created instances. Defaults to "x86_64".
 {{% /md %}}</dd>
@@ -428,7 +428,7 @@ changes the set of further arguments that are required, as described below.
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A longer, human-readable description for the AMI.
 {{% /md %}}</dd>
@@ -437,7 +437,7 @@ changes the set of further arguments that are required, as described below.
             title="Optional">
         <span>ebs<wbr>Block<wbr>Devices</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amiebsblockdevice">Ami<wbr>Ebs<wbr>Block<wbr>Device[]?</a></span>
+        <span class="property-type"><a href="#amiebsblockdevice">Ami<wbr>Ebs<wbr>Block<wbr>Device[]</a></span>
     </dt>
     <dd>{{% md %}}Nested block describing an EBS block device that should be
 attached to created instances. The structure of this block is described below.
@@ -447,7 +447,7 @@ attached to created instances. The structure of this block is described below.
             title="Optional">
         <span>ena<wbr>Support</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies whether enhanced networking with ENA is enabled. Defaults to `false`.
 {{% /md %}}</dd>
@@ -456,7 +456,7 @@ attached to created instances. The structure of this block is described below.
             title="Optional">
         <span>ephemeral<wbr>Block<wbr>Devices</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amiephemeralblockdevice">Ami<wbr>Ephemeral<wbr>Block<wbr>Device[]?</a></span>
+        <span class="property-type"><a href="#amiephemeralblockdevice">Ami<wbr>Ephemeral<wbr>Block<wbr>Device[]</a></span>
     </dt>
     <dd>{{% md %}}Nested block describing an ephemeral block device that
 should be attached to created instances. The structure of this block is described below.
@@ -466,7 +466,7 @@ should be attached to created instances. The structure of this block is describe
             title="Optional">
         <span>image<wbr>Location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path to an S3 object containing an image manifest, e.g. created
 by the `ec2-upload-bundle` command in the EC2 command line tools.
@@ -476,7 +476,7 @@ by the `ec2-upload-bundle` command in the EC2 command line tools.
             title="Optional">
         <span>kernel<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the kernel image (AKI) that will be used as the paravirtual
 kernel in created instances.
@@ -486,7 +486,7 @@ kernel in created instances.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A region-unique name for the AMI.
 {{% /md %}}</dd>
@@ -495,7 +495,7 @@ kernel in created instances.
             title="Optional">
         <span>ramdisk<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of an initrd image (ARI) that will be used when booting the
 created instances.
@@ -505,7 +505,7 @@ created instances.
             title="Optional">
         <span>root<wbr>Device<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the root device (for example, `/dev/sda1`, or `/dev/xvda`).
 {{% /md %}}</dd>
@@ -514,7 +514,7 @@ created instances.
             title="Optional">
         <span>sriov<wbr>Net<wbr>Support</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}When set to "simple" (the default), enables enhanced networking
 for created instances. No other value is supported at this time.
@@ -524,7 +524,7 @@ for created instances. No other value is supported at this time.
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -533,7 +533,7 @@ for created instances. No other value is supported at this time.
             title="Optional">
         <span>virtualization<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Keyword to choose what virtualization mode created instances
 will use. Can be either "paravirtual" (the default) or "hvm". The choice of virtualization type
@@ -693,73 +693,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Architecture</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Machine architecture for created instances. Defaults to "x86_64".
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}A longer, human-readable description for the AMI.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Ebs<wbr>Block<wbr>Devices</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amiebsblockdevice">List&lt;Ami<wbr>Ebs<wbr>Block<wbr>Device&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}Nested block describing an EBS block device that should be
-attached to created instances. The structure of this block is described below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Ena<wbr>Support</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Specifies whether enhanced networking with ENA is enabled. Defaults to `false`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Ephemeral<wbr>Block<wbr>Devices</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amiephemeralblockdevice">List&lt;Ami<wbr>Ephemeral<wbr>Block<wbr>Device&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}Nested block describing an ephemeral block device that
-should be attached to created instances. The structure of this block is described below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Image<wbr>Location</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Path to an S3 object containing an image manifest, e.g. created
-by the `ec2-upload-bundle` command in the EC2 command line tools.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Kernel<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The id of the kernel image (AKI) that will be used as the paravirtual
-kernel in created instances.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Manage<wbr>Ebs<wbr>Snapshots</span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
@@ -768,69 +701,11 @@ kernel in created instances.
 
     <dt class="property-"
             title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A region-unique name for the AMI.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Ramdisk<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The id of an initrd image (ARI) that will be used when booting the
-created instances.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Root<wbr>Device<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The name of the root device (for example, `/dev/sda1`, or `/dev/xvda`).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Root<wbr>Snapshot<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Snapshot ID for the root volume (for EBS-backed AMIs)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Sriov<wbr>Net<wbr>Support</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}When set to "simple" (the default), enables enhanced networking
-for created instances. No other value is supported at this time.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Virtualization<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Keyword to choose what virtualization mode created instances
-will use. Can be either "paravirtual" (the default) or "hvm". The choice of virtualization type
-changes the set of further arguments that are required, as described below.
 {{% /md %}}</dd>
 
 </dl>
@@ -842,73 +717,6 @@ changes the set of further arguments that are required, as described below.
 
     <dt class="property-"
             title="">
-        <span>Architecture</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Machine architecture for created instances. Defaults to "x86_64".
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}A longer, human-readable description for the AMI.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Ebs<wbr>Block<wbr>Devices</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amiebsblockdevice">[]Ami<wbr>Ebs<wbr>Block<wbr>Device</a></span>
-    </dt>
-    <dd>{{% md %}}Nested block describing an EBS block device that should be
-attached to created instances. The structure of this block is described below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Ena<wbr>Support</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Specifies whether enhanced networking with ENA is enabled. Defaults to `false`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Ephemeral<wbr>Block<wbr>Devices</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amiephemeralblockdevice">[]Ami<wbr>Ephemeral<wbr>Block<wbr>Device</a></span>
-    </dt>
-    <dd>{{% md %}}Nested block describing an ephemeral block device that
-should be attached to created instances. The structure of this block is described below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Image<wbr>Location</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Path to an S3 object containing an image manifest, e.g. created
-by the `ec2-upload-bundle` command in the EC2 command line tools.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Kernel<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The id of the kernel image (AKI) that will be used as the paravirtual
-kernel in created instances.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Manage<wbr>Ebs<wbr>Snapshots</span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
@@ -917,69 +725,11 @@ kernel in created instances.
 
     <dt class="property-"
             title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A region-unique name for the AMI.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Ramdisk<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The id of an initrd image (ARI) that will be used when booting the
-created instances.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Root<wbr>Device<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The name of the root device (for example, `/dev/sda1`, or `/dev/xvda`).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Root<wbr>Snapshot<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Snapshot ID for the root volume (for EBS-backed AMIs)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Sriov<wbr>Net<wbr>Support</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}When set to "simple" (the default), enables enhanced networking
-for created instances. No other value is supported at this time.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Virtualization<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Keyword to choose what virtualization mode created instances
-will use. Can be either "paravirtual" (the default) or "hvm". The choice of virtualization type
-changes the set of further arguments that are required, as described below.
 {{% /md %}}</dd>
 
 </dl>
@@ -991,73 +741,6 @@ changes the set of further arguments that are required, as described below.
 
     <dt class="property-"
             title="">
-        <span>architecture</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Machine architecture for created instances. Defaults to "x86_64".
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}A longer, human-readable description for the AMI.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>ebs<wbr>Block<wbr>Devices</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amiebsblockdevice">Ami<wbr>Ebs<wbr>Block<wbr>Device[]</a></span>
-    </dt>
-    <dd>{{% md %}}Nested block describing an EBS block device that should be
-attached to created instances. The structure of this block is described below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>ena<wbr>Support</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Specifies whether enhanced networking with ENA is enabled. Defaults to `false`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>ephemeral<wbr>Block<wbr>Devices</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amiephemeralblockdevice">Ami<wbr>Ephemeral<wbr>Block<wbr>Device[]</a></span>
-    </dt>
-    <dd>{{% md %}}Nested block describing an ephemeral block device that
-should be attached to created instances. The structure of this block is described below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>image<wbr>Location</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Path to an S3 object containing an image manifest, e.g. created
-by the `ec2-upload-bundle` command in the EC2 command line tools.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>kernel<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The id of the kernel image (AKI) that will be used as the paravirtual
-kernel in created instances.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>manage<wbr>Ebs<wbr>Snapshots</span>
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
@@ -1066,69 +749,11 @@ kernel in created instances.
 
     <dt class="property-"
             title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A region-unique name for the AMI.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>ramdisk<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The id of an initrd image (ARI) that will be used when booting the
-created instances.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>root<wbr>Device<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The name of the root device (for example, `/dev/sda1`, or `/dev/xvda`).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>root<wbr>Snapshot<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Snapshot ID for the root volume (for EBS-backed AMIs)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>sriov<wbr>Net<wbr>Support</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}When set to "simple" (the default), enables enhanced networking
-for created instances. No other value is supported at this time.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>virtualization<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Keyword to choose what virtualization mode created instances
-will use. Can be either "paravirtual" (the default) or "hvm". The choice of virtualization type
-changes the set of further arguments that are required, as described below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1140,73 +765,6 @@ changes the set of further arguments that are required, as described below.
 
     <dt class="property-"
             title="">
-        <span>architecture</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Machine architecture for created instances. Defaults to "x86_64".
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}A longer, human-readable description for the AMI.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>ebs_<wbr>block_<wbr>devices</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amiebsblockdevice">List[Ami<wbr>Ebs<wbr>Block<wbr>Device]</a></span>
-    </dt>
-    <dd>{{% md %}}Nested block describing an EBS block device that should be
-attached to created instances. The structure of this block is described below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>ena_<wbr>support</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Specifies whether enhanced networking with ENA is enabled. Defaults to `false`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>ephemeral_<wbr>block_<wbr>devices</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amiephemeralblockdevice">List[Ami<wbr>Ephemeral<wbr>Block<wbr>Device]</a></span>
-    </dt>
-    <dd>{{% md %}}Nested block describing an ephemeral block device that
-should be attached to created instances. The structure of this block is described below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>image_<wbr>location</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Path to an S3 object containing an image manifest, e.g. created
-by the `ec2-upload-bundle` command in the EC2 command line tools.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>kernel_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The id of the kernel image (AKI) that will be used as the paravirtual
-kernel in created instances.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>manage_<wbr>ebs_<wbr>snapshots</span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
@@ -1215,69 +773,11 @@ kernel in created instances.
 
     <dt class="property-"
             title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}A region-unique name for the AMI.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>ramdisk_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The id of an initrd image (ARI) that will be used when booting the
-created instances.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>root_<wbr>device_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the root device (for example, `/dev/sda1`, or `/dev/xvda`).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>root_<wbr>snapshot_<wbr>id</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Snapshot ID for the root volume (for EBS-backed AMIs)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>sriov_<wbr>net_<wbr>support</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}When set to "simple" (the default), enables enhanced networking
-for created instances. No other value is supported at this time.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>virtualization_<wbr>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Keyword to choose what virtualization mode created instances
-will use. Can be either "paravirtual" (the default) or "hvm". The choice of virtualization type
-changes the set of further arguments that are required, as described below.
 {{% /md %}}</dd>
 
 </dl>
@@ -1419,7 +919,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Architecture</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Machine architecture for created instances. Defaults to "x86_64".
 {{% /md %}}</dd>
@@ -1428,7 +928,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A longer, human-readable description for the AMI.
 {{% /md %}}</dd>
@@ -1437,7 +937,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Ebs<wbr>Block<wbr>Devices</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amiebsblockdevice">List&lt;Ami<wbr>Ebs<wbr>Block<wbr>Device<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#amiebsblockdevice">List&lt;Ami<wbr>Ebs<wbr>Block<wbr>Device<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Nested block describing an EBS block device that should be
 attached to created instances. The structure of this block is described below.
@@ -1447,7 +947,7 @@ attached to created instances. The structure of this block is described below.
             title="Optional">
         <span>Ena<wbr>Support</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether enhanced networking with ENA is enabled. Defaults to `false`.
 {{% /md %}}</dd>
@@ -1456,7 +956,7 @@ attached to created instances. The structure of this block is described below.
             title="Optional">
         <span>Ephemeral<wbr>Block<wbr>Devices</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amiephemeralblockdevice">List&lt;Ami<wbr>Ephemeral<wbr>Block<wbr>Device<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#amiephemeralblockdevice">List&lt;Ami<wbr>Ephemeral<wbr>Block<wbr>Device<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Nested block describing an ephemeral block device that
 should be attached to created instances. The structure of this block is described below.
@@ -1466,7 +966,7 @@ should be attached to created instances. The structure of this block is describe
             title="Optional">
         <span>Image<wbr>Location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path to an S3 object containing an image manifest, e.g. created
 by the `ec2-upload-bundle` command in the EC2 command line tools.
@@ -1476,7 +976,7 @@ by the `ec2-upload-bundle` command in the EC2 command line tools.
             title="Optional">
         <span>Kernel<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the kernel image (AKI) that will be used as the paravirtual
 kernel in created instances.
@@ -1486,7 +986,7 @@ kernel in created instances.
             title="Optional">
         <span>Manage<wbr>Ebs<wbr>Snapshots</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1494,7 +994,7 @@ kernel in created instances.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A region-unique name for the AMI.
 {{% /md %}}</dd>
@@ -1503,7 +1003,7 @@ kernel in created instances.
             title="Optional">
         <span>Ramdisk<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of an initrd image (ARI) that will be used when booting the
 created instances.
@@ -1513,7 +1013,7 @@ created instances.
             title="Optional">
         <span>Root<wbr>Device<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the root device (for example, `/dev/sda1`, or `/dev/xvda`).
 {{% /md %}}</dd>
@@ -1522,7 +1022,7 @@ created instances.
             title="Optional">
         <span>Root<wbr>Snapshot<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Snapshot ID for the root volume (for EBS-backed AMIs)
 {{% /md %}}</dd>
@@ -1531,7 +1031,7 @@ created instances.
             title="Optional">
         <span>Sriov<wbr>Net<wbr>Support</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}When set to "simple" (the default), enables enhanced networking
 for created instances. No other value is supported at this time.
@@ -1541,7 +1041,7 @@ for created instances. No other value is supported at this time.
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1550,7 +1050,7 @@ for created instances. No other value is supported at this time.
             title="Optional">
         <span>Virtualization<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Keyword to choose what virtualization mode created instances
 will use. Can be either "paravirtual" (the default) or "hvm". The choice of virtualization type
@@ -1568,7 +1068,7 @@ changes the set of further arguments that are required, as described below.
             title="Optional">
         <span>Architecture</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Machine architecture for created instances. Defaults to "x86_64".
 {{% /md %}}</dd>
@@ -1577,7 +1077,7 @@ changes the set of further arguments that are required, as described below.
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A longer, human-readable description for the AMI.
 {{% /md %}}</dd>
@@ -1596,7 +1096,7 @@ attached to created instances. The structure of this block is described below.
             title="Optional">
         <span>Ena<wbr>Support</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether enhanced networking with ENA is enabled. Defaults to `false`.
 {{% /md %}}</dd>
@@ -1615,7 +1115,7 @@ should be attached to created instances. The structure of this block is describe
             title="Optional">
         <span>Image<wbr>Location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path to an S3 object containing an image manifest, e.g. created
 by the `ec2-upload-bundle` command in the EC2 command line tools.
@@ -1625,7 +1125,7 @@ by the `ec2-upload-bundle` command in the EC2 command line tools.
             title="Optional">
         <span>Kernel<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the kernel image (AKI) that will be used as the paravirtual
 kernel in created instances.
@@ -1635,7 +1135,7 @@ kernel in created instances.
             title="Optional">
         <span>Manage<wbr>Ebs<wbr>Snapshots</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1643,7 +1143,7 @@ kernel in created instances.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A region-unique name for the AMI.
 {{% /md %}}</dd>
@@ -1652,7 +1152,7 @@ kernel in created instances.
             title="Optional">
         <span>Ramdisk<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of an initrd image (ARI) that will be used when booting the
 created instances.
@@ -1662,7 +1162,7 @@ created instances.
             title="Optional">
         <span>Root<wbr>Device<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the root device (for example, `/dev/sda1`, or `/dev/xvda`).
 {{% /md %}}</dd>
@@ -1671,7 +1171,7 @@ created instances.
             title="Optional">
         <span>Root<wbr>Snapshot<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Snapshot ID for the root volume (for EBS-backed AMIs)
 {{% /md %}}</dd>
@@ -1680,7 +1180,7 @@ created instances.
             title="Optional">
         <span>Sriov<wbr>Net<wbr>Support</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}When set to "simple" (the default), enables enhanced networking
 for created instances. No other value is supported at this time.
@@ -1699,7 +1199,7 @@ for created instances. No other value is supported at this time.
             title="Optional">
         <span>Virtualization<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Keyword to choose what virtualization mode created instances
 will use. Can be either "paravirtual" (the default) or "hvm". The choice of virtualization type
@@ -1717,7 +1217,7 @@ changes the set of further arguments that are required, as described below.
             title="Optional">
         <span>architecture</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Machine architecture for created instances. Defaults to "x86_64".
 {{% /md %}}</dd>
@@ -1726,7 +1226,7 @@ changes the set of further arguments that are required, as described below.
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A longer, human-readable description for the AMI.
 {{% /md %}}</dd>
@@ -1735,7 +1235,7 @@ changes the set of further arguments that are required, as described below.
             title="Optional">
         <span>ebs<wbr>Block<wbr>Devices</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amiebsblockdevice">Ami<wbr>Ebs<wbr>Block<wbr>Device[]?</a></span>
+        <span class="property-type"><a href="#amiebsblockdevice">Ami<wbr>Ebs<wbr>Block<wbr>Device[]</a></span>
     </dt>
     <dd>{{% md %}}Nested block describing an EBS block device that should be
 attached to created instances. The structure of this block is described below.
@@ -1745,7 +1245,7 @@ attached to created instances. The structure of this block is described below.
             title="Optional">
         <span>ena<wbr>Support</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies whether enhanced networking with ENA is enabled. Defaults to `false`.
 {{% /md %}}</dd>
@@ -1754,7 +1254,7 @@ attached to created instances. The structure of this block is described below.
             title="Optional">
         <span>ephemeral<wbr>Block<wbr>Devices</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#amiephemeralblockdevice">Ami<wbr>Ephemeral<wbr>Block<wbr>Device[]?</a></span>
+        <span class="property-type"><a href="#amiephemeralblockdevice">Ami<wbr>Ephemeral<wbr>Block<wbr>Device[]</a></span>
     </dt>
     <dd>{{% md %}}Nested block describing an ephemeral block device that
 should be attached to created instances. The structure of this block is described below.
@@ -1764,7 +1264,7 @@ should be attached to created instances. The structure of this block is describe
             title="Optional">
         <span>image<wbr>Location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path to an S3 object containing an image manifest, e.g. created
 by the `ec2-upload-bundle` command in the EC2 command line tools.
@@ -1774,7 +1274,7 @@ by the `ec2-upload-bundle` command in the EC2 command line tools.
             title="Optional">
         <span>kernel<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the kernel image (AKI) that will be used as the paravirtual
 kernel in created instances.
@@ -1784,7 +1284,7 @@ kernel in created instances.
             title="Optional">
         <span>manage<wbr>Ebs<wbr>Snapshots</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1792,7 +1292,7 @@ kernel in created instances.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A region-unique name for the AMI.
 {{% /md %}}</dd>
@@ -1801,7 +1301,7 @@ kernel in created instances.
             title="Optional">
         <span>ramdisk<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of an initrd image (ARI) that will be used when booting the
 created instances.
@@ -1811,7 +1311,7 @@ created instances.
             title="Optional">
         <span>root<wbr>Device<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the root device (for example, `/dev/sda1`, or `/dev/xvda`).
 {{% /md %}}</dd>
@@ -1820,7 +1320,7 @@ created instances.
             title="Optional">
         <span>root<wbr>Snapshot<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Snapshot ID for the root volume (for EBS-backed AMIs)
 {{% /md %}}</dd>
@@ -1829,7 +1329,7 @@ created instances.
             title="Optional">
         <span>sriov<wbr>Net<wbr>Support</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}When set to "simple" (the default), enables enhanced networking
 for created instances. No other value is supported at this time.
@@ -1839,7 +1339,7 @@ for created instances. No other value is supported at this time.
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1848,7 +1348,7 @@ for created instances. No other value is supported at this time.
             title="Optional">
         <span>virtualization<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Keyword to choose what virtualization mode created instances
 will use. Can be either "paravirtual" (the default) or "hvm". The choice of virtualization type
@@ -2033,16 +1533,6 @@ changes the set of further arguments that are required, as described below.
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Delete<wbr>On<wbr>Termination</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Boolean controlling whether the EBS volumes created to
-support each created instance will be deleted once that instance is terminated.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Device<wbr>Name</span>
@@ -2054,9 +1544,19 @@ support each created instance will be deleted once that instance is terminated.
 
     <dt class="property-optional"
             title="Optional">
+        <span>Delete<wbr>On<wbr>Termination</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Boolean controlling whether the EBS volumes created to
+support each created instance will be deleted once that instance is terminated.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Encrypted</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean controlling whether the created EBS volumes will be encrypted. Can't be used with `snapshot_id`.
 {{% /md %}}</dd>
@@ -2065,7 +1565,7 @@ support each created instance will be deleted once that instance is terminated.
             title="Optional">
         <span>Iops</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of I/O operations per second the
 created volumes will support.
@@ -2075,7 +1575,7 @@ created volumes will support.
             title="Optional">
         <span>Snapshot<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of an EBS snapshot that will be used to initialize the created
 EBS volumes. If set, the `volume_size` attribute must be at least as large as the referenced
@@ -2086,7 +1586,7 @@ snapshot.
             title="Optional">
         <span>Volume<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of created volumes in GiB.
 If `snapshot_id` is set and `volume_size` is omitted then the volume will have the same size
@@ -2097,7 +1597,7 @@ as the selected snapshot.
             title="Optional">
         <span>Volume<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of EBS volume to create. Can be one of "standard" (the
 default), "io1" or "gp2".
@@ -2110,16 +1610,6 @@ default), "io1" or "gp2".
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Delete<wbr>On<wbr>Termination</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Boolean controlling whether the EBS volumes created to
-support each created instance will be deleted once that instance is terminated.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Device<wbr>Name</span>
@@ -2131,9 +1621,19 @@ support each created instance will be deleted once that instance is terminated.
 
     <dt class="property-optional"
             title="Optional">
+        <span>Delete<wbr>On<wbr>Termination</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Boolean controlling whether the EBS volumes created to
+support each created instance will be deleted once that instance is terminated.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Encrypted</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Boolean controlling whether the created EBS volumes will be encrypted. Can't be used with `snapshot_id`.
 {{% /md %}}</dd>
@@ -2142,7 +1642,7 @@ support each created instance will be deleted once that instance is terminated.
             title="Optional">
         <span>Iops</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of I/O operations per second the
 created volumes will support.
@@ -2152,7 +1652,7 @@ created volumes will support.
             title="Optional">
         <span>Snapshot<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of an EBS snapshot that will be used to initialize the created
 EBS volumes. If set, the `volume_size` attribute must be at least as large as the referenced
@@ -2163,7 +1663,7 @@ snapshot.
             title="Optional">
         <span>Volume<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The size of created volumes in GiB.
 If `snapshot_id` is set and `volume_size` is omitted then the volume will have the same size
@@ -2174,7 +1674,7 @@ as the selected snapshot.
             title="Optional">
         <span>Volume<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of EBS volume to create. Can be one of "standard" (the
 default), "io1" or "gp2".
@@ -2187,16 +1687,6 @@ default), "io1" or "gp2".
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>delete<wbr>On<wbr>Termination</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Boolean controlling whether the EBS volumes created to
-support each created instance will be deleted once that instance is terminated.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>device<wbr>Name</span>
@@ -2208,9 +1698,19 @@ support each created instance will be deleted once that instance is terminated.
 
     <dt class="property-optional"
             title="Optional">
+        <span>delete<wbr>On<wbr>Termination</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Boolean controlling whether the EBS volumes created to
+support each created instance will be deleted once that instance is terminated.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>encrypted</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Boolean controlling whether the created EBS volumes will be encrypted. Can't be used with `snapshot_id`.
 {{% /md %}}</dd>
@@ -2219,7 +1719,7 @@ support each created instance will be deleted once that instance is terminated.
             title="Optional">
         <span>iops</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of I/O operations per second the
 created volumes will support.
@@ -2229,7 +1729,7 @@ created volumes will support.
             title="Optional">
         <span>snapshot<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of an EBS snapshot that will be used to initialize the created
 EBS volumes. If set, the `volume_size` attribute must be at least as large as the referenced
@@ -2240,7 +1740,7 @@ snapshot.
             title="Optional">
         <span>volume<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The size of created volumes in GiB.
 If `snapshot_id` is set and `volume_size` is omitted then the volume will have the same size
@@ -2251,7 +1751,7 @@ as the selected snapshot.
             title="Optional">
         <span>volume<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of EBS volume to create. Can be one of "standard" (the
 default), "io1" or "gp2".
@@ -2264,6 +1764,15 @@ default), "io1" or "gp2".
 {{% choosable language python %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>device_<wbr>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The path at which the device is exposed to created instances.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>delete<wbr>On<wbr>Termination</span>
@@ -2272,15 +1781,6 @@ default), "io1" or "gp2".
     </dt>
     <dd>{{% md %}}Boolean controlling whether the EBS volumes created to
 support each created instance will be deleted once that instance is terminated.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>device_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The path at which the device is exposed to created instances.
 {{% /md %}}</dd>
 
     <dt class="property-optional"

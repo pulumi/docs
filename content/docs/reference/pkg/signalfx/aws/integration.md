@@ -25,7 +25,7 @@ Fields that expect an AWS service/namespace will work with one of: "AWS/ApiGatew
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/signalfx/aws/#Integration">Integration</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/signalfx/aws/#IntegrationArgs">IntegrationArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/signalfx/aws/#Integration">Integration</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/signalfx/aws/#IntegrationArgs">IntegrationArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -33,11 +33,11 @@ Fields that expect an AWS service/namespace will work with one of: "AWS/ApiGatew
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewIntegration<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/go/signalfx/aws?tab=doc#IntegrationArgs">IntegrationArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/go/signalfx/aws?tab=doc#Integration">Integration</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewIntegration<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/go/signalfx/aws?tab=doc#IntegrationArgs">IntegrationArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-signalfx/sdk/go/signalfx/aws?tab=doc#Integration">Integration</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Signalfx/Pulumi.Signalfx.Aws.Integration.html">Integration</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Signalfx/Pulumi.Signalfx.Aws.IntegrationArgs.html">IntegrationArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Signalfx/Pulumi.Signalfx.Aws.Integration.html">Integration</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Signalfx/Pulumi.SignalFx.Aws.IntegrationArgs.html">IntegrationArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -129,33 +129,6 @@ Fields that expect an AWS service/namespace will work with one of: "AWS/ApiGatew
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Custom<wbr>Cloudwatch<wbr>Namespaces</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}List of custom AWS CloudWatch namespaces to monitor. Custom namespaces contain custom metrics that you define in AWS; SignalFx imports the metrics so you can monitor them.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Custom<wbr>Namespace<wbr>Sync<wbr>Rules</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationcustomnamespacesyncrule">List&lt;Integration<wbr>Custom<wbr>Namespace<wbr>Sync<wbr>Rule<wbr>Args&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}Each element controls the data collected by SignalFx for the specified namespace. Conflicts with the `custom_cloudwatch_namespaces` property.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Enable<wbr>Aws<wbr>Usage</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Flag that controls how SignalFx imports usage metrics from AWS to use with AWS Cost Optimizer. If `true`, SignalFx imports the metrics.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Enabled</span>
@@ -163,24 +136,6 @@ Fields that expect an AWS service/namespace will work with one of: "AWS/ApiGatew
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the integration is enabled.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>External<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The `external_id` property from one of a `signalfx.aws.ExternalIntegration` or `signalfx.aws.TokenIntegration`
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Import<wbr>Cloud<wbr>Watch</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Flag that controls how SignalFx imports Cloud Watch metrics. If true, SignalFx imports Cloud Watch metrics from AWS.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -194,9 +149,54 @@ Fields that expect an AWS service/namespace will work with one of: "AWS/ApiGatew
 
     <dt class="property-optional"
             title="Optional">
+        <span>Custom<wbr>Cloudwatch<wbr>Namespaces</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}List of custom AWS CloudWatch namespaces to monitor. Custom namespaces contain custom metrics that you define in AWS; SignalFx imports the metrics so you can monitor them.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Custom<wbr>Namespace<wbr>Sync<wbr>Rules</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#integrationcustomnamespacesyncrule">List&lt;Pulumi.<wbr>Signal<wbr>Fx.<wbr>Aws.<wbr>Inputs.<wbr>Integration<wbr>Custom<wbr>Namespace<wbr>Sync<wbr>Rule<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Each element controls the data collected by SignalFx for the specified namespace. Conflicts with the `custom_cloudwatch_namespaces` property.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Enable<wbr>Aws<wbr>Usage</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Flag that controls how SignalFx imports usage metrics from AWS to use with AWS Cost Optimizer. If `true`, SignalFx imports the metrics.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>External<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The `external_id` property from one of a `signalfx.aws.ExternalIntegration` or `signalfx.aws.TokenIntegration`
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Import<wbr>Cloud<wbr>Watch</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Flag that controls how SignalFx imports Cloud Watch metrics. If true, SignalFx imports Cloud Watch metrics from AWS.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If you specify `auth_method = \"SecurityToken\"` in your request to create an AWS integration object, use this property to specify the key.
 {{% /md %}}</dd>
@@ -205,7 +205,7 @@ Fields that expect an AWS service/namespace will work with one of: "AWS/ApiGatew
             title="Optional">
         <span>Namespace<wbr>Sync<wbr>Rules</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationnamespacesyncrule">List&lt;Integration<wbr>Namespace<wbr>Sync<wbr>Rule<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#integrationnamespacesyncrule">List&lt;Pulumi.<wbr>Signal<wbr>Fx.<wbr>Aws.<wbr>Inputs.<wbr>Integration<wbr>Namespace<wbr>Sync<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Each element in the array is an object that contains an AWS namespace name and a filter that controls the data that SignalFx collects for the namespace. Conflicts with the `services` property. If you don't specify either property, SignalFx syncs all data in all AWS namespaces.
 {{% /md %}}</dd>
@@ -214,7 +214,7 @@ Fields that expect an AWS service/namespace will work with one of: "AWS/ApiGatew
             title="Optional">
         <span>Poll<wbr>Rate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}AWS poll rate (in seconds). One of `60` or `300`.
 {{% /md %}}</dd>
@@ -223,7 +223,7 @@ Fields that expect an AWS service/namespace will work with one of: "AWS/ApiGatew
             title="Optional">
         <span>Regions</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of AWS regions that SignalFx should monitor.
 {{% /md %}}</dd>
@@ -232,7 +232,7 @@ Fields that expect an AWS service/namespace will work with one of: "AWS/ApiGatew
             title="Optional">
         <span>Role<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Role ARN that you add to an existing AWS integration object. **Note**: Ensure you use the `arn` property of your role, not the id!
 {{% /md %}}</dd>
@@ -241,7 +241,7 @@ Fields that expect an AWS service/namespace will work with one of: "AWS/ApiGatew
             title="Optional">
         <span>Services</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of AWS services that you want SignalFx to monitor. Each element is a string designating an AWS service. Conflicts with `namespace_sync_rule`.
 {{% /md %}}</dd>
@@ -250,7 +250,7 @@ Fields that expect an AWS service/namespace will work with one of: "AWS/ApiGatew
             title="Optional">
         <span>Token</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Used with `signalfx_aws_token_integration`. Use this property to specify the token.
 {{% /md %}}</dd>
@@ -259,7 +259,7 @@ Fields that expect an AWS service/namespace will work with one of: "AWS/ApiGatew
             title="Optional">
         <span>Use<wbr>Get<wbr>Metric<wbr>Data<wbr>Method</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable the use of Amazon's `GetMetricData` for collecting metrics. Note that this requires the inclusion of the `"cloudwatch:GetMetricData"` permission.
 {{% /md %}}</dd>
@@ -270,6 +270,24 @@ Fields that expect an AWS service/namespace will work with one of: "AWS/ApiGatew
 
 {{% choosable language go %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Enabled</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether the integration is enabled.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Integration<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The id of one of a `signalfx.aws.ExternalIntegration` or `signalfx.aws.TokenIntegration`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -293,25 +311,16 @@ Fields that expect an AWS service/namespace will work with one of: "AWS/ApiGatew
             title="Optional">
         <span>Enable<wbr>Aws<wbr>Usage</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Flag that controls how SignalFx imports usage metrics from AWS to use with AWS Cost Optimizer. If `true`, SignalFx imports the metrics.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Enabled</span>
-        <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the integration is enabled.
+    <dd>{{% md %}}Flag that controls how SignalFx imports usage metrics from AWS to use with AWS Cost Optimizer. If `true`, SignalFx imports the metrics.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>External<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The `external_id` property from one of a `signalfx.aws.ExternalIntegration` or `signalfx.aws.TokenIntegration`
 {{% /md %}}</dd>
@@ -320,25 +329,16 @@ Fields that expect an AWS service/namespace will work with one of: "AWS/ApiGatew
             title="Optional">
         <span>Import<wbr>Cloud<wbr>Watch</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag that controls how SignalFx imports Cloud Watch metrics. If true, SignalFx imports Cloud Watch metrics from AWS.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Integration<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The id of one of a `signalfx.aws.ExternalIntegration` or `signalfx.aws.TokenIntegration`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If you specify `auth_method = \"SecurityToken\"` in your request to create an AWS integration object, use this property to specify the key.
 {{% /md %}}</dd>
@@ -356,7 +356,7 @@ Fields that expect an AWS service/namespace will work with one of: "AWS/ApiGatew
             title="Optional">
         <span>Poll<wbr>Rate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}AWS poll rate (in seconds). One of `60` or `300`.
 {{% /md %}}</dd>
@@ -374,7 +374,7 @@ Fields that expect an AWS service/namespace will work with one of: "AWS/ApiGatew
             title="Optional">
         <span>Role<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Role ARN that you add to an existing AWS integration object. **Note**: Ensure you use the `arn` property of your role, not the id!
 {{% /md %}}</dd>
@@ -392,7 +392,7 @@ Fields that expect an AWS service/namespace will work with one of: "AWS/ApiGatew
             title="Optional">
         <span>Token</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Used with `signalfx_aws_token_integration`. Use this property to specify the token.
 {{% /md %}}</dd>
@@ -401,7 +401,7 @@ Fields that expect an AWS service/namespace will work with one of: "AWS/ApiGatew
             title="Optional">
         <span>Use<wbr>Get<wbr>Metric<wbr>Data<wbr>Method</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable the use of Amazon's `GetMetricData` for collecting metrics. Note that this requires the inclusion of the `"cloudwatch:GetMetricData"` permission.
 {{% /md %}}</dd>
@@ -413,33 +413,6 @@ Fields that expect an AWS service/namespace will work with one of: "AWS/ApiGatew
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>custom<wbr>Cloudwatch<wbr>Namespaces</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}List of custom AWS CloudWatch namespaces to monitor. Custom namespaces contain custom metrics that you define in AWS; SignalFx imports the metrics so you can monitor them.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>custom<wbr>Namespace<wbr>Sync<wbr>Rules</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationcustomnamespacesyncrule">Integration<wbr>Custom<wbr>Namespace<wbr>Sync<wbr>Rule[]?</a></span>
-    </dt>
-    <dd>{{% md %}}Each element controls the data collected by SignalFx for the specified namespace. Conflicts with the `custom_cloudwatch_namespaces` property.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>enable<wbr>Aws<wbr>Usage</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Flag that controls how SignalFx imports usage metrics from AWS to use with AWS Cost Optimizer. If `true`, SignalFx imports the metrics.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>enabled</span>
@@ -447,24 +420,6 @@ Fields that expect an AWS service/namespace will work with one of: "AWS/ApiGatew
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the integration is enabled.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>external<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The `external_id` property from one of a `signalfx.aws.ExternalIntegration` or `signalfx.aws.TokenIntegration`
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>import<wbr>Cloud<wbr>Watch</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Flag that controls how SignalFx imports Cloud Watch metrics. If true, SignalFx imports Cloud Watch metrics from AWS.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -478,9 +433,54 @@ Fields that expect an AWS service/namespace will work with one of: "AWS/ApiGatew
 
     <dt class="property-optional"
             title="Optional">
+        <span>custom<wbr>Cloudwatch<wbr>Namespaces</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}List of custom AWS CloudWatch namespaces to monitor. Custom namespaces contain custom metrics that you define in AWS; SignalFx imports the metrics so you can monitor them.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>custom<wbr>Namespace<wbr>Sync<wbr>Rules</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#integrationcustomnamespacesyncrule">Integration<wbr>Custom<wbr>Namespace<wbr>Sync<wbr>Rule[]</a></span>
+    </dt>
+    <dd>{{% md %}}Each element controls the data collected by SignalFx for the specified namespace. Conflicts with the `custom_cloudwatch_namespaces` property.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>enable<wbr>Aws<wbr>Usage</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Flag that controls how SignalFx imports usage metrics from AWS to use with AWS Cost Optimizer. If `true`, SignalFx imports the metrics.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>external<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The `external_id` property from one of a `signalfx.aws.ExternalIntegration` or `signalfx.aws.TokenIntegration`
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>import<wbr>Cloud<wbr>Watch</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Flag that controls how SignalFx imports Cloud Watch metrics. If true, SignalFx imports Cloud Watch metrics from AWS.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If you specify `auth_method = \"SecurityToken\"` in your request to create an AWS integration object, use this property to specify the key.
 {{% /md %}}</dd>
@@ -489,7 +489,7 @@ Fields that expect an AWS service/namespace will work with one of: "AWS/ApiGatew
             title="Optional">
         <span>namespace<wbr>Sync<wbr>Rules</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationnamespacesyncrule">Integration<wbr>Namespace<wbr>Sync<wbr>Rule[]?</a></span>
+        <span class="property-type"><a href="#integrationnamespacesyncrule">Integration<wbr>Namespace<wbr>Sync<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}Each element in the array is an object that contains an AWS namespace name and a filter that controls the data that SignalFx collects for the namespace. Conflicts with the `services` property. If you don't specify either property, SignalFx syncs all data in all AWS namespaces.
 {{% /md %}}</dd>
@@ -498,7 +498,7 @@ Fields that expect an AWS service/namespace will work with one of: "AWS/ApiGatew
             title="Optional">
         <span>poll<wbr>Rate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}AWS poll rate (in seconds). One of `60` or `300`.
 {{% /md %}}</dd>
@@ -507,7 +507,7 @@ Fields that expect an AWS service/namespace will work with one of: "AWS/ApiGatew
             title="Optional">
         <span>regions</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of AWS regions that SignalFx should monitor.
 {{% /md %}}</dd>
@@ -516,7 +516,7 @@ Fields that expect an AWS service/namespace will work with one of: "AWS/ApiGatew
             title="Optional">
         <span>role<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Role ARN that you add to an existing AWS integration object. **Note**: Ensure you use the `arn` property of your role, not the id!
 {{% /md %}}</dd>
@@ -525,7 +525,7 @@ Fields that expect an AWS service/namespace will work with one of: "AWS/ApiGatew
             title="Optional">
         <span>services</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of AWS services that you want SignalFx to monitor. Each element is a string designating an AWS service. Conflicts with `namespace_sync_rule`.
 {{% /md %}}</dd>
@@ -534,7 +534,7 @@ Fields that expect an AWS service/namespace will work with one of: "AWS/ApiGatew
             title="Optional">
         <span>token</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Used with `signalfx_aws_token_integration`. Use this property to specify the token.
 {{% /md %}}</dd>
@@ -543,7 +543,7 @@ Fields that expect an AWS service/namespace will work with one of: "AWS/ApiGatew
             title="Optional">
         <span>use<wbr>Get<wbr>Metric<wbr>Data<wbr>Method</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable the use of Amazon's `GetMetricData` for collecting metrics. Note that this requires the inclusion of the `"cloudwatch:GetMetricData"` permission.
 {{% /md %}}</dd>
@@ -554,6 +554,24 @@ Fields that expect an AWS service/namespace will work with one of: "AWS/ApiGatew
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>enabled</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether the integration is enabled.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>integration_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The id of one of a `signalfx.aws.ExternalIntegration` or `signalfx.aws.TokenIntegration`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -582,15 +600,6 @@ Fields that expect an AWS service/namespace will work with one of: "AWS/ApiGatew
     <dd>{{% md %}}Flag that controls how SignalFx imports usage metrics from AWS to use with AWS Cost Optimizer. If `true`, SignalFx imports the metrics.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Whether the integration is enabled.
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>external_<wbr>id</span>
@@ -607,15 +616,6 @@ Fields that expect an AWS service/namespace will work with one of: "AWS/ApiGatew
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag that controls how SignalFx imports Cloud Watch metrics. If true, SignalFx imports Cloud Watch metrics from AWS.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>integration_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The id of one of a `signalfx.aws.ExternalIntegration` or `signalfx.aws.TokenIntegration`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -694,584 +694,6 @@ Fields that expect an AWS service/namespace will work with one of: "AWS/ApiGatew
 {{% /choosable %}}
 
 
-
-
-
-
-
-## Integration Output Properties
-
-The following output properties are available:
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Custom<wbr>Cloudwatch<wbr>Namespaces</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}List of custom AWS CloudWatch namespaces to monitor. Custom namespaces contain custom metrics that you define in AWS; SignalFx imports the metrics so you can monitor them.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Custom<wbr>Namespace<wbr>Sync<wbr>Rules</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationcustomnamespacesyncrule">List&lt;Integration<wbr>Custom<wbr>Namespace<wbr>Sync<wbr>Rule&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}Each element controls the data collected by SignalFx for the specified namespace. Conflicts with the `custom_cloudwatch_namespaces` property.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Enable<wbr>Aws<wbr>Usage</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Flag that controls how SignalFx imports usage metrics from AWS to use with AWS Cost Optimizer. If `true`, SignalFx imports the metrics.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Whether the integration is enabled.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>External<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The `external_id` property from one of a `signalfx.aws.ExternalIntegration` or `signalfx.aws.TokenIntegration`
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Import<wbr>Cloud<wbr>Watch</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Flag that controls how SignalFx imports Cloud Watch metrics. If true, SignalFx imports Cloud Watch metrics from AWS.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Integration<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The id of one of a `signalfx.aws.ExternalIntegration` or `signalfx.aws.TokenIntegration`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Key</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}If you specify `auth_method = \"SecurityToken\"` in your request to create an AWS integration object, use this property to specify the key.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Namespace<wbr>Sync<wbr>Rules</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationnamespacesyncrule">List&lt;Integration<wbr>Namespace<wbr>Sync<wbr>Rule&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}Each element in the array is an object that contains an AWS namespace name and a filter that controls the data that SignalFx collects for the namespace. Conflicts with the `services` property. If you don't specify either property, SignalFx syncs all data in all AWS namespaces.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Poll<wbr>Rate</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}AWS poll rate (in seconds). One of `60` or `300`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Regions</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}List of AWS regions that SignalFx should monitor.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Role<wbr>Arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Role ARN that you add to an existing AWS integration object. **Note**: Ensure you use the `arn` property of your role, not the id!
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Services</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}List of AWS services that you want SignalFx to monitor. Each element is a string designating an AWS service. Conflicts with `namespace_sync_rule`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Token</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Used with `signalfx_aws_token_integration`. Use this property to specify the token.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Use<wbr>Get<wbr>Metric<wbr>Data<wbr>Method</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Enable the use of Amazon's `GetMetricData` for collecting metrics. Note that this requires the inclusion of the `"cloudwatch:GetMetricData"` permission.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Custom<wbr>Cloudwatch<wbr>Namespaces</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}List of custom AWS CloudWatch namespaces to monitor. Custom namespaces contain custom metrics that you define in AWS; SignalFx imports the metrics so you can monitor them.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Custom<wbr>Namespace<wbr>Sync<wbr>Rules</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationcustomnamespacesyncrule">[]Integration<wbr>Custom<wbr>Namespace<wbr>Sync<wbr>Rule</a></span>
-    </dt>
-    <dd>{{% md %}}Each element controls the data collected by SignalFx for the specified namespace. Conflicts with the `custom_cloudwatch_namespaces` property.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Enable<wbr>Aws<wbr>Usage</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Flag that controls how SignalFx imports usage metrics from AWS to use with AWS Cost Optimizer. If `true`, SignalFx imports the metrics.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Whether the integration is enabled.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>External<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The `external_id` property from one of a `signalfx.aws.ExternalIntegration` or `signalfx.aws.TokenIntegration`
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Import<wbr>Cloud<wbr>Watch</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Flag that controls how SignalFx imports Cloud Watch metrics. If true, SignalFx imports Cloud Watch metrics from AWS.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Integration<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The id of one of a `signalfx.aws.ExternalIntegration` or `signalfx.aws.TokenIntegration`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Key</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}If you specify `auth_method = \"SecurityToken\"` in your request to create an AWS integration object, use this property to specify the key.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Namespace<wbr>Sync<wbr>Rules</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationnamespacesyncrule">[]Integration<wbr>Namespace<wbr>Sync<wbr>Rule</a></span>
-    </dt>
-    <dd>{{% md %}}Each element in the array is an object that contains an AWS namespace name and a filter that controls the data that SignalFx collects for the namespace. Conflicts with the `services` property. If you don't specify either property, SignalFx syncs all data in all AWS namespaces.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Poll<wbr>Rate</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}AWS poll rate (in seconds). One of `60` or `300`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Regions</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}List of AWS regions that SignalFx should monitor.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Role<wbr>Arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Role ARN that you add to an existing AWS integration object. **Note**: Ensure you use the `arn` property of your role, not the id!
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Services</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}List of AWS services that you want SignalFx to monitor. Each element is a string designating an AWS service. Conflicts with `namespace_sync_rule`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Token</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Used with `signalfx_aws_token_integration`. Use this property to specify the token.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Use<wbr>Get<wbr>Metric<wbr>Data<wbr>Method</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Enable the use of Amazon's `GetMetricData` for collecting metrics. Note that this requires the inclusion of the `"cloudwatch:GetMetricData"` permission.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>custom<wbr>Cloudwatch<wbr>Namespaces</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}List of custom AWS CloudWatch namespaces to monitor. Custom namespaces contain custom metrics that you define in AWS; SignalFx imports the metrics so you can monitor them.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>custom<wbr>Namespace<wbr>Sync<wbr>Rules</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationcustomnamespacesyncrule">Integration<wbr>Custom<wbr>Namespace<wbr>Sync<wbr>Rule[]?</a></span>
-    </dt>
-    <dd>{{% md %}}Each element controls the data collected by SignalFx for the specified namespace. Conflicts with the `custom_cloudwatch_namespaces` property.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>enable<wbr>Aws<wbr>Usage</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Flag that controls how SignalFx imports usage metrics from AWS to use with AWS Cost Optimizer. If `true`, SignalFx imports the metrics.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
-    </dt>
-    <dd>{{% md %}}Whether the integration is enabled.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>external<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The `external_id` property from one of a `signalfx.aws.ExternalIntegration` or `signalfx.aws.TokenIntegration`
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>import<wbr>Cloud<wbr>Watch</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Flag that controls how SignalFx imports Cloud Watch metrics. If true, SignalFx imports Cloud Watch metrics from AWS.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>integration<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The id of one of a `signalfx.aws.ExternalIntegration` or `signalfx.aws.TokenIntegration`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>key</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}If you specify `auth_method = \"SecurityToken\"` in your request to create an AWS integration object, use this property to specify the key.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>namespace<wbr>Sync<wbr>Rules</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationnamespacesyncrule">Integration<wbr>Namespace<wbr>Sync<wbr>Rule[]?</a></span>
-    </dt>
-    <dd>{{% md %}}Each element in the array is an object that contains an AWS namespace name and a filter that controls the data that SignalFx collects for the namespace. Conflicts with the `services` property. If you don't specify either property, SignalFx syncs all data in all AWS namespaces.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>poll<wbr>Rate</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}AWS poll rate (in seconds). One of `60` or `300`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>regions</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}List of AWS regions that SignalFx should monitor.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>role<wbr>Arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Role ARN that you add to an existing AWS integration object. **Note**: Ensure you use the `arn` property of your role, not the id!
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>services</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}List of AWS services that you want SignalFx to monitor. Each element is a string designating an AWS service. Conflicts with `namespace_sync_rule`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>token</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Used with `signalfx_aws_token_integration`. Use this property to specify the token.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>use<wbr>Get<wbr>Metric<wbr>Data<wbr>Method</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Enable the use of Amazon's `GetMetricData` for collecting metrics. Note that this requires the inclusion of the `"cloudwatch:GetMetricData"` permission.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>custom_<wbr>cloudwatch_<wbr>namespaces</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}List of custom AWS CloudWatch namespaces to monitor. Custom namespaces contain custom metrics that you define in AWS; SignalFx imports the metrics so you can monitor them.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>custom_<wbr>namespace_<wbr>sync_<wbr>rules</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationcustomnamespacesyncrule">List[Integration<wbr>Custom<wbr>Namespace<wbr>Sync<wbr>Rule]</a></span>
-    </dt>
-    <dd>{{% md %}}Each element controls the data collected by SignalFx for the specified namespace. Conflicts with the `custom_cloudwatch_namespaces` property.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>enable_<wbr>aws_<wbr>usage</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Flag that controls how SignalFx imports usage metrics from AWS to use with AWS Cost Optimizer. If `true`, SignalFx imports the metrics.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Whether the integration is enabled.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>external_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The `external_id` property from one of a `signalfx.aws.ExternalIntegration` or `signalfx.aws.TokenIntegration`
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>import_<wbr>cloud_<wbr>watch</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Flag that controls how SignalFx imports Cloud Watch metrics. If true, SignalFx imports Cloud Watch metrics from AWS.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>integration_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The id of one of a `signalfx.aws.ExternalIntegration` or `signalfx.aws.TokenIntegration`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>key</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}If you specify `auth_method = \"SecurityToken\"` in your request to create an AWS integration object, use this property to specify the key.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>namespace_<wbr>sync_<wbr>rules</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationnamespacesyncrule">List[Integration<wbr>Namespace<wbr>Sync<wbr>Rule]</a></span>
-    </dt>
-    <dd>{{% md %}}Each element in the array is an object that contains an AWS namespace name and a filter that controls the data that SignalFx collects for the namespace. Conflicts with the `services` property. If you don't specify either property, SignalFx syncs all data in all AWS namespaces.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>poll_<wbr>rate</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}AWS poll rate (in seconds). One of `60` or `300`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>regions</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}List of AWS regions that SignalFx should monitor.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>role_<wbr>arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Role ARN that you add to an existing AWS integration object. **Note**: Ensure you use the `arn` property of your role, not the id!
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>services</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}List of AWS services that you want SignalFx to monitor. Each element is a string designating an AWS service. Conflicts with `namespace_sync_rule`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>token</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Used with `signalfx_aws_token_integration`. Use this property to specify the token.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>use_<wbr>get_<wbr>metric_<wbr>data_<wbr>method</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Enable the use of Amazon's `GetMetricData` for collecting metrics. Note that this requires the inclusion of the `"cloudwatch:GetMetricData"` permission.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
 
 
 
@@ -1409,7 +831,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Custom<wbr>Cloudwatch<wbr>Namespaces</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of custom AWS CloudWatch namespaces to monitor. Custom namespaces contain custom metrics that you define in AWS; SignalFx imports the metrics so you can monitor them.
 {{% /md %}}</dd>
@@ -1418,7 +840,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Custom<wbr>Namespace<wbr>Sync<wbr>Rules</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationcustomnamespacesyncrule">List&lt;Integration<wbr>Custom<wbr>Namespace<wbr>Sync<wbr>Rule<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#integrationcustomnamespacesyncrule">List&lt;Pulumi.<wbr>Signal<wbr>Fx.<wbr>Aws.<wbr>Inputs.<wbr>Integration<wbr>Custom<wbr>Namespace<wbr>Sync<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Each element controls the data collected by SignalFx for the specified namespace. Conflicts with the `custom_cloudwatch_namespaces` property.
 {{% /md %}}</dd>
@@ -1427,7 +849,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Enable<wbr>Aws<wbr>Usage</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag that controls how SignalFx imports usage metrics from AWS to use with AWS Cost Optimizer. If `true`, SignalFx imports the metrics.
 {{% /md %}}</dd>
@@ -1436,7 +858,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the integration is enabled.
 {{% /md %}}</dd>
@@ -1445,7 +867,7 @@ The following state arguments are supported:
             title="Optional">
         <span>External<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The `external_id` property from one of a `signalfx.aws.ExternalIntegration` or `signalfx.aws.TokenIntegration`
 {{% /md %}}</dd>
@@ -1454,7 +876,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Import<wbr>Cloud<wbr>Watch</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag that controls how SignalFx imports Cloud Watch metrics. If true, SignalFx imports Cloud Watch metrics from AWS.
 {{% /md %}}</dd>
@@ -1463,7 +885,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Integration<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of one of a `signalfx.aws.ExternalIntegration` or `signalfx.aws.TokenIntegration`.
 {{% /md %}}</dd>
@@ -1472,7 +894,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If you specify `auth_method = \"SecurityToken\"` in your request to create an AWS integration object, use this property to specify the key.
 {{% /md %}}</dd>
@@ -1481,7 +903,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Namespace<wbr>Sync<wbr>Rules</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationnamespacesyncrule">List&lt;Integration<wbr>Namespace<wbr>Sync<wbr>Rule<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#integrationnamespacesyncrule">List&lt;Pulumi.<wbr>Signal<wbr>Fx.<wbr>Aws.<wbr>Inputs.<wbr>Integration<wbr>Namespace<wbr>Sync<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Each element in the array is an object that contains an AWS namespace name and a filter that controls the data that SignalFx collects for the namespace. Conflicts with the `services` property. If you don't specify either property, SignalFx syncs all data in all AWS namespaces.
 {{% /md %}}</dd>
@@ -1490,7 +912,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Poll<wbr>Rate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}AWS poll rate (in seconds). One of `60` or `300`.
 {{% /md %}}</dd>
@@ -1499,7 +921,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Regions</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of AWS regions that SignalFx should monitor.
 {{% /md %}}</dd>
@@ -1508,7 +930,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Role<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Role ARN that you add to an existing AWS integration object. **Note**: Ensure you use the `arn` property of your role, not the id!
 {{% /md %}}</dd>
@@ -1517,7 +939,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Services</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of AWS services that you want SignalFx to monitor. Each element is a string designating an AWS service. Conflicts with `namespace_sync_rule`.
 {{% /md %}}</dd>
@@ -1526,7 +948,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Token</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Used with `signalfx_aws_token_integration`. Use this property to specify the token.
 {{% /md %}}</dd>
@@ -1535,7 +957,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Use<wbr>Get<wbr>Metric<wbr>Data<wbr>Method</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable the use of Amazon's `GetMetricData` for collecting metrics. Note that this requires the inclusion of the `"cloudwatch:GetMetricData"` permission.
 {{% /md %}}</dd>
@@ -1569,7 +991,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Enable<wbr>Aws<wbr>Usage</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag that controls how SignalFx imports usage metrics from AWS to use with AWS Cost Optimizer. If `true`, SignalFx imports the metrics.
 {{% /md %}}</dd>
@@ -1578,7 +1000,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the integration is enabled.
 {{% /md %}}</dd>
@@ -1587,7 +1009,7 @@ The following state arguments are supported:
             title="Optional">
         <span>External<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The `external_id` property from one of a `signalfx.aws.ExternalIntegration` or `signalfx.aws.TokenIntegration`
 {{% /md %}}</dd>
@@ -1596,7 +1018,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Import<wbr>Cloud<wbr>Watch</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Flag that controls how SignalFx imports Cloud Watch metrics. If true, SignalFx imports Cloud Watch metrics from AWS.
 {{% /md %}}</dd>
@@ -1605,7 +1027,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Integration<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of one of a `signalfx.aws.ExternalIntegration` or `signalfx.aws.TokenIntegration`.
 {{% /md %}}</dd>
@@ -1614,7 +1036,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If you specify `auth_method = \"SecurityToken\"` in your request to create an AWS integration object, use this property to specify the key.
 {{% /md %}}</dd>
@@ -1632,7 +1054,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Poll<wbr>Rate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}AWS poll rate (in seconds). One of `60` or `300`.
 {{% /md %}}</dd>
@@ -1650,7 +1072,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Role<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Role ARN that you add to an existing AWS integration object. **Note**: Ensure you use the `arn` property of your role, not the id!
 {{% /md %}}</dd>
@@ -1668,7 +1090,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Token</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Used with `signalfx_aws_token_integration`. Use this property to specify the token.
 {{% /md %}}</dd>
@@ -1677,7 +1099,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Use<wbr>Get<wbr>Metric<wbr>Data<wbr>Method</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable the use of Amazon's `GetMetricData` for collecting metrics. Note that this requires the inclusion of the `"cloudwatch:GetMetricData"` permission.
 {{% /md %}}</dd>
@@ -1693,7 +1115,7 @@ The following state arguments are supported:
             title="Optional">
         <span>custom<wbr>Cloudwatch<wbr>Namespaces</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of custom AWS CloudWatch namespaces to monitor. Custom namespaces contain custom metrics that you define in AWS; SignalFx imports the metrics so you can monitor them.
 {{% /md %}}</dd>
@@ -1702,7 +1124,7 @@ The following state arguments are supported:
             title="Optional">
         <span>custom<wbr>Namespace<wbr>Sync<wbr>Rules</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationcustomnamespacesyncrule">Integration<wbr>Custom<wbr>Namespace<wbr>Sync<wbr>Rule[]?</a></span>
+        <span class="property-type"><a href="#integrationcustomnamespacesyncrule">Integration<wbr>Custom<wbr>Namespace<wbr>Sync<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}Each element controls the data collected by SignalFx for the specified namespace. Conflicts with the `custom_cloudwatch_namespaces` property.
 {{% /md %}}</dd>
@@ -1711,7 +1133,7 @@ The following state arguments are supported:
             title="Optional">
         <span>enable<wbr>Aws<wbr>Usage</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Flag that controls how SignalFx imports usage metrics from AWS to use with AWS Cost Optimizer. If `true`, SignalFx imports the metrics.
 {{% /md %}}</dd>
@@ -1720,7 +1142,7 @@ The following state arguments are supported:
             title="Optional">
         <span>enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the integration is enabled.
 {{% /md %}}</dd>
@@ -1729,7 +1151,7 @@ The following state arguments are supported:
             title="Optional">
         <span>external<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The `external_id` property from one of a `signalfx.aws.ExternalIntegration` or `signalfx.aws.TokenIntegration`
 {{% /md %}}</dd>
@@ -1738,7 +1160,7 @@ The following state arguments are supported:
             title="Optional">
         <span>import<wbr>Cloud<wbr>Watch</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Flag that controls how SignalFx imports Cloud Watch metrics. If true, SignalFx imports Cloud Watch metrics from AWS.
 {{% /md %}}</dd>
@@ -1747,7 +1169,7 @@ The following state arguments are supported:
             title="Optional">
         <span>integration<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of one of a `signalfx.aws.ExternalIntegration` or `signalfx.aws.TokenIntegration`.
 {{% /md %}}</dd>
@@ -1756,7 +1178,7 @@ The following state arguments are supported:
             title="Optional">
         <span>key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}If you specify `auth_method = \"SecurityToken\"` in your request to create an AWS integration object, use this property to specify the key.
 {{% /md %}}</dd>
@@ -1765,7 +1187,7 @@ The following state arguments are supported:
             title="Optional">
         <span>namespace<wbr>Sync<wbr>Rules</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#integrationnamespacesyncrule">Integration<wbr>Namespace<wbr>Sync<wbr>Rule[]?</a></span>
+        <span class="property-type"><a href="#integrationnamespacesyncrule">Integration<wbr>Namespace<wbr>Sync<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}Each element in the array is an object that contains an AWS namespace name and a filter that controls the data that SignalFx collects for the namespace. Conflicts with the `services` property. If you don't specify either property, SignalFx syncs all data in all AWS namespaces.
 {{% /md %}}</dd>
@@ -1774,7 +1196,7 @@ The following state arguments are supported:
             title="Optional">
         <span>poll<wbr>Rate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}AWS poll rate (in seconds). One of `60` or `300`.
 {{% /md %}}</dd>
@@ -1783,7 +1205,7 @@ The following state arguments are supported:
             title="Optional">
         <span>regions</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of AWS regions that SignalFx should monitor.
 {{% /md %}}</dd>
@@ -1792,7 +1214,7 @@ The following state arguments are supported:
             title="Optional">
         <span>role<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Role ARN that you add to an existing AWS integration object. **Note**: Ensure you use the `arn` property of your role, not the id!
 {{% /md %}}</dd>
@@ -1801,7 +1223,7 @@ The following state arguments are supported:
             title="Optional">
         <span>services</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of AWS services that you want SignalFx to monitor. Each element is a string designating an AWS service. Conflicts with `namespace_sync_rule`.
 {{% /md %}}</dd>
@@ -1810,7 +1232,7 @@ The following state arguments are supported:
             title="Optional">
         <span>token</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Used with `signalfx_aws_token_integration`. Use this property to specify the token.
 {{% /md %}}</dd>
@@ -1819,7 +1241,7 @@ The following state arguments are supported:
             title="Optional">
         <span>use<wbr>Get<wbr>Metric<wbr>Data<wbr>Method</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enable the use of Amazon's `GetMetricData` for collecting metrics. Note that this requires the inclusion of the `"cloudwatch:GetMetricData"` permission.
 {{% /md %}}</dd>
@@ -1995,11 +1417,20 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Namespace</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An AWS custom namespace having custom AWS metrics that you want to sync with SignalFx. See the AWS documentation on publishing metrics for more information.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Default<wbr>Action</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Controls the SignalFx default behavior for processing data from an AWS namespace. If you do specify a filter, use this property to control how SignalFx treats data that doesn't match the filter. The available actions are one of `"Include"` or `"Exclude"`.
 {{% /md %}}</dd>
@@ -2008,7 +1439,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Filter<wbr>Action</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Controls how SignalFx processes data from a custom AWS namespace. The available actions are one of `"Include"` or `"Exclude"`.
 {{% /md %}}</dd>
@@ -2017,18 +1448,9 @@ The following state arguments are supported:
             title="Optional">
         <span>Filter<wbr>Source</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Expression that selects the data that SignalFx should sync for the custom namespace associated with this sync rule. The expression uses the syntax defined for the SignalFlow `filter()` function; it can be any valid SignalFlow filter expression.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Namespace</span>
-        <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An AWS custom namespace having custom AWS metrics that you want to sync with SignalFx. See the AWS documentation on publishing metrics for more information.
+    <dd>{{% md %}}Expression that selects the data that SignalFx should sync for the custom namespace associated with this sync rule. The expression uses the syntax defined for the SignalFlow `filter()` function; it can be any valid SignalFlow filter expression.
 {{% /md %}}</dd>
 
 </dl>
@@ -2038,33 +1460,6 @@ The following state arguments are supported:
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Default<wbr>Action</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Controls the SignalFx default behavior for processing data from an AWS namespace. If you do specify a filter, use this property to control how SignalFx treats data that doesn't match the filter. The available actions are one of `"Include"` or `"Exclude"`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Filter<wbr>Action</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Controls how SignalFx processes data from a custom AWS namespace. The available actions are one of `"Include"` or `"Exclude"`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Filter<wbr>Source</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Expression that selects the data that SignalFx should sync for the custom namespace associated with this sync rule. The expression uses the syntax defined for the SignalFlow `filter()` function; it can be any valid SignalFlow filter expression.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Namespace</span>
@@ -2074,39 +1469,39 @@ The following state arguments are supported:
     <dd>{{% md %}}An AWS custom namespace having custom AWS metrics that you want to sync with SignalFx. See the AWS documentation on publishing metrics for more information.
 {{% /md %}}</dd>
 
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
-        <span>default<wbr>Action</span>
+        <span>Default<wbr>Action</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Controls the SignalFx default behavior for processing data from an AWS namespace. If you do specify a filter, use this property to control how SignalFx treats data that doesn't match the filter. The available actions are one of `"Include"` or `"Exclude"`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>filter<wbr>Action</span>
+        <span>Filter<wbr>Action</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Controls how SignalFx processes data from a custom AWS namespace. The available actions are one of `"Include"` or `"Exclude"`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>filter<wbr>Source</span>
+        <span>Filter<wbr>Source</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Expression that selects the data that SignalFx should sync for the custom namespace associated with this sync rule. The expression uses the syntax defined for the SignalFlow `filter()` function; it can be any valid SignalFlow filter expression.
 {{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
@@ -2117,12 +1512,48 @@ The following state arguments are supported:
     <dd>{{% md %}}An AWS custom namespace having custom AWS metrics that you want to sync with SignalFx. See the AWS documentation on publishing metrics for more information.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>default<wbr>Action</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Controls the SignalFx default behavior for processing data from an AWS namespace. If you do specify a filter, use this property to control how SignalFx treats data that doesn't match the filter. The available actions are one of `"Include"` or `"Exclude"`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>filter<wbr>Action</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Controls how SignalFx processes data from a custom AWS namespace. The available actions are one of `"Include"` or `"Exclude"`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>filter<wbr>Source</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Expression that selects the data that SignalFx should sync for the custom namespace associated with this sync rule. The expression uses the syntax defined for the SignalFlow `filter()` function; it can be any valid SignalFlow filter expression.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>namespace</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}An AWS custom namespace having custom AWS metrics that you want to sync with SignalFx. See the AWS documentation on publishing metrics for more information.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2149,15 +1580,6 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Expression that selects the data that SignalFx should sync for the custom namespace associated with this sync rule. The expression uses the syntax defined for the SignalFlow `filter()` function; it can be any valid SignalFlow filter expression.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>namespace</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}An AWS custom namespace having custom AWS metrics that you want to sync with SignalFx. See the AWS documentation on publishing metrics for more information.
 {{% /md %}}</dd>
 
 </dl>
@@ -2182,11 +1604,20 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Namespace</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An AWS custom namespace having custom AWS metrics that you want to sync with SignalFx. See the AWS documentation on publishing metrics for more information.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Default<wbr>Action</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Controls the SignalFx default behavior for processing data from an AWS namespace. If you do specify a filter, use this property to control how SignalFx treats data that doesn't match the filter. The available actions are one of `"Include"` or `"Exclude"`.
 {{% /md %}}</dd>
@@ -2195,7 +1626,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Filter<wbr>Action</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Controls how SignalFx processes data from a custom AWS namespace. The available actions are one of `"Include"` or `"Exclude"`.
 {{% /md %}}</dd>
@@ -2204,18 +1635,9 @@ The following state arguments are supported:
             title="Optional">
         <span>Filter<wbr>Source</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Expression that selects the data that SignalFx should sync for the custom namespace associated with this sync rule. The expression uses the syntax defined for the SignalFlow `filter()` function; it can be any valid SignalFlow filter expression.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Namespace</span>
-        <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}An AWS custom namespace having custom AWS metrics that you want to sync with SignalFx. See the AWS documentation on publishing metrics for more information.
+    <dd>{{% md %}}Expression that selects the data that SignalFx should sync for the custom namespace associated with this sync rule. The expression uses the syntax defined for the SignalFlow `filter()` function; it can be any valid SignalFlow filter expression.
 {{% /md %}}</dd>
 
 </dl>
@@ -2225,33 +1647,6 @@ The following state arguments are supported:
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Default<wbr>Action</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Controls the SignalFx default behavior for processing data from an AWS namespace. If you do specify a filter, use this property to control how SignalFx treats data that doesn't match the filter. The available actions are one of `"Include"` or `"Exclude"`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Filter<wbr>Action</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Controls how SignalFx processes data from a custom AWS namespace. The available actions are one of `"Include"` or `"Exclude"`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Filter<wbr>Source</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Expression that selects the data that SignalFx should sync for the custom namespace associated with this sync rule. The expression uses the syntax defined for the SignalFlow `filter()` function; it can be any valid SignalFlow filter expression.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Namespace</span>
@@ -2261,39 +1656,39 @@ The following state arguments are supported:
     <dd>{{% md %}}An AWS custom namespace having custom AWS metrics that you want to sync with SignalFx. See the AWS documentation on publishing metrics for more information.
 {{% /md %}}</dd>
 
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
-        <span>default<wbr>Action</span>
+        <span>Default<wbr>Action</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Controls the SignalFx default behavior for processing data from an AWS namespace. If you do specify a filter, use this property to control how SignalFx treats data that doesn't match the filter. The available actions are one of `"Include"` or `"Exclude"`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>filter<wbr>Action</span>
+        <span>Filter<wbr>Action</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Controls how SignalFx processes data from a custom AWS namespace. The available actions are one of `"Include"` or `"Exclude"`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>filter<wbr>Source</span>
+        <span>Filter<wbr>Source</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Expression that selects the data that SignalFx should sync for the custom namespace associated with this sync rule. The expression uses the syntax defined for the SignalFlow `filter()` function; it can be any valid SignalFlow filter expression.
 {{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
@@ -2304,12 +1699,48 @@ The following state arguments are supported:
     <dd>{{% md %}}An AWS custom namespace having custom AWS metrics that you want to sync with SignalFx. See the AWS documentation on publishing metrics for more information.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>default<wbr>Action</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Controls the SignalFx default behavior for processing data from an AWS namespace. If you do specify a filter, use this property to control how SignalFx treats data that doesn't match the filter. The available actions are one of `"Include"` or `"Exclude"`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>filter<wbr>Action</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Controls how SignalFx processes data from a custom AWS namespace. The available actions are one of `"Include"` or `"Exclude"`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>filter<wbr>Source</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Expression that selects the data that SignalFx should sync for the custom namespace associated with this sync rule. The expression uses the syntax defined for the SignalFlow `filter()` function; it can be any valid SignalFlow filter expression.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>namespace</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}An AWS custom namespace having custom AWS metrics that you want to sync with SignalFx. See the AWS documentation on publishing metrics for more information.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2336,15 +1767,6 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Expression that selects the data that SignalFx should sync for the custom namespace associated with this sync rule. The expression uses the syntax defined for the SignalFlow `filter()` function; it can be any valid SignalFlow filter expression.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>namespace</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}An AWS custom namespace having custom AWS metrics that you want to sync with SignalFx. See the AWS documentation on publishing metrics for more information.
 {{% /md %}}</dd>
 
 </dl>

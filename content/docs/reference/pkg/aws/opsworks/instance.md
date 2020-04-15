@@ -88,7 +88,7 @@ using the [`up` command with the --replace argument](https://www.pulumi.com/docs
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/opsworks/#Instance">Instance</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/opsworks/#InstanceArgs">InstanceArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/opsworks/#Instance">Instance</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/opsworks/#InstanceArgs">InstanceArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -96,11 +96,11 @@ using the [`up` command with the --replace argument](https://www.pulumi.com/docs
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewInstance<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/opsworks?tab=doc#InstanceArgs">InstanceArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/opsworks?tab=doc#Instance">Instance</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewInstance<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/opsworks?tab=doc#InstanceArgs">InstanceArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/opsworks?tab=doc#Instance">Instance</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Opsworks.Instance.html">Instance</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.OpsWorks.InstanceArgs.html">InstanceArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.OpsWorks.Instance.html">Instance</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.OpsWorks.InstanceArgs.html">InstanceArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -192,336 +192,13 @@ using the [`up` command with the --replace argument](https://www.pulumi.com/docs
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Agent<wbr>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The AWS OpsWorks agent to install.  Defaults to `"INHERIT"`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Ami<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The AMI to use for the instance.  If an AMI is specified, `os` must be `"Custom"`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Architecture</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Machine architecture for created instances.  Can be either `"x86_64"` (the default) or `"i386"`
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Auto<wbr>Scaling<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Creates load-based or time-based instances.  If set, can be either: `"load"` or `"timer"`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Availability<wbr>Zone</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Name of the availability zone where instances will be created
-by default.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Created<wbr>At</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Delete<wbr>Ebs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Delete<wbr>Eip</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Ebs<wbr>Block<wbr>Devices</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceebsblockdevice">List&lt;Instance<wbr>Ebs<wbr>Block<wbr>Device<wbr>Args&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}Additional EBS block devices to attach to the
-instance.  See Block Devices below for details.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Ebs<wbr>Optimized</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}If true, the launched EC2 instance will be EBS-optimized.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Ecs<wbr>Cluster<wbr>Arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Elastic<wbr>Ip</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Ephemeral<wbr>Block<wbr>Devices</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceephemeralblockdevice">List&lt;Instance<wbr>Ephemeral<wbr>Block<wbr>Device<wbr>Args&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}Customize Ephemeral (also known as
-"Instance Store") volumes on the instance. See Block Devices below for details.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Hostname</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The instance's host name.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Infrastructure<wbr>Class</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Install<wbr>Updates<wbr>On<wbr>Boot</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Controls where to install OS and package updates when the instance boots.  Defaults to `true`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Instance<wbr>Profile<wbr>Arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Instance<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The type of instance to start
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Last<wbr>Service<wbr>Error<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Layer<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The ids of the layers the instance will belong to.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Os</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Name of operating system that will be installed.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Platform</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Private<wbr>Dns</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The private DNS name assigned to the instance. Can only be
-used inside the Amazon EC2, and only available if you've enabled DNS hostnames
-for your VPC
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Private<wbr>Ip</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The private IP address assigned to the instance
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Public<wbr>Dns</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The public DNS name assigned to the instance. For EC2-VPC, this
-is only available if you've enabled DNS hostnames for your VPC
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Public<wbr>Ip</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The public IP address assigned to the instance, if applicable.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Registered<wbr>By</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Reported<wbr>Agent<wbr>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Reported<wbr>Os<wbr>Family</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Reported<wbr>Os<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Reported<wbr>Os<wbr>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Root<wbr>Block<wbr>Devices</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancerootblockdevice">List&lt;Instance<wbr>Root<wbr>Block<wbr>Device<wbr>Args&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}Customize details about the root block
-device of the instance. See Block Devices below for details.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Root<wbr>Device<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Name of the type of root device instances will have by default.  Can be either `"ebs"` or `"instance-store"`
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Root<wbr>Device<wbr>Volume<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Security<wbr>Group<wbr>Ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}The associated security groups.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Ssh<wbr>Host<wbr>Dsa<wbr>Key<wbr>Fingerprint</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Ssh<wbr>Host<wbr>Rsa<wbr>Key<wbr>Fingerprint</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Ssh<wbr>Key<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Name of the SSH keypair that instances will have by default.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -535,9 +212,332 @@ device of the instance. See Block Devices below for details.
 
     <dt class="property-optional"
             title="Optional">
+        <span>Agent<wbr>Version</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The AWS OpsWorks agent to install.  Defaults to `"INHERIT"`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Ami<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The AMI to use for the instance.  If an AMI is specified, `os` must be `"Custom"`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Architecture</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Machine architecture for created instances.  Can be either `"x86_64"` (the default) or `"i386"`
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Auto<wbr>Scaling<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Creates load-based or time-based instances.  If set, can be either: `"load"` or `"timer"`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Availability<wbr>Zone</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the availability zone where instances will be created
+by default.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Created<wbr>At</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Delete<wbr>Ebs</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Delete<wbr>Eip</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Ebs<wbr>Block<wbr>Devices</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instanceebsblockdevice">List&lt;Instance<wbr>Ebs<wbr>Block<wbr>Device<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Additional EBS block devices to attach to the
+instance.  See Block Devices below for details.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Ebs<wbr>Optimized</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If true, the launched EC2 instance will be EBS-optimized.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Ecs<wbr>Cluster<wbr>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Elastic<wbr>Ip</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Ephemeral<wbr>Block<wbr>Devices</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instanceephemeralblockdevice">List&lt;Instance<wbr>Ephemeral<wbr>Block<wbr>Device<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Customize Ephemeral (also known as
+"Instance Store") volumes on the instance. See Block Devices below for details.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Hostname</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The instance's host name.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Infrastructure<wbr>Class</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Install<wbr>Updates<wbr>On<wbr>Boot</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Controls where to install OS and package updates when the instance boots.  Defaults to `true`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Instance<wbr>Profile<wbr>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Instance<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of instance to start
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Last<wbr>Service<wbr>Error<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Os</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of operating system that will be installed.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Platform</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Private<wbr>Dns</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The private DNS name assigned to the instance. Can only be
+used inside the Amazon EC2, and only available if you've enabled DNS hostnames
+for your VPC
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Private<wbr>Ip</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The private IP address assigned to the instance
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Public<wbr>Dns</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The public DNS name assigned to the instance. For EC2-VPC, this
+is only available if you've enabled DNS hostnames for your VPC
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Public<wbr>Ip</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The public IP address assigned to the instance, if applicable.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Registered<wbr>By</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Reported<wbr>Agent<wbr>Version</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Reported<wbr>Os<wbr>Family</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Reported<wbr>Os<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Reported<wbr>Os<wbr>Version</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Root<wbr>Block<wbr>Devices</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancerootblockdevice">List&lt;Instance<wbr>Root<wbr>Block<wbr>Device<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Customize details about the root block
+device of the instance. See Block Devices below for details.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Root<wbr>Device<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the type of root device instances will have by default.  Can be either `"ebs"` or `"instance-store"`
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Root<wbr>Device<wbr>Volume<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Security<wbr>Group<wbr>Ids</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The associated security groups.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Ssh<wbr>Host<wbr>Dsa<wbr>Key<wbr>Fingerprint</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Ssh<wbr>Host<wbr>Rsa<wbr>Key<wbr>Fingerprint</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Ssh<wbr>Key<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the SSH keypair that instances will have by default.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>State</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The desired state of the instance.  Can be either `"running"` or `"stopped"`.
 {{% /md %}}</dd>
@@ -546,7 +546,7 @@ device of the instance. See Block Devices below for details.
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -554,7 +554,7 @@ device of the instance. See Block Devices below for details.
             title="Optional">
         <span>Subnet<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Subnet ID to attach to
 {{% /md %}}</dd>
@@ -563,7 +563,7 @@ device of the instance. See Block Devices below for details.
             title="Optional">
         <span>Tenancy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Instance tenancy to use. Can be one of `"default"`, `"dedicated"` or `"host"`
 {{% /md %}}</dd>
@@ -572,7 +572,7 @@ device of the instance. See Block Devices below for details.
             title="Optional">
         <span>Virtualization<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Keyword to choose what virtualization mode created instances
 will use. Can be either `"paravirtual"` or `"hvm"`.
@@ -585,11 +585,29 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
 {{% choosable language go %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Layer<wbr>Ids</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}The ids of the layers the instance will belong to.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Stack<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The id of the stack the instance will belong to.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Agent<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS OpsWorks agent to install.  Defaults to `"INHERIT"`.
 {{% /md %}}</dd>
@@ -598,7 +616,7 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
             title="Optional">
         <span>Ami<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AMI to use for the instance.  If an AMI is specified, `os` must be `"Custom"`.
 {{% /md %}}</dd>
@@ -607,7 +625,7 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
             title="Optional">
         <span>Architecture</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Machine architecture for created instances.  Can be either `"x86_64"` (the default) or `"i386"`
 {{% /md %}}</dd>
@@ -616,7 +634,7 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
             title="Optional">
         <span>Auto<wbr>Scaling<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creates load-based or time-based instances.  If set, can be either: `"load"` or `"timer"`.
 {{% /md %}}</dd>
@@ -625,7 +643,7 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
             title="Optional">
         <span>Availability<wbr>Zone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the availability zone where instances will be created
 by default.
@@ -635,7 +653,7 @@ by default.
             title="Optional">
         <span>Created<wbr>At</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -643,7 +661,7 @@ by default.
             title="Optional">
         <span>Delete<wbr>Ebs</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -651,7 +669,7 @@ by default.
             title="Optional">
         <span>Delete<wbr>Eip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -669,7 +687,7 @@ instance.  See Block Devices below for details.
             title="Optional">
         <span>Ebs<wbr>Optimized</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, the launched EC2 instance will be EBS-optimized.
 {{% /md %}}</dd>
@@ -678,7 +696,7 @@ instance.  See Block Devices below for details.
             title="Optional">
         <span>Ecs<wbr>Cluster<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -686,7 +704,7 @@ instance.  See Block Devices below for details.
             title="Optional">
         <span>Elastic<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -704,7 +722,7 @@ instance.  See Block Devices below for details.
             title="Optional">
         <span>Hostname</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The instance's host name.
 {{% /md %}}</dd>
@@ -713,7 +731,7 @@ instance.  See Block Devices below for details.
             title="Optional">
         <span>Infrastructure<wbr>Class</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -721,7 +739,7 @@ instance.  See Block Devices below for details.
             title="Optional">
         <span>Install<wbr>Updates<wbr>On<wbr>Boot</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Controls where to install OS and package updates when the instance boots.  Defaults to `true`.
 {{% /md %}}</dd>
@@ -730,7 +748,7 @@ instance.  See Block Devices below for details.
             title="Optional">
         <span>Instance<wbr>Profile<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -738,7 +756,7 @@ instance.  See Block Devices below for details.
             title="Optional">
         <span>Instance<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of instance to start
 {{% /md %}}</dd>
@@ -747,24 +765,15 @@ instance.  See Block Devices below for details.
             title="Optional">
         <span>Last<wbr>Service<wbr>Error<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Layer<wbr>Ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}The ids of the layers the instance will belong to.
-{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Os</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of operating system that will be installed.
 {{% /md %}}</dd>
@@ -773,7 +782,7 @@ instance.  See Block Devices below for details.
             title="Optional">
         <span>Platform</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -781,7 +790,7 @@ instance.  See Block Devices below for details.
             title="Optional">
         <span>Private<wbr>Dns</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The private DNS name assigned to the instance. Can only be
 used inside the Amazon EC2, and only available if you've enabled DNS hostnames
@@ -792,7 +801,7 @@ for your VPC
             title="Optional">
         <span>Private<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The private IP address assigned to the instance
 {{% /md %}}</dd>
@@ -801,7 +810,7 @@ for your VPC
             title="Optional">
         <span>Public<wbr>Dns</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The public DNS name assigned to the instance. For EC2-VPC, this
 is only available if you've enabled DNS hostnames for your VPC
@@ -811,7 +820,7 @@ is only available if you've enabled DNS hostnames for your VPC
             title="Optional">
         <span>Public<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The public IP address assigned to the instance, if applicable.
 {{% /md %}}</dd>
@@ -820,7 +829,7 @@ is only available if you've enabled DNS hostnames for your VPC
             title="Optional">
         <span>Registered<wbr>By</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -828,7 +837,7 @@ is only available if you've enabled DNS hostnames for your VPC
             title="Optional">
         <span>Reported<wbr>Agent<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -836,7 +845,7 @@ is only available if you've enabled DNS hostnames for your VPC
             title="Optional">
         <span>Reported<wbr>Os<wbr>Family</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -844,7 +853,7 @@ is only available if you've enabled DNS hostnames for your VPC
             title="Optional">
         <span>Reported<wbr>Os<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -852,7 +861,7 @@ is only available if you've enabled DNS hostnames for your VPC
             title="Optional">
         <span>Reported<wbr>Os<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -870,7 +879,7 @@ device of the instance. See Block Devices below for details.
             title="Optional">
         <span>Root<wbr>Device<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the type of root device instances will have by default.  Can be either `"ebs"` or `"instance-store"`
 {{% /md %}}</dd>
@@ -879,7 +888,7 @@ device of the instance. See Block Devices below for details.
             title="Optional">
         <span>Root<wbr>Device<wbr>Volume<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -896,7 +905,7 @@ device of the instance. See Block Devices below for details.
             title="Optional">
         <span>Ssh<wbr>Host<wbr>Dsa<wbr>Key<wbr>Fingerprint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -904,7 +913,7 @@ device of the instance. See Block Devices below for details.
             title="Optional">
         <span>Ssh<wbr>Host<wbr>Rsa<wbr>Key<wbr>Fingerprint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -912,25 +921,16 @@ device of the instance. See Block Devices below for details.
             title="Optional">
         <span>Ssh<wbr>Key<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Name of the SSH keypair that instances will have by default.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Stack<wbr>Id</span>
-        <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The id of the stack the instance will belong to.
+    <dd>{{% md %}}Name of the SSH keypair that instances will have by default.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>State</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The desired state of the instance.  Can be either `"running"` or `"stopped"`.
 {{% /md %}}</dd>
@@ -939,7 +939,7 @@ device of the instance. See Block Devices below for details.
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -947,7 +947,7 @@ device of the instance. See Block Devices below for details.
             title="Optional">
         <span>Subnet<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Subnet ID to attach to
 {{% /md %}}</dd>
@@ -956,7 +956,7 @@ device of the instance. See Block Devices below for details.
             title="Optional">
         <span>Tenancy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Instance tenancy to use. Can be one of `"default"`, `"dedicated"` or `"host"`
 {{% /md %}}</dd>
@@ -965,7 +965,7 @@ device of the instance. See Block Devices below for details.
             title="Optional">
         <span>Virtualization<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Keyword to choose what virtualization mode created instances
 will use. Can be either `"paravirtual"` or `"hvm"`.
@@ -978,172 +978,6 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>agent<wbr>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The AWS OpsWorks agent to install.  Defaults to `"INHERIT"`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>ami<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The AMI to use for the instance.  If an AMI is specified, `os` must be `"Custom"`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>architecture</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Machine architecture for created instances.  Can be either `"x86_64"` (the default) or `"i386"`
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>auto<wbr>Scaling<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Creates load-based or time-based instances.  If set, can be either: `"load"` or `"timer"`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>availability<wbr>Zone</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Name of the availability zone where instances will be created
-by default.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>created<wbr>At</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>delete<wbr>Ebs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>delete<wbr>Eip</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>ebs<wbr>Block<wbr>Devices</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceebsblockdevice">Instance<wbr>Ebs<wbr>Block<wbr>Device[]?</a></span>
-    </dt>
-    <dd>{{% md %}}Additional EBS block devices to attach to the
-instance.  See Block Devices below for details.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>ebs<wbr>Optimized</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}If true, the launched EC2 instance will be EBS-optimized.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>ecs<wbr>Cluster<wbr>Arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>elastic<wbr>Ip</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>ephemeral<wbr>Block<wbr>Devices</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceephemeralblockdevice">Instance<wbr>Ephemeral<wbr>Block<wbr>Device[]?</a></span>
-    </dt>
-    <dd>{{% md %}}Customize Ephemeral (also known as
-"Instance Store") volumes on the instance. See Block Devices below for details.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>hostname</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The instance's host name.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>infrastructure<wbr>Class</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>install<wbr>Updates<wbr>On<wbr>Boot</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Controls where to install OS and package updates when the instance boots.  Defaults to `true`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>instance<wbr>Profile<wbr>Arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>instance<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The type of instance to start
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>last<wbr>Service<wbr>Error<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>layer<wbr>Ids</span>
@@ -1151,163 +985,6 @@ instance.  See Block Devices below for details.
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The ids of the layers the instance will belong to.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>os</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Name of operating system that will be installed.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>platform</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>private<wbr>Dns</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The private DNS name assigned to the instance. Can only be
-used inside the Amazon EC2, and only available if you've enabled DNS hostnames
-for your VPC
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>private<wbr>Ip</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The private IP address assigned to the instance
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>public<wbr>Dns</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The public DNS name assigned to the instance. For EC2-VPC, this
-is only available if you've enabled DNS hostnames for your VPC
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>public<wbr>Ip</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The public IP address assigned to the instance, if applicable.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>registered<wbr>By</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>reported<wbr>Agent<wbr>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>reported<wbr>Os<wbr>Family</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>reported<wbr>Os<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>reported<wbr>Os<wbr>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>root<wbr>Block<wbr>Devices</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancerootblockdevice">Instance<wbr>Root<wbr>Block<wbr>Device[]?</a></span>
-    </dt>
-    <dd>{{% md %}}Customize details about the root block
-device of the instance. See Block Devices below for details.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>root<wbr>Device<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Name of the type of root device instances will have by default.  Can be either `"ebs"` or `"instance-store"`
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>root<wbr>Device<wbr>Volume<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>security<wbr>Group<wbr>Ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}The associated security groups.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>ssh<wbr>Host<wbr>Dsa<wbr>Key<wbr>Fingerprint</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>ssh<wbr>Host<wbr>Rsa<wbr>Key<wbr>Fingerprint</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>ssh<wbr>Key<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Name of the SSH keypair that instances will have by default.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1321,9 +998,332 @@ device of the instance. See Block Devices below for details.
 
     <dt class="property-optional"
             title="Optional">
+        <span>agent<wbr>Version</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The AWS OpsWorks agent to install.  Defaults to `"INHERIT"`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>ami<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The AMI to use for the instance.  If an AMI is specified, `os` must be `"Custom"`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>architecture</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Machine architecture for created instances.  Can be either `"x86_64"` (the default) or `"i386"`
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>auto<wbr>Scaling<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Creates load-based or time-based instances.  If set, can be either: `"load"` or `"timer"`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>availability<wbr>Zone</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the availability zone where instances will be created
+by default.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>created<wbr>At</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>delete<wbr>Ebs</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>delete<wbr>Eip</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>ebs<wbr>Block<wbr>Devices</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instanceebsblockdevice">Instance<wbr>Ebs<wbr>Block<wbr>Device[]</a></span>
+    </dt>
+    <dd>{{% md %}}Additional EBS block devices to attach to the
+instance.  See Block Devices below for details.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>ebs<wbr>Optimized</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}If true, the launched EC2 instance will be EBS-optimized.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>ecs<wbr>Cluster<wbr>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>elastic<wbr>Ip</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>ephemeral<wbr>Block<wbr>Devices</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instanceephemeralblockdevice">Instance<wbr>Ephemeral<wbr>Block<wbr>Device[]</a></span>
+    </dt>
+    <dd>{{% md %}}Customize Ephemeral (also known as
+"Instance Store") volumes on the instance. See Block Devices below for details.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>hostname</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The instance's host name.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>infrastructure<wbr>Class</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>install<wbr>Updates<wbr>On<wbr>Boot</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Controls where to install OS and package updates when the instance boots.  Defaults to `true`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>instance<wbr>Profile<wbr>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>instance<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of instance to start
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>last<wbr>Service<wbr>Error<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>os</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of operating system that will be installed.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>platform</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>private<wbr>Dns</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The private DNS name assigned to the instance. Can only be
+used inside the Amazon EC2, and only available if you've enabled DNS hostnames
+for your VPC
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>private<wbr>Ip</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The private IP address assigned to the instance
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>public<wbr>Dns</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The public DNS name assigned to the instance. For EC2-VPC, this
+is only available if you've enabled DNS hostnames for your VPC
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>public<wbr>Ip</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The public IP address assigned to the instance, if applicable.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>registered<wbr>By</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>reported<wbr>Agent<wbr>Version</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>reported<wbr>Os<wbr>Family</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>reported<wbr>Os<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>reported<wbr>Os<wbr>Version</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>root<wbr>Block<wbr>Devices</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancerootblockdevice">Instance<wbr>Root<wbr>Block<wbr>Device[]</a></span>
+    </dt>
+    <dd>{{% md %}}Customize details about the root block
+device of the instance. See Block Devices below for details.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>root<wbr>Device<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the type of root device instances will have by default.  Can be either `"ebs"` or `"instance-store"`
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>root<wbr>Device<wbr>Volume<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>security<wbr>Group<wbr>Ids</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}The associated security groups.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>ssh<wbr>Host<wbr>Dsa<wbr>Key<wbr>Fingerprint</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>ssh<wbr>Host<wbr>Rsa<wbr>Key<wbr>Fingerprint</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>ssh<wbr>Key<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the SSH keypair that instances will have by default.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>state</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The desired state of the instance.  Can be either `"running"` or `"stopped"`.
 {{% /md %}}</dd>
@@ -1332,7 +1332,7 @@ device of the instance. See Block Devices below for details.
             title="Optional">
         <span>status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1340,7 +1340,7 @@ device of the instance. See Block Devices below for details.
             title="Optional">
         <span>subnet<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Subnet ID to attach to
 {{% /md %}}</dd>
@@ -1349,7 +1349,7 @@ device of the instance. See Block Devices below for details.
             title="Optional">
         <span>tenancy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Instance tenancy to use. Can be one of `"default"`, `"dedicated"` or `"host"`
 {{% /md %}}</dd>
@@ -1358,7 +1358,7 @@ device of the instance. See Block Devices below for details.
             title="Optional">
         <span>virtualization<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Keyword to choose what virtualization mode created instances
 will use. Can be either `"paravirtual"` or `"hvm"`.
@@ -1370,6 +1370,24 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>layer_<wbr>ids</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List[str]</span>
+    </dt>
+    <dd>{{% md %}}The ids of the layers the instance will belong to.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>stack_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The id of the stack the instance will belong to.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1537,15 +1555,6 @@ instance.  See Block Devices below for details.
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>layer_<wbr>ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}The ids of the layers the instance will belong to.
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>os</span>
@@ -1701,15 +1710,6 @@ device of the instance. See Block Devices below for details.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the SSH keypair that instances will have by default.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>stack_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The id of the stack the instance will belong to.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1778,397 +1778,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Agent<wbr>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The AWS OpsWorks agent to install.  Defaults to `"INHERIT"`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Ami<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The AMI to use for the instance.  If an AMI is specified, `os` must be `"Custom"`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Architecture</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Machine architecture for created instances.  Can be either `"x86_64"` (the default) or `"i386"`
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Auto<wbr>Scaling<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Creates load-based or time-based instances.  If set, can be either: `"load"` or `"timer"`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Availability<wbr>Zone</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the availability zone where instances will be created
-by default.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Created<wbr>At</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Delete<wbr>Ebs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Delete<wbr>Eip</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Ebs<wbr>Block<wbr>Devices</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceebsblockdevice">List&lt;Instance<wbr>Ebs<wbr>Block<wbr>Device&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}Additional EBS block devices to attach to the
-instance.  See Block Devices below for details.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Ebs<wbr>Optimized</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}If true, the launched EC2 instance will be EBS-optimized.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Ec2Instance<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}EC2 instance ID
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Ecs<wbr>Cluster<wbr>Arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Elastic<wbr>Ip</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Ephemeral<wbr>Block<wbr>Devices</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceephemeralblockdevice">List&lt;Instance<wbr>Ephemeral<wbr>Block<wbr>Device&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}Customize Ephemeral (also known as
-"Instance Store") volumes on the instance. See Block Devices below for details.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Hostname</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The instance's host name.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Infrastructure<wbr>Class</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Install<wbr>Updates<wbr>On<wbr>Boot</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Controls where to install OS and package updates when the instance boots.  Defaults to `true`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Instance<wbr>Profile<wbr>Arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Instance<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The type of instance to start
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Last<wbr>Service<wbr>Error<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Layer<wbr>Ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
-    </dt>
-    <dd>{{% md %}}The ids of the layers the instance will belong to.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Os</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of operating system that will be installed.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Platform</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Private<wbr>Dns</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The private DNS name assigned to the instance. Can only be
-used inside the Amazon EC2, and only available if you've enabled DNS hostnames
-for your VPC
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Private<wbr>Ip</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The private IP address assigned to the instance
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Public<wbr>Dns</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The public DNS name assigned to the instance. For EC2-VPC, this
-is only available if you've enabled DNS hostnames for your VPC
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Public<wbr>Ip</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The public IP address assigned to the instance, if applicable.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Registered<wbr>By</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Reported<wbr>Agent<wbr>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Reported<wbr>Os<wbr>Family</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Reported<wbr>Os<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Reported<wbr>Os<wbr>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Root<wbr>Block<wbr>Devices</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancerootblockdevice">List&lt;Instance<wbr>Root<wbr>Block<wbr>Device&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}Customize details about the root block
-device of the instance. See Block Devices below for details.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Root<wbr>Device<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the type of root device instances will have by default.  Can be either `"ebs"` or `"instance-store"`
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Root<wbr>Device<wbr>Volume<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Security<wbr>Group<wbr>Ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
-    </dt>
-    <dd>{{% md %}}The associated security groups.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Ssh<wbr>Host<wbr>Dsa<wbr>Key<wbr>Fingerprint</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Ssh<wbr>Host<wbr>Rsa<wbr>Key<wbr>Fingerprint</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Ssh<wbr>Key<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the SSH keypair that instances will have by default.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Stack<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The id of the stack the instance will belong to.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>State</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The desired state of the instance.  Can be either `"running"` or `"stopped"`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Status</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Subnet<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Subnet ID to attach to
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tenancy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Instance tenancy to use. Can be one of `"default"`, `"dedicated"` or `"host"`
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Virtualization<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Keyword to choose what virtualization mode created instances
-will use. Can be either `"paravirtual"` or `"hvm"`.
 {{% /md %}}</dd>
 
 </dl>
@@ -2180,397 +1794,11 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
 
     <dt class="property-"
             title="">
-        <span>Agent<wbr>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The AWS OpsWorks agent to install.  Defaults to `"INHERIT"`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Ami<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The AMI to use for the instance.  If an AMI is specified, `os` must be `"Custom"`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Architecture</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Machine architecture for created instances.  Can be either `"x86_64"` (the default) or `"i386"`
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Auto<wbr>Scaling<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Creates load-based or time-based instances.  If set, can be either: `"load"` or `"timer"`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Availability<wbr>Zone</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the availability zone where instances will be created
-by default.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Created<wbr>At</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Delete<wbr>Ebs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Delete<wbr>Eip</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Ebs<wbr>Block<wbr>Devices</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceebsblockdevice">[]Instance<wbr>Ebs<wbr>Block<wbr>Device</a></span>
-    </dt>
-    <dd>{{% md %}}Additional EBS block devices to attach to the
-instance.  See Block Devices below for details.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Ebs<wbr>Optimized</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}If true, the launched EC2 instance will be EBS-optimized.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Ec2Instance<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}EC2 instance ID
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Ecs<wbr>Cluster<wbr>Arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Elastic<wbr>Ip</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Ephemeral<wbr>Block<wbr>Devices</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceephemeralblockdevice">[]Instance<wbr>Ephemeral<wbr>Block<wbr>Device</a></span>
-    </dt>
-    <dd>{{% md %}}Customize Ephemeral (also known as
-"Instance Store") volumes on the instance. See Block Devices below for details.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Hostname</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The instance's host name.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Infrastructure<wbr>Class</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Install<wbr>Updates<wbr>On<wbr>Boot</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Controls where to install OS and package updates when the instance boots.  Defaults to `true`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Instance<wbr>Profile<wbr>Arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Instance<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The type of instance to start
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Last<wbr>Service<wbr>Error<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Layer<wbr>Ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}The ids of the layers the instance will belong to.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Os</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of operating system that will be installed.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Platform</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Private<wbr>Dns</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The private DNS name assigned to the instance. Can only be
-used inside the Amazon EC2, and only available if you've enabled DNS hostnames
-for your VPC
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Private<wbr>Ip</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The private IP address assigned to the instance
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Public<wbr>Dns</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The public DNS name assigned to the instance. For EC2-VPC, this
-is only available if you've enabled DNS hostnames for your VPC
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Public<wbr>Ip</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The public IP address assigned to the instance, if applicable.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Registered<wbr>By</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Reported<wbr>Agent<wbr>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Reported<wbr>Os<wbr>Family</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Reported<wbr>Os<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Reported<wbr>Os<wbr>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Root<wbr>Block<wbr>Devices</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancerootblockdevice">[]Instance<wbr>Root<wbr>Block<wbr>Device</a></span>
-    </dt>
-    <dd>{{% md %}}Customize details about the root block
-device of the instance. See Block Devices below for details.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Root<wbr>Device<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the type of root device instances will have by default.  Can be either `"ebs"` or `"instance-store"`
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Root<wbr>Device<wbr>Volume<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Security<wbr>Group<wbr>Ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}The associated security groups.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Ssh<wbr>Host<wbr>Dsa<wbr>Key<wbr>Fingerprint</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Ssh<wbr>Host<wbr>Rsa<wbr>Key<wbr>Fingerprint</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Ssh<wbr>Key<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the SSH keypair that instances will have by default.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Stack<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The id of the stack the instance will belong to.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>State</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The desired state of the instance.  Can be either `"running"` or `"stopped"`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Status</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Subnet<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Subnet ID to attach to
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tenancy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Instance tenancy to use. Can be one of `"default"`, `"dedicated"` or `"host"`
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Virtualization<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Keyword to choose what virtualization mode created instances
-will use. Can be either `"paravirtual"` or `"hvm"`.
 {{% /md %}}</dd>
 
 </dl>
@@ -2582,397 +1810,11 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
 
     <dt class="property-"
             title="">
-        <span>agent<wbr>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The AWS OpsWorks agent to install.  Defaults to `"INHERIT"`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>ami<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The AMI to use for the instance.  If an AMI is specified, `os` must be `"Custom"`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>architecture</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Machine architecture for created instances.  Can be either `"x86_64"` (the default) or `"i386"`
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>auto<wbr>Scaling<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Creates load-based or time-based instances.  If set, can be either: `"load"` or `"timer"`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>availability<wbr>Zone</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the availability zone where instances will be created
-by default.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>created<wbr>At</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>delete<wbr>Ebs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>delete<wbr>Eip</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>ebs<wbr>Block<wbr>Devices</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceebsblockdevice">Instance<wbr>Ebs<wbr>Block<wbr>Device[]</a></span>
-    </dt>
-    <dd>{{% md %}}Additional EBS block devices to attach to the
-instance.  See Block Devices below for details.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>ebs<wbr>Optimized</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}If true, the launched EC2 instance will be EBS-optimized.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>ec2Instance<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}EC2 instance ID
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>ecs<wbr>Cluster<wbr>Arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>elastic<wbr>Ip</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>ephemeral<wbr>Block<wbr>Devices</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceephemeralblockdevice">Instance<wbr>Ephemeral<wbr>Block<wbr>Device[]</a></span>
-    </dt>
-    <dd>{{% md %}}Customize Ephemeral (also known as
-"Instance Store") volumes on the instance. See Block Devices below for details.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>hostname</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The instance's host name.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>infrastructure<wbr>Class</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>install<wbr>Updates<wbr>On<wbr>Boot</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Controls where to install OS and package updates when the instance boots.  Defaults to `true`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>instance<wbr>Profile<wbr>Arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>instance<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The type of instance to start
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>last<wbr>Service<wbr>Error<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>layer<wbr>Ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
-    </dt>
-    <dd>{{% md %}}The ids of the layers the instance will belong to.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>os</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of operating system that will be installed.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>platform</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>private<wbr>Dns</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The private DNS name assigned to the instance. Can only be
-used inside the Amazon EC2, and only available if you've enabled DNS hostnames
-for your VPC
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>private<wbr>Ip</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The private IP address assigned to the instance
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>public<wbr>Dns</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The public DNS name assigned to the instance. For EC2-VPC, this
-is only available if you've enabled DNS hostnames for your VPC
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>public<wbr>Ip</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The public IP address assigned to the instance, if applicable.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>registered<wbr>By</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>reported<wbr>Agent<wbr>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>reported<wbr>Os<wbr>Family</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>reported<wbr>Os<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>reported<wbr>Os<wbr>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>root<wbr>Block<wbr>Devices</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancerootblockdevice">Instance<wbr>Root<wbr>Block<wbr>Device[]</a></span>
-    </dt>
-    <dd>{{% md %}}Customize details about the root block
-device of the instance. See Block Devices below for details.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>root<wbr>Device<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the type of root device instances will have by default.  Can be either `"ebs"` or `"instance-store"`
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>root<wbr>Device<wbr>Volume<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>security<wbr>Group<wbr>Ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
-    </dt>
-    <dd>{{% md %}}The associated security groups.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>ssh<wbr>Host<wbr>Dsa<wbr>Key<wbr>Fingerprint</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>ssh<wbr>Host<wbr>Rsa<wbr>Key<wbr>Fingerprint</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>ssh<wbr>Key<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the SSH keypair that instances will have by default.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>stack<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The id of the stack the instance will belong to.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>state</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The desired state of the instance.  Can be either `"running"` or `"stopped"`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>status</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>subnet<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Subnet ID to attach to
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tenancy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Instance tenancy to use. Can be one of `"default"`, `"dedicated"` or `"host"`
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>virtualization<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Keyword to choose what virtualization mode created instances
-will use. Can be either `"paravirtual"` or `"hvm"`.
 {{% /md %}}</dd>
 
 </dl>
@@ -2984,397 +1826,11 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
 
     <dt class="property-"
             title="">
-        <span>agent_<wbr>version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The AWS OpsWorks agent to install.  Defaults to `"INHERIT"`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>ami_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The AMI to use for the instance.  If an AMI is specified, `os` must be `"Custom"`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>architecture</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Machine architecture for created instances.  Can be either `"x86_64"` (the default) or `"i386"`
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>auto_<wbr>scaling_<wbr>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Creates load-based or time-based instances.  If set, can be either: `"load"` or `"timer"`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>availability_<wbr>zone</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Name of the availability zone where instances will be created
-by default.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>created_<wbr>at</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>delete_<wbr>ebs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>delete_<wbr>eip</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>ebs_<wbr>block_<wbr>devices</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceebsblockdevice">List[Instance<wbr>Ebs<wbr>Block<wbr>Device]</a></span>
-    </dt>
-    <dd>{{% md %}}Additional EBS block devices to attach to the
-instance.  See Block Devices below for details.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>ebs_<wbr>optimized</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}If true, the launched EC2 instance will be EBS-optimized.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>ec2_<wbr>instance_<wbr>id</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}EC2 instance ID
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>ecs_<wbr>cluster_<wbr>arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>elastic_<wbr>ip</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>ephemeral_<wbr>block_<wbr>devices</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceephemeralblockdevice">List[Instance<wbr>Ephemeral<wbr>Block<wbr>Device]</a></span>
-    </dt>
-    <dd>{{% md %}}Customize Ephemeral (also known as
-"Instance Store") volumes on the instance. See Block Devices below for details.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>hostname</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The instance's host name.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>infrastructure_<wbr>class</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>install_<wbr>updates_<wbr>on_<wbr>boot</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Controls where to install OS and package updates when the instance boots.  Defaults to `true`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>instance_<wbr>profile_<wbr>arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>instance_<wbr>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The type of instance to start
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>last_<wbr>service_<wbr>error_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>layer_<wbr>ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}The ids of the layers the instance will belong to.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>os</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Name of operating system that will be installed.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>platform</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>private_<wbr>dns</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The private DNS name assigned to the instance. Can only be
-used inside the Amazon EC2, and only available if you've enabled DNS hostnames
-for your VPC
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>private_<wbr>ip</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The private IP address assigned to the instance
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>public_<wbr>dns</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The public DNS name assigned to the instance. For EC2-VPC, this
-is only available if you've enabled DNS hostnames for your VPC
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>public_<wbr>ip</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The public IP address assigned to the instance, if applicable.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>registered_<wbr>by</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>reported_<wbr>agent_<wbr>version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>reported_<wbr>os_<wbr>family</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>reported_<wbr>os_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>reported_<wbr>os_<wbr>version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>root_<wbr>block_<wbr>devices</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancerootblockdevice">List[Instance<wbr>Root<wbr>Block<wbr>Device]</a></span>
-    </dt>
-    <dd>{{% md %}}Customize details about the root block
-device of the instance. See Block Devices below for details.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>root_<wbr>device_<wbr>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Name of the type of root device instances will have by default.  Can be either `"ebs"` or `"instance-store"`
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>root_<wbr>device_<wbr>volume_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>security_<wbr>group_<wbr>ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}The associated security groups.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>ssh_<wbr>host_<wbr>dsa_<wbr>key_<wbr>fingerprint</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>ssh_<wbr>host_<wbr>rsa_<wbr>key_<wbr>fingerprint</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>ssh_<wbr>key_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Name of the SSH keypair that instances will have by default.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>stack_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The id of the stack the instance will belong to.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>state</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The desired state of the instance.  Can be either `"running"` or `"stopped"`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>status</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>subnet_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Subnet ID to attach to
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tenancy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Instance tenancy to use. Can be one of `"default"`, `"dedicated"` or `"host"`
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>virtualization_<wbr>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Keyword to choose what virtualization mode created instances
-will use. Can be either `"paravirtual"` or `"hvm"`.
 {{% /md %}}</dd>
 
 </dl>
@@ -3406,7 +1862,7 @@ Get an existing Instance resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Opsworks.Instance.html">Instance</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Opsworks.InstanceState.html">InstanceState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.OpsWorks.Instance.html">Instance</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.OpsWorks.InstanceState.html">InstanceState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -3516,7 +1972,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Agent<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS OpsWorks agent to install.  Defaults to `"INHERIT"`.
 {{% /md %}}</dd>
@@ -3525,7 +1981,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Ami<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AMI to use for the instance.  If an AMI is specified, `os` must be `"Custom"`.
 {{% /md %}}</dd>
@@ -3534,7 +1990,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Architecture</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Machine architecture for created instances.  Can be either `"x86_64"` (the default) or `"i386"`
 {{% /md %}}</dd>
@@ -3543,7 +1999,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Auto<wbr>Scaling<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creates load-based or time-based instances.  If set, can be either: `"load"` or `"timer"`.
 {{% /md %}}</dd>
@@ -3552,7 +2008,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Availability<wbr>Zone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the availability zone where instances will be created
 by default.
@@ -3562,7 +2018,7 @@ by default.
             title="Optional">
         <span>Created<wbr>At</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3570,7 +2026,7 @@ by default.
             title="Optional">
         <span>Delete<wbr>Ebs</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3578,7 +2034,7 @@ by default.
             title="Optional">
         <span>Delete<wbr>Eip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3586,7 +2042,7 @@ by default.
             title="Optional">
         <span>Ebs<wbr>Block<wbr>Devices</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceebsblockdevice">List&lt;Instance<wbr>Ebs<wbr>Block<wbr>Device<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#instanceebsblockdevice">List&lt;Instance<wbr>Ebs<wbr>Block<wbr>Device<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Additional EBS block devices to attach to the
 instance.  See Block Devices below for details.
@@ -3596,7 +2052,7 @@ instance.  See Block Devices below for details.
             title="Optional">
         <span>Ebs<wbr>Optimized</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, the launched EC2 instance will be EBS-optimized.
 {{% /md %}}</dd>
@@ -3605,7 +2061,7 @@ instance.  See Block Devices below for details.
             title="Optional">
         <span>Ec2Instance<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}EC2 instance ID
 {{% /md %}}</dd>
@@ -3614,7 +2070,7 @@ instance.  See Block Devices below for details.
             title="Optional">
         <span>Ecs<wbr>Cluster<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3622,7 +2078,7 @@ instance.  See Block Devices below for details.
             title="Optional">
         <span>Elastic<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3630,7 +2086,7 @@ instance.  See Block Devices below for details.
             title="Optional">
         <span>Ephemeral<wbr>Block<wbr>Devices</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceephemeralblockdevice">List&lt;Instance<wbr>Ephemeral<wbr>Block<wbr>Device<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#instanceephemeralblockdevice">List&lt;Instance<wbr>Ephemeral<wbr>Block<wbr>Device<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Customize Ephemeral (also known as
 "Instance Store") volumes on the instance. See Block Devices below for details.
@@ -3640,7 +2096,7 @@ instance.  See Block Devices below for details.
             title="Optional">
         <span>Hostname</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The instance's host name.
 {{% /md %}}</dd>
@@ -3649,7 +2105,7 @@ instance.  See Block Devices below for details.
             title="Optional">
         <span>Infrastructure<wbr>Class</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3657,7 +2113,7 @@ instance.  See Block Devices below for details.
             title="Optional">
         <span>Install<wbr>Updates<wbr>On<wbr>Boot</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Controls where to install OS and package updates when the instance boots.  Defaults to `true`.
 {{% /md %}}</dd>
@@ -3666,7 +2122,7 @@ instance.  See Block Devices below for details.
             title="Optional">
         <span>Instance<wbr>Profile<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3674,7 +2130,7 @@ instance.  See Block Devices below for details.
             title="Optional">
         <span>Instance<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of instance to start
 {{% /md %}}</dd>
@@ -3683,7 +2139,7 @@ instance.  See Block Devices below for details.
             title="Optional">
         <span>Last<wbr>Service<wbr>Error<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3691,7 +2147,7 @@ instance.  See Block Devices below for details.
             title="Optional">
         <span>Layer<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The ids of the layers the instance will belong to.
 {{% /md %}}</dd>
@@ -3700,7 +2156,7 @@ instance.  See Block Devices below for details.
             title="Optional">
         <span>Os</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of operating system that will be installed.
 {{% /md %}}</dd>
@@ -3709,7 +2165,7 @@ instance.  See Block Devices below for details.
             title="Optional">
         <span>Platform</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3717,7 +2173,7 @@ instance.  See Block Devices below for details.
             title="Optional">
         <span>Private<wbr>Dns</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The private DNS name assigned to the instance. Can only be
 used inside the Amazon EC2, and only available if you've enabled DNS hostnames
@@ -3728,7 +2184,7 @@ for your VPC
             title="Optional">
         <span>Private<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The private IP address assigned to the instance
 {{% /md %}}</dd>
@@ -3737,7 +2193,7 @@ for your VPC
             title="Optional">
         <span>Public<wbr>Dns</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The public DNS name assigned to the instance. For EC2-VPC, this
 is only available if you've enabled DNS hostnames for your VPC
@@ -3747,7 +2203,7 @@ is only available if you've enabled DNS hostnames for your VPC
             title="Optional">
         <span>Public<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The public IP address assigned to the instance, if applicable.
 {{% /md %}}</dd>
@@ -3756,7 +2212,7 @@ is only available if you've enabled DNS hostnames for your VPC
             title="Optional">
         <span>Registered<wbr>By</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3764,7 +2220,7 @@ is only available if you've enabled DNS hostnames for your VPC
             title="Optional">
         <span>Reported<wbr>Agent<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3772,7 +2228,7 @@ is only available if you've enabled DNS hostnames for your VPC
             title="Optional">
         <span>Reported<wbr>Os<wbr>Family</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3780,7 +2236,7 @@ is only available if you've enabled DNS hostnames for your VPC
             title="Optional">
         <span>Reported<wbr>Os<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3788,7 +2244,7 @@ is only available if you've enabled DNS hostnames for your VPC
             title="Optional">
         <span>Reported<wbr>Os<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3796,7 +2252,7 @@ is only available if you've enabled DNS hostnames for your VPC
             title="Optional">
         <span>Root<wbr>Block<wbr>Devices</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancerootblockdevice">List&lt;Instance<wbr>Root<wbr>Block<wbr>Device<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#instancerootblockdevice">List&lt;Instance<wbr>Root<wbr>Block<wbr>Device<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Customize details about the root block
 device of the instance. See Block Devices below for details.
@@ -3806,7 +2262,7 @@ device of the instance. See Block Devices below for details.
             title="Optional">
         <span>Root<wbr>Device<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the type of root device instances will have by default.  Can be either `"ebs"` or `"instance-store"`
 {{% /md %}}</dd>
@@ -3815,7 +2271,7 @@ device of the instance. See Block Devices below for details.
             title="Optional">
         <span>Root<wbr>Device<wbr>Volume<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3823,7 +2279,7 @@ device of the instance. See Block Devices below for details.
             title="Optional">
         <span>Security<wbr>Group<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The associated security groups.
 {{% /md %}}</dd>
@@ -3832,7 +2288,7 @@ device of the instance. See Block Devices below for details.
             title="Optional">
         <span>Ssh<wbr>Host<wbr>Dsa<wbr>Key<wbr>Fingerprint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3840,7 +2296,7 @@ device of the instance. See Block Devices below for details.
             title="Optional">
         <span>Ssh<wbr>Host<wbr>Rsa<wbr>Key<wbr>Fingerprint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3848,7 +2304,7 @@ device of the instance. See Block Devices below for details.
             title="Optional">
         <span>Ssh<wbr>Key<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the SSH keypair that instances will have by default.
 {{% /md %}}</dd>
@@ -3857,7 +2313,7 @@ device of the instance. See Block Devices below for details.
             title="Optional">
         <span>Stack<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the stack the instance will belong to.
 {{% /md %}}</dd>
@@ -3866,7 +2322,7 @@ device of the instance. See Block Devices below for details.
             title="Optional">
         <span>State</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The desired state of the instance.  Can be either `"running"` or `"stopped"`.
 {{% /md %}}</dd>
@@ -3875,7 +2331,7 @@ device of the instance. See Block Devices below for details.
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3883,7 +2339,7 @@ device of the instance. See Block Devices below for details.
             title="Optional">
         <span>Subnet<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Subnet ID to attach to
 {{% /md %}}</dd>
@@ -3892,7 +2348,7 @@ device of the instance. See Block Devices below for details.
             title="Optional">
         <span>Tenancy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Instance tenancy to use. Can be one of `"default"`, `"dedicated"` or `"host"`
 {{% /md %}}</dd>
@@ -3901,7 +2357,7 @@ device of the instance. See Block Devices below for details.
             title="Optional">
         <span>Virtualization<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Keyword to choose what virtualization mode created instances
 will use. Can be either `"paravirtual"` or `"hvm"`.
@@ -3918,7 +2374,7 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
             title="Optional">
         <span>Agent<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS OpsWorks agent to install.  Defaults to `"INHERIT"`.
 {{% /md %}}</dd>
@@ -3927,7 +2383,7 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
             title="Optional">
         <span>Ami<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AMI to use for the instance.  If an AMI is specified, `os` must be `"Custom"`.
 {{% /md %}}</dd>
@@ -3936,7 +2392,7 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
             title="Optional">
         <span>Architecture</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Machine architecture for created instances.  Can be either `"x86_64"` (the default) or `"i386"`
 {{% /md %}}</dd>
@@ -3945,7 +2401,7 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
             title="Optional">
         <span>Auto<wbr>Scaling<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creates load-based or time-based instances.  If set, can be either: `"load"` or `"timer"`.
 {{% /md %}}</dd>
@@ -3954,7 +2410,7 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
             title="Optional">
         <span>Availability<wbr>Zone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the availability zone where instances will be created
 by default.
@@ -3964,7 +2420,7 @@ by default.
             title="Optional">
         <span>Created<wbr>At</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3972,7 +2428,7 @@ by default.
             title="Optional">
         <span>Delete<wbr>Ebs</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3980,7 +2436,7 @@ by default.
             title="Optional">
         <span>Delete<wbr>Eip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3998,7 +2454,7 @@ instance.  See Block Devices below for details.
             title="Optional">
         <span>Ebs<wbr>Optimized</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If true, the launched EC2 instance will be EBS-optimized.
 {{% /md %}}</dd>
@@ -4007,7 +2463,7 @@ instance.  See Block Devices below for details.
             title="Optional">
         <span>Ec2Instance<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}EC2 instance ID
 {{% /md %}}</dd>
@@ -4016,7 +2472,7 @@ instance.  See Block Devices below for details.
             title="Optional">
         <span>Ecs<wbr>Cluster<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4024,7 +2480,7 @@ instance.  See Block Devices below for details.
             title="Optional">
         <span>Elastic<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4042,7 +2498,7 @@ instance.  See Block Devices below for details.
             title="Optional">
         <span>Hostname</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The instance's host name.
 {{% /md %}}</dd>
@@ -4051,7 +2507,7 @@ instance.  See Block Devices below for details.
             title="Optional">
         <span>Infrastructure<wbr>Class</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4059,7 +2515,7 @@ instance.  See Block Devices below for details.
             title="Optional">
         <span>Install<wbr>Updates<wbr>On<wbr>Boot</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Controls where to install OS and package updates when the instance boots.  Defaults to `true`.
 {{% /md %}}</dd>
@@ -4068,7 +2524,7 @@ instance.  See Block Devices below for details.
             title="Optional">
         <span>Instance<wbr>Profile<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4076,7 +2532,7 @@ instance.  See Block Devices below for details.
             title="Optional">
         <span>Instance<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of instance to start
 {{% /md %}}</dd>
@@ -4085,7 +2541,7 @@ instance.  See Block Devices below for details.
             title="Optional">
         <span>Last<wbr>Service<wbr>Error<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4102,7 +2558,7 @@ instance.  See Block Devices below for details.
             title="Optional">
         <span>Os</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of operating system that will be installed.
 {{% /md %}}</dd>
@@ -4111,7 +2567,7 @@ instance.  See Block Devices below for details.
             title="Optional">
         <span>Platform</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4119,7 +2575,7 @@ instance.  See Block Devices below for details.
             title="Optional">
         <span>Private<wbr>Dns</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The private DNS name assigned to the instance. Can only be
 used inside the Amazon EC2, and only available if you've enabled DNS hostnames
@@ -4130,7 +2586,7 @@ for your VPC
             title="Optional">
         <span>Private<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The private IP address assigned to the instance
 {{% /md %}}</dd>
@@ -4139,7 +2595,7 @@ for your VPC
             title="Optional">
         <span>Public<wbr>Dns</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The public DNS name assigned to the instance. For EC2-VPC, this
 is only available if you've enabled DNS hostnames for your VPC
@@ -4149,7 +2605,7 @@ is only available if you've enabled DNS hostnames for your VPC
             title="Optional">
         <span>Public<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The public IP address assigned to the instance, if applicable.
 {{% /md %}}</dd>
@@ -4158,7 +2614,7 @@ is only available if you've enabled DNS hostnames for your VPC
             title="Optional">
         <span>Registered<wbr>By</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4166,7 +2622,7 @@ is only available if you've enabled DNS hostnames for your VPC
             title="Optional">
         <span>Reported<wbr>Agent<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4174,7 +2630,7 @@ is only available if you've enabled DNS hostnames for your VPC
             title="Optional">
         <span>Reported<wbr>Os<wbr>Family</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4182,7 +2638,7 @@ is only available if you've enabled DNS hostnames for your VPC
             title="Optional">
         <span>Reported<wbr>Os<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4190,7 +2646,7 @@ is only available if you've enabled DNS hostnames for your VPC
             title="Optional">
         <span>Reported<wbr>Os<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4208,7 +2664,7 @@ device of the instance. See Block Devices below for details.
             title="Optional">
         <span>Root<wbr>Device<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the type of root device instances will have by default.  Can be either `"ebs"` or `"instance-store"`
 {{% /md %}}</dd>
@@ -4217,7 +2673,7 @@ device of the instance. See Block Devices below for details.
             title="Optional">
         <span>Root<wbr>Device<wbr>Volume<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4234,7 +2690,7 @@ device of the instance. See Block Devices below for details.
             title="Optional">
         <span>Ssh<wbr>Host<wbr>Dsa<wbr>Key<wbr>Fingerprint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4242,7 +2698,7 @@ device of the instance. See Block Devices below for details.
             title="Optional">
         <span>Ssh<wbr>Host<wbr>Rsa<wbr>Key<wbr>Fingerprint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4250,7 +2706,7 @@ device of the instance. See Block Devices below for details.
             title="Optional">
         <span>Ssh<wbr>Key<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the SSH keypair that instances will have by default.
 {{% /md %}}</dd>
@@ -4259,7 +2715,7 @@ device of the instance. See Block Devices below for details.
             title="Optional">
         <span>Stack<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the stack the instance will belong to.
 {{% /md %}}</dd>
@@ -4268,7 +2724,7 @@ device of the instance. See Block Devices below for details.
             title="Optional">
         <span>State</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The desired state of the instance.  Can be either `"running"` or `"stopped"`.
 {{% /md %}}</dd>
@@ -4277,7 +2733,7 @@ device of the instance. See Block Devices below for details.
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4285,7 +2741,7 @@ device of the instance. See Block Devices below for details.
             title="Optional">
         <span>Subnet<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Subnet ID to attach to
 {{% /md %}}</dd>
@@ -4294,7 +2750,7 @@ device of the instance. See Block Devices below for details.
             title="Optional">
         <span>Tenancy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Instance tenancy to use. Can be one of `"default"`, `"dedicated"` or `"host"`
 {{% /md %}}</dd>
@@ -4303,7 +2759,7 @@ device of the instance. See Block Devices below for details.
             title="Optional">
         <span>Virtualization<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Keyword to choose what virtualization mode created instances
 will use. Can be either `"paravirtual"` or `"hvm"`.
@@ -4320,7 +2776,7 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
             title="Optional">
         <span>agent<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AWS OpsWorks agent to install.  Defaults to `"INHERIT"`.
 {{% /md %}}</dd>
@@ -4329,7 +2785,7 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
             title="Optional">
         <span>ami<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The AMI to use for the instance.  If an AMI is specified, `os` must be `"Custom"`.
 {{% /md %}}</dd>
@@ -4338,7 +2794,7 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
             title="Optional">
         <span>architecture</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Machine architecture for created instances.  Can be either `"x86_64"` (the default) or `"i386"`
 {{% /md %}}</dd>
@@ -4347,7 +2803,7 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
             title="Optional">
         <span>auto<wbr>Scaling<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Creates load-based or time-based instances.  If set, can be either: `"load"` or `"timer"`.
 {{% /md %}}</dd>
@@ -4356,7 +2812,7 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
             title="Optional">
         <span>availability<wbr>Zone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the availability zone where instances will be created
 by default.
@@ -4366,7 +2822,7 @@ by default.
             title="Optional">
         <span>created<wbr>At</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4374,7 +2830,7 @@ by default.
             title="Optional">
         <span>delete<wbr>Ebs</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4382,7 +2838,7 @@ by default.
             title="Optional">
         <span>delete<wbr>Eip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4390,7 +2846,7 @@ by default.
             title="Optional">
         <span>ebs<wbr>Block<wbr>Devices</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceebsblockdevice">Instance<wbr>Ebs<wbr>Block<wbr>Device[]?</a></span>
+        <span class="property-type"><a href="#instanceebsblockdevice">Instance<wbr>Ebs<wbr>Block<wbr>Device[]</a></span>
     </dt>
     <dd>{{% md %}}Additional EBS block devices to attach to the
 instance.  See Block Devices below for details.
@@ -4400,7 +2856,7 @@ instance.  See Block Devices below for details.
             title="Optional">
         <span>ebs<wbr>Optimized</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If true, the launched EC2 instance will be EBS-optimized.
 {{% /md %}}</dd>
@@ -4409,7 +2865,7 @@ instance.  See Block Devices below for details.
             title="Optional">
         <span>ec2Instance<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}EC2 instance ID
 {{% /md %}}</dd>
@@ -4418,7 +2874,7 @@ instance.  See Block Devices below for details.
             title="Optional">
         <span>ecs<wbr>Cluster<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4426,7 +2882,7 @@ instance.  See Block Devices below for details.
             title="Optional">
         <span>elastic<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4434,7 +2890,7 @@ instance.  See Block Devices below for details.
             title="Optional">
         <span>ephemeral<wbr>Block<wbr>Devices</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instanceephemeralblockdevice">Instance<wbr>Ephemeral<wbr>Block<wbr>Device[]?</a></span>
+        <span class="property-type"><a href="#instanceephemeralblockdevice">Instance<wbr>Ephemeral<wbr>Block<wbr>Device[]</a></span>
     </dt>
     <dd>{{% md %}}Customize Ephemeral (also known as
 "Instance Store") volumes on the instance. See Block Devices below for details.
@@ -4444,7 +2900,7 @@ instance.  See Block Devices below for details.
             title="Optional">
         <span>hostname</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The instance's host name.
 {{% /md %}}</dd>
@@ -4453,7 +2909,7 @@ instance.  See Block Devices below for details.
             title="Optional">
         <span>infrastructure<wbr>Class</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4461,7 +2917,7 @@ instance.  See Block Devices below for details.
             title="Optional">
         <span>install<wbr>Updates<wbr>On<wbr>Boot</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Controls where to install OS and package updates when the instance boots.  Defaults to `true`.
 {{% /md %}}</dd>
@@ -4470,7 +2926,7 @@ instance.  See Block Devices below for details.
             title="Optional">
         <span>instance<wbr>Profile<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4478,7 +2934,7 @@ instance.  See Block Devices below for details.
             title="Optional">
         <span>instance<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of instance to start
 {{% /md %}}</dd>
@@ -4487,7 +2943,7 @@ instance.  See Block Devices below for details.
             title="Optional">
         <span>last<wbr>Service<wbr>Error<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4495,7 +2951,7 @@ instance.  See Block Devices below for details.
             title="Optional">
         <span>layer<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The ids of the layers the instance will belong to.
 {{% /md %}}</dd>
@@ -4504,7 +2960,7 @@ instance.  See Block Devices below for details.
             title="Optional">
         <span>os</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of operating system that will be installed.
 {{% /md %}}</dd>
@@ -4513,7 +2969,7 @@ instance.  See Block Devices below for details.
             title="Optional">
         <span>platform</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4521,7 +2977,7 @@ instance.  See Block Devices below for details.
             title="Optional">
         <span>private<wbr>Dns</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The private DNS name assigned to the instance. Can only be
 used inside the Amazon EC2, and only available if you've enabled DNS hostnames
@@ -4532,7 +2988,7 @@ for your VPC
             title="Optional">
         <span>private<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The private IP address assigned to the instance
 {{% /md %}}</dd>
@@ -4541,7 +2997,7 @@ for your VPC
             title="Optional">
         <span>public<wbr>Dns</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The public DNS name assigned to the instance. For EC2-VPC, this
 is only available if you've enabled DNS hostnames for your VPC
@@ -4551,7 +3007,7 @@ is only available if you've enabled DNS hostnames for your VPC
             title="Optional">
         <span>public<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The public IP address assigned to the instance, if applicable.
 {{% /md %}}</dd>
@@ -4560,7 +3016,7 @@ is only available if you've enabled DNS hostnames for your VPC
             title="Optional">
         <span>registered<wbr>By</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4568,7 +3024,7 @@ is only available if you've enabled DNS hostnames for your VPC
             title="Optional">
         <span>reported<wbr>Agent<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4576,7 +3032,7 @@ is only available if you've enabled DNS hostnames for your VPC
             title="Optional">
         <span>reported<wbr>Os<wbr>Family</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4584,7 +3040,7 @@ is only available if you've enabled DNS hostnames for your VPC
             title="Optional">
         <span>reported<wbr>Os<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4592,7 +3048,7 @@ is only available if you've enabled DNS hostnames for your VPC
             title="Optional">
         <span>reported<wbr>Os<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4600,7 +3056,7 @@ is only available if you've enabled DNS hostnames for your VPC
             title="Optional">
         <span>root<wbr>Block<wbr>Devices</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancerootblockdevice">Instance<wbr>Root<wbr>Block<wbr>Device[]?</a></span>
+        <span class="property-type"><a href="#instancerootblockdevice">Instance<wbr>Root<wbr>Block<wbr>Device[]</a></span>
     </dt>
     <dd>{{% md %}}Customize details about the root block
 device of the instance. See Block Devices below for details.
@@ -4610,7 +3066,7 @@ device of the instance. See Block Devices below for details.
             title="Optional">
         <span>root<wbr>Device<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the type of root device instances will have by default.  Can be either `"ebs"` or `"instance-store"`
 {{% /md %}}</dd>
@@ -4619,7 +3075,7 @@ device of the instance. See Block Devices below for details.
             title="Optional">
         <span>root<wbr>Device<wbr>Volume<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4627,7 +3083,7 @@ device of the instance. See Block Devices below for details.
             title="Optional">
         <span>security<wbr>Group<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The associated security groups.
 {{% /md %}}</dd>
@@ -4636,7 +3092,7 @@ device of the instance. See Block Devices below for details.
             title="Optional">
         <span>ssh<wbr>Host<wbr>Dsa<wbr>Key<wbr>Fingerprint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4644,7 +3100,7 @@ device of the instance. See Block Devices below for details.
             title="Optional">
         <span>ssh<wbr>Host<wbr>Rsa<wbr>Key<wbr>Fingerprint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4652,7 +3108,7 @@ device of the instance. See Block Devices below for details.
             title="Optional">
         <span>ssh<wbr>Key<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the SSH keypair that instances will have by default.
 {{% /md %}}</dd>
@@ -4661,7 +3117,7 @@ device of the instance. See Block Devices below for details.
             title="Optional">
         <span>stack<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the stack the instance will belong to.
 {{% /md %}}</dd>
@@ -4670,7 +3126,7 @@ device of the instance. See Block Devices below for details.
             title="Optional">
         <span>state</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The desired state of the instance.  Can be either `"running"` or `"stopped"`.
 {{% /md %}}</dd>
@@ -4679,7 +3135,7 @@ device of the instance. See Block Devices below for details.
             title="Optional">
         <span>status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4687,7 +3143,7 @@ device of the instance. See Block Devices below for details.
             title="Optional">
         <span>subnet<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Subnet ID to attach to
 {{% /md %}}</dd>
@@ -4696,7 +3152,7 @@ device of the instance. See Block Devices below for details.
             title="Optional">
         <span>tenancy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Instance tenancy to use. Can be one of `"default"`, `"dedicated"` or `"host"`
 {{% /md %}}</dd>
@@ -4705,7 +3161,7 @@ device of the instance. See Block Devices below for details.
             title="Optional">
         <span>virtualization<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Keyword to choose what virtualization mode created instances
 will use. Can be either `"paravirtual"` or `"hvm"`.
@@ -5142,14 +3598,6 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Delete<wbr>On<wbr>Termination</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Device<wbr>Name</span>
@@ -5160,9 +3608,17 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
 
     <dt class="property-optional"
             title="Optional">
+        <span>Delete<wbr>On<wbr>Termination</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Iops</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5170,7 +3626,7 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
             title="Optional">
         <span>Snapshot<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5178,7 +3634,7 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
             title="Optional">
         <span>Volume<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5186,7 +3642,7 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
             title="Optional">
         <span>Volume<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5197,14 +3653,6 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Delete<wbr>On<wbr>Termination</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Device<wbr>Name</span>
@@ -5215,9 +3663,17 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
 
     <dt class="property-optional"
             title="Optional">
+        <span>Delete<wbr>On<wbr>Termination</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Iops</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5225,7 +3681,7 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
             title="Optional">
         <span>Snapshot<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5233,7 +3689,7 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
             title="Optional">
         <span>Volume<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5241,7 +3697,7 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
             title="Optional">
         <span>Volume<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5251,14 +3707,6 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>delete<wbr>On<wbr>Termination</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -5270,9 +3718,17 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
 
     <dt class="property-optional"
             title="Optional">
+        <span>delete<wbr>On<wbr>Termination</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>iops</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5280,7 +3736,7 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
             title="Optional">
         <span>snapshot<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5288,7 +3744,7 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
             title="Optional">
         <span>volume<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5296,7 +3752,7 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
             title="Optional">
         <span>volume<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5307,19 +3763,19 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>delete<wbr>On<wbr>Termination</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>device_<wbr>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>delete<wbr>On<wbr>Termination</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5488,7 +3944,7 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
             title="Optional">
         <span>Delete<wbr>On<wbr>Termination</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5496,7 +3952,7 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
             title="Optional">
         <span>Iops</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5504,7 +3960,7 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
             title="Optional">
         <span>Volume<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5512,7 +3968,7 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
             title="Optional">
         <span>Volume<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5527,7 +3983,7 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
             title="Optional">
         <span>Delete<wbr>On<wbr>Termination</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5535,7 +3991,7 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
             title="Optional">
         <span>Iops</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5543,7 +3999,7 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
             title="Optional">
         <span>Volume<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5551,7 +4007,7 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
             title="Optional">
         <span>Volume<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5566,7 +4022,7 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
             title="Optional">
         <span>delete<wbr>On<wbr>Termination</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5574,7 +4030,7 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
             title="Optional">
         <span>iops</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5582,7 +4038,7 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
             title="Optional">
         <span>volume<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -5590,7 +4046,7 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
             title="Optional">
         <span>volume<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

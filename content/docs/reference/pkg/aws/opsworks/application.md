@@ -57,7 +57,7 @@ const foo_app = new aws.opsworks.Application("foo-app", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/opsworks/#Application">Application</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/opsworks/#ApplicationArgs">ApplicationArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/opsworks/#Application">Application</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/opsworks/#ApplicationArgs">ApplicationArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -65,11 +65,11 @@ const foo_app = new aws.opsworks.Application("foo-app", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewApplication<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/opsworks?tab=doc#ApplicationArgs">ApplicationArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/opsworks?tab=doc#Application">Application</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewApplication<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/opsworks?tab=doc#ApplicationArgs">ApplicationArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/opsworks?tab=doc#Application">Application</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Opsworks.Application.html">Application</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.OpsWorks.ApplicationArgs.html">ApplicationArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.OpsWorks.Application.html">Application</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.OpsWorks.ApplicationArgs.html">ApplicationArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -161,11 +161,29 @@ const foo_app = new aws.opsworks.Application("foo-app", {
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Stack<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The id of the stack the application will belong to.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Opsworks application type. One of `aws-flow-ruby`, `java`, `rails`, `php`, `nodejs`, `static` or `other`.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>App<wbr>Sources</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationappsource">List&lt;Application<wbr>App<wbr>Source<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#applicationappsource">List&lt;Application<wbr>App<wbr>Source<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}SCM configuration of the app as described below.
 {{% /md %}}</dd>
@@ -174,7 +192,7 @@ const foo_app = new aws.opsworks.Application("foo-app", {
             title="Optional">
         <span>Auto<wbr>Bundle<wbr>On<wbr>Deploy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Run bundle install when deploying for application of type `rails`.
 {{% /md %}}</dd>
@@ -183,7 +201,7 @@ const foo_app = new aws.opsworks.Application("foo-app", {
             title="Optional">
         <span>Aws<wbr>Flow<wbr>Ruby<wbr>Settings</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify activity and workflow workers for your app using the aws-flow gem.
 {{% /md %}}</dd>
@@ -192,7 +210,7 @@ const foo_app = new aws.opsworks.Application("foo-app", {
             title="Optional">
         <span>Data<wbr>Source<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The data source's ARN.
 {{% /md %}}</dd>
@@ -201,7 +219,7 @@ const foo_app = new aws.opsworks.Application("foo-app", {
             title="Optional">
         <span>Data<wbr>Source<wbr>Database<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The database name.
 {{% /md %}}</dd>
@@ -210,7 +228,7 @@ const foo_app = new aws.opsworks.Application("foo-app", {
             title="Optional">
         <span>Data<wbr>Source<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The data source's type one of `AutoSelectOpsworksMysqlInstance`, `OpsworksMysqlInstance`, or `RdsDbInstance`.
 {{% /md %}}</dd>
@@ -219,7 +237,7 @@ const foo_app = new aws.opsworks.Application("foo-app", {
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the app.
 {{% /md %}}</dd>
@@ -228,7 +246,7 @@ const foo_app = new aws.opsworks.Application("foo-app", {
             title="Optional">
         <span>Document<wbr>Root</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Subfolder for the document root for application of type `rails`.
 {{% /md %}}</dd>
@@ -237,7 +255,7 @@ const foo_app = new aws.opsworks.Application("foo-app", {
             title="Optional">
         <span>Domains</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of virtual host alias.
 {{% /md %}}</dd>
@@ -246,7 +264,7 @@ const foo_app = new aws.opsworks.Application("foo-app", {
             title="Optional">
         <span>Enable<wbr>Ssl</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to enable SSL for the app. This must be set in order to let `ssl_configuration.private_key`, `ssl_configuration.certificate` and `ssl_configuration.chain` take effect.
 {{% /md %}}</dd>
@@ -255,7 +273,7 @@ const foo_app = new aws.opsworks.Application("foo-app", {
             title="Optional">
         <span>Environments</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationenvironment">List&lt;Application<wbr>Environment<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#applicationenvironment">List&lt;Application<wbr>Environment<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Object to define environment variables.  Object is described below.
 {{% /md %}}</dd>
@@ -264,7 +282,7 @@ const foo_app = new aws.opsworks.Application("foo-app", {
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A human-readable name for the application.
 {{% /md %}}</dd>
@@ -273,7 +291,7 @@ const foo_app = new aws.opsworks.Application("foo-app", {
             title="Optional">
         <span>Rails<wbr>Env</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Rails environment for application of type `rails`.
 {{% /md %}}</dd>
@@ -282,7 +300,7 @@ const foo_app = new aws.opsworks.Application("foo-app", {
             title="Optional">
         <span>Short<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A short, machine-readable name for the application. This can only be defined on resource creation and ignored on resource update.
 {{% /md %}}</dd>
@@ -291,10 +309,17 @@ const foo_app = new aws.opsworks.Application("foo-app", {
             title="Optional">
         <span>Ssl<wbr>Configurations</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationsslconfiguration">List&lt;Application<wbr>Ssl<wbr>Configuration<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#applicationsslconfiguration">List&lt;Application<wbr>Ssl<wbr>Configuration<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The SSL configuration of the app. Object is described below.
 {{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
@@ -314,13 +339,6 @@ const foo_app = new aws.opsworks.Application("foo-app", {
     <dd>{{% md %}}Opsworks application type. One of `aws-flow-ruby`, `java`, `rails`, `php`, `nodejs`, `static` or `other`.
 {{% /md %}}</dd>
 
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span>App<wbr>Sources</span>
@@ -334,7 +352,7 @@ const foo_app = new aws.opsworks.Application("foo-app", {
             title="Optional">
         <span>Auto<wbr>Bundle<wbr>On<wbr>Deploy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Run bundle install when deploying for application of type `rails`.
 {{% /md %}}</dd>
@@ -343,7 +361,7 @@ const foo_app = new aws.opsworks.Application("foo-app", {
             title="Optional">
         <span>Aws<wbr>Flow<wbr>Ruby<wbr>Settings</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify activity and workflow workers for your app using the aws-flow gem.
 {{% /md %}}</dd>
@@ -352,7 +370,7 @@ const foo_app = new aws.opsworks.Application("foo-app", {
             title="Optional">
         <span>Data<wbr>Source<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The data source's ARN.
 {{% /md %}}</dd>
@@ -361,7 +379,7 @@ const foo_app = new aws.opsworks.Application("foo-app", {
             title="Optional">
         <span>Data<wbr>Source<wbr>Database<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The database name.
 {{% /md %}}</dd>
@@ -370,7 +388,7 @@ const foo_app = new aws.opsworks.Application("foo-app", {
             title="Optional">
         <span>Data<wbr>Source<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The data source's type one of `AutoSelectOpsworksMysqlInstance`, `OpsworksMysqlInstance`, or `RdsDbInstance`.
 {{% /md %}}</dd>
@@ -379,7 +397,7 @@ const foo_app = new aws.opsworks.Application("foo-app", {
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the app.
 {{% /md %}}</dd>
@@ -388,7 +406,7 @@ const foo_app = new aws.opsworks.Application("foo-app", {
             title="Optional">
         <span>Document<wbr>Root</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Subfolder for the document root for application of type `rails`.
 {{% /md %}}</dd>
@@ -406,7 +424,7 @@ const foo_app = new aws.opsworks.Application("foo-app", {
             title="Optional">
         <span>Enable<wbr>Ssl</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to enable SSL for the app. This must be set in order to let `ssl_configuration.private_key`, `ssl_configuration.certificate` and `ssl_configuration.chain` take effect.
 {{% /md %}}</dd>
@@ -424,7 +442,7 @@ const foo_app = new aws.opsworks.Application("foo-app", {
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A human-readable name for the application.
 {{% /md %}}</dd>
@@ -433,7 +451,7 @@ const foo_app = new aws.opsworks.Application("foo-app", {
             title="Optional">
         <span>Rails<wbr>Env</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Rails environment for application of type `rails`.
 {{% /md %}}</dd>
@@ -442,7 +460,7 @@ const foo_app = new aws.opsworks.Application("foo-app", {
             title="Optional">
         <span>Short<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A short, machine-readable name for the application. This can only be defined on resource creation and ignored on resource update.
 {{% /md %}}</dd>
@@ -456,165 +474,12 @@ const foo_app = new aws.opsworks.Application("foo-app", {
     <dd>{{% md %}}The SSL configuration of the app. Object is described below.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>Stack<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The id of the stack the application will belong to.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Opsworks application type. One of `aws-flow-ruby`, `java`, `rails`, `php`, `nodejs`, `static` or `other`.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>app<wbr>Sources</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationappsource">Application<wbr>App<wbr>Source[]?</a></span>
-    </dt>
-    <dd>{{% md %}}SCM configuration of the app as described below.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>auto<wbr>Bundle<wbr>On<wbr>Deploy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Run bundle install when deploying for application of type `rails`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>aws<wbr>Flow<wbr>Ruby<wbr>Settings</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Specify activity and workflow workers for your app using the aws-flow gem.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>data<wbr>Source<wbr>Arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The data source's ARN.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>data<wbr>Source<wbr>Database<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The database name.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>data<wbr>Source<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The data source's type one of `AutoSelectOpsworksMysqlInstance`, `OpsworksMysqlInstance`, or `RdsDbInstance`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}A description of the app.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>document<wbr>Root</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Subfolder for the document root for application of type `rails`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>domains</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}A list of virtual host alias.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>enable<wbr>Ssl</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Whether to enable SSL for the app. This must be set in order to let `ssl_configuration.private_key`, `ssl_configuration.certificate` and `ssl_configuration.chain` take effect.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>environments</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationenvironment">Application<wbr>Environment[]?</a></span>
-    </dt>
-    <dd>{{% md %}}Object to define environment variables.  Object is described below.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}A human-readable name for the application.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>rails<wbr>Env</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The name of the Rails environment for application of type `rails`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>short<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}A short, machine-readable name for the application. This can only be defined on resource creation and ignored on resource update.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>ssl<wbr>Configurations</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationsslconfiguration">Application<wbr>Ssl<wbr>Configuration[]?</a></span>
-    </dt>
-    <dd>{{% md %}}The SSL configuration of the app. Object is described below.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -634,507 +499,8 @@ const foo_app = new aws.opsworks.Application("foo-app", {
     <dd>{{% md %}}Opsworks application type. One of `aws-flow-ruby`, `java`, `rails`, `php`, `nodejs`, `static` or `other`.
 {{% /md %}}</dd>
 
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
-        <span>app_<wbr>sources</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationappsource">List[Application<wbr>App<wbr>Source]</a></span>
-    </dt>
-    <dd>{{% md %}}SCM configuration of the app as described below.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>auto_<wbr>bundle_<wbr>on_<wbr>deploy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Run bundle install when deploying for application of type `rails`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>aws_<wbr>flow_<wbr>ruby_<wbr>settings</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Specify activity and workflow workers for your app using the aws-flow gem.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>data_<wbr>source_<wbr>arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The data source's ARN.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>data_<wbr>source_<wbr>database_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The database name.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>data_<wbr>source_<wbr>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The data source's type one of `AutoSelectOpsworksMysqlInstance`, `OpsworksMysqlInstance`, or `RdsDbInstance`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}A description of the app.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>document_<wbr>root</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Subfolder for the document root for application of type `rails`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>domains</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}A list of virtual host alias.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>enable_<wbr>ssl</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Whether to enable SSL for the app. This must be set in order to let `ssl_configuration.private_key`, `ssl_configuration.certificate` and `ssl_configuration.chain` take effect.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>environments</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationenvironment">List[Application<wbr>Environment]</a></span>
-    </dt>
-    <dd>{{% md %}}Object to define environment variables.  Object is described below.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}A human-readable name for the application.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>rails_<wbr>env</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the Rails environment for application of type `rails`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>short_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}A short, machine-readable name for the application. This can only be defined on resource creation and ignored on resource update.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>ssl_<wbr>configurations</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationsslconfiguration">List[Application<wbr>Ssl<wbr>Configuration]</a></span>
-    </dt>
-    <dd>{{% md %}}The SSL configuration of the app. Object is described below.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>stack_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The id of the stack the application will belong to.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Opsworks application type. One of `aws-flow-ruby`, `java`, `rails`, `php`, `nodejs`, `static` or `other`.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-
-
-
-
-
-## Application Output Properties
-
-The following output properties are available:
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>App<wbr>Sources</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationappsource">List&lt;Application<wbr>App<wbr>Source&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}SCM configuration of the app as described below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Auto<wbr>Bundle<wbr>On<wbr>Deploy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Run bundle install when deploying for application of type `rails`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Aws<wbr>Flow<wbr>Ruby<wbr>Settings</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Specify activity and workflow workers for your app using the aws-flow gem.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Data<wbr>Source<wbr>Arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The data source's ARN.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Data<wbr>Source<wbr>Database<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The database name.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Data<wbr>Source<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The data source's type one of `AutoSelectOpsworksMysqlInstance`, `OpsworksMysqlInstance`, or `RdsDbInstance`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}A description of the app.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Document<wbr>Root</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Subfolder for the document root for application of type `rails`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Domains</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}A list of virtual host alias.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Enable<wbr>Ssl</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Whether to enable SSL for the app. This must be set in order to let `ssl_configuration.private_key`, `ssl_configuration.certificate` and `ssl_configuration.chain` take effect.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Environments</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationenvironment">List&lt;Application<wbr>Environment&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}Object to define environment variables.  Object is described below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A human-readable name for the application.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Rails<wbr>Env</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The name of the Rails environment for application of type `rails`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Short<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A short, machine-readable name for the application. This can only be defined on resource creation and ignored on resource update.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Ssl<wbr>Configurations</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationsslconfiguration">List&lt;Application<wbr>Ssl<wbr>Configuration&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}The SSL configuration of the app. Object is described below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Stack<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The id of the stack the application will belong to.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Opsworks application type. One of `aws-flow-ruby`, `java`, `rails`, `php`, `nodejs`, `static` or `other`.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>App<wbr>Sources</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationappsource">[]Application<wbr>App<wbr>Source</a></span>
-    </dt>
-    <dd>{{% md %}}SCM configuration of the app as described below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Auto<wbr>Bundle<wbr>On<wbr>Deploy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Run bundle install when deploying for application of type `rails`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Aws<wbr>Flow<wbr>Ruby<wbr>Settings</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Specify activity and workflow workers for your app using the aws-flow gem.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Data<wbr>Source<wbr>Arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The data source's ARN.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Data<wbr>Source<wbr>Database<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The database name.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Data<wbr>Source<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The data source's type one of `AutoSelectOpsworksMysqlInstance`, `OpsworksMysqlInstance`, or `RdsDbInstance`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}A description of the app.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Document<wbr>Root</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Subfolder for the document root for application of type `rails`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Domains</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}A list of virtual host alias.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Enable<wbr>Ssl</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Whether to enable SSL for the app. This must be set in order to let `ssl_configuration.private_key`, `ssl_configuration.certificate` and `ssl_configuration.chain` take effect.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Environments</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationenvironment">[]Application<wbr>Environment</a></span>
-    </dt>
-    <dd>{{% md %}}Object to define environment variables.  Object is described below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A human-readable name for the application.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Rails<wbr>Env</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The name of the Rails environment for application of type `rails`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Short<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A short, machine-readable name for the application. This can only be defined on resource creation and ignored on resource update.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Ssl<wbr>Configurations</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationsslconfiguration">[]Application<wbr>Ssl<wbr>Configuration</a></span>
-    </dt>
-    <dd>{{% md %}}The SSL configuration of the app. Object is described below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Stack<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The id of the stack the application will belong to.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Opsworks application type. One of `aws-flow-ruby`, `java`, `rails`, `php`, `nodejs`, `static` or `other`.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
         <span>app<wbr>Sources</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#applicationappsource">Application<wbr>App<wbr>Source[]</a></span>
@@ -1142,98 +508,98 @@ The following output properties are available:
     <dd>{{% md %}}SCM configuration of the app as described below.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>auto<wbr>Bundle<wbr>On<wbr>Deploy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Run bundle install when deploying for application of type `rails`.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>aws<wbr>Flow<wbr>Ruby<wbr>Settings</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify activity and workflow workers for your app using the aws-flow gem.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>data<wbr>Source<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The data source's ARN.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>data<wbr>Source<wbr>Database<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The database name.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>data<wbr>Source<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The data source's type one of `AutoSelectOpsworksMysqlInstance`, `OpsworksMysqlInstance`, or `RdsDbInstance`.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the app.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>document<wbr>Root</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Subfolder for the document root for application of type `rails`.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>domains</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of virtual host alias.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>enable<wbr>Ssl</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to enable SSL for the app. This must be set in order to let `ssl_configuration.private_key`, `ssl_configuration.certificate` and `ssl_configuration.chain` take effect.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>environments</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationenvironment">Application<wbr>Environment[]?</a></span>
+        <span class="property-type"><a href="#applicationenvironment">Application<wbr>Environment[]</a></span>
     </dt>
     <dd>{{% md %}}Object to define environment variables.  Object is described below.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -1241,17 +607,17 @@ The following output properties are available:
     <dd>{{% md %}}A human-readable name for the application.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>rails<wbr>Env</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Rails environment for application of type `rails`.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>short<wbr>Name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -1259,31 +625,13 @@ The following output properties are available:
     <dd>{{% md %}}A short, machine-readable name for the application. This can only be defined on resource creation and ignored on resource update.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>ssl<wbr>Configurations</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationsslconfiguration">Application<wbr>Ssl<wbr>Configuration[]?</a></span>
+        <span class="property-type"><a href="#applicationsslconfiguration">Application<wbr>Ssl<wbr>Configuration[]</a></span>
     </dt>
     <dd>{{% md %}}The SSL configuration of the app. Object is described below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>stack<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The id of the stack the application will belong to.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Opsworks application type. One of `aws-flow-ruby`, `java`, `rails`, `php`, `nodejs`, `static` or `other`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1293,143 +641,8 @@ The following output properties are available:
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-"
-            title="">
-        <span>app_<wbr>sources</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationappsource">List[Application<wbr>App<wbr>Source]</a></span>
-    </dt>
-    <dd>{{% md %}}SCM configuration of the app as described below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>auto_<wbr>bundle_<wbr>on_<wbr>deploy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Run bundle install when deploying for application of type `rails`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>aws_<wbr>flow_<wbr>ruby_<wbr>settings</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Specify activity and workflow workers for your app using the aws-flow gem.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>data_<wbr>source_<wbr>arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The data source's ARN.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>data_<wbr>source_<wbr>database_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The database name.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>data_<wbr>source_<wbr>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The data source's type one of `AutoSelectOpsworksMysqlInstance`, `OpsworksMysqlInstance`, or `RdsDbInstance`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}A description of the app.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>document_<wbr>root</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Subfolder for the document root for application of type `rails`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>domains</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}A list of virtual host alias.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>enable_<wbr>ssl</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Whether to enable SSL for the app. This must be set in order to let `ssl_configuration.private_key`, `ssl_configuration.certificate` and `ssl_configuration.chain` take effect.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>environments</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationenvironment">List[Application<wbr>Environment]</a></span>
-    </dt>
-    <dd>{{% md %}}Object to define environment variables.  Object is described below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}A human-readable name for the application.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>rails_<wbr>env</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the Rails environment for application of type `rails`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>short_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}A short, machine-readable name for the application. This can only be defined on resource creation and ignored on resource update.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>ssl_<wbr>configurations</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationsslconfiguration">List[Application<wbr>Ssl<wbr>Configuration]</a></span>
-    </dt>
-    <dd>{{% md %}}The SSL configuration of the app. Object is described below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
+    <dt class="property-required"
+            title="Required">
         <span>stack_<wbr>id</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -1437,8 +650,8 @@ The following output properties are available:
     <dd>{{% md %}}The id of the stack the application will belong to.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-required"
+            title="Required">
         <span>type</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -1446,8 +659,145 @@ The following output properties are available:
     <dd>{{% md %}}Opsworks application type. One of `aws-flow-ruby`, `java`, `rails`, `php`, `nodejs`, `static` or `other`.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>app_<wbr>sources</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#applicationappsource">List[Application<wbr>App<wbr>Source]</a></span>
+    </dt>
+    <dd>{{% md %}}SCM configuration of the app as described below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>auto_<wbr>bundle_<wbr>on_<wbr>deploy</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Run bundle install when deploying for application of type `rails`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>aws_<wbr>flow_<wbr>ruby_<wbr>settings</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specify activity and workflow workers for your app using the aws-flow gem.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>data_<wbr>source_<wbr>arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The data source's ARN.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>data_<wbr>source_<wbr>database_<wbr>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The database name.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>data_<wbr>source_<wbr>type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The data source's type one of `AutoSelectOpsworksMysqlInstance`, `OpsworksMysqlInstance`, or `RdsDbInstance`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A description of the app.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>document_<wbr>root</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Subfolder for the document root for application of type `rails`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>domains</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of virtual host alias.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>enable_<wbr>ssl</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to enable SSL for the app. This must be set in order to let `ssl_configuration.private_key`, `ssl_configuration.certificate` and `ssl_configuration.chain` take effect.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>environments</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#applicationenvironment">List[Application<wbr>Environment]</a></span>
+    </dt>
+    <dd>{{% md %}}Object to define environment variables.  Object is described below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A human-readable name for the application.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>rails_<wbr>env</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the Rails environment for application of type `rails`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>short_<wbr>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A short, machine-readable name for the application. This can only be defined on resource creation and ignored on resource update.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>ssl_<wbr>configurations</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#applicationsslconfiguration">List[Application<wbr>Ssl<wbr>Configuration]</a></span>
+    </dt>
+    <dd>{{% md %}}The SSL configuration of the app. Object is described below.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
+
+
 
 
 
@@ -1475,7 +825,7 @@ Get an existing Application resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Opsworks.Application.html">Application</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Opsworks.ApplicationState.html">ApplicationState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.OpsWorks.Application.html">Application</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.OpsWorks.ApplicationState.html">ApplicationState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1585,7 +935,7 @@ The following state arguments are supported:
             title="Optional">
         <span>App<wbr>Sources</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationappsource">List&lt;Application<wbr>App<wbr>Source<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#applicationappsource">List&lt;Application<wbr>App<wbr>Source<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}SCM configuration of the app as described below.
 {{% /md %}}</dd>
@@ -1594,7 +944,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Auto<wbr>Bundle<wbr>On<wbr>Deploy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Run bundle install when deploying for application of type `rails`.
 {{% /md %}}</dd>
@@ -1603,7 +953,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Aws<wbr>Flow<wbr>Ruby<wbr>Settings</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify activity and workflow workers for your app using the aws-flow gem.
 {{% /md %}}</dd>
@@ -1612,7 +962,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Data<wbr>Source<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The data source's ARN.
 {{% /md %}}</dd>
@@ -1621,7 +971,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Data<wbr>Source<wbr>Database<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The database name.
 {{% /md %}}</dd>
@@ -1630,7 +980,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Data<wbr>Source<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The data source's type one of `AutoSelectOpsworksMysqlInstance`, `OpsworksMysqlInstance`, or `RdsDbInstance`.
 {{% /md %}}</dd>
@@ -1639,7 +989,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the app.
 {{% /md %}}</dd>
@@ -1648,7 +998,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Document<wbr>Root</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Subfolder for the document root for application of type `rails`.
 {{% /md %}}</dd>
@@ -1657,7 +1007,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Domains</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of virtual host alias.
 {{% /md %}}</dd>
@@ -1666,7 +1016,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Enable<wbr>Ssl</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to enable SSL for the app. This must be set in order to let `ssl_configuration.private_key`, `ssl_configuration.certificate` and `ssl_configuration.chain` take effect.
 {{% /md %}}</dd>
@@ -1675,7 +1025,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Environments</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationenvironment">List&lt;Application<wbr>Environment<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#applicationenvironment">List&lt;Application<wbr>Environment<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Object to define environment variables.  Object is described below.
 {{% /md %}}</dd>
@@ -1684,7 +1034,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A human-readable name for the application.
 {{% /md %}}</dd>
@@ -1693,7 +1043,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Rails<wbr>Env</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Rails environment for application of type `rails`.
 {{% /md %}}</dd>
@@ -1702,7 +1052,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Short<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A short, machine-readable name for the application. This can only be defined on resource creation and ignored on resource update.
 {{% /md %}}</dd>
@@ -1711,7 +1061,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Ssl<wbr>Configurations</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationsslconfiguration">List&lt;Application<wbr>Ssl<wbr>Configuration<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#applicationsslconfiguration">List&lt;Application<wbr>Ssl<wbr>Configuration<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The SSL configuration of the app. Object is described below.
 {{% /md %}}</dd>
@@ -1720,7 +1070,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Stack<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the stack the application will belong to.
 {{% /md %}}</dd>
@@ -1729,7 +1079,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Opsworks application type. One of `aws-flow-ruby`, `java`, `rails`, `php`, `nodejs`, `static` or `other`.
 {{% /md %}}</dd>
@@ -1754,7 +1104,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Auto<wbr>Bundle<wbr>On<wbr>Deploy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Run bundle install when deploying for application of type `rails`.
 {{% /md %}}</dd>
@@ -1763,7 +1113,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Aws<wbr>Flow<wbr>Ruby<wbr>Settings</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify activity and workflow workers for your app using the aws-flow gem.
 {{% /md %}}</dd>
@@ -1772,7 +1122,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Data<wbr>Source<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The data source's ARN.
 {{% /md %}}</dd>
@@ -1781,7 +1131,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Data<wbr>Source<wbr>Database<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The database name.
 {{% /md %}}</dd>
@@ -1790,7 +1140,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Data<wbr>Source<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The data source's type one of `AutoSelectOpsworksMysqlInstance`, `OpsworksMysqlInstance`, or `RdsDbInstance`.
 {{% /md %}}</dd>
@@ -1799,7 +1149,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the app.
 {{% /md %}}</dd>
@@ -1808,7 +1158,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Document<wbr>Root</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Subfolder for the document root for application of type `rails`.
 {{% /md %}}</dd>
@@ -1826,7 +1176,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Enable<wbr>Ssl</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to enable SSL for the app. This must be set in order to let `ssl_configuration.private_key`, `ssl_configuration.certificate` and `ssl_configuration.chain` take effect.
 {{% /md %}}</dd>
@@ -1844,7 +1194,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A human-readable name for the application.
 {{% /md %}}</dd>
@@ -1853,7 +1203,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Rails<wbr>Env</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Rails environment for application of type `rails`.
 {{% /md %}}</dd>
@@ -1862,7 +1212,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Short<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A short, machine-readable name for the application. This can only be defined on resource creation and ignored on resource update.
 {{% /md %}}</dd>
@@ -1880,7 +1230,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Stack<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the stack the application will belong to.
 {{% /md %}}</dd>
@@ -1889,7 +1239,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Opsworks application type. One of `aws-flow-ruby`, `java`, `rails`, `php`, `nodejs`, `static` or `other`.
 {{% /md %}}</dd>
@@ -1905,7 +1255,7 @@ The following state arguments are supported:
             title="Optional">
         <span>app<wbr>Sources</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationappsource">Application<wbr>App<wbr>Source[]?</a></span>
+        <span class="property-type"><a href="#applicationappsource">Application<wbr>App<wbr>Source[]</a></span>
     </dt>
     <dd>{{% md %}}SCM configuration of the app as described below.
 {{% /md %}}</dd>
@@ -1914,7 +1264,7 @@ The following state arguments are supported:
             title="Optional">
         <span>auto<wbr>Bundle<wbr>On<wbr>Deploy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Run bundle install when deploying for application of type `rails`.
 {{% /md %}}</dd>
@@ -1923,7 +1273,7 @@ The following state arguments are supported:
             title="Optional">
         <span>aws<wbr>Flow<wbr>Ruby<wbr>Settings</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specify activity and workflow workers for your app using the aws-flow gem.
 {{% /md %}}</dd>
@@ -1932,7 +1282,7 @@ The following state arguments are supported:
             title="Optional">
         <span>data<wbr>Source<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The data source's ARN.
 {{% /md %}}</dd>
@@ -1941,7 +1291,7 @@ The following state arguments are supported:
             title="Optional">
         <span>data<wbr>Source<wbr>Database<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The database name.
 {{% /md %}}</dd>
@@ -1950,7 +1300,7 @@ The following state arguments are supported:
             title="Optional">
         <span>data<wbr>Source<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The data source's type one of `AutoSelectOpsworksMysqlInstance`, `OpsworksMysqlInstance`, or `RdsDbInstance`.
 {{% /md %}}</dd>
@@ -1959,7 +1309,7 @@ The following state arguments are supported:
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the app.
 {{% /md %}}</dd>
@@ -1968,7 +1318,7 @@ The following state arguments are supported:
             title="Optional">
         <span>document<wbr>Root</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Subfolder for the document root for application of type `rails`.
 {{% /md %}}</dd>
@@ -1977,7 +1327,7 @@ The following state arguments are supported:
             title="Optional">
         <span>domains</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of virtual host alias.
 {{% /md %}}</dd>
@@ -1986,7 +1336,7 @@ The following state arguments are supported:
             title="Optional">
         <span>enable<wbr>Ssl</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to enable SSL for the app. This must be set in order to let `ssl_configuration.private_key`, `ssl_configuration.certificate` and `ssl_configuration.chain` take effect.
 {{% /md %}}</dd>
@@ -1995,7 +1345,7 @@ The following state arguments are supported:
             title="Optional">
         <span>environments</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationenvironment">Application<wbr>Environment[]?</a></span>
+        <span class="property-type"><a href="#applicationenvironment">Application<wbr>Environment[]</a></span>
     </dt>
     <dd>{{% md %}}Object to define environment variables.  Object is described below.
 {{% /md %}}</dd>
@@ -2004,7 +1354,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A human-readable name for the application.
 {{% /md %}}</dd>
@@ -2013,7 +1363,7 @@ The following state arguments are supported:
             title="Optional">
         <span>rails<wbr>Env</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Rails environment for application of type `rails`.
 {{% /md %}}</dd>
@@ -2022,7 +1372,7 @@ The following state arguments are supported:
             title="Optional">
         <span>short<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A short, machine-readable name for the application. This can only be defined on resource creation and ignored on resource update.
 {{% /md %}}</dd>
@@ -2031,7 +1381,7 @@ The following state arguments are supported:
             title="Optional">
         <span>ssl<wbr>Configurations</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#applicationsslconfiguration">Application<wbr>Ssl<wbr>Configuration[]?</a></span>
+        <span class="property-type"><a href="#applicationsslconfiguration">Application<wbr>Ssl<wbr>Configuration[]</a></span>
     </dt>
     <dd>{{% md %}}The SSL configuration of the app. Object is described below.
 {{% /md %}}</dd>
@@ -2040,7 +1390,7 @@ The following state arguments are supported:
             title="Optional">
         <span>stack<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The id of the stack the application will belong to.
 {{% /md %}}</dd>
@@ -2049,7 +1399,7 @@ The following state arguments are supported:
             title="Optional">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Opsworks application type. One of `aws-flow-ruby`, `java`, `rails`, `php`, `nodejs`, `static` or `other`.
 {{% /md %}}</dd>
@@ -2243,33 +1593,6 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Password</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Password to use when authenticating to the source. This provider cannot perform drift detection of this configuration.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Revision</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}For sources that are version-aware, the revision to use.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Ssh<wbr>Key</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}SSH key to use when authenticating to the source. This provider cannot perform drift detection of this configuration.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Type</span>
@@ -2281,9 +1604,36 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>Password</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Password to use when authenticating to the source. This provider cannot perform drift detection of this configuration.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Revision</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}For sources that are version-aware, the revision to use.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Ssh<wbr>Key</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}SSH key to use when authenticating to the source. This provider cannot perform drift detection of this configuration.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL where the app resource can be found.
 {{% /md %}}</dd>
@@ -2292,7 +1642,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Username</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username to use when authenticating to the source.
 {{% /md %}}</dd>
@@ -2304,33 +1654,6 @@ The following state arguments are supported:
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Password</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Password to use when authenticating to the source. This provider cannot perform drift detection of this configuration.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Revision</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}For sources that are version-aware, the revision to use.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Ssh<wbr>Key</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}SSH key to use when authenticating to the source. This provider cannot perform drift detection of this configuration.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Type</span>
@@ -2342,9 +1665,36 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>Password</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Password to use when authenticating to the source. This provider cannot perform drift detection of this configuration.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Revision</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}For sources that are version-aware, the revision to use.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Ssh<wbr>Key</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}SSH key to use when authenticating to the source. This provider cannot perform drift detection of this configuration.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL where the app resource can be found.
 {{% /md %}}</dd>
@@ -2353,7 +1703,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Username</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username to use when authenticating to the source.
 {{% /md %}}</dd>
@@ -2364,33 +1714,6 @@ The following state arguments are supported:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>password</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Password to use when authenticating to the source. This provider cannot perform drift detection of this configuration.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>revision</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}For sources that are version-aware, the revision to use.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>ssh<wbr>Key</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}SSH key to use when authenticating to the source. This provider cannot perform drift detection of this configuration.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -2403,9 +1726,36 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>password</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Password to use when authenticating to the source. This provider cannot perform drift detection of this configuration.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>revision</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}For sources that are version-aware, the revision to use.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>ssh<wbr>Key</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}SSH key to use when authenticating to the source. This provider cannot perform drift detection of this configuration.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The URL where the app resource can be found.
 {{% /md %}}</dd>
@@ -2414,7 +1764,7 @@ The following state arguments are supported:
             title="Optional">
         <span>username</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Username to use when authenticating to the source.
 {{% /md %}}</dd>
@@ -2425,6 +1775,15 @@ The following state arguments are supported:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The type of source to use. For example, "archive".
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2451,15 +1810,6 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}SSH key to use when authenticating to the source. This provider cannot perform drift detection of this configuration.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The type of source to use. For example, "archive".
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2511,15 +1861,6 @@ The following state arguments are supported:
     <dd>{{% md %}}Variable name.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Secure</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Set visibility of the variable value to `true` or `false`.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Value</span>
@@ -2527,6 +1868,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Variable value.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Secure</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Set visibility of the variable value to `true` or `false`.
 {{% /md %}}</dd>
 
 </dl>
@@ -2545,15 +1895,6 @@ The following state arguments are supported:
     <dd>{{% md %}}Variable name.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Secure</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Set visibility of the variable value to `true` or `false`.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Value</span>
@@ -2561,6 +1902,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Variable value.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Secure</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Set visibility of the variable value to `true` or `false`.
 {{% /md %}}</dd>
 
 </dl>
@@ -2579,15 +1929,6 @@ The following state arguments are supported:
     <dd>{{% md %}}Variable name.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>secure</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Set visibility of the variable value to `true` or `false`.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>value</span>
@@ -2595,6 +1936,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Variable value.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>secure</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Set visibility of the variable value to `true` or `false`.
 {{% /md %}}</dd>
 
 </dl>
@@ -2613,15 +1963,6 @@ The following state arguments are supported:
     <dd>{{% md %}}Variable name.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>secure</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Set visibility of the variable value to `true` or `false`.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>value</span>
@@ -2629,6 +1970,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Variable value.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>secure</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Set visibility of the variable value to `true` or `false`.
 {{% /md %}}</dd>
 
 </dl>
@@ -2662,15 +2012,6 @@ The following state arguments are supported:
     <dd>{{% md %}}The contents of the certificate's domain.crt file.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Chain</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Can be used to specify an intermediate certificate authority key or client authentication.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Private<wbr>Key</span>
@@ -2678,6 +2019,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The private key; the contents of the certificate's domain.key file.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Chain</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Can be used to specify an intermediate certificate authority key or client authentication.
 {{% /md %}}</dd>
 
 </dl>
@@ -2696,15 +2046,6 @@ The following state arguments are supported:
     <dd>{{% md %}}The contents of the certificate's domain.crt file.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Chain</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Can be used to specify an intermediate certificate authority key or client authentication.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Private<wbr>Key</span>
@@ -2712,6 +2053,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The private key; the contents of the certificate's domain.key file.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Chain</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Can be used to specify an intermediate certificate authority key or client authentication.
 {{% /md %}}</dd>
 
 </dl>
@@ -2730,15 +2080,6 @@ The following state arguments are supported:
     <dd>{{% md %}}The contents of the certificate's domain.crt file.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>chain</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Can be used to specify an intermediate certificate authority key or client authentication.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>private<wbr>Key</span>
@@ -2746,6 +2087,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The private key; the contents of the certificate's domain.key file.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>chain</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Can be used to specify an intermediate certificate authority key or client authentication.
 {{% /md %}}</dd>
 
 </dl>
@@ -2764,15 +2114,6 @@ The following state arguments are supported:
     <dd>{{% md %}}The contents of the certificate's domain.crt file.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>chain</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Can be used to specify an intermediate certificate authority key or client authentication.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>private_<wbr>key</span>
@@ -2780,6 +2121,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The private key; the contents of the certificate's domain.key file.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>chain</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Can be used to specify an intermediate certificate authority key or client authentication.
 {{% /md %}}</dd>
 
 </dl>

@@ -58,7 +58,7 @@ const instance1 = new openstack.compute.Instance("instance_1", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/openstack/networking/#Trunk">Trunk</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/openstack/networking/#TrunkArgs">TrunkArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/openstack/networking/#Trunk">Trunk</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/openstack/networking/#TrunkArgs">TrunkArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -66,11 +66,11 @@ const instance1 = new openstack.compute.Instance("instance_1", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewTrunk<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/networking?tab=doc#TrunkArgs">TrunkArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/networking?tab=doc#Trunk">Trunk</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewTrunk<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/networking?tab=doc#TrunkArgs">TrunkArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/networking?tab=doc#Trunk">Trunk</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.Openstack.Networking.Trunk.html">Trunk</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.Openstack.Networking.TrunkArgs.html">TrunkArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.Openstack.Networking.Trunk.html">Trunk</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.OpenStack.Networking.TrunkArgs.html">TrunkArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -162,37 +162,6 @@ const instance1 = new openstack.compute.Instance("instance_1", {
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Admin<wbr>State<wbr>Up</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Administrative up/down status for the trunk
-(must be "true" or "false" if provided). Changing this updates the
-`admin_state_up` of an existing trunk.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Human-readable description of the trunk. Changing this
-updates the name of the existing trunk.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}A unique name for the trunk. Changing this
-updates the `name` of an existing trunk.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Port<wbr>Id</span>
@@ -204,9 +173,40 @@ updates the `name` of an existing trunk.
 
     <dt class="property-optional"
             title="Optional">
+        <span>Admin<wbr>State<wbr>Up</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Administrative up/down status for the trunk
+(must be "true" or "false" if provided). Changing this updates the
+`admin_state_up` of an existing trunk.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Human-readable description of the trunk. Changing this
+updates the name of the existing trunk.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A unique name for the trunk. Changing this
+updates the `name` of an existing trunk.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 networking client.
 A networking client is needed to create a trunk. If omitted, the
@@ -218,7 +218,7 @@ trunk.
             title="Optional">
         <span>Sub<wbr>Ports</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trunksubport">List&lt;Trunk<wbr>Sub<wbr>Port<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#trunksubport">List&lt;Pulumi.<wbr>Open<wbr>Stack.<wbr>Networking.<wbr>Inputs.<wbr>Trunk<wbr>Sub<wbr>Port<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The set of ports that will be made subports of the trunk.
 The structure of each subport is described below.
@@ -228,7 +228,7 @@ The structure of each subport is described below.
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A set of string tags for the port.
 {{% /md %}}</dd>
@@ -237,7 +237,7 @@ The structure of each subport is described below.
             title="Optional">
         <span>Tenant<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The owner of the Trunk. Required if admin wants
 to create a trunk on behalf of another tenant. Changing this creates a new trunk.
@@ -250,37 +250,6 @@ to create a trunk on behalf of another tenant. Changing this creates a new trunk
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Admin<wbr>State<wbr>Up</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Administrative up/down status for the trunk
-(must be "true" or "false" if provided). Changing this updates the
-`admin_state_up` of an existing trunk.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Human-readable description of the trunk. Changing this
-updates the name of the existing trunk.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}A unique name for the trunk. Changing this
-updates the `name` of an existing trunk.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Port<wbr>Id</span>
@@ -292,9 +261,40 @@ updates the `name` of an existing trunk.
 
     <dt class="property-optional"
             title="Optional">
+        <span>Admin<wbr>State<wbr>Up</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Administrative up/down status for the trunk
+(must be "true" or "false" if provided). Changing this updates the
+`admin_state_up` of an existing trunk.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Human-readable description of the trunk. Changing this
+updates the name of the existing trunk.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A unique name for the trunk. Changing this
+updates the `name` of an existing trunk.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 networking client.
 A networking client is needed to create a trunk. If omitted, the
@@ -325,7 +325,7 @@ The structure of each subport is described below.
             title="Optional">
         <span>Tenant<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The owner of the Trunk. Required if admin wants
 to create a trunk on behalf of another tenant. Changing this creates a new trunk.
@@ -338,37 +338,6 @@ to create a trunk on behalf of another tenant. Changing this creates a new trunk
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>admin<wbr>State<wbr>Up</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Administrative up/down status for the trunk
-(must be "true" or "false" if provided). Changing this updates the
-`admin_state_up` of an existing trunk.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Human-readable description of the trunk. Changing this
-updates the name of the existing trunk.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}A unique name for the trunk. Changing this
-updates the `name` of an existing trunk.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>port<wbr>Id</span>
@@ -380,9 +349,40 @@ updates the `name` of an existing trunk.
 
     <dt class="property-optional"
             title="Optional">
+        <span>admin<wbr>State<wbr>Up</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Administrative up/down status for the trunk
+(must be "true" or "false" if provided). Changing this updates the
+`admin_state_up` of an existing trunk.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Human-readable description of the trunk. Changing this
+updates the name of the existing trunk.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A unique name for the trunk. Changing this
+updates the `name` of an existing trunk.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 networking client.
 A networking client is needed to create a trunk. If omitted, the
@@ -394,7 +394,7 @@ trunk.
             title="Optional">
         <span>sub<wbr>Ports</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trunksubport">Trunk<wbr>Sub<wbr>Port[]?</a></span>
+        <span class="property-type"><a href="#trunksubport">Trunk<wbr>Sub<wbr>Port[]</a></span>
     </dt>
     <dd>{{% md %}}The set of ports that will be made subports of the trunk.
 The structure of each subport is described below.
@@ -404,7 +404,7 @@ The structure of each subport is described below.
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A set of string tags for the port.
 {{% /md %}}</dd>
@@ -413,7 +413,7 @@ The structure of each subport is described below.
             title="Optional">
         <span>tenant<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The owner of the Trunk. Required if admin wants
 to create a trunk on behalf of another tenant. Changing this creates a new trunk.
@@ -425,6 +425,15 @@ to create a trunk on behalf of another tenant. Changing this creates a new trunk
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>port_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ID of the port to be made a subport of the trunk.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -455,15 +464,6 @@ updates the name of the existing trunk.
     </dt>
     <dd>{{% md %}}A unique name for the trunk. Changing this
 updates the `name` of an existing trunk.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>port_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The ID of the port to be made a subport of the trunk.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -528,93 +528,12 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Admin<wbr>State<wbr>Up</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Administrative up/down status for the trunk
-(must be "true" or "false" if provided). Changing this updates the
-`admin_state_up` of an existing trunk.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>All<wbr>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The collection of tags assigned on the trunk, which have been
 explicitly and implicitly added.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Human-readable description of the trunk. Changing this
-updates the name of the existing trunk.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A unique name for the trunk. Changing this
-updates the `name` of an existing trunk.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Port<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the port to be made a subport of the trunk.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The region in which to obtain the V2 networking client.
-A networking client is needed to create a trunk. If omitted, the
-`region` argument of the provider is used. Changing this creates a new
-trunk.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Sub<wbr>Ports</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trunksubport">List&lt;Trunk<wbr>Sub<wbr>Port&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}The set of ports that will be made subports of the trunk.
-The structure of each subport is described below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}A set of string tags for the port.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tenant<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The owner of the Trunk. Required if admin wants
-to create a trunk on behalf of another tenant. Changing this creates a new trunk.
 {{% /md %}}</dd>
 
 </dl>
@@ -626,93 +545,12 @@ to create a trunk on behalf of another tenant. Changing this creates a new trunk
 
     <dt class="property-"
             title="">
-        <span>Admin<wbr>State<wbr>Up</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Administrative up/down status for the trunk
-(must be "true" or "false" if provided). Changing this updates the
-`admin_state_up` of an existing trunk.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>All<wbr>Tags</span>
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The collection of tags assigned on the trunk, which have been
 explicitly and implicitly added.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Human-readable description of the trunk. Changing this
-updates the name of the existing trunk.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A unique name for the trunk. Changing this
-updates the `name` of an existing trunk.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Port<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the port to be made a subport of the trunk.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The region in which to obtain the V2 networking client.
-A networking client is needed to create a trunk. If omitted, the
-`region` argument of the provider is used. Changing this creates a new
-trunk.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Sub<wbr>Ports</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trunksubport">[]Trunk<wbr>Sub<wbr>Port</a></span>
-    </dt>
-    <dd>{{% md %}}The set of ports that will be made subports of the trunk.
-The structure of each subport is described below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}A set of string tags for the port.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tenant<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The owner of the Trunk. Required if admin wants
-to create a trunk on behalf of another tenant. Changing this creates a new trunk.
 {{% /md %}}</dd>
 
 </dl>
@@ -724,93 +562,12 @@ to create a trunk on behalf of another tenant. Changing this creates a new trunk
 
     <dt class="property-"
             title="">
-        <span>admin<wbr>State<wbr>Up</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Administrative up/down status for the trunk
-(must be "true" or "false" if provided). Changing this updates the
-`admin_state_up` of an existing trunk.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>all<wbr>Tags</span>
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The collection of tags assigned on the trunk, which have been
 explicitly and implicitly added.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Human-readable description of the trunk. Changing this
-updates the name of the existing trunk.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A unique name for the trunk. Changing this
-updates the `name` of an existing trunk.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>port<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the port to be made a subport of the trunk.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The region in which to obtain the V2 networking client.
-A networking client is needed to create a trunk. If omitted, the
-`region` argument of the provider is used. Changing this creates a new
-trunk.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>sub<wbr>Ports</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trunksubport">Trunk<wbr>Sub<wbr>Port[]?</a></span>
-    </dt>
-    <dd>{{% md %}}The set of ports that will be made subports of the trunk.
-The structure of each subport is described below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}A set of string tags for the port.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tenant<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The owner of the Trunk. Required if admin wants
-to create a trunk on behalf of another tenant. Changing this creates a new trunk.
 {{% /md %}}</dd>
 
 </dl>
@@ -822,93 +579,12 @@ to create a trunk on behalf of another tenant. Changing this creates a new trunk
 
     <dt class="property-"
             title="">
-        <span>admin_<wbr>state_<wbr>up</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Administrative up/down status for the trunk
-(must be "true" or "false" if provided). Changing this updates the
-`admin_state_up` of an existing trunk.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>all_<wbr>tags</span>
         <span class="property-indicator"></span>
         <span class="property-type">List[str]</span>
     </dt>
     <dd>{{% md %}}The collection of tags assigned on the trunk, which have been
 explicitly and implicitly added.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Human-readable description of the trunk. Changing this
-updates the name of the existing trunk.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}A unique name for the trunk. Changing this
-updates the `name` of an existing trunk.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>port_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The ID of the port to be made a subport of the trunk.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The region in which to obtain the V2 networking client.
-A networking client is needed to create a trunk. If omitted, the
-`region` argument of the provider is used. Changing this creates a new
-trunk.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>sub_<wbr>ports</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trunksubport">List[Trunk<wbr>Sub<wbr>Port]</a></span>
-    </dt>
-    <dd>{{% md %}}The set of ports that will be made subports of the trunk.
-The structure of each subport is described below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}A set of string tags for the port.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tenant_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The owner of the Trunk. Required if admin wants
-to create a trunk on behalf of another tenant. Changing this creates a new trunk.
 {{% /md %}}</dd>
 
 </dl>
@@ -1050,7 +726,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Admin<wbr>State<wbr>Up</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Administrative up/down status for the trunk
 (must be "true" or "false" if provided). Changing this updates the
@@ -1061,7 +737,7 @@ The following state arguments are supported:
             title="Optional">
         <span>All<wbr>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The collection of tags assigned on the trunk, which have been
 explicitly and implicitly added.
@@ -1071,7 +747,7 @@ explicitly and implicitly added.
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Human-readable description of the trunk. Changing this
 updates the name of the existing trunk.
@@ -1081,7 +757,7 @@ updates the name of the existing trunk.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique name for the trunk. Changing this
 updates the `name` of an existing trunk.
@@ -1091,7 +767,7 @@ updates the `name` of an existing trunk.
             title="Optional">
         <span>Port<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the port to be made a subport of the trunk.
 {{% /md %}}</dd>
@@ -1100,7 +776,7 @@ updates the `name` of an existing trunk.
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 networking client.
 A networking client is needed to create a trunk. If omitted, the
@@ -1112,7 +788,7 @@ trunk.
             title="Optional">
         <span>Sub<wbr>Ports</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trunksubport">List&lt;Trunk<wbr>Sub<wbr>Port<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#trunksubport">List&lt;Pulumi.<wbr>Open<wbr>Stack.<wbr>Networking.<wbr>Inputs.<wbr>Trunk<wbr>Sub<wbr>Port<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The set of ports that will be made subports of the trunk.
 The structure of each subport is described below.
@@ -1122,7 +798,7 @@ The structure of each subport is described below.
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A set of string tags for the port.
 {{% /md %}}</dd>
@@ -1131,7 +807,7 @@ The structure of each subport is described below.
             title="Optional">
         <span>Tenant<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The owner of the Trunk. Required if admin wants
 to create a trunk on behalf of another tenant. Changing this creates a new trunk.
@@ -1148,7 +824,7 @@ to create a trunk on behalf of another tenant. Changing this creates a new trunk
             title="Optional">
         <span>Admin<wbr>State<wbr>Up</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Administrative up/down status for the trunk
 (must be "true" or "false" if provided). Changing this updates the
@@ -1169,7 +845,7 @@ explicitly and implicitly added.
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Human-readable description of the trunk. Changing this
 updates the name of the existing trunk.
@@ -1179,7 +855,7 @@ updates the name of the existing trunk.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique name for the trunk. Changing this
 updates the `name` of an existing trunk.
@@ -1189,7 +865,7 @@ updates the `name` of an existing trunk.
             title="Optional">
         <span>Port<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the port to be made a subport of the trunk.
 {{% /md %}}</dd>
@@ -1198,7 +874,7 @@ updates the `name` of an existing trunk.
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 networking client.
 A networking client is needed to create a trunk. If omitted, the
@@ -1229,7 +905,7 @@ The structure of each subport is described below.
             title="Optional">
         <span>Tenant<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The owner of the Trunk. Required if admin wants
 to create a trunk on behalf of another tenant. Changing this creates a new trunk.
@@ -1246,7 +922,7 @@ to create a trunk on behalf of another tenant. Changing this creates a new trunk
             title="Optional">
         <span>admin<wbr>State<wbr>Up</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Administrative up/down status for the trunk
 (must be "true" or "false" if provided). Changing this updates the
@@ -1257,7 +933,7 @@ to create a trunk on behalf of another tenant. Changing this creates a new trunk
             title="Optional">
         <span>all<wbr>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The collection of tags assigned on the trunk, which have been
 explicitly and implicitly added.
@@ -1267,7 +943,7 @@ explicitly and implicitly added.
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Human-readable description of the trunk. Changing this
 updates the name of the existing trunk.
@@ -1277,7 +953,7 @@ updates the name of the existing trunk.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A unique name for the trunk. Changing this
 updates the `name` of an existing trunk.
@@ -1287,7 +963,7 @@ updates the `name` of an existing trunk.
             title="Optional">
         <span>port<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the port to be made a subport of the trunk.
 {{% /md %}}</dd>
@@ -1296,7 +972,7 @@ updates the `name` of an existing trunk.
             title="Optional">
         <span>region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 networking client.
 A networking client is needed to create a trunk. If omitted, the
@@ -1308,7 +984,7 @@ trunk.
             title="Optional">
         <span>sub<wbr>Ports</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#trunksubport">Trunk<wbr>Sub<wbr>Port[]?</a></span>
+        <span class="property-type"><a href="#trunksubport">Trunk<wbr>Sub<wbr>Port[]</a></span>
     </dt>
     <dd>{{% md %}}The set of ports that will be made subports of the trunk.
 The structure of each subport is described below.
@@ -1318,7 +994,7 @@ The structure of each subport is described below.
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A set of string tags for the port.
 {{% /md %}}</dd>
@@ -1327,7 +1003,7 @@ The structure of each subport is described below.
             title="Optional">
         <span>tenant<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The owner of the Trunk. Required if admin wants
 to create a trunk on behalf of another tenant. Changing this creates a new trunk.

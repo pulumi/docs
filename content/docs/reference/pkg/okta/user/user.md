@@ -35,7 +35,7 @@ const example = new okta.user.User("example", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/okta/user/#User">User</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/okta/user/#UserArgs">UserArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/okta/user/#User">User</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/okta/user/#UserArgs">UserArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -43,7 +43,7 @@ const example = new okta.user.User("example", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewUser<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/go/okta/user?tab=doc#UserArgs">UserArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/go/okta/user?tab=doc#User">User</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewUser<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/go/okta/user?tab=doc#UserArgs">UserArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/go/okta/user?tab=doc#User">User</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -139,92 +139,11 @@ const example = new okta.user.User("example", {
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Admin<wbr>Roles</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}Administrator roles assigned to User.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>City</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Cost<wbr>Center</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Country<wbr>Code</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Custom<wbr>Profile<wbr>Attributes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}raw JSON containing all custom profile attributes.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Department</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Display<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Division</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Email</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Employee<wbr>Number</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -238,33 +157,6 @@ const example = new okta.user.User("example", {
     <dd>{{% md %}}User's First Name, required by default.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Group<wbr>Memberships</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Honorific<wbr>Prefix</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Honorific<wbr>Suffix</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Last<wbr>Name</span>
@@ -272,15 +164,6 @@ const example = new okta.user.User("example", {
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User's Last Name, required by default.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Locale</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -294,9 +177,126 @@ const example = new okta.user.User("example", {
 
     <dt class="property-optional"
             title="Optional">
+        <span>Admin<wbr>Roles</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Administrator roles assigned to User.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>City</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}User profile property.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Cost<wbr>Center</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}User profile property.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Country<wbr>Code</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}User profile property.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Custom<wbr>Profile<wbr>Attributes</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}raw JSON containing all custom profile attributes.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Department</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}User profile property.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Display<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}User profile property.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Division</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}User profile property.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Employee<wbr>Number</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}User profile property.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Group<wbr>Memberships</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}User profile property.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Honorific<wbr>Prefix</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}User profile property.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Honorific<wbr>Suffix</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}User profile property.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Locale</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}User profile property.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Manager</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -305,7 +305,7 @@ const example = new okta.user.User("example", {
             title="Optional">
         <span>Manager<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -314,7 +314,7 @@ const example = new okta.user.User("example", {
             title="Optional">
         <span>Middle<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -323,7 +323,7 @@ const example = new okta.user.User("example", {
             title="Optional">
         <span>Mobile<wbr>Phone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -332,7 +332,7 @@ const example = new okta.user.User("example", {
             title="Optional">
         <span>Nick<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -341,7 +341,7 @@ const example = new okta.user.User("example", {
             title="Optional">
         <span>Organization</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -350,7 +350,7 @@ const example = new okta.user.User("example", {
             title="Optional">
         <span>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User password.
 {{% /md %}}</dd>
@@ -359,7 +359,7 @@ const example = new okta.user.User("example", {
             title="Optional">
         <span>Postal<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -368,7 +368,7 @@ const example = new okta.user.User("example", {
             title="Optional">
         <span>Preferred<wbr>Language</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -377,7 +377,7 @@ const example = new okta.user.User("example", {
             title="Optional">
         <span>Primary<wbr>Phone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -386,7 +386,7 @@ const example = new okta.user.User("example", {
             title="Optional">
         <span>Profile<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -395,7 +395,7 @@ const example = new okta.user.User("example", {
             title="Optional">
         <span>Recovery<wbr>Answer</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User password recovery answer.
 {{% /md %}}</dd>
@@ -404,7 +404,7 @@ const example = new okta.user.User("example", {
             title="Optional">
         <span>Recovery<wbr>Question</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User password recovery question.
 {{% /md %}}</dd>
@@ -413,7 +413,7 @@ const example = new okta.user.User("example", {
             title="Optional">
         <span>Second<wbr>Email</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -422,7 +422,7 @@ const example = new okta.user.User("example", {
             title="Optional">
         <span>State</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -431,7 +431,7 @@ const example = new okta.user.User("example", {
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -440,7 +440,7 @@ const example = new okta.user.User("example", {
             title="Optional">
         <span>Street<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -449,7 +449,7 @@ const example = new okta.user.User("example", {
             title="Optional">
         <span>Timezone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -458,7 +458,7 @@ const example = new okta.user.User("example", {
             title="Optional">
         <span>Title</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -467,7 +467,7 @@ const example = new okta.user.User("example", {
             title="Optional">
         <span>User<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -476,7 +476,7 @@ const example = new okta.user.User("example", {
             title="Optional">
         <span>Zip<wbr>Code</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -488,6 +488,42 @@ const example = new okta.user.User("example", {
 {{% choosable language go %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Email</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}User profile property.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>First<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}User's First Name, required by default.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Last<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}User's Last Name, required by default.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Login</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}User profile property.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Admin<wbr>Roles</span>
@@ -501,7 +537,7 @@ const example = new okta.user.User("example", {
             title="Optional">
         <span>City</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -510,7 +546,7 @@ const example = new okta.user.User("example", {
             title="Optional">
         <span>Cost<wbr>Center</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -519,7 +555,7 @@ const example = new okta.user.User("example", {
             title="Optional">
         <span>Country<wbr>Code</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -528,7 +564,7 @@ const example = new okta.user.User("example", {
             title="Optional">
         <span>Custom<wbr>Profile<wbr>Attributes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}raw JSON containing all custom profile attributes.
 {{% /md %}}</dd>
@@ -537,7 +573,7 @@ const example = new okta.user.User("example", {
             title="Optional">
         <span>Department</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -546,7 +582,7 @@ const example = new okta.user.User("example", {
             title="Optional">
         <span>Display<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -554,15 +590,6 @@ const example = new okta.user.User("example", {
     <dt class="property-optional"
             title="Optional">
         <span>Division</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Email</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
@@ -573,18 +600,9 @@ const example = new okta.user.User("example", {
             title="Optional">
         <span>Employee<wbr>Number</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>First<wbr>Name</span>
-        <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}User's First Name, required by default.
+    <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -600,7 +618,7 @@ const example = new okta.user.User("example", {
             title="Optional">
         <span>Honorific<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -609,32 +627,14 @@ const example = new okta.user.User("example", {
             title="Optional">
         <span>Honorific<wbr>Suffix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Last<wbr>Name</span>
-        <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}User's Last Name, required by default.
+    <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Locale</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Login</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
@@ -645,7 +645,7 @@ const example = new okta.user.User("example", {
             title="Optional">
         <span>Manager</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -654,7 +654,7 @@ const example = new okta.user.User("example", {
             title="Optional">
         <span>Manager<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -663,7 +663,7 @@ const example = new okta.user.User("example", {
             title="Optional">
         <span>Middle<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -672,7 +672,7 @@ const example = new okta.user.User("example", {
             title="Optional">
         <span>Mobile<wbr>Phone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -681,7 +681,7 @@ const example = new okta.user.User("example", {
             title="Optional">
         <span>Nick<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -690,7 +690,7 @@ const example = new okta.user.User("example", {
             title="Optional">
         <span>Organization</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -699,7 +699,7 @@ const example = new okta.user.User("example", {
             title="Optional">
         <span>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User password.
 {{% /md %}}</dd>
@@ -708,7 +708,7 @@ const example = new okta.user.User("example", {
             title="Optional">
         <span>Postal<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -717,7 +717,7 @@ const example = new okta.user.User("example", {
             title="Optional">
         <span>Preferred<wbr>Language</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -726,7 +726,7 @@ const example = new okta.user.User("example", {
             title="Optional">
         <span>Primary<wbr>Phone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -735,7 +735,7 @@ const example = new okta.user.User("example", {
             title="Optional">
         <span>Profile<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -744,7 +744,7 @@ const example = new okta.user.User("example", {
             title="Optional">
         <span>Recovery<wbr>Answer</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User password recovery answer.
 {{% /md %}}</dd>
@@ -753,7 +753,7 @@ const example = new okta.user.User("example", {
             title="Optional">
         <span>Recovery<wbr>Question</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User password recovery question.
 {{% /md %}}</dd>
@@ -762,7 +762,7 @@ const example = new okta.user.User("example", {
             title="Optional">
         <span>Second<wbr>Email</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -771,7 +771,7 @@ const example = new okta.user.User("example", {
             title="Optional">
         <span>State</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -780,7 +780,7 @@ const example = new okta.user.User("example", {
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -789,7 +789,7 @@ const example = new okta.user.User("example", {
             title="Optional">
         <span>Street<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -798,7 +798,7 @@ const example = new okta.user.User("example", {
             title="Optional">
         <span>Timezone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -807,7 +807,7 @@ const example = new okta.user.User("example", {
             title="Optional">
         <span>Title</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -816,7 +816,7 @@ const example = new okta.user.User("example", {
             title="Optional">
         <span>User<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -825,7 +825,7 @@ const example = new okta.user.User("example", {
             title="Optional">
         <span>Zip<wbr>Code</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -837,92 +837,11 @@ const example = new okta.user.User("example", {
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>admin<wbr>Roles</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}Administrator roles assigned to User.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>city</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>cost<wbr>Center</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>country<wbr>Code</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>custom<wbr>Profile<wbr>Attributes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}raw JSON containing all custom profile attributes.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>department</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>display<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>division</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>email</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>employee<wbr>Number</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -936,33 +855,6 @@ const example = new okta.user.User("example", {
     <dd>{{% md %}}User's First Name, required by default.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>group<wbr>Memberships</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>honorific<wbr>Prefix</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>honorific<wbr>Suffix</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>last<wbr>Name</span>
@@ -970,15 +862,6 @@ const example = new okta.user.User("example", {
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User's Last Name, required by default.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>locale</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -992,9 +875,126 @@ const example = new okta.user.User("example", {
 
     <dt class="property-optional"
             title="Optional">
+        <span>admin<wbr>Roles</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}Administrator roles assigned to User.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>city</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}User profile property.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>cost<wbr>Center</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}User profile property.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>country<wbr>Code</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}User profile property.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>custom<wbr>Profile<wbr>Attributes</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}raw JSON containing all custom profile attributes.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>department</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}User profile property.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>display<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}User profile property.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>division</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}User profile property.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>employee<wbr>Number</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}User profile property.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>group<wbr>Memberships</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}User profile property.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>honorific<wbr>Prefix</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}User profile property.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>honorific<wbr>Suffix</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}User profile property.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>locale</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}User profile property.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>manager</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -1003,7 +1003,7 @@ const example = new okta.user.User("example", {
             title="Optional">
         <span>manager<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -1012,7 +1012,7 @@ const example = new okta.user.User("example", {
             title="Optional">
         <span>middle<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -1021,7 +1021,7 @@ const example = new okta.user.User("example", {
             title="Optional">
         <span>mobile<wbr>Phone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -1030,7 +1030,7 @@ const example = new okta.user.User("example", {
             title="Optional">
         <span>nick<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -1039,7 +1039,7 @@ const example = new okta.user.User("example", {
             title="Optional">
         <span>organization</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -1048,7 +1048,7 @@ const example = new okta.user.User("example", {
             title="Optional">
         <span>password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User password.
 {{% /md %}}</dd>
@@ -1057,7 +1057,7 @@ const example = new okta.user.User("example", {
             title="Optional">
         <span>postal<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -1066,7 +1066,7 @@ const example = new okta.user.User("example", {
             title="Optional">
         <span>preferred<wbr>Language</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -1075,7 +1075,7 @@ const example = new okta.user.User("example", {
             title="Optional">
         <span>primary<wbr>Phone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -1084,7 +1084,7 @@ const example = new okta.user.User("example", {
             title="Optional">
         <span>profile<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -1093,7 +1093,7 @@ const example = new okta.user.User("example", {
             title="Optional">
         <span>recovery<wbr>Answer</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User password recovery answer.
 {{% /md %}}</dd>
@@ -1102,7 +1102,7 @@ const example = new okta.user.User("example", {
             title="Optional">
         <span>recovery<wbr>Question</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User password recovery question.
 {{% /md %}}</dd>
@@ -1111,7 +1111,7 @@ const example = new okta.user.User("example", {
             title="Optional">
         <span>second<wbr>Email</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -1120,7 +1120,7 @@ const example = new okta.user.User("example", {
             title="Optional">
         <span>state</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -1129,7 +1129,7 @@ const example = new okta.user.User("example", {
             title="Optional">
         <span>status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -1138,7 +1138,7 @@ const example = new okta.user.User("example", {
             title="Optional">
         <span>street<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -1147,7 +1147,7 @@ const example = new okta.user.User("example", {
             title="Optional">
         <span>timezone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -1156,7 +1156,7 @@ const example = new okta.user.User("example", {
             title="Optional">
         <span>title</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -1165,7 +1165,7 @@ const example = new okta.user.User("example", {
             title="Optional">
         <span>user<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -1174,7 +1174,7 @@ const example = new okta.user.User("example", {
             title="Optional">
         <span>zip<wbr>Code</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -1185,6 +1185,42 @@ const example = new okta.user.User("example", {
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>email</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}User profile property.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>first_<wbr>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}User's First Name, required by default.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>last_<wbr>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}User's Last Name, required by default.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>login</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}User profile property.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1258,15 +1294,6 @@ const example = new okta.user.User("example", {
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>email</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>employee_<wbr>number</span>
@@ -1274,15 +1301,6 @@ const example = new okta.user.User("example", {
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}User profile property.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>first_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}User's First Name, required by default.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1312,27 +1330,9 @@ const example = new okta.user.User("example", {
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>last_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}User's Last Name, required by default.
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>locale</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>login</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -1549,353 +1549,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Admin<wbr>Roles</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}Administrator roles assigned to User.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>City</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Cost<wbr>Center</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Country<wbr>Code</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Custom<wbr>Profile<wbr>Attributes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}raw JSON containing all custom profile attributes.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Department</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Display<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Division</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Email</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Employee<wbr>Number</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>First<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}User's First Name, required by default.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Group<wbr>Memberships</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Honorific<wbr>Prefix</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Honorific<wbr>Suffix</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Last<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}User's Last Name, required by default.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Locale</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Login</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Manager</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Manager<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Middle<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Mobile<wbr>Phone</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Nick<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Organization</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Password</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}User password.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Postal<wbr>Address</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Preferred<wbr>Language</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Primary<wbr>Phone</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Profile<wbr>Url</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Raw<wbr>Status</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The raw status of the User in Okta - (status is mapped)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Recovery<wbr>Answer</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}User password recovery answer.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Recovery<wbr>Question</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}User password recovery question.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Second<wbr>Email</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>State</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Status</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Street<wbr>Address</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Timezone</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Title</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>User<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Zip<wbr>Code</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
 
 </dl>
@@ -1907,353 +1565,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Admin<wbr>Roles</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}Administrator roles assigned to User.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>City</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Cost<wbr>Center</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Country<wbr>Code</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Custom<wbr>Profile<wbr>Attributes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}raw JSON containing all custom profile attributes.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Department</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Display<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Division</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Email</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Employee<wbr>Number</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>First<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}User's First Name, required by default.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Group<wbr>Memberships</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Honorific<wbr>Prefix</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Honorific<wbr>Suffix</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Last<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}User's Last Name, required by default.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Locale</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Login</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Manager</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Manager<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Middle<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Mobile<wbr>Phone</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Nick<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Organization</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Password</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}User password.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Postal<wbr>Address</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Preferred<wbr>Language</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Primary<wbr>Phone</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Profile<wbr>Url</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Raw<wbr>Status</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The raw status of the User in Okta - (status is mapped)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Recovery<wbr>Answer</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}User password recovery answer.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Recovery<wbr>Question</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}User password recovery question.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Second<wbr>Email</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>State</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Status</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Street<wbr>Address</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Timezone</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Title</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>User<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Zip<wbr>Code</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
 
 </dl>
@@ -2265,353 +1581,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>admin<wbr>Roles</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}Administrator roles assigned to User.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>city</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>cost<wbr>Center</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>country<wbr>Code</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>custom<wbr>Profile<wbr>Attributes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}raw JSON containing all custom profile attributes.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>department</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>display<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>division</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>email</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>employee<wbr>Number</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>first<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}User's First Name, required by default.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>group<wbr>Memberships</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>honorific<wbr>Prefix</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>honorific<wbr>Suffix</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>last<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}User's Last Name, required by default.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>locale</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>login</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>manager</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>manager<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>middle<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>mobile<wbr>Phone</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>nick<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>organization</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>password</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}User password.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>postal<wbr>Address</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>preferred<wbr>Language</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>primary<wbr>Phone</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>profile<wbr>Url</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>raw<wbr>Status</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The raw status of the User in Okta - (status is mapped)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>recovery<wbr>Answer</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}User password recovery answer.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>recovery<wbr>Question</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}User password recovery question.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>second<wbr>Email</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>state</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>status</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>street<wbr>Address</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>timezone</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>title</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>user<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>zip<wbr>Code</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
 
 </dl>
@@ -2623,353 +1597,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>admin_<wbr>roles</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}Administrator roles assigned to User.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>city</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>cost_<wbr>center</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>country_<wbr>code</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>custom_<wbr>profile_<wbr>attributes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}raw JSON containing all custom profile attributes.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>department</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>display_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>division</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>email</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>employee_<wbr>number</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>first_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}User's First Name, required by default.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>group_<wbr>memberships</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>honorific_<wbr>prefix</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>honorific_<wbr>suffix</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>last_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}User's Last Name, required by default.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>locale</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>login</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>manager</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>manager_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>middle_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>mobile_<wbr>phone</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>nick_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>organization</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>password</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}User password.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>postal_<wbr>address</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>preferred_<wbr>language</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>primary_<wbr>phone</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>profile_<wbr>url</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>raw_<wbr>status</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The raw status of the User in Okta - (status is mapped)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>recovery_<wbr>answer</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}User password recovery answer.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>recovery_<wbr>question</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}User password recovery question.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>second_<wbr>email</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>state</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>status</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>street_<wbr>address</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>timezone</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>title</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>user_<wbr>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>zip_<wbr>code</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
 
 </dl>
@@ -3111,7 +1743,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Admin<wbr>Roles</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Administrator roles assigned to User.
 {{% /md %}}</dd>
@@ -3120,7 +1752,7 @@ The following state arguments are supported:
             title="Optional">
         <span>City</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -3129,7 +1761,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Cost<wbr>Center</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -3138,7 +1770,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Country<wbr>Code</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -3147,7 +1779,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Custom<wbr>Profile<wbr>Attributes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}raw JSON containing all custom profile attributes.
 {{% /md %}}</dd>
@@ -3156,7 +1788,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Department</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -3165,7 +1797,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Display<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -3174,7 +1806,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Division</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -3183,7 +1815,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Email</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -3192,7 +1824,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Employee<wbr>Number</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -3201,7 +1833,7 @@ The following state arguments are supported:
             title="Optional">
         <span>First<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User's First Name, required by default.
 {{% /md %}}</dd>
@@ -3210,7 +1842,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Group<wbr>Memberships</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -3219,7 +1851,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Honorific<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -3228,7 +1860,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Honorific<wbr>Suffix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -3237,7 +1869,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Last<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User's Last Name, required by default.
 {{% /md %}}</dd>
@@ -3246,7 +1878,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Locale</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -3255,7 +1887,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Login</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -3264,7 +1896,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Manager</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -3273,7 +1905,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Manager<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -3282,7 +1914,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Middle<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -3291,7 +1923,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Mobile<wbr>Phone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -3300,7 +1932,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Nick<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -3309,7 +1941,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Organization</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -3318,7 +1950,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User password.
 {{% /md %}}</dd>
@@ -3327,7 +1959,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Postal<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -3336,7 +1968,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Preferred<wbr>Language</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -3345,7 +1977,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Primary<wbr>Phone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -3354,7 +1986,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Profile<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -3363,7 +1995,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Raw<wbr>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The raw status of the User in Okta - (status is mapped)
 {{% /md %}}</dd>
@@ -3372,7 +2004,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Recovery<wbr>Answer</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User password recovery answer.
 {{% /md %}}</dd>
@@ -3381,7 +2013,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Recovery<wbr>Question</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User password recovery question.
 {{% /md %}}</dd>
@@ -3390,7 +2022,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Second<wbr>Email</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -3399,7 +2031,7 @@ The following state arguments are supported:
             title="Optional">
         <span>State</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -3408,7 +2040,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -3417,7 +2049,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Street<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -3426,7 +2058,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Timezone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -3435,7 +2067,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Title</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -3444,7 +2076,7 @@ The following state arguments are supported:
             title="Optional">
         <span>User<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -3453,7 +2085,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Zip<wbr>Code</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -3478,7 +2110,7 @@ The following state arguments are supported:
             title="Optional">
         <span>City</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -3487,7 +2119,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Cost<wbr>Center</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -3496,7 +2128,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Country<wbr>Code</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -3505,7 +2137,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Custom<wbr>Profile<wbr>Attributes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}raw JSON containing all custom profile attributes.
 {{% /md %}}</dd>
@@ -3514,7 +2146,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Department</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -3523,7 +2155,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Display<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -3532,7 +2164,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Division</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -3541,7 +2173,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Email</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -3550,7 +2182,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Employee<wbr>Number</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -3559,7 +2191,7 @@ The following state arguments are supported:
             title="Optional">
         <span>First<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User's First Name, required by default.
 {{% /md %}}</dd>
@@ -3577,7 +2209,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Honorific<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -3586,7 +2218,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Honorific<wbr>Suffix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -3595,7 +2227,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Last<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User's Last Name, required by default.
 {{% /md %}}</dd>
@@ -3604,7 +2236,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Locale</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -3613,7 +2245,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Login</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -3622,7 +2254,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Manager</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -3631,7 +2263,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Manager<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -3640,7 +2272,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Middle<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -3649,7 +2281,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Mobile<wbr>Phone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -3658,7 +2290,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Nick<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -3667,7 +2299,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Organization</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -3676,7 +2308,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User password.
 {{% /md %}}</dd>
@@ -3685,7 +2317,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Postal<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -3694,7 +2326,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Preferred<wbr>Language</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -3703,7 +2335,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Primary<wbr>Phone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -3712,7 +2344,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Profile<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -3721,7 +2353,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Raw<wbr>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The raw status of the User in Okta - (status is mapped)
 {{% /md %}}</dd>
@@ -3730,7 +2362,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Recovery<wbr>Answer</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User password recovery answer.
 {{% /md %}}</dd>
@@ -3739,7 +2371,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Recovery<wbr>Question</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User password recovery question.
 {{% /md %}}</dd>
@@ -3748,7 +2380,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Second<wbr>Email</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -3757,7 +2389,7 @@ The following state arguments are supported:
             title="Optional">
         <span>State</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -3766,7 +2398,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -3775,7 +2407,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Street<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -3784,7 +2416,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Timezone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -3793,7 +2425,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Title</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -3802,7 +2434,7 @@ The following state arguments are supported:
             title="Optional">
         <span>User<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -3811,7 +2443,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Zip<wbr>Code</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -3827,7 +2459,7 @@ The following state arguments are supported:
             title="Optional">
         <span>admin<wbr>Roles</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Administrator roles assigned to User.
 {{% /md %}}</dd>
@@ -3836,7 +2468,7 @@ The following state arguments are supported:
             title="Optional">
         <span>city</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -3845,7 +2477,7 @@ The following state arguments are supported:
             title="Optional">
         <span>cost<wbr>Center</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -3854,7 +2486,7 @@ The following state arguments are supported:
             title="Optional">
         <span>country<wbr>Code</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -3863,7 +2495,7 @@ The following state arguments are supported:
             title="Optional">
         <span>custom<wbr>Profile<wbr>Attributes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}raw JSON containing all custom profile attributes.
 {{% /md %}}</dd>
@@ -3872,7 +2504,7 @@ The following state arguments are supported:
             title="Optional">
         <span>department</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -3881,7 +2513,7 @@ The following state arguments are supported:
             title="Optional">
         <span>display<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -3890,7 +2522,7 @@ The following state arguments are supported:
             title="Optional">
         <span>division</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -3899,7 +2531,7 @@ The following state arguments are supported:
             title="Optional">
         <span>email</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -3908,7 +2540,7 @@ The following state arguments are supported:
             title="Optional">
         <span>employee<wbr>Number</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -3917,7 +2549,7 @@ The following state arguments are supported:
             title="Optional">
         <span>first<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User's First Name, required by default.
 {{% /md %}}</dd>
@@ -3926,7 +2558,7 @@ The following state arguments are supported:
             title="Optional">
         <span>group<wbr>Memberships</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -3935,7 +2567,7 @@ The following state arguments are supported:
             title="Optional">
         <span>honorific<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -3944,7 +2576,7 @@ The following state arguments are supported:
             title="Optional">
         <span>honorific<wbr>Suffix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -3953,7 +2585,7 @@ The following state arguments are supported:
             title="Optional">
         <span>last<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User's Last Name, required by default.
 {{% /md %}}</dd>
@@ -3962,7 +2594,7 @@ The following state arguments are supported:
             title="Optional">
         <span>locale</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -3971,7 +2603,7 @@ The following state arguments are supported:
             title="Optional">
         <span>login</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -3980,7 +2612,7 @@ The following state arguments are supported:
             title="Optional">
         <span>manager</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -3989,7 +2621,7 @@ The following state arguments are supported:
             title="Optional">
         <span>manager<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -3998,7 +2630,7 @@ The following state arguments are supported:
             title="Optional">
         <span>middle<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -4007,7 +2639,7 @@ The following state arguments are supported:
             title="Optional">
         <span>mobile<wbr>Phone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -4016,7 +2648,7 @@ The following state arguments are supported:
             title="Optional">
         <span>nick<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -4025,7 +2657,7 @@ The following state arguments are supported:
             title="Optional">
         <span>organization</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -4034,7 +2666,7 @@ The following state arguments are supported:
             title="Optional">
         <span>password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User password.
 {{% /md %}}</dd>
@@ -4043,7 +2675,7 @@ The following state arguments are supported:
             title="Optional">
         <span>postal<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -4052,7 +2684,7 @@ The following state arguments are supported:
             title="Optional">
         <span>preferred<wbr>Language</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -4061,7 +2693,7 @@ The following state arguments are supported:
             title="Optional">
         <span>primary<wbr>Phone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -4070,7 +2702,7 @@ The following state arguments are supported:
             title="Optional">
         <span>profile<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -4079,7 +2711,7 @@ The following state arguments are supported:
             title="Optional">
         <span>raw<wbr>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The raw status of the User in Okta - (status is mapped)
 {{% /md %}}</dd>
@@ -4088,7 +2720,7 @@ The following state arguments are supported:
             title="Optional">
         <span>recovery<wbr>Answer</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User password recovery answer.
 {{% /md %}}</dd>
@@ -4097,7 +2729,7 @@ The following state arguments are supported:
             title="Optional">
         <span>recovery<wbr>Question</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User password recovery question.
 {{% /md %}}</dd>
@@ -4106,7 +2738,7 @@ The following state arguments are supported:
             title="Optional">
         <span>second<wbr>Email</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -4115,7 +2747,7 @@ The following state arguments are supported:
             title="Optional">
         <span>state</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -4124,7 +2756,7 @@ The following state arguments are supported:
             title="Optional">
         <span>status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -4133,7 +2765,7 @@ The following state arguments are supported:
             title="Optional">
         <span>street<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -4142,7 +2774,7 @@ The following state arguments are supported:
             title="Optional">
         <span>timezone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -4151,7 +2783,7 @@ The following state arguments are supported:
             title="Optional">
         <span>title</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -4160,7 +2792,7 @@ The following state arguments are supported:
             title="Optional">
         <span>user<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>
@@ -4169,7 +2801,7 @@ The following state arguments are supported:
             title="Optional">
         <span>zip<wbr>Code</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User profile property.
 {{% /md %}}</dd>

@@ -96,7 +96,7 @@ const example = new aws.dlm.LifecyclePolicy("example", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/dlm/#LifecyclePolicy">LifecyclePolicy</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/dlm/#LifecyclePolicyArgs">LifecyclePolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/dlm/#LifecyclePolicy">LifecyclePolicy</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/dlm/#LifecyclePolicyArgs">LifecyclePolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -104,7 +104,7 @@ const example = new aws.dlm.LifecyclePolicy("example", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewLifecyclePolicy<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/dlm?tab=doc#LifecyclePolicyArgs">LifecyclePolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/dlm?tab=doc#LifecyclePolicy">LifecyclePolicy</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewLifecyclePolicy<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/dlm?tab=doc#LifecyclePolicyArgs">LifecyclePolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/dlm?tab=doc#LifecyclePolicy">LifecyclePolicy</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -231,7 +231,7 @@ const example = new aws.dlm.LifecyclePolicy("example", {
             title="Optional">
         <span>State</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether the lifecycle policy should be enabled or disabled. `ENABLED` or `DISABLED` are valid values. Defaults to `ENABLED`.
 {{% /md %}}</dd>
@@ -240,7 +240,7 @@ const example = new aws.dlm.LifecyclePolicy("example", {
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Key-value mapping of resource tags.
 {{% /md %}}</dd>
@@ -283,7 +283,7 @@ const example = new aws.dlm.LifecyclePolicy("example", {
             title="Optional">
         <span>State</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether the lifecycle policy should be enabled or disabled. `ENABLED` or `DISABLED` are valid values. Defaults to `ENABLED`.
 {{% /md %}}</dd>
@@ -335,7 +335,7 @@ const example = new aws.dlm.LifecyclePolicy("example", {
             title="Optional">
         <span>state</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether the lifecycle policy should be enabled or disabled. `ENABLED` or `DISABLED` are valid values. Defaults to `ENABLED`.
 {{% /md %}}</dd>
@@ -344,7 +344,7 @@ const example = new aws.dlm.LifecyclePolicy("example", {
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Key-value mapping of resource tags.
 {{% /md %}}</dd>
@@ -429,51 +429,6 @@ The following output properties are available:
     <dd>{{% md %}}Amazon Resource Name (ARN) of the DLM Lifecycle Policy.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A description for the DLM lifecycle policy.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Execution<wbr>Role<wbr>Arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ARN of an IAM role that is able to be assumed by the DLM service.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Policy<wbr>Details</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#lifecyclepolicypolicydetails">Lifecycle<wbr>Policy<wbr>Policy<wbr>Details</a></span>
-    </dt>
-    <dd>{{% md %}}See the `policy_details` configuration block. Max of 1.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>State</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Whether the lifecycle policy should be enabled or disabled. `ENABLED` or `DISABLED` are valid values. Defaults to `ENABLED`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
-    </dt>
-    <dd>{{% md %}}Key-value mapping of resource tags.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -488,51 +443,6 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the DLM Lifecycle Policy.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A description for the DLM lifecycle policy.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Execution<wbr>Role<wbr>Arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ARN of an IAM role that is able to be assumed by the DLM service.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Policy<wbr>Details</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#lifecyclepolicypolicydetails">Lifecycle<wbr>Policy<wbr>Policy<wbr>Details</a></span>
-    </dt>
-    <dd>{{% md %}}See the `policy_details` configuration block. Max of 1.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>State</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Whether the lifecycle policy should be enabled or disabled. `ENABLED` or `DISABLED` are valid values. Defaults to `ENABLED`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
-    </dt>
-    <dd>{{% md %}}Key-value mapping of resource tags.
 {{% /md %}}</dd>
 
 </dl>
@@ -551,51 +461,6 @@ The following output properties are available:
     <dd>{{% md %}}Amazon Resource Name (ARN) of the DLM Lifecycle Policy.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A description for the DLM lifecycle policy.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>execution<wbr>Role<wbr>Arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ARN of an IAM role that is able to be assumed by the DLM service.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>policy<wbr>Details</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#lifecyclepolicypolicydetails">Lifecycle<wbr>Policy<wbr>Policy<wbr>Details</a></span>
-    </dt>
-    <dd>{{% md %}}See the `policy_details` configuration block. Max of 1.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>state</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Whether the lifecycle policy should be enabled or disabled. `ENABLED` or `DISABLED` are valid values. Defaults to `ENABLED`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
-    </dt>
-    <dd>{{% md %}}Key-value mapping of resource tags.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -610,51 +475,6 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the DLM Lifecycle Policy.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}A description for the DLM lifecycle policy.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>execution_<wbr>role_<wbr>arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The ARN of an IAM role that is able to be assumed by the DLM service.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>policy_<wbr>details</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#lifecyclepolicypolicydetails">Dict[Lifecycle<wbr>Policy<wbr>Policy<wbr>Details]</a></span>
-    </dt>
-    <dd>{{% md %}}See the `policy_details` configuration block. Max of 1.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>state</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Whether the lifecycle policy should be enabled or disabled. `ENABLED` or `DISABLED` are valid values. Defaults to `ENABLED`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
-    </dt>
-    <dd>{{% md %}}Key-value mapping of resource tags.
 {{% /md %}}</dd>
 
 </dl>
@@ -796,7 +616,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the DLM Lifecycle Policy.
 {{% /md %}}</dd>
@@ -805,7 +625,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description for the DLM lifecycle policy.
 {{% /md %}}</dd>
@@ -814,7 +634,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Execution<wbr>Role<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of an IAM role that is able to be assumed by the DLM service.
 {{% /md %}}</dd>
@@ -823,7 +643,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Policy<wbr>Details</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#lifecyclepolicypolicydetails">Lifecycle<wbr>Policy<wbr>Policy<wbr>Details<wbr>Args?</a></span>
+        <span class="property-type"><a href="#lifecyclepolicypolicydetails">Lifecycle<wbr>Policy<wbr>Policy<wbr>Details<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}See the `policy_details` configuration block. Max of 1.
 {{% /md %}}</dd>
@@ -832,7 +652,7 @@ The following state arguments are supported:
             title="Optional">
         <span>State</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether the lifecycle policy should be enabled or disabled. `ENABLED` or `DISABLED` are valid values. Defaults to `ENABLED`.
 {{% /md %}}</dd>
@@ -841,7 +661,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Key-value mapping of resource tags.
 {{% /md %}}</dd>
@@ -857,7 +677,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the DLM Lifecycle Policy.
 {{% /md %}}</dd>
@@ -866,7 +686,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description for the DLM lifecycle policy.
 {{% /md %}}</dd>
@@ -875,7 +695,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Execution<wbr>Role<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of an IAM role that is able to be assumed by the DLM service.
 {{% /md %}}</dd>
@@ -884,7 +704,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Policy<wbr>Details</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#lifecyclepolicypolicydetails">*Lifecycle<wbr>Policy<wbr>Policy<wbr>Details</a></span>
+        <span class="property-type"><a href="#lifecyclepolicypolicydetails">Lifecycle<wbr>Policy<wbr>Policy<wbr>Details</a></span>
     </dt>
     <dd>{{% md %}}See the `policy_details` configuration block. Max of 1.
 {{% /md %}}</dd>
@@ -893,7 +713,7 @@ The following state arguments are supported:
             title="Optional">
         <span>State</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether the lifecycle policy should be enabled or disabled. `ENABLED` or `DISABLED` are valid values. Defaults to `ENABLED`.
 {{% /md %}}</dd>
@@ -918,7 +738,7 @@ The following state arguments are supported:
             title="Optional">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the DLM Lifecycle Policy.
 {{% /md %}}</dd>
@@ -927,7 +747,7 @@ The following state arguments are supported:
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description for the DLM lifecycle policy.
 {{% /md %}}</dd>
@@ -936,7 +756,7 @@ The following state arguments are supported:
             title="Optional">
         <span>execution<wbr>Role<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of an IAM role that is able to be assumed by the DLM service.
 {{% /md %}}</dd>
@@ -945,7 +765,7 @@ The following state arguments are supported:
             title="Optional">
         <span>policy<wbr>Details</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#lifecyclepolicypolicydetails">Lifecycle<wbr>Policy<wbr>Policy<wbr>Details?</a></span>
+        <span class="property-type"><a href="#lifecyclepolicypolicydetails">Lifecycle<wbr>Policy<wbr>Policy<wbr>Details</a></span>
     </dt>
     <dd>{{% md %}}See the `policy_details` configuration block. Max of 1.
 {{% /md %}}</dd>
@@ -954,7 +774,7 @@ The following state arguments are supported:
             title="Optional">
         <span>state</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether the lifecycle policy should be enabled or disabled. `ENABLED` or `DISABLED` are valid values. Defaults to `ENABLED`.
 {{% /md %}}</dd>
@@ -963,7 +783,7 @@ The following state arguments are supported:
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Key-value mapping of resource tags.
 {{% /md %}}</dd>
@@ -1062,7 +882,7 @@ The following state arguments are supported:
             title="Required">
         <span>Resource<wbr>Types</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of resource types that should be targeted by the lifecycle policy. `VOLUME` is currently the only allowed value.
 {{% /md %}}</dd>
@@ -1080,7 +900,7 @@ The following state arguments are supported:
             title="Required">
         <span>Target<wbr>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tag keys and their values. Any resources that match the `resource_types` and are tagged with _any_ of these tags will be targeted.
 {{% /md %}}</dd>
@@ -1209,15 +1029,6 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Copy<wbr>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Copy all user-defined tags on a source volume to snapshots of the volume created by this policy.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Create<wbr>Rule</span>
@@ -1247,9 +1058,18 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>Copy<wbr>Tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Copy all user-defined tags on a source volume to snapshots of the volume created by this policy.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Tags<wbr>To<wbr>Add</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tag keys and their values. DLM lifecycle policies will already tag the snapshot with the tags on the volume. This configuration adds extra tags on top of these.
 {{% /md %}}</dd>
@@ -1260,15 +1080,6 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Copy<wbr>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Copy all user-defined tags on a source volume to snapshots of the volume created by this policy.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1299,6 +1110,15 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>Copy<wbr>Tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Copy all user-defined tags on a source volume to snapshots of the volume created by this policy.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Tags<wbr>To<wbr>Add</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
@@ -1312,15 +1132,6 @@ The following state arguments are supported:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>copy<wbr>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Copy all user-defined tags on a source volume to snapshots of the volume created by this policy.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1351,9 +1162,18 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>copy<wbr>Tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Copy all user-defined tags on a source volume to snapshots of the volume created by this policy.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>tags<wbr>To<wbr>Add</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A mapping of tag keys and their values. DLM lifecycle policies will already tag the snapshot with the tags on the volume. This configuration adds extra tags on top of these.
 {{% /md %}}</dd>
@@ -1364,15 +1184,6 @@ The following state arguments are supported:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>copy<wbr>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Copy all user-defined tags on a source volume to snapshots of the volume created by this policy.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1399,6 +1210,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="#lifecyclepolicypolicydetailsscheduleretainrule">Dict[Lifecycle<wbr>Policy<wbr>Policy<wbr>Details<wbr>Schedule<wbr>Retain<wbr>Rule]</a></span>
     </dt>
     <dd>{{% md %}}See the `retain_rule` block. Max of 1 per schedule.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>copy<wbr>Tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Copy all user-defined tags on a source volume to snapshots of the volume created by this policy.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1445,7 +1265,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Interval<wbr>Unit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unit for how often the lifecycle policy should be evaluated. `HOURS` is currently the only allowed value and also the default value.
 {{% /md %}}</dd>
@@ -1454,7 +1274,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Times</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A list of times in 24 hour clock format that sets when the lifecycle policy should be evaluated. Max of 1.
 {{% /md %}}</dd>
@@ -1479,7 +1299,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Interval<wbr>Unit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unit for how often the lifecycle policy should be evaluated. `HOURS` is currently the only allowed value and also the default value.
 {{% /md %}}</dd>
@@ -1488,7 +1308,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Times</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A list of times in 24 hour clock format that sets when the lifecycle policy should be evaluated. Max of 1.
 {{% /md %}}</dd>
@@ -1513,7 +1333,7 @@ The following state arguments are supported:
             title="Optional">
         <span>interval<wbr>Unit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The unit for how often the lifecycle policy should be evaluated. `HOURS` is currently the only allowed value and also the default value.
 {{% /md %}}</dd>
@@ -1522,7 +1342,7 @@ The following state arguments are supported:
             title="Optional">
         <span>times</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A list of times in 24 hour clock format that sets when the lifecycle policy should be evaluated. Max of 1.
 {{% /md %}}</dd>

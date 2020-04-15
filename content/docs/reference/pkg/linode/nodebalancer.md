@@ -14,7 +14,7 @@ block_external_search_index: true
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/linode/#NodeBalancer">NodeBalancer</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/linode/#NodeBalancerArgs">NodeBalancerArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/linode/#NodeBalancer">NodeBalancer</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/linode/#NodeBalancerArgs">NodeBalancerArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -22,11 +22,11 @@ block_external_search_index: true
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewNodeBalancer<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-linode/sdk/go/linode/?tab=doc#NodeBalancerArgs">NodeBalancerArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-linode/sdk/go/linode/?tab=doc#NodeBalancer">NodeBalancer</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewNodeBalancer<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-linode/sdk/go/linode/?tab=doc#NodeBalancerArgs">NodeBalancerArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-linode/sdk/go/linode/?tab=doc#NodeBalancer">NodeBalancer</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Linode/Pulumi.Linode..NodeBalancer.html">NodeBalancer</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Linode/Pulumi.Linode.NodeBalancerArgs.html">NodeBalancerArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Linode/Pulumi.Linode.NodeBalancer.html">NodeBalancer</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Linode/Pulumi.Linode.NodeBalancerArgs.html">NodeBalancerArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -118,24 +118,6 @@ block_external_search_index: true
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Client<wbr>Conn<wbr>Throttle</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}Throttle connections per second (0-20). Set to 0 (default) to disable throttling.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Label</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The label of the Linode NodeBalancer
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Region</span>
@@ -147,9 +129,27 @@ block_external_search_index: true
 
     <dt class="property-optional"
             title="Optional">
+        <span>Client<wbr>Conn<wbr>Throttle</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Throttle connections per second (0-20). Set to 0 (default) to disable throttling.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Label</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The label of the Linode NodeBalancer
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of tags applied to this object. Tags are for organizational purposes only.
 {{% /md %}}</dd>
@@ -161,11 +161,20 @@ block_external_search_index: true
 {{% choosable language go %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Region</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The region where this NodeBalancer will be deployed.  Examples are `"us-east"`, `"us-west"`, `"ap-south"`, etc.  *Changing `region` forces the creation of a new Linode NodeBalancer.*.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Client<wbr>Conn<wbr>Throttle</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Throttle connections per second (0-20). Set to 0 (default) to disable throttling.
 {{% /md %}}</dd>
@@ -174,18 +183,9 @@ block_external_search_index: true
             title="Optional">
         <span>Label</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The label of the Linode NodeBalancer
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Region</span>
-        <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The region where this NodeBalancer will be deployed.  Examples are `"us-east"`, `"us-west"`, `"ap-south"`, etc.  *Changing `region` forces the creation of a new Linode NodeBalancer.*.
+    <dd>{{% md %}}The label of the Linode NodeBalancer
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -204,24 +204,6 @@ block_external_search_index: true
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>client<wbr>Conn<wbr>Throttle</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}Throttle connections per second (0-20). Set to 0 (default) to disable throttling.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>label</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The label of the Linode NodeBalancer
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>region</span>
@@ -233,9 +215,27 @@ block_external_search_index: true
 
     <dt class="property-optional"
             title="Optional">
+        <span>client<wbr>Conn<wbr>Throttle</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Throttle connections per second (0-20). Set to 0 (default) to disable throttling.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>label</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The label of the Linode NodeBalancer
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of tags applied to this object. Tags are for organizational purposes only.
 {{% /md %}}</dd>
@@ -246,6 +246,15 @@ block_external_search_index: true
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>region</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The region where this NodeBalancer will be deployed.  Examples are `"us-east"`, `"us-west"`, `"ap-south"`, etc.  *Changing `region` forces the creation of a new Linode NodeBalancer.*.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -263,15 +272,6 @@ block_external_search_index: true
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The label of the Linode NodeBalancer
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The region where this NodeBalancer will be deployed.  Examples are `"us-east"`, `"us-west"`, `"ap-south"`, etc.  *Changing `region` forces the creation of a new Linode NodeBalancer.*.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -304,15 +304,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Client<wbr>Conn<wbr>Throttle</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}Throttle connections per second (0-20). Set to 0 (default) to disable throttling.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Created</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -344,33 +335,6 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Public IPv6 Address of this NodeBalancer
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Label</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The label of the Linode NodeBalancer
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The region where this NodeBalancer will be deployed.  Examples are `"us-east"`, `"us-west"`, `"ap-south"`, etc.  *Changing `region` forces the creation of a new Linode NodeBalancer.*.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}A list of tags applied to this object. Tags are for organizational purposes only.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -398,15 +362,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Client<wbr>Conn<wbr>Throttle</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}Throttle connections per second (0-20). Set to 0 (default) to disable throttling.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Created</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -442,33 +397,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Label</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The label of the Linode NodeBalancer
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The region where this NodeBalancer will be deployed.  Examples are `"us-east"`, `"us-west"`, `"ap-south"`, etc.  *Changing `region` forces the creation of a new Linode NodeBalancer.*.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}A list of tags applied to this object. Tags are for organizational purposes only.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Transfer</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodebalancertransfer">Node<wbr>Balancer<wbr>Transfer</a></span>
@@ -489,15 +417,6 @@ The following output properties are available:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>client<wbr>Conn<wbr>Throttle</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}Throttle connections per second (0-20). Set to 0 (default) to disable throttling.
-{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -532,33 +451,6 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Public IPv6 Address of this NodeBalancer
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>label</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The label of the Linode NodeBalancer
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The region where this NodeBalancer will be deployed.  Examples are `"us-east"`, `"us-west"`, `"ap-south"`, etc.  *Changing `region` forces the creation of a new Linode NodeBalancer.*.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}A list of tags applied to this object. Tags are for organizational purposes only.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -586,15 +478,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>client_<wbr>conn_<wbr>throttle</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}Throttle connections per second (0-20). Set to 0 (default) to disable throttling.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>created</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -626,33 +509,6 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Public IPv6 Address of this NodeBalancer
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>label</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The label of the Linode NodeBalancer
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The region where this NodeBalancer will be deployed.  Examples are `"us-east"`, `"us-west"`, `"ap-south"`, etc.  *Changing `region` forces the creation of a new Linode NodeBalancer.*.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}A list of tags applied to this object. Tags are for organizational purposes only.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -700,7 +556,7 @@ Get an existing NodeBalancer resource's state with the given name, ID, and optio
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Linode/Pulumi.Linode..NodeBalancer.html">NodeBalancer</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Linode/Pulumi.Linode..NodeBalancerState.html">NodeBalancerState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Linode/Pulumi.Linode.NodeBalancer.html">NodeBalancer</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Linode/Pulumi.Linode..NodeBalancerState.html">NodeBalancerState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -810,7 +666,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Client<wbr>Conn<wbr>Throttle</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Throttle connections per second (0-20). Set to 0 (default) to disable throttling.
 {{% /md %}}</dd>
@@ -819,7 +675,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Created</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -827,7 +683,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Hostname</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This NodeBalancer's hostname, ending with .nodebalancer.linode.com
 {{% /md %}}</dd>
@@ -836,7 +692,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Ipv4</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Public IPv4 Address of this NodeBalancer
 {{% /md %}}</dd>
@@ -845,7 +701,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Ipv6</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Public IPv6 Address of this NodeBalancer
 {{% /md %}}</dd>
@@ -854,7 +710,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Label</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The label of the Linode NodeBalancer
 {{% /md %}}</dd>
@@ -863,7 +719,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region where this NodeBalancer will be deployed.  Examples are `"us-east"`, `"us-west"`, `"ap-south"`, etc.  *Changing `region` forces the creation of a new Linode NodeBalancer.*.
 {{% /md %}}</dd>
@@ -872,7 +728,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of tags applied to this object. Tags are for organizational purposes only.
 {{% /md %}}</dd>
@@ -881,7 +737,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Transfer</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodebalancertransfer">Node<wbr>Balancer<wbr>Transfer<wbr>Args?</a></span>
+        <span class="property-type"><a href="#nodebalancertransfer">Node<wbr>Balancer<wbr>Transfer<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -889,7 +745,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Updated</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -904,7 +760,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Client<wbr>Conn<wbr>Throttle</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Throttle connections per second (0-20). Set to 0 (default) to disable throttling.
 {{% /md %}}</dd>
@@ -913,7 +769,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Created</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -921,7 +777,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Hostname</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This NodeBalancer's hostname, ending with .nodebalancer.linode.com
 {{% /md %}}</dd>
@@ -930,7 +786,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Ipv4</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Public IPv4 Address of this NodeBalancer
 {{% /md %}}</dd>
@@ -939,7 +795,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Ipv6</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Public IPv6 Address of this NodeBalancer
 {{% /md %}}</dd>
@@ -948,7 +804,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Label</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The label of the Linode NodeBalancer
 {{% /md %}}</dd>
@@ -957,7 +813,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region where this NodeBalancer will be deployed.  Examples are `"us-east"`, `"us-west"`, `"ap-south"`, etc.  *Changing `region` forces the creation of a new Linode NodeBalancer.*.
 {{% /md %}}</dd>
@@ -975,7 +831,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Transfer</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodebalancertransfer">*Node<wbr>Balancer<wbr>Transfer</a></span>
+        <span class="property-type"><a href="#nodebalancertransfer">Node<wbr>Balancer<wbr>Transfer</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -983,7 +839,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Updated</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -998,7 +854,7 @@ The following state arguments are supported:
             title="Optional">
         <span>client<wbr>Conn<wbr>Throttle</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Throttle connections per second (0-20). Set to 0 (default) to disable throttling.
 {{% /md %}}</dd>
@@ -1007,7 +863,7 @@ The following state arguments are supported:
             title="Optional">
         <span>created</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1015,7 +871,7 @@ The following state arguments are supported:
             title="Optional">
         <span>hostname</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This NodeBalancer's hostname, ending with .nodebalancer.linode.com
 {{% /md %}}</dd>
@@ -1024,7 +880,7 @@ The following state arguments are supported:
             title="Optional">
         <span>ipv4</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Public IPv4 Address of this NodeBalancer
 {{% /md %}}</dd>
@@ -1033,7 +889,7 @@ The following state arguments are supported:
             title="Optional">
         <span>ipv6</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Public IPv6 Address of this NodeBalancer
 {{% /md %}}</dd>
@@ -1042,7 +898,7 @@ The following state arguments are supported:
             title="Optional">
         <span>label</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The label of the Linode NodeBalancer
 {{% /md %}}</dd>
@@ -1051,7 +907,7 @@ The following state arguments are supported:
             title="Optional">
         <span>region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region where this NodeBalancer will be deployed.  Examples are `"us-east"`, `"us-west"`, `"ap-south"`, etc.  *Changing `region` forces the creation of a new Linode NodeBalancer.*.
 {{% /md %}}</dd>
@@ -1060,7 +916,7 @@ The following state arguments are supported:
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of tags applied to this object. Tags are for organizational purposes only.
 {{% /md %}}</dd>
@@ -1069,7 +925,7 @@ The following state arguments are supported:
             title="Optional">
         <span>transfer</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodebalancertransfer">Node<wbr>Balancer<wbr>Transfer?</a></span>
+        <span class="property-type"><a href="#nodebalancertransfer">Node<wbr>Balancer<wbr>Transfer</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1077,7 +933,7 @@ The following state arguments are supported:
             title="Optional">
         <span>updated</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1208,7 +1064,7 @@ The following state arguments are supported:
             title="Optional">
         <span>In</span>
         <span class="property-indicator"></span>
-        <span class="property-type">double?</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1216,7 +1072,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Out</span>
         <span class="property-indicator"></span>
-        <span class="property-type">double?</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1224,7 +1080,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Total</span>
         <span class="property-indicator"></span>
-        <span class="property-type">double?</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1239,7 +1095,7 @@ The following state arguments are supported:
             title="Optional">
         <span>In</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*float64</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1247,7 +1103,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Out</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*float64</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1255,7 +1111,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Total</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*float64</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1270,7 +1126,7 @@ The following state arguments are supported:
             title="Optional">
         <span>in</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1278,7 +1134,7 @@ The following state arguments are supported:
             title="Optional">
         <span>out</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1286,7 +1142,7 @@ The following state arguments are supported:
             title="Optional">
         <span>total</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

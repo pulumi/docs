@@ -14,7 +14,7 @@ block_external_search_index: true
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/ecs/#Instance">Instance</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/ecs/#InstanceArgs">InstanceArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/ecs/#Instance">Instance</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/alicloud/ecs/#InstanceArgs">InstanceArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -22,11 +22,11 @@ block_external_search_index: true
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewInstance<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/ecs?tab=doc#InstanceArgs">InstanceArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/ecs?tab=doc#Instance">Instance</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewInstance<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/ecs?tab=doc#InstanceArgs">InstanceArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/ecs?tab=doc#Instance">Instance</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.Ecs.Instance.html">Instance</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.Ecs.InstanceArgs.html">InstanceArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.Ecs.Instance.html">Instance</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.AliCloud.Ecs.InstanceArgs.html">InstanceArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -118,115 +118,6 @@ block_external_search_index: true
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span>Allocate<wbr>Public<wbr>Ip</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}It has been deprecated from version "1.7.0". Setting "internet_max_bandwidth_out" larger than 0 can allocate a public ip address for an instance.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;allocate_public_ip&#39; has been deprecated from provider version 1.6.1. Setting &#39;internet_max_bandwidth_out&#39; larger than 0 will allocate public ip for instance.{{% /md %}}</p></dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Auto<wbr>Release<wbr>Time</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The automatic release time of the `PostPaid` instance. 
-The time follows the ISO 8601 standard and is in UTC time. Format: yyyy-MM-ddTHH:mm:ssZ. It must be at least half an hour later than the current time and less than 3 years since the current time.
-Set it to null can cancel automatic release attribute and the ECS instance will not be released automatically.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Auto<wbr>Renew<wbr>Period</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}Auto renewal period of an instance, in the unit of month. It is valid when `instance_charge_type` is `PrePaid`. Default to 1. Valid value:
-- [1, 2, 3, 6, 12] when `period_unit` in "Month"
-- [1, 2, 3] when `period_unit` in "Week"
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Availability<wbr>Zone</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The Zone to start the instance in. It is ignored and will be computed when set `vswitch_id`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Credit<wbr>Specification</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Performance mode of the t5 burstable instance. Valid values: 'Standard', 'Unlimited'.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Data<wbr>Disks</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancedatadisk">List&lt;Instance<wbr>Data<wbr>Disk<wbr>Args&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}The list of data disks created with instance.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Deletion<wbr>Protection</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Whether enable the deletion protection or not.
-- true: Enable deletion protection.
-- false: Disable deletion protection.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The description of the data disk.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Dry<wbr>Run</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Specifies whether to send a dry-run request. Default to false. 
-- true: Only a dry-run request is sent and no instance is created. The system checks whether the required parameters are set, and validates the request format, service permissions, and available ECS instances. If the validation fails, the corresponding error code is returned. If the validation succeeds, the `DryRunOperation` error code is returned.
-- false: A request is sent. If the validation succeeds, the instance is created.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Force<wbr>Delete</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}If it is true, the "PrePaid" instance will be change to "PostPaid" and then deleted forcibly.
-However, because of changing instance charge type has CPU core count quota limitation, so strongly recommand that "Don't modify instance charge type frequentlly in one month".
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Host<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Host name of the ECS, which is a string of at least two characters. “hostname” cannot start or end with “.” or “-“. In addition, two or more consecutive “.” or “-“ symbols are not allowed. On Windows, the host name can contain a maximum of 15 characters, which can be a combination of uppercase/lowercase letters, numerals, and “-“. The host name cannot contain dots (“.”) or contain only numeric characters. When it is changed, the instance will reboot to make the change take effect.
-On other OSs such as Linux, the host name can contain a maximum of 30 characters, which can be segments separated by dots (“.”), where each segment can contain uppercase/lowercase letters, numerals, or “_“. When it is changed, the instance will reboot to make the change take effect.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Image<wbr>Id</span>
@@ -235,32 +126,6 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
     </dt>
     <dd>{{% md %}}The Image to use for the instance. ECS instance's image can be replaced via changing 'image_id'. When it is changed, the instance will reboot to make the change take effect.
 {{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Include<wbr>Data<wbr>Disks</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Whether to change instance disks charge type when changing instance charge type.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Instance<wbr>Charge<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Valid values are `PrePaid`, `PostPaid`, The default is `PostPaid`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Instance<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -271,11 +136,155 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
     <dd>{{% md %}}The type of instance to start. When it is changed, the instance will reboot to make the change take effect.
 {{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>Security<wbr>Groups</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of security group ids to associate with.
+{{% /md %}}</dd>
+
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span>Allocate<wbr>Public<wbr>Ip</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}It has been deprecated from version "1.7.0". Setting "internet_max_bandwidth_out" larger than 0 can allocate a public ip address for an instance.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;allocate_public_ip&#39; has been deprecated from provider version 1.6.1. Setting &#39;internet_max_bandwidth_out&#39; larger than 0 will allocate public ip for instance.{{% /md %}}</p></dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Auto<wbr>Release<wbr>Time</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The automatic release time of the `PostPaid` instance. 
+The time follows the ISO 8601 standard and is in UTC time. Format: yyyy-MM-ddTHH:mm:ssZ. It must be at least half an hour later than the current time and less than 3 years since the current time.
+Set it to null can cancel automatic release attribute and the ECS instance will not be released automatically.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Auto<wbr>Renew<wbr>Period</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Auto renewal period of an instance, in the unit of month. It is valid when `instance_charge_type` is `PrePaid`. Default to 1. Valid value:
+- [1, 2, 3, 6, 12] when `period_unit` in "Month"
+- [1, 2, 3] when `period_unit` in "Week"
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Availability<wbr>Zone</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Zone to start the instance in. It is ignored and will be computed when set `vswitch_id`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Credit<wbr>Specification</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Performance mode of the t5 burstable instance. Valid values: 'Standard', 'Unlimited'.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Data<wbr>Disks</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancedatadisk">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Ecs.<wbr>Inputs.<wbr>Instance<wbr>Data<wbr>Disk<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The list of data disks created with instance.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Deletion<wbr>Protection</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether enable the deletion protection or not.
+- true: Enable deletion protection.
+- false: Disable deletion protection.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The description of the data disk.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Dry<wbr>Run</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether to send a dry-run request. Default to false. 
+- true: Only a dry-run request is sent and no instance is created. The system checks whether the required parameters are set, and validates the request format, service permissions, and available ECS instances. If the validation fails, the corresponding error code is returned. If the validation succeeds, the `DryRunOperation` error code is returned.
+- false: A request is sent. If the validation succeeds, the instance is created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Force<wbr>Delete</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If it is true, the "PrePaid" instance will be change to "PostPaid" and then deleted forcibly.
+However, because of changing instance charge type has CPU core count quota limitation, so strongly recommand that "Don't modify instance charge type frequentlly in one month".
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Host<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Host name of the ECS, which is a string of at least two characters. “hostname” cannot start or end with “.” or “-“. In addition, two or more consecutive “.” or “-“ symbols are not allowed. On Windows, the host name can contain a maximum of 15 characters, which can be a combination of uppercase/lowercase letters, numerals, and “-“. The host name cannot contain dots (“.”) or contain only numeric characters. When it is changed, the instance will reboot to make the change take effect.
+On other OSs such as Linux, the host name can contain a maximum of 30 characters, which can be segments separated by dots (“.”), where each segment can contain uppercase/lowercase letters, numerals, or “_“. When it is changed, the instance will reboot to make the change take effect.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Include<wbr>Data<wbr>Disks</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to change instance disks charge type when changing instance charge type.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Instance<wbr>Charge<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Valid values are `PrePaid`, `PostPaid`, The default is `PostPaid`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Instance<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Internet<wbr>Charge<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Internet charge type of the instance, Valid values are `PayByBandwidth`, `PayByTraffic`. Default is `PayByTraffic`. At present, 'PrePaid' instance cannot change the value to "PayByBandwidth" from "PayByTraffic".
 {{% /md %}}</dd>
@@ -284,7 +293,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>Internet<wbr>Max<wbr>Bandwidth<wbr>In</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum incoming bandwidth from the public network, measured in Mbps (Mega bit per second). Value range: [1, 200]. If this value is not specified, then automatically sets it to 200 Mbps.
 {{% /md %}}</dd>
@@ -293,7 +302,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>Internet<wbr>Max<wbr>Bandwidth<wbr>Out</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum outgoing bandwidth to the public network, measured in Mbps (Mega bit per second). Value range:  [0, 100]. Default to 0 Mbps.
 {{% /md %}}</dd>
@@ -302,7 +311,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional, Deprecated">
         <span>Io<wbr>Optimized</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}It has been deprecated on instance resource. All the launched alicloud instances will be I/O optimized.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute io_optimized has been deprecated on instance resource. All the launched alicloud instances will be IO optimized. Suggest to remove it from your template.{{% /md %}}</p></dd>
@@ -311,7 +320,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>Is<wbr>Outdated</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to use outdated instance type. Default to false.
 {{% /md %}}</dd>
@@ -320,7 +329,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>Key<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of key pair that can login ECS instance successfully without password. If it is specified, the password would be invalid.
 {{% /md %}}</dd>
@@ -329,7 +338,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>Kms<wbr>Encrypted<wbr>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An KMS encrypts password used to an instance. If the `password` is filled in, this field will be ignored. When it is changed, the instance will reboot to make the change take effect.
 {{% /md %}}</dd>
@@ -338,7 +347,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>Kms<wbr>Encryption<wbr>Context</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}An KMS encryption context used to decrypt `kms_encrypted_password` before creating or updating an instance with `kms_encrypted_password`. See [Encryption Context](https://www.alibabacloud.com/help/doc-detail/42975.htm). It is valid when `kms_encrypted_password` is set. When it is changed, the instance will reboot to make the change take effect.
 {{% /md %}}</dd>
@@ -347,7 +356,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password to an instance is a string of 8 to 30 characters. It must contain uppercase/lowercase letters and numerals, but cannot contain special symbols. When it is changed, the instance will reboot to make the change take effect.
 {{% /md %}}</dd>
@@ -356,7 +365,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>Period</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The duration that you will buy the resource, in month. It is valid when `instance_charge_type` is `PrePaid`. Default to 1. Valid values:
 - [1-9, 12, 24, 36, 48, 60] when `period_unit` in "Month"
@@ -367,7 +376,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>Period<wbr>Unit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The duration unit that you will buy the resource. It is valid when `instance_charge_type` is 'PrePaid'. Valid value: ["Week", "Month"]. Default to "Month".
 {{% /md %}}</dd>
@@ -376,7 +385,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>Private<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Instance private IP address can be specified when you creating new instance. It is valid when `vswitch_id` is specified. When it is changed, the instance will reboot to make the change take effect.
 {{% /md %}}</dd>
@@ -385,7 +394,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>Renewal<wbr>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether to renew an ECS instance automatically or not. It is valid when `instance_charge_type` is `PrePaid`. Default to "Normal". Valid values:
 - `AutoRenewal`: Enable auto renewal.
@@ -397,7 +406,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>Resource<wbr>Group<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Id of resource group which the instance belongs.
 {{% /md %}}</dd>
@@ -406,7 +415,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>Role<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Instance RAM role name. The name is provided and maintained by RAM. You can use `alicloud.ram.Role` to create a new one.
 {{% /md %}}</dd>
@@ -415,27 +424,18 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>Security<wbr>Enhancement<wbr>Strategy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The security enhancement strategy.
 - Active: Enable security enhancement strategy, it only works on system images.
 - Deactive: Disable security enhancement strategy, it works on all images.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>Security<wbr>Groups</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
-    </dt>
-    <dd>{{% md %}}A list of security group ids to associate with.
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>Spot<wbr>Price<wbr>Limit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">double?</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The hourly price threshold of a instance, and it takes effect only when parameter 'spot_strategy' is 'SpotWithPriceLimit'. Three decimals is allowed at most.
 {{% /md %}}</dd>
@@ -444,7 +444,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>Spot<wbr>Strategy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The spot strategy of a Pay-As-You-Go instance, and it takes effect only when parameter `instance_charge_type` is 'PostPaid'. Value range:
 - NoSpot: A regular Pay-As-You-Go instance.
@@ -456,7 +456,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>Subnet<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -464,7 +464,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>System<wbr>Disk<wbr>Auto<wbr>Snapshot<wbr>Policy<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the automatic snapshot policy applied to the system disk.
 {{% /md %}}</dd>
@@ -473,7 +473,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>System<wbr>Disk<wbr>Category</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values are `ephemeral_ssd`, `cloud_efficiency`, `cloud_ssd`, `cloud_essd`, `cloud`. `cloud` only is used to some none I/O optimized instance. Default to `cloud_efficiency`.
 {{% /md %}}</dd>
@@ -482,7 +482,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>System<wbr>Disk<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Size of the system disk, measured in GiB. Value range: [20, 500]. The specified value must be equal to or greater than max{20, Imagesize}. Default value: max{40, ImageSize}. ECS instance's system disk can be reset when replacing system disk. When it is changed, the instance will reboot to make the change take effect.
 {{% /md %}}</dd>
@@ -491,7 +491,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 - Key: It can be up to 64 characters in length. It cannot begin with "aliyun", "acs:", "http://", or "https://". It cannot be a null string.
@@ -502,7 +502,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>User<wbr>Data</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User-defined data to customize the startup behaviors of an ECS instance and to pass data into an ECS instance. From version 1.60.0, it can be update in-place. If updated, the instance will reboot to make the change take effect. Note: Not all of changes will take effect and it depends on [cloud-init module type](https://cloudinit.readthedocs.io/en/latest/topics/modules.html).
 {{% /md %}}</dd>
@@ -511,7 +511,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>Volume<wbr>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the devices created by the instance at launch time.
 - Key: It can be up to 64 characters in length. It cannot begin with "aliyun", "acs:", "http://", or "https://". It cannot be a null string.
@@ -522,7 +522,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>Vswitch<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The virtual switch ID to launch in VPC. This parameter must be set unless you can create classic network instances. When it is changed, the instance will reboot to make the change take effect.
 {{% /md %}}</dd>
@@ -534,11 +534,38 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
 {{% choosable language go %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Image<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Image to use for the instance. ECS instance's image can be replaced via changing 'image_id'. When it is changed, the instance will reboot to make the change take effect.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Instance<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of instance to start. When it is changed, the instance will reboot to make the change take effect.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Security<wbr>Groups</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of security group ids to associate with.
+{{% /md %}}</dd>
+
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span>Allocate<wbr>Public<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}It has been deprecated from version "1.7.0". Setting "internet_max_bandwidth_out" larger than 0 can allocate a public ip address for an instance.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;allocate_public_ip&#39; has been deprecated from provider version 1.6.1. Setting &#39;internet_max_bandwidth_out&#39; larger than 0 will allocate public ip for instance.{{% /md %}}</p></dd>
@@ -547,7 +574,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>Auto<wbr>Release<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The automatic release time of the `PostPaid` instance. 
 The time follows the ISO 8601 standard and is in UTC time. Format: yyyy-MM-ddTHH:mm:ssZ. It must be at least half an hour later than the current time and less than 3 years since the current time.
@@ -558,7 +585,7 @@ Set it to null can cancel automatic release attribute and the ECS instance will 
             title="Optional">
         <span>Auto<wbr>Renew<wbr>Period</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Auto renewal period of an instance, in the unit of month. It is valid when `instance_charge_type` is `PrePaid`. Default to 1. Valid value:
 - [1, 2, 3, 6, 12] when `period_unit` in "Month"
@@ -569,7 +596,7 @@ Set it to null can cancel automatic release attribute and the ECS instance will 
             title="Optional">
         <span>Availability<wbr>Zone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Zone to start the instance in. It is ignored and will be computed when set `vswitch_id`.
 {{% /md %}}</dd>
@@ -578,7 +605,7 @@ Set it to null can cancel automatic release attribute and the ECS instance will 
             title="Optional">
         <span>Credit<wbr>Specification</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Performance mode of the t5 burstable instance. Valid values: 'Standard', 'Unlimited'.
 {{% /md %}}</dd>
@@ -596,7 +623,7 @@ Set it to null can cancel automatic release attribute and the ECS instance will 
             title="Optional">
         <span>Deletion<wbr>Protection</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether enable the deletion protection or not.
 - true: Enable deletion protection.
@@ -607,7 +634,7 @@ Set it to null can cancel automatic release attribute and the ECS instance will 
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the data disk.
 {{% /md %}}</dd>
@@ -616,7 +643,7 @@ Set it to null can cancel automatic release attribute and the ECS instance will 
             title="Optional">
         <span>Dry<wbr>Run</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether to send a dry-run request. Default to false. 
 - true: Only a dry-run request is sent and no instance is created. The system checks whether the required parameters are set, and validates the request format, service permissions, and available ECS instances. If the validation fails, the corresponding error code is returned. If the validation succeeds, the `DryRunOperation` error code is returned.
@@ -627,7 +654,7 @@ Set it to null can cancel automatic release attribute and the ECS instance will 
             title="Optional">
         <span>Force<wbr>Delete</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If it is true, the "PrePaid" instance will be change to "PostPaid" and then deleted forcibly.
 However, because of changing instance charge type has CPU core count quota limitation, so strongly recommand that "Don't modify instance charge type frequentlly in one month".
@@ -637,26 +664,17 @@ However, because of changing instance charge type has CPU core count quota limit
             title="Optional">
         <span>Host<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Host name of the ECS, which is a string of at least two characters. “hostname” cannot start or end with “.” or “-“. In addition, two or more consecutive “.” or “-“ symbols are not allowed. On Windows, the host name can contain a maximum of 15 characters, which can be a combination of uppercase/lowercase letters, numerals, and “-“. The host name cannot contain dots (“.”) or contain only numeric characters. When it is changed, the instance will reboot to make the change take effect.
 On other OSs such as Linux, the host name can contain a maximum of 30 characters, which can be segments separated by dots (“.”), where each segment can contain uppercase/lowercase letters, numerals, or “_“. When it is changed, the instance will reboot to make the change take effect.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Image<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Image to use for the instance. ECS instance's image can be replaced via changing 'image_id'. When it is changed, the instance will reboot to make the change take effect.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Include<wbr>Data<wbr>Disks</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to change instance disks charge type when changing instance charge type.
 {{% /md %}}</dd>
@@ -665,7 +683,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>Instance<wbr>Charge<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values are `PrePaid`, `PostPaid`, The default is `PostPaid`.
 {{% /md %}}</dd>
@@ -674,24 +692,15 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>Instance<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Instance<wbr>Type</span>
-        <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of instance to start. When it is changed, the instance will reboot to make the change take effect.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Internet<wbr>Charge<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Internet charge type of the instance, Valid values are `PayByBandwidth`, `PayByTraffic`. Default is `PayByTraffic`. At present, 'PrePaid' instance cannot change the value to "PayByBandwidth" from "PayByTraffic".
 {{% /md %}}</dd>
@@ -700,7 +709,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>Internet<wbr>Max<wbr>Bandwidth<wbr>In</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum incoming bandwidth from the public network, measured in Mbps (Mega bit per second). Value range: [1, 200]. If this value is not specified, then automatically sets it to 200 Mbps.
 {{% /md %}}</dd>
@@ -709,7 +718,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>Internet<wbr>Max<wbr>Bandwidth<wbr>Out</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum outgoing bandwidth to the public network, measured in Mbps (Mega bit per second). Value range:  [0, 100]. Default to 0 Mbps.
 {{% /md %}}</dd>
@@ -718,7 +727,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional, Deprecated">
         <span>Io<wbr>Optimized</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}It has been deprecated on instance resource. All the launched alicloud instances will be I/O optimized.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute io_optimized has been deprecated on instance resource. All the launched alicloud instances will be IO optimized. Suggest to remove it from your template.{{% /md %}}</p></dd>
@@ -727,7 +736,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>Is<wbr>Outdated</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to use outdated instance type. Default to false.
 {{% /md %}}</dd>
@@ -736,7 +745,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>Key<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of key pair that can login ECS instance successfully without password. If it is specified, the password would be invalid.
 {{% /md %}}</dd>
@@ -745,7 +754,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>Kms<wbr>Encrypted<wbr>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An KMS encrypts password used to an instance. If the `password` is filled in, this field will be ignored. When it is changed, the instance will reboot to make the change take effect.
 {{% /md %}}</dd>
@@ -763,7 +772,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password to an instance is a string of 8 to 30 characters. It must contain uppercase/lowercase letters and numerals, but cannot contain special symbols. When it is changed, the instance will reboot to make the change take effect.
 {{% /md %}}</dd>
@@ -772,7 +781,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>Period</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The duration that you will buy the resource, in month. It is valid when `instance_charge_type` is `PrePaid`. Default to 1. Valid values:
 - [1-9, 12, 24, 36, 48, 60] when `period_unit` in "Month"
@@ -783,7 +792,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>Period<wbr>Unit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The duration unit that you will buy the resource. It is valid when `instance_charge_type` is 'PrePaid'. Valid value: ["Week", "Month"]. Default to "Month".
 {{% /md %}}</dd>
@@ -792,7 +801,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>Private<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Instance private IP address can be specified when you creating new instance. It is valid when `vswitch_id` is specified. When it is changed, the instance will reboot to make the change take effect.
 {{% /md %}}</dd>
@@ -801,7 +810,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>Renewal<wbr>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether to renew an ECS instance automatically or not. It is valid when `instance_charge_type` is `PrePaid`. Default to "Normal". Valid values:
 - `AutoRenewal`: Enable auto renewal.
@@ -813,7 +822,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>Resource<wbr>Group<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Id of resource group which the instance belongs.
 {{% /md %}}</dd>
@@ -822,7 +831,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>Role<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Instance RAM role name. The name is provided and maintained by RAM. You can use `alicloud.ram.Role` to create a new one.
 {{% /md %}}</dd>
@@ -831,27 +840,18 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>Security<wbr>Enhancement<wbr>Strategy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The security enhancement strategy.
 - Active: Enable security enhancement strategy, it only works on system images.
 - Deactive: Disable security enhancement strategy, it works on all images.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>Security<wbr>Groups</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}A list of security group ids to associate with.
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>Spot<wbr>Price<wbr>Limit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*float64</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The hourly price threshold of a instance, and it takes effect only when parameter 'spot_strategy' is 'SpotWithPriceLimit'. Three decimals is allowed at most.
 {{% /md %}}</dd>
@@ -860,7 +860,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>Spot<wbr>Strategy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The spot strategy of a Pay-As-You-Go instance, and it takes effect only when parameter `instance_charge_type` is 'PostPaid'. Value range:
 - NoSpot: A regular Pay-As-You-Go instance.
@@ -872,7 +872,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>Subnet<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -880,7 +880,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>System<wbr>Disk<wbr>Auto<wbr>Snapshot<wbr>Policy<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the automatic snapshot policy applied to the system disk.
 {{% /md %}}</dd>
@@ -889,7 +889,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>System<wbr>Disk<wbr>Category</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values are `ephemeral_ssd`, `cloud_efficiency`, `cloud_ssd`, `cloud_essd`, `cloud`. `cloud` only is used to some none I/O optimized instance. Default to `cloud_efficiency`.
 {{% /md %}}</dd>
@@ -898,7 +898,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>System<wbr>Disk<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Size of the system disk, measured in GiB. Value range: [20, 500]. The specified value must be equal to or greater than max{20, Imagesize}. Default value: max{40, ImageSize}. ECS instance's system disk can be reset when replacing system disk. When it is changed, the instance will reboot to make the change take effect.
 {{% /md %}}</dd>
@@ -918,7 +918,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>User<wbr>Data</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User-defined data to customize the startup behaviors of an ECS instance and to pass data into an ECS instance. From version 1.60.0, it can be update in-place. If updated, the instance will reboot to make the change take effect. Note: Not all of changes will take effect and it depends on [cloud-init module type](https://cloudinit.readthedocs.io/en/latest/topics/modules.html).
 {{% /md %}}</dd>
@@ -938,7 +938,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>Vswitch<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The virtual switch ID to launch in VPC. This parameter must be set unless you can create classic network instances. When it is changed, the instance will reboot to make the change take effect.
 {{% /md %}}</dd>
@@ -950,115 +950,6 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span>allocate<wbr>Public<wbr>Ip</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}It has been deprecated from version "1.7.0". Setting "internet_max_bandwidth_out" larger than 0 can allocate a public ip address for an instance.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;allocate_public_ip&#39; has been deprecated from provider version 1.6.1. Setting &#39;internet_max_bandwidth_out&#39; larger than 0 will allocate public ip for instance.{{% /md %}}</p></dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>auto<wbr>Release<wbr>Time</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The automatic release time of the `PostPaid` instance. 
-The time follows the ISO 8601 standard and is in UTC time. Format: yyyy-MM-ddTHH:mm:ssZ. It must be at least half an hour later than the current time and less than 3 years since the current time.
-Set it to null can cancel automatic release attribute and the ECS instance will not be released automatically.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>auto<wbr>Renew<wbr>Period</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}Auto renewal period of an instance, in the unit of month. It is valid when `instance_charge_type` is `PrePaid`. Default to 1. Valid value:
-- [1, 2, 3, 6, 12] when `period_unit` in "Month"
-- [1, 2, 3] when `period_unit` in "Week"
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>availability<wbr>Zone</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The Zone to start the instance in. It is ignored and will be computed when set `vswitch_id`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>credit<wbr>Specification</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Performance mode of the t5 burstable instance. Valid values: 'Standard', 'Unlimited'.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>data<wbr>Disks</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancedatadisk">Instance<wbr>Data<wbr>Disk[]?</a></span>
-    </dt>
-    <dd>{{% md %}}The list of data disks created with instance.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>deletion<wbr>Protection</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Whether enable the deletion protection or not.
-- true: Enable deletion protection.
-- false: Disable deletion protection.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The description of the data disk.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>dry<wbr>Run</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Specifies whether to send a dry-run request. Default to false. 
-- true: Only a dry-run request is sent and no instance is created. The system checks whether the required parameters are set, and validates the request format, service permissions, and available ECS instances. If the validation fails, the corresponding error code is returned. If the validation succeeds, the `DryRunOperation` error code is returned.
-- false: A request is sent. If the validation succeeds, the instance is created.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>force<wbr>Delete</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}If it is true, the "PrePaid" instance will be change to "PostPaid" and then deleted forcibly.
-However, because of changing instance charge type has CPU core count quota limitation, so strongly recommand that "Don't modify instance charge type frequentlly in one month".
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>host<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Host name of the ECS, which is a string of at least two characters. “hostname” cannot start or end with “.” or “-“. In addition, two or more consecutive “.” or “-“ symbols are not allowed. On Windows, the host name can contain a maximum of 15 characters, which can be a combination of uppercase/lowercase letters, numerals, and “-“. The host name cannot contain dots (“.”) or contain only numeric characters. When it is changed, the instance will reboot to make the change take effect.
-On other OSs such as Linux, the host name can contain a maximum of 30 characters, which can be segments separated by dots (“.”), where each segment can contain uppercase/lowercase letters, numerals, or “_“. When it is changed, the instance will reboot to make the change take effect.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>image<wbr>Id</span>
@@ -1068,32 +959,6 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
     <dd>{{% md %}}The Image to use for the instance. ECS instance's image can be replaced via changing 'image_id'. When it is changed, the instance will reboot to make the change take effect.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>include<wbr>Data<wbr>Disks</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Whether to change instance disks charge type when changing instance charge type.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>instance<wbr>Charge<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Valid values are `PrePaid`, `PostPaid`, The default is `PostPaid`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>instance<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>instance<wbr>Type</span>
@@ -1101,157 +966,6 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of instance to start. When it is changed, the instance will reboot to make the change take effect.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>internet<wbr>Charge<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Internet charge type of the instance, Valid values are `PayByBandwidth`, `PayByTraffic`. Default is `PayByTraffic`. At present, 'PrePaid' instance cannot change the value to "PayByBandwidth" from "PayByTraffic".
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>internet<wbr>Max<wbr>Bandwidth<wbr>In</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}Maximum incoming bandwidth from the public network, measured in Mbps (Mega bit per second). Value range: [1, 200]. If this value is not specified, then automatically sets it to 200 Mbps.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>internet<wbr>Max<wbr>Bandwidth<wbr>Out</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}Maximum outgoing bandwidth to the public network, measured in Mbps (Mega bit per second). Value range:  [0, 100]. Default to 0 Mbps.
-{{% /md %}}</dd>
-
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span>io<wbr>Optimized</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}It has been deprecated on instance resource. All the launched alicloud instances will be I/O optimized.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute io_optimized has been deprecated on instance resource. All the launched alicloud instances will be IO optimized. Suggest to remove it from your template.{{% /md %}}</p></dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>is<wbr>Outdated</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Whether to use outdated instance type. Default to false.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>key<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The name of key pair that can login ECS instance successfully without password. If it is specified, the password would be invalid.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>kms<wbr>Encrypted<wbr>Password</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}An KMS encrypts password used to an instance. If the `password` is filled in, this field will be ignored. When it is changed, the instance will reboot to make the change take effect.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>kms<wbr>Encryption<wbr>Context</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
-    </dt>
-    <dd>{{% md %}}An KMS encryption context used to decrypt `kms_encrypted_password` before creating or updating an instance with `kms_encrypted_password`. See [Encryption Context](https://www.alibabacloud.com/help/doc-detail/42975.htm). It is valid when `kms_encrypted_password` is set. When it is changed, the instance will reboot to make the change take effect.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>password</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Password to an instance is a string of 8 to 30 characters. It must contain uppercase/lowercase letters and numerals, but cannot contain special symbols. When it is changed, the instance will reboot to make the change take effect.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>period</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}The duration that you will buy the resource, in month. It is valid when `instance_charge_type` is `PrePaid`. Default to 1. Valid values:
-- [1-9, 12, 24, 36, 48, 60] when `period_unit` in "Month"
-- [1-3] when `period_unit` in "Week"
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>period<wbr>Unit</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The duration unit that you will buy the resource. It is valid when `instance_charge_type` is 'PrePaid'. Valid value: ["Week", "Month"]. Default to "Month".
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>private<wbr>Ip</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Instance private IP address can be specified when you creating new instance. It is valid when `vswitch_id` is specified. When it is changed, the instance will reboot to make the change take effect.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>renewal<wbr>Status</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Whether to renew an ECS instance automatically or not. It is valid when `instance_charge_type` is `PrePaid`. Default to "Normal". Valid values:
-- `AutoRenewal`: Enable auto renewal.
-- `Normal`: Disable auto renewal.
-- `NotRenewal`: No renewal any longer. After you specify this value, Alibaba Cloud stop sending notification of instance expiry, and only gives a brief reminder on the third day before the instance expiry.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>resource<wbr>Group<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The Id of resource group which the instance belongs.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>role<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Instance RAM role name. The name is provided and maintained by RAM. You can use `alicloud.ram.Role` to create a new one.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>security<wbr>Enhancement<wbr>Strategy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The security enhancement strategy.
-- Active: Enable security enhancement strategy, it only works on system images.
-- Deactive: Disable security enhancement strategy, it works on all images.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1263,11 +977,297 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
     <dd>{{% md %}}A list of security group ids to associate with.
 {{% /md %}}</dd>
 
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span>allocate<wbr>Public<wbr>Ip</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}It has been deprecated from version "1.7.0". Setting "internet_max_bandwidth_out" larger than 0 can allocate a public ip address for an instance.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;allocate_public_ip&#39; has been deprecated from provider version 1.6.1. Setting &#39;internet_max_bandwidth_out&#39; larger than 0 will allocate public ip for instance.{{% /md %}}</p></dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>auto<wbr>Release<wbr>Time</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The automatic release time of the `PostPaid` instance. 
+The time follows the ISO 8601 standard and is in UTC time. Format: yyyy-MM-ddTHH:mm:ssZ. It must be at least half an hour later than the current time and less than 3 years since the current time.
+Set it to null can cancel automatic release attribute and the ECS instance will not be released automatically.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>auto<wbr>Renew<wbr>Period</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Auto renewal period of an instance, in the unit of month. It is valid when `instance_charge_type` is `PrePaid`. Default to 1. Valid value:
+- [1, 2, 3, 6, 12] when `period_unit` in "Month"
+- [1, 2, 3] when `period_unit` in "Week"
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>availability<wbr>Zone</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Zone to start the instance in. It is ignored and will be computed when set `vswitch_id`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>credit<wbr>Specification</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Performance mode of the t5 burstable instance. Valid values: 'Standard', 'Unlimited'.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>data<wbr>Disks</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancedatadisk">Instance<wbr>Data<wbr>Disk[]</a></span>
+    </dt>
+    <dd>{{% md %}}The list of data disks created with instance.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>deletion<wbr>Protection</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether enable the deletion protection or not.
+- true: Enable deletion protection.
+- false: Disable deletion protection.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The description of the data disk.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>dry<wbr>Run</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether to send a dry-run request. Default to false. 
+- true: Only a dry-run request is sent and no instance is created. The system checks whether the required parameters are set, and validates the request format, service permissions, and available ECS instances. If the validation fails, the corresponding error code is returned. If the validation succeeds, the `DryRunOperation` error code is returned.
+- false: A request is sent. If the validation succeeds, the instance is created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>force<wbr>Delete</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}If it is true, the "PrePaid" instance will be change to "PostPaid" and then deleted forcibly.
+However, because of changing instance charge type has CPU core count quota limitation, so strongly recommand that "Don't modify instance charge type frequentlly in one month".
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>host<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Host name of the ECS, which is a string of at least two characters. “hostname” cannot start or end with “.” or “-“. In addition, two or more consecutive “.” or “-“ symbols are not allowed. On Windows, the host name can contain a maximum of 15 characters, which can be a combination of uppercase/lowercase letters, numerals, and “-“. The host name cannot contain dots (“.”) or contain only numeric characters. When it is changed, the instance will reboot to make the change take effect.
+On other OSs such as Linux, the host name can contain a maximum of 30 characters, which can be segments separated by dots (“.”), where each segment can contain uppercase/lowercase letters, numerals, or “_“. When it is changed, the instance will reboot to make the change take effect.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>include<wbr>Data<wbr>Disks</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether to change instance disks charge type when changing instance charge type.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>instance<wbr>Charge<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Valid values are `PrePaid`, `PostPaid`, The default is `PostPaid`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>instance<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>internet<wbr>Charge<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Internet charge type of the instance, Valid values are `PayByBandwidth`, `PayByTraffic`. Default is `PayByTraffic`. At present, 'PrePaid' instance cannot change the value to "PayByBandwidth" from "PayByTraffic".
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>internet<wbr>Max<wbr>Bandwidth<wbr>In</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Maximum incoming bandwidth from the public network, measured in Mbps (Mega bit per second). Value range: [1, 200]. If this value is not specified, then automatically sets it to 200 Mbps.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>internet<wbr>Max<wbr>Bandwidth<wbr>Out</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Maximum outgoing bandwidth to the public network, measured in Mbps (Mega bit per second). Value range:  [0, 100]. Default to 0 Mbps.
+{{% /md %}}</dd>
+
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span>io<wbr>Optimized</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}It has been deprecated on instance resource. All the launched alicloud instances will be I/O optimized.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute io_optimized has been deprecated on instance resource. All the launched alicloud instances will be IO optimized. Suggest to remove it from your template.{{% /md %}}</p></dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>is<wbr>Outdated</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether to use outdated instance type. Default to false.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>key<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of key pair that can login ECS instance successfully without password. If it is specified, the password would be invalid.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>kms<wbr>Encrypted<wbr>Password</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An KMS encrypts password used to an instance. If the `password` is filled in, this field will be ignored. When it is changed, the instance will reboot to make the change take effect.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>kms<wbr>Encryption<wbr>Context</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}</span>
+    </dt>
+    <dd>{{% md %}}An KMS encryption context used to decrypt `kms_encrypted_password` before creating or updating an instance with `kms_encrypted_password`. See [Encryption Context](https://www.alibabacloud.com/help/doc-detail/42975.htm). It is valid when `kms_encrypted_password` is set. When it is changed, the instance will reboot to make the change take effect.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>password</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Password to an instance is a string of 8 to 30 characters. It must contain uppercase/lowercase letters and numerals, but cannot contain special symbols. When it is changed, the instance will reboot to make the change take effect.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>period</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The duration that you will buy the resource, in month. It is valid when `instance_charge_type` is `PrePaid`. Default to 1. Valid values:
+- [1-9, 12, 24, 36, 48, 60] when `period_unit` in "Month"
+- [1-3] when `period_unit` in "Week"
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>period<wbr>Unit</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The duration unit that you will buy the resource. It is valid when `instance_charge_type` is 'PrePaid'. Valid value: ["Week", "Month"]. Default to "Month".
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>private<wbr>Ip</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Instance private IP address can be specified when you creating new instance. It is valid when `vswitch_id` is specified. When it is changed, the instance will reboot to make the change take effect.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>renewal<wbr>Status</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Whether to renew an ECS instance automatically or not. It is valid when `instance_charge_type` is `PrePaid`. Default to "Normal". Valid values:
+- `AutoRenewal`: Enable auto renewal.
+- `Normal`: Disable auto renewal.
+- `NotRenewal`: No renewal any longer. After you specify this value, Alibaba Cloud stop sending notification of instance expiry, and only gives a brief reminder on the third day before the instance expiry.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>resource<wbr>Group<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Id of resource group which the instance belongs.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>role<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Instance RAM role name. The name is provided and maintained by RAM. You can use `alicloud.ram.Role` to create a new one.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>security<wbr>Enhancement<wbr>Strategy</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The security enhancement strategy.
+- Active: Enable security enhancement strategy, it only works on system images.
+- Deactive: Disable security enhancement strategy, it works on all images.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>spot<wbr>Price<wbr>Limit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The hourly price threshold of a instance, and it takes effect only when parameter 'spot_strategy' is 'SpotWithPriceLimit'. Three decimals is allowed at most.
 {{% /md %}}</dd>
@@ -1276,7 +1276,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>spot<wbr>Strategy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The spot strategy of a Pay-As-You-Go instance, and it takes effect only when parameter `instance_charge_type` is 'PostPaid'. Value range:
 - NoSpot: A regular Pay-As-You-Go instance.
@@ -1288,7 +1288,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>subnet<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1296,7 +1296,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>system<wbr>Disk<wbr>Auto<wbr>Snapshot<wbr>Policy<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the automatic snapshot policy applied to the system disk.
 {{% /md %}}</dd>
@@ -1305,7 +1305,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>system<wbr>Disk<wbr>Category</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values are `ephemeral_ssd`, `cloud_efficiency`, `cloud_ssd`, `cloud_essd`, `cloud`. `cloud` only is used to some none I/O optimized instance. Default to `cloud_efficiency`.
 {{% /md %}}</dd>
@@ -1314,7 +1314,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>system<wbr>Disk<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Size of the system disk, measured in GiB. Value range: [20, 500]. The specified value must be equal to or greater than max{20, Imagesize}. Default value: max{40, ImageSize}. ECS instance's system disk can be reset when replacing system disk. When it is changed, the instance will reboot to make the change take effect.
 {{% /md %}}</dd>
@@ -1323,7 +1323,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 - Key: It can be up to 64 characters in length. It cannot begin with "aliyun", "acs:", "http://", or "https://". It cannot be a null string.
@@ -1334,7 +1334,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>user<wbr>Data</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User-defined data to customize the startup behaviors of an ECS instance and to pass data into an ECS instance. From version 1.60.0, it can be update in-place. If updated, the instance will reboot to make the change take effect. Note: Not all of changes will take effect and it depends on [cloud-init module type](https://cloudinit.readthedocs.io/en/latest/topics/modules.html).
 {{% /md %}}</dd>
@@ -1343,7 +1343,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>volume<wbr>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the devices created by the instance at launch time.
 - Key: It can be up to 64 characters in length. It cannot begin with "aliyun", "acs:", "http://", or "https://". It cannot be a null string.
@@ -1354,7 +1354,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>vswitch<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The virtual switch ID to launch in VPC. This parameter must be set unless you can create classic network instances. When it is changed, the instance will reboot to make the change take effect.
 {{% /md %}}</dd>
@@ -1365,6 +1365,33 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>image_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Image to use for the instance. ECS instance's image can be replaced via changing 'image_id'. When it is changed, the instance will reboot to make the change take effect.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>instance_<wbr>type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The type of instance to start. When it is changed, the instance will reboot to make the change take effect.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>security_<wbr>groups</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of security group ids to associate with.
+{{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
@@ -1475,15 +1502,6 @@ However, because of changing instance charge type has CPU core count quota limit
 On other OSs such as Linux, the host name can contain a maximum of 30 characters, which can be segments separated by dots (“.”), where each segment can contain uppercase/lowercase letters, numerals, or “_“. When it is changed, the instance will reboot to make the change take effect.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>image_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The Image to use for the instance. ECS instance's image can be replaced via changing 'image_id'. When it is changed, the instance will reboot to make the change take effect.
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>include_<wbr>data_<wbr>disks</span>
@@ -1509,15 +1527,6 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>instance_<wbr>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The type of instance to start. When it is changed, the instance will reboot to make the change take effect.
-{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1668,15 +1677,6 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
     <dd>{{% md %}}The security enhancement strategy.
 - Active: Enable security enhancement strategy, it only works on system images.
 - Deactive: Disable security enhancement strategy, it works on all images.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>security_<wbr>groups</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}A list of security group ids to associate with.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1794,269 +1794,6 @@ The following output properties are available:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property- property-deprecated"
-            title=", Deprecated">
-        <span>Allocate<wbr>Public<wbr>Ip</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}It has been deprecated from version "1.7.0". Setting "internet_max_bandwidth_out" larger than 0 can allocate a public ip address for an instance.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;allocate_public_ip&#39; has been deprecated from provider version 1.6.1. Setting &#39;internet_max_bandwidth_out&#39; larger than 0 will allocate public ip for instance.{{% /md %}}</p></dd>
-
-    <dt class="property-"
-            title="">
-        <span>Auto<wbr>Release<wbr>Time</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The automatic release time of the `PostPaid` instance. 
-The time follows the ISO 8601 standard and is in UTC time. Format: yyyy-MM-ddTHH:mm:ssZ. It must be at least half an hour later than the current time and less than 3 years since the current time.
-Set it to null can cancel automatic release attribute and the ECS instance will not be released automatically.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Auto<wbr>Renew<wbr>Period</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}Auto renewal period of an instance, in the unit of month. It is valid when `instance_charge_type` is `PrePaid`. Default to 1. Valid value:
-- [1, 2, 3, 6, 12] when `period_unit` in "Month"
-- [1, 2, 3] when `period_unit` in "Week"
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Availability<wbr>Zone</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Zone to start the instance in. It is ignored and will be computed when set `vswitch_id`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Credit<wbr>Specification</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Performance mode of the t5 burstable instance. Valid values: 'Standard', 'Unlimited'.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Data<wbr>Disks</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancedatadisk">List&lt;Instance<wbr>Data<wbr>Disk&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}The list of data disks created with instance.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Deletion<wbr>Protection</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Whether enable the deletion protection or not.
-- true: Enable deletion protection.
-- false: Disable deletion protection.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The description of the data disk.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Dry<wbr>Run</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Specifies whether to send a dry-run request. Default to false. 
-- true: Only a dry-run request is sent and no instance is created. The system checks whether the required parameters are set, and validates the request format, service permissions, and available ECS instances. If the validation fails, the corresponding error code is returned. If the validation succeeds, the `DryRunOperation` error code is returned.
-- false: A request is sent. If the validation succeeds, the instance is created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Force<wbr>Delete</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}If it is true, the "PrePaid" instance will be change to "PostPaid" and then deleted forcibly.
-However, because of changing instance charge type has CPU core count quota limitation, so strongly recommand that "Don't modify instance charge type frequentlly in one month".
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Host<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Host name of the ECS, which is a string of at least two characters. “hostname” cannot start or end with “.” or “-“. In addition, two or more consecutive “.” or “-“ symbols are not allowed. On Windows, the host name can contain a maximum of 15 characters, which can be a combination of uppercase/lowercase letters, numerals, and “-“. The host name cannot contain dots (“.”) or contain only numeric characters. When it is changed, the instance will reboot to make the change take effect.
-On other OSs such as Linux, the host name can contain a maximum of 30 characters, which can be segments separated by dots (“.”), where each segment can contain uppercase/lowercase letters, numerals, or “_“. When it is changed, the instance will reboot to make the change take effect.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Image<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Image to use for the instance. ECS instance's image can be replaced via changing 'image_id'. When it is changed, the instance will reboot to make the change take effect.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Include<wbr>Data<wbr>Disks</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Whether to change instance disks charge type when changing instance charge type.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Instance<wbr>Charge<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Valid values are `PrePaid`, `PostPaid`, The default is `PostPaid`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Instance<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Instance<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The type of instance to start. When it is changed, the instance will reboot to make the change take effect.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Internet<wbr>Charge<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Internet charge type of the instance, Valid values are `PayByBandwidth`, `PayByTraffic`. Default is `PayByTraffic`. At present, 'PrePaid' instance cannot change the value to "PayByBandwidth" from "PayByTraffic".
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Internet<wbr>Max<wbr>Bandwidth<wbr>In</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Maximum incoming bandwidth from the public network, measured in Mbps (Mega bit per second). Value range: [1, 200]. If this value is not specified, then automatically sets it to 200 Mbps.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Internet<wbr>Max<wbr>Bandwidth<wbr>Out</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}Maximum outgoing bandwidth to the public network, measured in Mbps (Mega bit per second). Value range:  [0, 100]. Default to 0 Mbps.
-{{% /md %}}</dd>
-
-    <dt class="property- property-deprecated"
-            title=", Deprecated">
-        <span>Io<wbr>Optimized</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}It has been deprecated on instance resource. All the launched alicloud instances will be I/O optimized.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute io_optimized has been deprecated on instance resource. All the launched alicloud instances will be IO optimized. Suggest to remove it from your template.{{% /md %}}</p></dd>
-
-    <dt class="property-"
-            title="">
-        <span>Is<wbr>Outdated</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Whether to use outdated instance type. Default to false.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Key<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of key pair that can login ECS instance successfully without password. If it is specified, the password would be invalid.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Kms<wbr>Encrypted<wbr>Password</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}An KMS encrypts password used to an instance. If the `password` is filled in, this field will be ignored. When it is changed, the instance will reboot to make the change take effect.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Kms<wbr>Encryption<wbr>Context</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
-    </dt>
-    <dd>{{% md %}}An KMS encryption context used to decrypt `kms_encrypted_password` before creating or updating an instance with `kms_encrypted_password`. See [Encryption Context](https://www.alibabacloud.com/help/doc-detail/42975.htm). It is valid when `kms_encrypted_password` is set. When it is changed, the instance will reboot to make the change take effect.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Password</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Password to an instance is a string of 8 to 30 characters. It must contain uppercase/lowercase letters and numerals, but cannot contain special symbols. When it is changed, the instance will reboot to make the change take effect.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Period</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}The duration that you will buy the resource, in month. It is valid when `instance_charge_type` is `PrePaid`. Default to 1. Valid values:
-- [1-9, 12, 24, 36, 48, 60] when `period_unit` in "Month"
-- [1-3] when `period_unit` in "Week"
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Period<wbr>Unit</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The duration unit that you will buy the resource. It is valid when `instance_charge_type` is 'PrePaid'. Valid value: ["Week", "Month"]. Default to "Month".
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Private<wbr>Ip</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Instance private IP address can be specified when you creating new instance. It is valid when `vswitch_id` is specified. When it is changed, the instance will reboot to make the change take effect.
-{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span>Public<wbr>Ip</span>
@@ -2068,157 +1805,11 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
 
     <dt class="property-"
             title="">
-        <span>Renewal<wbr>Status</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Whether to renew an ECS instance automatically or not. It is valid when `instance_charge_type` is `PrePaid`. Default to "Normal". Valid values:
-- `AutoRenewal`: Enable auto renewal.
-- `Normal`: Disable auto renewal.
-- `NotRenewal`: No renewal any longer. After you specify this value, Alibaba Cloud stop sending notification of instance expiry, and only gives a brief reminder on the third day before the instance expiry.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Resource<wbr>Group<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The Id of resource group which the instance belongs.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Role<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Instance RAM role name. The name is provided and maintained by RAM. You can use `alicloud.ram.Role` to create a new one.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Security<wbr>Enhancement<wbr>Strategy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The security enhancement strategy.
-- Active: Enable security enhancement strategy, it only works on system images.
-- Deactive: Disable security enhancement strategy, it works on all images.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Security<wbr>Groups</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
-    </dt>
-    <dd>{{% md %}}A list of security group ids to associate with.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Spot<wbr>Price<wbr>Limit</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">double?</span>
-    </dt>
-    <dd>{{% md %}}The hourly price threshold of a instance, and it takes effect only when parameter 'spot_strategy' is 'SpotWithPriceLimit'. Three decimals is allowed at most.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Spot<wbr>Strategy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The spot strategy of a Pay-As-You-Go instance, and it takes effect only when parameter `instance_charge_type` is 'PostPaid'. Value range:
-- NoSpot: A regular Pay-As-You-Go instance.
-- SpotWithPriceLimit: A price threshold for a spot instance
-- SpotAsPriceGo: A price that is based on the highest Pay-As-You-Go instance
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Status</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The instance status.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Subnet<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>System<wbr>Disk<wbr>Auto<wbr>Snapshot<wbr>Policy<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The ID of the automatic snapshot policy applied to the system disk.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>System<wbr>Disk<wbr>Category</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Valid values are `ephemeral_ssd`, `cloud_efficiency`, `cloud_ssd`, `cloud_essd`, `cloud`. `cloud` only is used to some none I/O optimized instance. Default to `cloud_efficiency`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>System<wbr>Disk<wbr>Size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}Size of the system disk, measured in GiB. Value range: [20, 500]. The specified value must be equal to or greater than max{20, Imagesize}. Default value: max{40, ImageSize}. ECS instance's system disk can be reset when replacing system disk. When it is changed, the instance will reboot to make the change take effect.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
-- Key: It can be up to 64 characters in length. It cannot begin with "aliyun", "acs:", "http://", or "https://". It cannot be a null string.
-- Value: It can be up to 128 characters in length. It cannot begin with "aliyun", "acs:", "http://", or "https://". It can be a null string.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>User<wbr>Data</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}User-defined data to customize the startup behaviors of an ECS instance and to pass data into an ECS instance. From version 1.60.0, it can be update in-place. If updated, the instance will reboot to make the change take effect. Note: Not all of changes will take effect and it depends on [cloud-init module type](https://cloudinit.readthedocs.io/en/latest/topics/modules.html).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Volume<wbr>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object></span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the devices created by the instance at launch time.
-- Key: It can be up to 64 characters in length. It cannot begin with "aliyun", "acs:", "http://", or "https://". It cannot be a null string.
-- Value: It can be up to 128 characters in length. It cannot begin with "aliyun", "acs:", "http://", or "https://". It can be a null string.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Vswitch<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The virtual switch ID to launch in VPC. This parameter must be set unless you can create classic network instances. When it is changed, the instance will reboot to make the change take effect.
 {{% /md %}}</dd>
 
 </dl>
@@ -2228,269 +1819,6 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property- property-deprecated"
-            title=", Deprecated">
-        <span>Allocate<wbr>Public<wbr>Ip</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}It has been deprecated from version "1.7.0". Setting "internet_max_bandwidth_out" larger than 0 can allocate a public ip address for an instance.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;allocate_public_ip&#39; has been deprecated from provider version 1.6.1. Setting &#39;internet_max_bandwidth_out&#39; larger than 0 will allocate public ip for instance.{{% /md %}}</p></dd>
-
-    <dt class="property-"
-            title="">
-        <span>Auto<wbr>Release<wbr>Time</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The automatic release time of the `PostPaid` instance. 
-The time follows the ISO 8601 standard and is in UTC time. Format: yyyy-MM-ddTHH:mm:ssZ. It must be at least half an hour later than the current time and less than 3 years since the current time.
-Set it to null can cancel automatic release attribute and the ECS instance will not be released automatically.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Auto<wbr>Renew<wbr>Period</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}Auto renewal period of an instance, in the unit of month. It is valid when `instance_charge_type` is `PrePaid`. Default to 1. Valid value:
-- [1, 2, 3, 6, 12] when `period_unit` in "Month"
-- [1, 2, 3] when `period_unit` in "Week"
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Availability<wbr>Zone</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Zone to start the instance in. It is ignored and will be computed when set `vswitch_id`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Credit<wbr>Specification</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Performance mode of the t5 burstable instance. Valid values: 'Standard', 'Unlimited'.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Data<wbr>Disks</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancedatadisk">[]Instance<wbr>Data<wbr>Disk</a></span>
-    </dt>
-    <dd>{{% md %}}The list of data disks created with instance.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Deletion<wbr>Protection</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Whether enable the deletion protection or not.
-- true: Enable deletion protection.
-- false: Disable deletion protection.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The description of the data disk.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Dry<wbr>Run</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Specifies whether to send a dry-run request. Default to false. 
-- true: Only a dry-run request is sent and no instance is created. The system checks whether the required parameters are set, and validates the request format, service permissions, and available ECS instances. If the validation fails, the corresponding error code is returned. If the validation succeeds, the `DryRunOperation` error code is returned.
-- false: A request is sent. If the validation succeeds, the instance is created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Force<wbr>Delete</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}If it is true, the "PrePaid" instance will be change to "PostPaid" and then deleted forcibly.
-However, because of changing instance charge type has CPU core count quota limitation, so strongly recommand that "Don't modify instance charge type frequentlly in one month".
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Host<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Host name of the ECS, which is a string of at least two characters. “hostname” cannot start or end with “.” or “-“. In addition, two or more consecutive “.” or “-“ symbols are not allowed. On Windows, the host name can contain a maximum of 15 characters, which can be a combination of uppercase/lowercase letters, numerals, and “-“. The host name cannot contain dots (“.”) or contain only numeric characters. When it is changed, the instance will reboot to make the change take effect.
-On other OSs such as Linux, the host name can contain a maximum of 30 characters, which can be segments separated by dots (“.”), where each segment can contain uppercase/lowercase letters, numerals, or “_“. When it is changed, the instance will reboot to make the change take effect.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Image<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Image to use for the instance. ECS instance's image can be replaced via changing 'image_id'. When it is changed, the instance will reboot to make the change take effect.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Include<wbr>Data<wbr>Disks</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Whether to change instance disks charge type when changing instance charge type.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Instance<wbr>Charge<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Valid values are `PrePaid`, `PostPaid`, The default is `PostPaid`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Instance<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Instance<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The type of instance to start. When it is changed, the instance will reboot to make the change take effect.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Internet<wbr>Charge<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Internet charge type of the instance, Valid values are `PayByBandwidth`, `PayByTraffic`. Default is `PayByTraffic`. At present, 'PrePaid' instance cannot change the value to "PayByBandwidth" from "PayByTraffic".
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Internet<wbr>Max<wbr>Bandwidth<wbr>In</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Maximum incoming bandwidth from the public network, measured in Mbps (Mega bit per second). Value range: [1, 200]. If this value is not specified, then automatically sets it to 200 Mbps.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Internet<wbr>Max<wbr>Bandwidth<wbr>Out</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}Maximum outgoing bandwidth to the public network, measured in Mbps (Mega bit per second). Value range:  [0, 100]. Default to 0 Mbps.
-{{% /md %}}</dd>
-
-    <dt class="property- property-deprecated"
-            title=", Deprecated">
-        <span>Io<wbr>Optimized</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}It has been deprecated on instance resource. All the launched alicloud instances will be I/O optimized.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute io_optimized has been deprecated on instance resource. All the launched alicloud instances will be IO optimized. Suggest to remove it from your template.{{% /md %}}</p></dd>
-
-    <dt class="property-"
-            title="">
-        <span>Is<wbr>Outdated</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Whether to use outdated instance type. Default to false.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Key<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of key pair that can login ECS instance successfully without password. If it is specified, the password would be invalid.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Kms<wbr>Encrypted<wbr>Password</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}An KMS encrypts password used to an instance. If the `password` is filled in, this field will be ignored. When it is changed, the instance will reboot to make the change take effect.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Kms<wbr>Encryption<wbr>Context</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
-    </dt>
-    <dd>{{% md %}}An KMS encryption context used to decrypt `kms_encrypted_password` before creating or updating an instance with `kms_encrypted_password`. See [Encryption Context](https://www.alibabacloud.com/help/doc-detail/42975.htm). It is valid when `kms_encrypted_password` is set. When it is changed, the instance will reboot to make the change take effect.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Password</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Password to an instance is a string of 8 to 30 characters. It must contain uppercase/lowercase letters and numerals, but cannot contain special symbols. When it is changed, the instance will reboot to make the change take effect.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Period</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}The duration that you will buy the resource, in month. It is valid when `instance_charge_type` is `PrePaid`. Default to 1. Valid values:
-- [1-9, 12, 24, 36, 48, 60] when `period_unit` in "Month"
-- [1-3] when `period_unit` in "Week"
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Period<wbr>Unit</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The duration unit that you will buy the resource. It is valid when `instance_charge_type` is 'PrePaid'. Valid value: ["Week", "Month"]. Default to "Month".
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Private<wbr>Ip</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Instance private IP address can be specified when you creating new instance. It is valid when `vswitch_id` is specified. When it is changed, the instance will reboot to make the change take effect.
-{{% /md %}}</dd>
-
     <dt class="property-"
             title="">
         <span>Public<wbr>Ip</span>
@@ -2502,157 +1830,11 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
 
     <dt class="property-"
             title="">
-        <span>Renewal<wbr>Status</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Whether to renew an ECS instance automatically or not. It is valid when `instance_charge_type` is `PrePaid`. Default to "Normal". Valid values:
-- `AutoRenewal`: Enable auto renewal.
-- `Normal`: Disable auto renewal.
-- `NotRenewal`: No renewal any longer. After you specify this value, Alibaba Cloud stop sending notification of instance expiry, and only gives a brief reminder on the third day before the instance expiry.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Resource<wbr>Group<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The Id of resource group which the instance belongs.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Role<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Instance RAM role name. The name is provided and maintained by RAM. You can use `alicloud.ram.Role` to create a new one.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Security<wbr>Enhancement<wbr>Strategy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The security enhancement strategy.
-- Active: Enable security enhancement strategy, it only works on system images.
-- Deactive: Disable security enhancement strategy, it works on all images.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Security<wbr>Groups</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}A list of security group ids to associate with.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Spot<wbr>Price<wbr>Limit</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*float64</span>
-    </dt>
-    <dd>{{% md %}}The hourly price threshold of a instance, and it takes effect only when parameter 'spot_strategy' is 'SpotWithPriceLimit'. Three decimals is allowed at most.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Spot<wbr>Strategy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The spot strategy of a Pay-As-You-Go instance, and it takes effect only when parameter `instance_charge_type` is 'PostPaid'. Value range:
-- NoSpot: A regular Pay-As-You-Go instance.
-- SpotWithPriceLimit: A price threshold for a spot instance
-- SpotAsPriceGo: A price that is based on the highest Pay-As-You-Go instance
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Status</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The instance status.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Subnet<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>System<wbr>Disk<wbr>Auto<wbr>Snapshot<wbr>Policy<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the automatic snapshot policy applied to the system disk.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>System<wbr>Disk<wbr>Category</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Valid values are `ephemeral_ssd`, `cloud_efficiency`, `cloud_ssd`, `cloud_essd`, `cloud`. `cloud` only is used to some none I/O optimized instance. Default to `cloud_efficiency`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>System<wbr>Disk<wbr>Size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}Size of the system disk, measured in GiB. Value range: [20, 500]. The specified value must be equal to or greater than max{20, Imagesize}. Default value: max{40, ImageSize}. ECS instance's system disk can be reset when replacing system disk. When it is changed, the instance will reboot to make the change take effect.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
-- Key: It can be up to 64 characters in length. It cannot begin with "aliyun", "acs:", "http://", or "https://". It cannot be a null string.
-- Value: It can be up to 128 characters in length. It cannot begin with "aliyun", "acs:", "http://", or "https://". It can be a null string.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>User<wbr>Data</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}User-defined data to customize the startup behaviors of an ECS instance and to pass data into an ECS instance. From version 1.60.0, it can be update in-place. If updated, the instance will reboot to make the change take effect. Note: Not all of changes will take effect and it depends on [cloud-init module type](https://cloudinit.readthedocs.io/en/latest/topics/modules.html).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Volume<wbr>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the devices created by the instance at launch time.
-- Key: It can be up to 64 characters in length. It cannot begin with "aliyun", "acs:", "http://", or "https://". It cannot be a null string.
-- Value: It can be up to 128 characters in length. It cannot begin with "aliyun", "acs:", "http://", or "https://". It can be a null string.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Vswitch<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The virtual switch ID to launch in VPC. This parameter must be set unless you can create classic network instances. When it is changed, the instance will reboot to make the change take effect.
 {{% /md %}}</dd>
 
 </dl>
@@ -2661,269 +1843,6 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property- property-deprecated"
-            title=", Deprecated">
-        <span>allocate<wbr>Public<wbr>Ip</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}It has been deprecated from version "1.7.0". Setting "internet_max_bandwidth_out" larger than 0 can allocate a public ip address for an instance.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;allocate_public_ip&#39; has been deprecated from provider version 1.6.1. Setting &#39;internet_max_bandwidth_out&#39; larger than 0 will allocate public ip for instance.{{% /md %}}</p></dd>
-
-    <dt class="property-"
-            title="">
-        <span>auto<wbr>Release<wbr>Time</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The automatic release time of the `PostPaid` instance. 
-The time follows the ISO 8601 standard and is in UTC time. Format: yyyy-MM-ddTHH:mm:ssZ. It must be at least half an hour later than the current time and less than 3 years since the current time.
-Set it to null can cancel automatic release attribute and the ECS instance will not be released automatically.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>auto<wbr>Renew<wbr>Period</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}Auto renewal period of an instance, in the unit of month. It is valid when `instance_charge_type` is `PrePaid`. Default to 1. Valid value:
-- [1, 2, 3, 6, 12] when `period_unit` in "Month"
-- [1, 2, 3] when `period_unit` in "Week"
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>availability<wbr>Zone</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Zone to start the instance in. It is ignored and will be computed when set `vswitch_id`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>credit<wbr>Specification</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Performance mode of the t5 burstable instance. Valid values: 'Standard', 'Unlimited'.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>data<wbr>Disks</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancedatadisk">Instance<wbr>Data<wbr>Disk[]?</a></span>
-    </dt>
-    <dd>{{% md %}}The list of data disks created with instance.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>deletion<wbr>Protection</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Whether enable the deletion protection or not.
-- true: Enable deletion protection.
-- false: Disable deletion protection.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The description of the data disk.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>dry<wbr>Run</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Specifies whether to send a dry-run request. Default to false. 
-- true: Only a dry-run request is sent and no instance is created. The system checks whether the required parameters are set, and validates the request format, service permissions, and available ECS instances. If the validation fails, the corresponding error code is returned. If the validation succeeds, the `DryRunOperation` error code is returned.
-- false: A request is sent. If the validation succeeds, the instance is created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>force<wbr>Delete</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}If it is true, the "PrePaid" instance will be change to "PostPaid" and then deleted forcibly.
-However, because of changing instance charge type has CPU core count quota limitation, so strongly recommand that "Don't modify instance charge type frequentlly in one month".
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>host<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Host name of the ECS, which is a string of at least two characters. “hostname” cannot start or end with “.” or “-“. In addition, two or more consecutive “.” or “-“ symbols are not allowed. On Windows, the host name can contain a maximum of 15 characters, which can be a combination of uppercase/lowercase letters, numerals, and “-“. The host name cannot contain dots (“.”) or contain only numeric characters. When it is changed, the instance will reboot to make the change take effect.
-On other OSs such as Linux, the host name can contain a maximum of 30 characters, which can be segments separated by dots (“.”), where each segment can contain uppercase/lowercase letters, numerals, or “_“. When it is changed, the instance will reboot to make the change take effect.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>image<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Image to use for the instance. ECS instance's image can be replaced via changing 'image_id'. When it is changed, the instance will reboot to make the change take effect.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>include<wbr>Data<wbr>Disks</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Whether to change instance disks charge type when changing instance charge type.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>instance<wbr>Charge<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Valid values are `PrePaid`, `PostPaid`, The default is `PostPaid`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>instance<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>instance<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The type of instance to start. When it is changed, the instance will reboot to make the change take effect.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>internet<wbr>Charge<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Internet charge type of the instance, Valid values are `PayByBandwidth`, `PayByTraffic`. Default is `PayByTraffic`. At present, 'PrePaid' instance cannot change the value to "PayByBandwidth" from "PayByTraffic".
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>internet<wbr>Max<wbr>Bandwidth<wbr>In</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}Maximum incoming bandwidth from the public network, measured in Mbps (Mega bit per second). Value range: [1, 200]. If this value is not specified, then automatically sets it to 200 Mbps.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>internet<wbr>Max<wbr>Bandwidth<wbr>Out</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}Maximum outgoing bandwidth to the public network, measured in Mbps (Mega bit per second). Value range:  [0, 100]. Default to 0 Mbps.
-{{% /md %}}</dd>
-
-    <dt class="property- property-deprecated"
-            title=", Deprecated">
-        <span>io<wbr>Optimized</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}It has been deprecated on instance resource. All the launched alicloud instances will be I/O optimized.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute io_optimized has been deprecated on instance resource. All the launched alicloud instances will be IO optimized. Suggest to remove it from your template.{{% /md %}}</p></dd>
-
-    <dt class="property-"
-            title="">
-        <span>is<wbr>Outdated</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Whether to use outdated instance type. Default to false.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>key<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of key pair that can login ECS instance successfully without password. If it is specified, the password would be invalid.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>kms<wbr>Encrypted<wbr>Password</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}An KMS encrypts password used to an instance. If the `password` is filled in, this field will be ignored. When it is changed, the instance will reboot to make the change take effect.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>kms<wbr>Encryption<wbr>Context</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
-    </dt>
-    <dd>{{% md %}}An KMS encryption context used to decrypt `kms_encrypted_password` before creating or updating an instance with `kms_encrypted_password`. See [Encryption Context](https://www.alibabacloud.com/help/doc-detail/42975.htm). It is valid when `kms_encrypted_password` is set. When it is changed, the instance will reboot to make the change take effect.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>password</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Password to an instance is a string of 8 to 30 characters. It must contain uppercase/lowercase letters and numerals, but cannot contain special symbols. When it is changed, the instance will reboot to make the change take effect.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>period</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}The duration that you will buy the resource, in month. It is valid when `instance_charge_type` is `PrePaid`. Default to 1. Valid values:
-- [1-9, 12, 24, 36, 48, 60] when `period_unit` in "Month"
-- [1-3] when `period_unit` in "Week"
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>period<wbr>Unit</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The duration unit that you will buy the resource. It is valid when `instance_charge_type` is 'PrePaid'. Valid value: ["Week", "Month"]. Default to "Month".
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>private<wbr>Ip</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Instance private IP address can be specified when you creating new instance. It is valid when `vswitch_id` is specified. When it is changed, the instance will reboot to make the change take effect.
-{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -2936,157 +1855,11 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
 
     <dt class="property-"
             title="">
-        <span>renewal<wbr>Status</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Whether to renew an ECS instance automatically or not. It is valid when `instance_charge_type` is `PrePaid`. Default to "Normal". Valid values:
-- `AutoRenewal`: Enable auto renewal.
-- `Normal`: Disable auto renewal.
-- `NotRenewal`: No renewal any longer. After you specify this value, Alibaba Cloud stop sending notification of instance expiry, and only gives a brief reminder on the third day before the instance expiry.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>resource<wbr>Group<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The Id of resource group which the instance belongs.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>role<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Instance RAM role name. The name is provided and maintained by RAM. You can use `alicloud.ram.Role` to create a new one.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>security<wbr>Enhancement<wbr>Strategy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The security enhancement strategy.
-- Active: Enable security enhancement strategy, it only works on system images.
-- Deactive: Disable security enhancement strategy, it works on all images.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>security<wbr>Groups</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
-    </dt>
-    <dd>{{% md %}}A list of security group ids to associate with.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>spot<wbr>Price<wbr>Limit</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}The hourly price threshold of a instance, and it takes effect only when parameter 'spot_strategy' is 'SpotWithPriceLimit'. Three decimals is allowed at most.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>spot<wbr>Strategy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The spot strategy of a Pay-As-You-Go instance, and it takes effect only when parameter `instance_charge_type` is 'PostPaid'. Value range:
-- NoSpot: A regular Pay-As-You-Go instance.
-- SpotWithPriceLimit: A price threshold for a spot instance
-- SpotAsPriceGo: A price that is based on the highest Pay-As-You-Go instance
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>status</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The instance status.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>subnet<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>system<wbr>Disk<wbr>Auto<wbr>Snapshot<wbr>Policy<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The ID of the automatic snapshot policy applied to the system disk.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>system<wbr>Disk<wbr>Category</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Valid values are `ephemeral_ssd`, `cloud_efficiency`, `cloud_ssd`, `cloud_essd`, `cloud`. `cloud` only is used to some none I/O optimized instance. Default to `cloud_efficiency`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>system<wbr>Disk<wbr>Size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}Size of the system disk, measured in GiB. Value range: [20, 500]. The specified value must be equal to or greater than max{20, Imagesize}. Default value: max{40, ImageSize}. ECS instance's system disk can be reset when replacing system disk. When it is changed, the instance will reboot to make the change take effect.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
-- Key: It can be up to 64 characters in length. It cannot begin with "aliyun", "acs:", "http://", or "https://". It cannot be a null string.
-- Value: It can be up to 128 characters in length. It cannot begin with "aliyun", "acs:", "http://", or "https://". It can be a null string.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>user<wbr>Data</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}User-defined data to customize the startup behaviors of an ECS instance and to pass data into an ECS instance. From version 1.60.0, it can be update in-place. If updated, the instance will reboot to make the change take effect. Note: Not all of changes will take effect and it depends on [cloud-init module type](https://cloudinit.readthedocs.io/en/latest/topics/modules.html).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>volume<wbr>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the devices created by the instance at launch time.
-- Key: It can be up to 64 characters in length. It cannot begin with "aliyun", "acs:", "http://", or "https://". It cannot be a null string.
-- Value: It can be up to 128 characters in length. It cannot begin with "aliyun", "acs:", "http://", or "https://". It can be a null string.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>vswitch<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The virtual switch ID to launch in VPC. This parameter must be set unless you can create classic network instances. When it is changed, the instance will reboot to make the change take effect.
 {{% /md %}}</dd>
 
 </dl>
@@ -3095,269 +1868,6 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
-    <dt class="property- property-deprecated"
-            title=", Deprecated">
-        <span>allocate_<wbr>public_<wbr>ip</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}It has been deprecated from version "1.7.0". Setting "internet_max_bandwidth_out" larger than 0 can allocate a public ip address for an instance.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;allocate_public_ip&#39; has been deprecated from provider version 1.6.1. Setting &#39;internet_max_bandwidth_out&#39; larger than 0 will allocate public ip for instance.{{% /md %}}</p></dd>
-
-    <dt class="property-"
-            title="">
-        <span>auto_<wbr>release_<wbr>time</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The automatic release time of the `PostPaid` instance. 
-The time follows the ISO 8601 standard and is in UTC time. Format: yyyy-MM-ddTHH:mm:ssZ. It must be at least half an hour later than the current time and less than 3 years since the current time.
-Set it to null can cancel automatic release attribute and the ECS instance will not be released automatically.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>auto_<wbr>renew_<wbr>period</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}Auto renewal period of an instance, in the unit of month. It is valid when `instance_charge_type` is `PrePaid`. Default to 1. Valid value:
-- [1, 2, 3, 6, 12] when `period_unit` in "Month"
-- [1, 2, 3] when `period_unit` in "Week"
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>availability_<wbr>zone</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The Zone to start the instance in. It is ignored and will be computed when set `vswitch_id`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>credit_<wbr>specification</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Performance mode of the t5 burstable instance. Valid values: 'Standard', 'Unlimited'.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>data_<wbr>disks</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancedatadisk">List[Instance<wbr>Data<wbr>Disk]</a></span>
-    </dt>
-    <dd>{{% md %}}The list of data disks created with instance.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>deletion_<wbr>protection</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Whether enable the deletion protection or not.
-- true: Enable deletion protection.
-- false: Disable deletion protection.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The description of the data disk.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>dry_<wbr>run</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Specifies whether to send a dry-run request. Default to false. 
-- true: Only a dry-run request is sent and no instance is created. The system checks whether the required parameters are set, and validates the request format, service permissions, and available ECS instances. If the validation fails, the corresponding error code is returned. If the validation succeeds, the `DryRunOperation` error code is returned.
-- false: A request is sent. If the validation succeeds, the instance is created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>force_<wbr>delete</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}If it is true, the "PrePaid" instance will be change to "PostPaid" and then deleted forcibly.
-However, because of changing instance charge type has CPU core count quota limitation, so strongly recommand that "Don't modify instance charge type frequentlly in one month".
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>host_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Host name of the ECS, which is a string of at least two characters. “hostname” cannot start or end with “.” or “-“. In addition, two or more consecutive “.” or “-“ symbols are not allowed. On Windows, the host name can contain a maximum of 15 characters, which can be a combination of uppercase/lowercase letters, numerals, and “-“. The host name cannot contain dots (“.”) or contain only numeric characters. When it is changed, the instance will reboot to make the change take effect.
-On other OSs such as Linux, the host name can contain a maximum of 30 characters, which can be segments separated by dots (“.”), where each segment can contain uppercase/lowercase letters, numerals, or “_“. When it is changed, the instance will reboot to make the change take effect.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>image_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The Image to use for the instance. ECS instance's image can be replaced via changing 'image_id'. When it is changed, the instance will reboot to make the change take effect.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>include_<wbr>data_<wbr>disks</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Whether to change instance disks charge type when changing instance charge type.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>instance_<wbr>charge_<wbr>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Valid values are `PrePaid`, `PostPaid`, The default is `PostPaid`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>instance_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>instance_<wbr>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The type of instance to start. When it is changed, the instance will reboot to make the change take effect.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>internet_<wbr>charge_<wbr>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Internet charge type of the instance, Valid values are `PayByBandwidth`, `PayByTraffic`. Default is `PayByTraffic`. At present, 'PrePaid' instance cannot change the value to "PayByBandwidth" from "PayByTraffic".
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>internet_<wbr>max_<wbr>bandwidth_<wbr>in</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}Maximum incoming bandwidth from the public network, measured in Mbps (Mega bit per second). Value range: [1, 200]. If this value is not specified, then automatically sets it to 200 Mbps.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>internet_<wbr>max_<wbr>bandwidth_<wbr>out</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}Maximum outgoing bandwidth to the public network, measured in Mbps (Mega bit per second). Value range:  [0, 100]. Default to 0 Mbps.
-{{% /md %}}</dd>
-
-    <dt class="property- property-deprecated"
-            title=", Deprecated">
-        <span>io_<wbr>optimized</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}It has been deprecated on instance resource. All the launched alicloud instances will be I/O optimized.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute io_optimized has been deprecated on instance resource. All the launched alicloud instances will be IO optimized. Suggest to remove it from your template.{{% /md %}}</p></dd>
-
-    <dt class="property-"
-            title="">
-        <span>is_<wbr>outdated</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Whether to use outdated instance type. Default to false.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>key_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of key pair that can login ECS instance successfully without password. If it is specified, the password would be invalid.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>kms_<wbr>encrypted_<wbr>password</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}An KMS encrypts password used to an instance. If the `password` is filled in, this field will be ignored. When it is changed, the instance will reboot to make the change take effect.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>kms_<wbr>encryption_<wbr>context</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
-    </dt>
-    <dd>{{% md %}}An KMS encryption context used to decrypt `kms_encrypted_password` before creating or updating an instance with `kms_encrypted_password`. See [Encryption Context](https://www.alibabacloud.com/help/doc-detail/42975.htm). It is valid when `kms_encrypted_password` is set. When it is changed, the instance will reboot to make the change take effect.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>password</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Password to an instance is a string of 8 to 30 characters. It must contain uppercase/lowercase letters and numerals, but cannot contain special symbols. When it is changed, the instance will reboot to make the change take effect.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>period</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The duration that you will buy the resource, in month. It is valid when `instance_charge_type` is `PrePaid`. Default to 1. Valid values:
-- [1-9, 12, 24, 36, 48, 60] when `period_unit` in "Month"
-- [1-3] when `period_unit` in "Week"
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>period_<wbr>unit</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The duration unit that you will buy the resource. It is valid when `instance_charge_type` is 'PrePaid'. Valid value: ["Week", "Month"]. Default to "Month".
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>private_<wbr>ip</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Instance private IP address can be specified when you creating new instance. It is valid when `vswitch_id` is specified. When it is changed, the instance will reboot to make the change take effect.
-{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -3370,157 +1880,11 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
 
     <dt class="property-"
             title="">
-        <span>renewal_<wbr>status</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Whether to renew an ECS instance automatically or not. It is valid when `instance_charge_type` is `PrePaid`. Default to "Normal". Valid values:
-- `AutoRenewal`: Enable auto renewal.
-- `Normal`: Disable auto renewal.
-- `NotRenewal`: No renewal any longer. After you specify this value, Alibaba Cloud stop sending notification of instance expiry, and only gives a brief reminder on the third day before the instance expiry.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>resource_<wbr>group_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The Id of resource group which the instance belongs.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>role_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Instance RAM role name. The name is provided and maintained by RAM. You can use `alicloud.ram.Role` to create a new one.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>security_<wbr>enhancement_<wbr>strategy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The security enhancement strategy.
-- Active: Enable security enhancement strategy, it only works on system images.
-- Deactive: Disable security enhancement strategy, it works on all images.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>security_<wbr>groups</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}A list of security group ids to associate with.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>spot_<wbr>price_<wbr>limit</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The hourly price threshold of a instance, and it takes effect only when parameter 'spot_strategy' is 'SpotWithPriceLimit'. Three decimals is allowed at most.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>spot_<wbr>strategy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The spot strategy of a Pay-As-You-Go instance, and it takes effect only when parameter `instance_charge_type` is 'PostPaid'. Value range:
-- NoSpot: A regular Pay-As-You-Go instance.
-- SpotWithPriceLimit: A price threshold for a spot instance
-- SpotAsPriceGo: A price that is based on the highest Pay-As-You-Go instance
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>status</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The instance status.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>subnet_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>system_<wbr>disk_<wbr>auto_<wbr>snapshot_<wbr>policy_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The ID of the automatic snapshot policy applied to the system disk.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>system_<wbr>disk_<wbr>category</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Valid values are `ephemeral_ssd`, `cloud_efficiency`, `cloud_ssd`, `cloud_essd`, `cloud`. `cloud` only is used to some none I/O optimized instance. Default to `cloud_efficiency`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>system_<wbr>disk_<wbr>size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}Size of the system disk, measured in GiB. Value range: [20, 500]. The specified value must be equal to or greater than max{20, Imagesize}. Default value: max{40, ImageSize}. ECS instance's system disk can be reset when replacing system disk. When it is changed, the instance will reboot to make the change take effect.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
-- Key: It can be up to 64 characters in length. It cannot begin with "aliyun", "acs:", "http://", or "https://". It cannot be a null string.
-- Value: It can be up to 128 characters in length. It cannot begin with "aliyun", "acs:", "http://", or "https://". It can be a null string.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>user_<wbr>data</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}User-defined data to customize the startup behaviors of an ECS instance and to pass data into an ECS instance. From version 1.60.0, it can be update in-place. If updated, the instance will reboot to make the change take effect. Note: Not all of changes will take effect and it depends on [cloud-init module type](https://cloudinit.readthedocs.io/en/latest/topics/modules.html).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>volume_<wbr>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the devices created by the instance at launch time.
-- Key: It can be up to 64 characters in length. It cannot begin with "aliyun", "acs:", "http://", or "https://". It cannot be a null string.
-- Value: It can be up to 128 characters in length. It cannot begin with "aliyun", "acs:", "http://", or "https://". It can be a null string.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>vswitch_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The virtual switch ID to launch in VPC. This parameter must be set unless you can create classic network instances. When it is changed, the instance will reboot to make the change take effect.
 {{% /md %}}</dd>
 
 </dl>
@@ -3662,7 +2026,7 @@ The following state arguments are supported:
             title="Optional, Deprecated">
         <span>Allocate<wbr>Public<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}It has been deprecated from version "1.7.0". Setting "internet_max_bandwidth_out" larger than 0 can allocate a public ip address for an instance.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;allocate_public_ip&#39; has been deprecated from provider version 1.6.1. Setting &#39;internet_max_bandwidth_out&#39; larger than 0 will allocate public ip for instance.{{% /md %}}</p></dd>
@@ -3671,7 +2035,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Auto<wbr>Release<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The automatic release time of the `PostPaid` instance. 
 The time follows the ISO 8601 standard and is in UTC time. Format: yyyy-MM-ddTHH:mm:ssZ. It must be at least half an hour later than the current time and less than 3 years since the current time.
@@ -3682,7 +2046,7 @@ Set it to null can cancel automatic release attribute and the ECS instance will 
             title="Optional">
         <span>Auto<wbr>Renew<wbr>Period</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Auto renewal period of an instance, in the unit of month. It is valid when `instance_charge_type` is `PrePaid`. Default to 1. Valid value:
 - [1, 2, 3, 6, 12] when `period_unit` in "Month"
@@ -3693,7 +2057,7 @@ Set it to null can cancel automatic release attribute and the ECS instance will 
             title="Optional">
         <span>Availability<wbr>Zone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Zone to start the instance in. It is ignored and will be computed when set `vswitch_id`.
 {{% /md %}}</dd>
@@ -3702,7 +2066,7 @@ Set it to null can cancel automatic release attribute and the ECS instance will 
             title="Optional">
         <span>Credit<wbr>Specification</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Performance mode of the t5 burstable instance. Valid values: 'Standard', 'Unlimited'.
 {{% /md %}}</dd>
@@ -3711,7 +2075,7 @@ Set it to null can cancel automatic release attribute and the ECS instance will 
             title="Optional">
         <span>Data<wbr>Disks</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancedatadisk">List&lt;Instance<wbr>Data<wbr>Disk<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#instancedatadisk">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Ecs.<wbr>Inputs.<wbr>Instance<wbr>Data<wbr>Disk<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of data disks created with instance.
 {{% /md %}}</dd>
@@ -3720,7 +2084,7 @@ Set it to null can cancel automatic release attribute and the ECS instance will 
             title="Optional">
         <span>Deletion<wbr>Protection</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether enable the deletion protection or not.
 - true: Enable deletion protection.
@@ -3731,7 +2095,7 @@ Set it to null can cancel automatic release attribute and the ECS instance will 
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the data disk.
 {{% /md %}}</dd>
@@ -3740,7 +2104,7 @@ Set it to null can cancel automatic release attribute and the ECS instance will 
             title="Optional">
         <span>Dry<wbr>Run</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether to send a dry-run request. Default to false. 
 - true: Only a dry-run request is sent and no instance is created. The system checks whether the required parameters are set, and validates the request format, service permissions, and available ECS instances. If the validation fails, the corresponding error code is returned. If the validation succeeds, the `DryRunOperation` error code is returned.
@@ -3751,7 +2115,7 @@ Set it to null can cancel automatic release attribute and the ECS instance will 
             title="Optional">
         <span>Force<wbr>Delete</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If it is true, the "PrePaid" instance will be change to "PostPaid" and then deleted forcibly.
 However, because of changing instance charge type has CPU core count quota limitation, so strongly recommand that "Don't modify instance charge type frequentlly in one month".
@@ -3761,7 +2125,7 @@ However, because of changing instance charge type has CPU core count quota limit
             title="Optional">
         <span>Host<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Host name of the ECS, which is a string of at least two characters. “hostname” cannot start or end with “.” or “-“. In addition, two or more consecutive “.” or “-“ symbols are not allowed. On Windows, the host name can contain a maximum of 15 characters, which can be a combination of uppercase/lowercase letters, numerals, and “-“. The host name cannot contain dots (“.”) or contain only numeric characters. When it is changed, the instance will reboot to make the change take effect.
 On other OSs such as Linux, the host name can contain a maximum of 30 characters, which can be segments separated by dots (“.”), where each segment can contain uppercase/lowercase letters, numerals, or “_“. When it is changed, the instance will reboot to make the change take effect.
@@ -3771,7 +2135,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>Image<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Image to use for the instance. ECS instance's image can be replaced via changing 'image_id'. When it is changed, the instance will reboot to make the change take effect.
 {{% /md %}}</dd>
@@ -3780,7 +2144,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>Include<wbr>Data<wbr>Disks</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to change instance disks charge type when changing instance charge type.
 {{% /md %}}</dd>
@@ -3789,7 +2153,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>Instance<wbr>Charge<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values are `PrePaid`, `PostPaid`, The default is `PostPaid`.
 {{% /md %}}</dd>
@@ -3798,7 +2162,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>Instance<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3806,7 +2170,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>Instance<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of instance to start. When it is changed, the instance will reboot to make the change take effect.
 {{% /md %}}</dd>
@@ -3815,7 +2179,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>Internet<wbr>Charge<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Internet charge type of the instance, Valid values are `PayByBandwidth`, `PayByTraffic`. Default is `PayByTraffic`. At present, 'PrePaid' instance cannot change the value to "PayByBandwidth" from "PayByTraffic".
 {{% /md %}}</dd>
@@ -3824,7 +2188,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>Internet<wbr>Max<wbr>Bandwidth<wbr>In</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum incoming bandwidth from the public network, measured in Mbps (Mega bit per second). Value range: [1, 200]. If this value is not specified, then automatically sets it to 200 Mbps.
 {{% /md %}}</dd>
@@ -3833,7 +2197,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>Internet<wbr>Max<wbr>Bandwidth<wbr>Out</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum outgoing bandwidth to the public network, measured in Mbps (Mega bit per second). Value range:  [0, 100]. Default to 0 Mbps.
 {{% /md %}}</dd>
@@ -3842,7 +2206,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional, Deprecated">
         <span>Io<wbr>Optimized</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}It has been deprecated on instance resource. All the launched alicloud instances will be I/O optimized.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute io_optimized has been deprecated on instance resource. All the launched alicloud instances will be IO optimized. Suggest to remove it from your template.{{% /md %}}</p></dd>
@@ -3851,7 +2215,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>Is<wbr>Outdated</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to use outdated instance type. Default to false.
 {{% /md %}}</dd>
@@ -3860,7 +2224,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>Key<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of key pair that can login ECS instance successfully without password. If it is specified, the password would be invalid.
 {{% /md %}}</dd>
@@ -3869,7 +2233,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>Kms<wbr>Encrypted<wbr>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An KMS encrypts password used to an instance. If the `password` is filled in, this field will be ignored. When it is changed, the instance will reboot to make the change take effect.
 {{% /md %}}</dd>
@@ -3878,7 +2242,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>Kms<wbr>Encryption<wbr>Context</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}An KMS encryption context used to decrypt `kms_encrypted_password` before creating or updating an instance with `kms_encrypted_password`. See [Encryption Context](https://www.alibabacloud.com/help/doc-detail/42975.htm). It is valid when `kms_encrypted_password` is set. When it is changed, the instance will reboot to make the change take effect.
 {{% /md %}}</dd>
@@ -3887,7 +2251,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password to an instance is a string of 8 to 30 characters. It must contain uppercase/lowercase letters and numerals, but cannot contain special symbols. When it is changed, the instance will reboot to make the change take effect.
 {{% /md %}}</dd>
@@ -3896,7 +2260,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>Period</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The duration that you will buy the resource, in month. It is valid when `instance_charge_type` is `PrePaid`. Default to 1. Valid values:
 - [1-9, 12, 24, 36, 48, 60] when `period_unit` in "Month"
@@ -3907,7 +2271,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>Period<wbr>Unit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The duration unit that you will buy the resource. It is valid when `instance_charge_type` is 'PrePaid'. Valid value: ["Week", "Month"]. Default to "Month".
 {{% /md %}}</dd>
@@ -3916,7 +2280,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>Private<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Instance private IP address can be specified when you creating new instance. It is valid when `vswitch_id` is specified. When it is changed, the instance will reboot to make the change take effect.
 {{% /md %}}</dd>
@@ -3925,7 +2289,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>Public<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The instance public ip.
 {{% /md %}}</dd>
@@ -3934,7 +2298,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>Renewal<wbr>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether to renew an ECS instance automatically or not. It is valid when `instance_charge_type` is `PrePaid`. Default to "Normal". Valid values:
 - `AutoRenewal`: Enable auto renewal.
@@ -3946,7 +2310,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>Resource<wbr>Group<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Id of resource group which the instance belongs.
 {{% /md %}}</dd>
@@ -3955,7 +2319,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>Role<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Instance RAM role name. The name is provided and maintained by RAM. You can use `alicloud.ram.Role` to create a new one.
 {{% /md %}}</dd>
@@ -3964,7 +2328,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>Security<wbr>Enhancement<wbr>Strategy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The security enhancement strategy.
 - Active: Enable security enhancement strategy, it only works on system images.
@@ -3975,7 +2339,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>Security<wbr>Groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of security group ids to associate with.
 {{% /md %}}</dd>
@@ -3984,7 +2348,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>Spot<wbr>Price<wbr>Limit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">double?</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}The hourly price threshold of a instance, and it takes effect only when parameter 'spot_strategy' is 'SpotWithPriceLimit'. Three decimals is allowed at most.
 {{% /md %}}</dd>
@@ -3993,7 +2357,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>Spot<wbr>Strategy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The spot strategy of a Pay-As-You-Go instance, and it takes effect only when parameter `instance_charge_type` is 'PostPaid'. Value range:
 - NoSpot: A regular Pay-As-You-Go instance.
@@ -4005,7 +2369,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The instance status.
 {{% /md %}}</dd>
@@ -4014,7 +2378,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>Subnet<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4022,7 +2386,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>System<wbr>Disk<wbr>Auto<wbr>Snapshot<wbr>Policy<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the automatic snapshot policy applied to the system disk.
 {{% /md %}}</dd>
@@ -4031,7 +2395,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>System<wbr>Disk<wbr>Category</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values are `ephemeral_ssd`, `cloud_efficiency`, `cloud_ssd`, `cloud_essd`, `cloud`. `cloud` only is used to some none I/O optimized instance. Default to `cloud_efficiency`.
 {{% /md %}}</dd>
@@ -4040,7 +2404,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>System<wbr>Disk<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Size of the system disk, measured in GiB. Value range: [20, 500]. The specified value must be equal to or greater than max{20, Imagesize}. Default value: max{40, ImageSize}. ECS instance's system disk can be reset when replacing system disk. When it is changed, the instance will reboot to make the change take effect.
 {{% /md %}}</dd>
@@ -4049,7 +2413,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 - Key: It can be up to 64 characters in length. It cannot begin with "aliyun", "acs:", "http://", or "https://". It cannot be a null string.
@@ -4060,7 +2424,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>User<wbr>Data</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User-defined data to customize the startup behaviors of an ECS instance and to pass data into an ECS instance. From version 1.60.0, it can be update in-place. If updated, the instance will reboot to make the change take effect. Note: Not all of changes will take effect and it depends on [cloud-init module type](https://cloudinit.readthedocs.io/en/latest/topics/modules.html).
 {{% /md %}}</dd>
@@ -4069,7 +2433,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>Volume<wbr>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the devices created by the instance at launch time.
 - Key: It can be up to 64 characters in length. It cannot begin with "aliyun", "acs:", "http://", or "https://". It cannot be a null string.
@@ -4080,7 +2444,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>Vswitch<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The virtual switch ID to launch in VPC. This parameter must be set unless you can create classic network instances. When it is changed, the instance will reboot to make the change take effect.
 {{% /md %}}</dd>
@@ -4096,7 +2460,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional, Deprecated">
         <span>Allocate<wbr>Public<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}It has been deprecated from version "1.7.0". Setting "internet_max_bandwidth_out" larger than 0 can allocate a public ip address for an instance.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;allocate_public_ip&#39; has been deprecated from provider version 1.6.1. Setting &#39;internet_max_bandwidth_out&#39; larger than 0 will allocate public ip for instance.{{% /md %}}</p></dd>
@@ -4105,7 +2469,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>Auto<wbr>Release<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The automatic release time of the `PostPaid` instance. 
 The time follows the ISO 8601 standard and is in UTC time. Format: yyyy-MM-ddTHH:mm:ssZ. It must be at least half an hour later than the current time and less than 3 years since the current time.
@@ -4116,7 +2480,7 @@ Set it to null can cancel automatic release attribute and the ECS instance will 
             title="Optional">
         <span>Auto<wbr>Renew<wbr>Period</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Auto renewal period of an instance, in the unit of month. It is valid when `instance_charge_type` is `PrePaid`. Default to 1. Valid value:
 - [1, 2, 3, 6, 12] when `period_unit` in "Month"
@@ -4127,7 +2491,7 @@ Set it to null can cancel automatic release attribute and the ECS instance will 
             title="Optional">
         <span>Availability<wbr>Zone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Zone to start the instance in. It is ignored and will be computed when set `vswitch_id`.
 {{% /md %}}</dd>
@@ -4136,7 +2500,7 @@ Set it to null can cancel automatic release attribute and the ECS instance will 
             title="Optional">
         <span>Credit<wbr>Specification</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Performance mode of the t5 burstable instance. Valid values: 'Standard', 'Unlimited'.
 {{% /md %}}</dd>
@@ -4154,7 +2518,7 @@ Set it to null can cancel automatic release attribute and the ECS instance will 
             title="Optional">
         <span>Deletion<wbr>Protection</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether enable the deletion protection or not.
 - true: Enable deletion protection.
@@ -4165,7 +2529,7 @@ Set it to null can cancel automatic release attribute and the ECS instance will 
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the data disk.
 {{% /md %}}</dd>
@@ -4174,7 +2538,7 @@ Set it to null can cancel automatic release attribute and the ECS instance will 
             title="Optional">
         <span>Dry<wbr>Run</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether to send a dry-run request. Default to false. 
 - true: Only a dry-run request is sent and no instance is created. The system checks whether the required parameters are set, and validates the request format, service permissions, and available ECS instances. If the validation fails, the corresponding error code is returned. If the validation succeeds, the `DryRunOperation` error code is returned.
@@ -4185,7 +2549,7 @@ Set it to null can cancel automatic release attribute and the ECS instance will 
             title="Optional">
         <span>Force<wbr>Delete</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}If it is true, the "PrePaid" instance will be change to "PostPaid" and then deleted forcibly.
 However, because of changing instance charge type has CPU core count quota limitation, so strongly recommand that "Don't modify instance charge type frequentlly in one month".
@@ -4195,7 +2559,7 @@ However, because of changing instance charge type has CPU core count quota limit
             title="Optional">
         <span>Host<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Host name of the ECS, which is a string of at least two characters. “hostname” cannot start or end with “.” or “-“. In addition, two or more consecutive “.” or “-“ symbols are not allowed. On Windows, the host name can contain a maximum of 15 characters, which can be a combination of uppercase/lowercase letters, numerals, and “-“. The host name cannot contain dots (“.”) or contain only numeric characters. When it is changed, the instance will reboot to make the change take effect.
 On other OSs such as Linux, the host name can contain a maximum of 30 characters, which can be segments separated by dots (“.”), where each segment can contain uppercase/lowercase letters, numerals, or “_“. When it is changed, the instance will reboot to make the change take effect.
@@ -4205,7 +2569,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>Image<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Image to use for the instance. ECS instance's image can be replaced via changing 'image_id'. When it is changed, the instance will reboot to make the change take effect.
 {{% /md %}}</dd>
@@ -4214,7 +2578,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>Include<wbr>Data<wbr>Disks</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to change instance disks charge type when changing instance charge type.
 {{% /md %}}</dd>
@@ -4223,7 +2587,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>Instance<wbr>Charge<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values are `PrePaid`, `PostPaid`, The default is `PostPaid`.
 {{% /md %}}</dd>
@@ -4232,7 +2596,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>Instance<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4240,7 +2604,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>Instance<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of instance to start. When it is changed, the instance will reboot to make the change take effect.
 {{% /md %}}</dd>
@@ -4249,7 +2613,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>Internet<wbr>Charge<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Internet charge type of the instance, Valid values are `PayByBandwidth`, `PayByTraffic`. Default is `PayByTraffic`. At present, 'PrePaid' instance cannot change the value to "PayByBandwidth" from "PayByTraffic".
 {{% /md %}}</dd>
@@ -4258,7 +2622,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>Internet<wbr>Max<wbr>Bandwidth<wbr>In</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum incoming bandwidth from the public network, measured in Mbps (Mega bit per second). Value range: [1, 200]. If this value is not specified, then automatically sets it to 200 Mbps.
 {{% /md %}}</dd>
@@ -4267,7 +2631,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>Internet<wbr>Max<wbr>Bandwidth<wbr>Out</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Maximum outgoing bandwidth to the public network, measured in Mbps (Mega bit per second). Value range:  [0, 100]. Default to 0 Mbps.
 {{% /md %}}</dd>
@@ -4276,7 +2640,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional, Deprecated">
         <span>Io<wbr>Optimized</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}It has been deprecated on instance resource. All the launched alicloud instances will be I/O optimized.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute io_optimized has been deprecated on instance resource. All the launched alicloud instances will be IO optimized. Suggest to remove it from your template.{{% /md %}}</p></dd>
@@ -4285,7 +2649,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>Is<wbr>Outdated</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to use outdated instance type. Default to false.
 {{% /md %}}</dd>
@@ -4294,7 +2658,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>Key<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of key pair that can login ECS instance successfully without password. If it is specified, the password would be invalid.
 {{% /md %}}</dd>
@@ -4303,7 +2667,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>Kms<wbr>Encrypted<wbr>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An KMS encrypts password used to an instance. If the `password` is filled in, this field will be ignored. When it is changed, the instance will reboot to make the change take effect.
 {{% /md %}}</dd>
@@ -4321,7 +2685,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password to an instance is a string of 8 to 30 characters. It must contain uppercase/lowercase letters and numerals, but cannot contain special symbols. When it is changed, the instance will reboot to make the change take effect.
 {{% /md %}}</dd>
@@ -4330,7 +2694,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>Period</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The duration that you will buy the resource, in month. It is valid when `instance_charge_type` is `PrePaid`. Default to 1. Valid values:
 - [1-9, 12, 24, 36, 48, 60] when `period_unit` in "Month"
@@ -4341,7 +2705,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>Period<wbr>Unit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The duration unit that you will buy the resource. It is valid when `instance_charge_type` is 'PrePaid'. Valid value: ["Week", "Month"]. Default to "Month".
 {{% /md %}}</dd>
@@ -4350,7 +2714,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>Private<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Instance private IP address can be specified when you creating new instance. It is valid when `vswitch_id` is specified. When it is changed, the instance will reboot to make the change take effect.
 {{% /md %}}</dd>
@@ -4359,7 +2723,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>Public<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The instance public ip.
 {{% /md %}}</dd>
@@ -4368,7 +2732,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>Renewal<wbr>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether to renew an ECS instance automatically or not. It is valid when `instance_charge_type` is `PrePaid`. Default to "Normal". Valid values:
 - `AutoRenewal`: Enable auto renewal.
@@ -4380,7 +2744,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>Resource<wbr>Group<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Id of resource group which the instance belongs.
 {{% /md %}}</dd>
@@ -4389,7 +2753,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>Role<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Instance RAM role name. The name is provided and maintained by RAM. You can use `alicloud.ram.Role` to create a new one.
 {{% /md %}}</dd>
@@ -4398,7 +2762,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>Security<wbr>Enhancement<wbr>Strategy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The security enhancement strategy.
 - Active: Enable security enhancement strategy, it only works on system images.
@@ -4418,7 +2782,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>Spot<wbr>Price<wbr>Limit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*float64</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}The hourly price threshold of a instance, and it takes effect only when parameter 'spot_strategy' is 'SpotWithPriceLimit'. Three decimals is allowed at most.
 {{% /md %}}</dd>
@@ -4427,7 +2791,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>Spot<wbr>Strategy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The spot strategy of a Pay-As-You-Go instance, and it takes effect only when parameter `instance_charge_type` is 'PostPaid'. Value range:
 - NoSpot: A regular Pay-As-You-Go instance.
@@ -4439,7 +2803,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The instance status.
 {{% /md %}}</dd>
@@ -4448,7 +2812,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>Subnet<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4456,7 +2820,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>System<wbr>Disk<wbr>Auto<wbr>Snapshot<wbr>Policy<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the automatic snapshot policy applied to the system disk.
 {{% /md %}}</dd>
@@ -4465,7 +2829,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>System<wbr>Disk<wbr>Category</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values are `ephemeral_ssd`, `cloud_efficiency`, `cloud_ssd`, `cloud_essd`, `cloud`. `cloud` only is used to some none I/O optimized instance. Default to `cloud_efficiency`.
 {{% /md %}}</dd>
@@ -4474,7 +2838,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>System<wbr>Disk<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Size of the system disk, measured in GiB. Value range: [20, 500]. The specified value must be equal to or greater than max{20, Imagesize}. Default value: max{40, ImageSize}. ECS instance's system disk can be reset when replacing system disk. When it is changed, the instance will reboot to make the change take effect.
 {{% /md %}}</dd>
@@ -4494,7 +2858,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>User<wbr>Data</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User-defined data to customize the startup behaviors of an ECS instance and to pass data into an ECS instance. From version 1.60.0, it can be update in-place. If updated, the instance will reboot to make the change take effect. Note: Not all of changes will take effect and it depends on [cloud-init module type](https://cloudinit.readthedocs.io/en/latest/topics/modules.html).
 {{% /md %}}</dd>
@@ -4514,7 +2878,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>Vswitch<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The virtual switch ID to launch in VPC. This parameter must be set unless you can create classic network instances. When it is changed, the instance will reboot to make the change take effect.
 {{% /md %}}</dd>
@@ -4530,7 +2894,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional, Deprecated">
         <span>allocate<wbr>Public<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}It has been deprecated from version "1.7.0". Setting "internet_max_bandwidth_out" larger than 0 can allocate a public ip address for an instance.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Field &#39;allocate_public_ip&#39; has been deprecated from provider version 1.6.1. Setting &#39;internet_max_bandwidth_out&#39; larger than 0 will allocate public ip for instance.{{% /md %}}</p></dd>
@@ -4539,7 +2903,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>auto<wbr>Release<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The automatic release time of the `PostPaid` instance. 
 The time follows the ISO 8601 standard and is in UTC time. Format: yyyy-MM-ddTHH:mm:ssZ. It must be at least half an hour later than the current time and less than 3 years since the current time.
@@ -4550,7 +2914,7 @@ Set it to null can cancel automatic release attribute and the ECS instance will 
             title="Optional">
         <span>auto<wbr>Renew<wbr>Period</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Auto renewal period of an instance, in the unit of month. It is valid when `instance_charge_type` is `PrePaid`. Default to 1. Valid value:
 - [1, 2, 3, 6, 12] when `period_unit` in "Month"
@@ -4561,7 +2925,7 @@ Set it to null can cancel automatic release attribute and the ECS instance will 
             title="Optional">
         <span>availability<wbr>Zone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Zone to start the instance in. It is ignored and will be computed when set `vswitch_id`.
 {{% /md %}}</dd>
@@ -4570,7 +2934,7 @@ Set it to null can cancel automatic release attribute and the ECS instance will 
             title="Optional">
         <span>credit<wbr>Specification</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Performance mode of the t5 burstable instance. Valid values: 'Standard', 'Unlimited'.
 {{% /md %}}</dd>
@@ -4579,7 +2943,7 @@ Set it to null can cancel automatic release attribute and the ECS instance will 
             title="Optional">
         <span>data<wbr>Disks</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancedatadisk">Instance<wbr>Data<wbr>Disk[]?</a></span>
+        <span class="property-type"><a href="#instancedatadisk">Instance<wbr>Data<wbr>Disk[]</a></span>
     </dt>
     <dd>{{% md %}}The list of data disks created with instance.
 {{% /md %}}</dd>
@@ -4588,7 +2952,7 @@ Set it to null can cancel automatic release attribute and the ECS instance will 
             title="Optional">
         <span>deletion<wbr>Protection</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether enable the deletion protection or not.
 - true: Enable deletion protection.
@@ -4599,7 +2963,7 @@ Set it to null can cancel automatic release attribute and the ECS instance will 
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the data disk.
 {{% /md %}}</dd>
@@ -4608,7 +2972,7 @@ Set it to null can cancel automatic release attribute and the ECS instance will 
             title="Optional">
         <span>dry<wbr>Run</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies whether to send a dry-run request. Default to false. 
 - true: Only a dry-run request is sent and no instance is created. The system checks whether the required parameters are set, and validates the request format, service permissions, and available ECS instances. If the validation fails, the corresponding error code is returned. If the validation succeeds, the `DryRunOperation` error code is returned.
@@ -4619,7 +2983,7 @@ Set it to null can cancel automatic release attribute and the ECS instance will 
             title="Optional">
         <span>force<wbr>Delete</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}If it is true, the "PrePaid" instance will be change to "PostPaid" and then deleted forcibly.
 However, because of changing instance charge type has CPU core count quota limitation, so strongly recommand that "Don't modify instance charge type frequentlly in one month".
@@ -4629,7 +2993,7 @@ However, because of changing instance charge type has CPU core count quota limit
             title="Optional">
         <span>host<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Host name of the ECS, which is a string of at least two characters. “hostname” cannot start or end with “.” or “-“. In addition, two or more consecutive “.” or “-“ symbols are not allowed. On Windows, the host name can contain a maximum of 15 characters, which can be a combination of uppercase/lowercase letters, numerals, and “-“. The host name cannot contain dots (“.”) or contain only numeric characters. When it is changed, the instance will reboot to make the change take effect.
 On other OSs such as Linux, the host name can contain a maximum of 30 characters, which can be segments separated by dots (“.”), where each segment can contain uppercase/lowercase letters, numerals, or “_“. When it is changed, the instance will reboot to make the change take effect.
@@ -4639,7 +3003,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>image<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Image to use for the instance. ECS instance's image can be replaced via changing 'image_id'. When it is changed, the instance will reboot to make the change take effect.
 {{% /md %}}</dd>
@@ -4648,7 +3012,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>include<wbr>Data<wbr>Disks</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to change instance disks charge type when changing instance charge type.
 {{% /md %}}</dd>
@@ -4657,7 +3021,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>instance<wbr>Charge<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values are `PrePaid`, `PostPaid`, The default is `PostPaid`.
 {{% /md %}}</dd>
@@ -4666,7 +3030,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>instance<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4674,7 +3038,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>instance<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of instance to start. When it is changed, the instance will reboot to make the change take effect.
 {{% /md %}}</dd>
@@ -4683,7 +3047,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>internet<wbr>Charge<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Internet charge type of the instance, Valid values are `PayByBandwidth`, `PayByTraffic`. Default is `PayByTraffic`. At present, 'PrePaid' instance cannot change the value to "PayByBandwidth" from "PayByTraffic".
 {{% /md %}}</dd>
@@ -4692,7 +3056,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>internet<wbr>Max<wbr>Bandwidth<wbr>In</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Maximum incoming bandwidth from the public network, measured in Mbps (Mega bit per second). Value range: [1, 200]. If this value is not specified, then automatically sets it to 200 Mbps.
 {{% /md %}}</dd>
@@ -4701,7 +3065,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>internet<wbr>Max<wbr>Bandwidth<wbr>Out</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Maximum outgoing bandwidth to the public network, measured in Mbps (Mega bit per second). Value range:  [0, 100]. Default to 0 Mbps.
 {{% /md %}}</dd>
@@ -4710,7 +3074,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional, Deprecated">
         <span>io<wbr>Optimized</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}It has been deprecated on instance resource. All the launched alicloud instances will be I/O optimized.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Attribute io_optimized has been deprecated on instance resource. All the launched alicloud instances will be IO optimized. Suggest to remove it from your template.{{% /md %}}</p></dd>
@@ -4719,7 +3083,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>is<wbr>Outdated</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to use outdated instance type. Default to false.
 {{% /md %}}</dd>
@@ -4728,7 +3092,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>key<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of key pair that can login ECS instance successfully without password. If it is specified, the password would be invalid.
 {{% /md %}}</dd>
@@ -4737,7 +3101,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>kms<wbr>Encrypted<wbr>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An KMS encrypts password used to an instance. If the `password` is filled in, this field will be ignored. When it is changed, the instance will reboot to make the change take effect.
 {{% /md %}}</dd>
@@ -4746,7 +3110,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>kms<wbr>Encryption<wbr>Context</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}An KMS encryption context used to decrypt `kms_encrypted_password` before creating or updating an instance with `kms_encrypted_password`. See [Encryption Context](https://www.alibabacloud.com/help/doc-detail/42975.htm). It is valid when `kms_encrypted_password` is set. When it is changed, the instance will reboot to make the change take effect.
 {{% /md %}}</dd>
@@ -4755,7 +3119,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Password to an instance is a string of 8 to 30 characters. It must contain uppercase/lowercase letters and numerals, but cannot contain special symbols. When it is changed, the instance will reboot to make the change take effect.
 {{% /md %}}</dd>
@@ -4764,7 +3128,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>period</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The duration that you will buy the resource, in month. It is valid when `instance_charge_type` is `PrePaid`. Default to 1. Valid values:
 - [1-9, 12, 24, 36, 48, 60] when `period_unit` in "Month"
@@ -4775,7 +3139,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>period<wbr>Unit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The duration unit that you will buy the resource. It is valid when `instance_charge_type` is 'PrePaid'. Valid value: ["Week", "Month"]. Default to "Month".
 {{% /md %}}</dd>
@@ -4784,7 +3148,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>private<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Instance private IP address can be specified when you creating new instance. It is valid when `vswitch_id` is specified. When it is changed, the instance will reboot to make the change take effect.
 {{% /md %}}</dd>
@@ -4793,7 +3157,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>public<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The instance public ip.
 {{% /md %}}</dd>
@@ -4802,7 +3166,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>renewal<wbr>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Whether to renew an ECS instance automatically or not. It is valid when `instance_charge_type` is `PrePaid`. Default to "Normal". Valid values:
 - `AutoRenewal`: Enable auto renewal.
@@ -4814,7 +3178,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>resource<wbr>Group<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Id of resource group which the instance belongs.
 {{% /md %}}</dd>
@@ -4823,7 +3187,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>role<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Instance RAM role name. The name is provided and maintained by RAM. You can use `alicloud.ram.Role` to create a new one.
 {{% /md %}}</dd>
@@ -4832,7 +3196,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>security<wbr>Enhancement<wbr>Strategy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The security enhancement strategy.
 - Active: Enable security enhancement strategy, it only works on system images.
@@ -4843,7 +3207,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>security<wbr>Groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of security group ids to associate with.
 {{% /md %}}</dd>
@@ -4852,7 +3216,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>spot<wbr>Price<wbr>Limit</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The hourly price threshold of a instance, and it takes effect only when parameter 'spot_strategy' is 'SpotWithPriceLimit'. Three decimals is allowed at most.
 {{% /md %}}</dd>
@@ -4861,7 +3225,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>spot<wbr>Strategy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The spot strategy of a Pay-As-You-Go instance, and it takes effect only when parameter `instance_charge_type` is 'PostPaid'. Value range:
 - NoSpot: A regular Pay-As-You-Go instance.
@@ -4873,7 +3237,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The instance status.
 {{% /md %}}</dd>
@@ -4882,7 +3246,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>subnet<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4890,7 +3254,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>system<wbr>Disk<wbr>Auto<wbr>Snapshot<wbr>Policy<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the automatic snapshot policy applied to the system disk.
 {{% /md %}}</dd>
@@ -4899,7 +3263,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>system<wbr>Disk<wbr>Category</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Valid values are `ephemeral_ssd`, `cloud_efficiency`, `cloud_ssd`, `cloud_essd`, `cloud`. `cloud` only is used to some none I/O optimized instance. Default to `cloud_efficiency`.
 {{% /md %}}</dd>
@@ -4908,7 +3272,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>system<wbr>Disk<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Size of the system disk, measured in GiB. Value range: [20, 500]. The specified value must be equal to or greater than max{20, Imagesize}. Default value: max{40, ImageSize}. ECS instance's system disk can be reset when replacing system disk. When it is changed, the instance will reboot to make the change take effect.
 {{% /md %}}</dd>
@@ -4917,7 +3281,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 - Key: It can be up to 64 characters in length. It cannot begin with "aliyun", "acs:", "http://", or "https://". It cannot be a null string.
@@ -4928,7 +3292,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>user<wbr>Data</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User-defined data to customize the startup behaviors of an ECS instance and to pass data into an ECS instance. From version 1.60.0, it can be update in-place. If updated, the instance will reboot to make the change take effect. Note: Not all of changes will take effect and it depends on [cloud-init module type](https://cloudinit.readthedocs.io/en/latest/topics/modules.html).
 {{% /md %}}</dd>
@@ -4937,7 +3301,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>volume<wbr>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the devices created by the instance at launch time.
 - Key: It can be up to 64 characters in length. It cannot begin with "aliyun", "acs:", "http://", or "https://". It cannot be a null string.
@@ -4948,7 +3312,7 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
             title="Optional">
         <span>vswitch<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The virtual switch ID to launch in VPC. This parameter must be set unless you can create classic network instances. When it is changed, the instance will reboot to make the change take effect.
 {{% /md %}}</dd>
@@ -5416,66 +3780,6 @@ On other OSs such as Linux, the host name can contain a maximum of 30 characters
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Auto<wbr>Snapshot<wbr>Policy<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The ID of the automatic snapshot policy applied to the system disk.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Category</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The category of the disk:
-- `cloud`: The general cloud disk.
-- `cloud_efficiency`: The efficiency cloud disk.
-- `cloud_ssd`: The SSD cloud disk.
-- `cloud_essd`: The ESSD cloud disk.
-- `ephemeral_ssd`: The local SSD disk.
-Default to `cloud_efficiency`.
-* `encrypted` -(Optional, Bool, ForceNew) Encrypted the data in this disk.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Delete<wbr>With<wbr>Instance</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Delete this data disk when the instance is destroyed. It only works on cloud, cloud_efficiency, cloud_essd, cloud_ssd disk. If the category of this data disk was ephemeral_ssd, please don't set this param.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The description of the data disk.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Encrypted</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The name of the data disk.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Size</span>
@@ -5492,9 +3796,69 @@ Default to `cloud_efficiency`.
 
     <dt class="property-optional"
             title="Optional">
+        <span>Auto<wbr>Snapshot<wbr>Policy<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the automatic snapshot policy applied to the system disk.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Category</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The category of the disk:
+- `cloud`: The general cloud disk.
+- `cloud_efficiency`: The efficiency cloud disk.
+- `cloud_ssd`: The SSD cloud disk.
+- `cloud_essd`: The ESSD cloud disk.
+- `ephemeral_ssd`: The local SSD disk.
+Default to `cloud_efficiency`.
+* `encrypted` -(Optional, Bool, ForceNew) Encrypted the data in this disk.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Delete<wbr>With<wbr>Instance</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Delete this data disk when the instance is destroyed. It only works on cloud, cloud_efficiency, cloud_essd, cloud_ssd disk. If the category of this data disk was ephemeral_ssd, please don't set this param.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The description of the data disk.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Encrypted</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the data disk.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Snapshot<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The snapshot ID used to initialize the data disk. If the size specified by snapshot is greater that the size of the disk, use the size specified by snapshot as the size of the data disk.
 {{% /md %}}</dd>
@@ -5506,66 +3870,6 @@ Default to `cloud_efficiency`.
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Auto<wbr>Snapshot<wbr>Policy<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the automatic snapshot policy applied to the system disk.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Category</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The category of the disk:
-- `cloud`: The general cloud disk.
-- `cloud_efficiency`: The efficiency cloud disk.
-- `cloud_ssd`: The SSD cloud disk.
-- `cloud_essd`: The ESSD cloud disk.
-- `ephemeral_ssd`: The local SSD disk.
-Default to `cloud_efficiency`.
-* `encrypted` -(Optional, Bool, ForceNew) Encrypted the data in this disk.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Delete<wbr>With<wbr>Instance</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Delete this data disk when the instance is destroyed. It only works on cloud, cloud_efficiency, cloud_essd, cloud_ssd disk. If the category of this data disk was ephemeral_ssd, please don't set this param.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The description of the data disk.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Encrypted</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The name of the data disk.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Size</span>
@@ -5582,34 +3886,18 @@ Default to `cloud_efficiency`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>Snapshot<wbr>Id</span>
+        <span>Auto<wbr>Snapshot<wbr>Policy<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The snapshot ID used to initialize the data disk. If the size specified by snapshot is greater that the size of the disk, use the size specified by snapshot as the size of the data disk.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>auto<wbr>Snapshot<wbr>Policy<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the automatic snapshot policy applied to the system disk.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>category</span>
+        <span>Category</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The category of the disk:
 - `cloud`: The general cloud disk.
@@ -5623,38 +3911,54 @@ Default to `cloud_efficiency`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>delete<wbr>With<wbr>Instance</span>
+        <span>Delete<wbr>With<wbr>Instance</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Delete this data disk when the instance is destroyed. It only works on cloud, cloud_efficiency, cloud_essd, cloud_ssd disk. If the category of this data disk was ephemeral_ssd, please don't set this param.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the data disk.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>encrypted</span>
+        <span>Encrypted</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>name</span>
+        <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the data disk.
 {{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Snapshot<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The snapshot ID used to initialize the data disk. If the size specified by snapshot is greater that the size of the disk, use the size specified by snapshot as the size of the data disk.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
@@ -5672,9 +3976,69 @@ Default to `cloud_efficiency`.
 
     <dt class="property-optional"
             title="Optional">
+        <span>auto<wbr>Snapshot<wbr>Policy<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the automatic snapshot policy applied to the system disk.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>category</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The category of the disk:
+- `cloud`: The general cloud disk.
+- `cloud_efficiency`: The efficiency cloud disk.
+- `cloud_ssd`: The SSD cloud disk.
+- `cloud_essd`: The ESSD cloud disk.
+- `ephemeral_ssd`: The local SSD disk.
+Default to `cloud_efficiency`.
+* `encrypted` -(Optional, Bool, ForceNew) Encrypted the data in this disk.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>delete<wbr>With<wbr>Instance</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Delete this data disk when the instance is destroyed. It only works on cloud, cloud_efficiency, cloud_essd, cloud_ssd disk. If the category of this data disk was ephemeral_ssd, please don't set this param.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The description of the data disk.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>encrypted</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the data disk.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>snapshot<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The snapshot ID used to initialize the data disk. If the size specified by snapshot is greater that the size of the disk, use the size specified by snapshot as the size of the data disk.
 {{% /md %}}</dd>
@@ -5685,6 +4049,20 @@ Default to `cloud_efficiency`.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>size</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}The size of the data disk.
+- cloud：[5, 2000]
+- cloud_efficiency：[20, 32768]
+- cloud_ssd：[20, 32768]
+- cloud_essd：[20, 32768]
+- ephemeral_ssd: [5, 800]
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -5744,20 +4122,6 @@ Default to `cloud_efficiency`.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the data disk.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The size of the data disk.
-- cloud：[5, 2000]
-- cloud_efficiency：[20, 32768]
-- cloud_ssd：[20, 32768]
-- cloud_essd：[20, 32768]
-- ephemeral_ssd: [5, 800]
 {{% /md %}}</dd>
 
     <dt class="property-optional"

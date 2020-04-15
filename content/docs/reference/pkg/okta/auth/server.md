@@ -33,7 +33,7 @@ const example = new okta.auth.Server("example", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/okta/auth/#Server">Server</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/okta/auth/#ServerArgs">ServerArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/okta/auth/#Server">Server</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/okta/auth/#ServerArgs">ServerArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -41,7 +41,7 @@ const example = new okta.auth.Server("example", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewServer<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/go/okta/auth?tab=doc#ServerArgs">ServerArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/go/okta/auth?tab=doc#Server">Server</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewServer<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/go/okta/auth?tab=doc#ServerArgs">ServerArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/go/okta/auth?tab=doc#Server">Server</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -141,7 +141,7 @@ const example = new okta.auth.Server("example", {
             title="Required">
         <span>Audiences</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The recipients that the tokens are intended for. This becomes the `aud` claim in an access token.
 {{% /md %}}</dd>
@@ -150,7 +150,7 @@ const example = new okta.auth.Server("example", {
             title="Optional">
         <span>Credentials<wbr>Rotation<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The key rotation mode for the authorization server. Can be `"AUTO"` or `"MANUAL"`.
 {{% /md %}}</dd>
@@ -159,7 +159,7 @@ const example = new okta.auth.Server("example", {
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the authorization server.
 {{% /md %}}</dd>
@@ -168,7 +168,7 @@ const example = new okta.auth.Server("example", {
             title="Optional">
         <span>Issuer<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Allows you to use a custom issuer URL. It can be set to `"CUSTOM_URL"` or `"ORG_URL"`
 {{% /md %}}</dd>
@@ -177,7 +177,7 @@ const example = new okta.auth.Server("example", {
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the authorization server.
 {{% /md %}}</dd>
@@ -186,7 +186,7 @@ const example = new okta.auth.Server("example", {
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the auth server. It defaults to `"ACTIVE"`
 {{% /md %}}</dd>
@@ -211,7 +211,7 @@ const example = new okta.auth.Server("example", {
             title="Optional">
         <span>Credentials<wbr>Rotation<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The key rotation mode for the authorization server. Can be `"AUTO"` or `"MANUAL"`.
 {{% /md %}}</dd>
@@ -220,7 +220,7 @@ const example = new okta.auth.Server("example", {
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the authorization server.
 {{% /md %}}</dd>
@@ -229,7 +229,7 @@ const example = new okta.auth.Server("example", {
             title="Optional">
         <span>Issuer<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Allows you to use a custom issuer URL. It can be set to `"CUSTOM_URL"` or `"ORG_URL"`
 {{% /md %}}</dd>
@@ -238,7 +238,7 @@ const example = new okta.auth.Server("example", {
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the authorization server.
 {{% /md %}}</dd>
@@ -247,7 +247,7 @@ const example = new okta.auth.Server("example", {
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the auth server. It defaults to `"ACTIVE"`
 {{% /md %}}</dd>
@@ -272,7 +272,7 @@ const example = new okta.auth.Server("example", {
             title="Optional">
         <span>credentials<wbr>Rotation<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The key rotation mode for the authorization server. Can be `"AUTO"` or `"MANUAL"`.
 {{% /md %}}</dd>
@@ -281,7 +281,7 @@ const example = new okta.auth.Server("example", {
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the authorization server.
 {{% /md %}}</dd>
@@ -290,7 +290,7 @@ const example = new okta.auth.Server("example", {
             title="Optional">
         <span>issuer<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Allows you to use a custom issuer URL. It can be set to `"CUSTOM_URL"` or `"ORG_URL"`
 {{% /md %}}</dd>
@@ -299,7 +299,7 @@ const example = new okta.auth.Server("example", {
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the authorization server.
 {{% /md %}}</dd>
@@ -308,7 +308,7 @@ const example = new okta.auth.Server("example", {
             title="Optional">
         <span>status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the auth server. It defaults to `"ACTIVE"`
 {{% /md %}}</dd>
@@ -395,15 +395,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Audiences</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
-    </dt>
-    <dd>{{% md %}}The recipients that the tokens are intended for. This becomes the `aud` claim in an access token.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Credentials<wbr>Last<wbr>Rotated</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -422,24 +413,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Credentials<wbr>Rotation<wbr>Mode</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The key rotation mode for the authorization server. Can be `"AUTO"` or `"MANUAL"`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The description of the authorization server.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Issuer</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -449,38 +422,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Issuer<wbr>Mode</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Allows you to use a custom issuer URL. It can be set to `"CUSTOM_URL"` or `"ORG_URL"`
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Kid</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the JSON Web Key used for signing tokens issued by the authorization server.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the authorization server.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Status</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The status of the auth server. It defaults to `"ACTIVE"`
 {{% /md %}}</dd>
 
 </dl>
@@ -492,15 +438,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Audiences</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}The recipients that the tokens are intended for. This becomes the `aud` claim in an access token.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Credentials<wbr>Last<wbr>Rotated</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -519,38 +456,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Credentials<wbr>Rotation<wbr>Mode</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The key rotation mode for the authorization server. Can be `"AUTO"` or `"MANUAL"`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The description of the authorization server.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Issuer</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The complete URL for a Custom Authorization Server. This becomes the `iss` claim in an access token.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Issuer<wbr>Mode</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Allows you to use a custom issuer URL. It can be set to `"CUSTOM_URL"` or `"ORG_URL"`
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -562,39 +472,12 @@ The following output properties are available:
     <dd>{{% md %}}The ID of the JSON Web Key used for signing tokens issued by the authorization server.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the authorization server.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Status</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The status of the auth server. It defaults to `"ACTIVE"`
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>audiences</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
-    </dt>
-    <dd>{{% md %}}The recipients that the tokens are intended for. This becomes the `aud` claim in an access token.
-{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -616,38 +499,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>credentials<wbr>Rotation<wbr>Mode</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The key rotation mode for the authorization server. Can be `"AUTO"` or `"MANUAL"`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The description of the authorization server.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>issuer</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The complete URL for a Custom Authorization Server. This becomes the `iss` claim in an access token.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>issuer<wbr>Mode</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Allows you to use a custom issuer URL. It can be set to `"CUSTOM_URL"` or `"ORG_URL"`
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -659,39 +515,12 @@ The following output properties are available:
     <dd>{{% md %}}The ID of the JSON Web Key used for signing tokens issued by the authorization server.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the authorization server.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>status</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The status of the auth server. It defaults to `"ACTIVE"`
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>audiences</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}The recipients that the tokens are intended for. This becomes the `aud` claim in an access token.
-{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -713,24 +542,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>credentials_<wbr>rotation_<wbr>mode</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The key rotation mode for the authorization server. Can be `"AUTO"` or `"MANUAL"`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The description of the authorization server.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>issuer</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -740,38 +551,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>issuer_<wbr>mode</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Allows you to use a custom issuer URL. It can be set to `"CUSTOM_URL"` or `"ORG_URL"`
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>kid</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the JSON Web Key used for signing tokens issued by the authorization server.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the authorization server.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>status</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The status of the auth server. It defaults to `"ACTIVE"`
 {{% /md %}}</dd>
 
 </dl>
@@ -913,7 +697,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Audiences</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The recipients that the tokens are intended for. This becomes the `aud` claim in an access token.
 {{% /md %}}</dd>
@@ -922,7 +706,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Credentials<wbr>Last<wbr>Rotated</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The timestamp when the authorization server started to use the `kid` for signing tokens.
 {{% /md %}}</dd>
@@ -931,7 +715,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Credentials<wbr>Next<wbr>Rotation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The timestamp when the authorization server changes the key for signing tokens. Only returned when `credentials_rotation_mode` is `"AUTO"`.
 {{% /md %}}</dd>
@@ -940,7 +724,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Credentials<wbr>Rotation<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The key rotation mode for the authorization server. Can be `"AUTO"` or `"MANUAL"`.
 {{% /md %}}</dd>
@@ -949,7 +733,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the authorization server.
 {{% /md %}}</dd>
@@ -958,7 +742,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Issuer</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The complete URL for a Custom Authorization Server. This becomes the `iss` claim in an access token.
 {{% /md %}}</dd>
@@ -967,7 +751,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Issuer<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Allows you to use a custom issuer URL. It can be set to `"CUSTOM_URL"` or `"ORG_URL"`
 {{% /md %}}</dd>
@@ -976,7 +760,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Kid</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the JSON Web Key used for signing tokens issued by the authorization server.
 {{% /md %}}</dd>
@@ -985,7 +769,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the authorization server.
 {{% /md %}}</dd>
@@ -994,7 +778,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the auth server. It defaults to `"ACTIVE"`
 {{% /md %}}</dd>
@@ -1019,7 +803,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Credentials<wbr>Last<wbr>Rotated</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The timestamp when the authorization server started to use the `kid` for signing tokens.
 {{% /md %}}</dd>
@@ -1028,7 +812,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Credentials<wbr>Next<wbr>Rotation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The timestamp when the authorization server changes the key for signing tokens. Only returned when `credentials_rotation_mode` is `"AUTO"`.
 {{% /md %}}</dd>
@@ -1037,7 +821,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Credentials<wbr>Rotation<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The key rotation mode for the authorization server. Can be `"AUTO"` or `"MANUAL"`.
 {{% /md %}}</dd>
@@ -1046,7 +830,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the authorization server.
 {{% /md %}}</dd>
@@ -1055,7 +839,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Issuer</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The complete URL for a Custom Authorization Server. This becomes the `iss` claim in an access token.
 {{% /md %}}</dd>
@@ -1064,7 +848,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Issuer<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Allows you to use a custom issuer URL. It can be set to `"CUSTOM_URL"` or `"ORG_URL"`
 {{% /md %}}</dd>
@@ -1073,7 +857,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Kid</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the JSON Web Key used for signing tokens issued by the authorization server.
 {{% /md %}}</dd>
@@ -1082,7 +866,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the authorization server.
 {{% /md %}}</dd>
@@ -1091,7 +875,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the auth server. It defaults to `"ACTIVE"`
 {{% /md %}}</dd>
@@ -1107,7 +891,7 @@ The following state arguments are supported:
             title="Optional">
         <span>audiences</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The recipients that the tokens are intended for. This becomes the `aud` claim in an access token.
 {{% /md %}}</dd>
@@ -1116,7 +900,7 @@ The following state arguments are supported:
             title="Optional">
         <span>credentials<wbr>Last<wbr>Rotated</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The timestamp when the authorization server started to use the `kid` for signing tokens.
 {{% /md %}}</dd>
@@ -1125,7 +909,7 @@ The following state arguments are supported:
             title="Optional">
         <span>credentials<wbr>Next<wbr>Rotation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The timestamp when the authorization server changes the key for signing tokens. Only returned when `credentials_rotation_mode` is `"AUTO"`.
 {{% /md %}}</dd>
@@ -1134,7 +918,7 @@ The following state arguments are supported:
             title="Optional">
         <span>credentials<wbr>Rotation<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The key rotation mode for the authorization server. Can be `"AUTO"` or `"MANUAL"`.
 {{% /md %}}</dd>
@@ -1143,7 +927,7 @@ The following state arguments are supported:
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the authorization server.
 {{% /md %}}</dd>
@@ -1152,7 +936,7 @@ The following state arguments are supported:
             title="Optional">
         <span>issuer</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The complete URL for a Custom Authorization Server. This becomes the `iss` claim in an access token.
 {{% /md %}}</dd>
@@ -1161,7 +945,7 @@ The following state arguments are supported:
             title="Optional">
         <span>issuer<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Allows you to use a custom issuer URL. It can be set to `"CUSTOM_URL"` or `"ORG_URL"`
 {{% /md %}}</dd>
@@ -1170,7 +954,7 @@ The following state arguments are supported:
             title="Optional">
         <span>kid</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the JSON Web Key used for signing tokens issued by the authorization server.
 {{% /md %}}</dd>
@@ -1179,7 +963,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the authorization server.
 {{% /md %}}</dd>
@@ -1188,7 +972,7 @@ The following state arguments are supported:
             title="Optional">
         <span>status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the auth server. It defaults to `"ACTIVE"`
 {{% /md %}}</dd>

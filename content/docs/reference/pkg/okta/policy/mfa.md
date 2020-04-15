@@ -35,7 +35,7 @@ const example = new okta.policy.Mfa("example", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/okta/policy/#Mfa">Mfa</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/okta/policy/#MfaArgs">MfaArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/okta/policy/#Mfa">Mfa</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/okta/policy/#MfaArgs">MfaArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -43,7 +43,7 @@ const example = new okta.policy.Mfa("example", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewMfa<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/go/okta/policy?tab=doc#MfaArgs">MfaArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/go/okta/policy?tab=doc#Mfa">Mfa</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewMfa<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/go/okta/policy?tab=doc#MfaArgs">MfaArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/go/okta/policy?tab=doc#Mfa">Mfa</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -143,7 +143,7 @@ const example = new okta.policy.Mfa("example", {
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy Description.
 {{% /md %}}</dd>
@@ -152,7 +152,7 @@ const example = new okta.policy.Mfa("example", {
             title="Optional">
         <span>Duo</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfaduo">Mfa<wbr>Duo<wbr>Args?</a></span>
+        <span class="property-type"><a href="#mfaduo">Mfa<wbr>Duo<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}DUO MFA policy settings.
 {{% /md %}}</dd>
@@ -161,7 +161,7 @@ const example = new okta.policy.Mfa("example", {
             title="Optional">
         <span>Fido<wbr>U2f</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfafidou2f">Mfa<wbr>Fido<wbr>U2f<wbr>Args?</a></span>
+        <span class="property-type"><a href="#mfafidou2f">Mfa<wbr>Fido<wbr>U2f<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Fido U2F MFA policy settings.
 {{% /md %}}</dd>
@@ -170,7 +170,7 @@ const example = new okta.policy.Mfa("example", {
             title="Optional">
         <span>Fido<wbr>Webauthn</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfafidowebauthn">Mfa<wbr>Fido<wbr>Webauthn<wbr>Args?</a></span>
+        <span class="property-type"><a href="#mfafidowebauthn">Mfa<wbr>Fido<wbr>Webauthn<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Fido Web Authn MFA policy settings.
 {{% /md %}}</dd>
@@ -179,7 +179,7 @@ const example = new okta.policy.Mfa("example", {
             title="Optional">
         <span>Google<wbr>Otp</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfagoogleotp">Mfa<wbr>Google<wbr>Otp<wbr>Args?</a></span>
+        <span class="property-type"><a href="#mfagoogleotp">Mfa<wbr>Google<wbr>Otp<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Google OTP MFA policy settings.
 {{% /md %}}</dd>
@@ -188,7 +188,7 @@ const example = new okta.policy.Mfa("example", {
             title="Optional">
         <span>Groups<wbr>Includeds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of Group IDs to Include.
 {{% /md %}}</dd>
@@ -197,7 +197,7 @@ const example = new okta.policy.Mfa("example", {
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy Name.
 {{% /md %}}</dd>
@@ -206,7 +206,7 @@ const example = new okta.policy.Mfa("example", {
             title="Optional">
         <span>Okta<wbr>Call</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfaoktacall">Mfa<wbr>Okta<wbr>Call<wbr>Args?</a></span>
+        <span class="property-type"><a href="#mfaoktacall">Mfa<wbr>Okta<wbr>Call<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Okta Call MFA policy settings.
 {{% /md %}}</dd>
@@ -215,7 +215,7 @@ const example = new okta.policy.Mfa("example", {
             title="Optional">
         <span>Okta<wbr>Otp</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfaoktaotp">Mfa<wbr>Okta<wbr>Otp<wbr>Args?</a></span>
+        <span class="property-type"><a href="#mfaoktaotp">Mfa<wbr>Okta<wbr>Otp<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Okta OTP MFA policy settings.
 {{% /md %}}</dd>
@@ -224,7 +224,7 @@ const example = new okta.policy.Mfa("example", {
             title="Optional">
         <span>Okta<wbr>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfaoktapassword">Mfa<wbr>Okta<wbr>Password<wbr>Args?</a></span>
+        <span class="property-type"><a href="#mfaoktapassword">Mfa<wbr>Okta<wbr>Password<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Okta Password MFA policy settings.
 {{% /md %}}</dd>
@@ -233,7 +233,7 @@ const example = new okta.policy.Mfa("example", {
             title="Optional">
         <span>Okta<wbr>Push</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfaoktapush">Mfa<wbr>Okta<wbr>Push<wbr>Args?</a></span>
+        <span class="property-type"><a href="#mfaoktapush">Mfa<wbr>Okta<wbr>Push<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Okta Push MFA policy settings.
 {{% /md %}}</dd>
@@ -242,7 +242,7 @@ const example = new okta.policy.Mfa("example", {
             title="Optional">
         <span>Okta<wbr>Question</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfaoktaquestion">Mfa<wbr>Okta<wbr>Question<wbr>Args?</a></span>
+        <span class="property-type"><a href="#mfaoktaquestion">Mfa<wbr>Okta<wbr>Question<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Okta Question MFA policy settings.
 {{% /md %}}</dd>
@@ -251,7 +251,7 @@ const example = new okta.policy.Mfa("example", {
             title="Optional">
         <span>Okta<wbr>Sms</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfaoktasms">Mfa<wbr>Okta<wbr>Sms<wbr>Args?</a></span>
+        <span class="property-type"><a href="#mfaoktasms">Mfa<wbr>Okta<wbr>Sms<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Okta SMS MFA policy settings.
 {{% /md %}}</dd>
@@ -260,7 +260,7 @@ const example = new okta.policy.Mfa("example", {
             title="Optional">
         <span>Priority</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Priority of the policy.
 {{% /md %}}</dd>
@@ -269,7 +269,7 @@ const example = new okta.policy.Mfa("example", {
             title="Optional">
         <span>Rsa<wbr>Token</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfarsatoken">Mfa<wbr>Rsa<wbr>Token<wbr>Args?</a></span>
+        <span class="property-type"><a href="#mfarsatoken">Mfa<wbr>Rsa<wbr>Token<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}RSA Token MFA policy settings.
 {{% /md %}}</dd>
@@ -278,7 +278,7 @@ const example = new okta.policy.Mfa("example", {
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy Status: `"ACTIVE"` or `"INACTIVE"`.
 {{% /md %}}</dd>
@@ -287,7 +287,7 @@ const example = new okta.policy.Mfa("example", {
             title="Optional">
         <span>Symantec<wbr>Vip</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfasymantecvip">Mfa<wbr>Symantec<wbr>Vip<wbr>Args?</a></span>
+        <span class="property-type"><a href="#mfasymantecvip">Mfa<wbr>Symantec<wbr>Vip<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Symantec VIP MFA policy settings.
 {{% /md %}}</dd>
@@ -296,7 +296,7 @@ const example = new okta.policy.Mfa("example", {
             title="Optional">
         <span>Yubikey<wbr>Token</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfayubikeytoken">Mfa<wbr>Yubikey<wbr>Token<wbr>Args?</a></span>
+        <span class="property-type"><a href="#mfayubikeytoken">Mfa<wbr>Yubikey<wbr>Token<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Yubikey Token MFA policy settings.
 {{% /md %}}</dd>
@@ -312,7 +312,7 @@ const example = new okta.policy.Mfa("example", {
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy Description.
 {{% /md %}}</dd>
@@ -321,7 +321,7 @@ const example = new okta.policy.Mfa("example", {
             title="Optional">
         <span>Duo</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfaduo">*Mfa<wbr>Duo</a></span>
+        <span class="property-type"><a href="#mfaduo">Mfa<wbr>Duo</a></span>
     </dt>
     <dd>{{% md %}}DUO MFA policy settings.
 {{% /md %}}</dd>
@@ -330,7 +330,7 @@ const example = new okta.policy.Mfa("example", {
             title="Optional">
         <span>Fido<wbr>U2f</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfafidou2f">*Mfa<wbr>Fido<wbr>U2f</a></span>
+        <span class="property-type"><a href="#mfafidou2f">Mfa<wbr>Fido<wbr>U2f</a></span>
     </dt>
     <dd>{{% md %}}Fido U2F MFA policy settings.
 {{% /md %}}</dd>
@@ -339,7 +339,7 @@ const example = new okta.policy.Mfa("example", {
             title="Optional">
         <span>Fido<wbr>Webauthn</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfafidowebauthn">*Mfa<wbr>Fido<wbr>Webauthn</a></span>
+        <span class="property-type"><a href="#mfafidowebauthn">Mfa<wbr>Fido<wbr>Webauthn</a></span>
     </dt>
     <dd>{{% md %}}Fido Web Authn MFA policy settings.
 {{% /md %}}</dd>
@@ -348,7 +348,7 @@ const example = new okta.policy.Mfa("example", {
             title="Optional">
         <span>Google<wbr>Otp</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfagoogleotp">*Mfa<wbr>Google<wbr>Otp</a></span>
+        <span class="property-type"><a href="#mfagoogleotp">Mfa<wbr>Google<wbr>Otp</a></span>
     </dt>
     <dd>{{% md %}}Google OTP MFA policy settings.
 {{% /md %}}</dd>
@@ -366,7 +366,7 @@ const example = new okta.policy.Mfa("example", {
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy Name.
 {{% /md %}}</dd>
@@ -375,7 +375,7 @@ const example = new okta.policy.Mfa("example", {
             title="Optional">
         <span>Okta<wbr>Call</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfaoktacall">*Mfa<wbr>Okta<wbr>Call</a></span>
+        <span class="property-type"><a href="#mfaoktacall">Mfa<wbr>Okta<wbr>Call</a></span>
     </dt>
     <dd>{{% md %}}Okta Call MFA policy settings.
 {{% /md %}}</dd>
@@ -384,7 +384,7 @@ const example = new okta.policy.Mfa("example", {
             title="Optional">
         <span>Okta<wbr>Otp</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfaoktaotp">*Mfa<wbr>Okta<wbr>Otp</a></span>
+        <span class="property-type"><a href="#mfaoktaotp">Mfa<wbr>Okta<wbr>Otp</a></span>
     </dt>
     <dd>{{% md %}}Okta OTP MFA policy settings.
 {{% /md %}}</dd>
@@ -393,7 +393,7 @@ const example = new okta.policy.Mfa("example", {
             title="Optional">
         <span>Okta<wbr>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfaoktapassword">*Mfa<wbr>Okta<wbr>Password</a></span>
+        <span class="property-type"><a href="#mfaoktapassword">Mfa<wbr>Okta<wbr>Password</a></span>
     </dt>
     <dd>{{% md %}}Okta Password MFA policy settings.
 {{% /md %}}</dd>
@@ -402,7 +402,7 @@ const example = new okta.policy.Mfa("example", {
             title="Optional">
         <span>Okta<wbr>Push</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfaoktapush">*Mfa<wbr>Okta<wbr>Push</a></span>
+        <span class="property-type"><a href="#mfaoktapush">Mfa<wbr>Okta<wbr>Push</a></span>
     </dt>
     <dd>{{% md %}}Okta Push MFA policy settings.
 {{% /md %}}</dd>
@@ -411,7 +411,7 @@ const example = new okta.policy.Mfa("example", {
             title="Optional">
         <span>Okta<wbr>Question</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfaoktaquestion">*Mfa<wbr>Okta<wbr>Question</a></span>
+        <span class="property-type"><a href="#mfaoktaquestion">Mfa<wbr>Okta<wbr>Question</a></span>
     </dt>
     <dd>{{% md %}}Okta Question MFA policy settings.
 {{% /md %}}</dd>
@@ -420,7 +420,7 @@ const example = new okta.policy.Mfa("example", {
             title="Optional">
         <span>Okta<wbr>Sms</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfaoktasms">*Mfa<wbr>Okta<wbr>Sms</a></span>
+        <span class="property-type"><a href="#mfaoktasms">Mfa<wbr>Okta<wbr>Sms</a></span>
     </dt>
     <dd>{{% md %}}Okta SMS MFA policy settings.
 {{% /md %}}</dd>
@@ -429,7 +429,7 @@ const example = new okta.policy.Mfa("example", {
             title="Optional">
         <span>Priority</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Priority of the policy.
 {{% /md %}}</dd>
@@ -438,7 +438,7 @@ const example = new okta.policy.Mfa("example", {
             title="Optional">
         <span>Rsa<wbr>Token</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfarsatoken">*Mfa<wbr>Rsa<wbr>Token</a></span>
+        <span class="property-type"><a href="#mfarsatoken">Mfa<wbr>Rsa<wbr>Token</a></span>
     </dt>
     <dd>{{% md %}}RSA Token MFA policy settings.
 {{% /md %}}</dd>
@@ -447,7 +447,7 @@ const example = new okta.policy.Mfa("example", {
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy Status: `"ACTIVE"` or `"INACTIVE"`.
 {{% /md %}}</dd>
@@ -456,7 +456,7 @@ const example = new okta.policy.Mfa("example", {
             title="Optional">
         <span>Symantec<wbr>Vip</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfasymantecvip">*Mfa<wbr>Symantec<wbr>Vip</a></span>
+        <span class="property-type"><a href="#mfasymantecvip">Mfa<wbr>Symantec<wbr>Vip</a></span>
     </dt>
     <dd>{{% md %}}Symantec VIP MFA policy settings.
 {{% /md %}}</dd>
@@ -465,7 +465,7 @@ const example = new okta.policy.Mfa("example", {
             title="Optional">
         <span>Yubikey<wbr>Token</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfayubikeytoken">*Mfa<wbr>Yubikey<wbr>Token</a></span>
+        <span class="property-type"><a href="#mfayubikeytoken">Mfa<wbr>Yubikey<wbr>Token</a></span>
     </dt>
     <dd>{{% md %}}Yubikey Token MFA policy settings.
 {{% /md %}}</dd>
@@ -481,7 +481,7 @@ const example = new okta.policy.Mfa("example", {
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy Description.
 {{% /md %}}</dd>
@@ -490,7 +490,7 @@ const example = new okta.policy.Mfa("example", {
             title="Optional">
         <span>duo</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfaduo">Mfa<wbr>Duo?</a></span>
+        <span class="property-type"><a href="#mfaduo">Mfa<wbr>Duo</a></span>
     </dt>
     <dd>{{% md %}}DUO MFA policy settings.
 {{% /md %}}</dd>
@@ -499,7 +499,7 @@ const example = new okta.policy.Mfa("example", {
             title="Optional">
         <span>fido<wbr>U2f</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfafidou2f">Mfa<wbr>Fido<wbr>U2f?</a></span>
+        <span class="property-type"><a href="#mfafidou2f">Mfa<wbr>Fido<wbr>U2f</a></span>
     </dt>
     <dd>{{% md %}}Fido U2F MFA policy settings.
 {{% /md %}}</dd>
@@ -508,7 +508,7 @@ const example = new okta.policy.Mfa("example", {
             title="Optional">
         <span>fido<wbr>Webauthn</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfafidowebauthn">Mfa<wbr>Fido<wbr>Webauthn?</a></span>
+        <span class="property-type"><a href="#mfafidowebauthn">Mfa<wbr>Fido<wbr>Webauthn</a></span>
     </dt>
     <dd>{{% md %}}Fido Web Authn MFA policy settings.
 {{% /md %}}</dd>
@@ -517,7 +517,7 @@ const example = new okta.policy.Mfa("example", {
             title="Optional">
         <span>google<wbr>Otp</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfagoogleotp">Mfa<wbr>Google<wbr>Otp?</a></span>
+        <span class="property-type"><a href="#mfagoogleotp">Mfa<wbr>Google<wbr>Otp</a></span>
     </dt>
     <dd>{{% md %}}Google OTP MFA policy settings.
 {{% /md %}}</dd>
@@ -526,7 +526,7 @@ const example = new okta.policy.Mfa("example", {
             title="Optional">
         <span>groups<wbr>Includeds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of Group IDs to Include.
 {{% /md %}}</dd>
@@ -535,7 +535,7 @@ const example = new okta.policy.Mfa("example", {
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy Name.
 {{% /md %}}</dd>
@@ -544,7 +544,7 @@ const example = new okta.policy.Mfa("example", {
             title="Optional">
         <span>okta<wbr>Call</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfaoktacall">Mfa<wbr>Okta<wbr>Call?</a></span>
+        <span class="property-type"><a href="#mfaoktacall">Mfa<wbr>Okta<wbr>Call</a></span>
     </dt>
     <dd>{{% md %}}Okta Call MFA policy settings.
 {{% /md %}}</dd>
@@ -553,7 +553,7 @@ const example = new okta.policy.Mfa("example", {
             title="Optional">
         <span>okta<wbr>Otp</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfaoktaotp">Mfa<wbr>Okta<wbr>Otp?</a></span>
+        <span class="property-type"><a href="#mfaoktaotp">Mfa<wbr>Okta<wbr>Otp</a></span>
     </dt>
     <dd>{{% md %}}Okta OTP MFA policy settings.
 {{% /md %}}</dd>
@@ -562,7 +562,7 @@ const example = new okta.policy.Mfa("example", {
             title="Optional">
         <span>okta<wbr>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfaoktapassword">Mfa<wbr>Okta<wbr>Password?</a></span>
+        <span class="property-type"><a href="#mfaoktapassword">Mfa<wbr>Okta<wbr>Password</a></span>
     </dt>
     <dd>{{% md %}}Okta Password MFA policy settings.
 {{% /md %}}</dd>
@@ -571,7 +571,7 @@ const example = new okta.policy.Mfa("example", {
             title="Optional">
         <span>okta<wbr>Push</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfaoktapush">Mfa<wbr>Okta<wbr>Push?</a></span>
+        <span class="property-type"><a href="#mfaoktapush">Mfa<wbr>Okta<wbr>Push</a></span>
     </dt>
     <dd>{{% md %}}Okta Push MFA policy settings.
 {{% /md %}}</dd>
@@ -580,7 +580,7 @@ const example = new okta.policy.Mfa("example", {
             title="Optional">
         <span>okta<wbr>Question</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfaoktaquestion">Mfa<wbr>Okta<wbr>Question?</a></span>
+        <span class="property-type"><a href="#mfaoktaquestion">Mfa<wbr>Okta<wbr>Question</a></span>
     </dt>
     <dd>{{% md %}}Okta Question MFA policy settings.
 {{% /md %}}</dd>
@@ -589,7 +589,7 @@ const example = new okta.policy.Mfa("example", {
             title="Optional">
         <span>okta<wbr>Sms</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfaoktasms">Mfa<wbr>Okta<wbr>Sms?</a></span>
+        <span class="property-type"><a href="#mfaoktasms">Mfa<wbr>Okta<wbr>Sms</a></span>
     </dt>
     <dd>{{% md %}}Okta SMS MFA policy settings.
 {{% /md %}}</dd>
@@ -598,7 +598,7 @@ const example = new okta.policy.Mfa("example", {
             title="Optional">
         <span>priority</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Priority of the policy.
 {{% /md %}}</dd>
@@ -607,7 +607,7 @@ const example = new okta.policy.Mfa("example", {
             title="Optional">
         <span>rsa<wbr>Token</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfarsatoken">Mfa<wbr>Rsa<wbr>Token?</a></span>
+        <span class="property-type"><a href="#mfarsatoken">Mfa<wbr>Rsa<wbr>Token</a></span>
     </dt>
     <dd>{{% md %}}RSA Token MFA policy settings.
 {{% /md %}}</dd>
@@ -616,7 +616,7 @@ const example = new okta.policy.Mfa("example", {
             title="Optional">
         <span>status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy Status: `"ACTIVE"` or `"INACTIVE"`.
 {{% /md %}}</dd>
@@ -625,7 +625,7 @@ const example = new okta.policy.Mfa("example", {
             title="Optional">
         <span>symantec<wbr>Vip</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfasymantecvip">Mfa<wbr>Symantec<wbr>Vip?</a></span>
+        <span class="property-type"><a href="#mfasymantecvip">Mfa<wbr>Symantec<wbr>Vip</a></span>
     </dt>
     <dd>{{% md %}}Symantec VIP MFA policy settings.
 {{% /md %}}</dd>
@@ -634,7 +634,7 @@ const example = new okta.policy.Mfa("example", {
             title="Optional">
         <span>yubikey<wbr>Token</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfayubikeytoken">Mfa<wbr>Yubikey<wbr>Token?</a></span>
+        <span class="property-type"><a href="#mfayubikeytoken">Mfa<wbr>Yubikey<wbr>Token</a></span>
     </dt>
     <dd>{{% md %}}Yubikey Token MFA policy settings.
 {{% /md %}}</dd>
@@ -812,692 +812,6 @@ const example = new okta.policy.Mfa("example", {
 {{% /choosable %}}
 
 
-
-
-
-
-
-## Mfa Output Properties
-
-The following output properties are available:
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Policy Description.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Duo</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfaduo">Mfa<wbr>Duo?</a></span>
-    </dt>
-    <dd>{{% md %}}DUO MFA policy settings.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Fido<wbr>U2f</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfafidou2f">Mfa<wbr>Fido<wbr>U2f?</a></span>
-    </dt>
-    <dd>{{% md %}}Fido U2F MFA policy settings.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Fido<wbr>Webauthn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfafidowebauthn">Mfa<wbr>Fido<wbr>Webauthn?</a></span>
-    </dt>
-    <dd>{{% md %}}Fido Web Authn MFA policy settings.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Google<wbr>Otp</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfagoogleotp">Mfa<wbr>Google<wbr>Otp?</a></span>
-    </dt>
-    <dd>{{% md %}}Google OTP MFA policy settings.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Groups<wbr>Includeds</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}List of Group IDs to Include.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Policy Name.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Okta<wbr>Call</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfaoktacall">Mfa<wbr>Okta<wbr>Call?</a></span>
-    </dt>
-    <dd>{{% md %}}Okta Call MFA policy settings.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Okta<wbr>Otp</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfaoktaotp">Mfa<wbr>Okta<wbr>Otp?</a></span>
-    </dt>
-    <dd>{{% md %}}Okta OTP MFA policy settings.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Okta<wbr>Password</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfaoktapassword">Mfa<wbr>Okta<wbr>Password?</a></span>
-    </dt>
-    <dd>{{% md %}}Okta Password MFA policy settings.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Okta<wbr>Push</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfaoktapush">Mfa<wbr>Okta<wbr>Push?</a></span>
-    </dt>
-    <dd>{{% md %}}Okta Push MFA policy settings.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Okta<wbr>Question</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfaoktaquestion">Mfa<wbr>Okta<wbr>Question?</a></span>
-    </dt>
-    <dd>{{% md %}}Okta Question MFA policy settings.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Okta<wbr>Sms</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfaoktasms">Mfa<wbr>Okta<wbr>Sms?</a></span>
-    </dt>
-    <dd>{{% md %}}Okta SMS MFA policy settings.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Priority</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}Priority of the policy.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Rsa<wbr>Token</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfarsatoken">Mfa<wbr>Rsa<wbr>Token?</a></span>
-    </dt>
-    <dd>{{% md %}}RSA Token MFA policy settings.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Status</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Policy Status: `"ACTIVE"` or `"INACTIVE"`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Symantec<wbr>Vip</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfasymantecvip">Mfa<wbr>Symantec<wbr>Vip?</a></span>
-    </dt>
-    <dd>{{% md %}}Symantec VIP MFA policy settings.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Yubikey<wbr>Token</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfayubikeytoken">Mfa<wbr>Yubikey<wbr>Token?</a></span>
-    </dt>
-    <dd>{{% md %}}Yubikey Token MFA policy settings.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Policy Description.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Duo</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfaduo">*Mfa<wbr>Duo</a></span>
-    </dt>
-    <dd>{{% md %}}DUO MFA policy settings.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Fido<wbr>U2f</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfafidou2f">*Mfa<wbr>Fido<wbr>U2f</a></span>
-    </dt>
-    <dd>{{% md %}}Fido U2F MFA policy settings.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Fido<wbr>Webauthn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfafidowebauthn">*Mfa<wbr>Fido<wbr>Webauthn</a></span>
-    </dt>
-    <dd>{{% md %}}Fido Web Authn MFA policy settings.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Google<wbr>Otp</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfagoogleotp">*Mfa<wbr>Google<wbr>Otp</a></span>
-    </dt>
-    <dd>{{% md %}}Google OTP MFA policy settings.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Groups<wbr>Includeds</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}List of Group IDs to Include.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Policy Name.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Okta<wbr>Call</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfaoktacall">*Mfa<wbr>Okta<wbr>Call</a></span>
-    </dt>
-    <dd>{{% md %}}Okta Call MFA policy settings.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Okta<wbr>Otp</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfaoktaotp">*Mfa<wbr>Okta<wbr>Otp</a></span>
-    </dt>
-    <dd>{{% md %}}Okta OTP MFA policy settings.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Okta<wbr>Password</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfaoktapassword">*Mfa<wbr>Okta<wbr>Password</a></span>
-    </dt>
-    <dd>{{% md %}}Okta Password MFA policy settings.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Okta<wbr>Push</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfaoktapush">*Mfa<wbr>Okta<wbr>Push</a></span>
-    </dt>
-    <dd>{{% md %}}Okta Push MFA policy settings.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Okta<wbr>Question</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfaoktaquestion">*Mfa<wbr>Okta<wbr>Question</a></span>
-    </dt>
-    <dd>{{% md %}}Okta Question MFA policy settings.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Okta<wbr>Sms</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfaoktasms">*Mfa<wbr>Okta<wbr>Sms</a></span>
-    </dt>
-    <dd>{{% md %}}Okta SMS MFA policy settings.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Priority</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}Priority of the policy.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Rsa<wbr>Token</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfarsatoken">*Mfa<wbr>Rsa<wbr>Token</a></span>
-    </dt>
-    <dd>{{% md %}}RSA Token MFA policy settings.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Status</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Policy Status: `"ACTIVE"` or `"INACTIVE"`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Symantec<wbr>Vip</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfasymantecvip">*Mfa<wbr>Symantec<wbr>Vip</a></span>
-    </dt>
-    <dd>{{% md %}}Symantec VIP MFA policy settings.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Yubikey<wbr>Token</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfayubikeytoken">*Mfa<wbr>Yubikey<wbr>Token</a></span>
-    </dt>
-    <dd>{{% md %}}Yubikey Token MFA policy settings.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Policy Description.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>duo</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfaduo">Mfa<wbr>Duo?</a></span>
-    </dt>
-    <dd>{{% md %}}DUO MFA policy settings.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>fido<wbr>U2f</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfafidou2f">Mfa<wbr>Fido<wbr>U2f?</a></span>
-    </dt>
-    <dd>{{% md %}}Fido U2F MFA policy settings.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>fido<wbr>Webauthn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfafidowebauthn">Mfa<wbr>Fido<wbr>Webauthn?</a></span>
-    </dt>
-    <dd>{{% md %}}Fido Web Authn MFA policy settings.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>google<wbr>Otp</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfagoogleotp">Mfa<wbr>Google<wbr>Otp?</a></span>
-    </dt>
-    <dd>{{% md %}}Google OTP MFA policy settings.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>groups<wbr>Includeds</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}List of Group IDs to Include.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Policy Name.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>okta<wbr>Call</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfaoktacall">Mfa<wbr>Okta<wbr>Call?</a></span>
-    </dt>
-    <dd>{{% md %}}Okta Call MFA policy settings.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>okta<wbr>Otp</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfaoktaotp">Mfa<wbr>Okta<wbr>Otp?</a></span>
-    </dt>
-    <dd>{{% md %}}Okta OTP MFA policy settings.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>okta<wbr>Password</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfaoktapassword">Mfa<wbr>Okta<wbr>Password?</a></span>
-    </dt>
-    <dd>{{% md %}}Okta Password MFA policy settings.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>okta<wbr>Push</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfaoktapush">Mfa<wbr>Okta<wbr>Push?</a></span>
-    </dt>
-    <dd>{{% md %}}Okta Push MFA policy settings.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>okta<wbr>Question</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfaoktaquestion">Mfa<wbr>Okta<wbr>Question?</a></span>
-    </dt>
-    <dd>{{% md %}}Okta Question MFA policy settings.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>okta<wbr>Sms</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfaoktasms">Mfa<wbr>Okta<wbr>Sms?</a></span>
-    </dt>
-    <dd>{{% md %}}Okta SMS MFA policy settings.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>priority</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}Priority of the policy.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>rsa<wbr>Token</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfarsatoken">Mfa<wbr>Rsa<wbr>Token?</a></span>
-    </dt>
-    <dd>{{% md %}}RSA Token MFA policy settings.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>status</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Policy Status: `"ACTIVE"` or `"INACTIVE"`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>symantec<wbr>Vip</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfasymantecvip">Mfa<wbr>Symantec<wbr>Vip?</a></span>
-    </dt>
-    <dd>{{% md %}}Symantec VIP MFA policy settings.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>yubikey<wbr>Token</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfayubikeytoken">Mfa<wbr>Yubikey<wbr>Token?</a></span>
-    </dt>
-    <dd>{{% md %}}Yubikey Token MFA policy settings.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Policy Description.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>duo</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfaduo">Dict[Mfa<wbr>Duo]</a></span>
-    </dt>
-    <dd>{{% md %}}DUO MFA policy settings.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>fido_<wbr>u2f</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfafidou2f">Dict[Mfa<wbr>Fido<wbr>U2f]</a></span>
-    </dt>
-    <dd>{{% md %}}Fido U2F MFA policy settings.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>fido_<wbr>webauthn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfafidowebauthn">Dict[Mfa<wbr>Fido<wbr>Webauthn]</a></span>
-    </dt>
-    <dd>{{% md %}}Fido Web Authn MFA policy settings.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>google_<wbr>otp</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfagoogleotp">Dict[Mfa<wbr>Google<wbr>Otp]</a></span>
-    </dt>
-    <dd>{{% md %}}Google OTP MFA policy settings.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>groups_<wbr>includeds</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}List of Group IDs to Include.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Policy Name.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>okta_<wbr>call</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfaoktacall">Dict[Mfa<wbr>Okta<wbr>Call]</a></span>
-    </dt>
-    <dd>{{% md %}}Okta Call MFA policy settings.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>okta_<wbr>otp</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfaoktaotp">Dict[Mfa<wbr>Okta<wbr>Otp]</a></span>
-    </dt>
-    <dd>{{% md %}}Okta OTP MFA policy settings.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>okta_<wbr>password</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfaoktapassword">Dict[Mfa<wbr>Okta<wbr>Password]</a></span>
-    </dt>
-    <dd>{{% md %}}Okta Password MFA policy settings.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>okta_<wbr>push</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfaoktapush">Dict[Mfa<wbr>Okta<wbr>Push]</a></span>
-    </dt>
-    <dd>{{% md %}}Okta Push MFA policy settings.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>okta_<wbr>question</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfaoktaquestion">Dict[Mfa<wbr>Okta<wbr>Question]</a></span>
-    </dt>
-    <dd>{{% md %}}Okta Question MFA policy settings.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>okta_<wbr>sms</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfaoktasms">Dict[Mfa<wbr>Okta<wbr>Sms]</a></span>
-    </dt>
-    <dd>{{% md %}}Okta SMS MFA policy settings.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>priority</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}Priority of the policy.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>rsa_<wbr>token</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfarsatoken">Dict[Mfa<wbr>Rsa<wbr>Token]</a></span>
-    </dt>
-    <dd>{{% md %}}RSA Token MFA policy settings.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>status</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Policy Status: `"ACTIVE"` or `"INACTIVE"`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>symantec_<wbr>vip</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfasymantecvip">Dict[Mfa<wbr>Symantec<wbr>Vip]</a></span>
-    </dt>
-    <dd>{{% md %}}Symantec VIP MFA policy settings.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>yubikey_<wbr>token</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfayubikeytoken">Dict[Mfa<wbr>Yubikey<wbr>Token]</a></span>
-    </dt>
-    <dd>{{% md %}}Yubikey Token MFA policy settings.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
 
 
 
@@ -1635,7 +949,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy Description.
 {{% /md %}}</dd>
@@ -1644,7 +958,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Duo</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfaduo">Mfa<wbr>Duo<wbr>Args?</a></span>
+        <span class="property-type"><a href="#mfaduo">Mfa<wbr>Duo<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}DUO MFA policy settings.
 {{% /md %}}</dd>
@@ -1653,7 +967,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Fido<wbr>U2f</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfafidou2f">Mfa<wbr>Fido<wbr>U2f<wbr>Args?</a></span>
+        <span class="property-type"><a href="#mfafidou2f">Mfa<wbr>Fido<wbr>U2f<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Fido U2F MFA policy settings.
 {{% /md %}}</dd>
@@ -1662,7 +976,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Fido<wbr>Webauthn</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfafidowebauthn">Mfa<wbr>Fido<wbr>Webauthn<wbr>Args?</a></span>
+        <span class="property-type"><a href="#mfafidowebauthn">Mfa<wbr>Fido<wbr>Webauthn<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Fido Web Authn MFA policy settings.
 {{% /md %}}</dd>
@@ -1671,7 +985,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Google<wbr>Otp</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfagoogleotp">Mfa<wbr>Google<wbr>Otp<wbr>Args?</a></span>
+        <span class="property-type"><a href="#mfagoogleotp">Mfa<wbr>Google<wbr>Otp<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Google OTP MFA policy settings.
 {{% /md %}}</dd>
@@ -1680,7 +994,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Groups<wbr>Includeds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of Group IDs to Include.
 {{% /md %}}</dd>
@@ -1689,7 +1003,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy Name.
 {{% /md %}}</dd>
@@ -1698,7 +1012,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Okta<wbr>Call</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfaoktacall">Mfa<wbr>Okta<wbr>Call<wbr>Args?</a></span>
+        <span class="property-type"><a href="#mfaoktacall">Mfa<wbr>Okta<wbr>Call<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Okta Call MFA policy settings.
 {{% /md %}}</dd>
@@ -1707,7 +1021,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Okta<wbr>Otp</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfaoktaotp">Mfa<wbr>Okta<wbr>Otp<wbr>Args?</a></span>
+        <span class="property-type"><a href="#mfaoktaotp">Mfa<wbr>Okta<wbr>Otp<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Okta OTP MFA policy settings.
 {{% /md %}}</dd>
@@ -1716,7 +1030,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Okta<wbr>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfaoktapassword">Mfa<wbr>Okta<wbr>Password<wbr>Args?</a></span>
+        <span class="property-type"><a href="#mfaoktapassword">Mfa<wbr>Okta<wbr>Password<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Okta Password MFA policy settings.
 {{% /md %}}</dd>
@@ -1725,7 +1039,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Okta<wbr>Push</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfaoktapush">Mfa<wbr>Okta<wbr>Push<wbr>Args?</a></span>
+        <span class="property-type"><a href="#mfaoktapush">Mfa<wbr>Okta<wbr>Push<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Okta Push MFA policy settings.
 {{% /md %}}</dd>
@@ -1734,7 +1048,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Okta<wbr>Question</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfaoktaquestion">Mfa<wbr>Okta<wbr>Question<wbr>Args?</a></span>
+        <span class="property-type"><a href="#mfaoktaquestion">Mfa<wbr>Okta<wbr>Question<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Okta Question MFA policy settings.
 {{% /md %}}</dd>
@@ -1743,7 +1057,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Okta<wbr>Sms</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfaoktasms">Mfa<wbr>Okta<wbr>Sms<wbr>Args?</a></span>
+        <span class="property-type"><a href="#mfaoktasms">Mfa<wbr>Okta<wbr>Sms<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Okta SMS MFA policy settings.
 {{% /md %}}</dd>
@@ -1752,7 +1066,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Priority</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Priority of the policy.
 {{% /md %}}</dd>
@@ -1761,7 +1075,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Rsa<wbr>Token</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfarsatoken">Mfa<wbr>Rsa<wbr>Token<wbr>Args?</a></span>
+        <span class="property-type"><a href="#mfarsatoken">Mfa<wbr>Rsa<wbr>Token<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}RSA Token MFA policy settings.
 {{% /md %}}</dd>
@@ -1770,7 +1084,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy Status: `"ACTIVE"` or `"INACTIVE"`.
 {{% /md %}}</dd>
@@ -1779,7 +1093,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Symantec<wbr>Vip</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfasymantecvip">Mfa<wbr>Symantec<wbr>Vip<wbr>Args?</a></span>
+        <span class="property-type"><a href="#mfasymantecvip">Mfa<wbr>Symantec<wbr>Vip<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Symantec VIP MFA policy settings.
 {{% /md %}}</dd>
@@ -1788,7 +1102,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Yubikey<wbr>Token</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfayubikeytoken">Mfa<wbr>Yubikey<wbr>Token<wbr>Args?</a></span>
+        <span class="property-type"><a href="#mfayubikeytoken">Mfa<wbr>Yubikey<wbr>Token<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Yubikey Token MFA policy settings.
 {{% /md %}}</dd>
@@ -1804,7 +1118,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy Description.
 {{% /md %}}</dd>
@@ -1813,7 +1127,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Duo</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfaduo">*Mfa<wbr>Duo</a></span>
+        <span class="property-type"><a href="#mfaduo">Mfa<wbr>Duo</a></span>
     </dt>
     <dd>{{% md %}}DUO MFA policy settings.
 {{% /md %}}</dd>
@@ -1822,7 +1136,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Fido<wbr>U2f</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfafidou2f">*Mfa<wbr>Fido<wbr>U2f</a></span>
+        <span class="property-type"><a href="#mfafidou2f">Mfa<wbr>Fido<wbr>U2f</a></span>
     </dt>
     <dd>{{% md %}}Fido U2F MFA policy settings.
 {{% /md %}}</dd>
@@ -1831,7 +1145,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Fido<wbr>Webauthn</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfafidowebauthn">*Mfa<wbr>Fido<wbr>Webauthn</a></span>
+        <span class="property-type"><a href="#mfafidowebauthn">Mfa<wbr>Fido<wbr>Webauthn</a></span>
     </dt>
     <dd>{{% md %}}Fido Web Authn MFA policy settings.
 {{% /md %}}</dd>
@@ -1840,7 +1154,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Google<wbr>Otp</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfagoogleotp">*Mfa<wbr>Google<wbr>Otp</a></span>
+        <span class="property-type"><a href="#mfagoogleotp">Mfa<wbr>Google<wbr>Otp</a></span>
     </dt>
     <dd>{{% md %}}Google OTP MFA policy settings.
 {{% /md %}}</dd>
@@ -1858,7 +1172,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy Name.
 {{% /md %}}</dd>
@@ -1867,7 +1181,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Okta<wbr>Call</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfaoktacall">*Mfa<wbr>Okta<wbr>Call</a></span>
+        <span class="property-type"><a href="#mfaoktacall">Mfa<wbr>Okta<wbr>Call</a></span>
     </dt>
     <dd>{{% md %}}Okta Call MFA policy settings.
 {{% /md %}}</dd>
@@ -1876,7 +1190,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Okta<wbr>Otp</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfaoktaotp">*Mfa<wbr>Okta<wbr>Otp</a></span>
+        <span class="property-type"><a href="#mfaoktaotp">Mfa<wbr>Okta<wbr>Otp</a></span>
     </dt>
     <dd>{{% md %}}Okta OTP MFA policy settings.
 {{% /md %}}</dd>
@@ -1885,7 +1199,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Okta<wbr>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfaoktapassword">*Mfa<wbr>Okta<wbr>Password</a></span>
+        <span class="property-type"><a href="#mfaoktapassword">Mfa<wbr>Okta<wbr>Password</a></span>
     </dt>
     <dd>{{% md %}}Okta Password MFA policy settings.
 {{% /md %}}</dd>
@@ -1894,7 +1208,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Okta<wbr>Push</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfaoktapush">*Mfa<wbr>Okta<wbr>Push</a></span>
+        <span class="property-type"><a href="#mfaoktapush">Mfa<wbr>Okta<wbr>Push</a></span>
     </dt>
     <dd>{{% md %}}Okta Push MFA policy settings.
 {{% /md %}}</dd>
@@ -1903,7 +1217,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Okta<wbr>Question</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfaoktaquestion">*Mfa<wbr>Okta<wbr>Question</a></span>
+        <span class="property-type"><a href="#mfaoktaquestion">Mfa<wbr>Okta<wbr>Question</a></span>
     </dt>
     <dd>{{% md %}}Okta Question MFA policy settings.
 {{% /md %}}</dd>
@@ -1912,7 +1226,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Okta<wbr>Sms</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfaoktasms">*Mfa<wbr>Okta<wbr>Sms</a></span>
+        <span class="property-type"><a href="#mfaoktasms">Mfa<wbr>Okta<wbr>Sms</a></span>
     </dt>
     <dd>{{% md %}}Okta SMS MFA policy settings.
 {{% /md %}}</dd>
@@ -1921,7 +1235,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Priority</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Priority of the policy.
 {{% /md %}}</dd>
@@ -1930,7 +1244,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Rsa<wbr>Token</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfarsatoken">*Mfa<wbr>Rsa<wbr>Token</a></span>
+        <span class="property-type"><a href="#mfarsatoken">Mfa<wbr>Rsa<wbr>Token</a></span>
     </dt>
     <dd>{{% md %}}RSA Token MFA policy settings.
 {{% /md %}}</dd>
@@ -1939,7 +1253,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy Status: `"ACTIVE"` or `"INACTIVE"`.
 {{% /md %}}</dd>
@@ -1948,7 +1262,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Symantec<wbr>Vip</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfasymantecvip">*Mfa<wbr>Symantec<wbr>Vip</a></span>
+        <span class="property-type"><a href="#mfasymantecvip">Mfa<wbr>Symantec<wbr>Vip</a></span>
     </dt>
     <dd>{{% md %}}Symantec VIP MFA policy settings.
 {{% /md %}}</dd>
@@ -1957,7 +1271,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Yubikey<wbr>Token</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfayubikeytoken">*Mfa<wbr>Yubikey<wbr>Token</a></span>
+        <span class="property-type"><a href="#mfayubikeytoken">Mfa<wbr>Yubikey<wbr>Token</a></span>
     </dt>
     <dd>{{% md %}}Yubikey Token MFA policy settings.
 {{% /md %}}</dd>
@@ -1973,7 +1287,7 @@ The following state arguments are supported:
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy Description.
 {{% /md %}}</dd>
@@ -1982,7 +1296,7 @@ The following state arguments are supported:
             title="Optional">
         <span>duo</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfaduo">Mfa<wbr>Duo?</a></span>
+        <span class="property-type"><a href="#mfaduo">Mfa<wbr>Duo</a></span>
     </dt>
     <dd>{{% md %}}DUO MFA policy settings.
 {{% /md %}}</dd>
@@ -1991,7 +1305,7 @@ The following state arguments are supported:
             title="Optional">
         <span>fido<wbr>U2f</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfafidou2f">Mfa<wbr>Fido<wbr>U2f?</a></span>
+        <span class="property-type"><a href="#mfafidou2f">Mfa<wbr>Fido<wbr>U2f</a></span>
     </dt>
     <dd>{{% md %}}Fido U2F MFA policy settings.
 {{% /md %}}</dd>
@@ -2000,7 +1314,7 @@ The following state arguments are supported:
             title="Optional">
         <span>fido<wbr>Webauthn</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfafidowebauthn">Mfa<wbr>Fido<wbr>Webauthn?</a></span>
+        <span class="property-type"><a href="#mfafidowebauthn">Mfa<wbr>Fido<wbr>Webauthn</a></span>
     </dt>
     <dd>{{% md %}}Fido Web Authn MFA policy settings.
 {{% /md %}}</dd>
@@ -2009,7 +1323,7 @@ The following state arguments are supported:
             title="Optional">
         <span>google<wbr>Otp</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfagoogleotp">Mfa<wbr>Google<wbr>Otp?</a></span>
+        <span class="property-type"><a href="#mfagoogleotp">Mfa<wbr>Google<wbr>Otp</a></span>
     </dt>
     <dd>{{% md %}}Google OTP MFA policy settings.
 {{% /md %}}</dd>
@@ -2018,7 +1332,7 @@ The following state arguments are supported:
             title="Optional">
         <span>groups<wbr>Includeds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of Group IDs to Include.
 {{% /md %}}</dd>
@@ -2027,7 +1341,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy Name.
 {{% /md %}}</dd>
@@ -2036,7 +1350,7 @@ The following state arguments are supported:
             title="Optional">
         <span>okta<wbr>Call</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfaoktacall">Mfa<wbr>Okta<wbr>Call?</a></span>
+        <span class="property-type"><a href="#mfaoktacall">Mfa<wbr>Okta<wbr>Call</a></span>
     </dt>
     <dd>{{% md %}}Okta Call MFA policy settings.
 {{% /md %}}</dd>
@@ -2045,7 +1359,7 @@ The following state arguments are supported:
             title="Optional">
         <span>okta<wbr>Otp</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfaoktaotp">Mfa<wbr>Okta<wbr>Otp?</a></span>
+        <span class="property-type"><a href="#mfaoktaotp">Mfa<wbr>Okta<wbr>Otp</a></span>
     </dt>
     <dd>{{% md %}}Okta OTP MFA policy settings.
 {{% /md %}}</dd>
@@ -2054,7 +1368,7 @@ The following state arguments are supported:
             title="Optional">
         <span>okta<wbr>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfaoktapassword">Mfa<wbr>Okta<wbr>Password?</a></span>
+        <span class="property-type"><a href="#mfaoktapassword">Mfa<wbr>Okta<wbr>Password</a></span>
     </dt>
     <dd>{{% md %}}Okta Password MFA policy settings.
 {{% /md %}}</dd>
@@ -2063,7 +1377,7 @@ The following state arguments are supported:
             title="Optional">
         <span>okta<wbr>Push</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfaoktapush">Mfa<wbr>Okta<wbr>Push?</a></span>
+        <span class="property-type"><a href="#mfaoktapush">Mfa<wbr>Okta<wbr>Push</a></span>
     </dt>
     <dd>{{% md %}}Okta Push MFA policy settings.
 {{% /md %}}</dd>
@@ -2072,7 +1386,7 @@ The following state arguments are supported:
             title="Optional">
         <span>okta<wbr>Question</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfaoktaquestion">Mfa<wbr>Okta<wbr>Question?</a></span>
+        <span class="property-type"><a href="#mfaoktaquestion">Mfa<wbr>Okta<wbr>Question</a></span>
     </dt>
     <dd>{{% md %}}Okta Question MFA policy settings.
 {{% /md %}}</dd>
@@ -2081,7 +1395,7 @@ The following state arguments are supported:
             title="Optional">
         <span>okta<wbr>Sms</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfaoktasms">Mfa<wbr>Okta<wbr>Sms?</a></span>
+        <span class="property-type"><a href="#mfaoktasms">Mfa<wbr>Okta<wbr>Sms</a></span>
     </dt>
     <dd>{{% md %}}Okta SMS MFA policy settings.
 {{% /md %}}</dd>
@@ -2090,7 +1404,7 @@ The following state arguments are supported:
             title="Optional">
         <span>priority</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Priority of the policy.
 {{% /md %}}</dd>
@@ -2099,7 +1413,7 @@ The following state arguments are supported:
             title="Optional">
         <span>rsa<wbr>Token</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfarsatoken">Mfa<wbr>Rsa<wbr>Token?</a></span>
+        <span class="property-type"><a href="#mfarsatoken">Mfa<wbr>Rsa<wbr>Token</a></span>
     </dt>
     <dd>{{% md %}}RSA Token MFA policy settings.
 {{% /md %}}</dd>
@@ -2108,7 +1422,7 @@ The following state arguments are supported:
             title="Optional">
         <span>status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Policy Status: `"ACTIVE"` or `"INACTIVE"`.
 {{% /md %}}</dd>
@@ -2117,7 +1431,7 @@ The following state arguments are supported:
             title="Optional">
         <span>symantec<wbr>Vip</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfasymantecvip">Mfa<wbr>Symantec<wbr>Vip?</a></span>
+        <span class="property-type"><a href="#mfasymantecvip">Mfa<wbr>Symantec<wbr>Vip</a></span>
     </dt>
     <dd>{{% md %}}Symantec VIP MFA policy settings.
 {{% /md %}}</dd>
@@ -2126,7 +1440,7 @@ The following state arguments are supported:
             title="Optional">
         <span>yubikey<wbr>Token</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#mfayubikeytoken">Mfa<wbr>Yubikey<wbr>Token?</a></span>
+        <span class="property-type"><a href="#mfayubikeytoken">Mfa<wbr>Yubikey<wbr>Token</a></span>
     </dt>
     <dd>{{% md %}}Yubikey Token MFA policy settings.
 {{% /md %}}</dd>
@@ -2333,7 +1647,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Consent<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User consent type required before enrolling in the factor: `"NONE"` or `"TERMS_OF_SERVICE"`. By default it is `"NONE"`.
 {{% /md %}}</dd>
@@ -2342,7 +1656,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Enroll</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Requirements for user initiated enrollment. Can be `"NOT_ALLOWED"`, `"OPTIONAL"`, or `"REQUIRED"`. By default it is `"OPTIONAL"`.
 {{% /md %}}</dd>
@@ -2358,7 +1672,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Consent<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User consent type required before enrolling in the factor: `"NONE"` or `"TERMS_OF_SERVICE"`. By default it is `"NONE"`.
 {{% /md %}}</dd>
@@ -2367,7 +1681,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Enroll</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Requirements for user initiated enrollment. Can be `"NOT_ALLOWED"`, `"OPTIONAL"`, or `"REQUIRED"`. By default it is `"OPTIONAL"`.
 {{% /md %}}</dd>
@@ -2383,7 +1697,7 @@ The following state arguments are supported:
             title="Optional">
         <span>consent<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User consent type required before enrolling in the factor: `"NONE"` or `"TERMS_OF_SERVICE"`. By default it is `"NONE"`.
 {{% /md %}}</dd>
@@ -2392,7 +1706,7 @@ The following state arguments are supported:
             title="Optional">
         <span>enroll</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Requirements for user initiated enrollment. Can be `"NOT_ALLOWED"`, `"OPTIONAL"`, or `"REQUIRED"`. By default it is `"OPTIONAL"`.
 {{% /md %}}</dd>
@@ -2448,7 +1762,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Consent<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User consent type required before enrolling in the factor: `"NONE"` or `"TERMS_OF_SERVICE"`. By default it is `"NONE"`.
 {{% /md %}}</dd>
@@ -2457,7 +1771,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Enroll</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Requirements for user initiated enrollment. Can be `"NOT_ALLOWED"`, `"OPTIONAL"`, or `"REQUIRED"`. By default it is `"OPTIONAL"`.
 {{% /md %}}</dd>
@@ -2473,7 +1787,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Consent<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User consent type required before enrolling in the factor: `"NONE"` or `"TERMS_OF_SERVICE"`. By default it is `"NONE"`.
 {{% /md %}}</dd>
@@ -2482,7 +1796,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Enroll</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Requirements for user initiated enrollment. Can be `"NOT_ALLOWED"`, `"OPTIONAL"`, or `"REQUIRED"`. By default it is `"OPTIONAL"`.
 {{% /md %}}</dd>
@@ -2498,7 +1812,7 @@ The following state arguments are supported:
             title="Optional">
         <span>consent<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User consent type required before enrolling in the factor: `"NONE"` or `"TERMS_OF_SERVICE"`. By default it is `"NONE"`.
 {{% /md %}}</dd>
@@ -2507,7 +1821,7 @@ The following state arguments are supported:
             title="Optional">
         <span>enroll</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Requirements for user initiated enrollment. Can be `"NOT_ALLOWED"`, `"OPTIONAL"`, or `"REQUIRED"`. By default it is `"OPTIONAL"`.
 {{% /md %}}</dd>
@@ -2563,7 +1877,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Consent<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User consent type required before enrolling in the factor: `"NONE"` or `"TERMS_OF_SERVICE"`. By default it is `"NONE"`.
 {{% /md %}}</dd>
@@ -2572,7 +1886,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Enroll</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Requirements for user initiated enrollment. Can be `"NOT_ALLOWED"`, `"OPTIONAL"`, or `"REQUIRED"`. By default it is `"OPTIONAL"`.
 {{% /md %}}</dd>
@@ -2588,7 +1902,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Consent<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User consent type required before enrolling in the factor: `"NONE"` or `"TERMS_OF_SERVICE"`. By default it is `"NONE"`.
 {{% /md %}}</dd>
@@ -2597,7 +1911,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Enroll</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Requirements for user initiated enrollment. Can be `"NOT_ALLOWED"`, `"OPTIONAL"`, or `"REQUIRED"`. By default it is `"OPTIONAL"`.
 {{% /md %}}</dd>
@@ -2613,7 +1927,7 @@ The following state arguments are supported:
             title="Optional">
         <span>consent<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User consent type required before enrolling in the factor: `"NONE"` or `"TERMS_OF_SERVICE"`. By default it is `"NONE"`.
 {{% /md %}}</dd>
@@ -2622,7 +1936,7 @@ The following state arguments are supported:
             title="Optional">
         <span>enroll</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Requirements for user initiated enrollment. Can be `"NOT_ALLOWED"`, `"OPTIONAL"`, or `"REQUIRED"`. By default it is `"OPTIONAL"`.
 {{% /md %}}</dd>
@@ -2678,7 +1992,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Consent<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User consent type required before enrolling in the factor: `"NONE"` or `"TERMS_OF_SERVICE"`. By default it is `"NONE"`.
 {{% /md %}}</dd>
@@ -2687,7 +2001,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Enroll</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Requirements for user initiated enrollment. Can be `"NOT_ALLOWED"`, `"OPTIONAL"`, or `"REQUIRED"`. By default it is `"OPTIONAL"`.
 {{% /md %}}</dd>
@@ -2703,7 +2017,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Consent<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User consent type required before enrolling in the factor: `"NONE"` or `"TERMS_OF_SERVICE"`. By default it is `"NONE"`.
 {{% /md %}}</dd>
@@ -2712,7 +2026,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Enroll</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Requirements for user initiated enrollment. Can be `"NOT_ALLOWED"`, `"OPTIONAL"`, or `"REQUIRED"`. By default it is `"OPTIONAL"`.
 {{% /md %}}</dd>
@@ -2728,7 +2042,7 @@ The following state arguments are supported:
             title="Optional">
         <span>consent<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User consent type required before enrolling in the factor: `"NONE"` or `"TERMS_OF_SERVICE"`. By default it is `"NONE"`.
 {{% /md %}}</dd>
@@ -2737,7 +2051,7 @@ The following state arguments are supported:
             title="Optional">
         <span>enroll</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Requirements for user initiated enrollment. Can be `"NOT_ALLOWED"`, `"OPTIONAL"`, or `"REQUIRED"`. By default it is `"OPTIONAL"`.
 {{% /md %}}</dd>
@@ -2793,7 +2107,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Consent<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User consent type required before enrolling in the factor: `"NONE"` or `"TERMS_OF_SERVICE"`. By default it is `"NONE"`.
 {{% /md %}}</dd>
@@ -2802,7 +2116,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Enroll</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Requirements for user initiated enrollment. Can be `"NOT_ALLOWED"`, `"OPTIONAL"`, or `"REQUIRED"`. By default it is `"OPTIONAL"`.
 {{% /md %}}</dd>
@@ -2818,7 +2132,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Consent<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User consent type required before enrolling in the factor: `"NONE"` or `"TERMS_OF_SERVICE"`. By default it is `"NONE"`.
 {{% /md %}}</dd>
@@ -2827,7 +2141,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Enroll</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Requirements for user initiated enrollment. Can be `"NOT_ALLOWED"`, `"OPTIONAL"`, or `"REQUIRED"`. By default it is `"OPTIONAL"`.
 {{% /md %}}</dd>
@@ -2843,7 +2157,7 @@ The following state arguments are supported:
             title="Optional">
         <span>consent<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User consent type required before enrolling in the factor: `"NONE"` or `"TERMS_OF_SERVICE"`. By default it is `"NONE"`.
 {{% /md %}}</dd>
@@ -2852,7 +2166,7 @@ The following state arguments are supported:
             title="Optional">
         <span>enroll</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Requirements for user initiated enrollment. Can be `"NOT_ALLOWED"`, `"OPTIONAL"`, or `"REQUIRED"`. By default it is `"OPTIONAL"`.
 {{% /md %}}</dd>
@@ -2908,7 +2222,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Consent<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User consent type required before enrolling in the factor: `"NONE"` or `"TERMS_OF_SERVICE"`. By default it is `"NONE"`.
 {{% /md %}}</dd>
@@ -2917,7 +2231,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Enroll</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Requirements for user initiated enrollment. Can be `"NOT_ALLOWED"`, `"OPTIONAL"`, or `"REQUIRED"`. By default it is `"OPTIONAL"`.
 {{% /md %}}</dd>
@@ -2933,7 +2247,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Consent<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User consent type required before enrolling in the factor: `"NONE"` or `"TERMS_OF_SERVICE"`. By default it is `"NONE"`.
 {{% /md %}}</dd>
@@ -2942,7 +2256,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Enroll</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Requirements for user initiated enrollment. Can be `"NOT_ALLOWED"`, `"OPTIONAL"`, or `"REQUIRED"`. By default it is `"OPTIONAL"`.
 {{% /md %}}</dd>
@@ -2958,7 +2272,7 @@ The following state arguments are supported:
             title="Optional">
         <span>consent<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User consent type required before enrolling in the factor: `"NONE"` or `"TERMS_OF_SERVICE"`. By default it is `"NONE"`.
 {{% /md %}}</dd>
@@ -2967,7 +2281,7 @@ The following state arguments are supported:
             title="Optional">
         <span>enroll</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Requirements for user initiated enrollment. Can be `"NOT_ALLOWED"`, `"OPTIONAL"`, or `"REQUIRED"`. By default it is `"OPTIONAL"`.
 {{% /md %}}</dd>
@@ -3023,7 +2337,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Consent<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User consent type required before enrolling in the factor: `"NONE"` or `"TERMS_OF_SERVICE"`. By default it is `"NONE"`.
 {{% /md %}}</dd>
@@ -3032,7 +2346,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Enroll</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Requirements for user initiated enrollment. Can be `"NOT_ALLOWED"`, `"OPTIONAL"`, or `"REQUIRED"`. By default it is `"OPTIONAL"`.
 {{% /md %}}</dd>
@@ -3048,7 +2362,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Consent<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User consent type required before enrolling in the factor: `"NONE"` or `"TERMS_OF_SERVICE"`. By default it is `"NONE"`.
 {{% /md %}}</dd>
@@ -3057,7 +2371,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Enroll</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Requirements for user initiated enrollment. Can be `"NOT_ALLOWED"`, `"OPTIONAL"`, or `"REQUIRED"`. By default it is `"OPTIONAL"`.
 {{% /md %}}</dd>
@@ -3073,7 +2387,7 @@ The following state arguments are supported:
             title="Optional">
         <span>consent<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User consent type required before enrolling in the factor: `"NONE"` or `"TERMS_OF_SERVICE"`. By default it is `"NONE"`.
 {{% /md %}}</dd>
@@ -3082,7 +2396,7 @@ The following state arguments are supported:
             title="Optional">
         <span>enroll</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Requirements for user initiated enrollment. Can be `"NOT_ALLOWED"`, `"OPTIONAL"`, or `"REQUIRED"`. By default it is `"OPTIONAL"`.
 {{% /md %}}</dd>
@@ -3138,7 +2452,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Consent<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User consent type required before enrolling in the factor: `"NONE"` or `"TERMS_OF_SERVICE"`. By default it is `"NONE"`.
 {{% /md %}}</dd>
@@ -3147,7 +2461,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Enroll</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Requirements for user initiated enrollment. Can be `"NOT_ALLOWED"`, `"OPTIONAL"`, or `"REQUIRED"`. By default it is `"OPTIONAL"`.
 {{% /md %}}</dd>
@@ -3163,7 +2477,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Consent<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User consent type required before enrolling in the factor: `"NONE"` or `"TERMS_OF_SERVICE"`. By default it is `"NONE"`.
 {{% /md %}}</dd>
@@ -3172,7 +2486,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Enroll</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Requirements for user initiated enrollment. Can be `"NOT_ALLOWED"`, `"OPTIONAL"`, or `"REQUIRED"`. By default it is `"OPTIONAL"`.
 {{% /md %}}</dd>
@@ -3188,7 +2502,7 @@ The following state arguments are supported:
             title="Optional">
         <span>consent<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User consent type required before enrolling in the factor: `"NONE"` or `"TERMS_OF_SERVICE"`. By default it is `"NONE"`.
 {{% /md %}}</dd>
@@ -3197,7 +2511,7 @@ The following state arguments are supported:
             title="Optional">
         <span>enroll</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Requirements for user initiated enrollment. Can be `"NOT_ALLOWED"`, `"OPTIONAL"`, or `"REQUIRED"`. By default it is `"OPTIONAL"`.
 {{% /md %}}</dd>
@@ -3253,7 +2567,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Consent<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User consent type required before enrolling in the factor: `"NONE"` or `"TERMS_OF_SERVICE"`. By default it is `"NONE"`.
 {{% /md %}}</dd>
@@ -3262,7 +2576,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Enroll</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Requirements for user initiated enrollment. Can be `"NOT_ALLOWED"`, `"OPTIONAL"`, or `"REQUIRED"`. By default it is `"OPTIONAL"`.
 {{% /md %}}</dd>
@@ -3278,7 +2592,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Consent<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User consent type required before enrolling in the factor: `"NONE"` or `"TERMS_OF_SERVICE"`. By default it is `"NONE"`.
 {{% /md %}}</dd>
@@ -3287,7 +2601,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Enroll</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Requirements for user initiated enrollment. Can be `"NOT_ALLOWED"`, `"OPTIONAL"`, or `"REQUIRED"`. By default it is `"OPTIONAL"`.
 {{% /md %}}</dd>
@@ -3303,7 +2617,7 @@ The following state arguments are supported:
             title="Optional">
         <span>consent<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User consent type required before enrolling in the factor: `"NONE"` or `"TERMS_OF_SERVICE"`. By default it is `"NONE"`.
 {{% /md %}}</dd>
@@ -3312,7 +2626,7 @@ The following state arguments are supported:
             title="Optional">
         <span>enroll</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Requirements for user initiated enrollment. Can be `"NOT_ALLOWED"`, `"OPTIONAL"`, or `"REQUIRED"`. By default it is `"OPTIONAL"`.
 {{% /md %}}</dd>
@@ -3368,7 +2682,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Consent<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User consent type required before enrolling in the factor: `"NONE"` or `"TERMS_OF_SERVICE"`. By default it is `"NONE"`.
 {{% /md %}}</dd>
@@ -3377,7 +2691,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Enroll</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Requirements for user initiated enrollment. Can be `"NOT_ALLOWED"`, `"OPTIONAL"`, or `"REQUIRED"`. By default it is `"OPTIONAL"`.
 {{% /md %}}</dd>
@@ -3393,7 +2707,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Consent<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User consent type required before enrolling in the factor: `"NONE"` or `"TERMS_OF_SERVICE"`. By default it is `"NONE"`.
 {{% /md %}}</dd>
@@ -3402,7 +2716,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Enroll</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Requirements for user initiated enrollment. Can be `"NOT_ALLOWED"`, `"OPTIONAL"`, or `"REQUIRED"`. By default it is `"OPTIONAL"`.
 {{% /md %}}</dd>
@@ -3418,7 +2732,7 @@ The following state arguments are supported:
             title="Optional">
         <span>consent<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User consent type required before enrolling in the factor: `"NONE"` or `"TERMS_OF_SERVICE"`. By default it is `"NONE"`.
 {{% /md %}}</dd>
@@ -3427,7 +2741,7 @@ The following state arguments are supported:
             title="Optional">
         <span>enroll</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Requirements for user initiated enrollment. Can be `"NOT_ALLOWED"`, `"OPTIONAL"`, or `"REQUIRED"`. By default it is `"OPTIONAL"`.
 {{% /md %}}</dd>
@@ -3483,7 +2797,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Consent<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User consent type required before enrolling in the factor: `"NONE"` or `"TERMS_OF_SERVICE"`. By default it is `"NONE"`.
 {{% /md %}}</dd>
@@ -3492,7 +2806,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Enroll</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Requirements for user initiated enrollment. Can be `"NOT_ALLOWED"`, `"OPTIONAL"`, or `"REQUIRED"`. By default it is `"OPTIONAL"`.
 {{% /md %}}</dd>
@@ -3508,7 +2822,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Consent<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User consent type required before enrolling in the factor: `"NONE"` or `"TERMS_OF_SERVICE"`. By default it is `"NONE"`.
 {{% /md %}}</dd>
@@ -3517,7 +2831,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Enroll</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Requirements for user initiated enrollment. Can be `"NOT_ALLOWED"`, `"OPTIONAL"`, or `"REQUIRED"`. By default it is `"OPTIONAL"`.
 {{% /md %}}</dd>
@@ -3533,7 +2847,7 @@ The following state arguments are supported:
             title="Optional">
         <span>consent<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User consent type required before enrolling in the factor: `"NONE"` or `"TERMS_OF_SERVICE"`. By default it is `"NONE"`.
 {{% /md %}}</dd>
@@ -3542,7 +2856,7 @@ The following state arguments are supported:
             title="Optional">
         <span>enroll</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Requirements for user initiated enrollment. Can be `"NOT_ALLOWED"`, `"OPTIONAL"`, or `"REQUIRED"`. By default it is `"OPTIONAL"`.
 {{% /md %}}</dd>
@@ -3598,7 +2912,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Consent<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User consent type required before enrolling in the factor: `"NONE"` or `"TERMS_OF_SERVICE"`. By default it is `"NONE"`.
 {{% /md %}}</dd>
@@ -3607,7 +2921,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Enroll</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Requirements for user initiated enrollment. Can be `"NOT_ALLOWED"`, `"OPTIONAL"`, or `"REQUIRED"`. By default it is `"OPTIONAL"`.
 {{% /md %}}</dd>
@@ -3623,7 +2937,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Consent<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User consent type required before enrolling in the factor: `"NONE"` or `"TERMS_OF_SERVICE"`. By default it is `"NONE"`.
 {{% /md %}}</dd>
@@ -3632,7 +2946,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Enroll</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Requirements for user initiated enrollment. Can be `"NOT_ALLOWED"`, `"OPTIONAL"`, or `"REQUIRED"`. By default it is `"OPTIONAL"`.
 {{% /md %}}</dd>
@@ -3648,7 +2962,7 @@ The following state arguments are supported:
             title="Optional">
         <span>consent<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User consent type required before enrolling in the factor: `"NONE"` or `"TERMS_OF_SERVICE"`. By default it is `"NONE"`.
 {{% /md %}}</dd>
@@ -3657,7 +2971,7 @@ The following state arguments are supported:
             title="Optional">
         <span>enroll</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Requirements for user initiated enrollment. Can be `"NOT_ALLOWED"`, `"OPTIONAL"`, or `"REQUIRED"`. By default it is `"OPTIONAL"`.
 {{% /md %}}</dd>
@@ -3713,7 +3027,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Consent<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User consent type required before enrolling in the factor: `"NONE"` or `"TERMS_OF_SERVICE"`. By default it is `"NONE"`.
 {{% /md %}}</dd>
@@ -3722,7 +3036,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Enroll</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Requirements for user initiated enrollment. Can be `"NOT_ALLOWED"`, `"OPTIONAL"`, or `"REQUIRED"`. By default it is `"OPTIONAL"`.
 {{% /md %}}</dd>
@@ -3738,7 +3052,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Consent<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User consent type required before enrolling in the factor: `"NONE"` or `"TERMS_OF_SERVICE"`. By default it is `"NONE"`.
 {{% /md %}}</dd>
@@ -3747,7 +3061,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Enroll</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Requirements for user initiated enrollment. Can be `"NOT_ALLOWED"`, `"OPTIONAL"`, or `"REQUIRED"`. By default it is `"OPTIONAL"`.
 {{% /md %}}</dd>
@@ -3763,7 +3077,7 @@ The following state arguments are supported:
             title="Optional">
         <span>consent<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}User consent type required before enrolling in the factor: `"NONE"` or `"TERMS_OF_SERVICE"`. By default it is `"NONE"`.
 {{% /md %}}</dd>
@@ -3772,7 +3086,7 @@ The following state arguments are supported:
             title="Optional">
         <span>enroll</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Requirements for user initiated enrollment. Can be `"NOT_ALLOWED"`, `"OPTIONAL"`, or `"REQUIRED"`. By default it is `"OPTIONAL"`.
 {{% /md %}}</dd>

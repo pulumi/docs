@@ -58,7 +58,7 @@ const example = new aws.ec2.VpcEndpointService("example", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#VpcEndpointService">VpcEndpointService</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#VpcEndpointServiceArgs">VpcEndpointServiceArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#VpcEndpointService">VpcEndpointService</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#VpcEndpointServiceArgs">VpcEndpointServiceArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -66,7 +66,7 @@ const example = new aws.ec2.VpcEndpointService("example", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewVpcEndpointService<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2?tab=doc#VpcEndpointServiceArgs">VpcEndpointServiceArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2?tab=doc#VpcEndpointService">VpcEndpointService</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewVpcEndpointService<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2?tab=doc#VpcEndpointServiceArgs">VpcEndpointServiceArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2?tab=doc#VpcEndpointService">VpcEndpointService</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -171,29 +171,29 @@ const example = new aws.ec2.VpcEndpointService("example", {
     <dd>{{% md %}}Whether or not VPC endpoint connection requests to the service must be accepted by the service owner - `true` or `false`.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Allowed<wbr>Principals</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}The ARNs of one or more principals allowed to discover the endpoint service.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Network<wbr>Load<wbr>Balancer<wbr>Arns</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The ARNs of one or more Network Load Balancers for the endpoint service.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
+        <span>Allowed<wbr>Principals</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The ARNs of one or more principals allowed to discover the endpoint service.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -214,15 +214,6 @@ const example = new aws.ec2.VpcEndpointService("example", {
     <dd>{{% md %}}Whether or not VPC endpoint connection requests to the service must be accepted by the service owner - `true` or `false`.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Allowed<wbr>Principals</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}The ARNs of one or more principals allowed to discover the endpoint service.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Network<wbr>Load<wbr>Balancer<wbr>Arns</span>
@@ -230,6 +221,15 @@ const example = new aws.ec2.VpcEndpointService("example", {
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The ARNs of one or more Network Load Balancers for the endpoint service.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Allowed<wbr>Principals</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}The ARNs of one or more principals allowed to discover the endpoint service.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -257,15 +257,6 @@ const example = new aws.ec2.VpcEndpointService("example", {
     <dd>{{% md %}}Whether or not VPC endpoint connection requests to the service must be accepted by the service owner - `true` or `false`.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>allowed<wbr>Principals</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}The ARNs of one or more principals allowed to discover the endpoint service.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>network<wbr>Load<wbr>Balancer<wbr>Arns</span>
@@ -277,9 +268,18 @@ const example = new aws.ec2.VpcEndpointService("example", {
 
     <dt class="property-optional"
             title="Optional">
+        <span>allowed<wbr>Principals</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}The ARNs of one or more principals allowed to discover the endpoint service.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -300,15 +300,6 @@ const example = new aws.ec2.VpcEndpointService("example", {
     <dd>{{% md %}}Whether or not VPC endpoint connection requests to the service must be accepted by the service owner - `true` or `false`.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>allowed_<wbr>principals</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}The ARNs of one or more principals allowed to discover the endpoint service.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>network_<wbr>load_<wbr>balancer_<wbr>arns</span>
@@ -316,6 +307,15 @@ const example = new aws.ec2.VpcEndpointService("example", {
         <span class="property-type">List[str]</span>
     </dt>
     <dd>{{% md %}}The ARNs of one or more Network Load Balancers for the endpoint service.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>allowed_<wbr>principals</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List[str]</span>
+    </dt>
+    <dd>{{% md %}}The ARNs of one or more principals allowed to discover the endpoint service.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -348,27 +348,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Acceptance<wbr>Required</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Whether or not VPC endpoint connection requests to the service must be accepted by the service owner - `true` or `false`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Allowed<wbr>Principals</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
-    </dt>
-    <dd>{{% md %}}The ARNs of one or more principals allowed to discover the endpoint service.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Availability<wbr>Zones</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The Availability Zones in which the service is available.
 {{% /md %}}</dd>
@@ -377,7 +359,7 @@ The following output properties are available:
             title="">
         <span>Base<wbr>Endpoint<wbr>Dns<wbr>Names</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The DNS names for the service.
 {{% /md %}}</dd>
@@ -389,15 +371,6 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not the service manages its VPC endpoints - `true` or `false`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Network<wbr>Load<wbr>Balancer<wbr>Arns</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
-    </dt>
-    <dd>{{% md %}}The ARNs of one or more Network Load Balancers for the endpoint service.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -434,15 +407,6 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The state of the VPC endpoint service.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
 
 </dl>
@@ -454,24 +418,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Acceptance<wbr>Required</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Whether or not VPC endpoint connection requests to the service must be accepted by the service owner - `true` or `false`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Allowed<wbr>Principals</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}The ARNs of one or more principals allowed to discover the endpoint service.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Availability<wbr>Zones</span>
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
@@ -495,15 +441,6 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not the service manages its VPC endpoints - `true` or `false`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Network<wbr>Load<wbr>Balancer<wbr>Arns</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}The ARNs of one or more Network Load Balancers for the endpoint service.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -542,39 +479,12 @@ The following output properties are available:
     <dd>{{% md %}}The state of the VPC endpoint service.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>acceptance<wbr>Required</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
-    </dt>
-    <dd>{{% md %}}Whether or not VPC endpoint connection requests to the service must be accepted by the service owner - `true` or `false`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>allowed<wbr>Principals</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
-    </dt>
-    <dd>{{% md %}}The ARNs of one or more principals allowed to discover the endpoint service.
-{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -601,15 +511,6 @@ The following output properties are available:
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether or not the service manages its VPC endpoints - `true` or `false`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>network<wbr>Load<wbr>Balancer<wbr>Arns</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
-    </dt>
-    <dd>{{% md %}}The ARNs of one or more Network Load Balancers for the endpoint service.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -648,39 +549,12 @@ The following output properties are available:
     <dd>{{% md %}}The state of the VPC endpoint service.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>acceptance_<wbr>required</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Whether or not VPC endpoint connection requests to the service must be accepted by the service owner - `true` or `false`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>allowed_<wbr>principals</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}The ARNs of one or more principals allowed to discover the endpoint service.
-{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -707,15 +581,6 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not the service manages its VPC endpoints - `true` or `false`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>network_<wbr>load_<wbr>balancer_<wbr>arns</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}The ARNs of one or more Network Load Balancers for the endpoint service.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -752,15 +617,6 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The state of the VPC endpoint service.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
 
 </dl>
@@ -902,7 +758,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Acceptance<wbr>Required</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not VPC endpoint connection requests to the service must be accepted by the service owner - `true` or `false`.
 {{% /md %}}</dd>
@@ -911,7 +767,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Allowed<wbr>Principals</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The ARNs of one or more principals allowed to discover the endpoint service.
 {{% /md %}}</dd>
@@ -920,7 +776,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Availability<wbr>Zones</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The Availability Zones in which the service is available.
 {{% /md %}}</dd>
@@ -929,7 +785,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Base<wbr>Endpoint<wbr>Dns<wbr>Names</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The DNS names for the service.
 {{% /md %}}</dd>
@@ -938,7 +794,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Manages<wbr>Vpc<wbr>Endpoints</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not the service manages its VPC endpoints - `true` or `false`.
 {{% /md %}}</dd>
@@ -947,7 +803,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Network<wbr>Load<wbr>Balancer<wbr>Arns</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The ARNs of one or more Network Load Balancers for the endpoint service.
 {{% /md %}}</dd>
@@ -956,7 +812,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Private<wbr>Dns<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The private DNS name for the service.
 {{% /md %}}</dd>
@@ -965,7 +821,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Service<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service name.
 {{% /md %}}</dd>
@@ -974,7 +830,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Service<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service type, `Gateway` or `Interface`.
 {{% /md %}}</dd>
@@ -983,7 +839,7 @@ The following state arguments are supported:
             title="Optional">
         <span>State</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The state of the VPC endpoint service.
 {{% /md %}}</dd>
@@ -992,7 +848,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1008,7 +864,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Acceptance<wbr>Required</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not VPC endpoint connection requests to the service must be accepted by the service owner - `true` or `false`.
 {{% /md %}}</dd>
@@ -1044,7 +900,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Manages<wbr>Vpc<wbr>Endpoints</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether or not the service manages its VPC endpoints - `true` or `false`.
 {{% /md %}}</dd>
@@ -1062,7 +918,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Private<wbr>Dns<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The private DNS name for the service.
 {{% /md %}}</dd>
@@ -1071,7 +927,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Service<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service name.
 {{% /md %}}</dd>
@@ -1080,7 +936,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Service<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service type, `Gateway` or `Interface`.
 {{% /md %}}</dd>
@@ -1089,7 +945,7 @@ The following state arguments are supported:
             title="Optional">
         <span>State</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The state of the VPC endpoint service.
 {{% /md %}}</dd>
@@ -1114,7 +970,7 @@ The following state arguments are supported:
             title="Optional">
         <span>acceptance<wbr>Required</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether or not VPC endpoint connection requests to the service must be accepted by the service owner - `true` or `false`.
 {{% /md %}}</dd>
@@ -1123,7 +979,7 @@ The following state arguments are supported:
             title="Optional">
         <span>allowed<wbr>Principals</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The ARNs of one or more principals allowed to discover the endpoint service.
 {{% /md %}}</dd>
@@ -1132,7 +988,7 @@ The following state arguments are supported:
             title="Optional">
         <span>availability<wbr>Zones</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The Availability Zones in which the service is available.
 {{% /md %}}</dd>
@@ -1141,7 +997,7 @@ The following state arguments are supported:
             title="Optional">
         <span>base<wbr>Endpoint<wbr>Dns<wbr>Names</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The DNS names for the service.
 {{% /md %}}</dd>
@@ -1150,7 +1006,7 @@ The following state arguments are supported:
             title="Optional">
         <span>manages<wbr>Vpc<wbr>Endpoints</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether or not the service manages its VPC endpoints - `true` or `false`.
 {{% /md %}}</dd>
@@ -1159,7 +1015,7 @@ The following state arguments are supported:
             title="Optional">
         <span>network<wbr>Load<wbr>Balancer<wbr>Arns</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The ARNs of one or more Network Load Balancers for the endpoint service.
 {{% /md %}}</dd>
@@ -1168,7 +1024,7 @@ The following state arguments are supported:
             title="Optional">
         <span>private<wbr>Dns<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The private DNS name for the service.
 {{% /md %}}</dd>
@@ -1177,7 +1033,7 @@ The following state arguments are supported:
             title="Optional">
         <span>service<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service name.
 {{% /md %}}</dd>
@@ -1186,7 +1042,7 @@ The following state arguments are supported:
             title="Optional">
         <span>service<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The service type, `Gateway` or `Interface`.
 {{% /md %}}</dd>
@@ -1195,7 +1051,7 @@ The following state arguments are supported:
             title="Optional">
         <span>state</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The state of the VPC endpoint service.
 {{% /md %}}</dd>
@@ -1204,7 +1060,7 @@ The following state arguments are supported:
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>

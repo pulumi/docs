@@ -34,7 +34,7 @@ const example = new okta.app.OAuth("example", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/okta/app/#OAuth">OAuth</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/okta/app/#OAuthArgs">OAuthArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/okta/app/#OAuth">OAuth</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/okta/app/#OAuthArgs">OAuthArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -42,7 +42,7 @@ const example = new okta.app.OAuth("example", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewOAuth<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/go/okta/app?tab=doc#OAuthArgs">OAuthArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/go/okta/app?tab=doc#OAuth">OAuth</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewOAuth<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/go/okta/app?tab=doc#OAuthArgs">OAuthArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/go/okta/app?tab=doc#OAuth">OAuth</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -138,105 +138,6 @@ const example = new okta.app.OAuth("example", {
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Auto<wbr>Key<wbr>Rotation</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Requested key rotation mode.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Auto<wbr>Submit<wbr>Toolbar</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Display auto submit toolbar.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Client<wbr>Basic<wbr>Secret</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}OAuth client secret key, this can be set when token_endpoint_auth_method is client_secret_basic.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Client<wbr>Uri</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}URI to a web page providing information about the client.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Consent<wbr>Method</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Indicates whether user consent is required or implicit. Valid values: REQUIRED, TRUSTED. Default value is TRUSTED.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Custom<wbr>Client<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}This property allows you to set the application's client id.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Grant<wbr>Types</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}List of OAuth 2.0 grant types. Conditional validation params found here https://developer.okta.com/docs/api/resources/apps#credentials-settings-details. Defaults to minimum requirements per app type.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Groups</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}The groups assigned to the application. It is recommended not to use this and instead use `okta.app.GroupAssignment`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Hide<wbr>Ios</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Do not display application icon on mobile app.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Hide<wbr>Web</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Do not display application icon to users.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Issuer<wbr>Mode</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Indicates whether the Okta Authorization Server uses the original Okta org domain URL or a custom domain URL as the issuer of ID token for this client.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Label</span>
@@ -244,105 +145,6 @@ const example = new okta.app.OAuth("example", {
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Application's display name.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Login<wbr>Uri</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}URI that initiates login.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Logo<wbr>Uri</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}URI that references a logo for the client.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Omit<wbr>Secret</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}This tells the provider not to persist the application's secret to state. If this is ever changes from true => false your app will be recreated.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Policy<wbr>Uri</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}URI to web page providing client policy document.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Post<wbr>Logout<wbr>Redirect<wbr>Uris</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}List of URIs for redirection after logout.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Profile</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Custom JSON that represents an OAuth application's profile.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Redirect<wbr>Uris</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}List of URIs for use in the redirect-based flow. This is required for all application types except service.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Response<wbr>Types</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}List of OAuth 2.0 response type strings.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Status</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The status of the application, by default it is `"ACTIVE"`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Token<wbr>Endpoint<wbr>Auth<wbr>Method</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Requested authentication method for the token endpoint. It can be set to `"none"`, `"client_secret_post"`, `"client_secret_basic"`, `"client_secret_jwt"`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Tos<wbr>Uri</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}URI to web page providing client tos (terms of service).
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -356,9 +158,207 @@ const example = new okta.app.OAuth("example", {
 
     <dt class="property-optional"
             title="Optional">
+        <span>Auto<wbr>Key<wbr>Rotation</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Requested key rotation mode.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Auto<wbr>Submit<wbr>Toolbar</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Display auto submit toolbar.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Client<wbr>Basic<wbr>Secret</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}OAuth client secret key, this can be set when token_endpoint_auth_method is client_secret_basic.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Client<wbr>Uri</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}URI to a web page providing information about the client.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Consent<wbr>Method</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether user consent is required or implicit. Valid values: REQUIRED, TRUSTED. Default value is TRUSTED.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Custom<wbr>Client<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}This property allows you to set the application's client id.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Grant<wbr>Types</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}List of OAuth 2.0 grant types. Conditional validation params found here https://developer.okta.com/docs/api/resources/apps#credentials-settings-details. Defaults to minimum requirements per app type.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Groups</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The groups assigned to the application. It is recommended not to use this and instead use `okta.app.GroupAssignment`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Hide<wbr>Ios</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Do not display application icon on mobile app.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Hide<wbr>Web</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Do not display application icon to users.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Issuer<wbr>Mode</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether the Okta Authorization Server uses the original Okta org domain URL or a custom domain URL as the issuer of ID token for this client.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Login<wbr>Uri</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}URI that initiates login.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Logo<wbr>Uri</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}URI that references a logo for the client.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Omit<wbr>Secret</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}This tells the provider not to persist the application's secret to state. If this is ever changes from true => false your app will be recreated.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Policy<wbr>Uri</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}URI to web page providing client policy document.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Post<wbr>Logout<wbr>Redirect<wbr>Uris</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}List of URIs for redirection after logout.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Profile</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Custom JSON that represents an OAuth application's profile.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Redirect<wbr>Uris</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}List of URIs for use in the redirect-based flow. This is required for all application types except service.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Response<wbr>Types</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}List of OAuth 2.0 response type strings.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Status</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The status of the application, by default it is `"ACTIVE"`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Token<wbr>Endpoint<wbr>Auth<wbr>Method</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Requested authentication method for the token endpoint. It can be set to `"none"`, `"client_secret_post"`, `"client_secret_basic"`, `"client_secret_jwt"`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Tos<wbr>Uri</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}URI to web page providing client tos (terms of service).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Users</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oauthuser">List&lt;OAuth<wbr>User<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#oauthuser">List&lt;OAuth<wbr>User<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The users assigned to the application. It is recommended not to use this and instead use `okta.app.User`.
 {{% /md %}}</dd>
@@ -370,11 +370,29 @@ const example = new okta.app.OAuth("example", {
 {{% choosable language go %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Label</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Application's display name.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of OAuth application.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Auto<wbr>Key<wbr>Rotation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Requested key rotation mode.
 {{% /md %}}</dd>
@@ -383,7 +401,7 @@ const example = new okta.app.OAuth("example", {
             title="Optional">
         <span>Auto<wbr>Submit<wbr>Toolbar</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Display auto submit toolbar.
 {{% /md %}}</dd>
@@ -392,7 +410,7 @@ const example = new okta.app.OAuth("example", {
             title="Optional">
         <span>Client<wbr>Basic<wbr>Secret</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OAuth client secret key, this can be set when token_endpoint_auth_method is client_secret_basic.
 {{% /md %}}</dd>
@@ -401,7 +419,7 @@ const example = new okta.app.OAuth("example", {
             title="Optional">
         <span>Client<wbr>Uri</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI to a web page providing information about the client.
 {{% /md %}}</dd>
@@ -410,7 +428,7 @@ const example = new okta.app.OAuth("example", {
             title="Optional">
         <span>Consent<wbr>Method</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether user consent is required or implicit. Valid values: REQUIRED, TRUSTED. Default value is TRUSTED.
 {{% /md %}}</dd>
@@ -419,7 +437,7 @@ const example = new okta.app.OAuth("example", {
             title="Optional">
         <span>Custom<wbr>Client<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This property allows you to set the application's client id.
 {{% /md %}}</dd>
@@ -446,7 +464,7 @@ const example = new okta.app.OAuth("example", {
             title="Optional">
         <span>Hide<wbr>Ios</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Do not display application icon on mobile app.
 {{% /md %}}</dd>
@@ -455,7 +473,7 @@ const example = new okta.app.OAuth("example", {
             title="Optional">
         <span>Hide<wbr>Web</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Do not display application icon to users.
 {{% /md %}}</dd>
@@ -464,25 +482,16 @@ const example = new okta.app.OAuth("example", {
             title="Optional">
         <span>Issuer<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Indicates whether the Okta Authorization Server uses the original Okta org domain URL or a custom domain URL as the issuer of ID token for this client.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Label</span>
-        <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Application's display name.
+    <dd>{{% md %}}Indicates whether the Okta Authorization Server uses the original Okta org domain URL or a custom domain URL as the issuer of ID token for this client.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Login<wbr>Uri</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI that initiates login.
 {{% /md %}}</dd>
@@ -491,7 +500,7 @@ const example = new okta.app.OAuth("example", {
             title="Optional">
         <span>Logo<wbr>Uri</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI that references a logo for the client.
 {{% /md %}}</dd>
@@ -500,7 +509,7 @@ const example = new okta.app.OAuth("example", {
             title="Optional">
         <span>Omit<wbr>Secret</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}This tells the provider not to persist the application's secret to state. If this is ever changes from true => false your app will be recreated.
 {{% /md %}}</dd>
@@ -509,7 +518,7 @@ const example = new okta.app.OAuth("example", {
             title="Optional">
         <span>Policy<wbr>Uri</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI to web page providing client policy document.
 {{% /md %}}</dd>
@@ -527,7 +536,7 @@ const example = new okta.app.OAuth("example", {
             title="Optional">
         <span>Profile</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Custom JSON that represents an OAuth application's profile.
 {{% /md %}}</dd>
@@ -554,7 +563,7 @@ const example = new okta.app.OAuth("example", {
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the application, by default it is `"ACTIVE"`.
 {{% /md %}}</dd>
@@ -563,7 +572,7 @@ const example = new okta.app.OAuth("example", {
             title="Optional">
         <span>Token<wbr>Endpoint<wbr>Auth<wbr>Method</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Requested authentication method for the token endpoint. It can be set to `"none"`, `"client_secret_post"`, `"client_secret_basic"`, `"client_secret_jwt"`.
 {{% /md %}}</dd>
@@ -572,18 +581,9 @@ const example = new okta.app.OAuth("example", {
             title="Optional">
         <span>Tos<wbr>Uri</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}URI to web page providing client tos (terms of service).
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Type</span>
-        <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of OAuth application.
+    <dd>{{% md %}}URI to web page providing client tos (terms of service).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -602,105 +602,6 @@ const example = new okta.app.OAuth("example", {
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>auto<wbr>Key<wbr>Rotation</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Requested key rotation mode.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>auto<wbr>Submit<wbr>Toolbar</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Display auto submit toolbar.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>client<wbr>Basic<wbr>Secret</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}OAuth client secret key, this can be set when token_endpoint_auth_method is client_secret_basic.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>client<wbr>Uri</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}URI to a web page providing information about the client.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>consent<wbr>Method</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Indicates whether user consent is required or implicit. Valid values: REQUIRED, TRUSTED. Default value is TRUSTED.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>custom<wbr>Client<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}This property allows you to set the application's client id.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>grant<wbr>Types</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}List of OAuth 2.0 grant types. Conditional validation params found here https://developer.okta.com/docs/api/resources/apps#credentials-settings-details. Defaults to minimum requirements per app type.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>groups</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}The groups assigned to the application. It is recommended not to use this and instead use `okta.app.GroupAssignment`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>hide<wbr>Ios</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Do not display application icon on mobile app.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>hide<wbr>Web</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Do not display application icon to users.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>issuer<wbr>Mode</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Indicates whether the Okta Authorization Server uses the original Okta org domain URL or a custom domain URL as the issuer of ID token for this client.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>label</span>
@@ -708,105 +609,6 @@ const example = new okta.app.OAuth("example", {
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Application's display name.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>login<wbr>Uri</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}URI that initiates login.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>logo<wbr>Uri</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}URI that references a logo for the client.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>omit<wbr>Secret</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}This tells the provider not to persist the application's secret to state. If this is ever changes from true => false your app will be recreated.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>policy<wbr>Uri</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}URI to web page providing client policy document.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>post<wbr>Logout<wbr>Redirect<wbr>Uris</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}List of URIs for redirection after logout.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>profile</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Custom JSON that represents an OAuth application's profile.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>redirect<wbr>Uris</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}List of URIs for use in the redirect-based flow. This is required for all application types except service.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>response<wbr>Types</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}List of OAuth 2.0 response type strings.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>status</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The status of the application, by default it is `"ACTIVE"`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>token<wbr>Endpoint<wbr>Auth<wbr>Method</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Requested authentication method for the token endpoint. It can be set to `"none"`, `"client_secret_post"`, `"client_secret_basic"`, `"client_secret_jwt"`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>tos<wbr>Uri</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}URI to web page providing client tos (terms of service).
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -820,9 +622,207 @@ const example = new okta.app.OAuth("example", {
 
     <dt class="property-optional"
             title="Optional">
+        <span>auto<wbr>Key<wbr>Rotation</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Requested key rotation mode.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>auto<wbr>Submit<wbr>Toolbar</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Display auto submit toolbar.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>client<wbr>Basic<wbr>Secret</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}OAuth client secret key, this can be set when token_endpoint_auth_method is client_secret_basic.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>client<wbr>Uri</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}URI to a web page providing information about the client.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>consent<wbr>Method</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether user consent is required or implicit. Valid values: REQUIRED, TRUSTED. Default value is TRUSTED.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>custom<wbr>Client<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}This property allows you to set the application's client id.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>grant<wbr>Types</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}List of OAuth 2.0 grant types. Conditional validation params found here https://developer.okta.com/docs/api/resources/apps#credentials-settings-details. Defaults to minimum requirements per app type.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>groups</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}The groups assigned to the application. It is recommended not to use this and instead use `okta.app.GroupAssignment`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>hide<wbr>Ios</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Do not display application icon on mobile app.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>hide<wbr>Web</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Do not display application icon to users.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>issuer<wbr>Mode</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether the Okta Authorization Server uses the original Okta org domain URL or a custom domain URL as the issuer of ID token for this client.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>login<wbr>Uri</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}URI that initiates login.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>logo<wbr>Uri</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}URI that references a logo for the client.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>omit<wbr>Secret</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}This tells the provider not to persist the application's secret to state. If this is ever changes from true => false your app will be recreated.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>policy<wbr>Uri</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}URI to web page providing client policy document.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>post<wbr>Logout<wbr>Redirect<wbr>Uris</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}List of URIs for redirection after logout.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>profile</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Custom JSON that represents an OAuth application's profile.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>redirect<wbr>Uris</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}List of URIs for use in the redirect-based flow. This is required for all application types except service.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>response<wbr>Types</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}List of OAuth 2.0 response type strings.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>status</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The status of the application, by default it is `"ACTIVE"`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>token<wbr>Endpoint<wbr>Auth<wbr>Method</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Requested authentication method for the token endpoint. It can be set to `"none"`, `"client_secret_post"`, `"client_secret_basic"`, `"client_secret_jwt"`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>tos<wbr>Uri</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}URI to web page providing client tos (terms of service).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>users</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oauthuser">OAuth<wbr>User[]?</a></span>
+        <span class="property-type"><a href="#oauthuser">OAuth<wbr>User[]</a></span>
     </dt>
     <dd>{{% md %}}The users assigned to the application. It is recommended not to use this and instead use `okta.app.User`.
 {{% /md %}}</dd>
@@ -833,6 +833,24 @@ const example = new okta.app.OAuth("example", {
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>label</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Application's display name.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The type of OAuth application.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -933,15 +951,6 @@ const example = new okta.app.OAuth("example", {
     <dd>{{% md %}}Indicates whether the Okta Authorization Server uses the original Okta org domain URL or a custom domain URL as the issuer of ID token for this client.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>label</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The Application's display name.
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>login_<wbr>uri</span>
@@ -1039,15 +1048,6 @@ const example = new okta.app.OAuth("example", {
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}URI to web page providing client tos (terms of service).
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The type of OAuth application.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1080,33 +1080,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Auto<wbr>Key<wbr>Rotation</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Requested key rotation mode.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Auto<wbr>Submit<wbr>Toolbar</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Display auto submit toolbar.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Client<wbr>Basic<wbr>Secret</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}OAuth client secret key, this can be set when token_endpoint_auth_method is client_secret_basic.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Client<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -1125,105 +1098,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Client<wbr>Uri</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}URI to a web page providing information about the client.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Consent<wbr>Method</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Indicates whether user consent is required or implicit. Valid values: REQUIRED, TRUSTED. Default value is TRUSTED.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Custom<wbr>Client<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}This property allows you to set the application's client id.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Grant<wbr>Types</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}List of OAuth 2.0 grant types. Conditional validation params found here https://developer.okta.com/docs/api/resources/apps#credentials-settings-details. Defaults to minimum requirements per app type.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Groups</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}The groups assigned to the application. It is recommended not to use this and instead use `okta.app.GroupAssignment`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Hide<wbr>Ios</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Do not display application icon on mobile app.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Hide<wbr>Web</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Do not display application icon to users.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Issuer<wbr>Mode</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Indicates whether the Okta Authorization Server uses the original Okta org domain URL or a custom domain URL as the issuer of ID token for this client.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Label</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Application's display name.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Login<wbr>Uri</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}URI that initiates login.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Logo<wbr>Uri</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}URI that references a logo for the client.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -1233,110 +1107,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Omit<wbr>Secret</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}This tells the provider not to persist the application's secret to state. If this is ever changes from true => false your app will be recreated.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Policy<wbr>Uri</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}URI to web page providing client policy document.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Post<wbr>Logout<wbr>Redirect<wbr>Uris</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}List of URIs for redirection after logout.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Profile</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Custom JSON that represents an OAuth application's profile.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Redirect<wbr>Uris</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}List of URIs for use in the redirect-based flow. This is required for all application types except service.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Response<wbr>Types</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}List of OAuth 2.0 response type strings.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Sign<wbr>On<wbr>Mode</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sign on mode of application.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Status</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The status of the application, by default it is `"ACTIVE"`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Token<wbr>Endpoint<wbr>Auth<wbr>Method</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Requested authentication method for the token endpoint. It can be set to `"none"`, `"client_secret_post"`, `"client_secret_basic"`, `"client_secret_jwt"`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tos<wbr>Uri</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}URI to web page providing client tos (terms of service).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The type of OAuth application.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Users</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oauthuser">List&lt;OAuth<wbr>User&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}The users assigned to the application. It is recommended not to use this and instead use `okta.app.User`.
 {{% /md %}}</dd>
 
 </dl>
@@ -1348,33 +1123,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Auto<wbr>Key<wbr>Rotation</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Requested key rotation mode.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Auto<wbr>Submit<wbr>Toolbar</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Display auto submit toolbar.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Client<wbr>Basic<wbr>Secret</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}OAuth client secret key, this can be set when token_endpoint_auth_method is client_secret_basic.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Client<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -1393,164 +1141,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Client<wbr>Uri</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}URI to a web page providing information about the client.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Consent<wbr>Method</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Indicates whether user consent is required or implicit. Valid values: REQUIRED, TRUSTED. Default value is TRUSTED.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Custom<wbr>Client<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}This property allows you to set the application's client id.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Grant<wbr>Types</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}List of OAuth 2.0 grant types. Conditional validation params found here https://developer.okta.com/docs/api/resources/apps#credentials-settings-details. Defaults to minimum requirements per app type.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Groups</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}The groups assigned to the application. It is recommended not to use this and instead use `okta.app.GroupAssignment`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Hide<wbr>Ios</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Do not display application icon on mobile app.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Hide<wbr>Web</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Do not display application icon to users.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Issuer<wbr>Mode</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Indicates whether the Okta Authorization Server uses the original Okta org domain URL or a custom domain URL as the issuer of ID token for this client.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Label</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Application's display name.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Login<wbr>Uri</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}URI that initiates login.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Logo<wbr>Uri</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}URI that references a logo for the client.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name assigned to the application by Okta.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Omit<wbr>Secret</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}This tells the provider not to persist the application's secret to state. If this is ever changes from true => false your app will be recreated.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Policy<wbr>Uri</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}URI to web page providing client policy document.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Post<wbr>Logout<wbr>Redirect<wbr>Uris</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}List of URIs for redirection after logout.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Profile</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Custom JSON that represents an OAuth application's profile.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Redirect<wbr>Uris</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}List of URIs for use in the redirect-based flow. This is required for all application types except service.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Response<wbr>Types</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}List of OAuth 2.0 response type strings.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1562,84 +1157,12 @@ The following output properties are available:
     <dd>{{% md %}}Sign on mode of application.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span>Status</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The status of the application, by default it is `"ACTIVE"`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Token<wbr>Endpoint<wbr>Auth<wbr>Method</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Requested authentication method for the token endpoint. It can be set to `"none"`, `"client_secret_post"`, `"client_secret_basic"`, `"client_secret_jwt"`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tos<wbr>Uri</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}URI to web page providing client tos (terms of service).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The type of OAuth application.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Users</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oauthuser">[]OAuth<wbr>User</a></span>
-    </dt>
-    <dd>{{% md %}}The users assigned to the application. It is recommended not to use this and instead use `okta.app.User`.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>auto<wbr>Key<wbr>Rotation</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Requested key rotation mode.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>auto<wbr>Submit<wbr>Toolbar</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Display auto submit toolbar.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>client<wbr>Basic<wbr>Secret</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}OAuth client secret key, this can be set when token_endpoint_auth_method is client_secret_basic.
-{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1661,164 +1184,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>client<wbr>Uri</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}URI to a web page providing information about the client.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>consent<wbr>Method</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Indicates whether user consent is required or implicit. Valid values: REQUIRED, TRUSTED. Default value is TRUSTED.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>custom<wbr>Client<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}This property allows you to set the application's client id.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>grant<wbr>Types</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}List of OAuth 2.0 grant types. Conditional validation params found here https://developer.okta.com/docs/api/resources/apps#credentials-settings-details. Defaults to minimum requirements per app type.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>groups</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}The groups assigned to the application. It is recommended not to use this and instead use `okta.app.GroupAssignment`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>hide<wbr>Ios</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Do not display application icon on mobile app.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>hide<wbr>Web</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Do not display application icon to users.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>issuer<wbr>Mode</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Indicates whether the Okta Authorization Server uses the original Okta org domain URL or a custom domain URL as the issuer of ID token for this client.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>label</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Application's display name.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>login<wbr>Uri</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}URI that initiates login.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>logo<wbr>Uri</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}URI that references a logo for the client.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name assigned to the application by Okta.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>omit<wbr>Secret</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}This tells the provider not to persist the application's secret to state. If this is ever changes from true => false your app will be recreated.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>policy<wbr>Uri</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}URI to web page providing client policy document.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>post<wbr>Logout<wbr>Redirect<wbr>Uris</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}List of URIs for redirection after logout.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>profile</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Custom JSON that represents an OAuth application's profile.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>redirect<wbr>Uris</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}List of URIs for use in the redirect-based flow. This is required for all application types except service.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>response<wbr>Types</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}List of OAuth 2.0 response type strings.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1830,84 +1200,12 @@ The following output properties are available:
     <dd>{{% md %}}Sign on mode of application.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span>status</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The status of the application, by default it is `"ACTIVE"`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>token<wbr>Endpoint<wbr>Auth<wbr>Method</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Requested authentication method for the token endpoint. It can be set to `"none"`, `"client_secret_post"`, `"client_secret_basic"`, `"client_secret_jwt"`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tos<wbr>Uri</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}URI to web page providing client tos (terms of service).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The type of OAuth application.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>users</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oauthuser">OAuth<wbr>User[]?</a></span>
-    </dt>
-    <dd>{{% md %}}The users assigned to the application. It is recommended not to use this and instead use `okta.app.User`.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>auto_<wbr>key_<wbr>rotation</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Requested key rotation mode.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>auto_<wbr>submit_<wbr>toolbar</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Display auto submit toolbar.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>client_<wbr>basic_<wbr>secret</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}OAuth client secret key, this can be set when token_endpoint_auth_method is client_secret_basic.
-{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1929,105 +1227,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>client_<wbr>uri</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}URI to a web page providing information about the client.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>consent_<wbr>method</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Indicates whether user consent is required or implicit. Valid values: REQUIRED, TRUSTED. Default value is TRUSTED.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>custom_<wbr>client_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}This property allows you to set the application's client id.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>grant_<wbr>types</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}List of OAuth 2.0 grant types. Conditional validation params found here https://developer.okta.com/docs/api/resources/apps#credentials-settings-details. Defaults to minimum requirements per app type.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>groups</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}The groups assigned to the application. It is recommended not to use this and instead use `okta.app.GroupAssignment`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>hide_<wbr>ios</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Do not display application icon on mobile app.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>hide_<wbr>web</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Do not display application icon to users.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>issuer_<wbr>mode</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Indicates whether the Okta Authorization Server uses the original Okta org domain URL or a custom domain URL as the issuer of ID token for this client.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>label</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The Application's display name.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>login_<wbr>uri</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}URI that initiates login.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>logo_<wbr>uri</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}URI that references a logo for the client.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -2037,110 +1236,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>omit_<wbr>secret</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}This tells the provider not to persist the application's secret to state. If this is ever changes from true => false your app will be recreated.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>policy_<wbr>uri</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}URI to web page providing client policy document.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>post_<wbr>logout_<wbr>redirect_<wbr>uris</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}List of URIs for redirection after logout.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>profile</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Custom JSON that represents an OAuth application's profile.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>redirect_<wbr>uris</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}List of URIs for use in the redirect-based flow. This is required for all application types except service.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>response_<wbr>types</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}List of OAuth 2.0 response type strings.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>sign_<wbr>on_<wbr>mode</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Sign on mode of application.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>status</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The status of the application, by default it is `"ACTIVE"`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>token_<wbr>endpoint_<wbr>auth_<wbr>method</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Requested authentication method for the token endpoint. It can be set to `"none"`, `"client_secret_post"`, `"client_secret_basic"`, `"client_secret_jwt"`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tos_<wbr>uri</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}URI to web page providing client tos (terms of service).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The type of OAuth application.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>users</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oauthuser">List[OAuth<wbr>User]</a></span>
-    </dt>
-    <dd>{{% md %}}The users assigned to the application. It is recommended not to use this and instead use `okta.app.User`.
 {{% /md %}}</dd>
 
 </dl>
@@ -2282,7 +1382,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Auto<wbr>Key<wbr>Rotation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Requested key rotation mode.
 {{% /md %}}</dd>
@@ -2291,7 +1391,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Auto<wbr>Submit<wbr>Toolbar</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Display auto submit toolbar.
 {{% /md %}}</dd>
@@ -2300,7 +1400,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Client<wbr>Basic<wbr>Secret</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OAuth client secret key, this can be set when token_endpoint_auth_method is client_secret_basic.
 {{% /md %}}</dd>
@@ -2309,7 +1409,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Client<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The client ID of the application.
 {{% /md %}}</dd>
@@ -2318,7 +1418,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Client<wbr>Secret</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The client secret of the application.
 {{% /md %}}</dd>
@@ -2327,7 +1427,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Client<wbr>Uri</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI to a web page providing information about the client.
 {{% /md %}}</dd>
@@ -2336,7 +1436,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Consent<wbr>Method</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether user consent is required or implicit. Valid values: REQUIRED, TRUSTED. Default value is TRUSTED.
 {{% /md %}}</dd>
@@ -2345,7 +1445,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Custom<wbr>Client<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This property allows you to set the application's client id.
 {{% /md %}}</dd>
@@ -2354,7 +1454,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Grant<wbr>Types</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of OAuth 2.0 grant types. Conditional validation params found here https://developer.okta.com/docs/api/resources/apps#credentials-settings-details. Defaults to minimum requirements per app type.
 {{% /md %}}</dd>
@@ -2363,7 +1463,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The groups assigned to the application. It is recommended not to use this and instead use `okta.app.GroupAssignment`.
 {{% /md %}}</dd>
@@ -2372,7 +1472,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Hide<wbr>Ios</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Do not display application icon on mobile app.
 {{% /md %}}</dd>
@@ -2381,7 +1481,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Hide<wbr>Web</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Do not display application icon to users.
 {{% /md %}}</dd>
@@ -2390,7 +1490,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Issuer<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether the Okta Authorization Server uses the original Okta org domain URL or a custom domain URL as the issuer of ID token for this client.
 {{% /md %}}</dd>
@@ -2399,7 +1499,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Label</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Application's display name.
 {{% /md %}}</dd>
@@ -2408,7 +1508,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Login<wbr>Uri</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI that initiates login.
 {{% /md %}}</dd>
@@ -2417,7 +1517,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Logo<wbr>Uri</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI that references a logo for the client.
 {{% /md %}}</dd>
@@ -2426,7 +1526,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name assigned to the application by Okta.
 {{% /md %}}</dd>
@@ -2435,7 +1535,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Omit<wbr>Secret</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}This tells the provider not to persist the application's secret to state. If this is ever changes from true => false your app will be recreated.
 {{% /md %}}</dd>
@@ -2444,7 +1544,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Policy<wbr>Uri</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI to web page providing client policy document.
 {{% /md %}}</dd>
@@ -2453,7 +1553,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Post<wbr>Logout<wbr>Redirect<wbr>Uris</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of URIs for redirection after logout.
 {{% /md %}}</dd>
@@ -2462,7 +1562,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Profile</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Custom JSON that represents an OAuth application's profile.
 {{% /md %}}</dd>
@@ -2471,7 +1571,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Redirect<wbr>Uris</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of URIs for use in the redirect-based flow. This is required for all application types except service.
 {{% /md %}}</dd>
@@ -2480,7 +1580,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Response<wbr>Types</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of OAuth 2.0 response type strings.
 {{% /md %}}</dd>
@@ -2489,7 +1589,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Sign<wbr>On<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sign on mode of application.
 {{% /md %}}</dd>
@@ -2498,7 +1598,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the application, by default it is `"ACTIVE"`.
 {{% /md %}}</dd>
@@ -2507,7 +1607,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Token<wbr>Endpoint<wbr>Auth<wbr>Method</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Requested authentication method for the token endpoint. It can be set to `"none"`, `"client_secret_post"`, `"client_secret_basic"`, `"client_secret_jwt"`.
 {{% /md %}}</dd>
@@ -2516,7 +1616,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Tos<wbr>Uri</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI to web page providing client tos (terms of service).
 {{% /md %}}</dd>
@@ -2525,7 +1625,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of OAuth application.
 {{% /md %}}</dd>
@@ -2534,7 +1634,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Users</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oauthuser">List&lt;OAuth<wbr>User<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#oauthuser">List&lt;OAuth<wbr>User<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The users assigned to the application. It is recommended not to use this and instead use `okta.app.User`.
 {{% /md %}}</dd>
@@ -2550,7 +1650,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Auto<wbr>Key<wbr>Rotation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Requested key rotation mode.
 {{% /md %}}</dd>
@@ -2559,7 +1659,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Auto<wbr>Submit<wbr>Toolbar</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Display auto submit toolbar.
 {{% /md %}}</dd>
@@ -2568,7 +1668,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Client<wbr>Basic<wbr>Secret</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OAuth client secret key, this can be set when token_endpoint_auth_method is client_secret_basic.
 {{% /md %}}</dd>
@@ -2577,7 +1677,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Client<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The client ID of the application.
 {{% /md %}}</dd>
@@ -2586,7 +1686,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Client<wbr>Secret</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The client secret of the application.
 {{% /md %}}</dd>
@@ -2595,7 +1695,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Client<wbr>Uri</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI to a web page providing information about the client.
 {{% /md %}}</dd>
@@ -2604,7 +1704,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Consent<wbr>Method</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether user consent is required or implicit. Valid values: REQUIRED, TRUSTED. Default value is TRUSTED.
 {{% /md %}}</dd>
@@ -2613,7 +1713,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Custom<wbr>Client<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This property allows you to set the application's client id.
 {{% /md %}}</dd>
@@ -2640,7 +1740,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Hide<wbr>Ios</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Do not display application icon on mobile app.
 {{% /md %}}</dd>
@@ -2649,7 +1749,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Hide<wbr>Web</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Do not display application icon to users.
 {{% /md %}}</dd>
@@ -2658,7 +1758,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Issuer<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether the Okta Authorization Server uses the original Okta org domain URL or a custom domain URL as the issuer of ID token for this client.
 {{% /md %}}</dd>
@@ -2667,7 +1767,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Label</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Application's display name.
 {{% /md %}}</dd>
@@ -2676,7 +1776,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Login<wbr>Uri</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI that initiates login.
 {{% /md %}}</dd>
@@ -2685,7 +1785,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Logo<wbr>Uri</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI that references a logo for the client.
 {{% /md %}}</dd>
@@ -2694,7 +1794,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name assigned to the application by Okta.
 {{% /md %}}</dd>
@@ -2703,7 +1803,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Omit<wbr>Secret</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}This tells the provider not to persist the application's secret to state. If this is ever changes from true => false your app will be recreated.
 {{% /md %}}</dd>
@@ -2712,7 +1812,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Policy<wbr>Uri</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI to web page providing client policy document.
 {{% /md %}}</dd>
@@ -2730,7 +1830,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Profile</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Custom JSON that represents an OAuth application's profile.
 {{% /md %}}</dd>
@@ -2757,7 +1857,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Sign<wbr>On<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sign on mode of application.
 {{% /md %}}</dd>
@@ -2766,7 +1866,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the application, by default it is `"ACTIVE"`.
 {{% /md %}}</dd>
@@ -2775,7 +1875,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Token<wbr>Endpoint<wbr>Auth<wbr>Method</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Requested authentication method for the token endpoint. It can be set to `"none"`, `"client_secret_post"`, `"client_secret_basic"`, `"client_secret_jwt"`.
 {{% /md %}}</dd>
@@ -2784,7 +1884,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Tos<wbr>Uri</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI to web page providing client tos (terms of service).
 {{% /md %}}</dd>
@@ -2793,7 +1893,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of OAuth application.
 {{% /md %}}</dd>
@@ -2818,7 +1918,7 @@ The following state arguments are supported:
             title="Optional">
         <span>auto<wbr>Key<wbr>Rotation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Requested key rotation mode.
 {{% /md %}}</dd>
@@ -2827,7 +1927,7 @@ The following state arguments are supported:
             title="Optional">
         <span>auto<wbr>Submit<wbr>Toolbar</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Display auto submit toolbar.
 {{% /md %}}</dd>
@@ -2836,7 +1936,7 @@ The following state arguments are supported:
             title="Optional">
         <span>client<wbr>Basic<wbr>Secret</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}OAuth client secret key, this can be set when token_endpoint_auth_method is client_secret_basic.
 {{% /md %}}</dd>
@@ -2845,7 +1945,7 @@ The following state arguments are supported:
             title="Optional">
         <span>client<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The client ID of the application.
 {{% /md %}}</dd>
@@ -2854,7 +1954,7 @@ The following state arguments are supported:
             title="Optional">
         <span>client<wbr>Secret</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The client secret of the application.
 {{% /md %}}</dd>
@@ -2863,7 +1963,7 @@ The following state arguments are supported:
             title="Optional">
         <span>client<wbr>Uri</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI to a web page providing information about the client.
 {{% /md %}}</dd>
@@ -2872,7 +1972,7 @@ The following state arguments are supported:
             title="Optional">
         <span>consent<wbr>Method</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether user consent is required or implicit. Valid values: REQUIRED, TRUSTED. Default value is TRUSTED.
 {{% /md %}}</dd>
@@ -2881,7 +1981,7 @@ The following state arguments are supported:
             title="Optional">
         <span>custom<wbr>Client<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}This property allows you to set the application's client id.
 {{% /md %}}</dd>
@@ -2890,7 +1990,7 @@ The following state arguments are supported:
             title="Optional">
         <span>grant<wbr>Types</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of OAuth 2.0 grant types. Conditional validation params found here https://developer.okta.com/docs/api/resources/apps#credentials-settings-details. Defaults to minimum requirements per app type.
 {{% /md %}}</dd>
@@ -2899,7 +1999,7 @@ The following state arguments are supported:
             title="Optional">
         <span>groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The groups assigned to the application. It is recommended not to use this and instead use `okta.app.GroupAssignment`.
 {{% /md %}}</dd>
@@ -2908,7 +2008,7 @@ The following state arguments are supported:
             title="Optional">
         <span>hide<wbr>Ios</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Do not display application icon on mobile app.
 {{% /md %}}</dd>
@@ -2917,7 +2017,7 @@ The following state arguments are supported:
             title="Optional">
         <span>hide<wbr>Web</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Do not display application icon to users.
 {{% /md %}}</dd>
@@ -2926,7 +2026,7 @@ The following state arguments are supported:
             title="Optional">
         <span>issuer<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Indicates whether the Okta Authorization Server uses the original Okta org domain URL or a custom domain URL as the issuer of ID token for this client.
 {{% /md %}}</dd>
@@ -2935,7 +2035,7 @@ The following state arguments are supported:
             title="Optional">
         <span>label</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Application's display name.
 {{% /md %}}</dd>
@@ -2944,7 +2044,7 @@ The following state arguments are supported:
             title="Optional">
         <span>login<wbr>Uri</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI that initiates login.
 {{% /md %}}</dd>
@@ -2953,7 +2053,7 @@ The following state arguments are supported:
             title="Optional">
         <span>logo<wbr>Uri</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI that references a logo for the client.
 {{% /md %}}</dd>
@@ -2962,7 +2062,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name assigned to the application by Okta.
 {{% /md %}}</dd>
@@ -2971,7 +2071,7 @@ The following state arguments are supported:
             title="Optional">
         <span>omit<wbr>Secret</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}This tells the provider not to persist the application's secret to state. If this is ever changes from true => false your app will be recreated.
 {{% /md %}}</dd>
@@ -2980,7 +2080,7 @@ The following state arguments are supported:
             title="Optional">
         <span>policy<wbr>Uri</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI to web page providing client policy document.
 {{% /md %}}</dd>
@@ -2989,7 +2089,7 @@ The following state arguments are supported:
             title="Optional">
         <span>post<wbr>Logout<wbr>Redirect<wbr>Uris</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of URIs for redirection after logout.
 {{% /md %}}</dd>
@@ -2998,7 +2098,7 @@ The following state arguments are supported:
             title="Optional">
         <span>profile</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Custom JSON that represents an OAuth application's profile.
 {{% /md %}}</dd>
@@ -3007,7 +2107,7 @@ The following state arguments are supported:
             title="Optional">
         <span>redirect<wbr>Uris</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of URIs for use in the redirect-based flow. This is required for all application types except service.
 {{% /md %}}</dd>
@@ -3016,7 +2116,7 @@ The following state arguments are supported:
             title="Optional">
         <span>response<wbr>Types</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of OAuth 2.0 response type strings.
 {{% /md %}}</dd>
@@ -3025,7 +2125,7 @@ The following state arguments are supported:
             title="Optional">
         <span>sign<wbr>On<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Sign on mode of application.
 {{% /md %}}</dd>
@@ -3034,7 +2134,7 @@ The following state arguments are supported:
             title="Optional">
         <span>status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The status of the application, by default it is `"ACTIVE"`.
 {{% /md %}}</dd>
@@ -3043,7 +2143,7 @@ The following state arguments are supported:
             title="Optional">
         <span>token<wbr>Endpoint<wbr>Auth<wbr>Method</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Requested authentication method for the token endpoint. It can be set to `"none"`, `"client_secret_post"`, `"client_secret_basic"`, `"client_secret_jwt"`.
 {{% /md %}}</dd>
@@ -3052,7 +2152,7 @@ The following state arguments are supported:
             title="Optional">
         <span>tos<wbr>Uri</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}URI to web page providing client tos (terms of service).
 {{% /md %}}</dd>
@@ -3061,7 +2161,7 @@ The following state arguments are supported:
             title="Optional">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of OAuth application.
 {{% /md %}}</dd>
@@ -3070,7 +2170,7 @@ The following state arguments are supported:
             title="Optional">
         <span>users</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#oauthuser">OAuth<wbr>User[]?</a></span>
+        <span class="property-type"><a href="#oauthuser">OAuth<wbr>User[]</a></span>
     </dt>
     <dd>{{% md %}}The users assigned to the application. It is recommended not to use this and instead use `okta.app.User`.
 {{% /md %}}</dd>
@@ -3376,7 +2476,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3384,7 +2484,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3392,7 +2492,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Scope</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3400,7 +2500,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Username</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3415,7 +2515,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3423,7 +2523,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3431,7 +2531,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Scope</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3439,7 +2539,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Username</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3454,7 +2554,7 @@ The following state arguments are supported:
             title="Optional">
         <span>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3462,7 +2562,7 @@ The following state arguments are supported:
             title="Optional">
         <span>password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3470,7 +2570,7 @@ The following state arguments are supported:
             title="Optional">
         <span>scope</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3478,7 +2578,7 @@ The following state arguments are supported:
             title="Optional">
         <span>username</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

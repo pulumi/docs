@@ -35,7 +35,7 @@ const example = new okta.user.Schema("example", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/okta/user/#Schema">Schema</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/okta/user/#SchemaArgs">SchemaArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/okta/user/#Schema">Schema</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/okta/user/#SchemaArgs">SchemaArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -43,7 +43,7 @@ const example = new okta.user.Schema("example", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewSchema<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/go/okta/user?tab=doc#SchemaArgs">SchemaArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/go/okta/user?tab=doc#Schema">Schema</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewSchema<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/go/okta/user?tab=doc#SchemaArgs">SchemaArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/go/okta/user?tab=doc#Schema">Schema</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -139,60 +139,6 @@ const example = new okta.user.Schema("example", {
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Array<wbr>Enums</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}Array of values that an array property's items can be set to.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Array<wbr>One<wbr>Ofs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#schemaarrayoneof">List&lt;Schema<wbr>Array<wbr>One<wbr>Of<wbr>Args&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}Display name and value an enum array can be set to.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Array<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The type of the array elements if `type` is set to `"array"`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The description of the user schema property.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Enums</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}Array of values a primitive property can be set to. See `array_enum` for arrays.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>External<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}External name of the user schema property.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Index</span>
@@ -200,69 +146,6 @@ const example = new okta.user.Schema("example", {
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The property name.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Master</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Master priority for the user schema property. It can be set to `"PROFILE_MASTER"` or `"OKTA"`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Max<wbr>Length</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}The maximum length of the user property value. Only applies to type `"string"`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Min<wbr>Length</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}The minimum length of the user property value. Only applies to type `"string"`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>One<wbr>Ofs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#schemaoneof">List&lt;Schema<wbr>One<wbr>Of<wbr>Args&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}Array of maps containing a mapping for display name to enum value.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Permissions</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Access control permissions for the property. It can be set to `"READ_WRITE"`, `"READ_ONLY"`, `"HIDE"`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Required</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Whether the property is required for this application's users.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Scope</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}determines whether an app user attribute can be set at the Individual or Group Level.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -283,12 +166,156 @@ const example = new okta.user.Schema("example", {
     <dd>{{% md %}}The type of the schema property. It can be `"string"`, `"boolean"`, `"number"`, `"integer"`, `"array"`, or `"object"`.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>Array<wbr>Enums</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Array of values that an array property's items can be set to.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Array<wbr>One<wbr>Ofs</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#schemaarrayoneof">List&lt;Schema<wbr>Array<wbr>One<wbr>Of<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Display name and value an enum array can be set to.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Array<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of the array elements if `type` is set to `"array"`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The description of the user schema property.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Enums</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Array of values a primitive property can be set to. See `array_enum` for arrays.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>External<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}External name of the user schema property.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Master</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Master priority for the user schema property. It can be set to `"PROFILE_MASTER"` or `"OKTA"`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Max<wbr>Length</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The maximum length of the user property value. Only applies to type `"string"`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Min<wbr>Length</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The minimum length of the user property value. Only applies to type `"string"`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>One<wbr>Ofs</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#schemaoneof">List&lt;Schema<wbr>One<wbr>Of<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Array of maps containing a mapping for display name to enum value.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Permissions</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Access control permissions for the property. It can be set to `"READ_WRITE"`, `"READ_ONLY"`, `"HIDE"`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Required</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether the property is required for this application's users.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Scope</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}determines whether an app user attribute can be set at the Individual or Group Level.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Index</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The property name.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Title</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}display name for the enum value.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of the schema property. It can be `"string"`, `"boolean"`, `"number"`, `"integer"`, `"array"`, or `"object"`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -312,7 +339,7 @@ const example = new okta.user.Schema("example", {
             title="Optional">
         <span>Array<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the array elements if `type` is set to `"array"`.
 {{% /md %}}</dd>
@@ -321,7 +348,7 @@ const example = new okta.user.Schema("example", {
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the user schema property.
 {{% /md %}}</dd>
@@ -339,25 +366,16 @@ const example = new okta.user.Schema("example", {
             title="Optional">
         <span>External<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}External name of the user schema property.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Index</span>
-        <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The property name.
+    <dd>{{% md %}}External name of the user schema property.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Master</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Master priority for the user schema property. It can be set to `"PROFILE_MASTER"` or `"OKTA"`.
 {{% /md %}}</dd>
@@ -366,7 +384,7 @@ const example = new okta.user.Schema("example", {
             title="Optional">
         <span>Max<wbr>Length</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum length of the user property value. Only applies to type `"string"`.
 {{% /md %}}</dd>
@@ -375,7 +393,7 @@ const example = new okta.user.Schema("example", {
             title="Optional">
         <span>Min<wbr>Length</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The minimum length of the user property value. Only applies to type `"string"`.
 {{% /md %}}</dd>
@@ -393,7 +411,7 @@ const example = new okta.user.Schema("example", {
             title="Optional">
         <span>Permissions</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Access control permissions for the property. It can be set to `"READ_WRITE"`, `"READ_ONLY"`, `"HIDE"`.
 {{% /md %}}</dd>
@@ -402,7 +420,7 @@ const example = new okta.user.Schema("example", {
             title="Optional">
         <span>Required</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the property is required for this application's users.
 {{% /md %}}</dd>
@@ -411,27 +429,9 @@ const example = new okta.user.Schema("example", {
             title="Optional">
         <span>Scope</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}determines whether an app user attribute can be set at the Individual or Group Level.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Title</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}display name for the enum value.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The type of the schema property. It can be `"string"`, `"boolean"`, `"number"`, `"integer"`, `"array"`, or `"object"`.
 {{% /md %}}</dd>
 
 </dl>
@@ -441,60 +441,6 @@ const example = new okta.user.Schema("example", {
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>array<wbr>Enums</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}Array of values that an array property's items can be set to.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>array<wbr>One<wbr>Ofs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#schemaarrayoneof">Schema<wbr>Array<wbr>One<wbr>Of[]?</a></span>
-    </dt>
-    <dd>{{% md %}}Display name and value an enum array can be set to.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>array<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The type of the array elements if `type` is set to `"array"`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The description of the user schema property.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>enums</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}Array of values a primitive property can be set to. See `array_enum` for arrays.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>external<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}External name of the user schema property.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>index</span>
@@ -502,69 +448,6 @@ const example = new okta.user.Schema("example", {
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The property name.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>master</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Master priority for the user schema property. It can be set to `"PROFILE_MASTER"` or `"OKTA"`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>max<wbr>Length</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}The maximum length of the user property value. Only applies to type `"string"`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>min<wbr>Length</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}The minimum length of the user property value. Only applies to type `"string"`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>one<wbr>Ofs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#schemaoneof">Schema<wbr>One<wbr>Of[]?</a></span>
-    </dt>
-    <dd>{{% md %}}Array of maps containing a mapping for display name to enum value.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>permissions</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Access control permissions for the property. It can be set to `"READ_WRITE"`, `"READ_ONLY"`, `"HIDE"`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>required</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Whether the property is required for this application's users.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>scope</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}determines whether an app user attribute can be set at the Individual or Group Level.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -585,12 +468,156 @@ const example = new okta.user.Schema("example", {
     <dd>{{% md %}}The type of the schema property. It can be `"string"`, `"boolean"`, `"number"`, `"integer"`, `"array"`, or `"object"`.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>array<wbr>Enums</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}Array of values that an array property's items can be set to.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>array<wbr>One<wbr>Ofs</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#schemaarrayoneof">Schema<wbr>Array<wbr>One<wbr>Of[]</a></span>
+    </dt>
+    <dd>{{% md %}}Display name and value an enum array can be set to.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>array<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of the array elements if `type` is set to `"array"`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The description of the user schema property.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>enums</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}Array of values a primitive property can be set to. See `array_enum` for arrays.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>external<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}External name of the user schema property.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>master</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Master priority for the user schema property. It can be set to `"PROFILE_MASTER"` or `"OKTA"`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>max<wbr>Length</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The maximum length of the user property value. Only applies to type `"string"`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>min<wbr>Length</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The minimum length of the user property value. Only applies to type `"string"`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>one<wbr>Ofs</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#schemaoneof">Schema<wbr>One<wbr>Of[]</a></span>
+    </dt>
+    <dd>{{% md %}}Array of maps containing a mapping for display name to enum value.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>permissions</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Access control permissions for the property. It can be set to `"READ_WRITE"`, `"READ_ONLY"`, `"HIDE"`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>required</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether the property is required for this application's users.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>scope</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}determines whether an app user attribute can be set at the Individual or Group Level.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>index</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The property name.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>title</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}display name for the enum value.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The type of the schema property. It can be `"string"`, `"boolean"`, `"number"`, `"integer"`, `"array"`, or `"object"`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -644,15 +671,6 @@ const example = new okta.user.Schema("example", {
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}External name of the user schema property.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>index</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The property name.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -718,642 +736,10 @@ const example = new okta.user.Schema("example", {
     <dd>{{% md %}}determines whether an app user attribute can be set at the Individual or Group Level.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>title</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}display name for the enum value.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The type of the schema property. It can be `"string"`, `"boolean"`, `"number"`, `"integer"`, `"array"`, or `"object"`.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
-
-
-
-
-
-## Schema Output Properties
-
-The following output properties are available:
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Array<wbr>Enums</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}Array of values that an array property's items can be set to.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Array<wbr>One<wbr>Ofs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#schemaarrayoneof">List&lt;Schema<wbr>Array<wbr>One<wbr>Of&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}Display name and value an enum array can be set to.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Array<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The type of the array elements if `type` is set to `"array"`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The description of the user schema property.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Enums</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}Array of values a primitive property can be set to. See `array_enum` for arrays.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>External<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}External name of the user schema property.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Index</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The property name.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Master</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Master priority for the user schema property. It can be set to `"PROFILE_MASTER"` or `"OKTA"`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Max<wbr>Length</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}The maximum length of the user property value. Only applies to type `"string"`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Min<wbr>Length</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}The minimum length of the user property value. Only applies to type `"string"`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>One<wbr>Ofs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#schemaoneof">List&lt;Schema<wbr>One<wbr>Of&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}Array of maps containing a mapping for display name to enum value.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Permissions</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Access control permissions for the property. It can be set to `"READ_WRITE"`, `"READ_ONLY"`, `"HIDE"`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Required</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Whether the property is required for this application's users.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Scope</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}determines whether an app user attribute can be set at the Individual or Group Level.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Title</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}display name for the enum value.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The type of the schema property. It can be `"string"`, `"boolean"`, `"number"`, `"integer"`, `"array"`, or `"object"`.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Array<wbr>Enums</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}Array of values that an array property's items can be set to.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Array<wbr>One<wbr>Ofs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#schemaarrayoneof">[]Schema<wbr>Array<wbr>One<wbr>Of</a></span>
-    </dt>
-    <dd>{{% md %}}Display name and value an enum array can be set to.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Array<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The type of the array elements if `type` is set to `"array"`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The description of the user schema property.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Enums</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}Array of values a primitive property can be set to. See `array_enum` for arrays.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>External<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}External name of the user schema property.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Index</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The property name.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Master</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Master priority for the user schema property. It can be set to `"PROFILE_MASTER"` or `"OKTA"`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Max<wbr>Length</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}The maximum length of the user property value. Only applies to type `"string"`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Min<wbr>Length</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}The minimum length of the user property value. Only applies to type `"string"`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>One<wbr>Ofs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#schemaoneof">[]Schema<wbr>One<wbr>Of</a></span>
-    </dt>
-    <dd>{{% md %}}Array of maps containing a mapping for display name to enum value.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Permissions</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Access control permissions for the property. It can be set to `"READ_WRITE"`, `"READ_ONLY"`, `"HIDE"`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Required</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Whether the property is required for this application's users.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Scope</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}determines whether an app user attribute can be set at the Individual or Group Level.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Title</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}display name for the enum value.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The type of the schema property. It can be `"string"`, `"boolean"`, `"number"`, `"integer"`, `"array"`, or `"object"`.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>array<wbr>Enums</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}Array of values that an array property's items can be set to.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>array<wbr>One<wbr>Ofs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#schemaarrayoneof">Schema<wbr>Array<wbr>One<wbr>Of[]?</a></span>
-    </dt>
-    <dd>{{% md %}}Display name and value an enum array can be set to.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>array<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The type of the array elements if `type` is set to `"array"`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The description of the user schema property.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>enums</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}Array of values a primitive property can be set to. See `array_enum` for arrays.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>external<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}External name of the user schema property.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>index</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The property name.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>master</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Master priority for the user schema property. It can be set to `"PROFILE_MASTER"` or `"OKTA"`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>max<wbr>Length</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}The maximum length of the user property value. Only applies to type `"string"`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>min<wbr>Length</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}The minimum length of the user property value. Only applies to type `"string"`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>one<wbr>Ofs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#schemaoneof">Schema<wbr>One<wbr>Of[]?</a></span>
-    </dt>
-    <dd>{{% md %}}Array of maps containing a mapping for display name to enum value.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>permissions</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Access control permissions for the property. It can be set to `"READ_WRITE"`, `"READ_ONLY"`, `"HIDE"`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>required</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Whether the property is required for this application's users.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>scope</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}determines whether an app user attribute can be set at the Individual or Group Level.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>title</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}display name for the enum value.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The type of the schema property. It can be `"string"`, `"boolean"`, `"number"`, `"integer"`, `"array"`, or `"object"`.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>array_<wbr>enums</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}Array of values that an array property's items can be set to.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>array_<wbr>one_<wbr>ofs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#schemaarrayoneof">List[Schema<wbr>Array<wbr>One<wbr>Of]</a></span>
-    </dt>
-    <dd>{{% md %}}Display name and value an enum array can be set to.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>array_<wbr>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The type of the array elements if `type` is set to `"array"`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The description of the user schema property.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>enums</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}Array of values a primitive property can be set to. See `array_enum` for arrays.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>external_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}External name of the user schema property.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>index</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The property name.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>master</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Master priority for the user schema property. It can be set to `"PROFILE_MASTER"` or `"OKTA"`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>max_<wbr>length</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The maximum length of the user property value. Only applies to type `"string"`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>min_<wbr>length</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The minimum length of the user property value. Only applies to type `"string"`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>one_<wbr>ofs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#schemaoneof">List[Schema<wbr>One<wbr>Of]</a></span>
-    </dt>
-    <dd>{{% md %}}Array of maps containing a mapping for display name to enum value.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>permissions</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Access control permissions for the property. It can be set to `"READ_WRITE"`, `"READ_ONLY"`, `"HIDE"`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>required</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Whether the property is required for this application's users.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>scope</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}determines whether an app user attribute can be set at the Individual or Group Level.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>title</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}display name for the enum value.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The type of the schema property. It can be `"string"`, `"boolean"`, `"number"`, `"integer"`, `"array"`, or `"object"`.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
 
 
 
@@ -1491,7 +877,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Array<wbr>Enums</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Array of values that an array property's items can be set to.
 {{% /md %}}</dd>
@@ -1500,7 +886,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Array<wbr>One<wbr>Ofs</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#schemaarrayoneof">List&lt;Schema<wbr>Array<wbr>One<wbr>Of<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#schemaarrayoneof">List&lt;Schema<wbr>Array<wbr>One<wbr>Of<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Display name and value an enum array can be set to.
 {{% /md %}}</dd>
@@ -1509,7 +895,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Array<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the array elements if `type` is set to `"array"`.
 {{% /md %}}</dd>
@@ -1518,7 +904,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the user schema property.
 {{% /md %}}</dd>
@@ -1527,7 +913,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Enums</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}Array of values a primitive property can be set to. See `array_enum` for arrays.
 {{% /md %}}</dd>
@@ -1536,7 +922,7 @@ The following state arguments are supported:
             title="Optional">
         <span>External<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}External name of the user schema property.
 {{% /md %}}</dd>
@@ -1545,7 +931,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Index</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The property name.
 {{% /md %}}</dd>
@@ -1554,7 +940,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Master</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Master priority for the user schema property. It can be set to `"PROFILE_MASTER"` or `"OKTA"`.
 {{% /md %}}</dd>
@@ -1563,7 +949,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Max<wbr>Length</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum length of the user property value. Only applies to type `"string"`.
 {{% /md %}}</dd>
@@ -1572,7 +958,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Min<wbr>Length</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The minimum length of the user property value. Only applies to type `"string"`.
 {{% /md %}}</dd>
@@ -1581,7 +967,7 @@ The following state arguments are supported:
             title="Optional">
         <span>One<wbr>Ofs</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#schemaoneof">List&lt;Schema<wbr>One<wbr>Of<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#schemaoneof">List&lt;Schema<wbr>One<wbr>Of<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Array of maps containing a mapping for display name to enum value.
 {{% /md %}}</dd>
@@ -1590,7 +976,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Permissions</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Access control permissions for the property. It can be set to `"READ_WRITE"`, `"READ_ONLY"`, `"HIDE"`.
 {{% /md %}}</dd>
@@ -1599,7 +985,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Required</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the property is required for this application's users.
 {{% /md %}}</dd>
@@ -1608,7 +994,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Scope</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}determines whether an app user attribute can be set at the Individual or Group Level.
 {{% /md %}}</dd>
@@ -1617,7 +1003,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Title</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}display name for the enum value.
 {{% /md %}}</dd>
@@ -1626,7 +1012,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the schema property. It can be `"string"`, `"boolean"`, `"number"`, `"integer"`, `"array"`, or `"object"`.
 {{% /md %}}</dd>
@@ -1660,7 +1046,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Array<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the array elements if `type` is set to `"array"`.
 {{% /md %}}</dd>
@@ -1669,7 +1055,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the user schema property.
 {{% /md %}}</dd>
@@ -1687,7 +1073,7 @@ The following state arguments are supported:
             title="Optional">
         <span>External<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}External name of the user schema property.
 {{% /md %}}</dd>
@@ -1696,7 +1082,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Index</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The property name.
 {{% /md %}}</dd>
@@ -1705,7 +1091,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Master</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Master priority for the user schema property. It can be set to `"PROFILE_MASTER"` or `"OKTA"`.
 {{% /md %}}</dd>
@@ -1714,7 +1100,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Max<wbr>Length</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The maximum length of the user property value. Only applies to type `"string"`.
 {{% /md %}}</dd>
@@ -1723,7 +1109,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Min<wbr>Length</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The minimum length of the user property value. Only applies to type `"string"`.
 {{% /md %}}</dd>
@@ -1741,7 +1127,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Permissions</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Access control permissions for the property. It can be set to `"READ_WRITE"`, `"READ_ONLY"`, `"HIDE"`.
 {{% /md %}}</dd>
@@ -1750,7 +1136,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Required</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether the property is required for this application's users.
 {{% /md %}}</dd>
@@ -1759,7 +1145,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Scope</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}determines whether an app user attribute can be set at the Individual or Group Level.
 {{% /md %}}</dd>
@@ -1768,7 +1154,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Title</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}display name for the enum value.
 {{% /md %}}</dd>
@@ -1777,7 +1163,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the schema property. It can be `"string"`, `"boolean"`, `"number"`, `"integer"`, `"array"`, or `"object"`.
 {{% /md %}}</dd>
@@ -1793,7 +1179,7 @@ The following state arguments are supported:
             title="Optional">
         <span>array<wbr>Enums</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Array of values that an array property's items can be set to.
 {{% /md %}}</dd>
@@ -1802,7 +1188,7 @@ The following state arguments are supported:
             title="Optional">
         <span>array<wbr>One<wbr>Ofs</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#schemaarrayoneof">Schema<wbr>Array<wbr>One<wbr>Of[]?</a></span>
+        <span class="property-type"><a href="#schemaarrayoneof">Schema<wbr>Array<wbr>One<wbr>Of[]</a></span>
     </dt>
     <dd>{{% md %}}Display name and value an enum array can be set to.
 {{% /md %}}</dd>
@@ -1811,7 +1197,7 @@ The following state arguments are supported:
             title="Optional">
         <span>array<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the array elements if `type` is set to `"array"`.
 {{% /md %}}</dd>
@@ -1820,7 +1206,7 @@ The following state arguments are supported:
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the user schema property.
 {{% /md %}}</dd>
@@ -1829,7 +1215,7 @@ The following state arguments are supported:
             title="Optional">
         <span>enums</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}Array of values a primitive property can be set to. See `array_enum` for arrays.
 {{% /md %}}</dd>
@@ -1838,7 +1224,7 @@ The following state arguments are supported:
             title="Optional">
         <span>external<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}External name of the user schema property.
 {{% /md %}}</dd>
@@ -1847,7 +1233,7 @@ The following state arguments are supported:
             title="Optional">
         <span>index</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The property name.
 {{% /md %}}</dd>
@@ -1856,7 +1242,7 @@ The following state arguments are supported:
             title="Optional">
         <span>master</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Master priority for the user schema property. It can be set to `"PROFILE_MASTER"` or `"OKTA"`.
 {{% /md %}}</dd>
@@ -1865,7 +1251,7 @@ The following state arguments are supported:
             title="Optional">
         <span>max<wbr>Length</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The maximum length of the user property value. Only applies to type `"string"`.
 {{% /md %}}</dd>
@@ -1874,7 +1260,7 @@ The following state arguments are supported:
             title="Optional">
         <span>min<wbr>Length</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The minimum length of the user property value. Only applies to type `"string"`.
 {{% /md %}}</dd>
@@ -1883,7 +1269,7 @@ The following state arguments are supported:
             title="Optional">
         <span>one<wbr>Ofs</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#schemaoneof">Schema<wbr>One<wbr>Of[]?</a></span>
+        <span class="property-type"><a href="#schemaoneof">Schema<wbr>One<wbr>Of[]</a></span>
     </dt>
     <dd>{{% md %}}Array of maps containing a mapping for display name to enum value.
 {{% /md %}}</dd>
@@ -1892,7 +1278,7 @@ The following state arguments are supported:
             title="Optional">
         <span>permissions</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Access control permissions for the property. It can be set to `"READ_WRITE"`, `"READ_ONLY"`, `"HIDE"`.
 {{% /md %}}</dd>
@@ -1901,7 +1287,7 @@ The following state arguments are supported:
             title="Optional">
         <span>required</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether the property is required for this application's users.
 {{% /md %}}</dd>
@@ -1910,7 +1296,7 @@ The following state arguments are supported:
             title="Optional">
         <span>scope</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}determines whether an app user attribute can be set at the Individual or Group Level.
 {{% /md %}}</dd>
@@ -1919,7 +1305,7 @@ The following state arguments are supported:
             title="Optional">
         <span>title</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}display name for the enum value.
 {{% /md %}}</dd>
@@ -1928,7 +1314,7 @@ The following state arguments are supported:
             title="Optional">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of the schema property. It can be `"string"`, `"boolean"`, `"number"`, `"integer"`, `"array"`, or `"object"`.
 {{% /md %}}</dd>

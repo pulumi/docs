@@ -44,13 +44,13 @@ export const firstRegionRouteEntriesRouteEntryCidrBlock = entry.entries[0].cidrB
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupRegionRouteEntries<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/cen?tab=doc#LookupRegionRouteEntriesArgs">LookupRegionRouteEntriesArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/cen?tab=doc#LookupRegionRouteEntriesResult">LookupRegionRouteEntriesResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupRegionRouteEntries<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/cen?tab=doc#LookupRegionRouteEntriesArgs">LookupRegionRouteEntriesArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/cen?tab=doc#LookupRegionRouteEntriesResult">LookupRegionRouteEntriesResult</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetRegionRouteEntries </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.Cen.GetRegionRouteEntriesResult.html">GetRegionRouteEntriesResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.Cen.GetRegionRouteEntriesArgs.html">GetRegionRouteEntriesArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.Cen.GetRegionRouteEntriesResult.html">GetRegionRouteEntriesResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.AliCloud.Cen.GetRegionRouteEntriesArgs.html">GetRegionRouteEntriesArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -72,14 +72,6 @@ The following arguments are supported:
     <dd>{{% md %}}ID of the CEN instance.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Output<wbr>File</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Region<wbr>Id</span>
@@ -88,6 +80,14 @@ The following arguments are supported:
     </dt>
     <dd>{{% md %}}ID of the region.
 {{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Output<wbr>File</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -105,14 +105,6 @@ The following arguments are supported:
     <dd>{{% md %}}ID of the CEN instance.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Output<wbr>File</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Region<wbr>Id</span>
@@ -121,6 +113,14 @@ The following arguments are supported:
     </dt>
     <dd>{{% md %}}ID of the region.
 {{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Output<wbr>File</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -138,14 +138,6 @@ The following arguments are supported:
     <dd>{{% md %}}ID of the CEN instance.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>output<wbr>File</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>region<wbr>Id</span>
@@ -154,6 +146,14 @@ The following arguments are supported:
     </dt>
     <dd>{{% md %}}ID of the region.
 {{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>output<wbr>File</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -171,14 +171,6 @@ The following arguments are supported:
     <dd>{{% md %}}ID of the CEN instance.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>output_<wbr>file</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>region_<wbr>id</span>
@@ -187,6 +179,14 @@ The following arguments are supported:
     </dt>
     <dd>{{% md %}}ID of the region.
 {{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>output_<wbr>file</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -212,7 +212,7 @@ The following output properties are available:
             title="">
         <span>Entries</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getregionrouteentriesentry">List&lt;Get<wbr>Region<wbr>Route<wbr>Entries<wbr>Entry&gt;</a></span>
+        <span class="property-type"><a href="#getregionrouteentriesentry">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Cen.<wbr>Outputs.<wbr>Get<wbr>Region<wbr>Route<wbr>Entries<wbr>Entry&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of CEN Route Entries. Each element contains the following attributes:
 {{% /md %}}</dd>
@@ -236,15 +236,15 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Output<wbr>File</span>
+        <span>Region<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>Region<wbr>Id</span>
+        <span>Output<wbr>File</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
@@ -285,15 +285,15 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Output<wbr>File</span>
+        <span>Region<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>Region<wbr>Id</span>
+        <span>Output<wbr>File</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
@@ -334,15 +334,15 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>output<wbr>File</span>
+        <span>region<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>region<wbr>Id</span>
+        <span>output<wbr>File</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
@@ -383,7 +383,7 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>output_<wbr>file</span>
+        <span>region_<wbr>id</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -391,7 +391,7 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>region_<wbr>id</span>
+        <span>output_<wbr>file</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>

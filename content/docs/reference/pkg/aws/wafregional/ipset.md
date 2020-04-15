@@ -40,7 +40,7 @@ const ipset = new aws.wafregional.IpSet("ipset", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/wafregional/#IpSet">IpSet</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/wafregional/#IpSetArgs">IpSetArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/wafregional/#IpSet">IpSet</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/wafregional/#IpSetArgs">IpSetArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -48,11 +48,11 @@ const ipset = new aws.wafregional.IpSet("ipset", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewIpSet<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/wafregional?tab=doc#IpSetArgs">IpSetArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/wafregional?tab=doc#IpSet">IpSet</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewIpSet<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/wafregional?tab=doc#IpSetArgs">IpSetArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/wafregional?tab=doc#IpSet">IpSet</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Wafregional.IpSet.html">IpSet</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafRegional.IpSetArgs.html">IpSetArgs</a></span>? <span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafRegional.IpSet.html">IpSet</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafRegional.IpSetArgs.html">IpSetArgs</a></span>? <span class="nx">args = null<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -148,7 +148,7 @@ const ipset = new aws.wafregional.IpSet("ipset", {
             title="Optional">
         <span>Ip<wbr>Set<wbr>Descriptors</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipsetipsetdescriptor">List&lt;Ip<wbr>Set<wbr>Ip<wbr>Set<wbr>Descriptor<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#ipsetipsetdescriptor">List&lt;Ip<wbr>Set<wbr>Ip<wbr>Set<wbr>Descriptor<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more pairs specifying the IP address type (IPV4 or IPV6) and the IP address range (in CIDR notation) from which web requests originate.
 {{% /md %}}</dd>
@@ -157,7 +157,7 @@ const ipset = new aws.wafregional.IpSet("ipset", {
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name or description of the IPSet.
 {{% /md %}}</dd>
@@ -182,7 +182,7 @@ const ipset = new aws.wafregional.IpSet("ipset", {
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name or description of the IPSet.
 {{% /md %}}</dd>
@@ -198,7 +198,7 @@ const ipset = new aws.wafregional.IpSet("ipset", {
             title="Optional">
         <span>ip<wbr>Set<wbr>Descriptors</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipsetipsetdescriptor">Ip<wbr>Set<wbr>Ip<wbr>Set<wbr>Descriptor[]?</a></span>
+        <span class="property-type"><a href="#ipsetipsetdescriptor">Ip<wbr>Set<wbr>Ip<wbr>Set<wbr>Descriptor[]</a></span>
     </dt>
     <dd>{{% md %}}One or more pairs specifying the IP address type (IPV4 or IPV6) and the IP address range (in CIDR notation) from which web requests originate.
 {{% /md %}}</dd>
@@ -207,7 +207,7 @@ const ipset = new aws.wafregional.IpSet("ipset", {
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name or description of the IPSet.
 {{% /md %}}</dd>
@@ -265,24 +265,6 @@ The following output properties are available:
     <dd>{{% md %}}The ARN of the WAF IPSet.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span>Ip<wbr>Set<wbr>Descriptors</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipsetipsetdescriptor">List&lt;Ip<wbr>Set<wbr>Ip<wbr>Set<wbr>Descriptor&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}One or more pairs specifying the IP address type (IPV4 or IPV6) and the IP address range (in CIDR notation) from which web requests originate.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name or description of the IPSet.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -297,24 +279,6 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the WAF IPSet.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Ip<wbr>Set<wbr>Descriptors</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipsetipsetdescriptor">[]Ip<wbr>Set<wbr>Ip<wbr>Set<wbr>Descriptor</a></span>
-    </dt>
-    <dd>{{% md %}}One or more pairs specifying the IP address type (IPV4 or IPV6) and the IP address range (in CIDR notation) from which web requests originate.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name or description of the IPSet.
 {{% /md %}}</dd>
 
 </dl>
@@ -333,24 +297,6 @@ The following output properties are available:
     <dd>{{% md %}}The ARN of the WAF IPSet.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span>ip<wbr>Set<wbr>Descriptors</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipsetipsetdescriptor">Ip<wbr>Set<wbr>Ip<wbr>Set<wbr>Descriptor[]?</a></span>
-    </dt>
-    <dd>{{% md %}}One or more pairs specifying the IP address type (IPV4 or IPV6) and the IP address range (in CIDR notation) from which web requests originate.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name or description of the IPSet.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -365,24 +311,6 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN of the WAF IPSet.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>ip_<wbr>set_<wbr>descriptors</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipsetipsetdescriptor">List[Ip<wbr>Set<wbr>Ip<wbr>Set<wbr>Descriptor]</a></span>
-    </dt>
-    <dd>{{% md %}}One or more pairs specifying the IP address type (IPV4 or IPV6) and the IP address range (in CIDR notation) from which web requests originate.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name or description of the IPSet.
 {{% /md %}}</dd>
 
 </dl>
@@ -414,7 +342,7 @@ Get an existing IpSet resource's state with the given name, ID, and optional ext
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Wafregional.IpSet.html">IpSet</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Wafregional.IpSetState.html">IpSetState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafRegional.IpSet.html">IpSet</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.WafRegional.IpSetState.html">IpSetState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -524,7 +452,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the WAF IPSet.
 {{% /md %}}</dd>
@@ -533,7 +461,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Ip<wbr>Set<wbr>Descriptors</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipsetipsetdescriptor">List&lt;Ip<wbr>Set<wbr>Ip<wbr>Set<wbr>Descriptor<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#ipsetipsetdescriptor">List&lt;Ip<wbr>Set<wbr>Ip<wbr>Set<wbr>Descriptor<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more pairs specifying the IP address type (IPV4 or IPV6) and the IP address range (in CIDR notation) from which web requests originate.
 {{% /md %}}</dd>
@@ -542,7 +470,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name or description of the IPSet.
 {{% /md %}}</dd>
@@ -558,7 +486,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the WAF IPSet.
 {{% /md %}}</dd>
@@ -576,7 +504,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name or description of the IPSet.
 {{% /md %}}</dd>
@@ -592,7 +520,7 @@ The following state arguments are supported:
             title="Optional">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN of the WAF IPSet.
 {{% /md %}}</dd>
@@ -601,7 +529,7 @@ The following state arguments are supported:
             title="Optional">
         <span>ip<wbr>Set<wbr>Descriptors</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ipsetipsetdescriptor">Ip<wbr>Set<wbr>Ip<wbr>Set<wbr>Descriptor[]?</a></span>
+        <span class="property-type"><a href="#ipsetipsetdescriptor">Ip<wbr>Set<wbr>Ip<wbr>Set<wbr>Descriptor[]</a></span>
     </dt>
     <dd>{{% md %}}One or more pairs specifying the IP address type (IPV4 or IPV6) and the IP address range (in CIDR notation) from which web requests originate.
 {{% /md %}}</dd>
@@ -610,7 +538,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name or description of the IPSet.
 {{% /md %}}</dd>

@@ -43,7 +43,7 @@ The `default_capacity_provider_strategy` configuration block supports the follow
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ecs/#Cluster">Cluster</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ecs/#ClusterArgs">ClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ecs/#Cluster">Cluster</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ecs/#ClusterArgs">ClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -51,7 +51,7 @@ The `default_capacity_provider_strategy` configuration block supports the follow
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewCluster<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ecs?tab=doc#ClusterArgs">ClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ecs?tab=doc#Cluster">Cluster</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewCluster<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ecs?tab=doc#ClusterArgs">ClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ecs?tab=doc#Cluster">Cluster</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -151,7 +151,7 @@ The `default_capacity_provider_strategy` configuration block supports the follow
             title="Optional">
         <span>Capacity<wbr>Providers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of short names of one or more capacity providers to associate with the cluster. Valid values also include `FARGATE` and `FARGATE_SPOT`.
 {{% /md %}}</dd>
@@ -160,7 +160,7 @@ The `default_capacity_provider_strategy` configuration block supports the follow
             title="Optional">
         <span>Default<wbr>Capacity<wbr>Provider<wbr>Strategies</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterdefaultcapacityproviderstrategy">List&lt;Cluster<wbr>Default<wbr>Capacity<wbr>Provider<wbr>Strategy<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#clusterdefaultcapacityproviderstrategy">List&lt;Cluster<wbr>Default<wbr>Capacity<wbr>Provider<wbr>Strategy<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The capacity provider strategy to use by default for the cluster. Can be one or more.  Defined below.
 {{% /md %}}</dd>
@@ -169,7 +169,7 @@ The `default_capacity_provider_strategy` configuration block supports the follow
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the cluster (up to 255 letters, numbers, hyphens, and underscores)
 {{% /md %}}</dd>
@@ -178,7 +178,7 @@ The `default_capacity_provider_strategy` configuration block supports the follow
             title="Optional">
         <span>Settings</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustersetting">List&lt;Cluster<wbr>Setting<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#clustersetting">List&lt;Cluster<wbr>Setting<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) with cluster settings. For example, this can be used to enable CloudWatch Container Insights for a cluster. Defined below.
 {{% /md %}}</dd>
@@ -187,7 +187,7 @@ The `default_capacity_provider_strategy` configuration block supports the follow
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Key-value mapping of resource tags
 {{% /md %}}</dd>
@@ -221,7 +221,7 @@ The `default_capacity_provider_strategy` configuration block supports the follow
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the cluster (up to 255 letters, numbers, hyphens, and underscores)
 {{% /md %}}</dd>
@@ -255,7 +255,7 @@ The `default_capacity_provider_strategy` configuration block supports the follow
             title="Optional">
         <span>capacity<wbr>Providers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of short names of one or more capacity providers to associate with the cluster. Valid values also include `FARGATE` and `FARGATE_SPOT`.
 {{% /md %}}</dd>
@@ -264,7 +264,7 @@ The `default_capacity_provider_strategy` configuration block supports the follow
             title="Optional">
         <span>default<wbr>Capacity<wbr>Provider<wbr>Strategies</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterdefaultcapacityproviderstrategy">Cluster<wbr>Default<wbr>Capacity<wbr>Provider<wbr>Strategy[]?</a></span>
+        <span class="property-type"><a href="#clusterdefaultcapacityproviderstrategy">Cluster<wbr>Default<wbr>Capacity<wbr>Provider<wbr>Strategy[]</a></span>
     </dt>
     <dd>{{% md %}}The capacity provider strategy to use by default for the cluster. Can be one or more.  Defined below.
 {{% /md %}}</dd>
@@ -273,7 +273,7 @@ The `default_capacity_provider_strategy` configuration block supports the follow
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the cluster (up to 255 letters, numbers, hyphens, and underscores)
 {{% /md %}}</dd>
@@ -282,7 +282,7 @@ The `default_capacity_provider_strategy` configuration block supports the follow
             title="Optional">
         <span>settings</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustersetting">Cluster<wbr>Setting[]?</a></span>
+        <span class="property-type"><a href="#clustersetting">Cluster<wbr>Setting[]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) with cluster settings. For example, this can be used to enable CloudWatch Container Insights for a cluster. Defined below.
 {{% /md %}}</dd>
@@ -291,7 +291,7 @@ The `default_capacity_provider_strategy` configuration block supports the follow
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Key-value mapping of resource tags
 {{% /md %}}</dd>
@@ -376,51 +376,6 @@ The following output properties are available:
     <dd>{{% md %}}The Amazon Resource Name (ARN) that identifies the cluster
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span>Capacity<wbr>Providers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}List of short names of one or more capacity providers to associate with the cluster. Valid values also include `FARGATE` and `FARGATE_SPOT`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Default<wbr>Capacity<wbr>Provider<wbr>Strategies</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterdefaultcapacityproviderstrategy">List&lt;Cluster<wbr>Default<wbr>Capacity<wbr>Provider<wbr>Strategy&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}The capacity provider strategy to use by default for the cluster. Can be one or more.  Defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the cluster (up to 255 letters, numbers, hyphens, and underscores)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Settings</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustersetting">List&lt;Cluster<wbr>Setting&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}Configuration block(s) with cluster settings. For example, this can be used to enable CloudWatch Container Insights for a cluster. Defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
-    </dt>
-    <dd>{{% md %}}Key-value mapping of resource tags
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -435,51 +390,6 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) that identifies the cluster
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Capacity<wbr>Providers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}List of short names of one or more capacity providers to associate with the cluster. Valid values also include `FARGATE` and `FARGATE_SPOT`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Default<wbr>Capacity<wbr>Provider<wbr>Strategies</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterdefaultcapacityproviderstrategy">[]Cluster<wbr>Default<wbr>Capacity<wbr>Provider<wbr>Strategy</a></span>
-    </dt>
-    <dd>{{% md %}}The capacity provider strategy to use by default for the cluster. Can be one or more.  Defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the cluster (up to 255 letters, numbers, hyphens, and underscores)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Settings</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustersetting">[]Cluster<wbr>Setting</a></span>
-    </dt>
-    <dd>{{% md %}}Configuration block(s) with cluster settings. For example, this can be used to enable CloudWatch Container Insights for a cluster. Defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
-    </dt>
-    <dd>{{% md %}}Key-value mapping of resource tags
 {{% /md %}}</dd>
 
 </dl>
@@ -498,51 +408,6 @@ The following output properties are available:
     <dd>{{% md %}}The Amazon Resource Name (ARN) that identifies the cluster
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span>capacity<wbr>Providers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}List of short names of one or more capacity providers to associate with the cluster. Valid values also include `FARGATE` and `FARGATE_SPOT`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>default<wbr>Capacity<wbr>Provider<wbr>Strategies</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterdefaultcapacityproviderstrategy">Cluster<wbr>Default<wbr>Capacity<wbr>Provider<wbr>Strategy[]?</a></span>
-    </dt>
-    <dd>{{% md %}}The capacity provider strategy to use by default for the cluster. Can be one or more.  Defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the cluster (up to 255 letters, numbers, hyphens, and underscores)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>settings</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustersetting">Cluster<wbr>Setting[]</a></span>
-    </dt>
-    <dd>{{% md %}}Configuration block(s) with cluster settings. For example, this can be used to enable CloudWatch Container Insights for a cluster. Defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
-    </dt>
-    <dd>{{% md %}}Key-value mapping of resource tags
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -557,51 +422,6 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) that identifies the cluster
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>capacity_<wbr>providers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}List of short names of one or more capacity providers to associate with the cluster. Valid values also include `FARGATE` and `FARGATE_SPOT`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>default_<wbr>capacity_<wbr>provider_<wbr>strategies</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterdefaultcapacityproviderstrategy">List[Cluster<wbr>Default<wbr>Capacity<wbr>Provider<wbr>Strategy]</a></span>
-    </dt>
-    <dd>{{% md %}}The capacity provider strategy to use by default for the cluster. Can be one or more.  Defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the cluster (up to 255 letters, numbers, hyphens, and underscores)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>settings</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustersetting">List[Cluster<wbr>Setting]</a></span>
-    </dt>
-    <dd>{{% md %}}Configuration block(s) with cluster settings. For example, this can be used to enable CloudWatch Container Insights for a cluster. Defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
-    </dt>
-    <dd>{{% md %}}Key-value mapping of resource tags
 {{% /md %}}</dd>
 
 </dl>
@@ -743,7 +563,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) that identifies the cluster
 {{% /md %}}</dd>
@@ -752,7 +572,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Capacity<wbr>Providers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of short names of one or more capacity providers to associate with the cluster. Valid values also include `FARGATE` and `FARGATE_SPOT`.
 {{% /md %}}</dd>
@@ -761,7 +581,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Default<wbr>Capacity<wbr>Provider<wbr>Strategies</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterdefaultcapacityproviderstrategy">List&lt;Cluster<wbr>Default<wbr>Capacity<wbr>Provider<wbr>Strategy<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#clusterdefaultcapacityproviderstrategy">List&lt;Cluster<wbr>Default<wbr>Capacity<wbr>Provider<wbr>Strategy<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The capacity provider strategy to use by default for the cluster. Can be one or more.  Defined below.
 {{% /md %}}</dd>
@@ -770,7 +590,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the cluster (up to 255 letters, numbers, hyphens, and underscores)
 {{% /md %}}</dd>
@@ -779,7 +599,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Settings</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustersetting">List&lt;Cluster<wbr>Setting<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#clustersetting">List&lt;Cluster<wbr>Setting<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) with cluster settings. For example, this can be used to enable CloudWatch Container Insights for a cluster. Defined below.
 {{% /md %}}</dd>
@@ -788,7 +608,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Key-value mapping of resource tags
 {{% /md %}}</dd>
@@ -804,7 +624,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) that identifies the cluster
 {{% /md %}}</dd>
@@ -831,7 +651,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the cluster (up to 255 letters, numbers, hyphens, and underscores)
 {{% /md %}}</dd>
@@ -865,7 +685,7 @@ The following state arguments are supported:
             title="Optional">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) that identifies the cluster
 {{% /md %}}</dd>
@@ -874,7 +694,7 @@ The following state arguments are supported:
             title="Optional">
         <span>capacity<wbr>Providers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}List of short names of one or more capacity providers to associate with the cluster. Valid values also include `FARGATE` and `FARGATE_SPOT`.
 {{% /md %}}</dd>
@@ -883,7 +703,7 @@ The following state arguments are supported:
             title="Optional">
         <span>default<wbr>Capacity<wbr>Provider<wbr>Strategies</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clusterdefaultcapacityproviderstrategy">Cluster<wbr>Default<wbr>Capacity<wbr>Provider<wbr>Strategy[]?</a></span>
+        <span class="property-type"><a href="#clusterdefaultcapacityproviderstrategy">Cluster<wbr>Default<wbr>Capacity<wbr>Provider<wbr>Strategy[]</a></span>
     </dt>
     <dd>{{% md %}}The capacity provider strategy to use by default for the cluster. Can be one or more.  Defined below.
 {{% /md %}}</dd>
@@ -892,7 +712,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the cluster (up to 255 letters, numbers, hyphens, and underscores)
 {{% /md %}}</dd>
@@ -901,7 +721,7 @@ The following state arguments are supported:
             title="Optional">
         <span>settings</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#clustersetting">Cluster<wbr>Setting[]?</a></span>
+        <span class="property-type"><a href="#clustersetting">Cluster<wbr>Setting[]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block(s) with cluster settings. For example, this can be used to enable CloudWatch Container Insights for a cluster. Defined below.
 {{% /md %}}</dd>
@@ -910,7 +730,7 @@ The following state arguments are supported:
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Key-value mapping of resource tags
 {{% /md %}}</dd>
@@ -1005,14 +825,6 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Base</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Capacity<wbr>Provider</span>
@@ -1023,9 +835,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>Base</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Weight</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1036,14 +856,6 @@ The following state arguments are supported:
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Base</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Capacity<wbr>Provider</span>
@@ -1054,9 +866,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>Base</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Weight</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1066,14 +886,6 @@ The following state arguments are supported:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>base</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1085,9 +897,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>base</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>weight</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1098,19 +918,19 @@ The following state arguments are supported:
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>base</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>capacity<wbr>Provider</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>base</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

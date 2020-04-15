@@ -43,13 +43,13 @@ export const firstSlbListenerProtocol = sampleDs.slbListeners[0].protocol;
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupListeners<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/slb?tab=doc#LookupListenersArgs">LookupListenersArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/slb?tab=doc#LookupListenersResult">LookupListenersResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupListeners<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/slb?tab=doc#LookupListenersArgs">LookupListenersArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/slb?tab=doc#LookupListenersResult">LookupListenersResult</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetListeners </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.Slb.GetListenersResult.html">GetListenersResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.Slb.GetListenersArgs.html">GetListenersArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.Slb.GetListenersResult.html">GetListenersResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.AliCloud.Slb.GetListenersArgs.html">GetListenersArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -62,24 +62,6 @@ The following arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Description<wbr>Regex</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}A regex string to filter results by SLB listener description.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Frontend<wbr>Port</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}Filter listeners by the specified frontend port.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Load<wbr>Balancer<wbr>Id</span>
@@ -91,9 +73,27 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>Description<wbr>Regex</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A regex string to filter results by SLB listener description.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Frontend<wbr>Port</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Filter listeners by the specified frontend port.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Output<wbr>File</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -101,7 +101,7 @@ The following arguments are supported:
             title="Optional">
         <span>Protocol</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Filter listeners by the specified protocol. Valid values: `http`, `https`, `tcp` and `udp`.
 {{% /md %}}</dd>
@@ -113,24 +113,6 @@ The following arguments are supported:
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Description<wbr>Regex</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}A regex string to filter results by SLB listener description.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Frontend<wbr>Port</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}Filter listeners by the specified frontend port.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Load<wbr>Balancer<wbr>Id</span>
@@ -142,9 +124,27 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>Description<wbr>Regex</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A regex string to filter results by SLB listener description.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Frontend<wbr>Port</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Filter listeners by the specified frontend port.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Output<wbr>File</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -152,7 +152,7 @@ The following arguments are supported:
             title="Optional">
         <span>Protocol</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Filter listeners by the specified protocol. Valid values: `http`, `https`, `tcp` and `udp`.
 {{% /md %}}</dd>
@@ -163,24 +163,6 @@ The following arguments are supported:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>description<wbr>Regex</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}A regex string to filter results by SLB listener description.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>frontend<wbr>Port</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}Filter listeners by the specified frontend port.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -193,9 +175,27 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>description<wbr>Regex</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A regex string to filter results by SLB listener description.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>frontend<wbr>Port</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Filter listeners by the specified frontend port.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>output<wbr>File</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -203,7 +203,7 @@ The following arguments are supported:
             title="Optional">
         <span>protocol</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Filter listeners by the specified protocol. Valid values: `http`, `https`, `tcp` and `udp`.
 {{% /md %}}</dd>
@@ -214,6 +214,15 @@ The following arguments are supported:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>load_<wbr>balancer_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}ID of the SLB with listeners.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -231,15 +240,6 @@ The following arguments are supported:
         <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Filter listeners by the specified frontend port.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>load_<wbr>balancer_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}ID of the SLB with listeners.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -281,23 +281,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Description<wbr>Regex</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Frontend<wbr>Port</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}Frontend port used to receive incoming traffic and distribute it to the backend servers.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -315,9 +298,35 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>Slb<wbr>Listeners</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getlistenersslblistener">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Slb.<wbr>Outputs.<wbr>Get<wbr>Listeners<wbr>Slb<wbr>Listener&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A list of SLB listeners. Each element contains the following attributes:
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Description<wbr>Regex</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Frontend<wbr>Port</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Frontend port used to receive incoming traffic and distribute it to the backend servers.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Output<wbr>File</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -325,18 +334,9 @@ The following output properties are available:
             title="">
         <span>Protocol</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Listener protocol. Possible values: `http`, `https`, `tcp` and `udp`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Slb<wbr>Listeners</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getlistenersslblistener">List&lt;Get<wbr>Listeners<wbr>Slb<wbr>Listener&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}A list of SLB listeners. Each element contains the following attributes:
 {{% /md %}}</dd>
 
 </dl>
@@ -348,23 +348,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Description<wbr>Regex</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Frontend<wbr>Port</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}Frontend port used to receive incoming traffic and distribute it to the backend servers.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -382,9 +365,35 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>Slb<wbr>Listeners</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getlistenersslblistener">[]Get<wbr>Listeners<wbr>Slb<wbr>Listener</a></span>
+    </dt>
+    <dd>{{% md %}}A list of SLB listeners. Each element contains the following attributes:
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Description<wbr>Regex</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Frontend<wbr>Port</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Frontend port used to receive incoming traffic and distribute it to the backend servers.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Output<wbr>File</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -392,18 +401,9 @@ The following output properties are available:
             title="">
         <span>Protocol</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Listener protocol. Possible values: `http`, `https`, `tcp` and `udp`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Slb<wbr>Listeners</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getlistenersslblistener">[]Get<wbr>Listeners<wbr>Slb<wbr>Listener</a></span>
-    </dt>
-    <dd>{{% md %}}A list of SLB listeners. Each element contains the following attributes:
 {{% /md %}}</dd>
 
 </dl>
@@ -412,23 +412,6 @@ The following output properties are available:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>description<wbr>Regex</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>frontend<wbr>Port</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}Frontend port used to receive incoming traffic and distribute it to the backend servers.
-{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -449,9 +432,35 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>slb<wbr>Listeners</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getlistenersslblistener">Get<wbr>Listeners<wbr>Slb<wbr>Listener[]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of SLB listeners. Each element contains the following attributes:
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>description<wbr>Regex</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>frontend<wbr>Port</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Frontend port used to receive incoming traffic and distribute it to the backend servers.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>output<wbr>File</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -459,18 +468,9 @@ The following output properties are available:
             title="">
         <span>protocol</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Listener protocol. Possible values: `http`, `https`, `tcp` and `udp`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>slb<wbr>Listeners</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getlistenersslblistener">Get<wbr>Listeners<wbr>Slb<wbr>Listener[]</a></span>
-    </dt>
-    <dd>{{% md %}}A list of SLB listeners. Each element contains the following attributes:
 {{% /md %}}</dd>
 
 </dl>
@@ -479,23 +479,6 @@ The following output properties are available:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>description_<wbr>regex</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>frontend_<wbr>port</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}Frontend port used to receive incoming traffic and distribute it to the backend servers.
-{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -516,6 +499,32 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>slb_<wbr>listeners</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getlistenersslblistener">List[Get<wbr>Listeners<wbr>Slb<wbr>Listener]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of SLB listeners. Each element contains the following attributes:
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>description_<wbr>regex</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>frontend_<wbr>port</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}Frontend port used to receive incoming traffic and distribute it to the backend servers.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>output_<wbr>file</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -529,15 +538,6 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Listener protocol. Possible values: `http`, `https`, `tcp` and `udp`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>slb_<wbr>listeners</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getlistenersslblistener">List[Get<wbr>Listeners<wbr>Slb<wbr>Listener]</a></span>
-    </dt>
-    <dd>{{% md %}}A list of SLB listeners. Each element contains the following attributes:
 {{% /md %}}</dd>
 
 </dl>

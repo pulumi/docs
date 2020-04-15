@@ -27,13 +27,13 @@ block_external_search_index: true
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupPluginsCommunity<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-cloudamqp/sdk/go/cloudamqp/?tab=doc#GetPluginsCommunityArgs">GetPluginsCommunityArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-cloudamqp/sdk/go/cloudamqp/?tab=doc#LookupPluginsCommunityResult">LookupPluginsCommunityResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupPluginsCommunity<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-cloudamqp/sdk/go/cloudamqp/?tab=doc#GetPluginsCommunityArgs">GetPluginsCommunityArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-cloudamqp/sdk/go/cloudamqp/?tab=doc#LookupPluginsCommunityResult">LookupPluginsCommunityResult</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetPluginsCommunity </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Cloudamqp/Pulumi.Cloudamqp.GetPluginsCommunityResult.html">GetPluginsCommunityResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Cloudamqp/Pulumi.Cloudamqp.GetPluginsCommunityArgs.html">GetPluginsCommunityArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Cloudamqp/Pulumi.Cloudamqp.GetPluginsCommunityResult.html">GetPluginsCommunityResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Cloudamqp/Pulumi.CloudAmqp.GetPluginsCommunityArgs.html">GetPluginsCommunityArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -58,7 +58,7 @@ The following arguments are supported:
             title="Optional">
         <span>Plugins</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpluginscommunityplugin">List&lt;Get<wbr>Plugins<wbr>Community<wbr>Plugin<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#getpluginscommunityplugin">List&lt;Pulumi.<wbr>Cloud<wbr>Amqp.<wbr>Inputs.<wbr>Get<wbr>Plugins<wbr>Community<wbr>Plugin<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -104,7 +104,7 @@ The following arguments are supported:
             title="Optional">
         <span>plugins</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpluginscommunityplugin">Get<wbr>Plugins<wbr>Community<wbr>Plugin[]?</a></span>
+        <span class="property-type"><a href="#getpluginscommunityplugin">Get<wbr>Plugins<wbr>Community<wbr>Plugin[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -172,7 +172,7 @@ The following output properties are available:
             title="">
         <span>Plugins</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpluginscommunityplugin">List&lt;Get<wbr>Plugins<wbr>Community<wbr>Plugin&gt;?</a></span>
+        <span class="property-type"><a href="#getpluginscommunityplugin">List&lt;Pulumi.<wbr>Cloud<wbr>Amqp.<wbr>Outputs.<wbr>Get<wbr>Plugins<wbr>Community<wbr>Plugin&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -236,7 +236,7 @@ The following output properties are available:
             title="">
         <span>plugins</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpluginscommunityplugin">Get<wbr>Plugins<wbr>Community<wbr>Plugin[]?</a></span>
+        <span class="property-type"><a href="#getpluginscommunityplugin">Get<wbr>Plugins<wbr>Community<wbr>Plugin[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -303,7 +303,7 @@ The following output properties are available:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -311,7 +311,7 @@ The following output properties are available:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -319,7 +319,7 @@ The following output properties are available:
             title="Optional">
         <span>Require</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -334,7 +334,7 @@ The following output properties are available:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -342,7 +342,7 @@ The following output properties are available:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -350,7 +350,7 @@ The following output properties are available:
             title="Optional">
         <span>Require</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -365,7 +365,7 @@ The following output properties are available:
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -373,7 +373,7 @@ The following output properties are available:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -381,7 +381,7 @@ The following output properties are available:
             title="Optional">
         <span>require</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

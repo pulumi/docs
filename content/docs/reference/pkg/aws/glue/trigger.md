@@ -123,7 +123,7 @@ const example = new aws.glue.Trigger("example", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/glue/#Trigger">Trigger</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/glue/#TriggerArgs">TriggerArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/glue/#Trigger">Trigger</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/glue/#TriggerArgs">TriggerArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -131,7 +131,7 @@ const example = new aws.glue.Trigger("example", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewTrigger<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/glue?tab=doc#TriggerArgs">TriggerArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/glue?tab=doc#Trigger">Trigger</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewTrigger<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/glue?tab=doc#TriggerArgs">TriggerArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/glue?tab=doc#Trigger">Trigger</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -236,60 +236,6 @@ const example = new aws.glue.Trigger("example", {
     <dd>{{% md %}}List of actions initiated by this trigger when it fires. Defined below.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}A description of the new trigger.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Start the trigger. Defaults to `true`. Not valid to disable for `ON_DEMAND` type.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The name of the trigger.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Predicate</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerpredicate">Trigger<wbr>Predicate<wbr>Args?</a></span>
-    </dt>
-    <dd>{{% md %}}A predicate to specify when the new trigger should fire. Required when trigger type is `CONDITIONAL`. Defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Schedule</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}A cron expression used to specify the schedule. [Time-Based Schedules for Jobs and Crawlers](https://docs.aws.amazon.com/glue/latest/dg/monitor-data-warehouse-schedule.html)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
-    </dt>
-    <dd>{{% md %}}Key-value mapping of resource tags
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Type</span>
@@ -301,9 +247,63 @@ const example = new aws.glue.Trigger("example", {
 
     <dt class="property-optional"
             title="Optional">
+        <span>Description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A description of the new trigger.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Enabled</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Start the trigger. Defaults to `true`. Not valid to disable for `ON_DEMAND` type.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the trigger.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Predicate</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#triggerpredicate">Trigger<wbr>Predicate<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A predicate to specify when the new trigger should fire. Required when trigger type is `CONDITIONAL`. Defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Schedule</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A cron expression used to specify the schedule. [Time-Based Schedules for Jobs and Crawlers](https://docs.aws.amazon.com/glue/latest/dg/monitor-data-warehouse-schedule.html)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+    </dt>
+    <dd>{{% md %}}Key-value mapping of resource tags
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Workflow<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A workflow to which the trigger should be associated to. Every workflow graph (DAG) needs a starting trigger (`ON_DEMAND` or `SCHEDULED` type) and can contain multiple additional `CONDITIONAL` triggers.
 {{% /md %}}</dd>
@@ -324,11 +324,20 @@ const example = new aws.glue.Trigger("example", {
     <dd>{{% md %}}List of actions initiated by this trigger when it fires. Defined below.
 {{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of trigger. Valid values are `CONDITIONAL`, `ON_DEMAND`, and `SCHEDULED`.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the new trigger.
 {{% /md %}}</dd>
@@ -337,7 +346,7 @@ const example = new aws.glue.Trigger("example", {
             title="Optional">
         <span>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Start the trigger. Defaults to `true`. Not valid to disable for `ON_DEMAND` type.
 {{% /md %}}</dd>
@@ -346,7 +355,7 @@ const example = new aws.glue.Trigger("example", {
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the trigger.
 {{% /md %}}</dd>
@@ -355,7 +364,7 @@ const example = new aws.glue.Trigger("example", {
             title="Optional">
         <span>Predicate</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerpredicate">*Trigger<wbr>Predicate</a></span>
+        <span class="property-type"><a href="#triggerpredicate">Trigger<wbr>Predicate</a></span>
     </dt>
     <dd>{{% md %}}A predicate to specify when the new trigger should fire. Required when trigger type is `CONDITIONAL`. Defined below.
 {{% /md %}}</dd>
@@ -364,7 +373,7 @@ const example = new aws.glue.Trigger("example", {
             title="Optional">
         <span>Schedule</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A cron expression used to specify the schedule. [Time-Based Schedules for Jobs and Crawlers](https://docs.aws.amazon.com/glue/latest/dg/monitor-data-warehouse-schedule.html)
 {{% /md %}}</dd>
@@ -378,20 +387,11 @@ const example = new aws.glue.Trigger("example", {
     <dd>{{% md %}}Key-value mapping of resource tags
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The type of trigger. Valid values are `CONDITIONAL`, `ON_DEMAND`, and `SCHEDULED`.
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>Workflow<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A workflow to which the trigger should be associated to. Every workflow graph (DAG) needs a starting trigger (`ON_DEMAND` or `SCHEDULED` type) and can contain multiple additional `CONDITIONAL` triggers.
 {{% /md %}}</dd>
@@ -412,60 +412,6 @@ const example = new aws.glue.Trigger("example", {
     <dd>{{% md %}}List of actions initiated by this trigger when it fires. Defined below.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}A description of the new trigger.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Start the trigger. Defaults to `true`. Not valid to disable for `ON_DEMAND` type.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The name of the trigger.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>predicate</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerpredicate">Trigger<wbr>Predicate?</a></span>
-    </dt>
-    <dd>{{% md %}}A predicate to specify when the new trigger should fire. Required when trigger type is `CONDITIONAL`. Defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>schedule</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}A cron expression used to specify the schedule. [Time-Based Schedules for Jobs and Crawlers](https://docs.aws.amazon.com/glue/latest/dg/monitor-data-warehouse-schedule.html)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
-    </dt>
-    <dd>{{% md %}}Key-value mapping of resource tags
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>type</span>
@@ -477,9 +423,63 @@ const example = new aws.glue.Trigger("example", {
 
     <dt class="property-optional"
             title="Optional">
+        <span>description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A description of the new trigger.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>enabled</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Start the trigger. Defaults to `true`. Not valid to disable for `ON_DEMAND` type.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the trigger.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>predicate</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#triggerpredicate">Trigger<wbr>Predicate</a></span>
+    </dt>
+    <dd>{{% md %}}A predicate to specify when the new trigger should fire. Required when trigger type is `CONDITIONAL`. Defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>schedule</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A cron expression used to specify the schedule. [Time-Based Schedules for Jobs and Crawlers](https://docs.aws.amazon.com/glue/latest/dg/monitor-data-warehouse-schedule.html)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}</span>
+    </dt>
+    <dd>{{% md %}}Key-value mapping of resource tags
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>workflow<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A workflow to which the trigger should be associated to. Every workflow graph (DAG) needs a starting trigger (`ON_DEMAND` or `SCHEDULED` type) and can contain multiple additional `CONDITIONAL` triggers.
 {{% /md %}}</dd>
@@ -498,6 +498,15 @@ const example = new aws.glue.Trigger("example", {
         <span class="property-type"><a href="#triggeraction">List[Trigger<wbr>Action]</a></span>
     </dt>
     <dd>{{% md %}}List of actions initiated by this trigger when it fires. Defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The type of trigger. Valid values are `CONDITIONAL`, `ON_DEMAND`, and `SCHEDULED`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -552,15 +561,6 @@ const example = new aws.glue.Trigger("example", {
         <span class="property-type">Dict[str, Any]</span>
     </dt>
     <dd>{{% md %}}Key-value mapping of resource tags
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The type of trigger. Valid values are `CONDITIONAL`, `ON_DEMAND`, and `SCHEDULED`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -593,92 +593,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Actions</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggeraction">List&lt;Trigger<wbr>Action&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}List of actions initiated by this trigger when it fires. Defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Arn</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of Glue Trigger
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}A description of the new trigger.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Start the trigger. Defaults to `true`. Not valid to disable for `ON_DEMAND` type.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the trigger.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Predicate</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerpredicate">Trigger<wbr>Predicate?</a></span>
-    </dt>
-    <dd>{{% md %}}A predicate to specify when the new trigger should fire. Required when trigger type is `CONDITIONAL`. Defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Schedule</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}A cron expression used to specify the schedule. [Time-Based Schedules for Jobs and Crawlers](https://docs.aws.amazon.com/glue/latest/dg/monitor-data-warehouse-schedule.html)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
-    </dt>
-    <dd>{{% md %}}Key-value mapping of resource tags
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The type of trigger. Valid values are `CONDITIONAL`, `ON_DEMAND`, and `SCHEDULED`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Workflow<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}A workflow to which the trigger should be associated to. Every workflow graph (DAG) needs a starting trigger (`ON_DEMAND` or `SCHEDULED` type) and can contain multiple additional `CONDITIONAL` triggers.
 {{% /md %}}</dd>
 
 </dl>
@@ -690,92 +609,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Actions</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggeraction">[]Trigger<wbr>Action</a></span>
-    </dt>
-    <dd>{{% md %}}List of actions initiated by this trigger when it fires. Defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Arn</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of Glue Trigger
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}A description of the new trigger.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Start the trigger. Defaults to `true`. Not valid to disable for `ON_DEMAND` type.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the trigger.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Predicate</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerpredicate">*Trigger<wbr>Predicate</a></span>
-    </dt>
-    <dd>{{% md %}}A predicate to specify when the new trigger should fire. Required when trigger type is `CONDITIONAL`. Defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Schedule</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}A cron expression used to specify the schedule. [Time-Based Schedules for Jobs and Crawlers](https://docs.aws.amazon.com/glue/latest/dg/monitor-data-warehouse-schedule.html)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
-    </dt>
-    <dd>{{% md %}}Key-value mapping of resource tags
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The type of trigger. Valid values are `CONDITIONAL`, `ON_DEMAND`, and `SCHEDULED`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Workflow<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}A workflow to which the trigger should be associated to. Every workflow graph (DAG) needs a starting trigger (`ON_DEMAND` or `SCHEDULED` type) and can contain multiple additional `CONDITIONAL` triggers.
 {{% /md %}}</dd>
 
 </dl>
@@ -787,92 +625,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>actions</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggeraction">Trigger<wbr>Action[]</a></span>
-    </dt>
-    <dd>{{% md %}}List of actions initiated by this trigger when it fires. Defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>arn</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of Glue Trigger
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}A description of the new trigger.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Start the trigger. Defaults to `true`. Not valid to disable for `ON_DEMAND` type.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the trigger.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>predicate</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerpredicate">Trigger<wbr>Predicate?</a></span>
-    </dt>
-    <dd>{{% md %}}A predicate to specify when the new trigger should fire. Required when trigger type is `CONDITIONAL`. Defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>schedule</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}A cron expression used to specify the schedule. [Time-Based Schedules for Jobs and Crawlers](https://docs.aws.amazon.com/glue/latest/dg/monitor-data-warehouse-schedule.html)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
-    </dt>
-    <dd>{{% md %}}Key-value mapping of resource tags
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The type of trigger. Valid values are `CONDITIONAL`, `ON_DEMAND`, and `SCHEDULED`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>workflow<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}A workflow to which the trigger should be associated to. Every workflow graph (DAG) needs a starting trigger (`ON_DEMAND` or `SCHEDULED` type) and can contain multiple additional `CONDITIONAL` triggers.
 {{% /md %}}</dd>
 
 </dl>
@@ -884,92 +641,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>actions</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggeraction">List[Trigger<wbr>Action]</a></span>
-    </dt>
-    <dd>{{% md %}}List of actions initiated by this trigger when it fires. Defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>arn</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of Glue Trigger
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}A description of the new trigger.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Start the trigger. Defaults to `true`. Not valid to disable for `ON_DEMAND` type.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the trigger.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>predicate</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerpredicate">Dict[Trigger<wbr>Predicate]</a></span>
-    </dt>
-    <dd>{{% md %}}A predicate to specify when the new trigger should fire. Required when trigger type is `CONDITIONAL`. Defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>schedule</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}A cron expression used to specify the schedule. [Time-Based Schedules for Jobs and Crawlers](https://docs.aws.amazon.com/glue/latest/dg/monitor-data-warehouse-schedule.html)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
-    </dt>
-    <dd>{{% md %}}Key-value mapping of resource tags
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The type of trigger. Valid values are `CONDITIONAL`, `ON_DEMAND`, and `SCHEDULED`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>workflow_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}A workflow to which the trigger should be associated to. Every workflow graph (DAG) needs a starting trigger (`ON_DEMAND` or `SCHEDULED` type) and can contain multiple additional `CONDITIONAL` triggers.
 {{% /md %}}</dd>
 
 </dl>
@@ -1111,7 +787,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Actions</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggeraction">List&lt;Trigger<wbr>Action<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#triggeraction">List&lt;Trigger<wbr>Action<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of actions initiated by this trigger when it fires. Defined below.
 {{% /md %}}</dd>
@@ -1120,7 +796,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of Glue Trigger
 {{% /md %}}</dd>
@@ -1129,7 +805,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the new trigger.
 {{% /md %}}</dd>
@@ -1138,7 +814,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Start the trigger. Defaults to `true`. Not valid to disable for `ON_DEMAND` type.
 {{% /md %}}</dd>
@@ -1147,7 +823,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the trigger.
 {{% /md %}}</dd>
@@ -1156,7 +832,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Predicate</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerpredicate">Trigger<wbr>Predicate<wbr>Args?</a></span>
+        <span class="property-type"><a href="#triggerpredicate">Trigger<wbr>Predicate<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A predicate to specify when the new trigger should fire. Required when trigger type is `CONDITIONAL`. Defined below.
 {{% /md %}}</dd>
@@ -1165,7 +841,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Schedule</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A cron expression used to specify the schedule. [Time-Based Schedules for Jobs and Crawlers](https://docs.aws.amazon.com/glue/latest/dg/monitor-data-warehouse-schedule.html)
 {{% /md %}}</dd>
@@ -1174,7 +850,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Key-value mapping of resource tags
 {{% /md %}}</dd>
@@ -1183,7 +859,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of trigger. Valid values are `CONDITIONAL`, `ON_DEMAND`, and `SCHEDULED`.
 {{% /md %}}</dd>
@@ -1192,7 +868,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Workflow<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A workflow to which the trigger should be associated to. Every workflow graph (DAG) needs a starting trigger (`ON_DEMAND` or `SCHEDULED` type) and can contain multiple additional `CONDITIONAL` triggers.
 {{% /md %}}</dd>
@@ -1217,7 +893,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of Glue Trigger
 {{% /md %}}</dd>
@@ -1226,7 +902,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the new trigger.
 {{% /md %}}</dd>
@@ -1235,7 +911,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Start the trigger. Defaults to `true`. Not valid to disable for `ON_DEMAND` type.
 {{% /md %}}</dd>
@@ -1244,7 +920,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the trigger.
 {{% /md %}}</dd>
@@ -1253,7 +929,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Predicate</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerpredicate">*Trigger<wbr>Predicate</a></span>
+        <span class="property-type"><a href="#triggerpredicate">Trigger<wbr>Predicate</a></span>
     </dt>
     <dd>{{% md %}}A predicate to specify when the new trigger should fire. Required when trigger type is `CONDITIONAL`. Defined below.
 {{% /md %}}</dd>
@@ -1262,7 +938,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Schedule</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A cron expression used to specify the schedule. [Time-Based Schedules for Jobs and Crawlers](https://docs.aws.amazon.com/glue/latest/dg/monitor-data-warehouse-schedule.html)
 {{% /md %}}</dd>
@@ -1280,7 +956,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of trigger. Valid values are `CONDITIONAL`, `ON_DEMAND`, and `SCHEDULED`.
 {{% /md %}}</dd>
@@ -1289,7 +965,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Workflow<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A workflow to which the trigger should be associated to. Every workflow graph (DAG) needs a starting trigger (`ON_DEMAND` or `SCHEDULED` type) and can contain multiple additional `CONDITIONAL` triggers.
 {{% /md %}}</dd>
@@ -1305,7 +981,7 @@ The following state arguments are supported:
             title="Optional">
         <span>actions</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggeraction">Trigger<wbr>Action[]?</a></span>
+        <span class="property-type"><a href="#triggeraction">Trigger<wbr>Action[]</a></span>
     </dt>
     <dd>{{% md %}}List of actions initiated by this trigger when it fires. Defined below.
 {{% /md %}}</dd>
@@ -1314,7 +990,7 @@ The following state arguments are supported:
             title="Optional">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of Glue Trigger
 {{% /md %}}</dd>
@@ -1323,7 +999,7 @@ The following state arguments are supported:
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A description of the new trigger.
 {{% /md %}}</dd>
@@ -1332,7 +1008,7 @@ The following state arguments are supported:
             title="Optional">
         <span>enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Start the trigger. Defaults to `true`. Not valid to disable for `ON_DEMAND` type.
 {{% /md %}}</dd>
@@ -1341,7 +1017,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the trigger.
 {{% /md %}}</dd>
@@ -1350,7 +1026,7 @@ The following state arguments are supported:
             title="Optional">
         <span>predicate</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#triggerpredicate">Trigger<wbr>Predicate?</a></span>
+        <span class="property-type"><a href="#triggerpredicate">Trigger<wbr>Predicate</a></span>
     </dt>
     <dd>{{% md %}}A predicate to specify when the new trigger should fire. Required when trigger type is `CONDITIONAL`. Defined below.
 {{% /md %}}</dd>
@@ -1359,7 +1035,7 @@ The following state arguments are supported:
             title="Optional">
         <span>schedule</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A cron expression used to specify the schedule. [Time-Based Schedules for Jobs and Crawlers](https://docs.aws.amazon.com/glue/latest/dg/monitor-data-warehouse-schedule.html)
 {{% /md %}}</dd>
@@ -1368,7 +1044,7 @@ The following state arguments are supported:
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Key-value mapping of resource tags
 {{% /md %}}</dd>
@@ -1377,7 +1053,7 @@ The following state arguments are supported:
             title="Optional">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of trigger. Valid values are `CONDITIONAL`, `ON_DEMAND`, and `SCHEDULED`.
 {{% /md %}}</dd>
@@ -1386,7 +1062,7 @@ The following state arguments are supported:
             title="Optional">
         <span>workflow<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A workflow to which the trigger should be associated to. Every workflow graph (DAG) needs a starting trigger (`ON_DEMAND` or `SCHEDULED` type) and can contain multiple additional `CONDITIONAL` triggers.
 {{% /md %}}</dd>
@@ -1521,7 +1197,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Arguments</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Arguments to be passed to the job. You can specify arguments here that your own job-execution script consumes, as well as arguments that AWS Glue itself consumes.
 {{% /md %}}</dd>
@@ -1530,7 +1206,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Crawler<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the crawler to be executed. Conflicts with `job_name`.
 {{% /md %}}</dd>
@@ -1539,7 +1215,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Job<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of a job to be executed. Conflicts with `crawler_name`.
 {{% /md %}}</dd>
@@ -1548,7 +1224,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The job run timeout in minutes. It overrides the timeout value of the job.
 {{% /md %}}</dd>
@@ -1573,7 +1249,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Crawler<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the crawler to be executed. Conflicts with `job_name`.
 {{% /md %}}</dd>
@@ -1582,7 +1258,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Job<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of a job to be executed. Conflicts with `crawler_name`.
 {{% /md %}}</dd>
@@ -1591,7 +1267,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The job run timeout in minutes. It overrides the timeout value of the job.
 {{% /md %}}</dd>
@@ -1607,7 +1283,7 @@ The following state arguments are supported:
             title="Optional">
         <span>arguments</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Arguments to be passed to the job. You can specify arguments here that your own job-execution script consumes, as well as arguments that AWS Glue itself consumes.
 {{% /md %}}</dd>
@@ -1616,7 +1292,7 @@ The following state arguments are supported:
             title="Optional">
         <span>crawler<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the crawler to be executed. Conflicts with `job_name`.
 {{% /md %}}</dd>
@@ -1625,7 +1301,7 @@ The following state arguments are supported:
             title="Optional">
         <span>job<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of a job to be executed. Conflicts with `crawler_name`.
 {{% /md %}}</dd>
@@ -1634,7 +1310,7 @@ The following state arguments are supported:
             title="Optional">
         <span>timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The job run timeout in minutes. It overrides the timeout value of the job.
 {{% /md %}}</dd>
@@ -1717,7 +1393,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Logical</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}How to handle multiple conditions. Defaults to `AND`. Valid values are `AND` or `ANY`.
 {{% /md %}}</dd>
@@ -1742,7 +1418,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Logical</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}How to handle multiple conditions. Defaults to `AND`. Valid values are `AND` or `ANY`.
 {{% /md %}}</dd>
@@ -1767,7 +1443,7 @@ The following state arguments are supported:
             title="Optional">
         <span>logical</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}How to handle multiple conditions. Defaults to `AND`. Valid values are `AND` or `ANY`.
 {{% /md %}}</dd>
@@ -1823,7 +1499,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Crawl<wbr>State</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The condition crawl state. Currently, the values supported are `RUNNING`, `SUCCEEDED`, `CANCELLED`, and `FAILED`. If this is specified, `crawler_name` must also be specified. Conflicts with `state`.
 {{% /md %}}</dd>
@@ -1832,7 +1508,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Crawler<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the crawler to watch. If this is specified, `crawl_state` must also be specified. Conflicts with `job_name`.
 {{% /md %}}</dd>
@@ -1841,7 +1517,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Job<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the job to watch. If this is specified, `state` must also be specified. Conflicts with `crawler_name`.
 {{% /md %}}</dd>
@@ -1850,7 +1526,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Logical<wbr>Operator</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A logical operator. Defaults to `EQUALS`.
 {{% /md %}}</dd>
@@ -1859,7 +1535,7 @@ The following state arguments are supported:
             title="Optional">
         <span>State</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The condition job state. Currently, the values supported are `SUCCEEDED`, `STOPPED`, `TIMEOUT` and `FAILED`. If this is specified, `job_name` must also be specified. Conflicts with `crawler_state`.
 {{% /md %}}</dd>
@@ -1875,7 +1551,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Crawl<wbr>State</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The condition crawl state. Currently, the values supported are `RUNNING`, `SUCCEEDED`, `CANCELLED`, and `FAILED`. If this is specified, `crawler_name` must also be specified. Conflicts with `state`.
 {{% /md %}}</dd>
@@ -1884,7 +1560,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Crawler<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the crawler to watch. If this is specified, `crawl_state` must also be specified. Conflicts with `job_name`.
 {{% /md %}}</dd>
@@ -1893,7 +1569,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Job<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the job to watch. If this is specified, `state` must also be specified. Conflicts with `crawler_name`.
 {{% /md %}}</dd>
@@ -1902,7 +1578,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Logical<wbr>Operator</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A logical operator. Defaults to `EQUALS`.
 {{% /md %}}</dd>
@@ -1911,7 +1587,7 @@ The following state arguments are supported:
             title="Optional">
         <span>State</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The condition job state. Currently, the values supported are `SUCCEEDED`, `STOPPED`, `TIMEOUT` and `FAILED`. If this is specified, `job_name` must also be specified. Conflicts with `crawler_state`.
 {{% /md %}}</dd>
@@ -1927,7 +1603,7 @@ The following state arguments are supported:
             title="Optional">
         <span>crawl<wbr>State</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The condition crawl state. Currently, the values supported are `RUNNING`, `SUCCEEDED`, `CANCELLED`, and `FAILED`. If this is specified, `crawler_name` must also be specified. Conflicts with `state`.
 {{% /md %}}</dd>
@@ -1936,7 +1612,7 @@ The following state arguments are supported:
             title="Optional">
         <span>crawler<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the crawler to watch. If this is specified, `crawl_state` must also be specified. Conflicts with `job_name`.
 {{% /md %}}</dd>
@@ -1945,7 +1621,7 @@ The following state arguments are supported:
             title="Optional">
         <span>job<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the job to watch. If this is specified, `state` must also be specified. Conflicts with `crawler_name`.
 {{% /md %}}</dd>
@@ -1954,7 +1630,7 @@ The following state arguments are supported:
             title="Optional">
         <span>logical<wbr>Operator</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A logical operator. Defaults to `EQUALS`.
 {{% /md %}}</dd>
@@ -1963,7 +1639,7 @@ The following state arguments are supported:
             title="Optional">
         <span>state</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The condition job state. Currently, the values supported are `SUCCEEDED`, `STOPPED`, `TIMEOUT` and `FAILED`. If this is specified, `job_name` must also be specified. Conflicts with `crawler_state`.
 {{% /md %}}</dd>

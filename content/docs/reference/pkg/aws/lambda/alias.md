@@ -41,7 +41,7 @@ const testAlias = new aws.lambda.Alias("test_alias", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/lambda/#Alias">Alias</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/lambda/#AliasArgs">AliasArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/lambda/#Alias">Alias</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/lambda/#AliasArgs">AliasArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -49,7 +49,7 @@ const testAlias = new aws.lambda.Alias("test_alias", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewAlias<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/lambda?tab=doc#AliasArgs">AliasArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/lambda?tab=doc#Alias">Alias</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewAlias<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/lambda?tab=doc#AliasArgs">AliasArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/lambda?tab=doc#Alias">Alias</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -145,15 +145,6 @@ const testAlias = new aws.lambda.Alias("test_alias", {
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Description of the alias.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Function<wbr>Name</span>
@@ -174,9 +165,18 @@ const testAlias = new aws.lambda.Alias("test_alias", {
 
     <dt class="property-optional"
             title="Optional">
+        <span>Description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Description of the alias.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name for the alias you are creating. Pattern: `(?!^[0-9]+$)([a-zA-Z0-9-_]+)`
 {{% /md %}}</dd>
@@ -185,7 +185,7 @@ const testAlias = new aws.lambda.Alias("test_alias", {
             title="Optional">
         <span>Routing<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aliasroutingconfig">Alias<wbr>Routing<wbr>Config<wbr>Args?</a></span>
+        <span class="property-type"><a href="#aliasroutingconfig">Alias<wbr>Routing<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Lambda alias' route configuration settings. Fields documented below
 {{% /md %}}</dd>
@@ -197,15 +197,6 @@ const testAlias = new aws.lambda.Alias("test_alias", {
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Description of the alias.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Function<wbr>Name</span>
@@ -226,9 +217,18 @@ const testAlias = new aws.lambda.Alias("test_alias", {
 
     <dt class="property-optional"
             title="Optional">
+        <span>Description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Description of the alias.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name for the alias you are creating. Pattern: `(?!^[0-9]+$)([a-zA-Z0-9-_]+)`
 {{% /md %}}</dd>
@@ -237,7 +237,7 @@ const testAlias = new aws.lambda.Alias("test_alias", {
             title="Optional">
         <span>Routing<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aliasroutingconfig">*Alias<wbr>Routing<wbr>Config</a></span>
+        <span class="property-type"><a href="#aliasroutingconfig">Alias<wbr>Routing<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The Lambda alias' route configuration settings. Fields documented below
 {{% /md %}}</dd>
@@ -248,15 +248,6 @@ const testAlias = new aws.lambda.Alias("test_alias", {
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Description of the alias.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -278,9 +269,18 @@ const testAlias = new aws.lambda.Alias("test_alias", {
 
     <dt class="property-optional"
             title="Optional">
+        <span>description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Description of the alias.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name for the alias you are creating. Pattern: `(?!^[0-9]+$)([a-zA-Z0-9-_]+)`
 {{% /md %}}</dd>
@@ -289,7 +289,7 @@ const testAlias = new aws.lambda.Alias("test_alias", {
             title="Optional">
         <span>routing<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aliasroutingconfig">Alias<wbr>Routing<wbr>Config?</a></span>
+        <span class="property-type"><a href="#aliasroutingconfig">Alias<wbr>Routing<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The Lambda alias' route configuration settings. Fields documented below
 {{% /md %}}</dd>
@@ -300,15 +300,6 @@ const testAlias = new aws.lambda.Alias("test_alias", {
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Description of the alias.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -326,6 +317,15 @@ const testAlias = new aws.lambda.Alias("test_alias", {
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Lambda function version for which you are creating the alias. Pattern: `(\$LATEST|[0-9]+)`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Description of the alias.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -376,56 +376,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Description of the alias.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Function<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The function ARN of the Lambda function for which you want to create an alias.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Function<wbr>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Lambda function version for which you are creating the alias. Pattern: `(\$LATEST|[0-9]+)`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Invoke<wbr>Arn</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN to be used for invoking Lambda Function from API Gateway - to be used in [`aws.apigateway.Integration`](https://www.terraform.io/docs/providers/aws/r/api_gateway_integration.html)'s `uri`
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name for the alias you are creating. Pattern: `(?!^[0-9]+$)([a-zA-Z0-9-_]+)`
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Routing<wbr>Config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aliasroutingconfig">Alias<wbr>Routing<wbr>Config?</a></span>
-    </dt>
-    <dd>{{% md %}}The Lambda alias' route configuration settings. Fields documented below
 {{% /md %}}</dd>
 
 </dl>
@@ -446,56 +401,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Description of the alias.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Function<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The function ARN of the Lambda function for which you want to create an alias.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Function<wbr>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Lambda function version for which you are creating the alias. Pattern: `(\$LATEST|[0-9]+)`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Invoke<wbr>Arn</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN to be used for invoking Lambda Function from API Gateway - to be used in [`aws.apigateway.Integration`](https://www.terraform.io/docs/providers/aws/r/api_gateway_integration.html)'s `uri`
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name for the alias you are creating. Pattern: `(?!^[0-9]+$)([a-zA-Z0-9-_]+)`
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Routing<wbr>Config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aliasroutingconfig">*Alias<wbr>Routing<wbr>Config</a></span>
-    </dt>
-    <dd>{{% md %}}The Lambda alias' route configuration settings. Fields documented below
 {{% /md %}}</dd>
 
 </dl>
@@ -516,56 +426,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Description of the alias.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>function<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The function ARN of the Lambda function for which you want to create an alias.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>function<wbr>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Lambda function version for which you are creating the alias. Pattern: `(\$LATEST|[0-9]+)`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>invoke<wbr>Arn</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN to be used for invoking Lambda Function from API Gateway - to be used in [`aws.apigateway.Integration`](https://www.terraform.io/docs/providers/aws/r/api_gateway_integration.html)'s `uri`
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name for the alias you are creating. Pattern: `(?!^[0-9]+$)([a-zA-Z0-9-_]+)`
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>routing<wbr>Config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aliasroutingconfig">Alias<wbr>Routing<wbr>Config?</a></span>
-    </dt>
-    <dd>{{% md %}}The Lambda alias' route configuration settings. Fields documented below
 {{% /md %}}</dd>
 
 </dl>
@@ -586,56 +451,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Description of the alias.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>function_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The function ARN of the Lambda function for which you want to create an alias.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>function_<wbr>version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Lambda function version for which you are creating the alias. Pattern: `(\$LATEST|[0-9]+)`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>invoke_<wbr>arn</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ARN to be used for invoking Lambda Function from API Gateway - to be used in [`aws.apigateway.Integration`](https://www.terraform.io/docs/providers/aws/r/api_gateway_integration.html)'s `uri`
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Name for the alias you are creating. Pattern: `(?!^[0-9]+$)([a-zA-Z0-9-_]+)`
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>routing_<wbr>config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aliasroutingconfig">Dict[Alias<wbr>Routing<wbr>Config]</a></span>
-    </dt>
-    <dd>{{% md %}}The Lambda alias' route configuration settings. Fields documented below
 {{% /md %}}</dd>
 
 </dl>
@@ -777,7 +597,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) identifying your Lambda function alias.
 {{% /md %}}</dd>
@@ -786,7 +606,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the alias.
 {{% /md %}}</dd>
@@ -795,7 +615,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Function<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The function ARN of the Lambda function for which you want to create an alias.
 {{% /md %}}</dd>
@@ -804,7 +624,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Function<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Lambda function version for which you are creating the alias. Pattern: `(\$LATEST|[0-9]+)`.
 {{% /md %}}</dd>
@@ -813,7 +633,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Invoke<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN to be used for invoking Lambda Function from API Gateway - to be used in [`aws.apigateway.Integration`](https://www.terraform.io/docs/providers/aws/r/api_gateway_integration.html)'s `uri`
 {{% /md %}}</dd>
@@ -822,7 +642,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name for the alias you are creating. Pattern: `(?!^[0-9]+$)([a-zA-Z0-9-_]+)`
 {{% /md %}}</dd>
@@ -831,7 +651,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Routing<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aliasroutingconfig">Alias<wbr>Routing<wbr>Config<wbr>Args?</a></span>
+        <span class="property-type"><a href="#aliasroutingconfig">Alias<wbr>Routing<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The Lambda alias' route configuration settings. Fields documented below
 {{% /md %}}</dd>
@@ -847,7 +667,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) identifying your Lambda function alias.
 {{% /md %}}</dd>
@@ -856,7 +676,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the alias.
 {{% /md %}}</dd>
@@ -865,7 +685,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Function<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The function ARN of the Lambda function for which you want to create an alias.
 {{% /md %}}</dd>
@@ -874,7 +694,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Function<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Lambda function version for which you are creating the alias. Pattern: `(\$LATEST|[0-9]+)`.
 {{% /md %}}</dd>
@@ -883,7 +703,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Invoke<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN to be used for invoking Lambda Function from API Gateway - to be used in [`aws.apigateway.Integration`](https://www.terraform.io/docs/providers/aws/r/api_gateway_integration.html)'s `uri`
 {{% /md %}}</dd>
@@ -892,7 +712,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name for the alias you are creating. Pattern: `(?!^[0-9]+$)([a-zA-Z0-9-_]+)`
 {{% /md %}}</dd>
@@ -901,7 +721,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Routing<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aliasroutingconfig">*Alias<wbr>Routing<wbr>Config</a></span>
+        <span class="property-type"><a href="#aliasroutingconfig">Alias<wbr>Routing<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The Lambda alias' route configuration settings. Fields documented below
 {{% /md %}}</dd>
@@ -917,7 +737,7 @@ The following state arguments are supported:
             title="Optional">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name (ARN) identifying your Lambda function alias.
 {{% /md %}}</dd>
@@ -926,7 +746,7 @@ The following state arguments are supported:
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Description of the alias.
 {{% /md %}}</dd>
@@ -935,7 +755,7 @@ The following state arguments are supported:
             title="Optional">
         <span>function<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The function ARN of the Lambda function for which you want to create an alias.
 {{% /md %}}</dd>
@@ -944,7 +764,7 @@ The following state arguments are supported:
             title="Optional">
         <span>function<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Lambda function version for which you are creating the alias. Pattern: `(\$LATEST|[0-9]+)`.
 {{% /md %}}</dd>
@@ -953,7 +773,7 @@ The following state arguments are supported:
             title="Optional">
         <span>invoke<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ARN to be used for invoking Lambda Function from API Gateway - to be used in [`aws.apigateway.Integration`](https://www.terraform.io/docs/providers/aws/r/api_gateway_integration.html)'s `uri`
 {{% /md %}}</dd>
@@ -962,7 +782,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name for the alias you are creating. Pattern: `(?!^[0-9]+$)([a-zA-Z0-9-_]+)`
 {{% /md %}}</dd>
@@ -971,7 +791,7 @@ The following state arguments are supported:
             title="Optional">
         <span>routing<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#aliasroutingconfig">Alias<wbr>Routing<wbr>Config?</a></span>
+        <span class="property-type"><a href="#aliasroutingconfig">Alias<wbr>Routing<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}The Lambda alias' route configuration settings. Fields documented below
 {{% /md %}}</dd>
@@ -1079,7 +899,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Additional<wbr>Version<wbr>Weights</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, double>?</span>
+        <span class="property-type">Dictionary&lt;string, double&gt;</span>
     </dt>
     <dd>{{% md %}}A map that defines the proportion of events that should be sent to different versions of a lambda function.
 {{% /md %}}</dd>
@@ -1111,7 +931,7 @@ The following state arguments are supported:
             title="Optional">
         <span>additional<wbr>Version<wbr>Weights</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: number}?</span>
+        <span class="property-type">{[key: string]: number}</span>
     </dt>
     <dd>{{% md %}}A map that defines the proportion of events that should be sent to different versions of a lambda function.
 {{% /md %}}</dd>

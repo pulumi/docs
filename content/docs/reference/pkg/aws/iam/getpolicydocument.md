@@ -227,7 +227,7 @@ import * as pulumi from "@pulumi/pulumi";
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupPolicyDocument<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/iam?tab=doc#LookupPolicyDocumentArgs">LookupPolicyDocumentArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/iam?tab=doc#LookupPolicyDocumentResult">LookupPolicyDocumentResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupPolicyDocument<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/iam?tab=doc#LookupPolicyDocumentArgs">LookupPolicyDocumentArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/iam?tab=doc#LookupPolicyDocumentResult">LookupPolicyDocumentResult</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -250,7 +250,7 @@ The following arguments are supported:
             title="Optional">
         <span>Override<wbr>Json</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An IAM policy document to import and override the
 current policy document.  Statements with non-blank `sid`s in the override
@@ -262,7 +262,7 @@ Statements without an `sid` cannot be overwritten.
             title="Optional">
         <span>Policy<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An ID for the policy document.
 {{% /md %}}</dd>
@@ -271,7 +271,7 @@ Statements without an `sid` cannot be overwritten.
             title="Optional">
         <span>Source<wbr>Json</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An IAM policy document to import as a base for the
 current policy document.  Statements with non-blank `sid`s in the current
@@ -283,7 +283,7 @@ json.  Statements without an `sid` cannot be overwritten.
             title="Optional">
         <span>Statements</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpolicydocumentstatement">List&lt;Get<wbr>Policy<wbr>Document<wbr>Statement<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#getpolicydocumentstatement">List&lt;Get<wbr>Policy<wbr>Document<wbr>Statement<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A nested configuration block (described below)
 configuring one *statement* to be included in the policy document.
@@ -293,7 +293,7 @@ configuring one *statement* to be included in the policy document.
             title="Optional">
         <span>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IAM policy document version. Valid values: `2008-10-17`, `2012-10-17`. Defaults to `2012-10-17`. For more information, see the [AWS IAM User Guide](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_version.html).
 {{% /md %}}</dd>
@@ -309,7 +309,7 @@ configuring one *statement* to be included in the policy document.
             title="Optional">
         <span>Override<wbr>Json</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An IAM policy document to import and override the
 current policy document.  Statements with non-blank `sid`s in the override
@@ -321,7 +321,7 @@ Statements without an `sid` cannot be overwritten.
             title="Optional">
         <span>Policy<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An ID for the policy document.
 {{% /md %}}</dd>
@@ -330,7 +330,7 @@ Statements without an `sid` cannot be overwritten.
             title="Optional">
         <span>Source<wbr>Json</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An IAM policy document to import as a base for the
 current policy document.  Statements with non-blank `sid`s in the current
@@ -352,7 +352,7 @@ configuring one *statement* to be included in the policy document.
             title="Optional">
         <span>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IAM policy document version. Valid values: `2008-10-17`, `2012-10-17`. Defaults to `2012-10-17`. For more information, see the [AWS IAM User Guide](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_version.html).
 {{% /md %}}</dd>
@@ -368,7 +368,7 @@ configuring one *statement* to be included in the policy document.
             title="Optional">
         <span>override<wbr>Json</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An IAM policy document to import and override the
 current policy document.  Statements with non-blank `sid`s in the override
@@ -380,7 +380,7 @@ Statements without an `sid` cannot be overwritten.
             title="Optional">
         <span>policy<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An ID for the policy document.
 {{% /md %}}</dd>
@@ -389,7 +389,7 @@ Statements without an `sid` cannot be overwritten.
             title="Optional">
         <span>source<wbr>Json</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An IAM policy document to import as a base for the
 current policy document.  Statements with non-blank `sid`s in the current
@@ -401,7 +401,7 @@ json.  Statements without an `sid` cannot be overwritten.
             title="Optional">
         <span>statements</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpolicydocumentstatement">Get<wbr>Policy<wbr>Document<wbr>Statement[]?</a></span>
+        <span class="property-type"><a href="#getpolicydocumentstatement">Get<wbr>Policy<wbr>Document<wbr>Statement[]</a></span>
     </dt>
     <dd>{{% md %}}A nested configuration block (described below)
 configuring one *statement* to be included in the policy document.
@@ -411,7 +411,7 @@ configuring one *statement* to be included in the policy document.
             title="Optional">
         <span>version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}IAM policy document version. Valid values: `2008-10-17`, `2012-10-17`. Defaults to `2012-10-17`. For more information, see the [AWS IAM User Guide](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_version.html).
 {{% /md %}}</dd>
@@ -517,7 +517,7 @@ The following output properties are available:
             title="">
         <span>Override<wbr>Json</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -525,7 +525,7 @@ The following output properties are available:
             title="">
         <span>Policy<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -533,7 +533,7 @@ The following output properties are available:
             title="">
         <span>Source<wbr>Json</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -541,7 +541,7 @@ The following output properties are available:
             title="">
         <span>Statements</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpolicydocumentstatement">List&lt;Get<wbr>Policy<wbr>Document<wbr>Statement&gt;?</a></span>
+        <span class="property-type"><a href="#getpolicydocumentstatement">List&lt;Get<wbr>Policy<wbr>Document<wbr>Statement&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -549,7 +549,7 @@ The following output properties are available:
             title="">
         <span>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -582,7 +582,7 @@ The following output properties are available:
             title="">
         <span>Override<wbr>Json</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -590,7 +590,7 @@ The following output properties are available:
             title="">
         <span>Policy<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -598,7 +598,7 @@ The following output properties are available:
             title="">
         <span>Source<wbr>Json</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -614,7 +614,7 @@ The following output properties are available:
             title="">
         <span>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -647,7 +647,7 @@ The following output properties are available:
             title="">
         <span>override<wbr>Json</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -655,7 +655,7 @@ The following output properties are available:
             title="">
         <span>policy<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -663,7 +663,7 @@ The following output properties are available:
             title="">
         <span>source<wbr>Json</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -671,7 +671,7 @@ The following output properties are available:
             title="">
         <span>statements</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpolicydocumentstatement">Get<wbr>Policy<wbr>Document<wbr>Statement[]?</a></span>
+        <span class="property-type"><a href="#getpolicydocumentstatement">Get<wbr>Policy<wbr>Document<wbr>Statement[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -679,7 +679,7 @@ The following output properties are available:
             title="">
         <span>version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -779,7 +779,7 @@ The following output properties are available:
             title="Optional">
         <span>Actions</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of actions that this statement either allows
 or denies. For example, ``["ec2:RunInstances", "s3:*"]``.
@@ -789,7 +789,7 @@ or denies. For example, ``["ec2:RunInstances", "s3:*"]``.
             title="Optional">
         <span>Conditions</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpolicydocumentstatementcondition">List&lt;Get<wbr>Policy<wbr>Document<wbr>Statement<wbr>Condition<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#getpolicydocumentstatementcondition">List&lt;Get<wbr>Policy<wbr>Document<wbr>Statement<wbr>Condition<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A nested configuration block (described below)
 that defines a further, possibly-service-specific condition that constrains
@@ -800,7 +800,7 @@ whether this statement applies.
             title="Optional">
         <span>Effect</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Either "Allow" or "Deny", to specify whether this
 statement allows or denies the given actions. The default is "Allow".
@@ -810,7 +810,7 @@ statement allows or denies the given actions. The default is "Allow".
             title="Optional">
         <span>Not<wbr>Actions</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of actions that this statement does *not*
 apply to. Used to apply a policy statement to all actions *except* those
@@ -821,7 +821,7 @@ listed.
             title="Optional">
         <span>Not<wbr>Principals</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpolicydocumentstatementnotprincipal">List&lt;Get<wbr>Policy<wbr>Document<wbr>Statement<wbr>Not<wbr>Principal<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#getpolicydocumentstatementnotprincipal">List&lt;Get<wbr>Policy<wbr>Document<wbr>Statement<wbr>Not<wbr>Principal<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Like `principals` except gives resources that
 the statement does *not* apply to.
@@ -831,7 +831,7 @@ the statement does *not* apply to.
             title="Optional">
         <span>Not<wbr>Resources</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of resource ARNs that this statement
 does *not* apply to. Used to apply a policy statement to all resources
@@ -842,7 +842,7 @@ does *not* apply to. Used to apply a policy statement to all resources
             title="Optional">
         <span>Principals</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpolicydocumentstatementprincipal">List&lt;Get<wbr>Policy<wbr>Document<wbr>Statement<wbr>Principal<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#getpolicydocumentstatementprincipal">List&lt;Get<wbr>Policy<wbr>Document<wbr>Statement<wbr>Principal<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A nested configuration block (described below)
 specifying a resource (or resource pattern) to which this statement applies.
@@ -852,7 +852,7 @@ specifying a resource (or resource pattern) to which this statement applies.
             title="Optional">
         <span>Resources</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of resource ARNs that this statement applies
 to. This is required by AWS if used for an IAM policy.
@@ -862,7 +862,7 @@ to. This is required by AWS if used for an IAM policy.
             title="Optional">
         <span>Sid</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An ID for the policy statement.
 {{% /md %}}</dd>
@@ -899,7 +899,7 @@ whether this statement applies.
             title="Optional">
         <span>Effect</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Either "Allow" or "Deny", to specify whether this
 statement allows or denies the given actions. The default is "Allow".
@@ -961,7 +961,7 @@ to. This is required by AWS if used for an IAM policy.
             title="Optional">
         <span>Sid</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An ID for the policy statement.
 {{% /md %}}</dd>
@@ -977,7 +977,7 @@ to. This is required by AWS if used for an IAM policy.
             title="Optional">
         <span>actions</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of actions that this statement either allows
 or denies. For example, ``["ec2:RunInstances", "s3:*"]``.
@@ -987,7 +987,7 @@ or denies. For example, ``["ec2:RunInstances", "s3:*"]``.
             title="Optional">
         <span>conditions</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpolicydocumentstatementcondition">Get<wbr>Policy<wbr>Document<wbr>Statement<wbr>Condition[]?</a></span>
+        <span class="property-type"><a href="#getpolicydocumentstatementcondition">Get<wbr>Policy<wbr>Document<wbr>Statement<wbr>Condition[]</a></span>
     </dt>
     <dd>{{% md %}}A nested configuration block (described below)
 that defines a further, possibly-service-specific condition that constrains
@@ -998,7 +998,7 @@ whether this statement applies.
             title="Optional">
         <span>effect</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Either "Allow" or "Deny", to specify whether this
 statement allows or denies the given actions. The default is "Allow".
@@ -1008,7 +1008,7 @@ statement allows or denies the given actions. The default is "Allow".
             title="Optional">
         <span>not<wbr>Actions</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of actions that this statement does *not*
 apply to. Used to apply a policy statement to all actions *except* those
@@ -1019,7 +1019,7 @@ listed.
             title="Optional">
         <span>not<wbr>Principals</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpolicydocumentstatementnotprincipal">Get<wbr>Policy<wbr>Document<wbr>Statement<wbr>Not<wbr>Principal[]?</a></span>
+        <span class="property-type"><a href="#getpolicydocumentstatementnotprincipal">Get<wbr>Policy<wbr>Document<wbr>Statement<wbr>Not<wbr>Principal[]</a></span>
     </dt>
     <dd>{{% md %}}Like `principals` except gives resources that
 the statement does *not* apply to.
@@ -1029,7 +1029,7 @@ the statement does *not* apply to.
             title="Optional">
         <span>not<wbr>Resources</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of resource ARNs that this statement
 does *not* apply to. Used to apply a policy statement to all resources
@@ -1040,7 +1040,7 @@ does *not* apply to. Used to apply a policy statement to all resources
             title="Optional">
         <span>principals</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getpolicydocumentstatementprincipal">Get<wbr>Policy<wbr>Document<wbr>Statement<wbr>Principal[]?</a></span>
+        <span class="property-type"><a href="#getpolicydocumentstatementprincipal">Get<wbr>Policy<wbr>Document<wbr>Statement<wbr>Principal[]</a></span>
     </dt>
     <dd>{{% md %}}A nested configuration block (described below)
 specifying a resource (or resource pattern) to which this statement applies.
@@ -1050,7 +1050,7 @@ specifying a resource (or resource pattern) to which this statement applies.
             title="Optional">
         <span>resources</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}A list of resource ARNs that this statement applies
 to. This is required by AWS if used for an IAM policy.
@@ -1060,7 +1060,7 @@ to. This is required by AWS if used for an IAM policy.
             title="Optional">
         <span>sid</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}An ID for the policy statement.
 {{% /md %}}</dd>
@@ -1201,7 +1201,7 @@ to evaluate.
             title="Required">
         <span>Values</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The values to evaluate the condition against. If multiple
 values are provided, the condition matches if at least one of them applies.
@@ -1373,7 +1373,7 @@ the service name.
             title="Required">
         <span>Identifiers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of identifiers for principals. When `type`
 is "AWS", these are IAM user or role ARNs.  When `type` is "Service", these are AWS Service roles e.g. `lambda.amazonaws.com`.
@@ -1492,7 +1492,7 @@ is "AWS", these are IAM user or role ARNs.  When `type` is "Service", these are 
             title="Required">
         <span>Identifiers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}List of identifiers for principals. When `type`
 is "AWS", these are IAM user or role ARNs.  When `type` is "Service", these are AWS Service roles e.g. `lambda.amazonaws.com`.

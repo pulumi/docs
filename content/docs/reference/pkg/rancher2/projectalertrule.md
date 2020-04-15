@@ -14,7 +14,7 @@ block_external_search_index: true
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/rancher2/#ProjectAlertRule">ProjectAlertRule</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/rancher2/#ProjectAlertRuleArgs">ProjectAlertRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/rancher2/#ProjectAlertRule">ProjectAlertRule</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/rancher2/#ProjectAlertRuleArgs">ProjectAlertRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -22,11 +22,11 @@ block_external_search_index: true
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewProjectAlertRule<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/go/rancher2/?tab=doc#ProjectAlertRuleArgs">ProjectAlertRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/go/rancher2/?tab=doc#ProjectAlertRule">ProjectAlertRule</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewProjectAlertRule<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/go/rancher2/?tab=doc#ProjectAlertRuleArgs">ProjectAlertRuleArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/go/rancher2/?tab=doc#ProjectAlertRule">ProjectAlertRule</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2..ProjectAlertRule.html">ProjectAlertRule</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.ProjectAlertRuleArgs.html">ProjectAlertRuleArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.ProjectAlertRule.html">ProjectAlertRule</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.ProjectAlertRuleArgs.html">ProjectAlertRuleArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -118,15 +118,6 @@ block_external_search_index: true
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Annotations</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
-    </dt>
-    <dd>{{% md %}}The project alert rule annotations (map)
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Group<wbr>Id</span>
@@ -134,69 +125,6 @@ block_external_search_index: true
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project alert rule alert group ID (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Group<wbr>Interval<wbr>Seconds</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}The project alert rule group interval seconds. Default: `180` (int)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Group<wbr>Wait<wbr>Seconds</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}The project alert rule group wait seconds. Default: `180` (int)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Inherited</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}The project alert rule inherited. Default: `true` (bool)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Labels</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
-    </dt>
-    <dd>{{% md %}}The project alert rule labels (map)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Metric<wbr>Rule</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectalertrulemetricrule">Project<wbr>Alert<wbr>Rule<wbr>Metric<wbr>Rule<wbr>Args?</a></span>
-    </dt>
-    <dd>{{% md %}}The project alert rule metric rule. ConflictsWith: `"pod_rule", "workload_rule"`` (list Maxitems:1)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The project alert rule name (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Pod<wbr>Rule</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectalertrulepodrule">Project<wbr>Alert<wbr>Rule<wbr>Pod<wbr>Rule<wbr>Args?</a></span>
-    </dt>
-    <dd>{{% md %}}The project alert rule pod rule. ConflictsWith: `"metric_rule", "workload_rule"`` (list Maxitems:1)
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -210,9 +138,81 @@ block_external_search_index: true
 
     <dt class="property-optional"
             title="Optional">
+        <span>Annotations</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+    </dt>
+    <dd>{{% md %}}The project alert rule annotations (map)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Group<wbr>Interval<wbr>Seconds</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The project alert rule group interval seconds. Default: `180` (int)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Group<wbr>Wait<wbr>Seconds</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The project alert rule group wait seconds. Default: `180` (int)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Inherited</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}The project alert rule inherited. Default: `true` (bool)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Labels</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+    </dt>
+    <dd>{{% md %}}The project alert rule labels (map)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Metric<wbr>Rule</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#projectalertrulemetricrule">Project<wbr>Alert<wbr>Rule<wbr>Metric<wbr>Rule<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The project alert rule metric rule. ConflictsWith: `"pod_rule", "workload_rule"`` (list Maxitems:1)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The project alert rule name (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Pod<wbr>Rule</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#projectalertrulepodrule">Project<wbr>Alert<wbr>Rule<wbr>Pod<wbr>Rule<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The project alert rule pod rule. ConflictsWith: `"metric_rule", "workload_rule"`` (list Maxitems:1)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Repeat<wbr>Interval<wbr>Seconds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The project alert rule wait seconds. Default: `3600` (int)
 {{% /md %}}</dd>
@@ -221,7 +221,7 @@ block_external_search_index: true
             title="Optional">
         <span>Severity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project alert rule severity. Supported values : `"critical" | "info" | "warning"`. Default: `critical` (string)
 {{% /md %}}</dd>
@@ -230,7 +230,7 @@ block_external_search_index: true
             title="Optional">
         <span>Workload<wbr>Rule</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectalertruleworkloadrule">Project<wbr>Alert<wbr>Rule<wbr>Workload<wbr>Rule<wbr>Args?</a></span>
+        <span class="property-type"><a href="#projectalertruleworkloadrule">Project<wbr>Alert<wbr>Rule<wbr>Workload<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The project alert rule workload rule. ConflictsWith: `"metric_rule", "pod_rule"`` (list Maxitems:1)
 {{% /md %}}</dd>
@@ -242,15 +242,6 @@ block_external_search_index: true
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Annotations</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
-    </dt>
-    <dd>{{% md %}}The project alert rule annotations (map)
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Group<wbr>Id</span>
@@ -260,11 +251,29 @@ block_external_search_index: true
     <dd>{{% md %}}The project alert rule alert group ID (string)
 {{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>Project<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The project id where create project alert rule (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Annotations</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}The project alert rule annotations (map)
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Group<wbr>Interval<wbr>Seconds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The project alert rule group interval seconds. Default: `180` (int)
 {{% /md %}}</dd>
@@ -273,7 +282,7 @@ block_external_search_index: true
             title="Optional">
         <span>Group<wbr>Wait<wbr>Seconds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The project alert rule group wait seconds. Default: `180` (int)
 {{% /md %}}</dd>
@@ -282,7 +291,7 @@ block_external_search_index: true
             title="Optional">
         <span>Inherited</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The project alert rule inherited. Default: `true` (bool)
 {{% /md %}}</dd>
@@ -300,7 +309,7 @@ block_external_search_index: true
             title="Optional">
         <span>Metric<wbr>Rule</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectalertrulemetricrule">*Project<wbr>Alert<wbr>Rule<wbr>Metric<wbr>Rule</a></span>
+        <span class="property-type"><a href="#projectalertrulemetricrule">Project<wbr>Alert<wbr>Rule<wbr>Metric<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}The project alert rule metric rule. ConflictsWith: `"pod_rule", "workload_rule"`` (list Maxitems:1)
 {{% /md %}}</dd>
@@ -309,7 +318,7 @@ block_external_search_index: true
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project alert rule name (string)
 {{% /md %}}</dd>
@@ -318,25 +327,16 @@ block_external_search_index: true
             title="Optional">
         <span>Pod<wbr>Rule</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectalertrulepodrule">*Project<wbr>Alert<wbr>Rule<wbr>Pod<wbr>Rule</a></span>
+        <span class="property-type"><a href="#projectalertrulepodrule">Project<wbr>Alert<wbr>Rule<wbr>Pod<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}The project alert rule pod rule. ConflictsWith: `"metric_rule", "workload_rule"`` (list Maxitems:1)
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Project<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The project id where create project alert rule (string)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Repeat<wbr>Interval<wbr>Seconds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The project alert rule wait seconds. Default: `3600` (int)
 {{% /md %}}</dd>
@@ -345,7 +345,7 @@ block_external_search_index: true
             title="Optional">
         <span>Severity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project alert rule severity. Supported values : `"critical" | "info" | "warning"`. Default: `critical` (string)
 {{% /md %}}</dd>
@@ -354,7 +354,7 @@ block_external_search_index: true
             title="Optional">
         <span>Workload<wbr>Rule</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectalertruleworkloadrule">*Project<wbr>Alert<wbr>Rule<wbr>Workload<wbr>Rule</a></span>
+        <span class="property-type"><a href="#projectalertruleworkloadrule">Project<wbr>Alert<wbr>Rule<wbr>Workload<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}The project alert rule workload rule. ConflictsWith: `"metric_rule", "pod_rule"`` (list Maxitems:1)
 {{% /md %}}</dd>
@@ -366,15 +366,6 @@ block_external_search_index: true
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>annotations</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
-    </dt>
-    <dd>{{% md %}}The project alert rule annotations (map)
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>group<wbr>Id</span>
@@ -382,69 +373,6 @@ block_external_search_index: true
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project alert rule alert group ID (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>group<wbr>Interval<wbr>Seconds</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}The project alert rule group interval seconds. Default: `180` (int)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>group<wbr>Wait<wbr>Seconds</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}The project alert rule group wait seconds. Default: `180` (int)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>inherited</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}The project alert rule inherited. Default: `true` (bool)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>labels</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
-    </dt>
-    <dd>{{% md %}}The project alert rule labels (map)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>metric<wbr>Rule</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectalertrulemetricrule">Project<wbr>Alert<wbr>Rule<wbr>Metric<wbr>Rule?</a></span>
-    </dt>
-    <dd>{{% md %}}The project alert rule metric rule. ConflictsWith: `"pod_rule", "workload_rule"`` (list Maxitems:1)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The project alert rule name (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>pod<wbr>Rule</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectalertrulepodrule">Project<wbr>Alert<wbr>Rule<wbr>Pod<wbr>Rule?</a></span>
-    </dt>
-    <dd>{{% md %}}The project alert rule pod rule. ConflictsWith: `"metric_rule", "workload_rule"`` (list Maxitems:1)
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -458,9 +386,81 @@ block_external_search_index: true
 
     <dt class="property-optional"
             title="Optional">
+        <span>annotations</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}</span>
+    </dt>
+    <dd>{{% md %}}The project alert rule annotations (map)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>group<wbr>Interval<wbr>Seconds</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The project alert rule group interval seconds. Default: `180` (int)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>group<wbr>Wait<wbr>Seconds</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The project alert rule group wait seconds. Default: `180` (int)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>inherited</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}The project alert rule inherited. Default: `true` (bool)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>labels</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}</span>
+    </dt>
+    <dd>{{% md %}}The project alert rule labels (map)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>metric<wbr>Rule</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#projectalertrulemetricrule">Project<wbr>Alert<wbr>Rule<wbr>Metric<wbr>Rule</a></span>
+    </dt>
+    <dd>{{% md %}}The project alert rule metric rule. ConflictsWith: `"pod_rule", "workload_rule"`` (list Maxitems:1)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The project alert rule name (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>pod<wbr>Rule</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#projectalertrulepodrule">Project<wbr>Alert<wbr>Rule<wbr>Pod<wbr>Rule</a></span>
+    </dt>
+    <dd>{{% md %}}The project alert rule pod rule. ConflictsWith: `"metric_rule", "workload_rule"`` (list Maxitems:1)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>repeat<wbr>Interval<wbr>Seconds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The project alert rule wait seconds. Default: `3600` (int)
 {{% /md %}}</dd>
@@ -469,7 +469,7 @@ block_external_search_index: true
             title="Optional">
         <span>severity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project alert rule severity. Supported values : `"critical" | "info" | "warning"`. Default: `critical` (string)
 {{% /md %}}</dd>
@@ -478,7 +478,7 @@ block_external_search_index: true
             title="Optional">
         <span>workload<wbr>Rule</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectalertruleworkloadrule">Project<wbr>Alert<wbr>Rule<wbr>Workload<wbr>Rule?</a></span>
+        <span class="property-type"><a href="#projectalertruleworkloadrule">Project<wbr>Alert<wbr>Rule<wbr>Workload<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}The project alert rule workload rule. ConflictsWith: `"metric_rule", "pod_rule"`` (list Maxitems:1)
 {{% /md %}}</dd>
@@ -490,15 +490,6 @@ block_external_search_index: true
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>annotations</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
-    </dt>
-    <dd>{{% md %}}The project alert rule annotations (map)
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>group_<wbr>id</span>
@@ -506,6 +497,24 @@ block_external_search_index: true
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The project alert rule alert group ID (string)
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>project_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The project id where create project alert rule (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>annotations</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dict[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}The project alert rule annotations (map)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -571,15 +580,6 @@ block_external_search_index: true
     <dd>{{% md %}}The project alert rule pod rule. ConflictsWith: `"metric_rule", "workload_rule"`` (list Maxitems:1)
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>project_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The project id where create project alert rule (string)
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>repeat_<wbr>interval_<wbr>seconds</span>
@@ -611,512 +611,6 @@ block_external_search_index: true
 {{% /choosable %}}
 
 
-
-
-
-
-
-## ProjectAlertRule Output Properties
-
-The following output properties are available:
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Annotations</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object></span>
-    </dt>
-    <dd>{{% md %}}The project alert rule annotations (map)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Group<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The project alert rule alert group ID (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Group<wbr>Interval<wbr>Seconds</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}The project alert rule group interval seconds. Default: `180` (int)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Group<wbr>Wait<wbr>Seconds</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}The project alert rule group wait seconds. Default: `180` (int)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Inherited</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}The project alert rule inherited. Default: `true` (bool)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Labels</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object></span>
-    </dt>
-    <dd>{{% md %}}The project alert rule labels (map)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Metric<wbr>Rule</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectalertrulemetricrule">Project<wbr>Alert<wbr>Rule<wbr>Metric<wbr>Rule?</a></span>
-    </dt>
-    <dd>{{% md %}}The project alert rule metric rule. ConflictsWith: `"pod_rule", "workload_rule"`` (list Maxitems:1)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The project alert rule name (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Pod<wbr>Rule</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectalertrulepodrule">Project<wbr>Alert<wbr>Rule<wbr>Pod<wbr>Rule?</a></span>
-    </dt>
-    <dd>{{% md %}}The project alert rule pod rule. ConflictsWith: `"metric_rule", "workload_rule"`` (list Maxitems:1)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Project<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The project id where create project alert rule (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Repeat<wbr>Interval<wbr>Seconds</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}The project alert rule wait seconds. Default: `3600` (int)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Severity</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The project alert rule severity. Supported values : `"critical" | "info" | "warning"`. Default: `critical` (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Workload<wbr>Rule</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectalertruleworkloadrule">Project<wbr>Alert<wbr>Rule<wbr>Workload<wbr>Rule?</a></span>
-    </dt>
-    <dd>{{% md %}}The project alert rule workload rule. ConflictsWith: `"metric_rule", "pod_rule"`` (list Maxitems:1)
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Annotations</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
-    </dt>
-    <dd>{{% md %}}The project alert rule annotations (map)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Group<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The project alert rule alert group ID (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Group<wbr>Interval<wbr>Seconds</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}The project alert rule group interval seconds. Default: `180` (int)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Group<wbr>Wait<wbr>Seconds</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}The project alert rule group wait seconds. Default: `180` (int)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Inherited</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}The project alert rule inherited. Default: `true` (bool)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Labels</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
-    </dt>
-    <dd>{{% md %}}The project alert rule labels (map)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Metric<wbr>Rule</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectalertrulemetricrule">*Project<wbr>Alert<wbr>Rule<wbr>Metric<wbr>Rule</a></span>
-    </dt>
-    <dd>{{% md %}}The project alert rule metric rule. ConflictsWith: `"pod_rule", "workload_rule"`` (list Maxitems:1)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The project alert rule name (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Pod<wbr>Rule</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectalertrulepodrule">*Project<wbr>Alert<wbr>Rule<wbr>Pod<wbr>Rule</a></span>
-    </dt>
-    <dd>{{% md %}}The project alert rule pod rule. ConflictsWith: `"metric_rule", "workload_rule"`` (list Maxitems:1)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Project<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The project id where create project alert rule (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Repeat<wbr>Interval<wbr>Seconds</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}The project alert rule wait seconds. Default: `3600` (int)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Severity</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The project alert rule severity. Supported values : `"critical" | "info" | "warning"`. Default: `critical` (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Workload<wbr>Rule</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectalertruleworkloadrule">*Project<wbr>Alert<wbr>Rule<wbr>Workload<wbr>Rule</a></span>
-    </dt>
-    <dd>{{% md %}}The project alert rule workload rule. ConflictsWith: `"metric_rule", "pod_rule"`` (list Maxitems:1)
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>annotations</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
-    </dt>
-    <dd>{{% md %}}The project alert rule annotations (map)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>group<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The project alert rule alert group ID (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>group<wbr>Interval<wbr>Seconds</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}The project alert rule group interval seconds. Default: `180` (int)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>group<wbr>Wait<wbr>Seconds</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}The project alert rule group wait seconds. Default: `180` (int)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>inherited</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}The project alert rule inherited. Default: `true` (bool)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>labels</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}</span>
-    </dt>
-    <dd>{{% md %}}The project alert rule labels (map)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>metric<wbr>Rule</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectalertrulemetricrule">Project<wbr>Alert<wbr>Rule<wbr>Metric<wbr>Rule?</a></span>
-    </dt>
-    <dd>{{% md %}}The project alert rule metric rule. ConflictsWith: `"pod_rule", "workload_rule"`` (list Maxitems:1)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The project alert rule name (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>pod<wbr>Rule</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectalertrulepodrule">Project<wbr>Alert<wbr>Rule<wbr>Pod<wbr>Rule?</a></span>
-    </dt>
-    <dd>{{% md %}}The project alert rule pod rule. ConflictsWith: `"metric_rule", "workload_rule"`` (list Maxitems:1)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>project<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The project id where create project alert rule (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>repeat<wbr>Interval<wbr>Seconds</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}The project alert rule wait seconds. Default: `3600` (int)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>severity</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The project alert rule severity. Supported values : `"critical" | "info" | "warning"`. Default: `critical` (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>workload<wbr>Rule</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectalertruleworkloadrule">Project<wbr>Alert<wbr>Rule<wbr>Workload<wbr>Rule?</a></span>
-    </dt>
-    <dd>{{% md %}}The project alert rule workload rule. ConflictsWith: `"metric_rule", "pod_rule"`` (list Maxitems:1)
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>annotations</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
-    </dt>
-    <dd>{{% md %}}The project alert rule annotations (map)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>group_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The project alert rule alert group ID (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>group_<wbr>interval_<wbr>seconds</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The project alert rule group interval seconds. Default: `180` (int)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>group_<wbr>wait_<wbr>seconds</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The project alert rule group wait seconds. Default: `180` (int)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>inherited</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}The project alert rule inherited. Default: `true` (bool)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>labels</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
-    </dt>
-    <dd>{{% md %}}The project alert rule labels (map)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>metric_<wbr>rule</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectalertrulemetricrule">Dict[Project<wbr>Alert<wbr>Rule<wbr>Metric<wbr>Rule]</a></span>
-    </dt>
-    <dd>{{% md %}}The project alert rule metric rule. ConflictsWith: `"pod_rule", "workload_rule"`` (list Maxitems:1)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The project alert rule name (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>pod_<wbr>rule</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectalertrulepodrule">Dict[Project<wbr>Alert<wbr>Rule<wbr>Pod<wbr>Rule]</a></span>
-    </dt>
-    <dd>{{% md %}}The project alert rule pod rule. ConflictsWith: `"metric_rule", "workload_rule"`` (list Maxitems:1)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>project_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The project id where create project alert rule (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>repeat_<wbr>interval_<wbr>seconds</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The project alert rule wait seconds. Default: `3600` (int)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>severity</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The project alert rule severity. Supported values : `"critical" | "info" | "warning"`. Default: `critical` (string)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>workload_<wbr>rule</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectalertruleworkloadrule">Dict[Project<wbr>Alert<wbr>Rule<wbr>Workload<wbr>Rule]</a></span>
-    </dt>
-    <dd>{{% md %}}The project alert rule workload rule. ConflictsWith: `"metric_rule", "pod_rule"`` (list Maxitems:1)
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
 
 
 
@@ -1144,7 +638,7 @@ Get an existing ProjectAlertRule resource's state with the given name, ID, and o
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2..ProjectAlertRule.html">ProjectAlertRule</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2..ProjectAlertRuleState.html">ProjectAlertRuleState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2.ProjectAlertRule.html">ProjectAlertRule</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Rancher2/Pulumi.Rancher2..ProjectAlertRuleState.html">ProjectAlertRuleState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1254,7 +748,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Annotations</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}The project alert rule annotations (map)
 {{% /md %}}</dd>
@@ -1263,7 +757,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Group<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project alert rule alert group ID (string)
 {{% /md %}}</dd>
@@ -1272,7 +766,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Group<wbr>Interval<wbr>Seconds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The project alert rule group interval seconds. Default: `180` (int)
 {{% /md %}}</dd>
@@ -1281,7 +775,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Group<wbr>Wait<wbr>Seconds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The project alert rule group wait seconds. Default: `180` (int)
 {{% /md %}}</dd>
@@ -1290,7 +784,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Inherited</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The project alert rule inherited. Default: `true` (bool)
 {{% /md %}}</dd>
@@ -1299,7 +793,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Labels</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}The project alert rule labels (map)
 {{% /md %}}</dd>
@@ -1308,7 +802,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Metric<wbr>Rule</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectalertrulemetricrule">Project<wbr>Alert<wbr>Rule<wbr>Metric<wbr>Rule<wbr>Args?</a></span>
+        <span class="property-type"><a href="#projectalertrulemetricrule">Project<wbr>Alert<wbr>Rule<wbr>Metric<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The project alert rule metric rule. ConflictsWith: `"pod_rule", "workload_rule"`` (list Maxitems:1)
 {{% /md %}}</dd>
@@ -1317,7 +811,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project alert rule name (string)
 {{% /md %}}</dd>
@@ -1326,7 +820,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Pod<wbr>Rule</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectalertrulepodrule">Project<wbr>Alert<wbr>Rule<wbr>Pod<wbr>Rule<wbr>Args?</a></span>
+        <span class="property-type"><a href="#projectalertrulepodrule">Project<wbr>Alert<wbr>Rule<wbr>Pod<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The project alert rule pod rule. ConflictsWith: `"metric_rule", "workload_rule"`` (list Maxitems:1)
 {{% /md %}}</dd>
@@ -1335,7 +829,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Project<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project id where create project alert rule (string)
 {{% /md %}}</dd>
@@ -1344,7 +838,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Repeat<wbr>Interval<wbr>Seconds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The project alert rule wait seconds. Default: `3600` (int)
 {{% /md %}}</dd>
@@ -1353,7 +847,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Severity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project alert rule severity. Supported values : `"critical" | "info" | "warning"`. Default: `critical` (string)
 {{% /md %}}</dd>
@@ -1362,7 +856,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Workload<wbr>Rule</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectalertruleworkloadrule">Project<wbr>Alert<wbr>Rule<wbr>Workload<wbr>Rule<wbr>Args?</a></span>
+        <span class="property-type"><a href="#projectalertruleworkloadrule">Project<wbr>Alert<wbr>Rule<wbr>Workload<wbr>Rule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The project alert rule workload rule. ConflictsWith: `"metric_rule", "pod_rule"`` (list Maxitems:1)
 {{% /md %}}</dd>
@@ -1387,7 +881,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Group<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project alert rule alert group ID (string)
 {{% /md %}}</dd>
@@ -1396,7 +890,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Group<wbr>Interval<wbr>Seconds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The project alert rule group interval seconds. Default: `180` (int)
 {{% /md %}}</dd>
@@ -1405,7 +899,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Group<wbr>Wait<wbr>Seconds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The project alert rule group wait seconds. Default: `180` (int)
 {{% /md %}}</dd>
@@ -1414,7 +908,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Inherited</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The project alert rule inherited. Default: `true` (bool)
 {{% /md %}}</dd>
@@ -1432,7 +926,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Metric<wbr>Rule</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectalertrulemetricrule">*Project<wbr>Alert<wbr>Rule<wbr>Metric<wbr>Rule</a></span>
+        <span class="property-type"><a href="#projectalertrulemetricrule">Project<wbr>Alert<wbr>Rule<wbr>Metric<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}The project alert rule metric rule. ConflictsWith: `"pod_rule", "workload_rule"`` (list Maxitems:1)
 {{% /md %}}</dd>
@@ -1441,7 +935,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project alert rule name (string)
 {{% /md %}}</dd>
@@ -1450,7 +944,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Pod<wbr>Rule</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectalertrulepodrule">*Project<wbr>Alert<wbr>Rule<wbr>Pod<wbr>Rule</a></span>
+        <span class="property-type"><a href="#projectalertrulepodrule">Project<wbr>Alert<wbr>Rule<wbr>Pod<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}The project alert rule pod rule. ConflictsWith: `"metric_rule", "workload_rule"`` (list Maxitems:1)
 {{% /md %}}</dd>
@@ -1459,7 +953,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Project<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project id where create project alert rule (string)
 {{% /md %}}</dd>
@@ -1468,7 +962,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Repeat<wbr>Interval<wbr>Seconds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The project alert rule wait seconds. Default: `3600` (int)
 {{% /md %}}</dd>
@@ -1477,7 +971,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Severity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project alert rule severity. Supported values : `"critical" | "info" | "warning"`. Default: `critical` (string)
 {{% /md %}}</dd>
@@ -1486,7 +980,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Workload<wbr>Rule</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectalertruleworkloadrule">*Project<wbr>Alert<wbr>Rule<wbr>Workload<wbr>Rule</a></span>
+        <span class="property-type"><a href="#projectalertruleworkloadrule">Project<wbr>Alert<wbr>Rule<wbr>Workload<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}The project alert rule workload rule. ConflictsWith: `"metric_rule", "pod_rule"`` (list Maxitems:1)
 {{% /md %}}</dd>
@@ -1502,7 +996,7 @@ The following state arguments are supported:
             title="Optional">
         <span>annotations</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}The project alert rule annotations (map)
 {{% /md %}}</dd>
@@ -1511,7 +1005,7 @@ The following state arguments are supported:
             title="Optional">
         <span>group<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project alert rule alert group ID (string)
 {{% /md %}}</dd>
@@ -1520,7 +1014,7 @@ The following state arguments are supported:
             title="Optional">
         <span>group<wbr>Interval<wbr>Seconds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The project alert rule group interval seconds. Default: `180` (int)
 {{% /md %}}</dd>
@@ -1529,7 +1023,7 @@ The following state arguments are supported:
             title="Optional">
         <span>group<wbr>Wait<wbr>Seconds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The project alert rule group wait seconds. Default: `180` (int)
 {{% /md %}}</dd>
@@ -1538,7 +1032,7 @@ The following state arguments are supported:
             title="Optional">
         <span>inherited</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}The project alert rule inherited. Default: `true` (bool)
 {{% /md %}}</dd>
@@ -1547,7 +1041,7 @@ The following state arguments are supported:
             title="Optional">
         <span>labels</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}The project alert rule labels (map)
 {{% /md %}}</dd>
@@ -1556,7 +1050,7 @@ The following state arguments are supported:
             title="Optional">
         <span>metric<wbr>Rule</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectalertrulemetricrule">Project<wbr>Alert<wbr>Rule<wbr>Metric<wbr>Rule?</a></span>
+        <span class="property-type"><a href="#projectalertrulemetricrule">Project<wbr>Alert<wbr>Rule<wbr>Metric<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}The project alert rule metric rule. ConflictsWith: `"pod_rule", "workload_rule"`` (list Maxitems:1)
 {{% /md %}}</dd>
@@ -1565,7 +1059,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project alert rule name (string)
 {{% /md %}}</dd>
@@ -1574,7 +1068,7 @@ The following state arguments are supported:
             title="Optional">
         <span>pod<wbr>Rule</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectalertrulepodrule">Project<wbr>Alert<wbr>Rule<wbr>Pod<wbr>Rule?</a></span>
+        <span class="property-type"><a href="#projectalertrulepodrule">Project<wbr>Alert<wbr>Rule<wbr>Pod<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}The project alert rule pod rule. ConflictsWith: `"metric_rule", "workload_rule"`` (list Maxitems:1)
 {{% /md %}}</dd>
@@ -1583,7 +1077,7 @@ The following state arguments are supported:
             title="Optional">
         <span>project<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project id where create project alert rule (string)
 {{% /md %}}</dd>
@@ -1592,7 +1086,7 @@ The following state arguments are supported:
             title="Optional">
         <span>repeat<wbr>Interval<wbr>Seconds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The project alert rule wait seconds. Default: `3600` (int)
 {{% /md %}}</dd>
@@ -1601,7 +1095,7 @@ The following state arguments are supported:
             title="Optional">
         <span>severity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The project alert rule severity. Supported values : `"critical" | "info" | "warning"`. Default: `critical` (string)
 {{% /md %}}</dd>
@@ -1610,7 +1104,7 @@ The following state arguments are supported:
             title="Optional">
         <span>workload<wbr>Rule</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#projectalertruleworkloadrule">Project<wbr>Alert<wbr>Rule<wbr>Workload<wbr>Rule?</a></span>
+        <span class="property-type"><a href="#projectalertruleworkloadrule">Project<wbr>Alert<wbr>Rule<wbr>Workload<wbr>Rule</a></span>
     </dt>
     <dd>{{% md %}}The project alert rule workload rule. ConflictsWith: `"metric_rule", "pod_rule"`` (list Maxitems:1)
 {{% /md %}}</dd>
@@ -1768,24 +1262,6 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Comparison</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Metric rule comparison. Supported values : `"equal" | "greater-or-equal" | "greater-than" | "less-or-equal" | "less-than" | "not-equal" | "has-value"`. Default: `equal`  (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Metric rule description (string)
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Duration</span>
@@ -1813,18 +1289,11 @@ The following state arguments are supported:
     <dd>{{% md %}}Metric rule threshold value (float64)
 {{% /md %}}</dd>
 
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span>Comparison</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Metric rule comparison. Supported values : `"equal" | "greater-or-equal" | "greater-than" | "less-or-equal" | "less-than" | "not-equal" | "has-value"`. Default: `equal`  (string)
 {{% /md %}}</dd>
@@ -1833,10 +1302,17 @@ The following state arguments are supported:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Metric rule description (string)
 {{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
@@ -1865,30 +1341,30 @@ The following state arguments are supported:
     <dd>{{% md %}}Metric rule threshold value (float64)
 {{% /md %}}</dd>
 
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
-        <span>comparison</span>
+        <span>Comparison</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Metric rule comparison. Supported values : `"equal" | "greater-or-equal" | "greater-than" | "less-or-equal" | "less-than" | "not-equal" | "has-value"`. Default: `equal`  (string)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Metric rule description (string)
 {{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
@@ -1917,18 +1393,11 @@ The following state arguments are supported:
     <dd>{{% md %}}Metric rule threshold value (float64)
 {{% /md %}}</dd>
 
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
     <dt class="property-optional"
             title="Optional">
         <span>comparison</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Metric rule comparison. Supported values : `"equal" | "greater-or-equal" | "greater-than" | "less-or-equal" | "less-than" | "not-equal" | "has-value"`. Default: `equal`  (string)
 {{% /md %}}</dd>
@@ -1937,10 +1406,17 @@ The following state arguments are supported:
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Metric rule description (string)
 {{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
@@ -1969,6 +1445,24 @@ The following state arguments are supported:
     <dd>{{% md %}}Metric rule threshold value (float64)
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>comparison</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Metric rule comparison. Supported values : `"equal" | "greater-or-equal" | "greater-than" | "less-or-equal" | "less-than" | "not-equal" | "has-value"`. Default: `equal`  (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Metric rule description (string)
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -1991,15 +1485,6 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Condition</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Pod rule condition. Supported values : `"notrunning" | "notscheduled" | "restarts"`. Default: `notrunning` (string)
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Pod<wbr>Id</span>
@@ -2011,9 +1496,18 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>Condition</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Pod rule condition. Supported values : `"notrunning" | "notscheduled" | "restarts"`. Default: `notrunning` (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Restart<wbr>Interval<wbr>Seconds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Pod rule restart interval seconds. Default: `300` (int)
 {{% /md %}}</dd>
@@ -2022,7 +1516,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Restart<wbr>Times</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Pod rule restart times. Default: `3`  (int)
 {{% /md %}}</dd>
@@ -2034,15 +1528,6 @@ The following state arguments are supported:
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Condition</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Pod rule condition. Supported values : `"notrunning" | "notscheduled" | "restarts"`. Default: `notrunning` (string)
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Pod<wbr>Id</span>
@@ -2054,9 +1539,18 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>Condition</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Pod rule condition. Supported values : `"notrunning" | "notscheduled" | "restarts"`. Default: `notrunning` (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Restart<wbr>Interval<wbr>Seconds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Pod rule restart interval seconds. Default: `300` (int)
 {{% /md %}}</dd>
@@ -2065,7 +1559,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Restart<wbr>Times</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Pod rule restart times. Default: `3`  (int)
 {{% /md %}}</dd>
@@ -2076,15 +1570,6 @@ The following state arguments are supported:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>condition</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Pod rule condition. Supported values : `"notrunning" | "notscheduled" | "restarts"`. Default: `notrunning` (string)
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -2097,9 +1582,18 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>condition</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Pod rule condition. Supported values : `"notrunning" | "notscheduled" | "restarts"`. Default: `notrunning` (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>restart<wbr>Interval<wbr>Seconds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Pod rule restart interval seconds. Default: `300` (int)
 {{% /md %}}</dd>
@@ -2108,7 +1602,7 @@ The following state arguments are supported:
             title="Optional">
         <span>restart<wbr>Times</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Pod rule restart times. Default: `3`  (int)
 {{% /md %}}</dd>
@@ -2120,15 +1614,6 @@ The following state arguments are supported:
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>condition</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Pod rule condition. Supported values : `"notrunning" | "notscheduled" | "restarts"`. Default: `notrunning` (string)
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>pod<wbr>Id</span>
@@ -2136,6 +1621,15 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Pod ID (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>condition</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Pod rule condition. Supported values : `"notrunning" | "notscheduled" | "restarts"`. Default: `notrunning` (string)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2182,7 +1676,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Available<wbr>Percentage</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Workload rule available percentage. Default: `70` (int)
 {{% /md %}}</dd>
@@ -2191,7 +1685,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Selector</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Workload rule selector (map)
 {{% /md %}}</dd>
@@ -2200,7 +1694,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Workload<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Workload ID (string)
 {{% /md %}}</dd>
@@ -2216,7 +1710,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Available<wbr>Percentage</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Workload rule available percentage. Default: `70` (int)
 {{% /md %}}</dd>
@@ -2234,7 +1728,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Workload<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Workload ID (string)
 {{% /md %}}</dd>
@@ -2250,7 +1744,7 @@ The following state arguments are supported:
             title="Optional">
         <span>available<wbr>Percentage</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Workload rule available percentage. Default: `70` (int)
 {{% /md %}}</dd>
@@ -2259,7 +1753,7 @@ The following state arguments are supported:
             title="Optional">
         <span>selector</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Workload rule selector (map)
 {{% /md %}}</dd>
@@ -2268,7 +1762,7 @@ The following state arguments are supported:
             title="Optional">
         <span>workload<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Workload ID (string)
 {{% /md %}}</dd>

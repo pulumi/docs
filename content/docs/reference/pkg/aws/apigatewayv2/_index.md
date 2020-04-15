@@ -11,6 +11,9 @@ block_external_search_index: true
 <h3>Resources</h3>
 <ul class="api">
     <li><a href="api" title="Api"><span class="symbol resource"></span>Api</a></li>
+    <li><a href="authorizer" title="Authorizer"><span class="symbol resource"></span>Authorizer</a></li>
+    <li><a href="integration" title="Integration"><span class="symbol resource"></span>Integration</a></li>
+    <li><a href="model" title="Model"><span class="symbol resource"></span>Model</a></li>
 </ul>
 
 <h3>Package Details</h3>

@@ -41,13 +41,13 @@ const share1 = pulumi.output(openstack.sharedfilesystem.getShare({
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupShare<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/sharedfilesystem?tab=doc#LookupShareArgs">LookupShareArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/sharedfilesystem?tab=doc#LookupShareResult">LookupShareResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupShare<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/sharedfilesystem?tab=doc#LookupShareArgs">LookupShareArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/sharedfilesystem?tab=doc#LookupShareResult">LookupShareResult</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetShare </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.Openstack.Sharedfilesystem.GetShareResult.html">GetShareResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.Openstack.SharedFileSystem.GetShareArgs.html">GetShareArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.Openstack.Sharedfilesystem.GetShareResult.html">GetShareResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.OpenStack.SharedFileSystem.GetShareArgs.html">GetShareArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -64,7 +64,7 @@ The following arguments are supported:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The human-readable description for the share.
 {{% /md %}}</dd>
@@ -73,7 +73,7 @@ The following arguments are supported:
             title="Optional">
         <span>Export<wbr>Location<wbr>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The export location path of the share. Available
 since Manila API version 2.35.
@@ -83,7 +83,7 @@ since Manila API version 2.35.
             title="Optional">
         <span>Is<wbr>Public</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The level of visibility for the share.
 length.
@@ -93,7 +93,7 @@ length.
             title="Optional">
         <span>Metadata</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}One or more metadata key and value pairs as a dictionary of
 strings.
@@ -103,7 +103,7 @@ strings.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the share.
 {{% /md %}}</dd>
@@ -112,7 +112,7 @@ strings.
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 Shared File System client.
 {{% /md %}}</dd>
@@ -121,7 +121,7 @@ strings.
             title="Optional">
         <span>Share<wbr>Network<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The UUID of the share's share network.
 {{% /md %}}</dd>
@@ -130,7 +130,7 @@ strings.
             title="Optional">
         <span>Snapshot<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The UUID of the share's base snapshot.
 {{% /md %}}</dd>
@@ -139,7 +139,7 @@ strings.
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A share status filter. A valid value is `creating`,
 `error`, `available`, `deleting`, `error_deleting`, `manage_starting`,
@@ -159,7 +159,7 @@ strings.
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The human-readable description for the share.
 {{% /md %}}</dd>
@@ -168,7 +168,7 @@ strings.
             title="Optional">
         <span>Export<wbr>Location<wbr>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The export location path of the share. Available
 since Manila API version 2.35.
@@ -178,7 +178,7 @@ since Manila API version 2.35.
             title="Optional">
         <span>Is<wbr>Public</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}The level of visibility for the share.
 length.
@@ -198,7 +198,7 @@ strings.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the share.
 {{% /md %}}</dd>
@@ -207,7 +207,7 @@ strings.
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 Shared File System client.
 {{% /md %}}</dd>
@@ -216,7 +216,7 @@ strings.
             title="Optional">
         <span>Share<wbr>Network<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The UUID of the share's share network.
 {{% /md %}}</dd>
@@ -225,7 +225,7 @@ strings.
             title="Optional">
         <span>Snapshot<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The UUID of the share's base snapshot.
 {{% /md %}}</dd>
@@ -234,7 +234,7 @@ strings.
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A share status filter. A valid value is `creating`,
 `error`, `available`, `deleting`, `error_deleting`, `manage_starting`,
@@ -254,7 +254,7 @@ strings.
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The human-readable description for the share.
 {{% /md %}}</dd>
@@ -263,7 +263,7 @@ strings.
             title="Optional">
         <span>export<wbr>Location<wbr>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The export location path of the share. Available
 since Manila API version 2.35.
@@ -273,7 +273,7 @@ since Manila API version 2.35.
             title="Optional">
         <span>is<wbr>Public</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}The level of visibility for the share.
 length.
@@ -283,7 +283,7 @@ length.
             title="Optional">
         <span>metadata</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}One or more metadata key and value pairs as a dictionary of
 strings.
@@ -293,7 +293,7 @@ strings.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the share.
 {{% /md %}}</dd>
@@ -302,7 +302,7 @@ strings.
             title="Optional">
         <span>region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 Shared File System client.
 {{% /md %}}</dd>
@@ -311,7 +311,7 @@ strings.
             title="Optional">
         <span>share<wbr>Network<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The UUID of the share's share network.
 {{% /md %}}</dd>
@@ -320,7 +320,7 @@ strings.
             title="Optional">
         <span>snapshot<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The UUID of the share's base snapshot.
 {{% /md %}}</dd>
@@ -329,7 +329,7 @@ strings.
             title="Optional">
         <span>status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}A share status filter. A valid value is `creating`,
 `error`, `available`, `deleting`, `error_deleting`, `manage_starting`,
@@ -473,18 +473,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Export<wbr>Location<wbr>Path</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Export<wbr>Locations</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getshareexportlocation">List&lt;Get<wbr>Share<wbr>Export<wbr>Location&gt;</a></span>
+        <span class="property-type"><a href="#getshareexportlocation">List&lt;Pulumi.<wbr>Open<wbr>Stack.<wbr>Shared<wbr>File<wbr>System.<wbr>Outputs.<wbr>Get<wbr>Share<wbr>Export<wbr>Location&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of export locations. For example, when a share
 server has more than one network interface, it can have multiple export
@@ -513,7 +504,7 @@ locations.
             title="">
         <span>Metadata</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
 {{% /md %}}</dd>
@@ -590,6 +581,15 @@ locations.
     <dd>{{% md %}}See Argument Reference above.
 {{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span>Export<wbr>Location<wbr>Path</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}See Argument Reference above.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -611,15 +611,6 @@ locations.
         <span>Description</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Export<wbr>Location<wbr>Path</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
 {{% /md %}}</dd>
@@ -734,6 +725,15 @@ locations.
     <dd>{{% md %}}See Argument Reference above.
 {{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span>Export<wbr>Location<wbr>Path</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}See Argument Reference above.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -755,15 +755,6 @@ locations.
         <span>description</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>export<wbr>Location<wbr>Path</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
     </dt>
     <dd>{{% md %}}See Argument Reference above.
 {{% /md %}}</dd>
@@ -878,6 +869,15 @@ locations.
     <dd>{{% md %}}See Argument Reference above.
 {{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span>export<wbr>Location<wbr>Path</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}See Argument Reference above.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -897,15 +897,6 @@ locations.
     <dt class="property-"
             title="">
         <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}See Argument Reference above.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>export_<wbr>location_<wbr>path</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
@@ -1016,6 +1007,15 @@ locations.
     <dt class="property-"
             title="">
         <span>status</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}See Argument Reference above.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>export_<wbr>location_<wbr>path</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>

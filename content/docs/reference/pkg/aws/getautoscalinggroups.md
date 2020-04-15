@@ -64,7 +64,7 @@ const slackNotifications = new aws.autoscaling.Notification("slack_notifications
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupAutoscalingGroups<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/?tab=doc#GetAutoscalingGroupsArgs">GetAutoscalingGroupsArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/?tab=doc#LookupAutoscalingGroupsResult">LookupAutoscalingGroupsResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupAutoscalingGroups<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/?tab=doc#GetAutoscalingGroupsArgs">GetAutoscalingGroupsArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/?tab=doc#LookupAutoscalingGroupsResult">LookupAutoscalingGroupsResult</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -87,7 +87,7 @@ The following arguments are supported:
             title="Optional">
         <span>Filters</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getautoscalinggroupsfilter">List&lt;Get<wbr>Autoscaling<wbr>Groups<wbr>Filter<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#getautoscalinggroupsfilter">List&lt;Get<wbr>Autoscaling<wbr>Groups<wbr>Filter<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A filter used to scope the list e.g. by tags. See [related docs](http://docs.aws.amazon.com/AutoScaling/latest/APIReference/API_Filter.html).
 {{% /md %}}</dd>
@@ -119,7 +119,7 @@ The following arguments are supported:
             title="Optional">
         <span>filters</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getautoscalinggroupsfilter">Get<wbr>Autoscaling<wbr>Groups<wbr>Filter[]?</a></span>
+        <span class="property-type"><a href="#getautoscalinggroupsfilter">Get<wbr>Autoscaling<wbr>Groups<wbr>Filter[]</a></span>
     </dt>
     <dd>{{% md %}}A filter used to scope the list e.g. by tags. See [related docs](http://docs.aws.amazon.com/AutoScaling/latest/APIReference/API_Filter.html).
 {{% /md %}}</dd>
@@ -164,18 +164,10 @@ The following output properties are available:
             title="">
         <span>Arns</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of the Autoscaling Groups Arns in the current region.
 {{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Filters</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getautoscalinggroupsfilter">List&lt;Get<wbr>Autoscaling<wbr>Groups<wbr>Filter&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -190,10 +182,18 @@ The following output properties are available:
             title="">
         <span>Names</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}A list of the Autoscaling Groups in the current region.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Filters</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getautoscalinggroupsfilter">List&lt;Get<wbr>Autoscaling<wbr>Groups<wbr>Filter&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -213,14 +213,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Filters</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getautoscalinggroupsfilter">[]Get<wbr>Autoscaling<wbr>Groups<wbr>Filter</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -236,6 +228,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}A list of the Autoscaling Groups in the current region.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Filters</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getautoscalinggroupsfilter">[]Get<wbr>Autoscaling<wbr>Groups<wbr>Filter</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -255,14 +255,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>filters</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getautoscalinggroupsfilter">Get<wbr>Autoscaling<wbr>Groups<wbr>Filter[]?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>id</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -278,6 +270,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}A list of the Autoscaling Groups in the current region.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>filters</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getautoscalinggroupsfilter">Get<wbr>Autoscaling<wbr>Groups<wbr>Filter[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -297,14 +297,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>filters</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getautoscalinggroupsfilter">List[Get<wbr>Autoscaling<wbr>Groups<wbr>Filter]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>id</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -320,6 +312,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}A list of the Autoscaling Groups in the current region.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>filters</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getautoscalinggroupsfilter">List[Get<wbr>Autoscaling<wbr>Groups<wbr>Filter]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -361,7 +361,7 @@ The following output properties are available:
             title="Required">
         <span>Values</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The value of the filter.
 {{% /md %}}</dd>
