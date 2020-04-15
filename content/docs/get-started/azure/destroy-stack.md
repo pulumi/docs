@@ -26,7 +26,7 @@ You'll be prompted to make sure you really want to delete these resources. Pulum
 Previewing destroy (dev):
 
      Type                         Name                     Plan
- -   pulumi:pulumi:Stack          update-az-templates-dev  delete
+ -   pulumi:pulumi:Stack          quickstart-dev           delete
  -   ├─ azure:storage:Account     storage                  delete
  -   └─ azure:core:ResourceGroup  resourceGroup            delete
 
@@ -37,7 +37,7 @@ Do you want to perform this destroy? yes
 Destroying (dev):
 
      Type                         Name                     Status
- -   pulumi:pulumi:Stack          update-az-templates-dev  deleted
+ -   pulumi:pulumi:Stack          quickstart-dev           deleted
  -   ├─ azure:storage:Account     storage                  deleted
  -   └─ azure:core:ResourceGroup  resourceGroup            deleted
 

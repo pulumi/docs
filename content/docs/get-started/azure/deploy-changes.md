@@ -24,8 +24,8 @@ Pulumi computes the minimally disruptive change to achieve the desired state des
 Previewing update (dev):
 
      Type                      Name                     Plan       Info
-     pulumi:pulumi:Stack       update-az-templates-dev
- ~   └─ azure:storage:Account  storage                  update     [diff: ~enableHttpsTrafficOnly]
+     pulumi:pulumi:Stack       quickstart-dev
+ ~   └─ azure:storage:Account  storage                  update     [diff: ~tags]
 
 Resources:
     ~ 1 to update
@@ -46,8 +46,8 @@ Do you want to perform this update? yes
 Updating (dev):
 
      Type                      Name                     Status      Info
-     pulumi:pulumi:Stack       update-az-templates-dev
- ~   └─ azure:storage:Account  storage                  updated     [diff: ~enableHttpsTrafficOnly]
+     pulumi:pulumi:Stack       quickstart-dev
+ ~   └─ azure:storage:Account  storage                  updated     [diff: ~tags]
 
 Outputs:
     connectionString: "DefaultEndpointsProtocol=https;AccountName=storagefeda4143;AccountKey=...;EndpointSuffix=core.windows.net"
