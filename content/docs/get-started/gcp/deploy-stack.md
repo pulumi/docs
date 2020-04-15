@@ -43,15 +43,14 @@ Do you want to perform this update? yes
 Updating (dev):
 
      Type                   Name            Status
-     pulumi:pulumi:Stack    quickstart-dev
+     pulumi:pulumi:Stack    quickstart-dev  created
  +   └─ gcp:storage:Bucket  my-bucket       created
 
 Outputs:
   + bucketName: "gs://my-bucket-62f8bc7"
 
 Resources:
-    + 1 created
-    1 unchanged
+    + 2 created
 
 Duration: 3s
 ```
