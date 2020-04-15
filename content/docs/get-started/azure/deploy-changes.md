@@ -50,7 +50,7 @@ Updating (dev):
  ~   └─ azure:storage:Account  storage                  updated     [diff: ~tags]
 
 Outputs:
-    connectionString: "DefaultEndpointsProtocol=https;AccountName=storagefeda4143;AccountKey=...;EndpointSuffix=core.windows.net"
+    ~ connectionString: "DefaultEndpointsProtocol=https;AccountName=storagefeda4143;AccountKey=...;EndpointSuffix=core.windows.net" => output<string>
 
 Resources:
     ~ 1 updated
