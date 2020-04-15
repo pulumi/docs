@@ -210,7 +210,7 @@ richer visualization in the [Pulumi Console](https://app.pulumi.com):
 ![pulumi app graph](./pulumi-resource-visualization.png)
 
 If you want to learn more about components, see the
-[documentation]({{< relref "/docs/reference/pkg/nodejs/pulumi/pulumi" TODO find appropriate link >}}).
+[documentation]({{< relref "/docs/reference/pkg/nodejs/pulumi/pulumi" >}}).
 
 ## Package Everything!
 
