@@ -5,7 +5,7 @@ linktitle: Deploy the Stack
 meta_desc: This page provides an overview of how to deploy a Google Cloud (GCP) project as a Pulumi Stack.
 weight: 7
 menu:
-  get-started:
+  getstarted:
     parent: gcp
     identifier: gcp-deploy-stack
 
