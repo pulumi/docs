@@ -37,7 +37,7 @@ Do you want to perform this update?
   details
 ```
 
-Pulumi will update the storage account to enable the HTTPS-only enforcement. The resource group hasn't changed so it remains as-is.
+Pulumi will update the storage account to add the tag. The resource group hasn't changed so it remains as-is.
 
 Choosing `yes` will proceed with the update.
 
