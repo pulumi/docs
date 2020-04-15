@@ -34,7 +34,7 @@ generate_docs() {
     # Checkout the master branch of the provider repo, rather than
     # using the update_repos script. This is only temporary until
     # 2.0 is GA.
-    ./scripts/update_repos.sh "pulumi-${provider}"
+    # ./scripts/update_repos.sh "pulumi-${provider}"
 
     echo -e "\033[0;95m--- Updating repo pulumi/pulumi-${provider} ---\033[0m"
     pushd "../pulumi-${provider}"
