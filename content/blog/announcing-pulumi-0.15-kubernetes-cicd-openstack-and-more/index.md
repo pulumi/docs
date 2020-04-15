@@ -16,8 +16,8 @@ Today, we are excited to release [Pulumi 0.15](https://github.com/pulumi/pulumi
 it [available to download]({{< relref "/docs/get-started/install" >}}).  This release
 includes improvements across the entire Pulumi development experience.
 Pulumi supports more platforms
-([Kubernetes]({{< relref "/docs/get-started/kubernetes" >}}) and
-[OpenStack]({{< relref "/docs/intro/cloud-providers/openstack" >}})), is faster
+([Kubernetes]({{< relref "/docs/reference/pkg/kubernetes" >}}) and
+[OpenStack]({{< relref "/docs/reference/pkg/openstack" >}})), is faster
 (Parallelism, simpler (native
 TypeScript support), richer
 (serverless frameworks for Azure and
@@ -194,7 +194,7 @@ const instance = new os.compute.Instance("test", {
 exports.instanceIP = instance.accessIpV4;
 ```
 
-Check out the [Resource documentation]({{< relref "/docs/reference/pkg/openstack/" >}})
+Check out the [API documentation]({{< relref "/docs/reference/pkg/openstack/" >}})
 and the [pulumi-openstack](https://github.com/pulumi/pulumi-openstack)
 GitHub project for additional details. Huge thanks to Fraser for his
 work on this!
