@@ -24,10 +24,13 @@ Pulumi computes the minimally disruptive change to achieve the desired state des
 Previewing update (dev):
 
      Type                   Name            Plan       Info
-     pulumi:pulumi:Stack    gcp-bucket-dev
+     pulumi:pulumi:Stack    quickstart-dev
  +   ├─ gcp:kms:KeyRing     my-keyring      create
  +   ├─ gcp:kms:CryptoKey   my-cryptokey    create
  ~   └─ gcp:storage:Bucket  my-bucket       update     [diff: +encryption]
+
+Outputs:
+  ~ bucketName: "gs://my-bucket-62f8bc7" => output<string>
 
 Resources:
     + 2 to create
@@ -55,7 +58,7 @@ Updating (dev):
  ~   └─ gcp:storage:Bucket  my-bucket       updated     [diff: +encryption]
 
 Outputs:
-    bucketName: "gs://my-bucket-6cea6b4"
+    bucketName: "gs://my-bucket-62f8bc7"
 
 Resources:
     + 2 created
