@@ -15,6 +15,6 @@ By using infrastructure as code to provision and update your infrastructure, it'
 
 We regularly talk to developers who appreciate the simplicity of working with DigitalOcean. This new tutorial spins up an entire, fully functioning managed Kubernetes environment in just 6 minutes, for instance, giving you more time to focus on application logic and less on your infrastructure configuration. In addition to managing Kubernetes clusters and applications, you can also provision Droplets, LoadBalancers, and any other DigitalOcean resource type, using a similar infrastructure as code approach. For more information on doing so, read [Getting Started on DigitalOcean with Pulumi]({{< relref "/blog/getting-started-on-digitalocean-with-pulumi" >}}).
 
-Finally, for more detailed information on all of the DigitalOcean resources supported, please consult the reference material for all supported languages: [DigitalOcean]({{< relref "/docs/intro/cloud-providers/digitalocean/" >}}).
+Finally, for more detailed information on all of the DigitalOcean resources supported, please consult the reference material for all supported languages: [DigitalOcean]({{< relref "/docs/reference/pkg/digitalocean" >}}).
 
 Most importantly, [have fun getting up and running with DigitalOcean Kubernetes in just a few minutes](https://www.digitalocean.com/community/tutorials/how-to-manage-digitalocean-and-kubernetes-infrastructure-with-pulumi)!

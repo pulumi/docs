@@ -25,7 +25,7 @@ development and production!
 
 In addition to the number of cloud and infrastructure providers that
 Pulumi supports, Pulumi also supports
-[defining Docker resources]({{< relref "/docs/intro/cloud-providers/docker" >}})
+[defining Docker resources]({{< relref "/docs/reference/pkg/docker" >}})
 in code. Let's look at this code snippet of Pulumi TypeScript code:
 
     // This program encodes a complete application: a container running Redis Commander,
