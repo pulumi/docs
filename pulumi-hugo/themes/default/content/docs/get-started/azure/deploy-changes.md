@@ -24,12 +24,15 @@ Pulumi computes the minimally disruptive change to achieve the desired state des
 Previewing update (dev):
 
      Type                      Name                     Plan       Info
-     pulumi:pulumi:Stack       update-az-templates-dev
- ~   └─ azure:storage:Account  storage                  update     [diff: ~enableHttpsTrafficOnly]
+     pulumi:pulumi:Stack       quickstart-dev
+ ~   └─ azure:storage:Account  storage                  update     [diff: ~tags]
 
 Resources:
     ~ 1 to update
     2 unchanged
+
+Outputs:
+  ~ ConnectionString: "DefaultEndpointsProtocol=https;AccountName=storage1b3018e9;AccountKey=...;EndpointSuffix=core.windows.net" => output<string>
 
 Do you want to perform this update?
   yes
@@ -37,7 +40,7 @@ Do you want to perform this update?
   details
 ```
 
-Pulumi will update the storage account to enable the HTTPS-only enforcement. The resource group hasn't changed so it remains as-is.
+Pulumi will update the storage account to add the tag. The resource group hasn't changed so it remains as-is.
 
 Choosing `yes` will proceed with the update.
 
@@ -46,11 +49,11 @@ Do you want to perform this update? yes
 Updating (dev):
 
      Type                      Name                     Status      Info
-     pulumi:pulumi:Stack       update-az-templates-dev
- ~   └─ azure:storage:Account  storage                  updated     [diff: ~enableHttpsTrafficOnly]
+     pulumi:pulumi:Stack       quickstart-dev
+ ~   └─ azure:storage:Account  storage                  updated     [diff: ~tags]
 
 Outputs:
-    connectionString: "DefaultEndpointsProtocol=https;AccountName=storagefeda4143;AccountKey=...;EndpointSuffix=core.windows.net"
+     connectionString: "DefaultEndpointsProtocol=https;AccountName=storage1b3018e9;AccountKey=...;EndpointSuffix=core.windows.net"
 
 Resources:
     ~ 1 updated
