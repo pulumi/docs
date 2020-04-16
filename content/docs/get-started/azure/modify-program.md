@@ -34,7 +34,7 @@ const account = new azure.storage.Account("storage", {
     accountTier: "Standard",
     accountReplicationType: "LRS",
     tags: {
-        "Owner": "Example",
+        "Environment": "Dev",
     },
 });
 
@@ -58,7 +58,7 @@ const account = new azure.storage.Account("storage", {
     accountTier: "Standard",
     accountReplicationType: "LRS",
     tags: {
-        "Owner": "Example",
+        "Environment": "Dev",
     },
 });
 
@@ -81,7 +81,7 @@ account = storage.Account("storage",
     resource_group_name=resource_group.name,
     account_tier='Standard',
     account_replication_type='LRS',
-    tags={"Owner": "Example"})
+    tags={"Environment": "Dev"})
 
 # Export the connection string for the storage account
 pulumi.export('connection_string', account.primary_connection_string)
@@ -115,7 +115,7 @@ func main() {
 			AccountTier:            pulumi.String("Standard"),
 			AccountReplicationType: pulumi.String("LRS"),
 			Tags: pulumi.StringMap{
-				"Owner": pulumi.String("Example"),
+				"Environment": pulumi.String("Dev"),
 			},
 		})
 		if err != nil {
@@ -133,7 +133,6 @@ func main() {
 {{% choosable language csharp %}}
 
 ```csharp
-using System.Collections.Generic;
 using Pulumi;
 using Pulumi.Azure.Core;
 using Pulumi.Azure.Storage;
@@ -151,9 +150,9 @@ class MyStack : Stack
             ResourceGroupName = resourceGroup.Name,
             AccountReplicationType = "LRS",
             AccountTier = "Standard",
-            Tags = new Dictionary<string, string>
+            Tags =
             {
-                { "Owner", "Example" }
+                { "Environment", "Dev" }
             }
         });
 
