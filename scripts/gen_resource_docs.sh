@@ -63,6 +63,7 @@ generate_docs() {
 
     if [ $provider = "kubernetes" ]; then
         SCHEMA_FILE="../../../pulumi-kubernetes/sdk/schema/schema.json"
+        OVERLAY_SCHEMA_FILE="./overlays/kubernetes/overlays.json"
     else
         SCHEMA_FILE="../../../pulumi-${provider}/provider/cmd/pulumi-resource-${provider}/schema.json"
     fi
@@ -72,7 +73,7 @@ generate_docs() {
 
     echo "Running docs generator from schema for ${provider}..."
     pushd ${TOOL_RESDOCGEN}
-    go run . -logtostderr ${ABSOLUTEPACKDIR}/${provider} ${SCHEMA_FILE} || exit 3
+    go run . -logtostderr "${ABSOLUTEPACKDIR}/${provider}" "${SCHEMA_FILE}" "${OVERLAY_SCHEMA_FILE}" || exit 3
     popd
 
     echo "Done generating resource docs for ${provider}"
