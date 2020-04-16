@@ -42,7 +42,7 @@ The [aws.ec2.Vpc]({{< relref "/docs/reference/pkg/aws/ec2/vpc/" >}}) class provi
 AWS VPC API, and [aws.ec2]({{< relref "/docs/reference/pkg/aws/ec2" >}}) the entire AWS EC2 API. Using
 these packages, you can configure all aspects of AWS networks for your applications and infrastructure.
 
-The [awsx.ec2.Vpc]({{< relref "/docs/reference/pkg/aws/ec2/vpc/" >}}) class encapsulates a complete
+The [awsx.ec2.Vpc]({{< relref "/docs/reference/pkg/nodejs/pulumi/awsx/ec2#Vpc" >}}) class encapsulates a complete
 configuration of an AWS network, including the actual VPC itself, in addition to public and/or private subnets, route
 tables, and gateways, across multiple availability zones. It is designed to be easier to use, with reasonable defaults,
 and follows AWS's own best practices, with configurability for advanced scenarios. The two can be used together.
