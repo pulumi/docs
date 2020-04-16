@@ -7,7 +7,7 @@ meta_desc: "Join us Wed, Apr 14, 2020, 6:30 PM where Evan Boyle will go over mod
 featured: false
 
 # If the video is pre-recorded or live.
-pre_recorded: false
+pre_recorded: true
 
 # If the video is part of the PulumiTV series. Setting this value to true will list the video in the "PulumiTV" section.
 pulumi_tv: false
@@ -16,7 +16,7 @@ pulumi_tv: false
 preview_image: "/images/webinar/pulumi_tech_talk.jpg"
 
 # Webinars with unlisted as true will not be shown on the webinar list
-unlisted: true
+unlisted: false
 
 # Gated webinars will have a registration form and the user will need
 # to fill out the form before viewing.
@@ -27,11 +27,11 @@ type: webinars
 
 # External webinars will link to an external page instead of a webinar
 # landing/registration page.
-external: true
+external: false
 
 # The url slug for the webinar landing page. If this is an external
 # webinar, use the external URL as the value here.
-url_slug: "https://www.meetup.com/golang/events/269676725/"
+url_slug: "infrastructure-as-code-go"
 
 # The content of the hero section.
 hero:
@@ -44,10 +44,12 @@ hero:
 main:
     # Webinar title.
     title: "Modern Cloud Infrastructure in Go"
+    # URL for embedding a URL for ungated webinars.
+    youtube_url: "https://www.youtube.com/embed/s91qF5MLy14"
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
     sortable_date: 2020-04-14T18:00:00.000-07:00
     # Duration of the webinar.
-    duration: "2 hours"
+    duration: "39 minutes"
     # Datetime of the webinar.
     datetime: "TUE, APR 14, 2020 AT 6:00PM PDT"
     # Description of the webinar.
