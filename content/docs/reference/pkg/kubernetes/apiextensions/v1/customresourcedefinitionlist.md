@@ -22,7 +22,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewCustomResourceDefinitionList<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/go/kubernetes/apiextensions/v1?tab=doc#CustomResourceDefinitionListArgs">CustomResourceDefinitionListArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/go/kubernetes/apiextensions/v1?tab=doc#CustomResourceDefinitionList">CustomResourceDefinitionList</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewCustomResourceDefinitionList<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apiextensions/v1?tab=doc#CustomResourceDefinitionListArgs">CustomResourceDefinitionListArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apiextensions/v1?tab=doc#CustomResourceDefinitionList">CustomResourceDefinitionList</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -130,7 +130,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>Metadata</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listmeta">List<wbr>Meta<wbr>Args?</a></span>
+        <span class="property-type"><a href="#listmeta">List<wbr>Meta<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -176,7 +176,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>metadata</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#listmeta">List<wbr>Meta?</a></span>
+        <span class="property-type"><a href="#listmeta">List<wbr>Meta</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -227,7 +227,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/go/kubernetes/apiextensions/v1?tab=doc#CustomResourceColumnDefinitionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/go/kubernetes/apiextensions/v1?tab=doc#CustomResourceColumnDefinitionOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apiextensions/v1?tab=doc#CustomResourceColumnDefinitionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apiextensions/v1?tab=doc#CustomResourceColumnDefinitionOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -240,7 +240,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}description is a human readable description of this column.{{% /md %}}</dd>
 
@@ -248,7 +248,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>Format</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}format is an optional OpenAPI type definition for this column. The 'name' format is applied to the primary identifier column to assist in clients identifying column is the resource name. See https://github.com/OAI/OpenAPI-Specification/blob/master/versions/2.0.md#data-types for details.{{% /md %}}</dd>
 
@@ -256,7 +256,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>Json<wbr>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}jsonPath is a simple JSON path (i.e. with array notation) which is evaluated against each custom resource to produce the value for this column.{{% /md %}}</dd>
 
@@ -264,7 +264,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}name is a human readable name for the column.{{% /md %}}</dd>
 
@@ -272,7 +272,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>Priority</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}priority is an integer defining the relative importance of this column compared to others. Lower numbers are considered higher priority. Columns that may be omitted in limited space scenarios should be given a priority greater than 0.{{% /md %}}</dd>
 
@@ -280,7 +280,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}type is an OpenAPI type definition for this column. See https://github.com/OAI/OpenAPI-Specification/blob/master/versions/2.0.md#data-types for details.{{% /md %}}</dd>
 
@@ -295,7 +295,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}description is a human readable description of this column.{{% /md %}}</dd>
 
@@ -303,7 +303,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>Format</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}format is an optional OpenAPI type definition for this column. The 'name' format is applied to the primary identifier column to assist in clients identifying column is the resource name. See https://github.com/OAI/OpenAPI-Specification/blob/master/versions/2.0.md#data-types for details.{{% /md %}}</dd>
 
@@ -311,7 +311,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>Json<wbr>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}jsonPath is a simple JSON path (i.e. with array notation) which is evaluated against each custom resource to produce the value for this column.{{% /md %}}</dd>
 
@@ -319,7 +319,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}name is a human readable name for the column.{{% /md %}}</dd>
 
@@ -327,7 +327,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>Priority</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}priority is an integer defining the relative importance of this column compared to others. Lower numbers are considered higher priority. Columns that may be omitted in limited space scenarios should be given a priority greater than 0.{{% /md %}}</dd>
 
@@ -335,7 +335,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}type is an OpenAPI type definition for this column. See https://github.com/OAI/OpenAPI-Specification/blob/master/versions/2.0.md#data-types for details.{{% /md %}}</dd>
 
@@ -350,7 +350,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}description is a human readable description of this column.{{% /md %}}</dd>
 
@@ -358,7 +358,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>format</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}format is an optional OpenAPI type definition for this column. The 'name' format is applied to the primary identifier column to assist in clients identifying column is the resource name. See https://github.com/OAI/OpenAPI-Specification/blob/master/versions/2.0.md#data-types for details.{{% /md %}}</dd>
 
@@ -366,7 +366,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>json<wbr>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}jsonPath is a simple JSON path (i.e. with array notation) which is evaluated against each custom resource to produce the value for this column.{{% /md %}}</dd>
 
@@ -374,7 +374,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}name is a human readable name for the column.{{% /md %}}</dd>
 
@@ -382,7 +382,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>priority</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}priority is an integer defining the relative importance of this column compared to others. Lower numbers are considered higher priority. Columns that may be omitted in limited space scenarios should be given a priority greater than 0.{{% /md %}}</dd>
 
@@ -390,7 +390,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}type is an OpenAPI type definition for this column. See https://github.com/OAI/OpenAPI-Specification/blob/master/versions/2.0.md#data-types for details.{{% /md %}}</dd>
 
@@ -405,7 +405,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}description is a human readable description of this column.{{% /md %}}</dd>
 
@@ -413,7 +413,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>format</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}format is an optional OpenAPI type definition for this column. The 'name' format is applied to the primary identifier column to assist in clients identifying column is the resource name. See https://github.com/OAI/OpenAPI-Specification/blob/master/versions/2.0.md#data-types for details.{{% /md %}}</dd>
 
@@ -421,7 +421,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>json_<wbr>path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}jsonPath is a simple JSON path (i.e. with array notation) which is evaluated against each custom resource to produce the value for this column.{{% /md %}}</dd>
 
@@ -429,7 +429,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}name is a human readable name for the column.{{% /md %}}</dd>
 
@@ -437,7 +437,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>priority</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}priority is an integer defining the relative importance of this column compared to others. Lower numbers are considered higher priority. Columns that may be omitted in limited space scenarios should be given a priority greater than 0.{{% /md %}}</dd>
 
@@ -445,7 +445,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}type is an OpenAPI type definition for this column. See https://github.com/OAI/OpenAPI-Specification/blob/master/versions/2.0.md#data-types for details.{{% /md %}}</dd>
 
@@ -462,7 +462,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/go/kubernetes/apiextensions/v1?tab=doc#CustomResourceConversionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/go/kubernetes/apiextensions/v1?tab=doc#CustomResourceConversionOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apiextensions/v1?tab=doc#CustomResourceConversionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apiextensions/v1?tab=doc#CustomResourceConversionOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -475,7 +475,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>Strategy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}strategy specifies how custom resources are converted between versions. Allowed values are: - `None`: The converter only change the apiVersion and would not touch any other field in the custom resource. - `Webhook`: API Server will call to an external webhook to do the conversion. Additional information
   is needed for this option. This requires spec.preserveUnknownFields to be false, and spec.conversion.webhook to be set.{{% /md %}}</dd>
@@ -484,7 +484,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>Webhook</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webhookconversion">Webhook<wbr>Conversion<wbr>Args?</a></span>
+        <span class="property-type"><a href="#webhookconversion">Webhook<wbr>Conversion<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}webhook describes how to call the conversion webhook. Required when `strategy` is set to `Webhook`.{{% /md %}}</dd>
 
@@ -499,7 +499,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>Strategy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}strategy specifies how custom resources are converted between versions. Allowed values are: - `None`: The converter only change the apiVersion and would not touch any other field in the custom resource. - `Webhook`: API Server will call to an external webhook to do the conversion. Additional information
   is needed for this option. This requires spec.preserveUnknownFields to be false, and spec.conversion.webhook to be set.{{% /md %}}</dd>
@@ -508,7 +508,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>Webhook</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webhookconversion">*Webhook<wbr>Conversion</a></span>
+        <span class="property-type"><a href="#webhookconversion">Webhook<wbr>Conversion</a></span>
     </dt>
     <dd>{{% md %}}webhook describes how to call the conversion webhook. Required when `strategy` is set to `Webhook`.{{% /md %}}</dd>
 
@@ -523,7 +523,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>strategy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}strategy specifies how custom resources are converted between versions. Allowed values are: - `None`: The converter only change the apiVersion and would not touch any other field in the custom resource. - `Webhook`: API Server will call to an external webhook to do the conversion. Additional information
   is needed for this option. This requires spec.preserveUnknownFields to be false, and spec.conversion.webhook to be set.{{% /md %}}</dd>
@@ -532,7 +532,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>webhook</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webhookconversion">Webhook<wbr>Conversion?</a></span>
+        <span class="property-type"><a href="#webhookconversion">Webhook<wbr>Conversion</a></span>
     </dt>
     <dd>{{% md %}}webhook describes how to call the conversion webhook. Required when `strategy` is set to `Webhook`.{{% /md %}}</dd>
 
@@ -547,7 +547,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>strategy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}strategy specifies how custom resources are converted between versions. Allowed values are: - `None`: The converter only change the apiVersion and would not touch any other field in the custom resource. - `Webhook`: API Server will call to an external webhook to do the conversion. Additional information
   is needed for this option. This requires spec.preserveUnknownFields to be false, and spec.conversion.webhook to be set.{{% /md %}}</dd>
@@ -573,7 +573,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/go/kubernetes/apiextensions/v1?tab=doc#CustomResourceDefinitionTypeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/go/kubernetes/apiextensions/v1?tab=doc#CustomResourceDefinitionTypeOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apiextensions/v1?tab=doc#CustomResourceDefinitionTypeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apiextensions/v1?tab=doc#CustomResourceDefinitionTypeOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -586,7 +586,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>Metadata</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectmeta">Object<wbr>Meta<wbr>Args?</a></span>
+        <span class="property-type"><a href="#objectmeta">Object<wbr>Meta<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -594,7 +594,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>Spec</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customresourcedefinitionspec">Custom<wbr>Resource<wbr>Definition<wbr>Spec<wbr>Args?</a></span>
+        <span class="property-type"><a href="#customresourcedefinitionspec">Custom<wbr>Resource<wbr>Definition<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}spec describes how the user wants the resources to appear{{% /md %}}</dd>
 
@@ -602,7 +602,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customresourcedefinitionstatus">Custom<wbr>Resource<wbr>Definition<wbr>Status<wbr>Args?</a></span>
+        <span class="property-type"><a href="#customresourcedefinitionstatus">Custom<wbr>Resource<wbr>Definition<wbr>Status<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}status indicates the actual state of the CustomResourceDefinition{{% /md %}}</dd>
 
@@ -625,7 +625,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>Spec</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customresourcedefinitionspec">*Custom<wbr>Resource<wbr>Definition<wbr>Spec</a></span>
+        <span class="property-type"><a href="#customresourcedefinitionspec">Custom<wbr>Resource<wbr>Definition<wbr>Spec</a></span>
     </dt>
     <dd>{{% md %}}spec describes how the user wants the resources to appear{{% /md %}}</dd>
 
@@ -633,7 +633,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customresourcedefinitionstatus">*Custom<wbr>Resource<wbr>Definition<wbr>Status</a></span>
+        <span class="property-type"><a href="#customresourcedefinitionstatus">Custom<wbr>Resource<wbr>Definition<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}status indicates the actual state of the CustomResourceDefinition{{% /md %}}</dd>
 
@@ -648,7 +648,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>metadata</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#objectmeta">Object<wbr>Meta?</a></span>
+        <span class="property-type"><a href="#objectmeta">Object<wbr>Meta</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -656,7 +656,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>spec</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customresourcedefinitionspec">Custom<wbr>Resource<wbr>Definition<wbr>Spec?</a></span>
+        <span class="property-type"><a href="#customresourcedefinitionspec">Custom<wbr>Resource<wbr>Definition<wbr>Spec</a></span>
     </dt>
     <dd>{{% md %}}spec describes how the user wants the resources to appear{{% /md %}}</dd>
 
@@ -664,7 +664,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>status</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customresourcedefinitionstatus">Custom<wbr>Resource<wbr>Definition<wbr>Status?</a></span>
+        <span class="property-type"><a href="#customresourcedefinitionstatus">Custom<wbr>Resource<wbr>Definition<wbr>Status</a></span>
     </dt>
     <dd>{{% md %}}status indicates the actual state of the CustomResourceDefinition{{% /md %}}</dd>
 
@@ -712,7 +712,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/go/kubernetes/apiextensions/v1?tab=doc#CustomResourceDefinitionConditionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/go/kubernetes/apiextensions/v1?tab=doc#CustomResourceDefinitionConditionOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apiextensions/v1?tab=doc#CustomResourceDefinitionConditionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apiextensions/v1?tab=doc#CustomResourceDefinitionConditionOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -725,7 +725,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>Last<wbr>Transition<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}lastTransitionTime last time the condition transitioned from one status to another.{{% /md %}}</dd>
 
@@ -733,7 +733,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>Message</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}message is a human-readable message indicating details about last transition.{{% /md %}}</dd>
 
@@ -741,7 +741,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>Reason</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}reason is a unique, one-word, CamelCase reason for the condition's last transition.{{% /md %}}</dd>
 
@@ -749,7 +749,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}status is the status of the condition. Can be True, False, Unknown.{{% /md %}}</dd>
 
@@ -757,7 +757,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}type is the type of the condition. Types include Established, NamesAccepted and Terminating.{{% /md %}}</dd>
 
@@ -772,7 +772,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>Last<wbr>Transition<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}lastTransitionTime last time the condition transitioned from one status to another.{{% /md %}}</dd>
 
@@ -780,7 +780,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>Message</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}message is a human-readable message indicating details about last transition.{{% /md %}}</dd>
 
@@ -788,7 +788,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>Reason</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}reason is a unique, one-word, CamelCase reason for the condition's last transition.{{% /md %}}</dd>
 
@@ -796,7 +796,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}status is the status of the condition. Can be True, False, Unknown.{{% /md %}}</dd>
 
@@ -804,7 +804,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}type is the type of the condition. Types include Established, NamesAccepted and Terminating.{{% /md %}}</dd>
 
@@ -819,7 +819,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>last<wbr>Transition<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}lastTransitionTime last time the condition transitioned from one status to another.{{% /md %}}</dd>
 
@@ -827,7 +827,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>message</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}message is a human-readable message indicating details about last transition.{{% /md %}}</dd>
 
@@ -835,7 +835,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>reason</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}reason is a unique, one-word, CamelCase reason for the condition's last transition.{{% /md %}}</dd>
 
@@ -843,7 +843,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}status is the status of the condition. Can be True, False, Unknown.{{% /md %}}</dd>
 
@@ -851,7 +851,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}type is the type of the condition. Types include Established, NamesAccepted and Terminating.{{% /md %}}</dd>
 
@@ -866,7 +866,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>last_<wbr>transition_<wbr>time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}lastTransitionTime last time the condition transitioned from one status to another.{{% /md %}}</dd>
 
@@ -874,7 +874,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>message</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}message is a human-readable message indicating details about last transition.{{% /md %}}</dd>
 
@@ -882,7 +882,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>reason</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}reason is a unique, one-word, CamelCase reason for the condition's last transition.{{% /md %}}</dd>
 
@@ -890,7 +890,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}status is the status of the condition. Can be True, False, Unknown.{{% /md %}}</dd>
 
@@ -898,7 +898,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}type is the type of the condition. Types include Established, NamesAccepted and Terminating.{{% /md %}}</dd>
 
@@ -915,7 +915,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/go/kubernetes/apiextensions/v1?tab=doc#CustomResourceDefinitionNamesArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/go/kubernetes/apiextensions/v1?tab=doc#CustomResourceDefinitionNamesOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apiextensions/v1?tab=doc#CustomResourceDefinitionNamesArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apiextensions/v1?tab=doc#CustomResourceDefinitionNamesOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -928,7 +928,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>Categories</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}categories is a list of grouped resources this custom resource belongs to (e.g. 'all'). This is published in API discovery documents, and used by clients to support invocations like `kubectl get all`.{{% /md %}}</dd>
 
@@ -936,7 +936,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>List<wbr>Kind</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}listKind is the serialized kind of the list for this resource. Defaults to "`kind`List".{{% /md %}}</dd>
 
@@ -944,7 +944,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>Plural</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}plural is the plural name of the resource to serve. The custom resources are served under `/apis/<group>/<version>/.../<plural>`. Must match the name of the CustomResourceDefinition (in the form `<names.plural>.<group>`). Must be all lowercase.{{% /md %}}</dd>
 
@@ -952,7 +952,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>Short<wbr>Names</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}shortNames are short names for the resource, exposed in API discovery documents, and used by clients to support invocations like `kubectl get <shortname>`. It must be all lowercase.{{% /md %}}</dd>
 
@@ -960,7 +960,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>Singular</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}singular is the singular name of the resource. It must be all lowercase. Defaults to lowercased `kind`.{{% /md %}}</dd>
 
@@ -975,7 +975,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>Categories</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}categories is a list of grouped resources this custom resource belongs to (e.g. 'all'). This is published in API discovery documents, and used by clients to support invocations like `kubectl get all`.{{% /md %}}</dd>
 
@@ -983,7 +983,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>List<wbr>Kind</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}listKind is the serialized kind of the list for this resource. Defaults to "`kind`List".{{% /md %}}</dd>
 
@@ -991,7 +991,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>Plural</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}plural is the plural name of the resource to serve. The custom resources are served under `/apis/<group>/<version>/.../<plural>`. Must match the name of the CustomResourceDefinition (in the form `<names.plural>.<group>`). Must be all lowercase.{{% /md %}}</dd>
 
@@ -999,7 +999,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>Short<wbr>Names</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}shortNames are short names for the resource, exposed in API discovery documents, and used by clients to support invocations like `kubectl get <shortname>`. It must be all lowercase.{{% /md %}}</dd>
 
@@ -1007,7 +1007,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>Singular</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}singular is the singular name of the resource. It must be all lowercase. Defaults to lowercased `kind`.{{% /md %}}</dd>
 
@@ -1022,7 +1022,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>categories</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}categories is a list of grouped resources this custom resource belongs to (e.g. 'all'). This is published in API discovery documents, and used by clients to support invocations like `kubectl get all`.{{% /md %}}</dd>
 
@@ -1030,7 +1030,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>list<wbr>Kind</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}listKind is the serialized kind of the list for this resource. Defaults to "`kind`List".{{% /md %}}</dd>
 
@@ -1038,7 +1038,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>plural</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}plural is the plural name of the resource to serve. The custom resources are served under `/apis/<group>/<version>/.../<plural>`. Must match the name of the CustomResourceDefinition (in the form `<names.plural>.<group>`). Must be all lowercase.{{% /md %}}</dd>
 
@@ -1046,7 +1046,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>short<wbr>Names</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}shortNames are short names for the resource, exposed in API discovery documents, and used by clients to support invocations like `kubectl get <shortname>`. It must be all lowercase.{{% /md %}}</dd>
 
@@ -1054,7 +1054,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>singular</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}singular is the singular name of the resource. It must be all lowercase. Defaults to lowercased `kind`.{{% /md %}}</dd>
 
@@ -1069,7 +1069,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>categories</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}categories is a list of grouped resources this custom resource belongs to (e.g. 'all'). This is published in API discovery documents, and used by clients to support invocations like `kubectl get all`.{{% /md %}}</dd>
 
@@ -1077,7 +1077,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>list_<wbr>kind</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}listKind is the serialized kind of the list for this resource. Defaults to "`kind`List".{{% /md %}}</dd>
 
@@ -1085,7 +1085,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>plural</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}plural is the plural name of the resource to serve. The custom resources are served under `/apis/<group>/<version>/.../<plural>`. Must match the name of the CustomResourceDefinition (in the form `<names.plural>.<group>`). Must be all lowercase.{{% /md %}}</dd>
 
@@ -1093,7 +1093,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>short_<wbr>names</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}shortNames are short names for the resource, exposed in API discovery documents, and used by clients to support invocations like `kubectl get <shortname>`. It must be all lowercase.{{% /md %}}</dd>
 
@@ -1101,7 +1101,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>singular</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}singular is the singular name of the resource. It must be all lowercase. Defaults to lowercased `kind`.{{% /md %}}</dd>
 
@@ -1118,7 +1118,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/go/kubernetes/apiextensions/v1?tab=doc#CustomResourceDefinitionSpecArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/go/kubernetes/apiextensions/v1?tab=doc#CustomResourceDefinitionSpecOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apiextensions/v1?tab=doc#CustomResourceDefinitionSpecArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apiextensions/v1?tab=doc#CustomResourceDefinitionSpecOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1131,7 +1131,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>Conversion</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customresourceconversion">Custom<wbr>Resource<wbr>Conversion<wbr>Args?</a></span>
+        <span class="property-type"><a href="#customresourceconversion">Custom<wbr>Resource<wbr>Conversion<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}conversion defines conversion settings for the CRD.{{% /md %}}</dd>
 
@@ -1139,7 +1139,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>Group</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}group is the API group of the defined custom resource. The custom resources are served under `/apis/<group>/...`. Must match the name of the CustomResourceDefinition (in the form `<names.plural>.<group>`).{{% /md %}}</dd>
 
@@ -1147,7 +1147,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>Names</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customresourcedefinitionnames">Custom<wbr>Resource<wbr>Definition<wbr>Names<wbr>Args?</a></span>
+        <span class="property-type"><a href="#customresourcedefinitionnames">Custom<wbr>Resource<wbr>Definition<wbr>Names<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}names specify the resource and kind names for the custom resource.{{% /md %}}</dd>
 
@@ -1155,7 +1155,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>Preserve<wbr>Unknown<wbr>Fields</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}preserveUnknownFields indicates that object fields which are not specified in the OpenAPI schema should be preserved when persisting to storage. apiVersion, kind, metadata and known fields inside metadata are always preserved. This field is deprecated in favor of setting `x-preserve-unknown-fields` to true in `spec.versions[*].schema.openAPIV3Schema`. See https://kubernetes.io/docs/tasks/access-kubernetes-api/custom-resources/custom-resource-definitions/#pruning-versus-preserving-unknown-fields for details.{{% /md %}}</dd>
 
@@ -1163,7 +1163,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>Scope</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}scope indicates whether the defined custom resource is cluster- or namespace-scoped. Allowed values are `Cluster` and `Namespaced`.{{% /md %}}</dd>
 
@@ -1171,7 +1171,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>Versions</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customresourcedefinitionversion">List&lt;Custom<wbr>Resource<wbr>Definition<wbr>Version<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#customresourcedefinitionversion">List&lt;Custom<wbr>Resource<wbr>Definition<wbr>Version<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}versions is the list of all API versions of the defined custom resource. Version names are used to compute the order in which served versions are listed in API discovery. If the version string is "kube-like", it will sort above non "kube-like" version strings, which are ordered lexicographically. "Kube-like" versions start with a "v", then are followed by a number (the major version), then optionally the string "alpha" or "beta" and another number (the minor version). These are sorted first by GA > beta > alpha (where GA is a version with no suffix such as beta or alpha), and then by comparing major version, then minor version. An example sorted list of versions: v10, v2, v1, v11beta2, v10beta3, v3beta1, v12alpha1, v11alpha2, foo1, foo10.{{% /md %}}</dd>
 
@@ -1186,7 +1186,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>Conversion</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customresourceconversion">*Custom<wbr>Resource<wbr>Conversion</a></span>
+        <span class="property-type"><a href="#customresourceconversion">Custom<wbr>Resource<wbr>Conversion</a></span>
     </dt>
     <dd>{{% md %}}conversion defines conversion settings for the CRD.{{% /md %}}</dd>
 
@@ -1194,7 +1194,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>Group</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}group is the API group of the defined custom resource. The custom resources are served under `/apis/<group>/...`. Must match the name of the CustomResourceDefinition (in the form `<names.plural>.<group>`).{{% /md %}}</dd>
 
@@ -1202,7 +1202,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>Names</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customresourcedefinitionnames">*Custom<wbr>Resource<wbr>Definition<wbr>Names</a></span>
+        <span class="property-type"><a href="#customresourcedefinitionnames">Custom<wbr>Resource<wbr>Definition<wbr>Names</a></span>
     </dt>
     <dd>{{% md %}}names specify the resource and kind names for the custom resource.{{% /md %}}</dd>
 
@@ -1210,7 +1210,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>Preserve<wbr>Unknown<wbr>Fields</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}preserveUnknownFields indicates that object fields which are not specified in the OpenAPI schema should be preserved when persisting to storage. apiVersion, kind, metadata and known fields inside metadata are always preserved. This field is deprecated in favor of setting `x-preserve-unknown-fields` to true in `spec.versions[*].schema.openAPIV3Schema`. See https://kubernetes.io/docs/tasks/access-kubernetes-api/custom-resources/custom-resource-definitions/#pruning-versus-preserving-unknown-fields for details.{{% /md %}}</dd>
 
@@ -1218,7 +1218,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>Scope</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}scope indicates whether the defined custom resource is cluster- or namespace-scoped. Allowed values are `Cluster` and `Namespaced`.{{% /md %}}</dd>
 
@@ -1241,7 +1241,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>conversion</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customresourceconversion">Custom<wbr>Resource<wbr>Conversion?</a></span>
+        <span class="property-type"><a href="#customresourceconversion">Custom<wbr>Resource<wbr>Conversion</a></span>
     </dt>
     <dd>{{% md %}}conversion defines conversion settings for the CRD.{{% /md %}}</dd>
 
@@ -1249,7 +1249,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>group</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}group is the API group of the defined custom resource. The custom resources are served under `/apis/<group>/...`. Must match the name of the CustomResourceDefinition (in the form `<names.plural>.<group>`).{{% /md %}}</dd>
 
@@ -1257,7 +1257,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>names</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customresourcedefinitionnames">Custom<wbr>Resource<wbr>Definition<wbr>Names?</a></span>
+        <span class="property-type"><a href="#customresourcedefinitionnames">Custom<wbr>Resource<wbr>Definition<wbr>Names</a></span>
     </dt>
     <dd>{{% md %}}names specify the resource and kind names for the custom resource.{{% /md %}}</dd>
 
@@ -1265,7 +1265,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>preserve<wbr>Unknown<wbr>Fields</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}preserveUnknownFields indicates that object fields which are not specified in the OpenAPI schema should be preserved when persisting to storage. apiVersion, kind, metadata and known fields inside metadata are always preserved. This field is deprecated in favor of setting `x-preserve-unknown-fields` to true in `spec.versions[*].schema.openAPIV3Schema`. See https://kubernetes.io/docs/tasks/access-kubernetes-api/custom-resources/custom-resource-definitions/#pruning-versus-preserving-unknown-fields for details.{{% /md %}}</dd>
 
@@ -1273,7 +1273,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>scope</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}scope indicates whether the defined custom resource is cluster- or namespace-scoped. Allowed values are `Cluster` and `Namespaced`.{{% /md %}}</dd>
 
@@ -1281,7 +1281,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>versions</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customresourcedefinitionversion">Custom<wbr>Resource<wbr>Definition<wbr>Version[]?</a></span>
+        <span class="property-type"><a href="#customresourcedefinitionversion">Custom<wbr>Resource<wbr>Definition<wbr>Version[]</a></span>
     </dt>
     <dd>{{% md %}}versions is the list of all API versions of the defined custom resource. Version names are used to compute the order in which served versions are listed in API discovery. If the version string is "kube-like", it will sort above non "kube-like" version strings, which are ordered lexicographically. "Kube-like" versions start with a "v", then are followed by a number (the major version), then optionally the string "alpha" or "beta" and another number (the minor version). These are sorted first by GA > beta > alpha (where GA is a version with no suffix such as beta or alpha), and then by comparing major version, then minor version. An example sorted list of versions: v10, v2, v1, v11beta2, v10beta3, v3beta1, v12alpha1, v11alpha2, foo1, foo10.{{% /md %}}</dd>
 
@@ -1304,7 +1304,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>group</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}group is the API group of the defined custom resource. The custom resources are served under `/apis/<group>/...`. Must match the name of the CustomResourceDefinition (in the form `<names.plural>.<group>`).{{% /md %}}</dd>
 
@@ -1320,7 +1320,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>preserve_<wbr>unknown_<wbr>fields</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}preserveUnknownFields indicates that object fields which are not specified in the OpenAPI schema should be preserved when persisting to storage. apiVersion, kind, metadata and known fields inside metadata are always preserved. This field is deprecated in favor of setting `x-preserve-unknown-fields` to true in `spec.versions[*].schema.openAPIV3Schema`. See https://kubernetes.io/docs/tasks/access-kubernetes-api/custom-resources/custom-resource-definitions/#pruning-versus-preserving-unknown-fields for details.{{% /md %}}</dd>
 
@@ -1328,7 +1328,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>scope</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}scope indicates whether the defined custom resource is cluster- or namespace-scoped. Allowed values are `Cluster` and `Namespaced`.{{% /md %}}</dd>
 
@@ -1353,7 +1353,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/go/kubernetes/apiextensions/v1?tab=doc#CustomResourceDefinitionStatusArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/go/kubernetes/apiextensions/v1?tab=doc#CustomResourceDefinitionStatusOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apiextensions/v1?tab=doc#CustomResourceDefinitionStatusArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apiextensions/v1?tab=doc#CustomResourceDefinitionStatusOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1366,7 +1366,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>Accepted<wbr>Names</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customresourcedefinitionnames">Custom<wbr>Resource<wbr>Definition<wbr>Names<wbr>Args?</a></span>
+        <span class="property-type"><a href="#customresourcedefinitionnames">Custom<wbr>Resource<wbr>Definition<wbr>Names<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}acceptedNames are the names that are actually being used to serve discovery. They may be different than the names in spec.{{% /md %}}</dd>
 
@@ -1374,7 +1374,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>Conditions</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customresourcedefinitioncondition">List&lt;Custom<wbr>Resource<wbr>Definition<wbr>Condition<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#customresourcedefinitioncondition">List&lt;Custom<wbr>Resource<wbr>Definition<wbr>Condition<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}conditions indicate state for particular aspects of a CustomResourceDefinition{{% /md %}}</dd>
 
@@ -1382,7 +1382,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>Stored<wbr>Versions</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}storedVersions lists all versions of CustomResources that were ever persisted. Tracking these versions allows a migration path for stored versions in etcd. The field is mutable so a migration controller can finish a migration to another version (ensuring no old objects are left in storage), and then remove the rest of the versions from this list. Versions may not be removed from `spec.versions` while they exist in this list.{{% /md %}}</dd>
 
@@ -1397,7 +1397,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>Accepted<wbr>Names</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customresourcedefinitionnames">*Custom<wbr>Resource<wbr>Definition<wbr>Names</a></span>
+        <span class="property-type"><a href="#customresourcedefinitionnames">Custom<wbr>Resource<wbr>Definition<wbr>Names</a></span>
     </dt>
     <dd>{{% md %}}acceptedNames are the names that are actually being used to serve discovery. They may be different than the names in spec.{{% /md %}}</dd>
 
@@ -1413,7 +1413,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>Stored<wbr>Versions</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}storedVersions lists all versions of CustomResources that were ever persisted. Tracking these versions allows a migration path for stored versions in etcd. The field is mutable so a migration controller can finish a migration to another version (ensuring no old objects are left in storage), and then remove the rest of the versions from this list. Versions may not be removed from `spec.versions` while they exist in this list.{{% /md %}}</dd>
 
@@ -1428,7 +1428,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>accepted<wbr>Names</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customresourcedefinitionnames">Custom<wbr>Resource<wbr>Definition<wbr>Names?</a></span>
+        <span class="property-type"><a href="#customresourcedefinitionnames">Custom<wbr>Resource<wbr>Definition<wbr>Names</a></span>
     </dt>
     <dd>{{% md %}}acceptedNames are the names that are actually being used to serve discovery. They may be different than the names in spec.{{% /md %}}</dd>
 
@@ -1436,7 +1436,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>conditions</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customresourcedefinitioncondition">Custom<wbr>Resource<wbr>Definition<wbr>Condition[]?</a></span>
+        <span class="property-type"><a href="#customresourcedefinitioncondition">Custom<wbr>Resource<wbr>Definition<wbr>Condition[]</a></span>
     </dt>
     <dd>{{% md %}}conditions indicate state for particular aspects of a CustomResourceDefinition{{% /md %}}</dd>
 
@@ -1444,7 +1444,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>stored<wbr>Versions</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}storedVersions lists all versions of CustomResources that were ever persisted. Tracking these versions allows a migration path for stored versions in etcd. The field is mutable so a migration controller can finish a migration to another version (ensuring no old objects are left in storage), and then remove the rest of the versions from this list. Versions may not be removed from `spec.versions` while they exist in this list.{{% /md %}}</dd>
 
@@ -1475,7 +1475,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>stored_<wbr>versions</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}storedVersions lists all versions of CustomResources that were ever persisted. Tracking these versions allows a migration path for stored versions in etcd. The field is mutable so a migration controller can finish a migration to another version (ensuring no old objects are left in storage), and then remove the rest of the versions from this list. Versions may not be removed from `spec.versions` while they exist in this list.{{% /md %}}</dd>
 
@@ -1492,7 +1492,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/go/kubernetes/apiextensions/v1?tab=doc#CustomResourceDefinitionVersionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/go/kubernetes/apiextensions/v1?tab=doc#CustomResourceDefinitionVersionOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apiextensions/v1?tab=doc#CustomResourceDefinitionVersionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apiextensions/v1?tab=doc#CustomResourceDefinitionVersionOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1505,7 +1505,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>Additional<wbr>Printer<wbr>Columns</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customresourcecolumndefinition">List&lt;Custom<wbr>Resource<wbr>Column<wbr>Definition<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#customresourcecolumndefinition">List&lt;Custom<wbr>Resource<wbr>Column<wbr>Definition<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}additionalPrinterColumns specifies additional columns returned in Table output. See https://kubernetes.io/docs/reference/using-api/api-concepts/#receiving-resources-as-tables for details. If no columns are specified, a single column displaying the age of the custom resource is used.{{% /md %}}</dd>
 
@@ -1513,7 +1513,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}name is the version name, e.g. “v1”, “v2beta1”, etc. The custom resources are served under this version at `/apis/<group>/<version>/...` if `served` is true.{{% /md %}}</dd>
 
@@ -1521,7 +1521,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>Schema</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customresourcevalidation">Custom<wbr>Resource<wbr>Validation<wbr>Args?</a></span>
+        <span class="property-type"><a href="#customresourcevalidation">Custom<wbr>Resource<wbr>Validation<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}schema describes the schema used for validation, pruning, and defaulting of this version of the custom resource.{{% /md %}}</dd>
 
@@ -1529,7 +1529,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>Served</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}served is a flag enabling/disabling this version from being served via REST APIs{{% /md %}}</dd>
 
@@ -1537,7 +1537,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>Storage</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}storage indicates this version should be used when persisting custom resources to storage. There must be exactly one version with storage=true.{{% /md %}}</dd>
 
@@ -1545,7 +1545,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>Subresources</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customresourcesubresources">Custom<wbr>Resource<wbr>Subresources<wbr>Args?</a></span>
+        <span class="property-type"><a href="#customresourcesubresources">Custom<wbr>Resource<wbr>Subresources<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}subresources specify what subresources this version of the defined custom resource have.{{% /md %}}</dd>
 
@@ -1568,7 +1568,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}name is the version name, e.g. “v1”, “v2beta1”, etc. The custom resources are served under this version at `/apis/<group>/<version>/...` if `served` is true.{{% /md %}}</dd>
 
@@ -1576,7 +1576,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>Schema</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customresourcevalidation">*Custom<wbr>Resource<wbr>Validation</a></span>
+        <span class="property-type"><a href="#customresourcevalidation">Custom<wbr>Resource<wbr>Validation</a></span>
     </dt>
     <dd>{{% md %}}schema describes the schema used for validation, pruning, and defaulting of this version of the custom resource.{{% /md %}}</dd>
 
@@ -1584,7 +1584,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>Served</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}served is a flag enabling/disabling this version from being served via REST APIs{{% /md %}}</dd>
 
@@ -1592,7 +1592,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>Storage</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}storage indicates this version should be used when persisting custom resources to storage. There must be exactly one version with storage=true.{{% /md %}}</dd>
 
@@ -1600,7 +1600,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>Subresources</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customresourcesubresources">*Custom<wbr>Resource<wbr>Subresources</a></span>
+        <span class="property-type"><a href="#customresourcesubresources">Custom<wbr>Resource<wbr>Subresources</a></span>
     </dt>
     <dd>{{% md %}}subresources specify what subresources this version of the defined custom resource have.{{% /md %}}</dd>
 
@@ -1615,7 +1615,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>additional<wbr>Printer<wbr>Columns</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customresourcecolumndefinition">Custom<wbr>Resource<wbr>Column<wbr>Definition[]?</a></span>
+        <span class="property-type"><a href="#customresourcecolumndefinition">Custom<wbr>Resource<wbr>Column<wbr>Definition[]</a></span>
     </dt>
     <dd>{{% md %}}additionalPrinterColumns specifies additional columns returned in Table output. See https://kubernetes.io/docs/reference/using-api/api-concepts/#receiving-resources-as-tables for details. If no columns are specified, a single column displaying the age of the custom resource is used.{{% /md %}}</dd>
 
@@ -1623,7 +1623,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}name is the version name, e.g. “v1”, “v2beta1”, etc. The custom resources are served under this version at `/apis/<group>/<version>/...` if `served` is true.{{% /md %}}</dd>
 
@@ -1631,7 +1631,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>schema</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customresourcevalidation">Custom<wbr>Resource<wbr>Validation?</a></span>
+        <span class="property-type"><a href="#customresourcevalidation">Custom<wbr>Resource<wbr>Validation</a></span>
     </dt>
     <dd>{{% md %}}schema describes the schema used for validation, pruning, and defaulting of this version of the custom resource.{{% /md %}}</dd>
 
@@ -1639,7 +1639,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>served</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}served is a flag enabling/disabling this version from being served via REST APIs{{% /md %}}</dd>
 
@@ -1647,7 +1647,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>storage</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}storage indicates this version should be used when persisting custom resources to storage. There must be exactly one version with storage=true.{{% /md %}}</dd>
 
@@ -1655,7 +1655,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>subresources</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customresourcesubresources">Custom<wbr>Resource<wbr>Subresources?</a></span>
+        <span class="property-type"><a href="#customresourcesubresources">Custom<wbr>Resource<wbr>Subresources</a></span>
     </dt>
     <dd>{{% md %}}subresources specify what subresources this version of the defined custom resource have.{{% /md %}}</dd>
 
@@ -1678,7 +1678,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}name is the version name, e.g. “v1”, “v2beta1”, etc. The custom resources are served under this version at `/apis/<group>/<version>/...` if `served` is true.{{% /md %}}</dd>
 
@@ -1694,7 +1694,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>served</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}served is a flag enabling/disabling this version from being served via REST APIs{{% /md %}}</dd>
 
@@ -1702,7 +1702,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>storage</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}storage indicates this version should be used when persisting custom resources to storage. There must be exactly one version with storage=true.{{% /md %}}</dd>
 
@@ -1727,7 +1727,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/go/kubernetes/apiextensions/v1?tab=doc#CustomResourceSubresourceScaleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/go/kubernetes/apiextensions/v1?tab=doc#CustomResourceSubresourceScaleOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apiextensions/v1?tab=doc#CustomResourceSubresourceScaleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apiextensions/v1?tab=doc#CustomResourceSubresourceScaleOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1740,7 +1740,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>Label<wbr>Selector<wbr>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}labelSelectorPath defines the JSON path inside of a custom resource that corresponds to Scale `status.selector`. Only JSON paths without the array notation are allowed. Must be a JSON Path under `.status` or `.spec`. Must be set to work with HorizontalPodAutoscaler. The field pointed by this JSON path must be a string field (not a complex selector struct) which contains a serialized label selector in string form. More info: https://kubernetes.io/docs/tasks/access-kubernetes-api/custom-resources/custom-resource-definitions#scale-subresource If there is no value under the given path in the custom resource, the `status.selector` value in the `/scale` subresource will default to the empty string.{{% /md %}}</dd>
 
@@ -1748,7 +1748,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>Spec<wbr>Replicas<wbr>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}specReplicasPath defines the JSON path inside of a custom resource that corresponds to Scale `spec.replicas`. Only JSON paths without the array notation are allowed. Must be a JSON Path under `.spec`. If there is no value under the given path in the custom resource, the `/scale` subresource will return an error on GET.{{% /md %}}</dd>
 
@@ -1756,7 +1756,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>Status<wbr>Replicas<wbr>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}statusReplicasPath defines the JSON path inside of a custom resource that corresponds to Scale `status.replicas`. Only JSON paths without the array notation are allowed. Must be a JSON Path under `.status`. If there is no value under the given path in the custom resource, the `status.replicas` value in the `/scale` subresource will default to 0.{{% /md %}}</dd>
 
@@ -1771,7 +1771,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>Label<wbr>Selector<wbr>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}labelSelectorPath defines the JSON path inside of a custom resource that corresponds to Scale `status.selector`. Only JSON paths without the array notation are allowed. Must be a JSON Path under `.status` or `.spec`. Must be set to work with HorizontalPodAutoscaler. The field pointed by this JSON path must be a string field (not a complex selector struct) which contains a serialized label selector in string form. More info: https://kubernetes.io/docs/tasks/access-kubernetes-api/custom-resources/custom-resource-definitions#scale-subresource If there is no value under the given path in the custom resource, the `status.selector` value in the `/scale` subresource will default to the empty string.{{% /md %}}</dd>
 
@@ -1779,7 +1779,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>Spec<wbr>Replicas<wbr>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}specReplicasPath defines the JSON path inside of a custom resource that corresponds to Scale `spec.replicas`. Only JSON paths without the array notation are allowed. Must be a JSON Path under `.spec`. If there is no value under the given path in the custom resource, the `/scale` subresource will return an error on GET.{{% /md %}}</dd>
 
@@ -1787,7 +1787,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>Status<wbr>Replicas<wbr>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}statusReplicasPath defines the JSON path inside of a custom resource that corresponds to Scale `status.replicas`. Only JSON paths without the array notation are allowed. Must be a JSON Path under `.status`. If there is no value under the given path in the custom resource, the `status.replicas` value in the `/scale` subresource will default to 0.{{% /md %}}</dd>
 
@@ -1802,7 +1802,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>label<wbr>Selector<wbr>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}labelSelectorPath defines the JSON path inside of a custom resource that corresponds to Scale `status.selector`. Only JSON paths without the array notation are allowed. Must be a JSON Path under `.status` or `.spec`. Must be set to work with HorizontalPodAutoscaler. The field pointed by this JSON path must be a string field (not a complex selector struct) which contains a serialized label selector in string form. More info: https://kubernetes.io/docs/tasks/access-kubernetes-api/custom-resources/custom-resource-definitions#scale-subresource If there is no value under the given path in the custom resource, the `status.selector` value in the `/scale` subresource will default to the empty string.{{% /md %}}</dd>
 
@@ -1810,7 +1810,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>spec<wbr>Replicas<wbr>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}specReplicasPath defines the JSON path inside of a custom resource that corresponds to Scale `spec.replicas`. Only JSON paths without the array notation are allowed. Must be a JSON Path under `.spec`. If there is no value under the given path in the custom resource, the `/scale` subresource will return an error on GET.{{% /md %}}</dd>
 
@@ -1818,7 +1818,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>status<wbr>Replicas<wbr>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}statusReplicasPath defines the JSON path inside of a custom resource that corresponds to Scale `status.replicas`. Only JSON paths without the array notation are allowed. Must be a JSON Path under `.status`. If there is no value under the given path in the custom resource, the `status.replicas` value in the `/scale` subresource will default to 0.{{% /md %}}</dd>
 
@@ -1833,7 +1833,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>label_<wbr>selector_<wbr>path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}labelSelectorPath defines the JSON path inside of a custom resource that corresponds to Scale `status.selector`. Only JSON paths without the array notation are allowed. Must be a JSON Path under `.status` or `.spec`. Must be set to work with HorizontalPodAutoscaler. The field pointed by this JSON path must be a string field (not a complex selector struct) which contains a serialized label selector in string form. More info: https://kubernetes.io/docs/tasks/access-kubernetes-api/custom-resources/custom-resource-definitions#scale-subresource If there is no value under the given path in the custom resource, the `status.selector` value in the `/scale` subresource will default to the empty string.{{% /md %}}</dd>
 
@@ -1841,7 +1841,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>spec_<wbr>replicas_<wbr>path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}specReplicasPath defines the JSON path inside of a custom resource that corresponds to Scale `spec.replicas`. Only JSON paths without the array notation are allowed. Must be a JSON Path under `.spec`. If there is no value under the given path in the custom resource, the `/scale` subresource will return an error on GET.{{% /md %}}</dd>
 
@@ -1849,7 +1849,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>status_<wbr>replicas_<wbr>path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}statusReplicasPath defines the JSON path inside of a custom resource that corresponds to Scale `status.replicas`. Only JSON paths without the array notation are allowed. Must be a JSON Path under `.status`. If there is no value under the given path in the custom resource, the `status.replicas` value in the `/scale` subresource will default to 0.{{% /md %}}</dd>
 
@@ -1866,7 +1866,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/go/kubernetes/apiextensions/v1?tab=doc#CustomResourceSubresourcesArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/go/kubernetes/apiextensions/v1?tab=doc#CustomResourceSubresourcesOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apiextensions/v1?tab=doc#CustomResourceSubresourcesArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apiextensions/v1?tab=doc#CustomResourceSubresourcesOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1879,7 +1879,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>Scale</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customresourcesubresourcescale">Custom<wbr>Resource<wbr>Subresource<wbr>Scale<wbr>Args?</a></span>
+        <span class="property-type"><a href="#customresourcesubresourcescale">Custom<wbr>Resource<wbr>Subresource<wbr>Scale<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}scale indicates the custom resource should serve a `/scale` subresource that returns an `autoscaling/v1` Scale object.{{% /md %}}</dd>
 
@@ -1887,7 +1887,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">object?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">object</a></span>
     </dt>
     <dd>{{% md %}}status indicates the custom resource should serve a `/status` subresource. When enabled: 1. requests to the custom resource primary endpoint ignore changes to the `status` stanza of the object. 2. requests to the custom resource `/status` subresource ignore changes to anything other than the `status` stanza of the object.{{% /md %}}</dd>
 
@@ -1902,7 +1902,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>Scale</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customresourcesubresourcescale">*Custom<wbr>Resource<wbr>Subresource<wbr>Scale</a></span>
+        <span class="property-type"><a href="#customresourcesubresourcescale">Custom<wbr>Resource<wbr>Subresource<wbr>Scale</a></span>
     </dt>
     <dd>{{% md %}}scale indicates the custom resource should serve a `/scale` subresource that returns an `autoscaling/v1` Scale object.{{% /md %}}</dd>
 
@@ -1910,7 +1910,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#pulumi:pulumi:Any">interface{}</a></span>
     </dt>
     <dd>{{% md %}}status indicates the custom resource should serve a `/status` subresource. When enabled: 1. requests to the custom resource primary endpoint ignore changes to the `status` stanza of the object. 2. requests to the custom resource `/status` subresource ignore changes to anything other than the `status` stanza of the object.{{% /md %}}</dd>
 
@@ -1925,7 +1925,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>scale</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#customresourcesubresourcescale">Custom<wbr>Resource<wbr>Subresource<wbr>Scale?</a></span>
+        <span class="property-type"><a href="#customresourcesubresourcescale">Custom<wbr>Resource<wbr>Subresource<wbr>Scale</a></span>
     </dt>
     <dd>{{% md %}}scale indicates the custom resource should serve a `/scale` subresource that returns an `autoscaling/v1` Scale object.{{% /md %}}</dd>
 
@@ -1933,7 +1933,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">any?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/pulumi:pulumi:Any">any</a></span>
     </dt>
     <dd>{{% md %}}status indicates the custom resource should serve a `/status` subresource. When enabled: 1. requests to the custom resource primary endpoint ignore changes to the `status` stanza of the object. 2. requests to the custom resource `/status` subresource ignore changes to anything other than the `status` stanza of the object.{{% /md %}}</dd>
 
@@ -1956,7 +1956,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
     </dt>
     <dd>{{% md %}}status indicates the custom resource should serve a `/status` subresource. When enabled: 1. requests to the custom resource primary endpoint ignore changes to the `status` stanza of the object. 2. requests to the custom resource `/status` subresource ignore changes to anything other than the `status` stanza of the object.{{% /md %}}</dd>
 
@@ -1973,7 +1973,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/go/kubernetes/apiextensions/v1?tab=doc#CustomResourceValidationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/go/kubernetes/apiextensions/v1?tab=doc#CustomResourceValidationOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apiextensions/v1?tab=doc#CustomResourceValidationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apiextensions/v1?tab=doc#CustomResourceValidationOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1986,7 +1986,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>Open<wbr>APIV3Schema</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonschemaprops">JSONSchema<wbr>Props<wbr>Args?</a></span>
+        <span class="property-type"><a href="#jsonschemaprops">JSONSchema<wbr>Props<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}openAPIV3Schema is the OpenAPI v3 schema to use for validation and pruning.{{% /md %}}</dd>
 
@@ -2001,7 +2001,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>Open<wbr>APIV3Schema</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonschemaprops">*JSONSchema<wbr>Props</a></span>
+        <span class="property-type"><a href="#jsonschemaprops">JSONSchema<wbr>Props</a></span>
     </dt>
     <dd>{{% md %}}openAPIV3Schema is the OpenAPI v3 schema to use for validation and pruning.{{% /md %}}</dd>
 
@@ -2016,7 +2016,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>open<wbr>APIV3Schema</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonschemaprops">JSONSchema<wbr>Props?</a></span>
+        <span class="property-type"><a href="#jsonschemaprops">JSONSchema<wbr>Props</a></span>
     </dt>
     <dd>{{% md %}}openAPIV3Schema is the OpenAPI v3 schema to use for validation and pruning.{{% /md %}}</dd>
 
@@ -2048,7 +2048,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/go/kubernetes/apiextensions/v1?tab=doc#ExternalDocumentationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/go/kubernetes/apiextensions/v1?tab=doc#ExternalDocumentationOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apiextensions/v1?tab=doc#ExternalDocumentationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apiextensions/v1?tab=doc#ExternalDocumentationOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2061,7 +2061,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2069,7 +2069,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2084,7 +2084,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2092,7 +2092,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2107,7 +2107,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2115,7 +2115,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2130,7 +2130,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2138,7 +2138,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2155,7 +2155,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/go/kubernetes/apiextensions/v1?tab=doc#JSONSchemaPropsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/go/kubernetes/apiextensions/v1?tab=doc#JSONSchemaPropsOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apiextensions/v1?tab=doc#JSONSchemaPropsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apiextensions/v1?tab=doc#JSONSchemaPropsOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2168,7 +2168,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>Additional<wbr>Items</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;JSONSchema<wbr>Props<wbr>Args, bool&gt;?</span>
+        <span class="property-type">Union&lt;JSONSchema<wbr>Props<wbr>Args, bool&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2176,7 +2176,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>Additional<wbr>Properties</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;JSONSchema<wbr>Props<wbr>Args, bool&gt;?</span>
+        <span class="property-type">Union&lt;JSONSchema<wbr>Props<wbr>Args, bool&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2184,7 +2184,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>All<wbr>Of</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonschemaprops">List&lt;JSONSchema<wbr>Props<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#jsonschemaprops">List&lt;JSONSchema<wbr>Props<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2192,7 +2192,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>Any<wbr>Of</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonschemaprops">List&lt;JSONSchema<wbr>Props<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#jsonschemaprops">List&lt;JSONSchema<wbr>Props<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2200,7 +2200,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>Default</span>
         <span class="property-indicator"></span>
-        <span class="property-type">object?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">object</a></span>
     </dt>
     <dd>{{% md %}}default is a default value for undefined object fields. Defaulting is a beta feature under the CustomResourceDefaulting feature gate. Defaulting requires spec.preserveUnknownFields to be false.{{% /md %}}</dd>
 
@@ -2208,7 +2208,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>Definitions</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, JSONSchema<wbr>Props<wbr>Args&gt;?</span>
+        <span class="property-type">Dictionary&lt;string, JSONSchema<wbr>Props<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2216,7 +2216,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>Dependencies</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, Union&lt;JSONSchema<wbr>Props<wbr>Args, Immutable<wbr>Array&lt;string&gt;&gt;&gt;?</span>
+        <span class="property-type">Dictionary&lt;string, Union&lt;JSONSchema<wbr>Props<wbr>Args, Immutable<wbr>Array&lt;string&gt;&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2224,7 +2224,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2232,7 +2232,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>Enum</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;object&gt;?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;object&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2240,7 +2240,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>Example</span>
         <span class="property-indicator"></span>
-        <span class="property-type">object?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">object</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2248,7 +2248,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>Exclusive<wbr>Maximum</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2256,7 +2256,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>Exclusive<wbr>Minimum</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2264,7 +2264,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>External<wbr>Docs</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#externaldocumentation">External<wbr>Documentation<wbr>Args?</a></span>
+        <span class="property-type"><a href="#externaldocumentation">External<wbr>Documentation<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2272,7 +2272,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>Format</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}format is an OpenAPI v3 format string. Unknown formats are ignored. The following formats are validated:
 
@@ -2282,7 +2282,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2290,7 +2290,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>Items</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Union&lt;JSONSchema<wbr>Props<wbr>Args, Immutable<wbr>Array&lt;object&gt;&gt;?</span>
+        <span class="property-type">Union&lt;JSONSchema<wbr>Props<wbr>Args, Immutable<wbr>Array&lt;object&gt;&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2298,7 +2298,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>Max<wbr>Items</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2306,7 +2306,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>Max<wbr>Length</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2314,7 +2314,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>Max<wbr>Properties</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2322,7 +2322,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>Maximum</span>
         <span class="property-indicator"></span>
-        <span class="property-type">double?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2330,7 +2330,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>Min<wbr>Items</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2338,7 +2338,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>Min<wbr>Length</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2346,7 +2346,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>Min<wbr>Properties</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2354,7 +2354,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>Minimum</span>
         <span class="property-indicator"></span>
-        <span class="property-type">double?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2362,7 +2362,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>Multiple<wbr>Of</span>
         <span class="property-indicator"></span>
-        <span class="property-type">double?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2370,7 +2370,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>Not</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonschemaprops">JSONSchema<wbr>Props<wbr>Args?</a></span>
+        <span class="property-type"><a href="#jsonschemaprops">JSONSchema<wbr>Props<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2378,7 +2378,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>Nullable</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2386,7 +2386,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>One<wbr>Of</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonschemaprops">List&lt;JSONSchema<wbr>Props<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#jsonschemaprops">List&lt;JSONSchema<wbr>Props<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2394,7 +2394,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>Pattern</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2402,7 +2402,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>Pattern<wbr>Properties</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, JSONSchema<wbr>Props<wbr>Args&gt;?</span>
+        <span class="property-type">Dictionary&lt;string, JSONSchema<wbr>Props<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2410,7 +2410,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>Properties</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, JSONSchema<wbr>Props<wbr>Args&gt;?</span>
+        <span class="property-type">Dictionary&lt;string, JSONSchema<wbr>Props<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2418,7 +2418,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>Required</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2426,7 +2426,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>T_<wbr>ref</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2434,7 +2434,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>T_<wbr>schema</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2442,7 +2442,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>Title</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2450,7 +2450,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2458,7 +2458,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>Unique<wbr>Items</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2466,7 +2466,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>X_<wbr>kubernetes_<wbr>embedded_<wbr>resource</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}x-kubernetes-embedded-resource defines that the value is an embedded Kubernetes runtime.Object, with TypeMeta and ObjectMeta. The type must be object. It is allowed to further restrict the embedded object. kind, apiVersion and metadata are validated automatically. x-kubernetes-preserve-unknown-fields is allowed to be true, but does not have to be if the object is fully specified (up to kind, apiVersion, metadata).{{% /md %}}</dd>
 
@@ -2474,7 +2474,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>X_<wbr>kubernetes_<wbr>int_<wbr>or_<wbr>string</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}x-kubernetes-int-or-string specifies that this value is either an integer or a string. If this is true, an empty type is allowed and type as child of anyOf is permitted if following one of the following patterns:
 
@@ -2491,7 +2491,7 @@ CustomResourceDefinitionList is a list of CustomResourceDefinition objects.
             title="Optional">
         <span>X_<wbr>kubernetes_<wbr>list_<wbr>map_<wbr>keys</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}x-kubernetes-list-map-keys annotates an array with the x-kubernetes-list-type `map` by specifying the keys used as the index of the map.
 
@@ -2503,7 +2503,7 @@ The properties specified must either be required or have a default value, to ens
             title="Optional">
         <span>X_<wbr>kubernetes_<wbr>list_<wbr>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}x-kubernetes-list-type annotates an array to further describe its topology. This extension must only be used on lists and may have 3 possible values:
 
@@ -2524,7 +2524,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
             title="Optional">
         <span>X_<wbr>kubernetes_<wbr>map_<wbr>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}x-kubernetes-map-type annotates an object to further describe its topology. This extension must only be used when type is object and may have 2 possible values:
 
@@ -2539,7 +2539,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
             title="Optional">
         <span>X_<wbr>kubernetes_<wbr>preserve_<wbr>unknown_<wbr>fields</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}x-kubernetes-preserve-unknown-fields stops the API server decoding step from pruning fields which are not specified in the validation schema. This affects fields recursively, but switches back to normal pruning behaviour if nested properties or additionalProperties are specified in the schema. This can either be true or undefined. False is forbidden.{{% /md %}}</dd>
 
@@ -2586,7 +2586,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
             title="Optional">
         <span>Default</span>
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#pulumi:pulumi:Any">interface{}</a></span>
     </dt>
     <dd>{{% md %}}default is a default value for undefined object fields. Defaulting is a beta feature under the CustomResourceDefaulting feature gate. Defaulting requires spec.preserveUnknownFields to be false.{{% /md %}}</dd>
 
@@ -2610,7 +2610,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2618,7 +2618,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
             title="Optional">
         <span>Enum</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]interface{}</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#pulumi:pulumi:Any">[]interface{}</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2626,7 +2626,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
             title="Optional">
         <span>Example</span>
         <span class="property-indicator"></span>
-        <span class="property-type">interface{}</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#pulumi:pulumi:Any">interface{}</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2634,7 +2634,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
             title="Optional">
         <span>Exclusive<wbr>Maximum</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2642,7 +2642,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
             title="Optional">
         <span>Exclusive<wbr>Minimum</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2650,7 +2650,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
             title="Optional">
         <span>External<wbr>Docs</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#externaldocumentation">*External<wbr>Documentation</a></span>
+        <span class="property-type"><a href="#externaldocumentation">External<wbr>Documentation</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2658,7 +2658,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
             title="Optional">
         <span>Format</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}format is an OpenAPI v3 format string. Unknown formats are ignored. The following formats are validated:
 
@@ -2668,7 +2668,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
             title="Optional">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2684,7 +2684,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
             title="Optional">
         <span>Max<wbr>Items</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2692,7 +2692,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
             title="Optional">
         <span>Max<wbr>Length</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2700,7 +2700,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
             title="Optional">
         <span>Max<wbr>Properties</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2708,7 +2708,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
             title="Optional">
         <span>Maximum</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*float64</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2716,7 +2716,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
             title="Optional">
         <span>Min<wbr>Items</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2724,7 +2724,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
             title="Optional">
         <span>Min<wbr>Length</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2732,7 +2732,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
             title="Optional">
         <span>Min<wbr>Properties</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2740,7 +2740,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
             title="Optional">
         <span>Minimum</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*float64</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2748,7 +2748,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
             title="Optional">
         <span>Multiple<wbr>Of</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*float64</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2756,7 +2756,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
             title="Optional">
         <span>Not</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonschemaprops">*JSONSchema<wbr>Props</a></span>
+        <span class="property-type"><a href="#jsonschemaprops">JSONSchema<wbr>Props</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2764,7 +2764,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
             title="Optional">
         <span>Nullable</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2780,7 +2780,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
             title="Optional">
         <span>Pattern</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2804,7 +2804,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
             title="Optional">
         <span>Required</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2812,7 +2812,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
             title="Optional">
         <span>T_<wbr>ref</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2820,7 +2820,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
             title="Optional">
         <span>T_<wbr>schema</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2828,7 +2828,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
             title="Optional">
         <span>Title</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2836,7 +2836,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2844,7 +2844,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
             title="Optional">
         <span>Unique<wbr>Items</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2852,7 +2852,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
             title="Optional">
         <span>X_<wbr>kubernetes_<wbr>embedded_<wbr>resource</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}x-kubernetes-embedded-resource defines that the value is an embedded Kubernetes runtime.Object, with TypeMeta and ObjectMeta. The type must be object. It is allowed to further restrict the embedded object. kind, apiVersion and metadata are validated automatically. x-kubernetes-preserve-unknown-fields is allowed to be true, but does not have to be if the object is fully specified (up to kind, apiVersion, metadata).{{% /md %}}</dd>
 
@@ -2860,7 +2860,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
             title="Optional">
         <span>X_<wbr>kubernetes_<wbr>int_<wbr>or_<wbr>string</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}x-kubernetes-int-or-string specifies that this value is either an integer or a string. If this is true, an empty type is allowed and type as child of anyOf is permitted if following one of the following patterns:
 
@@ -2877,7 +2877,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
             title="Optional">
         <span>X_<wbr>kubernetes_<wbr>list_<wbr>map_<wbr>keys</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}x-kubernetes-list-map-keys annotates an array with the x-kubernetes-list-type `map` by specifying the keys used as the index of the map.
 
@@ -2889,7 +2889,7 @@ The properties specified must either be required or have a default value, to ens
             title="Optional">
         <span>X_<wbr>kubernetes_<wbr>list_<wbr>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}x-kubernetes-list-type annotates an array to further describe its topology. This extension must only be used on lists and may have 3 possible values:
 
@@ -2910,7 +2910,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
             title="Optional">
         <span>X_<wbr>kubernetes_<wbr>map_<wbr>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}x-kubernetes-map-type annotates an object to further describe its topology. This extension must only be used when type is object and may have 2 possible values:
 
@@ -2925,7 +2925,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
             title="Optional">
         <span>X_<wbr>kubernetes_<wbr>preserve_<wbr>unknown_<wbr>fields</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}x-kubernetes-preserve-unknown-fields stops the API server decoding step from pruning fields which are not specified in the validation schema. This affects fields recursively, but switches back to normal pruning behaviour if nested properties or additionalProperties are specified in the schema. This can either be true or undefined. False is forbidden.{{% /md %}}</dd>
 
@@ -2956,7 +2956,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
             title="Optional">
         <span>all<wbr>Of</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonschemaprops">JSONSchema<wbr>Props[]?</a></span>
+        <span class="property-type"><a href="#jsonschemaprops">JSONSchema<wbr>Props[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2964,7 +2964,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
             title="Optional">
         <span>any<wbr>Of</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonschemaprops">JSONSchema<wbr>Props[]?</a></span>
+        <span class="property-type"><a href="#jsonschemaprops">JSONSchema<wbr>Props[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2972,7 +2972,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
             title="Optional">
         <span>default</span>
         <span class="property-indicator"></span>
-        <span class="property-type">any?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/pulumi:pulumi:Any">any</a></span>
     </dt>
     <dd>{{% md %}}default is a default value for undefined object fields. Defaulting is a beta feature under the CustomResourceDefaulting feature gate. Defaulting requires spec.preserveUnknownFields to be false.{{% /md %}}</dd>
 
@@ -2980,7 +2980,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
             title="Optional">
         <span>definitions</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: JSONSchema<wbr>Props}?</span>
+        <span class="property-type">{[key: string]: JSONSchema<wbr>Props}</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2988,7 +2988,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
             title="Optional">
         <span>dependencies</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: JSONSchema<wbr>Props | string[]}?</span>
+        <span class="property-type">{[key: string]: JSONSchema<wbr>Props | string[]}</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2996,7 +2996,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3004,7 +3004,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
             title="Optional">
         <span>enum</span>
         <span class="property-indicator"></span>
-        <span class="property-type">any[]?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/pulumi:pulumi:Any">any[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3012,7 +3012,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
             title="Optional">
         <span>example</span>
         <span class="property-indicator"></span>
-        <span class="property-type">any?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/pulumi:pulumi:Any">any</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3020,7 +3020,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
             title="Optional">
         <span>exclusive<wbr>Maximum</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3028,7 +3028,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
             title="Optional">
         <span>exclusive<wbr>Minimum</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3036,7 +3036,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
             title="Optional">
         <span>external<wbr>Docs</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#externaldocumentation">External<wbr>Documentation?</a></span>
+        <span class="property-type"><a href="#externaldocumentation">External<wbr>Documentation</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3044,7 +3044,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
             title="Optional">
         <span>format</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}format is an OpenAPI v3 format string. Unknown formats are ignored. The following formats are validated:
 
@@ -3054,7 +3054,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
             title="Optional">
         <span>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3070,7 +3070,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
             title="Optional">
         <span>max<wbr>Items</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3078,7 +3078,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
             title="Optional">
         <span>max<wbr>Length</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3086,7 +3086,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
             title="Optional">
         <span>max<wbr>Properties</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3094,7 +3094,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
             title="Optional">
         <span>maximum</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3102,7 +3102,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
             title="Optional">
         <span>min<wbr>Items</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3110,7 +3110,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
             title="Optional">
         <span>min<wbr>Length</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3118,7 +3118,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
             title="Optional">
         <span>min<wbr>Properties</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3126,7 +3126,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
             title="Optional">
         <span>minimum</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3134,7 +3134,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
             title="Optional">
         <span>multiple<wbr>Of</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3142,7 +3142,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
             title="Optional">
         <span>not</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonschemaprops">JSONSchema<wbr>Props?</a></span>
+        <span class="property-type"><a href="#jsonschemaprops">JSONSchema<wbr>Props</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3150,7 +3150,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
             title="Optional">
         <span>nullable</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3158,7 +3158,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
             title="Optional">
         <span>one<wbr>Of</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jsonschemaprops">JSONSchema<wbr>Props[]?</a></span>
+        <span class="property-type"><a href="#jsonschemaprops">JSONSchema<wbr>Props[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3166,7 +3166,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
             title="Optional">
         <span>pattern</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3174,7 +3174,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
             title="Optional">
         <span>pattern<wbr>Properties</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: JSONSchema<wbr>Props}?</span>
+        <span class="property-type">{[key: string]: JSONSchema<wbr>Props}</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3182,7 +3182,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
             title="Optional">
         <span>properties</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: JSONSchema<wbr>Props}?</span>
+        <span class="property-type">{[key: string]: JSONSchema<wbr>Props}</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3190,7 +3190,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
             title="Optional">
         <span>required</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3198,7 +3198,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
             title="Optional">
         <span>t_<wbr>ref</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3206,7 +3206,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
             title="Optional">
         <span>t_<wbr>schema</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3214,7 +3214,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
             title="Optional">
         <span>title</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3222,7 +3222,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
             title="Optional">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3230,7 +3230,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
             title="Optional">
         <span>unique<wbr>Items</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3238,7 +3238,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
             title="Optional">
         <span>x_<wbr>kubernetes_<wbr>embedded_<wbr>resource</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}x-kubernetes-embedded-resource defines that the value is an embedded Kubernetes runtime.Object, with TypeMeta and ObjectMeta. The type must be object. It is allowed to further restrict the embedded object. kind, apiVersion and metadata are validated automatically. x-kubernetes-preserve-unknown-fields is allowed to be true, but does not have to be if the object is fully specified (up to kind, apiVersion, metadata).{{% /md %}}</dd>
 
@@ -3246,7 +3246,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
             title="Optional">
         <span>x_<wbr>kubernetes_<wbr>int_<wbr>or_<wbr>string</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}x-kubernetes-int-or-string specifies that this value is either an integer or a string. If this is true, an empty type is allowed and type as child of anyOf is permitted if following one of the following patterns:
 
@@ -3263,7 +3263,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
             title="Optional">
         <span>x_<wbr>kubernetes_<wbr>list_<wbr>map_<wbr>keys</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}x-kubernetes-list-map-keys annotates an array with the x-kubernetes-list-type `map` by specifying the keys used as the index of the map.
 
@@ -3275,7 +3275,7 @@ The properties specified must either be required or have a default value, to ens
             title="Optional">
         <span>x_<wbr>kubernetes_<wbr>list_<wbr>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}x-kubernetes-list-type annotates an array to further describe its topology. This extension must only be used on lists and may have 3 possible values:
 
@@ -3296,7 +3296,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
             title="Optional">
         <span>x_<wbr>kubernetes_<wbr>map_<wbr>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}x-kubernetes-map-type annotates an object to further describe its topology. This extension must only be used when type is object and may have 2 possible values:
 
@@ -3311,7 +3311,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
             title="Optional">
         <span>x_<wbr>kubernetes_<wbr>preserve_<wbr>unknown_<wbr>fields</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}x-kubernetes-preserve-unknown-fields stops the API server decoding step from pruning fields which are not specified in the validation schema. This affects fields recursively, but switches back to normal pruning behaviour if nested properties or additionalProperties are specified in the schema. This can either be true or undefined. False is forbidden.{{% /md %}}</dd>
 
@@ -3358,7 +3358,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
             title="Optional">
         <span>default</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
     </dt>
     <dd>{{% md %}}default is a default value for undefined object fields. Defaulting is a beta feature under the CustomResourceDefaulting feature gate. Defaulting requires spec.preserveUnknownFields to be false.{{% /md %}}</dd>
 
@@ -3382,7 +3382,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3390,7 +3390,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
             title="Optional">
         <span>enum</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[Any]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Any]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3398,7 +3398,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
             title="Optional">
         <span>example</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">Dict[str, Any]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3406,7 +3406,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
             title="Optional">
         <span>exclusive_<wbr>maximum</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3414,7 +3414,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
             title="Optional">
         <span>exclusive_<wbr>minimum</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3430,7 +3430,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
             title="Optional">
         <span>format</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}format is an OpenAPI v3 format string. Unknown formats are ignored. The following formats are validated:
 
@@ -3440,7 +3440,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
             title="Optional">
         <span>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3456,7 +3456,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
             title="Optional">
         <span>max_<wbr>items</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3464,7 +3464,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
             title="Optional">
         <span>max_<wbr>length</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3472,7 +3472,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
             title="Optional">
         <span>max_<wbr>properties</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3480,7 +3480,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
             title="Optional">
         <span>maximum</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3488,7 +3488,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
             title="Optional">
         <span>min_<wbr>items</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3496,7 +3496,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
             title="Optional">
         <span>min_<wbr>length</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3504,7 +3504,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
             title="Optional">
         <span>min_<wbr>properties</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3512,7 +3512,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
             title="Optional">
         <span>minimum</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3520,7 +3520,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
             title="Optional">
         <span>multiple_<wbr>of</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3536,7 +3536,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
             title="Optional">
         <span>nullable</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3552,7 +3552,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
             title="Optional">
         <span>pattern</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3576,7 +3576,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
             title="Optional">
         <span>required</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3584,7 +3584,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
             title="Optional">
         <span>t_<wbr>ref</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3592,7 +3592,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
             title="Optional">
         <span>t_<wbr>schema</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3600,7 +3600,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
             title="Optional">
         <span>title</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3608,7 +3608,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
             title="Optional">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3616,7 +3616,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
             title="Optional">
         <span>unique_<wbr>items</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3624,7 +3624,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
             title="Optional">
         <span>x_<wbr>kubernetes_<wbr>embedded_<wbr>resource</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}x-kubernetes-embedded-resource defines that the value is an embedded Kubernetes runtime.Object, with TypeMeta and ObjectMeta. The type must be object. It is allowed to further restrict the embedded object. kind, apiVersion and metadata are validated automatically. x-kubernetes-preserve-unknown-fields is allowed to be true, but does not have to be if the object is fully specified (up to kind, apiVersion, metadata).{{% /md %}}</dd>
 
@@ -3632,7 +3632,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
             title="Optional">
         <span>x_<wbr>kubernetes_<wbr>int_<wbr>or_<wbr>string</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}x-kubernetes-int-or-string specifies that this value is either an integer or a string. If this is true, an empty type is allowed and type as child of anyOf is permitted if following one of the following patterns:
 
@@ -3649,7 +3649,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
             title="Optional">
         <span>x_<wbr>kubernetes_<wbr>list_<wbr>map_<wbr>keys</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}x-kubernetes-list-map-keys annotates an array with the x-kubernetes-list-type `map` by specifying the keys used as the index of the map.
 
@@ -3661,7 +3661,7 @@ The properties specified must either be required or have a default value, to ens
             title="Optional">
         <span>x_<wbr>kubernetes_<wbr>list_<wbr>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}x-kubernetes-list-type annotates an array to further describe its topology. This extension must only be used on lists and may have 3 possible values:
 
@@ -3682,7 +3682,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
             title="Optional">
         <span>x_<wbr>kubernetes_<wbr>map_<wbr>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}x-kubernetes-map-type annotates an object to further describe its topology. This extension must only be used when type is object and may have 2 possible values:
 
@@ -3697,7 +3697,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
             title="Optional">
         <span>x_<wbr>kubernetes_<wbr>preserve_<wbr>unknown_<wbr>fields</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}x-kubernetes-preserve-unknown-fields stops the API server decoding step from pruning fields which are not specified in the validation schema. This affects fields recursively, but switches back to normal pruning behaviour if nested properties or additionalProperties are specified in the schema. This can either be true or undefined. False is forbidden.{{% /md %}}</dd>
 
@@ -3714,7 +3714,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/go/kubernetes/meta/v1?tab=doc#ListMetaArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/go/kubernetes/meta/v1?tab=doc#ListMetaOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/meta/v1?tab=doc#ListMetaArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/meta/v1?tab=doc#ListMetaOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3727,7 +3727,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
             title="Optional">
         <span>Continue</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}continue may be set if the user set a limit on the number of items returned, and indicates that the server has more data available. The value is opaque and may be used to issue another request to the endpoint that served this list to retrieve the next set of available objects. Continuing a consistent list may not be possible if the server configuration has changed or more than a few minutes have passed. The resourceVersion field returned when using this continue value will be identical to the value in the first response, unless you have received this token from an error message.{{% /md %}}</dd>
 
@@ -3735,7 +3735,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
             title="Optional">
         <span>Remaining<wbr>Item<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}remainingItemCount is the number of subsequent items in the list which are not included in this list response. If the list request contained label or field selectors, then the number of remaining items is unknown and the field will be left unset and omitted during serialization. If the list is complete (either because it is not chunking or because this is the last chunk), then there are no more remaining items and this field will be left unset and omitted during serialization. Servers older than v1.15 do not set this field. The intended use of the remainingItemCount is *estimating* the size of a collection. Clients should not rely on the remainingItemCount to be set or to be exact.{{% /md %}}</dd>
 
@@ -3743,7 +3743,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
             title="Optional">
         <span>Resource<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}String that identifies the server's internal version of this object that can be used by clients to determine when objects have changed. Value must be treated as opaque by clients and passed unmodified back to the server. Populated by the system. Read-only. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#concurrency-control-and-consistency{{% /md %}}</dd>
 
@@ -3751,7 +3751,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
             title="Optional">
         <span>Self<wbr>Link</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}selfLink is a URL representing this object. Populated by the system. Read-only.
 
@@ -3768,7 +3768,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
             title="Optional">
         <span>Continue</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}continue may be set if the user set a limit on the number of items returned, and indicates that the server has more data available. The value is opaque and may be used to issue another request to the endpoint that served this list to retrieve the next set of available objects. Continuing a consistent list may not be possible if the server configuration has changed or more than a few minutes have passed. The resourceVersion field returned when using this continue value will be identical to the value in the first response, unless you have received this token from an error message.{{% /md %}}</dd>
 
@@ -3776,7 +3776,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
             title="Optional">
         <span>Remaining<wbr>Item<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}remainingItemCount is the number of subsequent items in the list which are not included in this list response. If the list request contained label or field selectors, then the number of remaining items is unknown and the field will be left unset and omitted during serialization. If the list is complete (either because it is not chunking or because this is the last chunk), then there are no more remaining items and this field will be left unset and omitted during serialization. Servers older than v1.15 do not set this field. The intended use of the remainingItemCount is *estimating* the size of a collection. Clients should not rely on the remainingItemCount to be set or to be exact.{{% /md %}}</dd>
 
@@ -3784,7 +3784,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
             title="Optional">
         <span>Resource<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}String that identifies the server's internal version of this object that can be used by clients to determine when objects have changed. Value must be treated as opaque by clients and passed unmodified back to the server. Populated by the system. Read-only. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#concurrency-control-and-consistency{{% /md %}}</dd>
 
@@ -3792,7 +3792,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
             title="Optional">
         <span>Self<wbr>Link</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}selfLink is a URL representing this object. Populated by the system. Read-only.
 
@@ -3809,7 +3809,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
             title="Optional">
         <span>continue</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}continue may be set if the user set a limit on the number of items returned, and indicates that the server has more data available. The value is opaque and may be used to issue another request to the endpoint that served this list to retrieve the next set of available objects. Continuing a consistent list may not be possible if the server configuration has changed or more than a few minutes have passed. The resourceVersion field returned when using this continue value will be identical to the value in the first response, unless you have received this token from an error message.{{% /md %}}</dd>
 
@@ -3817,7 +3817,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
             title="Optional">
         <span>remaining<wbr>Item<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}remainingItemCount is the number of subsequent items in the list which are not included in this list response. If the list request contained label or field selectors, then the number of remaining items is unknown and the field will be left unset and omitted during serialization. If the list is complete (either because it is not chunking or because this is the last chunk), then there are no more remaining items and this field will be left unset and omitted during serialization. Servers older than v1.15 do not set this field. The intended use of the remainingItemCount is *estimating* the size of a collection. Clients should not rely on the remainingItemCount to be set or to be exact.{{% /md %}}</dd>
 
@@ -3825,7 +3825,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
             title="Optional">
         <span>resource<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}String that identifies the server's internal version of this object that can be used by clients to determine when objects have changed. Value must be treated as opaque by clients and passed unmodified back to the server. Populated by the system. Read-only. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#concurrency-control-and-consistency{{% /md %}}</dd>
 
@@ -3833,7 +3833,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
             title="Optional">
         <span>self<wbr>Link</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}selfLink is a URL representing this object. Populated by the system. Read-only.
 
@@ -3850,7 +3850,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
             title="Optional">
         <span>continue_</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}continue may be set if the user set a limit on the number of items returned, and indicates that the server has more data available. The value is opaque and may be used to issue another request to the endpoint that served this list to retrieve the next set of available objects. Continuing a consistent list may not be possible if the server configuration has changed or more than a few minutes have passed. The resourceVersion field returned when using this continue value will be identical to the value in the first response, unless you have received this token from an error message.{{% /md %}}</dd>
 
@@ -3858,7 +3858,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
             title="Optional">
         <span>remaining_<wbr>item_<wbr>count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}remainingItemCount is the number of subsequent items in the list which are not included in this list response. If the list request contained label or field selectors, then the number of remaining items is unknown and the field will be left unset and omitted during serialization. If the list is complete (either because it is not chunking or because this is the last chunk), then there are no more remaining items and this field will be left unset and omitted during serialization. Servers older than v1.15 do not set this field. The intended use of the remainingItemCount is *estimating* the size of a collection. Clients should not rely on the remainingItemCount to be set or to be exact.{{% /md %}}</dd>
 
@@ -3866,7 +3866,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
             title="Optional">
         <span>resource_<wbr>version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}String that identifies the server's internal version of this object that can be used by clients to determine when objects have changed. Value must be treated as opaque by clients and passed unmodified back to the server. Populated by the system. Read-only. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#concurrency-control-and-consistency{{% /md %}}</dd>
 
@@ -3874,7 +3874,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
             title="Optional">
         <span>self_<wbr>link</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}selfLink is a URL representing this object. Populated by the system. Read-only.
 
@@ -3893,7 +3893,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/go/kubernetes/meta/v1?tab=doc#ManagedFieldsEntryArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/go/kubernetes/meta/v1?tab=doc#ManagedFieldsEntryOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/meta/v1?tab=doc#ManagedFieldsEntryArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/meta/v1?tab=doc#ManagedFieldsEntryOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3906,7 +3906,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
             title="Optional">
         <span>Fields<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}FieldsType is the discriminator for the different fields format and version. There is currently only one possible value: "FieldsV1"{{% /md %}}</dd>
 
@@ -3914,7 +3914,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
             title="Optional">
         <span>Fields<wbr>V1</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, object&gt;?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}FieldsV1 holds the first JSON version format as described in the "FieldsV1" type.{{% /md %}}</dd>
 
@@ -3922,7 +3922,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
             title="Optional">
         <span>Manager</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Manager is an identifier of the workflow managing these fields.{{% /md %}}</dd>
 
@@ -3930,7 +3930,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
             title="Optional">
         <span>Operation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Operation is the type of operation which lead to this ManagedFieldsEntry being created. The only valid values for this field are 'Apply' and 'Update'.{{% /md %}}</dd>
 
@@ -3938,7 +3938,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
             title="Optional">
         <span>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Time is timestamp of when these fields were set. It should always be empty if Operation is 'Apply'{{% /md %}}</dd>
 
@@ -3953,7 +3953,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
             title="Optional">
         <span>Fields<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}FieldsType is the discriminator for the different fields format and version. There is currently only one possible value: "FieldsV1"{{% /md %}}</dd>
 
@@ -3969,7 +3969,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
             title="Optional">
         <span>Manager</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Manager is an identifier of the workflow managing these fields.{{% /md %}}</dd>
 
@@ -3977,7 +3977,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
             title="Optional">
         <span>Operation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Operation is the type of operation which lead to this ManagedFieldsEntry being created. The only valid values for this field are 'Apply' and 'Update'.{{% /md %}}</dd>
 
@@ -3985,7 +3985,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
             title="Optional">
         <span>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Time is timestamp of when these fields were set. It should always be empty if Operation is 'Apply'{{% /md %}}</dd>
 
@@ -4000,7 +4000,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
             title="Optional">
         <span>fields<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}FieldsType is the discriminator for the different fields format and version. There is currently only one possible value: "FieldsV1"{{% /md %}}</dd>
 
@@ -4008,7 +4008,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
             title="Optional">
         <span>fields<wbr>V1</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}FieldsV1 holds the first JSON version format as described in the "FieldsV1" type.{{% /md %}}</dd>
 
@@ -4016,7 +4016,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
             title="Optional">
         <span>manager</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Manager is an identifier of the workflow managing these fields.{{% /md %}}</dd>
 
@@ -4024,7 +4024,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
             title="Optional">
         <span>operation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Operation is the type of operation which lead to this ManagedFieldsEntry being created. The only valid values for this field are 'Apply' and 'Update'.{{% /md %}}</dd>
 
@@ -4032,7 +4032,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
             title="Optional">
         <span>time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Time is timestamp of when these fields were set. It should always be empty if Operation is 'Apply'{{% /md %}}</dd>
 
@@ -4047,7 +4047,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
             title="Optional">
         <span>fields_<wbr>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}FieldsType is the discriminator for the different fields format and version. There is currently only one possible value: "FieldsV1"{{% /md %}}</dd>
 
@@ -4063,7 +4063,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
             title="Optional">
         <span>manager</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Manager is an identifier of the workflow managing these fields.{{% /md %}}</dd>
 
@@ -4071,7 +4071,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
             title="Optional">
         <span>operation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Operation is the type of operation which lead to this ManagedFieldsEntry being created. The only valid values for this field are 'Apply' and 'Update'.{{% /md %}}</dd>
 
@@ -4079,7 +4079,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
             title="Optional">
         <span>time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Time is timestamp of when these fields were set. It should always be empty if Operation is 'Apply'{{% /md %}}</dd>
 
@@ -4096,7 +4096,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/go/kubernetes/meta/v1?tab=doc#ObjectMetaArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/go/kubernetes/meta/v1?tab=doc#ObjectMetaOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/meta/v1?tab=doc#ObjectMetaArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/meta/v1?tab=doc#ObjectMetaOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -4109,7 +4109,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
             title="Optional">
         <span>Annotations</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, string&gt;?</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Annotations is an unstructured key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. They are not queryable and should be preserved when modifying objects. More info: http://kubernetes.io/docs/user-guide/annotations{{% /md %}}</dd>
 
@@ -4117,7 +4117,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
             title="Optional">
         <span>Cluster<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the cluster which the object belongs to. This is used to distinguish resources with same name and namespace in different clusters. This field is not set anywhere right now and apiserver is going to ignore it if set in create or update request.{{% /md %}}</dd>
 
@@ -4125,7 +4125,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
             title="Optional">
         <span>Creation<wbr>Timestamp</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}CreationTimestamp is a timestamp representing the server time when this object was created. It is not guaranteed to be set in happens-before order across separate operations. Clients may not set this value. It is represented in RFC3339 form and is in UTC.
 
@@ -4135,7 +4135,7 @@ Populated by the system. Read-only. Null for lists. More info: https://git.k8s.i
             title="Optional">
         <span>Deletion<wbr>Grace<wbr>Period<wbr>Seconds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Number of seconds allowed for this object to gracefully terminate before it will be removed from the system. Only set when deletionTimestamp is also set. May only be shortened. Read-only.{{% /md %}}</dd>
 
@@ -4143,7 +4143,7 @@ Populated by the system. Read-only. Null for lists. More info: https://git.k8s.i
             title="Optional">
         <span>Deletion<wbr>Timestamp</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}DeletionTimestamp is RFC 3339 date and time at which this resource will be deleted. This field is set by the server when a graceful deletion is requested by the user, and is not directly settable by a client. The resource is expected to be deleted (no longer visible from resource lists, and not reachable by name) after the time in this field, once the finalizers list is empty. As long as the finalizers list contains items, deletion is blocked. Once the deletionTimestamp is set, this value may not be unset or be set further into the future, although it may be shortened or the resource may be deleted prior to this time. For example, a user may request that a pod is deleted in 30 seconds. The Kubelet will react by sending a graceful termination signal to the containers in the pod. After that 30 seconds, the Kubelet will send a hard termination signal (SIGKILL) to the container and after cleanup, remove the pod from the API. In the presence of network partitions, this object may still exist after this timestamp, until an administrator or automated process can determine the resource is fully terminated. If not set, graceful deletion of the object has not been requested.
 
@@ -4153,7 +4153,7 @@ Populated by the system when a graceful deletion is requested. Read-only. More i
             title="Optional">
         <span>Finalizers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}Must be empty before the object is deleted from the registry. Each entry is an identifier for the responsible component that will remove the entry from the list. If the deletionTimestamp of the object is non-nil, entries in this list can only be removed. Finalizers may be processed and removed in any order.  Order is NOT enforced because it introduces significant risk of stuck finalizers. finalizers is a shared field, any actor with permission can reorder it. If the finalizer list is processed in order, then this can lead to a situation in which the component responsible for the first finalizer in the list is waiting for a signal (field value, external system, or other) produced by a component responsible for a finalizer later in the list, resulting in a deadlock. Without enforced ordering finalizers are free to order amongst themselves and are not vulnerable to ordering changes in the list.{{% /md %}}</dd>
 
@@ -4161,7 +4161,7 @@ Populated by the system when a graceful deletion is requested. Read-only. More i
             title="Optional">
         <span>Generate<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}GenerateName is an optional prefix, used by the server, to generate a unique name ONLY IF the Name field has not been provided. If this field is used, the name returned to the client will be different than the name passed. This value will also be combined with a unique suffix. The provided value has the same validation rules as the Name field, and may be truncated by the length of the suffix required to make the value unique on the server.
 
@@ -4173,7 +4173,7 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
             title="Optional">
         <span>Generation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}A sequence number representing a specific generation of the desired state. Populated by the system. Read-only.{{% /md %}}</dd>
 
@@ -4181,7 +4181,7 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
             title="Optional">
         <span>Labels</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, string&gt;?</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels{{% /md %}}</dd>
 
@@ -4189,7 +4189,7 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
             title="Optional">
         <span>Managed<wbr>Fields</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedfieldsentry">List&lt;Managed<wbr>Fields<wbr>Entry<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#managedfieldsentry">List&lt;Managed<wbr>Fields<wbr>Entry<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like "ci-cd". The set of fields is always in the version that the workflow used when modifying the object.{{% /md %}}</dd>
 
@@ -4197,7 +4197,7 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Name must be unique within a namespace. Is required when creating resources, although some resources may allow a client to request the generation of an appropriate name automatically. Name is primarily intended for creation idempotence and configuration definition. Cannot be updated. More info: http://kubernetes.io/docs/user-guide/identifiers#names{{% /md %}}</dd>
 
@@ -4205,7 +4205,7 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
             title="Optional">
         <span>Namespace</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Namespace defines the space within each name must be unique. An empty namespace is equivalent to the "default" namespace, but "default" is the canonical representation. Not all objects are required to be scoped to a namespace - the value of this field for those objects will be empty.
 
@@ -4215,7 +4215,7 @@ Must be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/use
             title="Optional">
         <span>Owner<wbr>References</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ownerreference">List&lt;Owner<wbr>Reference<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#ownerreference">List&lt;Owner<wbr>Reference<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of objects depended by this object. If ALL objects in the list have been deleted, this object will be garbage collected. If this object is managed by a controller, then an entry in this list will point to this controller, with the controller field set to true. There cannot be more than one managing controller.{{% /md %}}</dd>
 
@@ -4223,7 +4223,7 @@ Must be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/use
             title="Optional">
         <span>Resource<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}An opaque value that represents the internal version of this object that can be used by clients to determine when objects have changed. May be used for optimistic concurrency, change detection, and the watch operation on a resource or set of resources. Clients must treat these values as opaque and passed unmodified back to the server. They may only be valid for a particular resource or set of resources.
 
@@ -4233,7 +4233,7 @@ Populated by the system. Read-only. Value must be treated as opaque by clients a
             title="Optional">
         <span>Self<wbr>Link</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}SelfLink is a URL representing this object. Populated by the system. Read-only.
 
@@ -4243,7 +4243,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
             title="Optional">
         <span>Uid</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}UID is the unique in time and space value for this object. It is typically generated by the server on successful creation of a resource and is not allowed to change on PUT operations.
 
@@ -4268,7 +4268,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
             title="Optional">
         <span>Cluster<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the cluster which the object belongs to. This is used to distinguish resources with same name and namespace in different clusters. This field is not set anywhere right now and apiserver is going to ignore it if set in create or update request.{{% /md %}}</dd>
 
@@ -4276,7 +4276,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
             title="Optional">
         <span>Creation<wbr>Timestamp</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}CreationTimestamp is a timestamp representing the server time when this object was created. It is not guaranteed to be set in happens-before order across separate operations. Clients may not set this value. It is represented in RFC3339 form and is in UTC.
 
@@ -4286,7 +4286,7 @@ Populated by the system. Read-only. Null for lists. More info: https://git.k8s.i
             title="Optional">
         <span>Deletion<wbr>Grace<wbr>Period<wbr>Seconds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Number of seconds allowed for this object to gracefully terminate before it will be removed from the system. Only set when deletionTimestamp is also set. May only be shortened. Read-only.{{% /md %}}</dd>
 
@@ -4294,7 +4294,7 @@ Populated by the system. Read-only. Null for lists. More info: https://git.k8s.i
             title="Optional">
         <span>Deletion<wbr>Timestamp</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}DeletionTimestamp is RFC 3339 date and time at which this resource will be deleted. This field is set by the server when a graceful deletion is requested by the user, and is not directly settable by a client. The resource is expected to be deleted (no longer visible from resource lists, and not reachable by name) after the time in this field, once the finalizers list is empty. As long as the finalizers list contains items, deletion is blocked. Once the deletionTimestamp is set, this value may not be unset or be set further into the future, although it may be shortened or the resource may be deleted prior to this time. For example, a user may request that a pod is deleted in 30 seconds. The Kubelet will react by sending a graceful termination signal to the containers in the pod. After that 30 seconds, the Kubelet will send a hard termination signal (SIGKILL) to the container and after cleanup, remove the pod from the API. In the presence of network partitions, this object may still exist after this timestamp, until an administrator or automated process can determine the resource is fully terminated. If not set, graceful deletion of the object has not been requested.
 
@@ -4304,7 +4304,7 @@ Populated by the system when a graceful deletion is requested. Read-only. More i
             title="Optional">
         <span>Finalizers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}Must be empty before the object is deleted from the registry. Each entry is an identifier for the responsible component that will remove the entry from the list. If the deletionTimestamp of the object is non-nil, entries in this list can only be removed. Finalizers may be processed and removed in any order.  Order is NOT enforced because it introduces significant risk of stuck finalizers. finalizers is a shared field, any actor with permission can reorder it. If the finalizer list is processed in order, then this can lead to a situation in which the component responsible for the first finalizer in the list is waiting for a signal (field value, external system, or other) produced by a component responsible for a finalizer later in the list, resulting in a deadlock. Without enforced ordering finalizers are free to order amongst themselves and are not vulnerable to ordering changes in the list.{{% /md %}}</dd>
 
@@ -4312,7 +4312,7 @@ Populated by the system when a graceful deletion is requested. Read-only. More i
             title="Optional">
         <span>Generate<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}GenerateName is an optional prefix, used by the server, to generate a unique name ONLY IF the Name field has not been provided. If this field is used, the name returned to the client will be different than the name passed. This value will also be combined with a unique suffix. The provided value has the same validation rules as the Name field, and may be truncated by the length of the suffix required to make the value unique on the server.
 
@@ -4324,7 +4324,7 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
             title="Optional">
         <span>Generation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}A sequence number representing a specific generation of the desired state. Populated by the system. Read-only.{{% /md %}}</dd>
 
@@ -4348,7 +4348,7 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Name must be unique within a namespace. Is required when creating resources, although some resources may allow a client to request the generation of an appropriate name automatically. Name is primarily intended for creation idempotence and configuration definition. Cannot be updated. More info: http://kubernetes.io/docs/user-guide/identifiers#names{{% /md %}}</dd>
 
@@ -4356,7 +4356,7 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
             title="Optional">
         <span>Namespace</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Namespace defines the space within each name must be unique. An empty namespace is equivalent to the "default" namespace, but "default" is the canonical representation. Not all objects are required to be scoped to a namespace - the value of this field for those objects will be empty.
 
@@ -4374,7 +4374,7 @@ Must be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/use
             title="Optional">
         <span>Resource<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}An opaque value that represents the internal version of this object that can be used by clients to determine when objects have changed. May be used for optimistic concurrency, change detection, and the watch operation on a resource or set of resources. Clients must treat these values as opaque and passed unmodified back to the server. They may only be valid for a particular resource or set of resources.
 
@@ -4384,7 +4384,7 @@ Populated by the system. Read-only. Value must be treated as opaque by clients a
             title="Optional">
         <span>Self<wbr>Link</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}SelfLink is a URL representing this object. Populated by the system. Read-only.
 
@@ -4394,7 +4394,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
             title="Optional">
         <span>Uid</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}UID is the unique in time and space value for this object. It is typically generated by the server on successful creation of a resource and is not allowed to change on PUT operations.
 
@@ -4411,7 +4411,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
             title="Optional">
         <span>annotations</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}?</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Annotations is an unstructured key value map stored with a resource that may be set by external tools to store and retrieve arbitrary metadata. They are not queryable and should be preserved when modifying objects. More info: http://kubernetes.io/docs/user-guide/annotations{{% /md %}}</dd>
 
@@ -4419,7 +4419,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
             title="Optional">
         <span>cluster<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the cluster which the object belongs to. This is used to distinguish resources with same name and namespace in different clusters. This field is not set anywhere right now and apiserver is going to ignore it if set in create or update request.{{% /md %}}</dd>
 
@@ -4427,7 +4427,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
             title="Optional">
         <span>creation<wbr>Timestamp</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}CreationTimestamp is a timestamp representing the server time when this object was created. It is not guaranteed to be set in happens-before order across separate operations. Clients may not set this value. It is represented in RFC3339 form and is in UTC.
 
@@ -4437,7 +4437,7 @@ Populated by the system. Read-only. Null for lists. More info: https://git.k8s.i
             title="Optional">
         <span>deletion<wbr>Grace<wbr>Period<wbr>Seconds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Number of seconds allowed for this object to gracefully terminate before it will be removed from the system. Only set when deletionTimestamp is also set. May only be shortened. Read-only.{{% /md %}}</dd>
 
@@ -4445,7 +4445,7 @@ Populated by the system. Read-only. Null for lists. More info: https://git.k8s.i
             title="Optional">
         <span>deletion<wbr>Timestamp</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}DeletionTimestamp is RFC 3339 date and time at which this resource will be deleted. This field is set by the server when a graceful deletion is requested by the user, and is not directly settable by a client. The resource is expected to be deleted (no longer visible from resource lists, and not reachable by name) after the time in this field, once the finalizers list is empty. As long as the finalizers list contains items, deletion is blocked. Once the deletionTimestamp is set, this value may not be unset or be set further into the future, although it may be shortened or the resource may be deleted prior to this time. For example, a user may request that a pod is deleted in 30 seconds. The Kubelet will react by sending a graceful termination signal to the containers in the pod. After that 30 seconds, the Kubelet will send a hard termination signal (SIGKILL) to the container and after cleanup, remove the pod from the API. In the presence of network partitions, this object may still exist after this timestamp, until an administrator or automated process can determine the resource is fully terminated. If not set, graceful deletion of the object has not been requested.
 
@@ -4455,7 +4455,7 @@ Populated by the system when a graceful deletion is requested. Read-only. More i
             title="Optional">
         <span>finalizers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}Must be empty before the object is deleted from the registry. Each entry is an identifier for the responsible component that will remove the entry from the list. If the deletionTimestamp of the object is non-nil, entries in this list can only be removed. Finalizers may be processed and removed in any order.  Order is NOT enforced because it introduces significant risk of stuck finalizers. finalizers is a shared field, any actor with permission can reorder it. If the finalizer list is processed in order, then this can lead to a situation in which the component responsible for the first finalizer in the list is waiting for a signal (field value, external system, or other) produced by a component responsible for a finalizer later in the list, resulting in a deadlock. Without enforced ordering finalizers are free to order amongst themselves and are not vulnerable to ordering changes in the list.{{% /md %}}</dd>
 
@@ -4463,7 +4463,7 @@ Populated by the system when a graceful deletion is requested. Read-only. More i
             title="Optional">
         <span>generate<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}GenerateName is an optional prefix, used by the server, to generate a unique name ONLY IF the Name field has not been provided. If this field is used, the name returned to the client will be different than the name passed. This value will also be combined with a unique suffix. The provided value has the same validation rules as the Name field, and may be truncated by the length of the suffix required to make the value unique on the server.
 
@@ -4475,7 +4475,7 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
             title="Optional">
         <span>generation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}A sequence number representing a specific generation of the desired state. Populated by the system. Read-only.{{% /md %}}</dd>
 
@@ -4483,7 +4483,7 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
             title="Optional">
         <span>labels</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}?</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Map of string keys and values that can be used to organize and categorize (scope and select) objects. May match selectors of replication controllers and services. More info: http://kubernetes.io/docs/user-guide/labels{{% /md %}}</dd>
 
@@ -4491,7 +4491,7 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
             title="Optional">
         <span>managed<wbr>Fields</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedfieldsentry">Managed<wbr>Fields<wbr>Entry[]?</a></span>
+        <span class="property-type"><a href="#managedfieldsentry">Managed<wbr>Fields<wbr>Entry[]</a></span>
     </dt>
     <dd>{{% md %}}ManagedFields maps workflow-id and version to the set of fields that are managed by that workflow. This is mostly for internal housekeeping, and users typically shouldn't need to set or understand this field. A workflow can be the user's name, a controller's name, or the name of a specific apply path like "ci-cd". The set of fields is always in the version that the workflow used when modifying the object.{{% /md %}}</dd>
 
@@ -4499,7 +4499,7 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Name must be unique within a namespace. Is required when creating resources, although some resources may allow a client to request the generation of an appropriate name automatically. Name is primarily intended for creation idempotence and configuration definition. Cannot be updated. More info: http://kubernetes.io/docs/user-guide/identifiers#names{{% /md %}}</dd>
 
@@ -4507,7 +4507,7 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
             title="Optional">
         <span>namespace</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Namespace defines the space within each name must be unique. An empty namespace is equivalent to the "default" namespace, but "default" is the canonical representation. Not all objects are required to be scoped to a namespace - the value of this field for those objects will be empty.
 
@@ -4517,7 +4517,7 @@ Must be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/use
             title="Optional">
         <span>owner<wbr>References</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#ownerreference">Owner<wbr>Reference[]?</a></span>
+        <span class="property-type"><a href="#ownerreference">Owner<wbr>Reference[]</a></span>
     </dt>
     <dd>{{% md %}}List of objects depended by this object. If ALL objects in the list have been deleted, this object will be garbage collected. If this object is managed by a controller, then an entry in this list will point to this controller, with the controller field set to true. There cannot be more than one managing controller.{{% /md %}}</dd>
 
@@ -4525,7 +4525,7 @@ Must be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/use
             title="Optional">
         <span>resource<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}An opaque value that represents the internal version of this object that can be used by clients to determine when objects have changed. May be used for optimistic concurrency, change detection, and the watch operation on a resource or set of resources. Clients must treat these values as opaque and passed unmodified back to the server. They may only be valid for a particular resource or set of resources.
 
@@ -4535,7 +4535,7 @@ Populated by the system. Read-only. Value must be treated as opaque by clients a
             title="Optional">
         <span>self<wbr>Link</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}SelfLink is a URL representing this object. Populated by the system. Read-only.
 
@@ -4545,7 +4545,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
             title="Optional">
         <span>uid</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}UID is the unique in time and space value for this object. It is typically generated by the server on successful creation of a resource and is not allowed to change on PUT operations.
 
@@ -4570,7 +4570,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
             title="Optional">
         <span>cluster_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the cluster which the object belongs to. This is used to distinguish resources with same name and namespace in different clusters. This field is not set anywhere right now and apiserver is going to ignore it if set in create or update request.{{% /md %}}</dd>
 
@@ -4578,7 +4578,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
             title="Optional">
         <span>creation_<wbr>timestamp</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}CreationTimestamp is a timestamp representing the server time when this object was created. It is not guaranteed to be set in happens-before order across separate operations. Clients may not set this value. It is represented in RFC3339 form and is in UTC.
 
@@ -4588,7 +4588,7 @@ Populated by the system. Read-only. Null for lists. More info: https://git.k8s.i
             title="Optional">
         <span>deletion_<wbr>grace_<wbr>period_<wbr>seconds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Number of seconds allowed for this object to gracefully terminate before it will be removed from the system. Only set when deletionTimestamp is also set. May only be shortened. Read-only.{{% /md %}}</dd>
 
@@ -4596,7 +4596,7 @@ Populated by the system. Read-only. Null for lists. More info: https://git.k8s.i
             title="Optional">
         <span>deletion_<wbr>timestamp</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}DeletionTimestamp is RFC 3339 date and time at which this resource will be deleted. This field is set by the server when a graceful deletion is requested by the user, and is not directly settable by a client. The resource is expected to be deleted (no longer visible from resource lists, and not reachable by name) after the time in this field, once the finalizers list is empty. As long as the finalizers list contains items, deletion is blocked. Once the deletionTimestamp is set, this value may not be unset or be set further into the future, although it may be shortened or the resource may be deleted prior to this time. For example, a user may request that a pod is deleted in 30 seconds. The Kubelet will react by sending a graceful termination signal to the containers in the pod. After that 30 seconds, the Kubelet will send a hard termination signal (SIGKILL) to the container and after cleanup, remove the pod from the API. In the presence of network partitions, this object may still exist after this timestamp, until an administrator or automated process can determine the resource is fully terminated. If not set, graceful deletion of the object has not been requested.
 
@@ -4606,7 +4606,7 @@ Populated by the system when a graceful deletion is requested. Read-only. More i
             title="Optional">
         <span>finalizers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}Must be empty before the object is deleted from the registry. Each entry is an identifier for the responsible component that will remove the entry from the list. If the deletionTimestamp of the object is non-nil, entries in this list can only be removed. Finalizers may be processed and removed in any order.  Order is NOT enforced because it introduces significant risk of stuck finalizers. finalizers is a shared field, any actor with permission can reorder it. If the finalizer list is processed in order, then this can lead to a situation in which the component responsible for the first finalizer in the list is waiting for a signal (field value, external system, or other) produced by a component responsible for a finalizer later in the list, resulting in a deadlock. Without enforced ordering finalizers are free to order amongst themselves and are not vulnerable to ordering changes in the list.{{% /md %}}</dd>
 
@@ -4614,7 +4614,7 @@ Populated by the system when a graceful deletion is requested. Read-only. More i
             title="Optional">
         <span>generate_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}GenerateName is an optional prefix, used by the server, to generate a unique name ONLY IF the Name field has not been provided. If this field is used, the name returned to the client will be different than the name passed. This value will also be combined with a unique suffix. The provided value has the same validation rules as the Name field, and may be truncated by the length of the suffix required to make the value unique on the server.
 
@@ -4626,7 +4626,7 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
             title="Optional">
         <span>generation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}A sequence number representing a specific generation of the desired state. Populated by the system. Read-only.{{% /md %}}</dd>
 
@@ -4650,7 +4650,7 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Name must be unique within a namespace. Is required when creating resources, although some resources may allow a client to request the generation of an appropriate name automatically. Name is primarily intended for creation idempotence and configuration definition. Cannot be updated. More info: http://kubernetes.io/docs/user-guide/identifiers#names{{% /md %}}</dd>
 
@@ -4658,7 +4658,7 @@ Applied only if Name is not specified. More info: https://git.k8s.io/community/c
             title="Optional">
         <span>namespace</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Namespace defines the space within each name must be unique. An empty namespace is equivalent to the "default" namespace, but "default" is the canonical representation. Not all objects are required to be scoped to a namespace - the value of this field for those objects will be empty.
 
@@ -4676,7 +4676,7 @@ Must be a DNS_LABEL. Cannot be updated. More info: http://kubernetes.io/docs/use
             title="Optional">
         <span>resource_<wbr>version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}An opaque value that represents the internal version of this object that can be used by clients to determine when objects have changed. May be used for optimistic concurrency, change detection, and the watch operation on a resource or set of resources. Clients must treat these values as opaque and passed unmodified back to the server. They may only be valid for a particular resource or set of resources.
 
@@ -4686,7 +4686,7 @@ Populated by the system. Read-only. Value must be treated as opaque by clients a
             title="Optional">
         <span>self_<wbr>link</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}SelfLink is a URL representing this object. Populated by the system. Read-only.
 
@@ -4696,7 +4696,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
             title="Optional">
         <span>uid</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}UID is the unique in time and space value for this object. It is typically generated by the server on successful creation of a resource and is not allowed to change on PUT operations.
 
@@ -4715,7 +4715,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/go/kubernetes/meta/v1?tab=doc#OwnerReferenceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/go/kubernetes/meta/v1?tab=doc#OwnerReferenceOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/meta/v1?tab=doc#OwnerReferenceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/meta/v1?tab=doc#OwnerReferenceOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -4728,7 +4728,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
             title="Optional">
         <span>Block<wbr>Owner<wbr>Deletion</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}If true, AND if the owner has the "foregroundDeletion" finalizer, then the owner cannot be deleted from the key-value store until this reference is removed. Defaults to false. To set this field, a user needs "delete" permission of the owner, otherwise 422 (Unprocessable Entity) will be returned.{{% /md %}}</dd>
 
@@ -4736,7 +4736,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
             title="Optional">
         <span>Controller</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}If true, this reference points to the managing controller.{{% /md %}}</dd>
 
@@ -4744,7 +4744,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#names{{% /md %}}</dd>
 
@@ -4752,7 +4752,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
             title="Optional">
         <span>Uid</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}UID of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#uids{{% /md %}}</dd>
 
@@ -4767,7 +4767,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
             title="Optional">
         <span>Block<wbr>Owner<wbr>Deletion</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}If true, AND if the owner has the "foregroundDeletion" finalizer, then the owner cannot be deleted from the key-value store until this reference is removed. Defaults to false. To set this field, a user needs "delete" permission of the owner, otherwise 422 (Unprocessable Entity) will be returned.{{% /md %}}</dd>
 
@@ -4775,7 +4775,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
             title="Optional">
         <span>Controller</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}If true, this reference points to the managing controller.{{% /md %}}</dd>
 
@@ -4783,7 +4783,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#names{{% /md %}}</dd>
 
@@ -4791,7 +4791,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
             title="Optional">
         <span>Uid</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}UID of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#uids{{% /md %}}</dd>
 
@@ -4806,7 +4806,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
             title="Optional">
         <span>block<wbr>Owner<wbr>Deletion</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}If true, AND if the owner has the "foregroundDeletion" finalizer, then the owner cannot be deleted from the key-value store until this reference is removed. Defaults to false. To set this field, a user needs "delete" permission of the owner, otherwise 422 (Unprocessable Entity) will be returned.{{% /md %}}</dd>
 
@@ -4814,7 +4814,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
             title="Optional">
         <span>controller</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}If true, this reference points to the managing controller.{{% /md %}}</dd>
 
@@ -4822,7 +4822,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#names{{% /md %}}</dd>
 
@@ -4830,7 +4830,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
             title="Optional">
         <span>uid</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}UID of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#uids{{% /md %}}</dd>
 
@@ -4845,7 +4845,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
             title="Optional">
         <span>block_<wbr>owner_<wbr>deletion</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}If true, AND if the owner has the "foregroundDeletion" finalizer, then the owner cannot be deleted from the key-value store until this reference is removed. Defaults to false. To set this field, a user needs "delete" permission of the owner, otherwise 422 (Unprocessable Entity) will be returned.{{% /md %}}</dd>
 
@@ -4853,7 +4853,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
             title="Optional">
         <span>controller</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}If true, this reference points to the managing controller.{{% /md %}}</dd>
 
@@ -4861,7 +4861,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Name of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#names{{% /md %}}</dd>
 
@@ -4869,7 +4869,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
             title="Optional">
         <span>uid</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}UID of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#uids{{% /md %}}</dd>
 
@@ -4886,7 +4886,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/go/kubernetes/apiextensions/v1?tab=doc#ServiceReferenceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/go/kubernetes/apiextensions/v1?tab=doc#ServiceReferenceOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apiextensions/v1?tab=doc#ServiceReferenceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apiextensions/v1?tab=doc#ServiceReferenceOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -4899,7 +4899,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}name is the name of the service. Required{{% /md %}}</dd>
 
@@ -4907,7 +4907,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
             title="Optional">
         <span>Namespace</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}namespace is the namespace of the service. Required{{% /md %}}</dd>
 
@@ -4915,7 +4915,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
             title="Optional">
         <span>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}path is an optional URL path at which the webhook will be contacted.{{% /md %}}</dd>
 
@@ -4923,7 +4923,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
             title="Optional">
         <span>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}port is an optional service port at which the webhook will be contacted. `port` should be a valid port number (1-65535, inclusive). Defaults to 443 for backward compatibility.{{% /md %}}</dd>
 
@@ -4938,7 +4938,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}name is the name of the service. Required{{% /md %}}</dd>
 
@@ -4946,7 +4946,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
             title="Optional">
         <span>Namespace</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}namespace is the namespace of the service. Required{{% /md %}}</dd>
 
@@ -4954,7 +4954,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
             title="Optional">
         <span>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}path is an optional URL path at which the webhook will be contacted.{{% /md %}}</dd>
 
@@ -4962,7 +4962,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
             title="Optional">
         <span>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}port is an optional service port at which the webhook will be contacted. `port` should be a valid port number (1-65535, inclusive). Defaults to 443 for backward compatibility.{{% /md %}}</dd>
 
@@ -4977,7 +4977,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}name is the name of the service. Required{{% /md %}}</dd>
 
@@ -4985,7 +4985,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
             title="Optional">
         <span>namespace</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}namespace is the namespace of the service. Required{{% /md %}}</dd>
 
@@ -4993,7 +4993,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
             title="Optional">
         <span>path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}path is an optional URL path at which the webhook will be contacted.{{% /md %}}</dd>
 
@@ -5001,7 +5001,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
             title="Optional">
         <span>port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}port is an optional service port at which the webhook will be contacted. `port` should be a valid port number (1-65535, inclusive). Defaults to 443 for backward compatibility.{{% /md %}}</dd>
 
@@ -5016,7 +5016,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}name is the name of the service. Required{{% /md %}}</dd>
 
@@ -5024,7 +5024,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
             title="Optional">
         <span>namespace</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}namespace is the namespace of the service. Required{{% /md %}}</dd>
 
@@ -5032,7 +5032,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
             title="Optional">
         <span>path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}path is an optional URL path at which the webhook will be contacted.{{% /md %}}</dd>
 
@@ -5040,7 +5040,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
             title="Optional">
         <span>port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}port is an optional service port at which the webhook will be contacted. `port` should be a valid port number (1-65535, inclusive). Defaults to 443 for backward compatibility.{{% /md %}}</dd>
 
@@ -5057,7 +5057,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/go/kubernetes/apiextensions/v1?tab=doc#WebhookClientConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/go/kubernetes/apiextensions/v1?tab=doc#WebhookClientConfigOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apiextensions/v1?tab=doc#WebhookClientConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apiextensions/v1?tab=doc#WebhookClientConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -5070,7 +5070,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
             title="Optional">
         <span>Ca<wbr>Bundle</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}caBundle is a PEM encoded CA bundle which will be used to validate the webhook's server certificate. If unspecified, system trust roots on the apiserver are used.{{% /md %}}</dd>
 
@@ -5078,7 +5078,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
             title="Optional">
         <span>Service</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicereference">Service<wbr>Reference<wbr>Args?</a></span>
+        <span class="property-type"><a href="#servicereference">Service<wbr>Reference<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}service is a reference to the service for this webhook. Either service or url must be specified.
 
@@ -5088,7 +5088,7 @@ If the webhook is running within the cluster, then you should use `service`.{{% 
             title="Optional">
         <span>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}url gives the location of the webhook, in standard URL form (`scheme://host:port/path`). Exactly one of `url` or `service` must be specified.
 
@@ -5113,7 +5113,7 @@ Attempting to use a user or basic auth e.g. "user:password@" is not allowed. Fra
             title="Optional">
         <span>Ca<wbr>Bundle</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}caBundle is a PEM encoded CA bundle which will be used to validate the webhook's server certificate. If unspecified, system trust roots on the apiserver are used.{{% /md %}}</dd>
 
@@ -5121,7 +5121,7 @@ Attempting to use a user or basic auth e.g. "user:password@" is not allowed. Fra
             title="Optional">
         <span>Service</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicereference">*Service<wbr>Reference</a></span>
+        <span class="property-type"><a href="#servicereference">Service<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}service is a reference to the service for this webhook. Either service or url must be specified.
 
@@ -5131,7 +5131,7 @@ If the webhook is running within the cluster, then you should use `service`.{{% 
             title="Optional">
         <span>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}url gives the location of the webhook, in standard URL form (`scheme://host:port/path`). Exactly one of `url` or `service` must be specified.
 
@@ -5156,7 +5156,7 @@ Attempting to use a user or basic auth e.g. "user:password@" is not allowed. Fra
             title="Optional">
         <span>ca<wbr>Bundle</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}caBundle is a PEM encoded CA bundle which will be used to validate the webhook's server certificate. If unspecified, system trust roots on the apiserver are used.{{% /md %}}</dd>
 
@@ -5164,7 +5164,7 @@ Attempting to use a user or basic auth e.g. "user:password@" is not allowed. Fra
             title="Optional">
         <span>service</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicereference">Service<wbr>Reference?</a></span>
+        <span class="property-type"><a href="#servicereference">Service<wbr>Reference</a></span>
     </dt>
     <dd>{{% md %}}service is a reference to the service for this webhook. Either service or url must be specified.
 
@@ -5174,7 +5174,7 @@ If the webhook is running within the cluster, then you should use `service`.{{% 
             title="Optional">
         <span>url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}url gives the location of the webhook, in standard URL form (`scheme://host:port/path`). Exactly one of `url` or `service` must be specified.
 
@@ -5199,7 +5199,7 @@ Attempting to use a user or basic auth e.g. "user:password@" is not allowed. Fra
             title="Optional">
         <span>ca_<wbr>bundle</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}caBundle is a PEM encoded CA bundle which will be used to validate the webhook's server certificate. If unspecified, system trust roots on the apiserver are used.{{% /md %}}</dd>
 
@@ -5217,7 +5217,7 @@ If the webhook is running within the cluster, then you should use `service`.{{% 
             title="Optional">
         <span>url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}url gives the location of the webhook, in standard URL form (`scheme://host:port/path`). Exactly one of `url` or `service` must be specified.
 
@@ -5244,7 +5244,7 @@ Attempting to use a user or basic auth e.g. "user:password@" is not allowed. Fra
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/go/kubernetes/apiextensions/v1?tab=doc#WebhookConversionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/go/kubernetes/apiextensions/v1?tab=doc#WebhookConversionOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apiextensions/v1?tab=doc#WebhookConversionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/v2/go/kubernetes/apiextensions/v1?tab=doc#WebhookConversionOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -5257,7 +5257,7 @@ Attempting to use a user or basic auth e.g. "user:password@" is not allowed. Fra
             title="Optional">
         <span>Client<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webhookclientconfig">Webhook<wbr>Client<wbr>Config<wbr>Args?</a></span>
+        <span class="property-type"><a href="#webhookclientconfig">Webhook<wbr>Client<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}clientConfig is the instructions for how to call the webhook if strategy is `Webhook`.{{% /md %}}</dd>
 
@@ -5265,7 +5265,7 @@ Attempting to use a user or basic auth e.g. "user:password@" is not allowed. Fra
             title="Optional">
         <span>Conversion<wbr>Review<wbr>Versions</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}conversionReviewVersions is an ordered list of preferred `ConversionReview` versions the Webhook expects. The API server will use the first version in the list which it supports. If none of the versions specified in this list are supported by API server, conversion will fail for the custom resource. If a persisted Webhook configuration specifies allowed versions and does not include any versions known to the API Server, calls to the webhook will fail.{{% /md %}}</dd>
 
@@ -5280,7 +5280,7 @@ Attempting to use a user or basic auth e.g. "user:password@" is not allowed. Fra
             title="Optional">
         <span>Client<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webhookclientconfig">*Webhook<wbr>Client<wbr>Config</a></span>
+        <span class="property-type"><a href="#webhookclientconfig">Webhook<wbr>Client<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}clientConfig is the instructions for how to call the webhook if strategy is `Webhook`.{{% /md %}}</dd>
 
@@ -5288,7 +5288,7 @@ Attempting to use a user or basic auth e.g. "user:password@" is not allowed. Fra
             title="Optional">
         <span>Conversion<wbr>Review<wbr>Versions</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}conversionReviewVersions is an ordered list of preferred `ConversionReview` versions the Webhook expects. The API server will use the first version in the list which it supports. If none of the versions specified in this list are supported by API server, conversion will fail for the custom resource. If a persisted Webhook configuration specifies allowed versions and does not include any versions known to the API Server, calls to the webhook will fail.{{% /md %}}</dd>
 
@@ -5303,7 +5303,7 @@ Attempting to use a user or basic auth e.g. "user:password@" is not allowed. Fra
             title="Optional">
         <span>client<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#webhookclientconfig">Webhook<wbr>Client<wbr>Config?</a></span>
+        <span class="property-type"><a href="#webhookclientconfig">Webhook<wbr>Client<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}clientConfig is the instructions for how to call the webhook if strategy is `Webhook`.{{% /md %}}</dd>
 
@@ -5311,7 +5311,7 @@ Attempting to use a user or basic auth e.g. "user:password@" is not allowed. Fra
             title="Optional">
         <span>conversion<wbr>Review<wbr>Versions</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}conversionReviewVersions is an ordered list of preferred `ConversionReview` versions the Webhook expects. The API server will use the first version in the list which it supports. If none of the versions specified in this list are supported by API server, conversion will fail for the custom resource. If a persisted Webhook configuration specifies allowed versions and does not include any versions known to the API Server, calls to the webhook will fail.{{% /md %}}</dd>
 
@@ -5334,7 +5334,7 @@ Attempting to use a user or basic auth e.g. "user:password@" is not allowed. Fra
             title="Optional">
         <span>conversion_<wbr>review_<wbr>versions</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}conversionReviewVersions is an ordered list of preferred `ConversionReview` versions the Webhook expects. The API server will use the first version in the list which it supports. If none of the versions specified in this list are supported by API server, conversion will fail for the custom resource. If a persisted Webhook configuration specifies allowed versions and does not include any versions known to the API Server, calls to the webhook will fail.{{% /md %}}</dd>
 
