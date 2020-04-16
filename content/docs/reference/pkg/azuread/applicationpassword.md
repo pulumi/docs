@@ -10,7 +10,9 @@ Manages a Password associated with an Application within Azure Active Directory.
 
 > **NOTE:** If you're authenticating using a Service Principal then it must have permissions to both `Read and write all applications` and `Sign in and read user profile` within the `Windows Azure Active Directory` API.
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -30,7 +32,8 @@ const exampleApplicationPassword = new azuread.ApplicationPassword("example", {
 });
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-azuread/blob/master/website/docs/r/application_password.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 
@@ -47,7 +50,7 @@ const exampleApplicationPassword = new azuread.ApplicationPassword("example", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewApplicationPassword<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuread/sdk/go/azuread/?tab=doc#ApplicationPasswordArgs">ApplicationPasswordArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuread/sdk/go/azuread/?tab=doc#ApplicationPassword">ApplicationPassword</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewApplicationPassword<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuread/sdk/v2/go/azuread/?tab=doc#ApplicationPasswordArgs">ApplicationPasswordArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuread/sdk/v2/go/azuread/?tab=doc#ApplicationPassword">ApplicationPassword</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -147,7 +150,7 @@ const exampleApplicationPassword = new azuread.ApplicationPassword("example", {
             title="Required">
         <span>Value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Password for this Application .
 {{% /md %}}</dd>
@@ -156,7 +159,7 @@ const exampleApplicationPassword = new azuread.ApplicationPassword("example", {
             title="Optional, Deprecated">
         <span>Application<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `application_object_id` to prevent confusion{{% /md %}}</p></dd>
 
@@ -164,7 +167,7 @@ const exampleApplicationPassword = new azuread.ApplicationPassword("example", {
             title="Optional">
         <span>Application<wbr>Object<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Object ID of the Application for which this password should be created. Changing this field forces a new resource to be created.
 {{% /md %}}</dd>
@@ -173,7 +176,7 @@ const exampleApplicationPassword = new azuread.ApplicationPassword("example", {
             title="Optional">
         <span>End<wbr>Date</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The End Date which the Password is valid until, formatted as a RFC3339 date string (e.g. `2018-01-01T01:02:03Z`). Changing this field forces a new resource to be created.
 {{% /md %}}</dd>
@@ -182,7 +185,7 @@ const exampleApplicationPassword = new azuread.ApplicationPassword("example", {
             title="Optional">
         <span>End<wbr>Date<wbr>Relative</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A relative duration for which the Password is valid until, for example `240h` (10 days) or `2400h30m`. Changing this field forces a new resource to be created.
 {{% /md %}}</dd>
@@ -191,7 +194,7 @@ const exampleApplicationPassword = new azuread.ApplicationPassword("example", {
             title="Optional">
         <span>Key<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A GUID used to uniquely identify this Password. If not specified a GUID will be created. Changing this field forces a new resource to be created.
 {{% /md %}}</dd>
@@ -200,7 +203,7 @@ const exampleApplicationPassword = new azuread.ApplicationPassword("example", {
             title="Optional">
         <span>Start<wbr>Date</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Start Date which the Password is valid from, formatted as a RFC3339 date string (e.g. `2018-01-01T01:02:03Z`). If this isn't specified, the current date is used.  Changing this field forces a new resource to be created.
 {{% /md %}}</dd>
@@ -216,7 +219,7 @@ const exampleApplicationPassword = new azuread.ApplicationPassword("example", {
             title="Required">
         <span>Value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Password for this Application .
 {{% /md %}}</dd>
@@ -225,7 +228,7 @@ const exampleApplicationPassword = new azuread.ApplicationPassword("example", {
             title="Optional, Deprecated">
         <span>Application<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `application_object_id` to prevent confusion{{% /md %}}</p></dd>
 
@@ -233,7 +236,7 @@ const exampleApplicationPassword = new azuread.ApplicationPassword("example", {
             title="Optional">
         <span>Application<wbr>Object<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Object ID of the Application for which this password should be created. Changing this field forces a new resource to be created.
 {{% /md %}}</dd>
@@ -242,7 +245,7 @@ const exampleApplicationPassword = new azuread.ApplicationPassword("example", {
             title="Optional">
         <span>End<wbr>Date</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The End Date which the Password is valid until, formatted as a RFC3339 date string (e.g. `2018-01-01T01:02:03Z`). Changing this field forces a new resource to be created.
 {{% /md %}}</dd>
@@ -251,7 +254,7 @@ const exampleApplicationPassword = new azuread.ApplicationPassword("example", {
             title="Optional">
         <span>End<wbr>Date<wbr>Relative</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A relative duration for which the Password is valid until, for example `240h` (10 days) or `2400h30m`. Changing this field forces a new resource to be created.
 {{% /md %}}</dd>
@@ -260,7 +263,7 @@ const exampleApplicationPassword = new azuread.ApplicationPassword("example", {
             title="Optional">
         <span>Key<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A GUID used to uniquely identify this Password. If not specified a GUID will be created. Changing this field forces a new resource to be created.
 {{% /md %}}</dd>
@@ -269,7 +272,7 @@ const exampleApplicationPassword = new azuread.ApplicationPassword("example", {
             title="Optional">
         <span>Start<wbr>Date</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Start Date which the Password is valid from, formatted as a RFC3339 date string (e.g. `2018-01-01T01:02:03Z`). If this isn't specified, the current date is used.  Changing this field forces a new resource to be created.
 {{% /md %}}</dd>
@@ -285,7 +288,7 @@ const exampleApplicationPassword = new azuread.ApplicationPassword("example", {
             title="Required">
         <span>value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Password for this Application .
 {{% /md %}}</dd>
@@ -294,7 +297,7 @@ const exampleApplicationPassword = new azuread.ApplicationPassword("example", {
             title="Optional, Deprecated">
         <span>application<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `application_object_id` to prevent confusion{{% /md %}}</p></dd>
 
@@ -302,7 +305,7 @@ const exampleApplicationPassword = new azuread.ApplicationPassword("example", {
             title="Optional">
         <span>application<wbr>Object<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Object ID of the Application for which this password should be created. Changing this field forces a new resource to be created.
 {{% /md %}}</dd>
@@ -311,7 +314,7 @@ const exampleApplicationPassword = new azuread.ApplicationPassword("example", {
             title="Optional">
         <span>end<wbr>Date</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The End Date which the Password is valid until, formatted as a RFC3339 date string (e.g. `2018-01-01T01:02:03Z`). Changing this field forces a new resource to be created.
 {{% /md %}}</dd>
@@ -320,7 +323,7 @@ const exampleApplicationPassword = new azuread.ApplicationPassword("example", {
             title="Optional">
         <span>end<wbr>Date<wbr>Relative</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A relative duration for which the Password is valid until, for example `240h` (10 days) or `2400h30m`. Changing this field forces a new resource to be created.
 {{% /md %}}</dd>
@@ -329,7 +332,7 @@ const exampleApplicationPassword = new azuread.ApplicationPassword("example", {
             title="Optional">
         <span>key<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A GUID used to uniquely identify this Password. If not specified a GUID will be created. Changing this field forces a new resource to be created.
 {{% /md %}}</dd>
@@ -338,7 +341,7 @@ const exampleApplicationPassword = new azuread.ApplicationPassword("example", {
             title="Optional">
         <span>start<wbr>Date</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Start Date which the Password is valid from, formatted as a RFC3339 date string (e.g. `2018-01-01T01:02:03Z`). If this isn't specified, the current date is used.  Changing this field forces a new resource to be created.
 {{% /md %}}</dd>
@@ -354,7 +357,7 @@ const exampleApplicationPassword = new azuread.ApplicationPassword("example", {
             title="Required">
         <span>value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Password for this Application .
 {{% /md %}}</dd>
@@ -363,7 +366,7 @@ const exampleApplicationPassword = new azuread.ApplicationPassword("example", {
             title="Optional, Deprecated">
         <span>application_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `application_object_id` to prevent confusion{{% /md %}}</p></dd>
 
@@ -371,7 +374,7 @@ const exampleApplicationPassword = new azuread.ApplicationPassword("example", {
             title="Optional">
         <span>application_<wbr>object_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Object ID of the Application for which this password should be created. Changing this field forces a new resource to be created.
 {{% /md %}}</dd>
@@ -380,7 +383,7 @@ const exampleApplicationPassword = new azuread.ApplicationPassword("example", {
             title="Optional">
         <span>end_<wbr>date</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The End Date which the Password is valid until, formatted as a RFC3339 date string (e.g. `2018-01-01T01:02:03Z`). Changing this field forces a new resource to be created.
 {{% /md %}}</dd>
@@ -389,7 +392,7 @@ const exampleApplicationPassword = new azuread.ApplicationPassword("example", {
             title="Optional">
         <span>end_<wbr>date_<wbr>relative</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A relative duration for which the Password is valid until, for example `240h` (10 days) or `2400h30m`. Changing this field forces a new resource to be created.
 {{% /md %}}</dd>
@@ -398,7 +401,7 @@ const exampleApplicationPassword = new azuread.ApplicationPassword("example", {
             title="Optional">
         <span>key_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A GUID used to uniquely identify this Password. If not specified a GUID will be created. Changing this field forces a new resource to be created.
 {{% /md %}}</dd>
@@ -407,7 +410,7 @@ const exampleApplicationPassword = new azuread.ApplicationPassword("example", {
             title="Optional">
         <span>start_<wbr>date</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Start Date which the Password is valid from, formatted as a RFC3339 date string (e.g. `2018-01-01T01:02:03Z`). If this isn't specified, the current date is used.  Changing this field forces a new resource to be created.
 {{% /md %}}</dd>
@@ -439,7 +442,7 @@ Get an existing ApplicationPassword resource's state with the given name, ID, an
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetApplicationPassword<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuread/sdk/go/azuread/?tab=doc#ApplicationPasswordState">ApplicationPasswordState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuread/sdk/go/azuread/?tab=doc#ApplicationPassword">ApplicationPassword</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetApplicationPassword<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuread/sdk/v2/go/azuread/?tab=doc#ApplicationPasswordState">ApplicationPasswordState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuread/sdk/v2/go/azuread/?tab=doc#ApplicationPassword">ApplicationPassword</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -553,7 +556,7 @@ The following state arguments are supported:
             title="Optional, Deprecated">
         <span>Application<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `application_object_id` to prevent confusion{{% /md %}}</p></dd>
 
@@ -561,7 +564,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Application<wbr>Object<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Object ID of the Application for which this password should be created. Changing this field forces a new resource to be created.
 {{% /md %}}</dd>
@@ -570,7 +573,7 @@ The following state arguments are supported:
             title="Optional">
         <span>End<wbr>Date</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The End Date which the Password is valid until, formatted as a RFC3339 date string (e.g. `2018-01-01T01:02:03Z`). Changing this field forces a new resource to be created.
 {{% /md %}}</dd>
@@ -579,7 +582,7 @@ The following state arguments are supported:
             title="Optional">
         <span>End<wbr>Date<wbr>Relative</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A relative duration for which the Password is valid until, for example `240h` (10 days) or `2400h30m`. Changing this field forces a new resource to be created.
 {{% /md %}}</dd>
@@ -588,7 +591,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Key<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A GUID used to uniquely identify this Password. If not specified a GUID will be created. Changing this field forces a new resource to be created.
 {{% /md %}}</dd>
@@ -597,7 +600,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Start<wbr>Date</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Start Date which the Password is valid from, formatted as a RFC3339 date string (e.g. `2018-01-01T01:02:03Z`). If this isn't specified, the current date is used.  Changing this field forces a new resource to be created.
 {{% /md %}}</dd>
@@ -606,7 +609,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Password for this Application .
 {{% /md %}}</dd>
@@ -622,7 +625,7 @@ The following state arguments are supported:
             title="Optional, Deprecated">
         <span>Application<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `application_object_id` to prevent confusion{{% /md %}}</p></dd>
 
@@ -630,7 +633,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Application<wbr>Object<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Object ID of the Application for which this password should be created. Changing this field forces a new resource to be created.
 {{% /md %}}</dd>
@@ -639,7 +642,7 @@ The following state arguments are supported:
             title="Optional">
         <span>End<wbr>Date</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The End Date which the Password is valid until, formatted as a RFC3339 date string (e.g. `2018-01-01T01:02:03Z`). Changing this field forces a new resource to be created.
 {{% /md %}}</dd>
@@ -648,7 +651,7 @@ The following state arguments are supported:
             title="Optional">
         <span>End<wbr>Date<wbr>Relative</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A relative duration for which the Password is valid until, for example `240h` (10 days) or `2400h30m`. Changing this field forces a new resource to be created.
 {{% /md %}}</dd>
@@ -657,7 +660,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Key<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A GUID used to uniquely identify this Password. If not specified a GUID will be created. Changing this field forces a new resource to be created.
 {{% /md %}}</dd>
@@ -666,7 +669,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Start<wbr>Date</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Start Date which the Password is valid from, formatted as a RFC3339 date string (e.g. `2018-01-01T01:02:03Z`). If this isn't specified, the current date is used.  Changing this field forces a new resource to be created.
 {{% /md %}}</dd>
@@ -675,7 +678,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Password for this Application .
 {{% /md %}}</dd>
@@ -691,7 +694,7 @@ The following state arguments are supported:
             title="Optional, Deprecated">
         <span>application<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `application_object_id` to prevent confusion{{% /md %}}</p></dd>
 
@@ -699,7 +702,7 @@ The following state arguments are supported:
             title="Optional">
         <span>application<wbr>Object<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Object ID of the Application for which this password should be created. Changing this field forces a new resource to be created.
 {{% /md %}}</dd>
@@ -708,7 +711,7 @@ The following state arguments are supported:
             title="Optional">
         <span>end<wbr>Date</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The End Date which the Password is valid until, formatted as a RFC3339 date string (e.g. `2018-01-01T01:02:03Z`). Changing this field forces a new resource to be created.
 {{% /md %}}</dd>
@@ -717,7 +720,7 @@ The following state arguments are supported:
             title="Optional">
         <span>end<wbr>Date<wbr>Relative</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A relative duration for which the Password is valid until, for example `240h` (10 days) or `2400h30m`. Changing this field forces a new resource to be created.
 {{% /md %}}</dd>
@@ -726,7 +729,7 @@ The following state arguments are supported:
             title="Optional">
         <span>key<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A GUID used to uniquely identify this Password. If not specified a GUID will be created. Changing this field forces a new resource to be created.
 {{% /md %}}</dd>
@@ -735,7 +738,7 @@ The following state arguments are supported:
             title="Optional">
         <span>start<wbr>Date</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Start Date which the Password is valid from, formatted as a RFC3339 date string (e.g. `2018-01-01T01:02:03Z`). If this isn't specified, the current date is used.  Changing this field forces a new resource to be created.
 {{% /md %}}</dd>
@@ -744,7 +747,7 @@ The following state arguments are supported:
             title="Optional">
         <span>value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Password for this Application .
 {{% /md %}}</dd>
@@ -760,7 +763,7 @@ The following state arguments are supported:
             title="Optional, Deprecated">
         <span>application_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `application_object_id` to prevent confusion{{% /md %}}</p></dd>
 
@@ -768,7 +771,7 @@ The following state arguments are supported:
             title="Optional">
         <span>application_<wbr>object_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Object ID of the Application for which this password should be created. Changing this field forces a new resource to be created.
 {{% /md %}}</dd>
@@ -777,7 +780,7 @@ The following state arguments are supported:
             title="Optional">
         <span>end_<wbr>date</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The End Date which the Password is valid until, formatted as a RFC3339 date string (e.g. `2018-01-01T01:02:03Z`). Changing this field forces a new resource to be created.
 {{% /md %}}</dd>
@@ -786,7 +789,7 @@ The following state arguments are supported:
             title="Optional">
         <span>end_<wbr>date_<wbr>relative</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A relative duration for which the Password is valid until, for example `240h` (10 days) or `2400h30m`. Changing this field forces a new resource to be created.
 {{% /md %}}</dd>
@@ -795,7 +798,7 @@ The following state arguments are supported:
             title="Optional">
         <span>key_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A GUID used to uniquely identify this Password. If not specified a GUID will be created. Changing this field forces a new resource to be created.
 {{% /md %}}</dd>
@@ -804,7 +807,7 @@ The following state arguments are supported:
             title="Optional">
         <span>start_<wbr>date</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Start Date which the Password is valid from, formatted as a RFC3339 date string (e.g. `2018-01-01T01:02:03Z`). If this isn't specified, the current date is used.  Changing this field forces a new resource to be created.
 {{% /md %}}</dd>
@@ -813,7 +816,7 @@ The following state arguments are supported:
             title="Optional">
         <span>value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Password for this Application .
 {{% /md %}}</dd>
@@ -837,6 +840,7 @@ The following state arguments are supported:
 	<dd><a href="https://github.com/pulumi/pulumi-azuread">https://github.com/pulumi/pulumi-azuread</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`azuread` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azuread).</dd>
 </dl>
 

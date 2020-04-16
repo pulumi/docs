@@ -10,7 +10,9 @@ Manages an Application within Azure Active Directory.
 
 > **NOTE:** If you're authenticating using a Service Principal then it must have permissions to both `Read and write owned by applications` and `Sign in and read user profile` within the `Windows Azure Active Directory` API.
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -63,7 +65,8 @@ const example = new azuread.Application("example", {
 });
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-azuread/blob/master/website/docs/r/application.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 
@@ -80,7 +83,7 @@ const example = new azuread.Application("example", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewApplication<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuread/sdk/go/azuread/?tab=doc#ApplicationArgs">ApplicationArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuread/sdk/go/azuread/?tab=doc#Application">Application</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewApplication<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuread/sdk/v2/go/azuread/?tab=doc#ApplicationArgs">ApplicationArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuread/sdk/v2/go/azuread/?tab=doc#Application">Application</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -189,7 +192,7 @@ const example = new azuread.Application("example", {
             title="Optional">
         <span>Available<wbr>To<wbr>Other<wbr>Tenants</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Is this Azure AD Application available to other tenants? Defaults to `false`.
 {{% /md %}}</dd>
@@ -198,7 +201,7 @@ const example = new azuread.Application("example", {
             title="Optional">
         <span>Group<wbr>Membership<wbr>Claims</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Configures the `groups` claim issued in a user or OAuth 2.0 access token that the app expects. Defaults to `SecurityGroup`. Possible values are `None`, `SecurityGroup` or `All`.
 {{% /md %}}</dd>
@@ -207,7 +210,7 @@ const example = new azuread.Application("example", {
             title="Optional">
         <span>Homepage</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The URL to the application's home page. If no homepage is specified this defaults to `https://{name}`.
 {{% /md %}}</dd>
@@ -216,7 +219,7 @@ const example = new azuread.Application("example", {
             title="Optional">
         <span>Identifier<wbr>Uris</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of user-defined URI(s) that uniquely identify a Web application within it's Azure AD tenant, or within a verified custom domain if the application is multi-tenant.
 {{% /md %}}</dd>
@@ -225,7 +228,7 @@ const example = new azuread.Application("example", {
             title="Optional">
         <span>Logout<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The URL of the logout page.
 {{% /md %}}</dd>
@@ -234,7 +237,7 @@ const example = new azuread.Application("example", {
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The display name for the application.
 {{% /md %}}</dd>
@@ -243,7 +246,7 @@ const example = new azuread.Application("example", {
             title="Optional">
         <span>Oauth2Allow<wbr>Implicit<wbr>Flow</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Does this Azure AD Application allow OAuth2.0 implicit flow tokens? Defaults to `false`.
 {{% /md %}}</dd>
@@ -261,7 +264,7 @@ const example = new azuread.Application("example", {
             title="Optional">
         <span>Owners</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of Azure AD Object IDs that will be granted ownership of the application. Defaults to the Object ID of the caller creating the application. If a list is specified the caller Object ID will no longer be included unless explicitly added to the list. 
 {{% /md %}}</dd>
@@ -270,7 +273,7 @@ const example = new azuread.Application("example", {
             title="Optional">
         <span>Public<wbr>Client</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Is this Azure AD Application a public client? Defaults to `false`.
 {{% /md %}}</dd>
@@ -279,7 +282,7 @@ const example = new azuread.Application("example", {
             title="Optional">
         <span>Reply<wbr>Urls</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of URLs that user tokens are sent to for sign in, or the redirect URIs that OAuth 2.0 authorization codes and access tokens are sent to.
 {{% /md %}}</dd>
@@ -297,7 +300,7 @@ const example = new azuread.Application("example", {
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Type of an application: `webapp/api` or `native`. Defaults to `webapp/api`. For `native` apps type `identifier_uris` property can not not be set.
 {{% /md %}}</dd>
@@ -322,7 +325,7 @@ const example = new azuread.Application("example", {
             title="Optional">
         <span>Available<wbr>To<wbr>Other<wbr>Tenants</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Is this Azure AD Application available to other tenants? Defaults to `false`.
 {{% /md %}}</dd>
@@ -331,7 +334,7 @@ const example = new azuread.Application("example", {
             title="Optional">
         <span>Group<wbr>Membership<wbr>Claims</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Configures the `groups` claim issued in a user or OAuth 2.0 access token that the app expects. Defaults to `SecurityGroup`. Possible values are `None`, `SecurityGroup` or `All`.
 {{% /md %}}</dd>
@@ -340,7 +343,7 @@ const example = new azuread.Application("example", {
             title="Optional">
         <span>Homepage</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The URL to the application's home page. If no homepage is specified this defaults to `https://{name}`.
 {{% /md %}}</dd>
@@ -349,7 +352,7 @@ const example = new azuread.Application("example", {
             title="Optional">
         <span>Identifier<wbr>Uris</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}A list of user-defined URI(s) that uniquely identify a Web application within it's Azure AD tenant, or within a verified custom domain if the application is multi-tenant.
 {{% /md %}}</dd>
@@ -358,7 +361,7 @@ const example = new azuread.Application("example", {
             title="Optional">
         <span>Logout<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The URL of the logout page.
 {{% /md %}}</dd>
@@ -367,7 +370,7 @@ const example = new azuread.Application("example", {
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The display name for the application.
 {{% /md %}}</dd>
@@ -376,7 +379,7 @@ const example = new azuread.Application("example", {
             title="Optional">
         <span>Oauth2Allow<wbr>Implicit<wbr>Flow</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Does this Azure AD Application allow OAuth2.0 implicit flow tokens? Defaults to `false`.
 {{% /md %}}</dd>
@@ -394,7 +397,7 @@ const example = new azuread.Application("example", {
             title="Optional">
         <span>Owners</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}A list of Azure AD Object IDs that will be granted ownership of the application. Defaults to the Object ID of the caller creating the application. If a list is specified the caller Object ID will no longer be included unless explicitly added to the list. 
 {{% /md %}}</dd>
@@ -403,7 +406,7 @@ const example = new azuread.Application("example", {
             title="Optional">
         <span>Public<wbr>Client</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Is this Azure AD Application a public client? Defaults to `false`.
 {{% /md %}}</dd>
@@ -412,7 +415,7 @@ const example = new azuread.Application("example", {
             title="Optional">
         <span>Reply<wbr>Urls</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}A list of URLs that user tokens are sent to for sign in, or the redirect URIs that OAuth 2.0 authorization codes and access tokens are sent to.
 {{% /md %}}</dd>
@@ -430,7 +433,7 @@ const example = new azuread.Application("example", {
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Type of an application: `webapp/api` or `native`. Defaults to `webapp/api`. For `native` apps type `identifier_uris` property can not not be set.
 {{% /md %}}</dd>
@@ -455,7 +458,7 @@ const example = new azuread.Application("example", {
             title="Optional">
         <span>available<wbr>To<wbr>Other<wbr>Tenants</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Is this Azure AD Application available to other tenants? Defaults to `false`.
 {{% /md %}}</dd>
@@ -464,7 +467,7 @@ const example = new azuread.Application("example", {
             title="Optional">
         <span>group<wbr>Membership<wbr>Claims</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Configures the `groups` claim issued in a user or OAuth 2.0 access token that the app expects. Defaults to `SecurityGroup`. Possible values are `None`, `SecurityGroup` or `All`.
 {{% /md %}}</dd>
@@ -473,7 +476,7 @@ const example = new azuread.Application("example", {
             title="Optional">
         <span>homepage</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The URL to the application's home page. If no homepage is specified this defaults to `https://{name}`.
 {{% /md %}}</dd>
@@ -482,7 +485,7 @@ const example = new azuread.Application("example", {
             title="Optional">
         <span>identifier<wbr>Uris</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}A list of user-defined URI(s) that uniquely identify a Web application within it's Azure AD tenant, or within a verified custom domain if the application is multi-tenant.
 {{% /md %}}</dd>
@@ -491,7 +494,7 @@ const example = new azuread.Application("example", {
             title="Optional">
         <span>logout<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The URL of the logout page.
 {{% /md %}}</dd>
@@ -500,7 +503,7 @@ const example = new azuread.Application("example", {
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The display name for the application.
 {{% /md %}}</dd>
@@ -509,7 +512,7 @@ const example = new azuread.Application("example", {
             title="Optional">
         <span>oauth2Allow<wbr>Implicit<wbr>Flow</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Does this Azure AD Application allow OAuth2.0 implicit flow tokens? Defaults to `false`.
 {{% /md %}}</dd>
@@ -527,7 +530,7 @@ const example = new azuread.Application("example", {
             title="Optional">
         <span>owners</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}A list of Azure AD Object IDs that will be granted ownership of the application. Defaults to the Object ID of the caller creating the application. If a list is specified the caller Object ID will no longer be included unless explicitly added to the list. 
 {{% /md %}}</dd>
@@ -536,7 +539,7 @@ const example = new azuread.Application("example", {
             title="Optional">
         <span>public<wbr>Client</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Is this Azure AD Application a public client? Defaults to `false`.
 {{% /md %}}</dd>
@@ -545,7 +548,7 @@ const example = new azuread.Application("example", {
             title="Optional">
         <span>reply<wbr>Urls</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}A list of URLs that user tokens are sent to for sign in, or the redirect URIs that OAuth 2.0 authorization codes and access tokens are sent to.
 {{% /md %}}</dd>
@@ -563,7 +566,7 @@ const example = new azuread.Application("example", {
             title="Optional">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Type of an application: `webapp/api` or `native`. Defaults to `webapp/api`. For `native` apps type `identifier_uris` property can not not be set.
 {{% /md %}}</dd>
@@ -588,7 +591,7 @@ const example = new azuread.Application("example", {
             title="Optional">
         <span>available_<wbr>to_<wbr>other_<wbr>tenants</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Is this Azure AD Application available to other tenants? Defaults to `false`.
 {{% /md %}}</dd>
@@ -597,7 +600,7 @@ const example = new azuread.Application("example", {
             title="Optional">
         <span>group_<wbr>membership_<wbr>claims</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Configures the `groups` claim issued in a user or OAuth 2.0 access token that the app expects. Defaults to `SecurityGroup`. Possible values are `None`, `SecurityGroup` or `All`.
 {{% /md %}}</dd>
@@ -606,7 +609,7 @@ const example = new azuread.Application("example", {
             title="Optional">
         <span>homepage</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The URL to the application's home page. If no homepage is specified this defaults to `https://{name}`.
 {{% /md %}}</dd>
@@ -615,7 +618,7 @@ const example = new azuread.Application("example", {
             title="Optional">
         <span>identifier_<wbr>uris</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of user-defined URI(s) that uniquely identify a Web application within it's Azure AD tenant, or within a verified custom domain if the application is multi-tenant.
 {{% /md %}}</dd>
@@ -624,7 +627,7 @@ const example = new azuread.Application("example", {
             title="Optional">
         <span>logout_<wbr>url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The URL of the logout page.
 {{% /md %}}</dd>
@@ -633,7 +636,7 @@ const example = new azuread.Application("example", {
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The display name for the application.
 {{% /md %}}</dd>
@@ -642,7 +645,7 @@ const example = new azuread.Application("example", {
             title="Optional">
         <span>oauth2_<wbr>allow_<wbr>implicit_<wbr>flow</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Does this Azure AD Application allow OAuth2.0 implicit flow tokens? Defaults to `false`.
 {{% /md %}}</dd>
@@ -660,7 +663,7 @@ const example = new azuread.Application("example", {
             title="Optional">
         <span>owners</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of Azure AD Object IDs that will be granted ownership of the application. Defaults to the Object ID of the caller creating the application. If a list is specified the caller Object ID will no longer be included unless explicitly added to the list. 
 {{% /md %}}</dd>
@@ -669,7 +672,7 @@ const example = new azuread.Application("example", {
             title="Optional">
         <span>public_<wbr>client</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Is this Azure AD Application a public client? Defaults to `false`.
 {{% /md %}}</dd>
@@ -678,7 +681,7 @@ const example = new azuread.Application("example", {
             title="Optional">
         <span>reply_<wbr>urls</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of URLs that user tokens are sent to for sign in, or the redirect URIs that OAuth 2.0 authorization codes and access tokens are sent to.
 {{% /md %}}</dd>
@@ -696,7 +699,7 @@ const example = new azuread.Application("example", {
             title="Optional">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Type of an application: `webapp/api` or `native`. Defaults to `webapp/api`. For `native` apps type `identifier_uris` property can not not be set.
 {{% /md %}}</dd>
@@ -724,7 +727,7 @@ The following output properties are available:
             title="">
         <span>Application<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Application ID.
 {{% /md %}}</dd>
@@ -733,7 +736,7 @@ The following output properties are available:
             title="">
         <span>Object<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Application's Object ID.
 {{% /md %}}</dd>
@@ -749,7 +752,7 @@ The following output properties are available:
             title="">
         <span>Application<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Application ID.
 {{% /md %}}</dd>
@@ -758,7 +761,7 @@ The following output properties are available:
             title="">
         <span>Object<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Application's Object ID.
 {{% /md %}}</dd>
@@ -774,7 +777,7 @@ The following output properties are available:
             title="">
         <span>application<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Application ID.
 {{% /md %}}</dd>
@@ -783,7 +786,7 @@ The following output properties are available:
             title="">
         <span>object<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Application's Object ID.
 {{% /md %}}</dd>
@@ -799,7 +802,7 @@ The following output properties are available:
             title="">
         <span>application_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Application ID.
 {{% /md %}}</dd>
@@ -808,7 +811,7 @@ The following output properties are available:
             title="">
         <span>object_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Application's Object ID.
 {{% /md %}}</dd>
@@ -838,7 +841,7 @@ Get an existing Application resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetApplication<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuread/sdk/go/azuread/?tab=doc#ApplicationState">ApplicationState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuread/sdk/go/azuread/?tab=doc#Application">Application</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetApplication<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuread/sdk/v2/go/azuread/?tab=doc#ApplicationState">ApplicationState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuread/sdk/v2/go/azuread/?tab=doc#Application">Application</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -961,7 +964,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Application<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Application ID.
 {{% /md %}}</dd>
@@ -970,7 +973,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Available<wbr>To<wbr>Other<wbr>Tenants</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Is this Azure AD Application available to other tenants? Defaults to `false`.
 {{% /md %}}</dd>
@@ -979,7 +982,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Group<wbr>Membership<wbr>Claims</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Configures the `groups` claim issued in a user or OAuth 2.0 access token that the app expects. Defaults to `SecurityGroup`. Possible values are `None`, `SecurityGroup` or `All`.
 {{% /md %}}</dd>
@@ -988,7 +991,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Homepage</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The URL to the application's home page. If no homepage is specified this defaults to `https://{name}`.
 {{% /md %}}</dd>
@@ -997,7 +1000,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Identifier<wbr>Uris</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of user-defined URI(s) that uniquely identify a Web application within it's Azure AD tenant, or within a verified custom domain if the application is multi-tenant.
 {{% /md %}}</dd>
@@ -1006,7 +1009,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Logout<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The URL of the logout page.
 {{% /md %}}</dd>
@@ -1015,7 +1018,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The display name for the application.
 {{% /md %}}</dd>
@@ -1024,7 +1027,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Oauth2Allow<wbr>Implicit<wbr>Flow</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Does this Azure AD Application allow OAuth2.0 implicit flow tokens? Defaults to `false`.
 {{% /md %}}</dd>
@@ -1042,7 +1045,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Object<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Application's Object ID.
 {{% /md %}}</dd>
@@ -1051,7 +1054,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Owners</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of Azure AD Object IDs that will be granted ownership of the application. Defaults to the Object ID of the caller creating the application. If a list is specified the caller Object ID will no longer be included unless explicitly added to the list. 
 {{% /md %}}</dd>
@@ -1060,7 +1063,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Public<wbr>Client</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Is this Azure AD Application a public client? Defaults to `false`.
 {{% /md %}}</dd>
@@ -1069,7 +1072,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Reply<wbr>Urls</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of URLs that user tokens are sent to for sign in, or the redirect URIs that OAuth 2.0 authorization codes and access tokens are sent to.
 {{% /md %}}</dd>
@@ -1087,7 +1090,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Type of an application: `webapp/api` or `native`. Defaults to `webapp/api`. For `native` apps type `identifier_uris` property can not not be set.
 {{% /md %}}</dd>
@@ -1112,7 +1115,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Application<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Application ID.
 {{% /md %}}</dd>
@@ -1121,7 +1124,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Available<wbr>To<wbr>Other<wbr>Tenants</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Is this Azure AD Application available to other tenants? Defaults to `false`.
 {{% /md %}}</dd>
@@ -1130,7 +1133,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Group<wbr>Membership<wbr>Claims</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Configures the `groups` claim issued in a user or OAuth 2.0 access token that the app expects. Defaults to `SecurityGroup`. Possible values are `None`, `SecurityGroup` or `All`.
 {{% /md %}}</dd>
@@ -1139,7 +1142,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Homepage</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The URL to the application's home page. If no homepage is specified this defaults to `https://{name}`.
 {{% /md %}}</dd>
@@ -1148,7 +1151,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Identifier<wbr>Uris</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}A list of user-defined URI(s) that uniquely identify a Web application within it's Azure AD tenant, or within a verified custom domain if the application is multi-tenant.
 {{% /md %}}</dd>
@@ -1157,7 +1160,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Logout<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The URL of the logout page.
 {{% /md %}}</dd>
@@ -1166,7 +1169,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The display name for the application.
 {{% /md %}}</dd>
@@ -1175,7 +1178,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Oauth2Allow<wbr>Implicit<wbr>Flow</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Does this Azure AD Application allow OAuth2.0 implicit flow tokens? Defaults to `false`.
 {{% /md %}}</dd>
@@ -1193,7 +1196,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Object<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Application's Object ID.
 {{% /md %}}</dd>
@@ -1202,7 +1205,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Owners</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}A list of Azure AD Object IDs that will be granted ownership of the application. Defaults to the Object ID of the caller creating the application. If a list is specified the caller Object ID will no longer be included unless explicitly added to the list. 
 {{% /md %}}</dd>
@@ -1211,7 +1214,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Public<wbr>Client</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Is this Azure AD Application a public client? Defaults to `false`.
 {{% /md %}}</dd>
@@ -1220,7 +1223,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Reply<wbr>Urls</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}A list of URLs that user tokens are sent to for sign in, or the redirect URIs that OAuth 2.0 authorization codes and access tokens are sent to.
 {{% /md %}}</dd>
@@ -1238,7 +1241,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Type of an application: `webapp/api` or `native`. Defaults to `webapp/api`. For `native` apps type `identifier_uris` property can not not be set.
 {{% /md %}}</dd>
@@ -1263,7 +1266,7 @@ The following state arguments are supported:
             title="Optional">
         <span>application<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Application ID.
 {{% /md %}}</dd>
@@ -1272,7 +1275,7 @@ The following state arguments are supported:
             title="Optional">
         <span>available<wbr>To<wbr>Other<wbr>Tenants</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Is this Azure AD Application available to other tenants? Defaults to `false`.
 {{% /md %}}</dd>
@@ -1281,7 +1284,7 @@ The following state arguments are supported:
             title="Optional">
         <span>group<wbr>Membership<wbr>Claims</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Configures the `groups` claim issued in a user or OAuth 2.0 access token that the app expects. Defaults to `SecurityGroup`. Possible values are `None`, `SecurityGroup` or `All`.
 {{% /md %}}</dd>
@@ -1290,7 +1293,7 @@ The following state arguments are supported:
             title="Optional">
         <span>homepage</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The URL to the application's home page. If no homepage is specified this defaults to `https://{name}`.
 {{% /md %}}</dd>
@@ -1299,7 +1302,7 @@ The following state arguments are supported:
             title="Optional">
         <span>identifier<wbr>Uris</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}A list of user-defined URI(s) that uniquely identify a Web application within it's Azure AD tenant, or within a verified custom domain if the application is multi-tenant.
 {{% /md %}}</dd>
@@ -1308,7 +1311,7 @@ The following state arguments are supported:
             title="Optional">
         <span>logout<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The URL of the logout page.
 {{% /md %}}</dd>
@@ -1317,7 +1320,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The display name for the application.
 {{% /md %}}</dd>
@@ -1326,7 +1329,7 @@ The following state arguments are supported:
             title="Optional">
         <span>oauth2Allow<wbr>Implicit<wbr>Flow</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Does this Azure AD Application allow OAuth2.0 implicit flow tokens? Defaults to `false`.
 {{% /md %}}</dd>
@@ -1344,7 +1347,7 @@ The following state arguments are supported:
             title="Optional">
         <span>object<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Application's Object ID.
 {{% /md %}}</dd>
@@ -1353,7 +1356,7 @@ The following state arguments are supported:
             title="Optional">
         <span>owners</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}A list of Azure AD Object IDs that will be granted ownership of the application. Defaults to the Object ID of the caller creating the application. If a list is specified the caller Object ID will no longer be included unless explicitly added to the list. 
 {{% /md %}}</dd>
@@ -1362,7 +1365,7 @@ The following state arguments are supported:
             title="Optional">
         <span>public<wbr>Client</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Is this Azure AD Application a public client? Defaults to `false`.
 {{% /md %}}</dd>
@@ -1371,7 +1374,7 @@ The following state arguments are supported:
             title="Optional">
         <span>reply<wbr>Urls</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}A list of URLs that user tokens are sent to for sign in, or the redirect URIs that OAuth 2.0 authorization codes and access tokens are sent to.
 {{% /md %}}</dd>
@@ -1389,7 +1392,7 @@ The following state arguments are supported:
             title="Optional">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Type of an application: `webapp/api` or `native`. Defaults to `webapp/api`. For `native` apps type `identifier_uris` property can not not be set.
 {{% /md %}}</dd>
@@ -1414,7 +1417,7 @@ The following state arguments are supported:
             title="Optional">
         <span>application_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Application ID.
 {{% /md %}}</dd>
@@ -1423,7 +1426,7 @@ The following state arguments are supported:
             title="Optional">
         <span>available_<wbr>to_<wbr>other_<wbr>tenants</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Is this Azure AD Application available to other tenants? Defaults to `false`.
 {{% /md %}}</dd>
@@ -1432,7 +1435,7 @@ The following state arguments are supported:
             title="Optional">
         <span>group_<wbr>membership_<wbr>claims</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Configures the `groups` claim issued in a user or OAuth 2.0 access token that the app expects. Defaults to `SecurityGroup`. Possible values are `None`, `SecurityGroup` or `All`.
 {{% /md %}}</dd>
@@ -1441,7 +1444,7 @@ The following state arguments are supported:
             title="Optional">
         <span>homepage</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The URL to the application's home page. If no homepage is specified this defaults to `https://{name}`.
 {{% /md %}}</dd>
@@ -1450,7 +1453,7 @@ The following state arguments are supported:
             title="Optional">
         <span>identifier_<wbr>uris</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of user-defined URI(s) that uniquely identify a Web application within it's Azure AD tenant, or within a verified custom domain if the application is multi-tenant.
 {{% /md %}}</dd>
@@ -1459,7 +1462,7 @@ The following state arguments are supported:
             title="Optional">
         <span>logout_<wbr>url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The URL of the logout page.
 {{% /md %}}</dd>
@@ -1468,7 +1471,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The display name for the application.
 {{% /md %}}</dd>
@@ -1477,7 +1480,7 @@ The following state arguments are supported:
             title="Optional">
         <span>oauth2_<wbr>allow_<wbr>implicit_<wbr>flow</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Does this Azure AD Application allow OAuth2.0 implicit flow tokens? Defaults to `false`.
 {{% /md %}}</dd>
@@ -1495,7 +1498,7 @@ The following state arguments are supported:
             title="Optional">
         <span>object_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Application's Object ID.
 {{% /md %}}</dd>
@@ -1504,7 +1507,7 @@ The following state arguments are supported:
             title="Optional">
         <span>owners</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of Azure AD Object IDs that will be granted ownership of the application. Defaults to the Object ID of the caller creating the application. If a list is specified the caller Object ID will no longer be included unless explicitly added to the list. 
 {{% /md %}}</dd>
@@ -1513,7 +1516,7 @@ The following state arguments are supported:
             title="Optional">
         <span>public_<wbr>client</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Is this Azure AD Application a public client? Defaults to `false`.
 {{% /md %}}</dd>
@@ -1522,7 +1525,7 @@ The following state arguments are supported:
             title="Optional">
         <span>reply_<wbr>urls</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of URLs that user tokens are sent to for sign in, or the redirect URIs that OAuth 2.0 authorization codes and access tokens are sent to.
 {{% /md %}}</dd>
@@ -1540,7 +1543,7 @@ The following state arguments are supported:
             title="Optional">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Type of an application: `webapp/api` or `native`. Defaults to `webapp/api`. For `native` apps type `identifier_uris` property can not not be set.
 {{% /md %}}</dd>
@@ -1565,7 +1568,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuread/sdk/go/azuread/?tab=doc#ApplicationAppRoleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuread/sdk/go/azuread/?tab=doc#ApplicationAppRoleOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuread/sdk/v2/go/azuread/?tab=doc#ApplicationAppRoleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuread/sdk/v2/go/azuread/?tab=doc#ApplicationAppRoleOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1578,7 +1581,7 @@ The following state arguments are supported:
             title="Required">
         <span>Allowed<wbr>Member<wbr>Types</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether this app role definition can be assigned to users and groups by setting to `User`, or to other applications (that are accessing this application in daemon service scenarios) by setting to `Application`, or to both.
 {{% /md %}}</dd>
@@ -1587,7 +1590,7 @@ The following state arguments are supported:
             title="Required">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Permission help text that appears in the admin app assignment and consent experiences.
 {{% /md %}}</dd>
@@ -1596,7 +1599,7 @@ The following state arguments are supported:
             title="Required">
         <span>Display<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Display name for the permission that appears in the admin consent and app assignment experiences.
 {{% /md %}}</dd>
@@ -1605,7 +1608,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The unique identifier of the `app_role`.
 {{% /md %}}</dd>
@@ -1614,7 +1617,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Is<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Determines if the app role is enabled: Defaults to `true`.
 {{% /md %}}</dd>
@@ -1623,7 +1626,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the value of the roles claim that the application should expect in the authentication and access tokens.
 {{% /md %}}</dd>
@@ -1639,7 +1642,7 @@ The following state arguments are supported:
             title="Required">
         <span>Allowed<wbr>Member<wbr>Types</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether this app role definition can be assigned to users and groups by setting to `User`, or to other applications (that are accessing this application in daemon service scenarios) by setting to `Application`, or to both.
 {{% /md %}}</dd>
@@ -1648,7 +1651,7 @@ The following state arguments are supported:
             title="Required">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Permission help text that appears in the admin app assignment and consent experiences.
 {{% /md %}}</dd>
@@ -1657,7 +1660,7 @@ The following state arguments are supported:
             title="Required">
         <span>Display<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Display name for the permission that appears in the admin consent and app assignment experiences.
 {{% /md %}}</dd>
@@ -1666,7 +1669,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The unique identifier of the `app_role`.
 {{% /md %}}</dd>
@@ -1675,7 +1678,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Is<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Determines if the app role is enabled: Defaults to `true`.
 {{% /md %}}</dd>
@@ -1684,7 +1687,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the value of the roles claim that the application should expect in the authentication and access tokens.
 {{% /md %}}</dd>
@@ -1700,7 +1703,7 @@ The following state arguments are supported:
             title="Required">
         <span>allowed<wbr>Member<wbr>Types</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether this app role definition can be assigned to users and groups by setting to `User`, or to other applications (that are accessing this application in daemon service scenarios) by setting to `Application`, or to both.
 {{% /md %}}</dd>
@@ -1709,7 +1712,7 @@ The following state arguments are supported:
             title="Required">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Permission help text that appears in the admin app assignment and consent experiences.
 {{% /md %}}</dd>
@@ -1718,7 +1721,7 @@ The following state arguments are supported:
             title="Required">
         <span>display<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Display name for the permission that appears in the admin consent and app assignment experiences.
 {{% /md %}}</dd>
@@ -1727,7 +1730,7 @@ The following state arguments are supported:
             title="Optional">
         <span>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The unique identifier of the `app_role`.
 {{% /md %}}</dd>
@@ -1736,7 +1739,7 @@ The following state arguments are supported:
             title="Optional">
         <span>is<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Determines if the app role is enabled: Defaults to `true`.
 {{% /md %}}</dd>
@@ -1745,7 +1748,7 @@ The following state arguments are supported:
             title="Optional">
         <span>value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the value of the roles claim that the application should expect in the authentication and access tokens.
 {{% /md %}}</dd>
@@ -1761,7 +1764,7 @@ The following state arguments are supported:
             title="Required">
         <span>allowed<wbr>Member<wbr>Types</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether this app role definition can be assigned to users and groups by setting to `User`, or to other applications (that are accessing this application in daemon service scenarios) by setting to `Application`, or to both.
 {{% /md %}}</dd>
@@ -1770,7 +1773,7 @@ The following state arguments are supported:
             title="Required">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Permission help text that appears in the admin app assignment and consent experiences.
 {{% /md %}}</dd>
@@ -1779,7 +1782,7 @@ The following state arguments are supported:
             title="Required">
         <span>display_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Display name for the permission that appears in the admin consent and app assignment experiences.
 {{% /md %}}</dd>
@@ -1788,7 +1791,7 @@ The following state arguments are supported:
             title="Optional">
         <span>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The unique identifier of the `app_role`.
 {{% /md %}}</dd>
@@ -1797,7 +1800,7 @@ The following state arguments are supported:
             title="Optional">
         <span>is<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Determines if the app role is enabled: Defaults to `true`.
 {{% /md %}}</dd>
@@ -1806,7 +1809,7 @@ The following state arguments are supported:
             title="Optional">
         <span>value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Specifies the value of the roles claim that the application should expect in the authentication and access tokens.
 {{% /md %}}</dd>
@@ -1824,7 +1827,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuread/sdk/go/azuread/?tab=doc#ApplicationOauth2PermissionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuread/sdk/go/azuread/?tab=doc#ApplicationOauth2PermissionOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuread/sdk/v2/go/azuread/?tab=doc#ApplicationOauth2PermissionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuread/sdk/v2/go/azuread/?tab=doc#ApplicationOauth2PermissionOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1837,7 +1840,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Admin<wbr>Consent<wbr>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The description of the admin consent.
 {{% /md %}}</dd>
@@ -1846,7 +1849,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Admin<wbr>Consent<wbr>Display<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The display name of the admin consent.
 {{% /md %}}</dd>
@@ -1855,7 +1858,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The unique identifier for one of the `OAuth2Permission` or `AppRole` instances that the resource application exposes.
 {{% /md %}}</dd>
@@ -1864,7 +1867,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Is<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Determines if the app role is enabled: Defaults to `true`.
 {{% /md %}}</dd>
@@ -1873,7 +1876,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Type of an application: `webapp/api` or `native`. Defaults to `webapp/api`. For `native` apps type `identifier_uris` property can not not be set.
 {{% /md %}}</dd>
@@ -1882,7 +1885,7 @@ The following state arguments are supported:
             title="Optional">
         <span>User<wbr>Consent<wbr>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The description of the user consent.
 {{% /md %}}</dd>
@@ -1891,7 +1894,7 @@ The following state arguments are supported:
             title="Optional">
         <span>User<wbr>Consent<wbr>Display<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The display name of the user consent.
 {{% /md %}}</dd>
@@ -1900,7 +1903,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the value of the roles claim that the application should expect in the authentication and access tokens.
 {{% /md %}}</dd>
@@ -1916,7 +1919,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Admin<wbr>Consent<wbr>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The description of the admin consent.
 {{% /md %}}</dd>
@@ -1925,7 +1928,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Admin<wbr>Consent<wbr>Display<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The display name of the admin consent.
 {{% /md %}}</dd>
@@ -1934,7 +1937,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The unique identifier for one of the `OAuth2Permission` or `AppRole` instances that the resource application exposes.
 {{% /md %}}</dd>
@@ -1943,7 +1946,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Is<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Determines if the app role is enabled: Defaults to `true`.
 {{% /md %}}</dd>
@@ -1952,7 +1955,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Type of an application: `webapp/api` or `native`. Defaults to `webapp/api`. For `native` apps type `identifier_uris` property can not not be set.
 {{% /md %}}</dd>
@@ -1961,7 +1964,7 @@ The following state arguments are supported:
             title="Optional">
         <span>User<wbr>Consent<wbr>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The description of the user consent.
 {{% /md %}}</dd>
@@ -1970,7 +1973,7 @@ The following state arguments are supported:
             title="Optional">
         <span>User<wbr>Consent<wbr>Display<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The display name of the user consent.
 {{% /md %}}</dd>
@@ -1979,7 +1982,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the value of the roles claim that the application should expect in the authentication and access tokens.
 {{% /md %}}</dd>
@@ -1995,7 +1998,7 @@ The following state arguments are supported:
             title="Optional">
         <span>admin<wbr>Consent<wbr>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The description of the admin consent.
 {{% /md %}}</dd>
@@ -2004,7 +2007,7 @@ The following state arguments are supported:
             title="Optional">
         <span>admin<wbr>Consent<wbr>Display<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The display name of the admin consent.
 {{% /md %}}</dd>
@@ -2013,7 +2016,7 @@ The following state arguments are supported:
             title="Optional">
         <span>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The unique identifier for one of the `OAuth2Permission` or `AppRole` instances that the resource application exposes.
 {{% /md %}}</dd>
@@ -2022,7 +2025,7 @@ The following state arguments are supported:
             title="Optional">
         <span>is<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Determines if the app role is enabled: Defaults to `true`.
 {{% /md %}}</dd>
@@ -2031,7 +2034,7 @@ The following state arguments are supported:
             title="Optional">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Type of an application: `webapp/api` or `native`. Defaults to `webapp/api`. For `native` apps type `identifier_uris` property can not not be set.
 {{% /md %}}</dd>
@@ -2040,7 +2043,7 @@ The following state arguments are supported:
             title="Optional">
         <span>user<wbr>Consent<wbr>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The description of the user consent.
 {{% /md %}}</dd>
@@ -2049,7 +2052,7 @@ The following state arguments are supported:
             title="Optional">
         <span>user<wbr>Consent<wbr>Display<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The display name of the user consent.
 {{% /md %}}</dd>
@@ -2058,7 +2061,7 @@ The following state arguments are supported:
             title="Optional">
         <span>value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the value of the roles claim that the application should expect in the authentication and access tokens.
 {{% /md %}}</dd>
@@ -2074,7 +2077,7 @@ The following state arguments are supported:
             title="Optional">
         <span>admin<wbr>Consent<wbr>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The description of the admin consent.
 {{% /md %}}</dd>
@@ -2083,7 +2086,7 @@ The following state arguments are supported:
             title="Optional">
         <span>admin<wbr>Consent<wbr>Display<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The display name of the admin consent.
 {{% /md %}}</dd>
@@ -2092,7 +2095,7 @@ The following state arguments are supported:
             title="Optional">
         <span>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The unique identifier for one of the `OAuth2Permission` or `AppRole` instances that the resource application exposes.
 {{% /md %}}</dd>
@@ -2101,7 +2104,7 @@ The following state arguments are supported:
             title="Optional">
         <span>is<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Determines if the app role is enabled: Defaults to `true`.
 {{% /md %}}</dd>
@@ -2110,7 +2113,7 @@ The following state arguments are supported:
             title="Optional">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Type of an application: `webapp/api` or `native`. Defaults to `webapp/api`. For `native` apps type `identifier_uris` property can not not be set.
 {{% /md %}}</dd>
@@ -2119,7 +2122,7 @@ The following state arguments are supported:
             title="Optional">
         <span>user<wbr>Consent<wbr>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The description of the user consent.
 {{% /md %}}</dd>
@@ -2128,7 +2131,7 @@ The following state arguments are supported:
             title="Optional">
         <span>user<wbr>Consent<wbr>Display<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The display name of the user consent.
 {{% /md %}}</dd>
@@ -2137,7 +2140,7 @@ The following state arguments are supported:
             title="Optional">
         <span>value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Specifies the value of the roles claim that the application should expect in the authentication and access tokens.
 {{% /md %}}</dd>
@@ -2155,7 +2158,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuread/sdk/go/azuread/?tab=doc#ApplicationRequiredResourceAccessArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuread/sdk/go/azuread/?tab=doc#ApplicationRequiredResourceAccessOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuread/sdk/v2/go/azuread/?tab=doc#ApplicationRequiredResourceAccessArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuread/sdk/v2/go/azuread/?tab=doc#ApplicationRequiredResourceAccessOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2177,7 +2180,7 @@ The following state arguments are supported:
             title="Required">
         <span>Resource<wbr>App<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The unique identifier for the resource that the application requires access to. This should be equal to the appId declared on the target resource application.
 {{% /md %}}</dd>
@@ -2202,7 +2205,7 @@ The following state arguments are supported:
             title="Required">
         <span>Resource<wbr>App<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The unique identifier for the resource that the application requires access to. This should be equal to the appId declared on the target resource application.
 {{% /md %}}</dd>
@@ -2227,7 +2230,7 @@ The following state arguments are supported:
             title="Required">
         <span>resource<wbr>App<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The unique identifier for the resource that the application requires access to. This should be equal to the appId declared on the target resource application.
 {{% /md %}}</dd>
@@ -2252,7 +2255,7 @@ The following state arguments are supported:
             title="Required">
         <span>resource<wbr>App<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The unique identifier for the resource that the application requires access to. This should be equal to the appId declared on the target resource application.
 {{% /md %}}</dd>
@@ -2270,7 +2273,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuread/sdk/go/azuread/?tab=doc#ApplicationRequiredResourceAccessResourceAccessArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuread/sdk/go/azuread/?tab=doc#ApplicationRequiredResourceAccessResourceAccessOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuread/sdk/v2/go/azuread/?tab=doc#ApplicationRequiredResourceAccessResourceAccessArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuread/sdk/v2/go/azuread/?tab=doc#ApplicationRequiredResourceAccessResourceAccessOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2283,7 +2286,7 @@ The following state arguments are supported:
             title="Required">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The unique identifier for one of the `OAuth2Permission` or `AppRole` instances that the resource application exposes.
 {{% /md %}}</dd>
@@ -2292,7 +2295,7 @@ The following state arguments are supported:
             title="Required">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether the id property references an `OAuth2Permission` or an `AppRole`. Possible values are `Scope` or `Role`.
 {{% /md %}}</dd>
@@ -2308,7 +2311,7 @@ The following state arguments are supported:
             title="Required">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The unique identifier for one of the `OAuth2Permission` or `AppRole` instances that the resource application exposes.
 {{% /md %}}</dd>
@@ -2317,7 +2320,7 @@ The following state arguments are supported:
             title="Required">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether the id property references an `OAuth2Permission` or an `AppRole`. Possible values are `Scope` or `Role`.
 {{% /md %}}</dd>
@@ -2333,7 +2336,7 @@ The following state arguments are supported:
             title="Required">
         <span>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The unique identifier for one of the `OAuth2Permission` or `AppRole` instances that the resource application exposes.
 {{% /md %}}</dd>
@@ -2342,7 +2345,7 @@ The following state arguments are supported:
             title="Required">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether the id property references an `OAuth2Permission` or an `AppRole`. Possible values are `Scope` or `Role`.
 {{% /md %}}</dd>
@@ -2358,7 +2361,7 @@ The following state arguments are supported:
             title="Required">
         <span>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The unique identifier for one of the `OAuth2Permission` or `AppRole` instances that the resource application exposes.
 {{% /md %}}</dd>
@@ -2367,7 +2370,7 @@ The following state arguments are supported:
             title="Required">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether the id property references an `OAuth2Permission` or an `AppRole`. Possible values are `Scope` or `Role`.
 {{% /md %}}</dd>
@@ -2389,6 +2392,7 @@ The following state arguments are supported:
 	<dd><a href="https://github.com/pulumi/pulumi-azuread">https://github.com/pulumi/pulumi-azuread</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`azuread` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azuread).</dd>
 </dl>
 

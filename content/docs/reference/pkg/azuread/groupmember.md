@@ -10,15 +10,17 @@ Manages a single Group Membership within Azure Active Directory.
 
 > **NOTE:** Do not use this resource at the same time as `azuread_group.members`.
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as azuread from "@pulumi/azuread";
 
-const exampleUser = pulumi.output(azuread.getUser({
+const exampleUser = azuread.getUser({
     userPrincipalName: "jdoe@hashicorp.com",
-}, { async: true }));
+});
 const exampleGroup = new azuread.Group("example", {});
 const exampleGroupMember = new azuread.GroupMember("example", {
     groupObjectId: exampleGroup.id,
@@ -26,7 +28,8 @@ const exampleGroupMember = new azuread.GroupMember("example", {
 });
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-azuread/blob/master/website/docs/r/group_member.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 
@@ -43,7 +46,7 @@ const exampleGroupMember = new azuread.GroupMember("example", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewGroupMember<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuread/sdk/go/azuread/?tab=doc#GroupMemberArgs">GroupMemberArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuread/sdk/go/azuread/?tab=doc#GroupMember">GroupMember</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewGroupMember<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuread/sdk/v2/go/azuread/?tab=doc#GroupMemberArgs">GroupMemberArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuread/sdk/v2/go/azuread/?tab=doc#GroupMember">GroupMember</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -143,7 +146,7 @@ const exampleGroupMember = new azuread.GroupMember("example", {
             title="Required">
         <span>Group<wbr>Object<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Object ID of the Azure AD Group you want to add the Member to.  Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -152,7 +155,7 @@ const exampleGroupMember = new azuread.GroupMember("example", {
             title="Required">
         <span>Member<wbr>Object<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Object ID of the Azure AD Object you want to add as a Member to the Group. Supported Object types are Users, Groups or Service Principals. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -168,7 +171,7 @@ const exampleGroupMember = new azuread.GroupMember("example", {
             title="Required">
         <span>Group<wbr>Object<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Object ID of the Azure AD Group you want to add the Member to.  Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -177,7 +180,7 @@ const exampleGroupMember = new azuread.GroupMember("example", {
             title="Required">
         <span>Member<wbr>Object<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Object ID of the Azure AD Object you want to add as a Member to the Group. Supported Object types are Users, Groups or Service Principals. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -193,7 +196,7 @@ const exampleGroupMember = new azuread.GroupMember("example", {
             title="Required">
         <span>group<wbr>Object<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Object ID of the Azure AD Group you want to add the Member to.  Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -202,7 +205,7 @@ const exampleGroupMember = new azuread.GroupMember("example", {
             title="Required">
         <span>member<wbr>Object<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Object ID of the Azure AD Object you want to add as a Member to the Group. Supported Object types are Users, Groups or Service Principals. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -218,7 +221,7 @@ const exampleGroupMember = new azuread.GroupMember("example", {
             title="Required">
         <span>group_<wbr>object_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Object ID of the Azure AD Group you want to add the Member to.  Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -227,7 +230,7 @@ const exampleGroupMember = new azuread.GroupMember("example", {
             title="Required">
         <span>member_<wbr>object_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Object ID of the Azure AD Object you want to add as a Member to the Group. Supported Object types are Users, Groups or Service Principals. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -259,7 +262,7 @@ Get an existing GroupMember resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetGroupMember<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuread/sdk/go/azuread/?tab=doc#GroupMemberState">GroupMemberState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuread/sdk/go/azuread/?tab=doc#GroupMember">GroupMember</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetGroupMember<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuread/sdk/v2/go/azuread/?tab=doc#GroupMemberState">GroupMemberState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuread/sdk/v2/go/azuread/?tab=doc#GroupMember">GroupMember</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -373,7 +376,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Group<wbr>Object<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Object ID of the Azure AD Group you want to add the Member to.  Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -382,7 +385,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Member<wbr>Object<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Object ID of the Azure AD Object you want to add as a Member to the Group. Supported Object types are Users, Groups or Service Principals. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -398,7 +401,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Group<wbr>Object<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Object ID of the Azure AD Group you want to add the Member to.  Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -407,7 +410,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Member<wbr>Object<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Object ID of the Azure AD Object you want to add as a Member to the Group. Supported Object types are Users, Groups or Service Principals. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -423,7 +426,7 @@ The following state arguments are supported:
             title="Optional">
         <span>group<wbr>Object<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Object ID of the Azure AD Group you want to add the Member to.  Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -432,7 +435,7 @@ The following state arguments are supported:
             title="Optional">
         <span>member<wbr>Object<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Object ID of the Azure AD Object you want to add as a Member to the Group. Supported Object types are Users, Groups or Service Principals. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -448,7 +451,7 @@ The following state arguments are supported:
             title="Optional">
         <span>group_<wbr>object_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Object ID of the Azure AD Group you want to add the Member to.  Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -457,7 +460,7 @@ The following state arguments are supported:
             title="Optional">
         <span>member_<wbr>object_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Object ID of the Azure AD Object you want to add as a Member to the Group. Supported Object types are Users, Groups or Service Principals. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -481,6 +484,7 @@ The following state arguments are supported:
 	<dd><a href="https://github.com/pulumi/pulumi-azuread">https://github.com/pulumi/pulumi-azuread</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`azuread` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azuread).</dd>
 </dl>
 

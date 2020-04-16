@@ -22,7 +22,7 @@ block_external_search_index: true
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewGroup<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuread/sdk/go/azuread/?tab=doc#GroupArgs">GroupArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuread/sdk/go/azuread/?tab=doc#Group">Group</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewGroup<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuread/sdk/v2/go/azuread/?tab=doc#GroupArgs">GroupArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuread/sdk/v2/go/azuread/?tab=doc#Group">Group</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -122,7 +122,7 @@ block_external_search_index: true
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The description for the Group.  Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -131,7 +131,7 @@ block_external_search_index: true
             title="Optional">
         <span>Members</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}A set of members who should be present in this Group. Supported Object types are Users, Groups or Service Principals.
 {{% /md %}}</dd>
@@ -140,7 +140,7 @@ block_external_search_index: true
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The display name for the Group. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -149,7 +149,7 @@ block_external_search_index: true
             title="Optional">
         <span>Owners</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}A set of owners who own this Group. Supported Object types are Users or Service Principals.
 {{% /md %}}</dd>
@@ -165,7 +165,7 @@ block_external_search_index: true
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The description for the Group.  Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -174,7 +174,7 @@ block_external_search_index: true
             title="Optional">
         <span>Members</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}A set of members who should be present in this Group. Supported Object types are Users, Groups or Service Principals.
 {{% /md %}}</dd>
@@ -183,7 +183,7 @@ block_external_search_index: true
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The display name for the Group. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -192,7 +192,7 @@ block_external_search_index: true
             title="Optional">
         <span>Owners</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}A set of owners who own this Group. Supported Object types are Users or Service Principals.
 {{% /md %}}</dd>
@@ -208,7 +208,7 @@ block_external_search_index: true
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The description for the Group.  Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -217,7 +217,7 @@ block_external_search_index: true
             title="Optional">
         <span>members</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}A set of members who should be present in this Group. Supported Object types are Users, Groups or Service Principals.
 {{% /md %}}</dd>
@@ -226,7 +226,7 @@ block_external_search_index: true
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The display name for the Group. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -235,7 +235,7 @@ block_external_search_index: true
             title="Optional">
         <span>owners</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}A set of owners who own this Group. Supported Object types are Users or Service Principals.
 {{% /md %}}</dd>
@@ -251,7 +251,7 @@ block_external_search_index: true
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The description for the Group.  Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -260,7 +260,7 @@ block_external_search_index: true
             title="Optional">
         <span>members</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}A set of members who should be present in this Group. Supported Object types are Users, Groups or Service Principals.
 {{% /md %}}</dd>
@@ -269,7 +269,7 @@ block_external_search_index: true
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The display name for the Group. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -278,7 +278,7 @@ block_external_search_index: true
             title="Optional">
         <span>owners</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}A set of owners who own this Group. Supported Object types are Users or Service Principals.
 {{% /md %}}</dd>
@@ -306,7 +306,7 @@ The following output properties are available:
             title="">
         <span>Object<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -321,7 +321,7 @@ The following output properties are available:
             title="">
         <span>Object<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -336,7 +336,7 @@ The following output properties are available:
             title="">
         <span>object<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -351,7 +351,7 @@ The following output properties are available:
             title="">
         <span>object_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -380,7 +380,7 @@ Get an existing Group resource's state with the given name, ID, and optional ext
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetGroup<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuread/sdk/go/azuread/?tab=doc#GroupState">GroupState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuread/sdk/go/azuread/?tab=doc#Group">Group</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetGroup<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuread/sdk/v2/go/azuread/?tab=doc#GroupState">GroupState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azuread/sdk/v2/go/azuread/?tab=doc#Group">Group</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -494,7 +494,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The description for the Group.  Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -503,7 +503,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Members</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}A set of members who should be present in this Group. Supported Object types are Users, Groups or Service Principals.
 {{% /md %}}</dd>
@@ -512,7 +512,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The display name for the Group. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -521,7 +521,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Object<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -529,7 +529,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Owners</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}A set of owners who own this Group. Supported Object types are Users or Service Principals.
 {{% /md %}}</dd>
@@ -545,7 +545,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The description for the Group.  Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -554,7 +554,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Members</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}A set of members who should be present in this Group. Supported Object types are Users, Groups or Service Principals.
 {{% /md %}}</dd>
@@ -563,7 +563,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The display name for the Group. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -572,7 +572,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Object<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -580,7 +580,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Owners</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}A set of owners who own this Group. Supported Object types are Users or Service Principals.
 {{% /md %}}</dd>
@@ -596,7 +596,7 @@ The following state arguments are supported:
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The description for the Group.  Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -605,7 +605,7 @@ The following state arguments are supported:
             title="Optional">
         <span>members</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}A set of members who should be present in this Group. Supported Object types are Users, Groups or Service Principals.
 {{% /md %}}</dd>
@@ -614,7 +614,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The display name for the Group. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -623,7 +623,7 @@ The following state arguments are supported:
             title="Optional">
         <span>object<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -631,7 +631,7 @@ The following state arguments are supported:
             title="Optional">
         <span>owners</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}A set of owners who own this Group. Supported Object types are Users or Service Principals.
 {{% /md %}}</dd>
@@ -647,7 +647,7 @@ The following state arguments are supported:
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The description for the Group.  Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -656,7 +656,7 @@ The following state arguments are supported:
             title="Optional">
         <span>members</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}A set of members who should be present in this Group. Supported Object types are Users, Groups or Service Principals.
 {{% /md %}}</dd>
@@ -665,7 +665,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The display name for the Group. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -674,7 +674,7 @@ The following state arguments are supported:
             title="Optional">
         <span>object_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -682,7 +682,7 @@ The following state arguments are supported:
             title="Optional">
         <span>owners</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}A set of owners who own this Group. Supported Object types are Users or Service Principals.
 {{% /md %}}</dd>
@@ -706,6 +706,7 @@ The following state arguments are supported:
 	<dd><a href="https://github.com/pulumi/pulumi-azuread">https://github.com/pulumi/pulumi-azuread</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`azuread` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azuread).</dd>
 </dl>
 
